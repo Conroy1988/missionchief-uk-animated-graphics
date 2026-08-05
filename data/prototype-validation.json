@@ -1,0 +1,1528 @@
+{
+  "pack": "TKB UK Emergency Fleet",
+  "profile": "standard",
+  "all_passed": true,
+  "vehicles": [
+    {
+      "id": "fire-rescue-pump",
+      "static": "assets/exports/standard/static/fire-rescue-pump.png",
+      "animated": "assets/exports/standard/animated/fire-rescue-pump.png",
+      "dimensions": {
+        "width": 110,
+        "height": 41
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "light-4x4-pump",
+      "static": "assets/exports/standard/static/light-4x4-pump.png",
+      "animated": "assets/exports/standard/animated/light-4x4-pump.png",
+      "dimensions": {
+        "width": 84,
+        "height": 29
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "aerial-appliance",
+      "static": "assets/exports/standard/static/aerial-appliance.png",
+      "animated": "assets/exports/standard/animated/aerial-appliance.png",
+      "dimensions": {
+        "width": 156,
+        "height": 51
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "fire-officer",
+      "static": "assets/exports/standard/static/fire-officer.png",
+      "animated": "assets/exports/standard/animated/fire-officer.png",
+      "dimensions": {
+        "width": 62,
+        "height": 23
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "rescue-support-unit",
+      "static": "assets/exports/standard/static/rescue-support-unit.png",
+      "animated": "assets/exports/standard/animated/rescue-support-unit.png",
+      "dimensions": {
+        "width": 114,
+        "height": 40
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "frontline-ambulance",
+      "static": "assets/exports/standard/static/frontline-ambulance.png",
+      "animated": "assets/exports/standard/animated/frontline-ambulance.png",
+      "dimensions": {
+        "width": 84,
+        "height": 31
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "water-carrier",
+      "static": "assets/exports/standard/static/water-carrier.png",
+      "animated": "assets/exports/standard/animated/water-carrier.png",
+      "dimensions": {
+        "width": 124,
+        "height": 42
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "hazmat-unit",
+      "static": "assets/exports/standard/static/hazmat-unit.png",
+      "animated": "assets/exports/standard/animated/hazmat-unit.png",
+      "dimensions": {
+        "width": 114,
+        "height": 41
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "police-incident-response-vehicle",
+      "static": "assets/exports/standard/static/police-incident-response-vehicle.png",
+      "animated": "assets/exports/standard/animated/police-incident-response-vehicle.png",
+      "dimensions": {
+        "width": 64,
+        "height": 21
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "hems",
+      "static": "assets/exports/standard/static/hems.png",
+      "animated": "assets/exports/standard/animated/hems.png",
+      "dimensions": {
+        "width": 177,
+        "height": 54
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "rapid-response-vehicle",
+      "static": "assets/exports/standard/static/rapid-response-vehicle.png",
+      "animated": "assets/exports/standard/animated/rapid-response-vehicle.png",
+      "dimensions": {
+        "width": 64,
+        "height": 22
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "police-helicopter",
+      "static": "assets/exports/standard/static/police-helicopter.png",
+      "animated": "assets/exports/standard/animated/police-helicopter.png",
+      "dimensions": {
+        "width": 179,
+        "height": 56
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "dog-support-unit",
+      "static": "assets/exports/standard/static/dog-support-unit.png",
+      "animated": "assets/exports/standard/animated/dog-support-unit.png",
+      "dimensions": {
+        "width": 88,
+        "height": 37
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "armed-response-vehicle",
+      "static": "assets/exports/standard/static/armed-response-vehicle.png",
+      "animated": "assets/exports/standard/animated/armed-response-vehicle.png",
+      "dimensions": {
+        "width": 66,
+        "height": 25
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "breathing-apparatus-support-unit",
+      "static": "assets/exports/standard/static/breathing-apparatus-support-unit.png",
+      "animated": "assets/exports/standard/animated/breathing-apparatus-support-unit.png",
+      "dimensions": {
+        "width": 112,
+        "height": 39
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "incident-command-control-unit",
+      "static": "assets/exports/standard/static/incident-command-control-unit.png",
+      "animated": "assets/exports/standard/animated/incident-command-control-unit.png",
+      "dimensions": {
+        "width": 136,
+        "height": 51
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "rescue-pump",
+      "static": "assets/exports/standard/static/rescue-pump.png",
+      "animated": "assets/exports/standard/animated/rescue-pump.png",
+      "dimensions": {
+        "width": 112,
+        "height": 43
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "carp",
+      "static": "assets/exports/standard/static/carp.png",
+      "animated": "assets/exports/standard/animated/carp.png",
+      "dimensions": {
+        "width": 133,
+        "height": 51
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "co-responder-vehicle",
+      "static": "assets/exports/standard/static/co-responder-vehicle.png",
+      "animated": "assets/exports/standard/animated/co-responder-vehicle.png",
+      "dimensions": {
+        "width": 62,
+        "height": 26
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "joint-response-unit",
+      "static": "assets/exports/standard/static/joint-response-unit.png",
+      "animated": "assets/exports/standard/animated/joint-response-unit.png",
+      "dimensions": {
+        "width": 64,
+        "height": 21
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "otl",
+      "static": "assets/exports/standard/static/otl.png",
+      "animated": "assets/exports/standard/animated/otl.png",
+      "dimensions": {
+        "width": 65,
+        "height": 27
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "general-practitioner",
+      "static": "assets/exports/standard/static/general-practitioner.png",
+      "animated": "assets/exports/standard/animated/general-practitioner.png",
+      "dimensions": {
+        "width": 64,
+        "height": 22
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "community-first-responder",
+      "static": "assets/exports/standard/static/community-first-responder.png",
+      "animated": "assets/exports/standard/animated/community-first-responder.png",
+      "dimensions": {
+        "width": 57,
+        "height": 22
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "crew-carrier",
+      "static": "assets/exports/standard/static/crew-carrier.png",
+      "animated": "assets/exports/standard/animated/crew-carrier.png",
+      "dimensions": {
+        "width": 94,
+        "height": 38
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "traffic-car",
+      "static": "assets/exports/standard/static/traffic-car.png",
+      "animated": "assets/exports/standard/animated/traffic-car.png",
+      "dimensions": {
+        "width": 65,
+        "height": 21
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "armed-traffic-car",
+      "static": "assets/exports/standard/static/armed-traffic-car.png",
+      "animated": "assets/exports/standard/animated/armed-traffic-car.png",
+      "dimensions": {
+        "width": 66,
+        "height": 25
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "heavy-4x4-tanker",
+      "static": "assets/exports/standard/static/heavy-4x4-tanker.png",
+      "animated": "assets/exports/standard/animated/heavy-4x4-tanker.png",
+      "dimensions": {
+        "width": 126,
+        "height": 55
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "prv",
+      "static": "assets/exports/standard/static/prv.png",
+      "animated": "assets/exports/standard/animated/prv.png",
+      "dimensions": {
+        "width": 69,
+        "height": 28
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "srv",
+      "static": "assets/exports/standard/static/srv.png",
+      "animated": "assets/exports/standard/animated/srv.png",
+      "dimensions": {
+        "width": 91,
+        "height": 38
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "welfare-vehicle",
+      "static": "assets/exports/standard/static/welfare-vehicle.png",
+      "animated": "assets/exports/standard/animated/welfare-vehicle.png",
+      "dimensions": {
+        "width": 91,
+        "height": 36
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "atv-carrier",
+      "static": "assets/exports/standard/static/atv-carrier.png",
+      "animated": "assets/exports/standard/animated/atv-carrier.png",
+      "dimensions": {
+        "width": 117,
+        "height": 47
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "ambulance-control-unit",
+      "static": "assets/exports/standard/static/ambulance-control-unit.png",
+      "animated": "assets/exports/standard/animated/ambulance-control-unit.png",
+      "dimensions": {
+        "width": 130,
+        "height": 62
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "cbrn-vehicle",
+      "static": "assets/exports/standard/static/cbrn-vehicle.png",
+      "animated": "assets/exports/standard/animated/cbrn-vehicle.png",
+      "dimensions": {
+        "width": 88,
+        "height": 45
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "mass-casualty-equipment",
+      "static": "assets/exports/standard/static/mass-casualty-equipment.png",
+      "animated": "assets/exports/standard/animated/mass-casualty-equipment.png",
+      "dimensions": {
+        "width": 124,
+        "height": 60
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "ambulance-officer",
+      "static": "assets/exports/standard/static/ambulance-officer.png",
+      "animated": "assets/exports/standard/animated/ambulance-officer.png",
+      "dimensions": {
+        "width": 65,
+        "height": 25
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "bfu",
+      "static": "assets/exports/standard/static/bfu.png",
+      "animated": "assets/exports/standard/animated/bfu.png",
+      "dimensions": {
+        "width": 114,
+        "height": 57
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "f-wrc",
+      "static": "assets/exports/standard/static/f-wrc.png",
+      "animated": "assets/exports/standard/animated/f-wrc.png",
+      "dimensions": {
+        "width": 124,
+        "height": 48
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "wrl-cafs",
+      "static": "assets/exports/standard/static/wrl-cafs.png",
+      "animated": "assets/exports/standard/animated/wrl-cafs.png",
+      "dimensions": {
+        "width": 110,
+        "height": 45
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "rp-cafs",
+      "static": "assets/exports/standard/static/rp-cafs.png",
+      "animated": "assets/exports/standard/animated/rp-cafs.png",
+      "dimensions": {
+        "width": 113,
+        "height": 43
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "osu",
+      "static": "assets/exports/standard/static/osu.png",
+      "animated": "assets/exports/standard/animated/osu.png",
+      "dimensions": {
+        "width": 121,
+        "height": 43
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "pm",
+      "static": "assets/exports/standard/static/pm.png",
+      "animated": "assets/exports/standard/animated/pm.png",
+      "dimensions": {
+        "width": 110,
+        "height": 43
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "water-pod",
+      "static": "assets/exports/standard/static/water-pod.png",
+      "animated": "assets/exports/standard/animated/water-pod.png",
+      "dimensions": {
+        "width": 83,
+        "height": 30
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "bulk-foam-pod",
+      "static": "assets/exports/standard/static/bulk-foam-pod.png",
+      "animated": "assets/exports/standard/animated/bulk-foam-pod.png",
+      "dimensions": {
+        "width": 83,
+        "height": 29
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "rescue-pod",
+      "static": "assets/exports/standard/static/rescue-pod.png",
+      "animated": "assets/exports/standard/animated/rescue-pod.png",
+      "dimensions": {
+        "width": 83,
+        "height": 33
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "command-pod",
+      "static": "assets/exports/standard/static/command-pod.png",
+      "animated": "assets/exports/standard/animated/command-pod.png",
+      "dimensions": {
+        "width": 83,
+        "height": 49
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "welfare-pod",
+      "static": "assets/exports/standard/static/welfare-pod.png",
+      "animated": "assets/exports/standard/animated/welfare-pod.png",
+      "dimensions": {
+        "width": 83,
+        "height": 33
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "basu-pod",
+      "static": "assets/exports/standard/static/basu-pod.png",
+      "animated": "assets/exports/standard/animated/basu-pod.png",
+      "dimensions": {
+        "width": 83,
+        "height": 26
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "misting-pod",
+      "static": "assets/exports/standard/static/misting-pod.png",
+      "animated": "assets/exports/standard/animated/misting-pod.png",
+      "dimensions": {
+        "width": 75,
+        "height": 35
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "hazardous-materials-pod",
+      "static": "assets/exports/standard/static/hazardous-materials-pod.png",
+      "animated": "assets/exports/standard/animated/hazardous-materials-pod.png",
+      "dimensions": {
+        "width": 83,
+        "height": 28
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "osu-pod",
+      "static": "assets/exports/standard/static/osu-pod.png",
+      "animated": "assets/exports/standard/animated/osu-pod.png",
+      "dimensions": {
+        "width": 86,
+        "height": 29
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "hvp",
+      "static": "assets/exports/standard/static/hvp.png",
+      "animated": "assets/exports/standard/animated/hvp.png",
+      "dimensions": {
+        "width": 88,
+        "height": 30
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "psu-carrier",
+      "static": "assets/exports/standard/static/psu-carrier.png",
+      "animated": "assets/exports/standard/animated/psu-carrier.png",
+      "dimensions": {
+        "width": 90,
+        "height": 34
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "firearms-personnel-carrier",
+      "static": "assets/exports/standard/static/firearms-personnel-carrier.png",
+      "animated": "assets/exports/standard/animated/firearms-personnel-carrier.png",
+      "dimensions": {
+        "width": 94,
+        "height": 36
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "multiple-dog-carrier",
+      "static": "assets/exports/standard/static/multiple-dog-carrier.png",
+      "animated": "assets/exports/standard/animated/multiple-dog-carrier.png",
+      "dimensions": {
+        "width": 95,
+        "height": 37
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "detention-van",
+      "static": "assets/exports/standard/static/detention-van.png",
+      "animated": "assets/exports/standard/animated/detention-van.png",
+      "dimensions": {
+        "width": 91,
+        "height": 33
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "mounted-unit",
+      "static": "assets/exports/standard/static/mounted-unit.png",
+      "animated": "assets/exports/standard/animated/mounted-unit.png",
+      "dimensions": {
+        "width": 117,
+        "height": 46
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "m-rav",
+      "static": "assets/exports/standard/static/m-rav.png",
+      "animated": "assets/exports/standard/animated/m-rav.png",
+      "dimensions": {
+        "width": 84,
+        "height": 35
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "crv",
+      "static": "assets/exports/standard/static/crv.png",
+      "animated": "assets/exports/standard/animated/crv.png",
+      "dimensions": {
+        "width": 68,
+        "height": 32
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "coastguard-mud-rescue-unit",
+      "static": "assets/exports/standard/static/coastguard-mud-rescue-unit.png",
+      "animated": "assets/exports/standard/animated/coastguard-mud-rescue-unit.png",
+      "dimensions": {
+        "width": 91,
+        "height": 36
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "coastguard-rope-rescue-unit",
+      "static": "assets/exports/standard/static/coastguard-rope-rescue-unit.png",
+      "animated": "assets/exports/standard/animated/coastguard-rope-rescue-unit.png",
+      "dimensions": {
+        "width": 91,
+        "height": 38
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "coastguard-commander",
+      "static": "assets/exports/standard/static/coastguard-commander.png",
+      "animated": "assets/exports/standard/animated/coastguard-commander.png",
+      "dimensions": {
+        "width": 73,
+        "height": 41
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "flood-rescue-unit-trailer",
+      "static": "assets/exports/standard/static/flood-rescue-unit-trailer.png",
+      "animated": "assets/exports/standard/animated/flood-rescue-unit-trailer.png",
+      "dimensions": {
+        "width": 88,
+        "height": 45
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "mud-decontamination-unit",
+      "static": "assets/exports/standard/static/mud-decontamination-unit.png",
+      "animated": "assets/exports/standard/animated/mud-decontamination-unit.png",
+      "dimensions": {
+        "width": 88,
+        "height": 37
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "support-unit",
+      "static": "assets/exports/standard/static/support-unit.png",
+      "animated": "assets/exports/standard/animated/support-unit.png",
+      "dimensions": {
+        "width": 94,
+        "height": 42
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "coastguard-rescue-helicopter",
+      "static": "assets/exports/standard/static/coastguard-rescue-helicopter.png",
+      "animated": "assets/exports/standard/animated/coastguard-rescue-helicopter.png",
+      "dimensions": {
+        "width": 229,
+        "height": 62
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "coastguard-rescue-helicopter-large",
+      "static": "assets/exports/standard/static/coastguard-rescue-helicopter-large.png",
+      "animated": "assets/exports/standard/animated/coastguard-rescue-helicopter-large.png",
+      "dimensions": {
+        "width": 272,
+        "height": 78
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "4x4-vehicle",
+      "static": "assets/exports/standard/static/4x4-vehicle.png",
+      "animated": "assets/exports/standard/animated/4x4-vehicle.png",
+      "dimensions": {
+        "width": 65,
+        "height": 30
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "inland-rescue-boat-trailer",
+      "static": "assets/exports/standard/static/inland-rescue-boat-trailer.png",
+      "animated": "assets/exports/standard/animated/inland-rescue-boat-trailer.png",
+      "dimensions": {
+        "width": 98,
+        "height": 37
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "ilb",
+      "static": "assets/exports/standard/static/ilb.png",
+      "animated": "assets/exports/standard/animated/ilb.png",
+      "dimensions": {
+        "width": 99,
+        "height": 43
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "alb",
+      "static": "assets/exports/standard/static/alb.png",
+      "animated": "assets/exports/standard/animated/alb.png",
+      "dimensions": {
+        "width": 214,
+        "height": 100
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "rescue-watercraft-trailer",
+      "static": "assets/exports/standard/static/rescue-watercraft-trailer.png",
+      "animated": "assets/exports/standard/animated/rescue-watercraft-trailer.png",
+      "dimensions": {
+        "width": 91,
+        "height": 26
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "hovercraft-trailer",
+      "static": "assets/exports/standard/static/hovercraft-trailer.png",
+      "animated": "assets/exports/standard/animated/hovercraft-trailer.png",
+      "dimensions": {
+        "width": 104,
+        "height": 36
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "hovercraft-transporter",
+      "static": "assets/exports/standard/static/hovercraft-transporter.png",
+      "animated": "assets/exports/standard/animated/hovercraft-transporter.png",
+      "dimensions": {
+        "width": 81,
+        "height": 28
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "light-4x4",
+      "static": "assets/exports/standard/static/light-4x4.png",
+      "animated": "assets/exports/standard/animated/light-4x4.png",
+      "dimensions": {
+        "width": 65,
+        "height": 28
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "boat-trailer",
+      "static": "assets/exports/standard/static/boat-trailer.png",
+      "animated": "assets/exports/standard/animated/boat-trailer.png",
+      "dimensions": {
+        "width": 94,
+        "height": 38
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "major-foam-tender",
+      "static": "assets/exports/standard/static/major-foam-tender.png",
+      "animated": "assets/exports/standard/animated/major-foam-tender.png",
+      "dimensions": {
+        "width": 156,
+        "height": 47
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "riv",
+      "static": "assets/exports/standard/static/riv.png",
+      "animated": "assets/exports/standard/animated/riv.png",
+      "dimensions": {
+        "width": 98,
+        "height": 46
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "airfield-firefighting-command-vehicle",
+      "static": "assets/exports/standard/static/airfield-firefighting-command-vehicle.png",
+      "animated": "assets/exports/standard/animated/airfield-firefighting-command-vehicle.png",
+      "dimensions": {
+        "width": 75,
+        "height": 36
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "rescue-stairs",
+      "static": "assets/exports/standard/static/rescue-stairs.png",
+      "animated": "assets/exports/standard/animated/rescue-stairs.png",
+      "dimensions": {
+        "width": 156,
+        "height": 73
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "airfield-operations-vehicle",
+      "static": "assets/exports/standard/static/airfield-operations-vehicle.png",
+      "animated": "assets/exports/standard/animated/airfield-operations-vehicle.png",
+      "dimensions": {
+        "width": 68,
+        "height": 29
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "airfield-operations-supervisor",
+      "static": "assets/exports/standard/static/airfield-operations-supervisor.png",
+      "animated": "assets/exports/standard/animated/airfield-operations-supervisor.png",
+      "dimensions": {
+        "width": 73,
+        "height": 38
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "medical-equipment-trailer",
+      "static": "assets/exports/standard/static/medical-equipment-trailer.png",
+      "animated": "assets/exports/standard/animated/medical-equipment-trailer.png",
+      "dimensions": {
+        "width": 78,
+        "height": 36
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "armed-cell-van",
+      "static": "assets/exports/standard/static/armed-cell-van.png",
+      "animated": "assets/exports/standard/animated/armed-cell-van.png",
+      "dimensions": {
+        "width": 91,
+        "height": 35
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "medical-cycle-responder",
+      "static": "assets/exports/standard/static/medical-cycle-responder.png",
+      "animated": "assets/exports/standard/animated/medical-cycle-responder.png",
+      "dimensions": {
+        "width": 26,
+        "height": 15
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "pump-trailer",
+      "static": "assets/exports/standard/static/pump-trailer.png",
+      "animated": "assets/exports/standard/animated/pump-trailer.png",
+      "dimensions": {
+        "width": 58,
+        "height": 26
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "control-van-sar",
+      "static": "assets/exports/standard/static/control-van-sar.png",
+      "animated": "assets/exports/standard/animated/control-van-sar.png",
+      "dimensions": {
+        "width": 94,
+        "height": 56
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "operational-support-van",
+      "static": "assets/exports/standard/static/operational-support-van.png",
+      "animated": "assets/exports/standard/animated/operational-support-van.png",
+      "dimensions": {
+        "width": 91,
+        "height": 41
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "operational-support-trailer",
+      "static": "assets/exports/standard/static/operational-support-trailer.png",
+      "animated": "assets/exports/standard/animated/operational-support-trailer.png",
+      "dimensions": {
+        "width": 84,
+        "height": 42
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "sar-flood-rescue-trailer",
+      "static": "assets/exports/standard/static/sar-flood-rescue-trailer.png",
+      "animated": "assets/exports/standard/animated/sar-flood-rescue-trailer.png",
+      "dimensions": {
+        "width": 88,
+        "height": 37
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "drone-vehicle-sar-hq",
+      "static": "assets/exports/standard/static/drone-vehicle-sar-hq.png",
+      "animated": "assets/exports/standard/animated/drone-vehicle-sar-hq.png",
+      "dimensions": {
+        "width": 81,
+        "height": 44
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "drone-vehicle-fire-station",
+      "static": "assets/exports/standard/static/drone-vehicle-fire-station.png",
+      "animated": "assets/exports/standard/animated/drone-vehicle-fire-station.png",
+      "dimensions": {
+        "width": 81,
+        "height": 43
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "drone-vehicle-police-station",
+      "static": "assets/exports/standard/static/drone-vehicle-police-station.png",
+      "animated": "assets/exports/standard/animated/drone-vehicle-police-station.png",
+      "dimensions": {
+        "width": 81,
+        "height": 46
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "personal-sar-vehicle",
+      "static": "assets/exports/standard/static/personal-sar-vehicle.png",
+      "animated": "assets/exports/standard/animated/personal-sar-vehicle.png",
+      "dimensions": {
+        "width": 62,
+        "height": 25
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "sar-4x4",
+      "static": "assets/exports/standard/static/sar-4x4.png",
+      "animated": "assets/exports/standard/animated/sar-4x4.png",
+      "dimensions": {
+        "width": 68,
+        "height": 37
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "rrv-2",
+      "static": "assets/exports/standard/static/rrv-2.png",
+      "animated": "assets/exports/standard/animated/rrv-2.png",
+      "dimensions": {
+        "width": 64,
+        "height": 21
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "community-midwife",
+      "static": "assets/exports/standard/static/community-midwife.png",
+      "animated": "assets/exports/standard/animated/community-midwife.png",
+      "dimensions": {
+        "width": 61,
+        "height": 23
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "specialist-paramedic-rrv",
+      "static": "assets/exports/standard/static/specialist-paramedic-rrv.png",
+      "animated": "assets/exports/standard/animated/specialist-paramedic-rrv.png",
+      "dimensions": {
+        "width": 65,
+        "height": 23
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "patient-transport-service-ambulance",
+      "static": "assets/exports/standard/static/patient-transport-service-ambulance.png",
+      "animated": "assets/exports/standard/animated/patient-transport-service-ambulance.png",
+      "dimensions": {
+        "width": 88,
+        "height": 36
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "critical-care-transfer-ambulance",
+      "static": "assets/exports/standard/static/critical-care-transfer-ambulance.png",
+      "animated": "assets/exports/standard/animated/critical-care-transfer-ambulance.png",
+      "dimensions": {
+        "width": 94,
+        "height": 36
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "mountain-rescue-4x4",
+      "static": "assets/exports/standard/static/mountain-rescue-4x4.png",
+      "animated": "assets/exports/standard/animated/mountain-rescue-4x4.png",
+      "dimensions": {
+        "width": 65,
+        "height": 33
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "control-van-mountain-rescue",
+      "static": "assets/exports/standard/static/control-van-mountain-rescue.png",
+      "animated": "assets/exports/standard/animated/control-van-mountain-rescue.png",
+      "dimensions": {
+        "width": 91,
+        "height": 53
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "search-dog-unit",
+      "static": "assets/exports/standard/static/search-dog-unit.png",
+      "animated": "assets/exports/standard/animated/search-dog-unit.png",
+      "dimensions": {
+        "width": 75,
+        "height": 32
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "search-dog-unit-sar",
+      "static": "assets/exports/standard/static/search-dog-unit-sar.png",
+      "animated": "assets/exports/standard/animated/search-dog-unit-sar.png",
+      "dimensions": {
+        "width": 75,
+        "height": 33
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "crew-carrier-sar",
+      "static": "assets/exports/standard/static/crew-carrier-sar.png",
+      "animated": "assets/exports/standard/animated/crew-carrier-sar.png",
+      "dimensions": {
+        "width": 91,
+        "height": 33
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "recovery-vehicle",
+      "static": "assets/exports/standard/static/recovery-vehicle.png",
+      "animated": "assets/exports/standard/animated/recovery-vehicle.png",
+      "dimensions": {
+        "width": 91,
+        "height": 37
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "flatbed-recovery-vehicle",
+      "static": "assets/exports/standard/static/flatbed-recovery-vehicle.png",
+      "animated": "assets/exports/standard/animated/flatbed-recovery-vehicle.png",
+      "dimensions": {
+        "width": 110,
+        "height": 42
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "hgv-recovery-vehicle",
+      "static": "assets/exports/standard/static/hgv-recovery-vehicle.png",
+      "animated": "assets/exports/standard/animated/hgv-recovery-vehicle.png",
+      "dimensions": {
+        "width": 130,
+        "height": 49
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "rru",
+      "static": "assets/exports/standard/static/rru.png",
+      "animated": "assets/exports/standard/animated/rru.png",
+      "dimensions": {
+        "width": 110,
+        "height": 42
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "eiu",
+      "static": "assets/exports/standard/static/eiu.png",
+      "animated": "assets/exports/standard/animated/eiu.png",
+      "dimensions": {
+        "width": 72,
+        "height": 26
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "eod-commander",
+      "static": "assets/exports/standard/static/eod-commander.png",
+      "animated": "assets/exports/standard/animated/eod-commander.png",
+      "dimensions": {
+        "width": 72,
+        "height": 37
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "eod-response-vehicle",
+      "static": "assets/exports/standard/static/eod-response-vehicle.png",
+      "animated": "assets/exports/standard/animated/eod-response-vehicle.png",
+      "dimensions": {
+        "width": 84,
+        "height": 39
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "eod-medium-equipment-van",
+      "static": "assets/exports/standard/static/eod-medium-equipment-van.png",
+      "animated": "assets/exports/standard/animated/eod-medium-equipment-van.png",
+      "dimensions": {
+        "width": 91,
+        "height": 41
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "eod-heavy-equipment-vehicle",
+      "static": "assets/exports/standard/static/eod-heavy-equipment-vehicle.png",
+      "animated": "assets/exports/standard/animated/eod-heavy-equipment-vehicle.png",
+      "dimensions": {
+        "width": 130,
+        "height": 41
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "marine-eod-response-vehicle",
+      "static": "assets/exports/standard/static/marine-eod-response-vehicle.png",
+      "animated": "assets/exports/standard/animated/marine-eod-response-vehicle.png",
+      "dimensions": {
+        "width": 78,
+        "height": 32
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "marine-eod-equipment-van",
+      "static": "assets/exports/standard/static/marine-eod-equipment-van.png",
+      "animated": "assets/exports/standard/animated/marine-eod-equipment-van.png",
+      "dimensions": {
+        "width": 91,
+        "height": 37
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "welfare-vehicle-2",
+      "static": "assets/exports/standard/static/welfare-vehicle-2.png",
+      "animated": "assets/exports/standard/animated/welfare-vehicle-2.png",
+      "dimensions": {
+        "width": 91,
+        "height": 40
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    },
+    {
+      "id": "cell-van",
+      "static": "assets/exports/standard/static/cell-van.png",
+      "animated": "assets/exports/standard/animated/cell-van.png",
+      "dimensions": {
+        "width": 88,
+        "height": 38
+      },
+      "alpha_mode": "RGBA",
+      "transparent_corners": true,
+      "apng_frames": 6,
+      "passed": true
+    }
+  ]
+}
