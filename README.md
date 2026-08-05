@@ -22,8 +22,7 @@ The pack uses realistic, isolated side-elevation product artwork with UK emergen
 
 ## Structure
 
-- `assets/sources/` — archived full-resolution chroma-key source artwork
-- `assets/masters/static/` — selected full-resolution transparent RGBA masters
+- `assets/sources/` — representative full-resolution chroma-key source artwork
 - `assets/exports/standard/static/` — MissionChief-ready transparent PNGs
 - `assets/exports/standard/animated/` — MissionChief-ready six-frame APNGs
 - `assets/previews/` — full-source, map-scale and animation-frame QA sheets
@@ -32,6 +31,13 @@ The pack uses realistic, isolated side-elevation product artwork with UK emergen
 - `data/final-pack-validation.json` — release-level validation report
 - `scripts/` — repeatable preparation, build and QA tools
 - `docs/` — standards and release checkpoints
+
+The complete 117-file chroma source set and all 117 full-resolution transparent masters are included in the **full production archive** attached to the GitHub `v1.0.0` release. Keeping the large working artwork in a release asset avoids duplicating hundreds of megabytes of binary history in every Git clone.
+
+## Release downloads
+
+- `TKB-UK-Emergency-Fleet-MissionChief-Upload-Ready-v1.0.0.zip` — compact deployment package containing all 117 static PNGs and 117 animated APNGs
+- `TKB-UK-Emergency-Fleet-v1.0.0.zip` — complete production project containing sources, transparent masters, exports, previews, mappings, documentation and build tools
 
 ## Rebuild and validate
 
