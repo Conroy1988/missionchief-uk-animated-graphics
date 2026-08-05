@@ -1,0 +1,2783 @@
+{
+  "pack": {
+    "name": "TKB UK Emergency Fleet",
+    "edition": "Animated",
+    "region": "United Kingdom",
+    "pixels_per_metre": 13,
+    "working_status": "production-complete"
+  },
+  "vehicles": [
+    {
+      "id": "fire-rescue-pump",
+      "display_name": "Fire Rescue Pump",
+      "missionchief_slot": 1,
+      "service": "fire",
+      "source": "assets/masters/static/golden-fire-rescue-pump-selected.png",
+      "real_length_metres": 8.5,
+      "lights": [
+        {
+          "x": 0.885,
+          "y": 0.1,
+          "group": "a",
+          "size": 1.0
+        },
+        {
+          "x": 0.075,
+          "y": 0.215,
+          "group": "b",
+          "size": 0.7
+        },
+        {
+          "x": 0.952,
+          "y": 0.765,
+          "group": "b",
+          "size": 0.65
+        }
+      ]
+    },
+    {
+      "id": "light-4x4-pump",
+      "display_name": "Light 4x4 Pump",
+      "missionchief_slot": 2,
+      "service": "fire",
+      "source": "assets/masters/static/light-4x4-pump-selected.png",
+      "real_length_metres": 6.5,
+      "lights": [
+        {
+          "x": 0.56,
+          "y": 0.055,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.965,
+          "y": 0.66,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.955,
+          "y": 0.82,
+          "group": "b",
+          "size": 0.5
+        },
+        {
+          "x": 0.11,
+          "y": 0.16,
+          "group": "b",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "aerial-appliance",
+      "display_name": "Aerial Appliance",
+      "missionchief_slot": 3,
+      "service": "fire",
+      "source": "assets/masters/static/aerial-appliance-selected.png",
+      "real_length_metres": 12.0,
+      "lights": [
+        {
+          "x": 0.91,
+          "y": 0.225,
+          "group": "a",
+          "size": 0.85
+        },
+        {
+          "x": 0.985,
+          "y": 0.78,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.62,
+          "y": 0.48,
+          "group": "b",
+          "size": 0.48
+        },
+        {
+          "x": 0.065,
+          "y": 0.5,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "fire-officer",
+      "display_name": "Fire Officer",
+      "missionchief_slot": 4,
+      "service": "fire",
+      "source": "assets/masters/static/fire-officer-selected.png",
+      "real_length_metres": 4.8,
+      "lights": [
+        {
+          "x": 0.5,
+          "y": 0.065,
+          "group": "a",
+          "size": 0.85
+        },
+        {
+          "x": 0.965,
+          "y": 0.58,
+          "group": "b",
+          "size": 0.55
+        }
+      ]
+    },
+    {
+      "id": "rescue-support-unit",
+      "display_name": "Rescue Support Unit",
+      "missionchief_slot": 5,
+      "service": "fire",
+      "source": "assets/masters/static/rescue-support-unit-selected.png",
+      "real_length_metres": 8.8,
+      "lights": [
+        {
+          "x": 0.91,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.985,
+          "y": 0.75,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.13,
+          "y": 0.15,
+          "group": "b",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "frontline-ambulance",
+      "display_name": "Frontline Ambulance",
+      "missionchief_slot": 6,
+      "service": "ambulance",
+      "source": "assets/masters/static/golden-frontline-ambulance-selected-v2.png",
+      "real_length_metres": 6.5,
+      "lights": [
+        {
+          "x": 0.735,
+          "y": 0.095,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.075,
+          "y": 0.075,
+          "group": "b",
+          "size": 0.62
+        },
+        {
+          "x": 0.59,
+          "y": 0.075,
+          "group": "b",
+          "size": 0.62
+        }
+      ]
+    },
+    {
+      "id": "water-carrier",
+      "display_name": "Water Carrier",
+      "missionchief_slot": 7,
+      "service": "fire",
+      "source": "assets/masters/static/water-carrier-selected.png",
+      "real_length_metres": 9.5,
+      "lights": [
+        {
+          "x": 0.91,
+          "y": 0.09,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.985,
+          "y": 0.76,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.58,
+          "y": 0.2,
+          "group": "b",
+          "size": 0.48
+        },
+        {
+          "x": 0.08,
+          "y": 0.24,
+          "group": "a",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "hazmat-unit",
+      "display_name": "HazMat Unit",
+      "missionchief_slot": 8,
+      "service": "fire",
+      "source": "assets/masters/static/hazmat-unit-selected.png",
+      "real_length_metres": 8.8,
+      "lights": [
+        {
+          "x": 0.91,
+          "y": 0.09,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.985,
+          "y": 0.77,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.6,
+          "y": 0.18,
+          "group": "b",
+          "size": 0.48
+        },
+        {
+          "x": 0.12,
+          "y": 0.18,
+          "group": "a",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "police-incident-response-vehicle",
+      "display_name": "Police Incident Response Vehicle",
+      "missionchief_slot": 9,
+      "service": "police",
+      "source": "assets/masters/static/golden-police-response-car-selected.png",
+      "real_length_metres": 4.9,
+      "lights": [
+        {
+          "x": 0.44,
+          "y": 0.04,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.955,
+          "y": 0.76,
+          "group": "b",
+          "size": 0.55
+        }
+      ]
+    },
+    {
+      "id": "hems",
+      "display_name": "HEMS",
+      "missionchief_slot": 10,
+      "service": "ambulance",
+      "source": "assets/masters/static/hems-selected.png",
+      "real_length_metres": 13.6,
+      "lights": [
+        {
+          "x": 0.69,
+          "y": 0.3,
+          "group": "a",
+          "size": 0.7
+        },
+        {
+          "x": 0.08,
+          "y": 0.24,
+          "group": "b",
+          "size": 0.65
+        },
+        {
+          "x": 0.84,
+          "y": 0.66,
+          "group": "b",
+          "size": 0.55
+        }
+      ]
+    },
+    {
+      "id": "rapid-response-vehicle",
+      "display_name": "Rapid Response Vehicle",
+      "missionchief_slot": 11,
+      "service": "ambulance",
+      "source": "assets/masters/static/rapid-response-vehicle-selected.png",
+      "real_length_metres": 4.9,
+      "lights": [
+        {
+          "x": 0.5,
+          "y": 0.06,
+          "group": "a",
+          "size": 0.85
+        },
+        {
+          "x": 0.97,
+          "y": 0.64,
+          "group": "b",
+          "size": 0.55
+        }
+      ]
+    },
+    {
+      "id": "police-helicopter",
+      "display_name": "Police Helicopter",
+      "missionchief_slot": 12,
+      "service": "police",
+      "source": "assets/masters/static/police-helicopter-selected.png",
+      "real_length_metres": 13.8,
+      "lights": [
+        {
+          "x": 0.71,
+          "y": 0.35,
+          "group": "a",
+          "size": 0.65
+        },
+        {
+          "x": 0.08,
+          "y": 0.2,
+          "group": "b",
+          "size": 0.65
+        },
+        {
+          "x": 0.55,
+          "y": 0.72,
+          "group": "b",
+          "size": 0.55
+        }
+      ]
+    },
+    {
+      "id": "dog-support-unit",
+      "display_name": "Dog Support Unit",
+      "missionchief_slot": 13,
+      "service": "police",
+      "source": "assets/masters/static/dog-support-unit-selected.png",
+      "real_length_metres": 6.8,
+      "lights": [
+        {
+          "x": 0.6,
+          "y": 0.06,
+          "group": "a",
+          "size": 0.85
+        },
+        {
+          "x": 0.97,
+          "y": 0.56,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.08,
+          "y": 0.39,
+          "group": "b",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "armed-response-vehicle",
+      "display_name": "Armed Response Vehicle",
+      "missionchief_slot": 14,
+      "service": "police",
+      "source": "assets/masters/static/armed-response-vehicle-selected.png",
+      "real_length_metres": 5.1,
+      "lights": [
+        {
+          "x": 0.5,
+          "y": 0.06,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.98,
+          "y": 0.68,
+          "group": "b",
+          "size": 0.55
+        }
+      ]
+    },
+    {
+      "id": "breathing-apparatus-support-unit",
+      "display_name": "Breathing Apparatus Support Unit",
+      "missionchief_slot": 15,
+      "service": "fire",
+      "source": "assets/masters/static/breathing-apparatus-support-unit-selected.png",
+      "real_length_metres": 8.6,
+      "lights": [
+        {
+          "x": 0.91,
+          "y": 0.1,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.985,
+          "y": 0.77,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.55,
+          "y": 0.18,
+          "group": "b",
+          "size": 0.48
+        },
+        {
+          "x": 0.13,
+          "y": 0.2,
+          "group": "a",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "incident-command-control-unit",
+      "display_name": "Incident Command and Control Unit",
+      "missionchief_slot": 16,
+      "service": "fire",
+      "source": "assets/masters/static/incident-command-control-unit-selected.png",
+      "real_length_metres": 10.5,
+      "lights": [
+        {
+          "x": 0.91,
+          "y": 0.2,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.985,
+          "y": 0.76,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.56,
+          "y": 0.24,
+          "group": "b",
+          "size": 0.48
+        },
+        {
+          "x": 0.1,
+          "y": 0.25,
+          "group": "a",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "rescue-pump",
+      "display_name": "Rescue Pump",
+      "missionchief_slot": 17,
+      "service": "fire",
+      "source": "assets/masters/static/rescue-pump-selected.png",
+      "real_length_metres": 8.6,
+      "lights": [
+        {
+          "x": 0.87,
+          "y": 0.1,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.985,
+          "y": 0.77,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.51,
+          "y": 0.18,
+          "group": "b",
+          "size": 0.48
+        },
+        {
+          "x": 0.12,
+          "y": 0.2,
+          "group": "a",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "carp",
+      "display_name": "CARP",
+      "missionchief_slot": 18,
+      "service": "fire",
+      "source": "assets/masters/static/carp-selected.png",
+      "real_length_metres": 10.2,
+      "lights": [
+        {
+          "x": 0.88,
+          "y": 0.16,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.985,
+          "y": 0.78,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.4,
+          "y": 0.44,
+          "group": "b",
+          "size": 0.5
+        },
+        {
+          "x": 0.13,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "co-responder-vehicle",
+      "display_name": "Co-Responder Vehicle",
+      "missionchief_slot": 19,
+      "service": "fire",
+      "source": "assets/masters/static/co-responder-vehicle-selected.png",
+      "real_length_metres": 4.8,
+      "lights": [
+        {
+          "x": 0.39,
+          "y": 0.05,
+          "group": "a",
+          "size": 0.82
+        },
+        {
+          "x": 0.46,
+          "y": 0.05,
+          "group": "b",
+          "size": 0.82
+        },
+        {
+          "x": 0.97,
+          "y": 0.63,
+          "group": "b",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "joint-response-unit",
+      "display_name": "Joint Response Unit",
+      "missionchief_slot": 20,
+      "service": "multi-service",
+      "source": "assets/masters/static/joint-response-unit-selected.png",
+      "real_length_metres": 4.9,
+      "lights": [
+        {
+          "x": 0.42,
+          "y": 0.07,
+          "group": "a",
+          "size": 0.82
+        },
+        {
+          "x": 0.49,
+          "y": 0.07,
+          "group": "b",
+          "size": 0.82
+        },
+        {
+          "x": 0.97,
+          "y": 0.63,
+          "group": "b",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "otl",
+      "display_name": "OTL",
+      "missionchief_slot": 21,
+      "service": "ambulance",
+      "source": "assets/masters/static/otl-selected.png",
+      "real_length_metres": 5.0,
+      "lights": [
+        {
+          "x": 0.4,
+          "y": 0.14,
+          "group": "a",
+          "size": 0.82
+        },
+        {
+          "x": 0.47,
+          "y": 0.14,
+          "group": "b",
+          "size": 0.82
+        },
+        {
+          "x": 0.97,
+          "y": 0.62,
+          "group": "b",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "general-practitioner",
+      "display_name": "General Practitioner",
+      "missionchief_slot": 22,
+      "service": "ambulance",
+      "source": "assets/masters/static/general-practitioner-selected.png",
+      "real_length_metres": 4.95,
+      "lights": [
+        {
+          "x": 0.42,
+          "y": 0.19,
+          "group": "a",
+          "size": 0.82
+        },
+        {
+          "x": 0.49,
+          "y": 0.19,
+          "group": "b",
+          "size": 0.82
+        },
+        {
+          "x": 0.97,
+          "y": 0.65,
+          "group": "b",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "community-first-responder",
+      "display_name": "Community First Responder",
+      "missionchief_slot": 23,
+      "service": "ambulance",
+      "source": "assets/masters/static/community-first-responder-selected.png",
+      "real_length_metres": 4.4,
+      "lights": [
+        {
+          "x": 0.39,
+          "y": 0.13,
+          "group": "a",
+          "size": 0.8
+        },
+        {
+          "x": 0.46,
+          "y": 0.13,
+          "group": "b",
+          "size": 0.8
+        },
+        {
+          "x": 0.97,
+          "y": 0.63,
+          "group": "b",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "crew-carrier",
+      "display_name": "Crew Carrier",
+      "missionchief_slot": 24,
+      "service": "ambulance",
+      "source": "assets/masters/static/crew-carrier-selected.png",
+      "real_length_metres": 7.2,
+      "lights": [
+        {
+          "x": 0.34,
+          "y": 0.08,
+          "group": "a",
+          "size": 0.85
+        },
+        {
+          "x": 0.59,
+          "y": 0.08,
+          "group": "b",
+          "size": 0.85
+        },
+        {
+          "x": 0.98,
+          "y": 0.62,
+          "group": "b",
+          "size": 0.52
+        }
+      ]
+    },
+    {
+      "id": "traffic-car",
+      "display_name": "Traffic Car",
+      "missionchief_slot": 25,
+      "service": "police",
+      "source": "assets/masters/static/traffic-car-selected.png",
+      "real_length_metres": 5.0,
+      "lights": [
+        {
+          "x": 0.43,
+          "y": 0.11,
+          "group": "a",
+          "size": 0.85
+        },
+        {
+          "x": 0.49,
+          "y": 0.11,
+          "group": "b",
+          "size": 0.85
+        },
+        {
+          "x": 0.98,
+          "y": 0.64,
+          "group": "b",
+          "size": 0.52
+        }
+      ]
+    },
+    {
+      "id": "armed-traffic-car",
+      "display_name": "Armed Traffic Car",
+      "missionchief_slot": 26,
+      "service": "police",
+      "source": "assets/masters/static/armed-traffic-car-selected.png",
+      "real_length_metres": 5.1,
+      "lights": [
+        {
+          "x": 0.4,
+          "y": 0.13,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.47,
+          "y": 0.13,
+          "group": "b",
+          "size": 0.9
+        },
+        {
+          "x": 0.98,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        }
+      ]
+    },
+    {
+      "id": "heavy-4x4-tanker",
+      "display_name": "Heavy 4x4 Tanker",
+      "missionchief_slot": 27,
+      "service": "fire",
+      "source": "assets/masters/static/heavy-4x4-tanker-selected.png",
+      "real_length_metres": 9.7,
+      "lights": [
+        {
+          "x": 0.76,
+          "y": 0.1,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.82,
+          "y": 0.1,
+          "group": "b",
+          "size": 0.9
+        },
+        {
+          "x": 0.98,
+          "y": 0.62,
+          "group": "b",
+          "size": 0.55
+        }
+      ]
+    },
+    {
+      "id": "prv",
+      "display_name": "PRV",
+      "missionchief_slot": 28,
+      "service": "ambulance",
+      "source": "assets/masters/static/prv-selected.png",
+      "real_length_metres": 5.3,
+      "lights": [
+        {
+          "x": 0.4,
+          "y": 0.08,
+          "group": "a",
+          "size": 0.82
+        },
+        {
+          "x": 0.47,
+          "y": 0.08,
+          "group": "b",
+          "size": 0.82
+        },
+        {
+          "x": 0.96,
+          "y": 0.65,
+          "group": "b",
+          "size": 0.52
+        },
+        {
+          "x": 0.08,
+          "y": 0.36,
+          "group": "a",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "srv",
+      "display_name": "SRV",
+      "missionchief_slot": 29,
+      "service": "ambulance",
+      "source": "assets/masters/static/srv-selected.png",
+      "real_length_metres": 7.0,
+      "lights": [
+        {
+          "x": 0.58,
+          "y": 0.07,
+          "group": "a",
+          "size": 0.86
+        },
+        {
+          "x": 0.72,
+          "y": 0.07,
+          "group": "b",
+          "size": 0.86
+        },
+        {
+          "x": 0.98,
+          "y": 0.64,
+          "group": "b",
+          "size": 0.52
+        },
+        {
+          "x": 0.08,
+          "y": 0.12,
+          "group": "a",
+          "size": 0.5
+        }
+      ]
+    },
+    {
+      "id": "welfare-vehicle",
+      "display_name": "Welfare Vehicle",
+      "missionchief_slot": 30,
+      "service": "ambulance",
+      "source": "assets/masters/static/welfare-vehicle-selected.png",
+      "real_length_metres": 7.0,
+      "lights": [
+        {
+          "x": 0.07,
+          "y": 0.1,
+          "group": "a",
+          "size": 0.8
+        },
+        {
+          "x": 0.75,
+          "y": 0.1,
+          "group": "b",
+          "size": 0.8
+        },
+        {
+          "x": 0.98,
+          "y": 0.62,
+          "group": "b",
+          "size": 0.52
+        }
+      ]
+    },
+    {
+      "id": "atv-carrier",
+      "display_name": "ATV Carrier",
+      "missionchief_slot": 31,
+      "service": "ambulance",
+      "source": "assets/masters/static/atv-carrier-selected.png",
+      "real_length_metres": 9.0,
+      "lights": [
+        {
+          "x": 0.84,
+          "y": 0.1,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.91,
+          "y": 0.1,
+          "group": "b",
+          "size": 0.88
+        },
+        {
+          "x": 0.98,
+          "y": 0.64,
+          "group": "b",
+          "size": 0.54
+        }
+      ]
+    },
+    {
+      "id": "ambulance-control-unit",
+      "display_name": "Ambulance Control Unit",
+      "missionchief_slot": 32,
+      "service": "ambulance",
+      "source": "assets/masters/static/ambulance-control-unit-selected.png",
+      "real_length_metres": 10.0,
+      "lights": [
+        {
+          "x": 0.92,
+          "y": 0.32,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.74,
+          "y": 0.34,
+          "group": "b",
+          "size": 0.58
+        },
+        {
+          "x": 0.39,
+          "y": 0.34,
+          "group": "a",
+          "size": 0.55
+        }
+      ]
+    },
+    {
+      "id": "cbrn-vehicle",
+      "display_name": "CBRN Vehicle",
+      "missionchief_slot": 33,
+      "service": "ambulance",
+      "source": "assets/masters/static/cbrn-vehicle-selected.png",
+      "real_length_metres": 6.8,
+      "lights": [
+        {
+          "x": 0.86,
+          "y": 0.24,
+          "group": "a",
+          "size": 0.82
+        },
+        {
+          "x": 0.58,
+          "y": 0.2,
+          "group": "b",
+          "size": 0.6
+        },
+        {
+          "x": 0.98,
+          "y": 0.65,
+          "group": "b",
+          "size": 0.52
+        }
+      ]
+    },
+    {
+      "id": "mass-casualty-equipment",
+      "display_name": "Mass Casualty Equipment",
+      "missionchief_slot": 34,
+      "service": "ambulance",
+      "source": "assets/masters/static/mass-casualty-equipment-selected.png",
+      "real_length_metres": 9.5,
+      "lights": [
+        {
+          "x": 0.9,
+          "y": 0.3,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.66,
+          "y": 0.28,
+          "group": "b",
+          "size": 0.58
+        },
+        {
+          "x": 0.32,
+          "y": 0.34,
+          "group": "a",
+          "size": 0.55
+        }
+      ]
+    },
+    {
+      "id": "ambulance-officer",
+      "display_name": "Ambulance Officer",
+      "missionchief_slot": 35,
+      "service": "ambulance",
+      "source": "assets/masters/static/ambulance-officer-selected.png",
+      "real_length_metres": 5.0,
+      "lights": [
+        {
+          "x": 0.42,
+          "y": 0.18,
+          "group": "a",
+          "size": 0.8
+        },
+        {
+          "x": 0.48,
+          "y": 0.18,
+          "group": "b",
+          "size": 0.8
+        },
+        {
+          "x": 0.98,
+          "y": 0.65,
+          "group": "b",
+          "size": 0.52
+        }
+      ]
+    },
+    {
+      "id": "bfu",
+      "display_name": "BFU",
+      "missionchief_slot": 36,
+      "service": "fire",
+      "source": "assets/masters/static/bfu-selected.png",
+      "real_length_metres": 8.8,
+      "lights": [
+        {
+          "x": 0.9,
+          "y": 0.12,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.95,
+          "y": 0.12,
+          "group": "b",
+          "size": 0.9
+        },
+        {
+          "x": 0.98,
+          "y": 0.63,
+          "group": "b",
+          "size": 0.54
+        },
+        {
+          "x": 0.58,
+          "y": 0.2,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "f-wrc",
+      "display_name": "F/WrC",
+      "missionchief_slot": 37,
+      "service": "fire",
+      "source": "assets/masters/static/f-wrc-selected.png",
+      "real_length_metres": 9.5,
+      "lights": [
+        {
+          "x": 0.88,
+          "y": 0.08,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.93,
+          "y": 0.08,
+          "group": "b",
+          "size": 0.9
+        },
+        {
+          "x": 0.98,
+          "y": 0.58,
+          "group": "b",
+          "size": 0.54
+        },
+        {
+          "x": 0.04,
+          "y": 0.73,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "wrl-cafs",
+      "display_name": "WrL CAFS",
+      "missionchief_slot": 38,
+      "service": "fire",
+      "source": "assets/masters/static/wrl-cafs-selected.png",
+      "real_length_metres": 8.5,
+      "lights": [
+        {
+          "x": 0.88,
+          "y": 0.14,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.92,
+          "y": 0.14,
+          "group": "b",
+          "size": 0.88
+        },
+        {
+          "x": 0.98,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.52
+        },
+        {
+          "x": 0.05,
+          "y": 0.31,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "rp-cafs",
+      "display_name": "RP CAFS",
+      "missionchief_slot": 39,
+      "service": "fire",
+      "source": "assets/masters/static/rp-cafs-selected.png",
+      "real_length_metres": 8.7,
+      "lights": [
+        {
+          "x": 0.83,
+          "y": 0.08,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.88,
+          "y": 0.08,
+          "group": "b",
+          "size": 0.9
+        },
+        {
+          "x": 0.98,
+          "y": 0.59,
+          "group": "b",
+          "size": 0.54
+        },
+        {
+          "x": 0.06,
+          "y": 0.65,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "osu",
+      "display_name": "OSU",
+      "missionchief_slot": 40,
+      "service": "fire",
+      "source": "assets/masters/static/osu-selected.png",
+      "real_length_metres": 9.3,
+      "lights": [
+        {
+          "x": 0.86,
+          "y": 0.07,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.92,
+          "y": 0.07,
+          "group": "b",
+          "size": 0.9
+        },
+        {
+          "x": 0.98,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.54
+        },
+        {
+          "x": 0.53,
+          "y": 0.16,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "pm",
+      "display_name": "PM",
+      "missionchief_slot": 41,
+      "service": "fire",
+      "source": "assets/masters/static/pm-selected.png",
+      "real_length_metres": 8.5,
+      "lights": [
+        {
+          "x": 0.86,
+          "y": 0.07,
+          "group": "a",
+          "size": 0.9
+        },
+        {
+          "x": 0.92,
+          "y": 0.07,
+          "group": "b",
+          "size": 0.9
+        },
+        {
+          "x": 0.98,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.54
+        },
+        {
+          "x": 0.73,
+          "y": 0.74,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "water-pod",
+      "display_name": "Water Pod",
+      "missionchief_slot": 42,
+      "service": "fire",
+      "source": "assets/masters/static/water-pod-selected.png",
+      "real_length_metres": 6.4,
+      "lights": []
+    },
+    {
+      "id": "bulk-foam-pod",
+      "display_name": "Bulk Foam Pod",
+      "missionchief_slot": 43,
+      "service": "fire",
+      "source": "assets/masters/static/bulk-foam-pod-selected.png",
+      "real_length_metres": 6.4,
+      "lights": []
+    },
+    {
+      "id": "rescue-pod",
+      "display_name": "Rescue Pod",
+      "missionchief_slot": 44,
+      "service": "fire",
+      "source": "assets/masters/static/rescue-pod-selected.png",
+      "real_length_metres": 6.4,
+      "lights": []
+    },
+    {
+      "id": "command-pod",
+      "display_name": "Command Pod",
+      "missionchief_slot": 45,
+      "service": "fire",
+      "source": "assets/masters/static/command-pod-selected.png",
+      "real_length_metres": 6.4,
+      "lights": []
+    },
+    {
+      "id": "welfare-pod",
+      "display_name": "Welfare Pod",
+      "missionchief_slot": 46,
+      "service": "fire",
+      "source": "assets/masters/static/welfare-pod-selected.png",
+      "real_length_metres": 6.4,
+      "lights": []
+    },
+    {
+      "id": "basu-pod",
+      "display_name": "BASU Pod",
+      "missionchief_slot": 47,
+      "service": "fire",
+      "source": "assets/masters/static/basu-pod-selected.png",
+      "real_length_metres": 6.4,
+      "lights": []
+    },
+    {
+      "id": "misting-pod",
+      "display_name": "Misting Pod",
+      "missionchief_slot": 48,
+      "service": "fire",
+      "source": "assets/masters/static/misting-pod-selected.png",
+      "real_length_metres": 5.8,
+      "lights": []
+    },
+    {
+      "id": "hazardous-materials-pod",
+      "display_name": "Hazardous Materials Pod",
+      "missionchief_slot": 49,
+      "service": "fire",
+      "source": "assets/masters/static/hazardous-materials-pod-selected.png",
+      "real_length_metres": 6.4,
+      "lights": []
+    },
+    {
+      "id": "osu-pod",
+      "display_name": "OSU Pod",
+      "missionchief_slot": 50,
+      "service": "fire",
+      "source": "assets/masters/static/osu-pod-selected.png",
+      "real_length_metres": 6.6,
+      "lights": []
+    },
+    {
+      "id": "hvp",
+      "display_name": "HVP",
+      "missionchief_slot": 51,
+      "service": "fire",
+      "source": "assets/masters/static/hvp-selected.png",
+      "real_length_metres": 6.8,
+      "lights": []
+    },
+    {
+      "id": "psu-carrier",
+      "display_name": "PSU Carrier",
+      "missionchief_slot": 52,
+      "service": "police",
+      "source": "assets/masters/static/psu-carrier-selected.png",
+      "real_length_metres": 6.9,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "firearms-personnel-carrier",
+      "display_name": "Firearms Personnel Carrier",
+      "missionchief_slot": 53,
+      "service": "police",
+      "source": "assets/masters/static/firearms-personnel-carrier-selected.png",
+      "real_length_metres": 7.2,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "multiple-dog-carrier",
+      "display_name": "Multiple Dog Carrier",
+      "missionchief_slot": 54,
+      "service": "police",
+      "source": "assets/masters/static/multiple-dog-carrier-selected.png",
+      "real_length_metres": 7.3,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "detention-van",
+      "display_name": "Detention Van",
+      "missionchief_slot": 55,
+      "service": "police",
+      "source": "assets/masters/static/detention-van-selected.png",
+      "real_length_metres": 7.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "mounted-unit",
+      "display_name": "Mounted Unit",
+      "missionchief_slot": 56,
+      "service": "police",
+      "source": "assets/masters/static/mounted-unit-selected.png",
+      "real_length_metres": 9.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "m-rav",
+      "display_name": "M-RAV",
+      "missionchief_slot": 57,
+      "service": "police",
+      "source": "assets/masters/static/m-rav-selected.png",
+      "real_length_metres": 6.5,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "crv",
+      "display_name": "CRV",
+      "missionchief_slot": 58,
+      "service": "coastguard",
+      "source": "assets/masters/static/crv-selected.png",
+      "real_length_metres": 5.2,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "coastguard-mud-rescue-unit",
+      "display_name": "Coastguard Mud Rescue Unit",
+      "missionchief_slot": 59,
+      "service": "coastguard",
+      "source": "assets/masters/static/coastguard-mud-rescue-unit-selected.png",
+      "real_length_metres": 7.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "coastguard-rope-rescue-unit",
+      "display_name": "Coastguard Rope Rescue Unit",
+      "missionchief_slot": 60,
+      "service": "coastguard",
+      "source": "assets/masters/static/coastguard-rope-rescue-unit-selected.png",
+      "real_length_metres": 7.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "coastguard-commander",
+      "display_name": "Coastguard Commander",
+      "missionchief_slot": 61,
+      "service": "coastguard",
+      "source": "assets/masters/static/coastguard-commander-selected.png",
+      "real_length_metres": 5.6,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "flood-rescue-unit-trailer",
+      "display_name": "Flood Rescue Unit (Trailer)",
+      "missionchief_slot": 62,
+      "service": "coastguard",
+      "source": "assets/masters/static/flood-rescue-unit-trailer-selected.png",
+      "real_length_metres": 6.8,
+      "lights": []
+    },
+    {
+      "id": "mud-decontamination-unit",
+      "display_name": "Mud Decontamination Unit",
+      "missionchief_slot": 63,
+      "service": "coastguard",
+      "source": "assets/masters/static/mud-decontamination-unit-selected.png",
+      "real_length_metres": 6.8,
+      "lights": []
+    },
+    {
+      "id": "support-unit",
+      "display_name": "Support Unit",
+      "missionchief_slot": 64,
+      "service": "coastguard",
+      "source": "assets/masters/static/support-unit-selected.png",
+      "real_length_metres": 7.2,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "coastguard-rescue-helicopter",
+      "display_name": "Coastguard Rescue Helicopter",
+      "missionchief_slot": 65,
+      "service": "coastguard",
+      "source": "assets/masters/static/coastguard-rescue-helicopter-selected.png",
+      "real_length_metres": 17.6,
+      "lights": [
+        {
+          "x": 0.7,
+          "y": 0.42,
+          "group": "a",
+          "size": 0.7
+        },
+        {
+          "x": 0.12,
+          "y": 0.3,
+          "group": "b",
+          "size": 0.6
+        },
+        {
+          "x": 0.86,
+          "y": 0.62,
+          "group": "b",
+          "size": 0.55
+        }
+      ]
+    },
+    {
+      "id": "coastguard-rescue-helicopter-large",
+      "display_name": "Coastguard Rescue Helicopter (Large)",
+      "missionchief_slot": 66,
+      "service": "coastguard",
+      "source": "assets/masters/static/coastguard-rescue-helicopter-large-selected.png",
+      "real_length_metres": 20.9,
+      "lights": [
+        {
+          "x": 0.7,
+          "y": 0.42,
+          "group": "a",
+          "size": 0.7
+        },
+        {
+          "x": 0.12,
+          "y": 0.3,
+          "group": "b",
+          "size": 0.6
+        },
+        {
+          "x": 0.86,
+          "y": 0.62,
+          "group": "b",
+          "size": 0.55
+        }
+      ]
+    },
+    {
+      "id": "4x4-vehicle",
+      "display_name": "4x4 Vehicle",
+      "missionchief_slot": 67,
+      "service": "coastguard",
+      "source": "assets/masters/static/4x4-vehicle-selected.png",
+      "real_length_metres": 5.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "inland-rescue-boat-trailer",
+      "display_name": "Inland Rescue Boat (Trailer)",
+      "missionchief_slot": 68,
+      "service": "coastguard",
+      "source": "assets/masters/static/inland-rescue-boat-trailer-selected.png",
+      "real_length_metres": 7.5,
+      "lights": []
+    },
+    {
+      "id": "ilb",
+      "display_name": "ILB",
+      "missionchief_slot": 69,
+      "service": "lifeboat",
+      "source": "assets/masters/static/ilb-selected.png",
+      "real_length_metres": 7.6,
+      "lights": []
+    },
+    {
+      "id": "alb",
+      "display_name": "ALB",
+      "missionchief_slot": 70,
+      "service": "lifeboat",
+      "source": "assets/masters/static/alb-selected.png",
+      "real_length_metres": 16.5,
+      "lights": []
+    },
+    {
+      "id": "rescue-watercraft-trailer",
+      "display_name": "Rescue Watercraft (Trailer)",
+      "missionchief_slot": 71,
+      "service": "lifeboat",
+      "source": "assets/masters/static/rescue-watercraft-trailer-selected.png",
+      "real_length_metres": 7.0,
+      "lights": []
+    },
+    {
+      "id": "hovercraft-trailer",
+      "display_name": "Hovercraft (Trailer)",
+      "missionchief_slot": 72,
+      "service": "lifeboat",
+      "source": "assets/masters/static/hovercraft-trailer-selected.png",
+      "real_length_metres": 8.0,
+      "lights": []
+    },
+    {
+      "id": "hovercraft-transporter",
+      "display_name": "Hovercraft Transporter",
+      "missionchief_slot": 73,
+      "service": "lifeboat",
+      "source": "assets/masters/static/hovercraft-transporter-selected.png",
+      "real_length_metres": 6.2,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "light-4x4",
+      "display_name": "Light 4x4",
+      "missionchief_slot": 74,
+      "service": "fire",
+      "source": "assets/masters/static/light-4x4-selected.png",
+      "real_length_metres": 5.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "boat-trailer",
+      "display_name": "Boat Trailer",
+      "missionchief_slot": 75,
+      "service": "fire",
+      "source": "assets/masters/static/boat-trailer-selected.png",
+      "real_length_metres": 7.2,
+      "lights": []
+    },
+    {
+      "id": "major-foam-tender",
+      "display_name": "Major Foam Tender",
+      "missionchief_slot": 76,
+      "service": "fire",
+      "source": "assets/masters/static/major-foam-tender-selected.png",
+      "real_length_metres": 12.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "riv",
+      "display_name": "RIV",
+      "missionchief_slot": 77,
+      "service": "fire",
+      "source": "assets/masters/static/riv-selected.png",
+      "real_length_metres": 7.5,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "airfield-firefighting-command-vehicle",
+      "display_name": "Airfield Firefighting Command Vehicle",
+      "missionchief_slot": 78,
+      "service": "fire",
+      "source": "assets/masters/static/airfield-firefighting-command-vehicle-selected.png",
+      "real_length_metres": 5.8,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "rescue-stairs",
+      "display_name": "Rescue Stairs",
+      "missionchief_slot": 79,
+      "service": "fire",
+      "source": "assets/masters/static/rescue-stairs-selected.png",
+      "real_length_metres": 12.0,
+      "lights": []
+    },
+    {
+      "id": "airfield-operations-vehicle",
+      "display_name": "Airfield Operations Vehicle",
+      "missionchief_slot": 80,
+      "service": "airfield",
+      "source": "assets/masters/static/airfield-operations-vehicle-selected.png",
+      "real_length_metres": 5.2,
+      "lights": []
+    },
+    {
+      "id": "airfield-operations-supervisor",
+      "display_name": "Airfield Operations Supervisor",
+      "missionchief_slot": 81,
+      "service": "airfield",
+      "source": "assets/masters/static/airfield-operations-supervisor-selected.png",
+      "real_length_metres": 5.6,
+      "lights": []
+    },
+    {
+      "id": "medical-equipment-trailer",
+      "display_name": "Medical equipment trailer",
+      "missionchief_slot": 82,
+      "service": "airfield",
+      "source": "assets/masters/static/medical-equipment-trailer-selected.png",
+      "real_length_metres": 6.0,
+      "lights": []
+    },
+    {
+      "id": "armed-cell-van",
+      "display_name": "Armed Cell Van",
+      "missionchief_slot": 83,
+      "service": "police",
+      "source": "assets/masters/static/armed-cell-van-selected.png",
+      "real_length_metres": 7.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "medical-cycle-responder",
+      "display_name": "Medical cycle responder",
+      "missionchief_slot": 84,
+      "service": "ambulance",
+      "source": "assets/masters/static/medical-cycle-responder-selected.png",
+      "real_length_metres": 2.0,
+      "lights": [
+        {
+          "x": 0.29,
+          "y": 0.3,
+          "group": "a",
+          "size": 0.55
+        },
+        {
+          "x": 0.9,
+          "y": 0.43,
+          "group": "b",
+          "size": 0.55
+        }
+      ]
+    },
+    {
+      "id": "pump-trailer",
+      "display_name": "Pump Trailer",
+      "missionchief_slot": 85,
+      "service": "search-and-rescue",
+      "source": "assets/masters/static/pump-trailer-selected.png",
+      "real_length_metres": 4.5,
+      "lights": []
+    },
+    {
+      "id": "control-van-sar",
+      "display_name": "Control Van (SAR)",
+      "missionchief_slot": 86,
+      "service": "search-and-rescue",
+      "source": "assets/masters/static/control-van-sar-selected.png",
+      "real_length_metres": 7.2,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "operational-support-van",
+      "display_name": "Operational Support Van",
+      "missionchief_slot": 87,
+      "service": "search-and-rescue",
+      "source": "assets/masters/static/operational-support-van-selected.png",
+      "real_length_metres": 7.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "operational-support-trailer",
+      "display_name": "Operational Support Trailer",
+      "missionchief_slot": 88,
+      "service": "search-and-rescue",
+      "source": "assets/masters/static/operational-support-trailer-selected.png",
+      "real_length_metres": 6.5,
+      "lights": []
+    },
+    {
+      "id": "sar-flood-rescue-trailer",
+      "display_name": "SAR Flood Rescue (Trailer)",
+      "missionchief_slot": 89,
+      "service": "search-and-rescue",
+      "source": "assets/masters/static/sar-flood-rescue-trailer-selected.png",
+      "real_length_metres": 6.8,
+      "lights": []
+    },
+    {
+      "id": "drone-vehicle-sar-hq",
+      "display_name": "Drone Vehicle (SAR HQ)",
+      "missionchief_slot": 90,
+      "service": "search-and-rescue",
+      "source": "assets/masters/static/drone-vehicle-sar-hq-selected.png",
+      "real_length_metres": 6.2,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "drone-vehicle-fire-station",
+      "display_name": "Drone Vehicle (Fire Station)",
+      "missionchief_slot": 91,
+      "service": "fire",
+      "source": "assets/masters/static/drone-vehicle-fire-station-selected.png",
+      "real_length_metres": 6.2,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "drone-vehicle-police-station",
+      "display_name": "Drone Vehicle (Police Station)",
+      "missionchief_slot": 92,
+      "service": "police",
+      "source": "assets/masters/static/drone-vehicle-police-station-selected.png",
+      "real_length_metres": 6.2,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "personal-sar-vehicle",
+      "display_name": "Personal SAR Vehicle",
+      "missionchief_slot": 93,
+      "service": "search-and-rescue",
+      "source": "assets/masters/static/personal-sar-vehicle-selected.png",
+      "real_length_metres": 4.8,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "sar-4x4",
+      "display_name": "SAR 4x4",
+      "missionchief_slot": 94,
+      "service": "search-and-rescue",
+      "source": "assets/masters/static/sar-4x4-selected.png",
+      "real_length_metres": 5.2,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "rrv-2",
+      "display_name": "RRV",
+      "missionchief_slot": 95,
+      "service": "ambulance",
+      "source": "assets/masters/static/rrv-2-selected.png",
+      "real_length_metres": 4.9,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "community-midwife",
+      "display_name": "Community Midwife",
+      "missionchief_slot": 96,
+      "service": "ambulance",
+      "source": "assets/masters/static/community-midwife-selected.png",
+      "real_length_metres": 4.7,
+      "lights": []
+    },
+    {
+      "id": "specialist-paramedic-rrv",
+      "display_name": "Specialist Paramedic RRV",
+      "missionchief_slot": 97,
+      "service": "ambulance",
+      "source": "assets/masters/static/specialist-paramedic-rrv-selected.png",
+      "real_length_metres": 5.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "patient-transport-service-ambulance",
+      "display_name": "Patient Transport Service Ambulance",
+      "missionchief_slot": 98,
+      "service": "ambulance",
+      "source": "assets/masters/static/patient-transport-service-ambulance-selected.png",
+      "real_length_metres": 6.8,
+      "lights": []
+    },
+    {
+      "id": "critical-care-transfer-ambulance",
+      "display_name": "Critical Care Transfer Ambulance",
+      "missionchief_slot": 99,
+      "service": "ambulance",
+      "source": "assets/masters/static/critical-care-transfer-ambulance-selected.png",
+      "real_length_metres": 7.2,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "mountain-rescue-4x4",
+      "display_name": "Mountain Rescue 4x4",
+      "missionchief_slot": 100,
+      "service": "search-and-rescue",
+      "source": "assets/masters/static/mountain-rescue-4x4-selected.png",
+      "real_length_metres": 5.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "control-van-mountain-rescue",
+      "display_name": "Control Van (Mountain Rescue)",
+      "missionchief_slot": 101,
+      "service": "search-and-rescue",
+      "source": "assets/masters/static/control-van-mountain-rescue-selected.png",
+      "real_length_metres": 7.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "search-dog-unit",
+      "display_name": "Search Dog Unit",
+      "missionchief_slot": 102,
+      "service": "search-and-rescue",
+      "source": "assets/masters/static/search-dog-unit-selected.png",
+      "real_length_metres": 5.8,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "search-dog-unit-sar",
+      "display_name": "Search Dog Unit (SAR)",
+      "missionchief_slot": 103,
+      "service": "search-and-rescue",
+      "source": "assets/masters/static/search-dog-unit-sar-selected.png",
+      "real_length_metres": 5.8,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "crew-carrier-sar",
+      "display_name": "Crew Carrier (SAR)",
+      "missionchief_slot": 104,
+      "service": "search-and-rescue",
+      "source": "assets/masters/static/crew-carrier-sar-selected.png",
+      "real_length_metres": 7.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "recovery-vehicle",
+      "display_name": "Recovery Vehicle",
+      "missionchief_slot": 105,
+      "service": "recovery",
+      "source": "assets/masters/static/recovery-vehicle-selected.png",
+      "real_length_metres": 7.0,
+      "lights": []
+    },
+    {
+      "id": "flatbed-recovery-vehicle",
+      "display_name": "Flatbed Recovery Vehicle",
+      "missionchief_slot": 106,
+      "service": "recovery",
+      "source": "assets/masters/static/flatbed-recovery-vehicle-selected.png",
+      "real_length_metres": 8.5,
+      "lights": []
+    },
+    {
+      "id": "hgv-recovery-vehicle",
+      "display_name": "HGV Recovery Vehicle",
+      "missionchief_slot": 107,
+      "service": "recovery",
+      "source": "assets/masters/static/hgv-recovery-vehicle-selected.png",
+      "real_length_metres": 10.0,
+      "lights": []
+    },
+    {
+      "id": "rru",
+      "display_name": "RRU",
+      "missionchief_slot": 108,
+      "service": "fire",
+      "source": "assets/masters/static/rru-selected.png",
+      "real_length_metres": 8.5,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "eiu",
+      "display_name": "EIU",
+      "missionchief_slot": 109,
+      "service": "police",
+      "source": "assets/masters/static/eiu-selected.png",
+      "real_length_metres": 5.5,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "eod-commander",
+      "display_name": "EOD Commander",
+      "missionchief_slot": 110,
+      "service": "eod",
+      "source": "assets/masters/static/eod-commander-selected.png",
+      "real_length_metres": 5.5,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "eod-response-vehicle",
+      "display_name": "EOD Response Vehicle",
+      "missionchief_slot": 111,
+      "service": "eod",
+      "source": "assets/masters/static/eod-response-vehicle-selected.png",
+      "real_length_metres": 6.5,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "eod-medium-equipment-van",
+      "display_name": "EOD Medium Equipment Van",
+      "missionchief_slot": 112,
+      "service": "eod",
+      "source": "assets/masters/static/eod-medium-equipment-van-selected.png",
+      "real_length_metres": 7.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "eod-heavy-equipment-vehicle",
+      "display_name": "EOD Heavy Equipment Vehicle",
+      "missionchief_slot": 113,
+      "service": "eod",
+      "source": "assets/masters/static/eod-heavy-equipment-vehicle-selected.png",
+      "real_length_metres": 10.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "marine-eod-response-vehicle",
+      "display_name": "Marine EOD Response Vehicle",
+      "missionchief_slot": 114,
+      "service": "eod",
+      "source": "assets/masters/static/marine-eod-response-vehicle-selected.png",
+      "real_length_metres": 6.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "marine-eod-equipment-van",
+      "display_name": "Marine EOD Equipment Van",
+      "missionchief_slot": 115,
+      "service": "eod",
+      "source": "assets/masters/static/marine-eod-equipment-van-selected.png",
+      "real_length_metres": 7.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "welfare-vehicle-2",
+      "display_name": "Welfare Vehicle",
+      "missionchief_slot": 116,
+      "service": "multi-service",
+      "source": "assets/masters/static/welfare-vehicle-2-selected.png",
+      "real_length_metres": 7.0,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    },
+    {
+      "id": "cell-van",
+      "display_name": "Cell Van",
+      "missionchief_slot": 117,
+      "service": "police",
+      "source": "assets/masters/static/cell-van-selected.png",
+      "real_length_metres": 6.8,
+      "lights": [
+        {
+          "x": 0.36,
+          "y": 0.075,
+          "group": "a",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "size": 0.55
+        },
+        {
+          "x": 0.965,
+          "y": 0.43,
+          "group": "a",
+          "size": 0.48
+        }
+      ]
+    }
+  ]
+}
