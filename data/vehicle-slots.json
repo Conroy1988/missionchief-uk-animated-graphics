@@ -1,0 +1,1194 @@
+{
+  "schema_version": 1,
+  "retrieved_from": "https://www.missionchief.co.uk/vehicle_graphics/5897/edit",
+  "retrieved_on": "2026-08-05",
+  "authority": "live authenticated MissionChief UK pack editor",
+  "pack": {
+    "id": 5897,
+    "caption": "TKB UK Fleet \u2014 Animated WIP",
+    "status": "private-production-complete",
+    "edit_url": "https://www.missionchief.co.uk/vehicle_graphics/5897/edit"
+  },
+  "totals": {
+    "slots": 117,
+    "approved_golden": 117,
+    "planned": 0
+  },
+  "notes": [
+    "slot is one-based and follows the live MissionChief UK editor order.",
+    "edit_index is the zero-based numeric upload identifier used by MissionChief.",
+    "Every slot will receive a static PNG; emergency-capable vehicles will also receive an APNG."
+  ],
+  "slots": [
+    {
+      "slot": 1,
+      "edit_index": 0,
+      "id": "water-ladder",
+      "label": "Water Ladder",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "fire-rescue-pump",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/0/edit"
+    },
+    {
+      "slot": 2,
+      "edit_index": 1,
+      "id": "light-4x4-pump-l4p",
+      "label": "Light 4X4 Pump (L4P)",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "light-4x4-pump",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/1/edit"
+    },
+    {
+      "slot": 3,
+      "edit_index": 2,
+      "id": "aerial-appliance",
+      "label": "Aerial Appliance",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "aerial-appliance",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/2/edit"
+    },
+    {
+      "slot": 4,
+      "edit_index": 3,
+      "id": "fire-officer",
+      "label": "Fire Officer",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "fire-officer",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/3/edit"
+    },
+    {
+      "slot": 5,
+      "edit_index": 4,
+      "id": "rescue-support-unit-rsu",
+      "label": "Rescue Support Unit (RSU)",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "rescue-support-unit",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/4/edit"
+    },
+    {
+      "slot": 6,
+      "edit_index": 5,
+      "id": "ambulance",
+      "label": "Ambulance",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "frontline-ambulance",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/5/edit"
+    },
+    {
+      "slot": 7,
+      "edit_index": 6,
+      "id": "water-carrier",
+      "label": "Water Carrier",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "water-carrier",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/6/edit"
+    },
+    {
+      "slot": 8,
+      "edit_index": 7,
+      "id": "hazmat-unit",
+      "label": "HazMat Unit",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "hazmat-unit",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/7/edit"
+    },
+    {
+      "slot": 9,
+      "edit_index": 8,
+      "id": "irv",
+      "label": "IRV",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "police-incident-response-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/8/edit"
+    },
+    {
+      "slot": 10,
+      "edit_index": 9,
+      "id": "hems",
+      "label": "HEMS",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "hems",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/9/edit"
+    },
+    {
+      "slot": 11,
+      "edit_index": 10,
+      "id": "rrv",
+      "label": "RRV",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "rapid-response-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/10/edit"
+    },
+    {
+      "slot": 12,
+      "edit_index": 11,
+      "id": "police-helicopter",
+      "label": "Police helicopter",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "police-helicopter",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/11/edit"
+    },
+    {
+      "slot": 13,
+      "edit_index": 12,
+      "id": "dsu",
+      "label": "DSU",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "dog-support-unit",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/12/edit"
+    },
+    {
+      "slot": 14,
+      "edit_index": 13,
+      "id": "arv",
+      "label": "ARV",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "armed-response-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/13/edit"
+    },
+    {
+      "slot": 15,
+      "edit_index": 14,
+      "id": "basu",
+      "label": "BASU",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "breathing-apparatus-support-unit",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/14/edit"
+    },
+    {
+      "slot": 16,
+      "edit_index": 15,
+      "id": "iccu",
+      "label": "ICCU",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "incident-command-control-unit",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/15/edit"
+    },
+    {
+      "slot": 17,
+      "edit_index": 16,
+      "id": "rescue-pump",
+      "label": "Rescue Pump",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "rescue-pump",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/16/edit"
+    },
+    {
+      "slot": 18,
+      "edit_index": 17,
+      "id": "carp",
+      "label": "CARP",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "carp",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/17/edit"
+    },
+    {
+      "slot": 19,
+      "edit_index": 18,
+      "id": "co-responder-vehicle",
+      "label": "Co-Responder Vehicle",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "co-responder-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/18/edit"
+    },
+    {
+      "slot": 20,
+      "edit_index": 19,
+      "id": "joint-response-unit",
+      "label": "Joint Response Unit",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "joint-response-unit",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/19/edit"
+    },
+    {
+      "slot": 21,
+      "edit_index": 20,
+      "id": "otl",
+      "label": "OTL",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "otl",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/20/edit"
+    },
+    {
+      "slot": 22,
+      "edit_index": 21,
+      "id": "general-practitioner",
+      "label": "General Practitioner",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "general-practitioner",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/21/edit"
+    },
+    {
+      "slot": 23,
+      "edit_index": 22,
+      "id": "community-first-responder",
+      "label": "Community First Responder",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "community-first-responder",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/22/edit"
+    },
+    {
+      "slot": 24,
+      "edit_index": 23,
+      "id": "crew-carrier",
+      "label": "Crew Carrier",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "crew-carrier",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/23/edit"
+    },
+    {
+      "slot": 25,
+      "edit_index": 24,
+      "id": "traffic-car",
+      "label": "Traffic Car",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "traffic-car",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/24/edit"
+    },
+    {
+      "slot": 26,
+      "edit_index": 25,
+      "id": "armed-traffic-car",
+      "label": "Armed Traffic Car",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "armed-traffic-car",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/25/edit"
+    },
+    {
+      "slot": 27,
+      "edit_index": 26,
+      "id": "heavy-4x4-tanker",
+      "label": "Heavy 4x4 Tanker",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "heavy-4x4-tanker",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/26/edit"
+    },
+    {
+      "slot": 28,
+      "edit_index": 27,
+      "id": "prv",
+      "label": "PRV",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "prv",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/27/edit"
+    },
+    {
+      "slot": 29,
+      "edit_index": 28,
+      "id": "srv",
+      "label": "SRV",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "srv",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/28/edit"
+    },
+    {
+      "slot": 30,
+      "edit_index": 29,
+      "id": "welfare-vehicle",
+      "label": "Welfare Vehicle",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "welfare-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/29/edit"
+    },
+    {
+      "slot": 31,
+      "edit_index": 30,
+      "id": "atv-carrier",
+      "label": "ATV Carrier",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "atv-carrier",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/30/edit"
+    },
+    {
+      "slot": 32,
+      "edit_index": 31,
+      "id": "ambulance-control-unit",
+      "label": "Ambulance Control Unit",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "ambulance-control-unit",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/31/edit"
+    },
+    {
+      "slot": 33,
+      "edit_index": 32,
+      "id": "cbrn-vehicle",
+      "label": "CBRN Vehicle",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "cbrn-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/32/edit"
+    },
+    {
+      "slot": 34,
+      "edit_index": 33,
+      "id": "mass-casualty-equipment",
+      "label": "Mass Casualty Equipment",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "mass-casualty-equipment",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/33/edit"
+    },
+    {
+      "slot": 35,
+      "edit_index": 34,
+      "id": "ambulance-officer",
+      "label": "Ambulance Officer",
+      "production_batch": "01-core-services",
+      "asset_status": "approved-golden",
+      "asset_id": "ambulance-officer",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/34/edit"
+    },
+    {
+      "slot": 36,
+      "edit_index": 35,
+      "id": "bfu",
+      "label": "BFU",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "bfu",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/35/edit"
+    },
+    {
+      "slot": 37,
+      "edit_index": 36,
+      "id": "f-wrc",
+      "label": "F/WrC",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "f-wrc",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/36/edit"
+    },
+    {
+      "slot": 38,
+      "edit_index": 37,
+      "id": "wrl-cafs",
+      "label": "WrL CAFS",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "wrl-cafs",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/37/edit"
+    },
+    {
+      "slot": 39,
+      "edit_index": 38,
+      "id": "rp-cafs",
+      "label": "RP CAFS",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "rp-cafs",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/38/edit"
+    },
+    {
+      "slot": 40,
+      "edit_index": 39,
+      "id": "osu",
+      "label": "OSU",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "osu",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/39/edit"
+    },
+    {
+      "slot": 41,
+      "edit_index": 40,
+      "id": "pm",
+      "label": "PM",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "pm",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/40/edit"
+    },
+    {
+      "slot": 42,
+      "edit_index": 41,
+      "id": "water-pod",
+      "label": "Water Pod",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "water-pod",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/41/edit"
+    },
+    {
+      "slot": 43,
+      "edit_index": 42,
+      "id": "bulk-foam-pod",
+      "label": "Bulk Foam Pod",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "bulk-foam-pod",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/42/edit"
+    },
+    {
+      "slot": 44,
+      "edit_index": 43,
+      "id": "rescue-pod",
+      "label": "Rescue Pod",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "rescue-pod",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/43/edit"
+    },
+    {
+      "slot": 45,
+      "edit_index": 44,
+      "id": "command-pod",
+      "label": "Command Pod",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "command-pod",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/44/edit"
+    },
+    {
+      "slot": 46,
+      "edit_index": 45,
+      "id": "welfare-pod",
+      "label": "Welfare Pod",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "welfare-pod",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/45/edit"
+    },
+    {
+      "slot": 47,
+      "edit_index": 46,
+      "id": "basu-pod",
+      "label": "BASU Pod",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "basu-pod",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/46/edit"
+    },
+    {
+      "slot": 48,
+      "edit_index": 47,
+      "id": "misting-pod",
+      "label": "Misting Pod",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "misting-pod",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/47/edit"
+    },
+    {
+      "slot": 49,
+      "edit_index": 48,
+      "id": "hazardous-materials-pod",
+      "label": "Hazardous Materials Pod",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "hazardous-materials-pod",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/48/edit"
+    },
+    {
+      "slot": 50,
+      "edit_index": 49,
+      "id": "osu-pod",
+      "label": "OSU Pod",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "osu-pod",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/49/edit"
+    },
+    {
+      "slot": 51,
+      "edit_index": 50,
+      "id": "hvp",
+      "label": "HVP",
+      "production_batch": "02-fire-specialist-and-pods",
+      "asset_status": "approved-golden",
+      "asset_id": "hvp",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/50/edit"
+    },
+    {
+      "slot": 52,
+      "edit_index": 51,
+      "id": "psu-carrier",
+      "label": "PSU Carrier",
+      "production_batch": "03-police-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "psu-carrier",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/51/edit"
+    },
+    {
+      "slot": 53,
+      "edit_index": 52,
+      "id": "firearms-personnel-carrier",
+      "label": "Firearms Personnel Carrier",
+      "production_batch": "03-police-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "firearms-personnel-carrier",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/52/edit"
+    },
+    {
+      "slot": 54,
+      "edit_index": 53,
+      "id": "multiple-dog-carrier",
+      "label": "Multiple Dog Carrier",
+      "production_batch": "03-police-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "multiple-dog-carrier",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/53/edit"
+    },
+    {
+      "slot": 55,
+      "edit_index": 54,
+      "id": "detention-van",
+      "label": "Detention Van",
+      "production_batch": "03-police-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "detention-van",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/54/edit"
+    },
+    {
+      "slot": 56,
+      "edit_index": 55,
+      "id": "mounted-unit",
+      "label": "Mounted Unit",
+      "production_batch": "03-police-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "mounted-unit",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/55/edit"
+    },
+    {
+      "slot": 57,
+      "edit_index": 56,
+      "id": "m-rav",
+      "label": "M-RAV",
+      "production_batch": "03-police-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "m-rav",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/56/edit"
+    },
+    {
+      "slot": 58,
+      "edit_index": 57,
+      "id": "crv",
+      "label": "CRV",
+      "production_batch": "03-police-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "crv",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/57/edit"
+    },
+    {
+      "slot": 59,
+      "edit_index": 58,
+      "id": "coastguard-mud-rescue-unit",
+      "label": "Coastguard Mud Rescue Unit",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "coastguard-mud-rescue-unit",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/58/edit"
+    },
+    {
+      "slot": 60,
+      "edit_index": 59,
+      "id": "coastguard-rope-rescue-unit",
+      "label": "Coastguard Rope Rescue Unit",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "coastguard-rope-rescue-unit",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/59/edit"
+    },
+    {
+      "slot": 61,
+      "edit_index": 60,
+      "id": "coastguard-commander",
+      "label": "Coastguard Commander",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "coastguard-commander",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/60/edit"
+    },
+    {
+      "slot": 62,
+      "edit_index": 61,
+      "id": "flood-rescue-unit-trailer",
+      "label": "Flood Rescue Unit (Trailer)",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "flood-rescue-unit-trailer",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/61/edit"
+    },
+    {
+      "slot": 63,
+      "edit_index": 62,
+      "id": "mud-decontamination-unit",
+      "label": "Mud Decontamination Unit",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "mud-decontamination-unit",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/62/edit"
+    },
+    {
+      "slot": 64,
+      "edit_index": 63,
+      "id": "support-unit",
+      "label": "Support Unit",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "support-unit",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/63/edit"
+    },
+    {
+      "slot": 65,
+      "edit_index": 64,
+      "id": "coastguard-rescue-helicopter",
+      "label": "Coastguard Rescue Helicopter",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "coastguard-rescue-helicopter",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/64/edit"
+    },
+    {
+      "slot": 66,
+      "edit_index": 65,
+      "id": "coastguard-rescue-helicopter-large",
+      "label": "Coastguard Rescue Helicopter (Large)",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "coastguard-rescue-helicopter-large",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/65/edit"
+    },
+    {
+      "slot": 67,
+      "edit_index": 66,
+      "id": "4x4-vehicle",
+      "label": "4x4 Vehicle",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "4x4-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/66/edit"
+    },
+    {
+      "slot": 68,
+      "edit_index": 67,
+      "id": "inland-rescue-boat-trailer",
+      "label": "Inland Rescue Boat (Trailer)",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "inland-rescue-boat-trailer",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/67/edit"
+    },
+    {
+      "slot": 69,
+      "edit_index": 68,
+      "id": "ilb",
+      "label": "ILB",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "ilb",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/68/edit"
+    },
+    {
+      "slot": 70,
+      "edit_index": 69,
+      "id": "alb",
+      "label": "ALB",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "alb",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/69/edit"
+    },
+    {
+      "slot": 71,
+      "edit_index": 70,
+      "id": "rescue-watercraft-trailer",
+      "label": "Rescue Watercraft (Trailer)",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "rescue-watercraft-trailer",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/70/edit"
+    },
+    {
+      "slot": 72,
+      "edit_index": 71,
+      "id": "hovercraft-trailer",
+      "label": "Hovercraft (Trailer)",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "hovercraft-trailer",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/71/edit"
+    },
+    {
+      "slot": 73,
+      "edit_index": 72,
+      "id": "hovercraft-transporter",
+      "label": "Hovercraft Transporter",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "hovercraft-transporter",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/72/edit"
+    },
+    {
+      "slot": 74,
+      "edit_index": 73,
+      "id": "light-4x4",
+      "label": "Light 4x4",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "light-4x4",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/73/edit"
+    },
+    {
+      "slot": 75,
+      "edit_index": 74,
+      "id": "boat-trailer",
+      "label": "Boat Trailer",
+      "production_batch": "04-coastguard-rnli-water-rescue",
+      "asset_status": "approved-golden",
+      "asset_id": "boat-trailer",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/74/edit"
+    },
+    {
+      "slot": 76,
+      "edit_index": 75,
+      "id": "major-foam-tender",
+      "label": "Major Foam Tender",
+      "production_batch": "05-airfield-and-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "major-foam-tender",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/75/edit"
+    },
+    {
+      "slot": 77,
+      "edit_index": 76,
+      "id": "riv",
+      "label": "RIV",
+      "production_batch": "05-airfield-and-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "riv",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/76/edit"
+    },
+    {
+      "slot": 78,
+      "edit_index": 77,
+      "id": "airfield-firefighting-command-vehicle",
+      "label": "Airfield Firefighting Command Vehicle",
+      "production_batch": "05-airfield-and-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "airfield-firefighting-command-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/77/edit"
+    },
+    {
+      "slot": 79,
+      "edit_index": 78,
+      "id": "rescue-stairs",
+      "label": "Rescue Stairs",
+      "production_batch": "05-airfield-and-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "rescue-stairs",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/78/edit"
+    },
+    {
+      "slot": 80,
+      "edit_index": 79,
+      "id": "airfield-operations-vehicle",
+      "label": "Airfield Operations Vehicle",
+      "production_batch": "05-airfield-and-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "airfield-operations-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/79/edit"
+    },
+    {
+      "slot": 81,
+      "edit_index": 80,
+      "id": "airfield-operations-supervisor",
+      "label": "Airfield Operations Supervisor",
+      "production_batch": "05-airfield-and-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "airfield-operations-supervisor",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/80/edit"
+    },
+    {
+      "slot": 82,
+      "edit_index": 81,
+      "id": "medical-equipment-trailer",
+      "label": "Medical equipment trailer",
+      "production_batch": "05-airfield-and-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "medical-equipment-trailer",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/81/edit"
+    },
+    {
+      "slot": 83,
+      "edit_index": 82,
+      "id": "armed-cell-van",
+      "label": "Armed Cell Van",
+      "production_batch": "05-airfield-and-specialist",
+      "asset_status": "approved-golden",
+      "asset_id": "armed-cell-van",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/82/edit"
+    },
+    {
+      "slot": 84,
+      "edit_index": 83,
+      "id": "medical-cycle-responder",
+      "label": "Medical cycle responder",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "medical-cycle-responder",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/83/edit"
+    },
+    {
+      "slot": 85,
+      "edit_index": 84,
+      "id": "pump-trailer",
+      "label": "Pump Trailer",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "pump-trailer",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/84/edit"
+    },
+    {
+      "slot": 86,
+      "edit_index": 85,
+      "id": "control-van-sar",
+      "label": "Control Van (SAR)",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "control-van-sar",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/85/edit"
+    },
+    {
+      "slot": 87,
+      "edit_index": 86,
+      "id": "operational-support-van",
+      "label": "Operational Support Van",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "operational-support-van",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/86/edit"
+    },
+    {
+      "slot": 88,
+      "edit_index": 87,
+      "id": "operational-support-trailer",
+      "label": "Operational Support Trailer",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "operational-support-trailer",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/87/edit"
+    },
+    {
+      "slot": 89,
+      "edit_index": 88,
+      "id": "sar-flood-rescue-trailer",
+      "label": "SAR Flood Rescue (Trailer)",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "sar-flood-rescue-trailer",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/88/edit"
+    },
+    {
+      "slot": 90,
+      "edit_index": 89,
+      "id": "drone-vehicle-sar-hq",
+      "label": "Drone Vehicle (SAR HQ)",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "drone-vehicle-sar-hq",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/89/edit"
+    },
+    {
+      "slot": 91,
+      "edit_index": 90,
+      "id": "drone-vehicle-fire-station",
+      "label": "Drone Vehicle (Fire Station)",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "drone-vehicle-fire-station",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/90/edit"
+    },
+    {
+      "slot": 92,
+      "edit_index": 91,
+      "id": "drone-vehicle-police-station",
+      "label": "Drone Vehicle (Police Station)",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "drone-vehicle-police-station",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/91/edit"
+    },
+    {
+      "slot": 93,
+      "edit_index": 92,
+      "id": "personal-sar-vehicle",
+      "label": "Personal SAR Vehicle",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "personal-sar-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/92/edit"
+    },
+    {
+      "slot": 94,
+      "edit_index": 93,
+      "id": "sar-4x4",
+      "label": "SAR 4x4",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "sar-4x4",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/93/edit"
+    },
+    {
+      "slot": 95,
+      "edit_index": 94,
+      "id": "rrv-2",
+      "label": "RRV",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "rrv-2",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/94/edit"
+    },
+    {
+      "slot": 96,
+      "edit_index": 95,
+      "id": "community-midwife",
+      "label": "Community Midwife",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "community-midwife",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/95/edit"
+    },
+    {
+      "slot": 97,
+      "edit_index": 96,
+      "id": "specialist-paramedic-rrv",
+      "label": "Specialist Paramedic RRV",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "specialist-paramedic-rrv",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/96/edit"
+    },
+    {
+      "slot": 98,
+      "edit_index": 97,
+      "id": "patient-transport-service-ambulance",
+      "label": "Patient Transport Service Ambulance",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "patient-transport-service-ambulance",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/97/edit"
+    },
+    {
+      "slot": 99,
+      "edit_index": 98,
+      "id": "critical-care-transfer-ambulance",
+      "label": "Critical Care Transfer Ambulance",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "critical-care-transfer-ambulance",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/98/edit"
+    },
+    {
+      "slot": 100,
+      "edit_index": 99,
+      "id": "mountain-rescue-4x4",
+      "label": "Mountain Rescue 4x4",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "mountain-rescue-4x4",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/99/edit"
+    },
+    {
+      "slot": 101,
+      "edit_index": 100,
+      "id": "control-van-mountain-rescue",
+      "label": "Control Van (Mountain Rescue)",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "control-van-mountain-rescue",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/100/edit"
+    },
+    {
+      "slot": 102,
+      "edit_index": 101,
+      "id": "search-dog-unit",
+      "label": "Search Dog Unit",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "search-dog-unit",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/101/edit"
+    },
+    {
+      "slot": 103,
+      "edit_index": 102,
+      "id": "search-dog-unit-sar",
+      "label": "Search Dog Unit (SAR)",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "search-dog-unit-sar",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/102/edit"
+    },
+    {
+      "slot": 104,
+      "edit_index": 103,
+      "id": "crew-carrier-sar",
+      "label": "Crew Carrier (SAR)",
+      "production_batch": "06-sar-and-medical-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "crew-carrier-sar",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/103/edit"
+    },
+    {
+      "slot": 105,
+      "edit_index": 104,
+      "id": "recovery-vehicle",
+      "label": "Recovery Vehicle",
+      "production_batch": "07-recovery",
+      "asset_status": "approved-golden",
+      "asset_id": "recovery-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/104/edit"
+    },
+    {
+      "slot": 106,
+      "edit_index": 105,
+      "id": "flatbed-recovery-vehicle",
+      "label": "Flatbed Recovery Vehicle",
+      "production_batch": "07-recovery",
+      "asset_status": "approved-golden",
+      "asset_id": "flatbed-recovery-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/105/edit"
+    },
+    {
+      "slot": 107,
+      "edit_index": 106,
+      "id": "hgv-recovery-vehicle",
+      "label": "HGV Recovery Vehicle",
+      "production_batch": "07-recovery",
+      "asset_status": "approved-golden",
+      "asset_id": "hgv-recovery-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/106/edit"
+    },
+    {
+      "slot": 108,
+      "edit_index": 107,
+      "id": "rru",
+      "label": "RRU",
+      "production_batch": "08-rail-eod-custody-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "rru",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/107/edit"
+    },
+    {
+      "slot": 109,
+      "edit_index": 108,
+      "id": "eiu",
+      "label": "EIU",
+      "production_batch": "08-rail-eod-custody-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "eiu",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/108/edit"
+    },
+    {
+      "slot": 110,
+      "edit_index": 109,
+      "id": "eod-commander",
+      "label": "EOD Commander",
+      "production_batch": "08-rail-eod-custody-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "eod-commander",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/109/edit"
+    },
+    {
+      "slot": 111,
+      "edit_index": 110,
+      "id": "eod-response-vehicle",
+      "label": "EOD Response Vehicle",
+      "production_batch": "08-rail-eod-custody-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "eod-response-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/110/edit"
+    },
+    {
+      "slot": 112,
+      "edit_index": 111,
+      "id": "eod-medium-equipment-van",
+      "label": "EOD Medium Equipment Van",
+      "production_batch": "08-rail-eod-custody-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "eod-medium-equipment-van",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/111/edit"
+    },
+    {
+      "slot": 113,
+      "edit_index": 112,
+      "id": "eod-heavy-equipment-vehicle",
+      "label": "EOD Heavy Equipment Vehicle",
+      "production_batch": "08-rail-eod-custody-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "eod-heavy-equipment-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/112/edit"
+    },
+    {
+      "slot": 114,
+      "edit_index": 113,
+      "id": "marine-eod-response-vehicle",
+      "label": "Marine EOD Response Vehicle",
+      "production_batch": "08-rail-eod-custody-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "marine-eod-response-vehicle",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/113/edit"
+    },
+    {
+      "slot": 115,
+      "edit_index": 114,
+      "id": "marine-eod-equipment-van",
+      "label": "Marine EOD Equipment Van",
+      "production_batch": "08-rail-eod-custody-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "marine-eod-equipment-van",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/114/edit"
+    },
+    {
+      "slot": 116,
+      "edit_index": 115,
+      "id": "welfare-vehicle-2",
+      "label": "Welfare Vehicle",
+      "production_batch": "08-rail-eod-custody-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "welfare-vehicle-2",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/115/edit"
+    },
+    {
+      "slot": 117,
+      "edit_index": 116,
+      "id": "cell-van",
+      "label": "Cell Van",
+      "production_batch": "08-rail-eod-custody-expansion",
+      "asset_status": "approved-golden",
+      "asset_id": "cell-van",
+      "upload_path": "/vehicle_graphics/5897/vehicle_graphic_images/116/edit"
+    }
+  ]
+}
