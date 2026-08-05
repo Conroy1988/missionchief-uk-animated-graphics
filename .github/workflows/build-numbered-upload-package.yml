@@ -1,3 +1,4 @@
+# Generates the deployment archive from the canonical validated exports.
 name: Build numbered MissionChief upload package
 
 on:
