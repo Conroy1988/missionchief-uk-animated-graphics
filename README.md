@@ -29,14 +29,19 @@ The pack uses realistic, isolated side-elevation product artwork with UK emergen
 - `data/vehicle-slots.json` — authoritative 117-slot live editor mapping
 - `data/prototypes.json` — production specification and light placement manifest
 - `data/final-pack-validation.json` — release-level validation report
-- `scripts/` — repeatable preparation, build and QA tools
+- `scripts/` — repeatable preparation, packaging and QA tools
 - `docs/` — standards and release checkpoints
 
 The complete 117-file chroma source set, all 117 full-resolution transparent masters and the complete high-resolution QA set are included in the **full production archive** attached to the GitHub [`v1.0.0` release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0). Keeping the large working artwork in a release asset avoids duplicating hundreds of megabytes of binary history in every Git clone.
 
 ## Release downloads
 
-- `TKB-UK-Emergency-Fleet-MissionChief-Upload-Ready-v1.0.0.zip` — compact deployment package containing all 117 static PNGs and 117 animated APNGs
+- **Recommended for MissionChief upload:** `TKB-UK-Emergency-Fleet-MissionChief-Numbered-Upload-Ready-v1.0.0.zip`
+  - Separate `01 - Static` and `02 - Animated` folders
+  - Files ordered and named `001` through `117`
+  - Exact MissionChief vehicle labels, with only Windows-invalid filename characters normalised
+  - Includes `UPLOAD-GUIDE.csv`, `UPLOAD-MANIFEST.json` and SHA-256 verification
+- `TKB-UK-Emergency-Fleet-MissionChief-Upload-Ready-v1.0.0.zip` — original compact deployment package using production asset IDs
 - `TKB-UK-Emergency-Fleet-v1.0.0.zip` — complete production project containing sources, transparent masters, exports, previews, mappings, documentation and build tools
 
 ## Rebuild and validate
@@ -45,10 +50,11 @@ The complete 117-file chroma source set, all 117 full-resolution transparent mas
 python scripts/build_prototypes.py
 python scripts/build_source_qa.py
 python scripts/validate_final_pack.py
+python scripts/build_numbered_upload_package.py --version v1.0.0
 ```
 
-`build_prototypes.py` regenerates all static and animated exports plus the map-scale and APNG-frame QA sheets. `validate_final_pack.py` is the final release gate and must report `"all_passed": true`.
+`build_prototypes.py` regenerates all static and animated exports plus the map-scale and APNG-frame QA sheets. `validate_final_pack.py` is the final artwork release gate and must report `"all_passed": true`. `build_numbered_upload_package.py` copies the validated exports byte-for-byte into the numbered deployment structure, verifies all 117 static and animated pairs, creates the upload guide and validates ZIP integrity.
 
 ## MissionChief deployment
 
-The files are ready for upload to the private working pack `TKB UK Fleet — Animated WIP` (pack ID `5897`). Live upload is a separate deployment step because MissionChief requires each slot's file to be selected through its web uploader.
+Use the numbered upload-ready archive for the private working pack `TKB UK Fleet — Animated WIP` (pack ID `5897`). Work from slot `001` to slot `117`; each numbered static file and animated file corresponds directly to the same one-based row in the live MissionChief editor.
