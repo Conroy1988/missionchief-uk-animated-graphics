@@ -30,6 +30,7 @@ jobs:
         run: |
           tar -xzf transport/v1.1-core.tar.gz -C .
           tar -xzf transport/v1.1-animated.tar.gz -C .
+          git restore .github/workflows/build-numbered-upload-package.yml
           rm -rf transport
 
       - name: Validate imported fleet
