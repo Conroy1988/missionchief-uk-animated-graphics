@@ -25,14 +25,14 @@ The pack uses realistic, isolated side-elevation product artwork with UK emergen
 - `assets/sources/` — representative full-resolution chroma-key source artwork
 - `assets/exports/standard/static/` — MissionChief-ready transparent PNGs
 - `assets/exports/standard/animated/` — MissionChief-ready six-frame APNGs
-- `assets/previews/` — full-source, map-scale and animation-frame QA sheets
+- `assets/previews/` — browser-friendly map-scale, animation-frame and selected artwork QA sheets
 - `data/vehicle-slots.json` — authoritative 117-slot live editor mapping
 - `data/prototypes.json` — production specification and light placement manifest
 - `data/final-pack-validation.json` — release-level validation report
 - `scripts/` — repeatable preparation, build and QA tools
 - `docs/` — standards and release checkpoints
 
-The complete 117-file chroma source set and all 117 full-resolution transparent masters are included in the **full production archive** attached to the GitHub `v1.0.0` release. Keeping the large working artwork in a release asset avoids duplicating hundreds of megabytes of binary history in every Git clone.
+The complete 117-file chroma source set, all 117 full-resolution transparent masters and the complete high-resolution QA set are included in the **full production archive** attached to the GitHub [`v1.0.0` release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0). Keeping the large working artwork in a release asset avoids duplicating hundreds of megabytes of binary history in every Git clone.
 
 ## Release downloads
 
