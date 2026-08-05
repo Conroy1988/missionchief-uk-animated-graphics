@@ -2,7 +2,28 @@
 
 A complete, original UK emergency-services vehicle graphics pack for [MissionChief UK](https://www.missionchief.co.uk/), built by **TKB Gaming**.
 
-**[Use the live graphics pack](https://www.missionchief.co.uk/vehicle_graphics/5897)** · **[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/)** · **[Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/)**
+> **[Use TKB UK Fleet — Animated on MissionChief →](https://www.missionchief.co.uk/vehicle_graphics/5897)**
+
+**[Preview all 117 vehicle graphics](GALLERY.md)** · **[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/)** · **[Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/)**
+
+## Preview the full fleet
+
+<table>
+  <tr>
+    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/standard/animated/fire-rescue-pump.png" alt="Water Ladder preview" width="160"></a><br><strong>Water Ladder</strong></td>
+    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/standard/animated/frontline-ambulance.png" alt="Ambulance preview" width="160"></a><br><strong>Ambulance</strong></td>
+    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/standard/animated/police-incident-response-vehicle.png" alt="IRV preview" width="160"></a><br><strong>IRV</strong></td>
+    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/standard/animated/hems.png" alt="HEMS preview" width="160"></a><br><strong>HEMS</strong></td>
+  </tr>
+  <tr>
+    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/standard/animated/police-helicopter.png" alt="Police helicopter preview" width="160"></a><br><strong>Police helicopter</strong></td>
+    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/standard/animated/coastguard-rescue-helicopter.png" alt="Coastguard Rescue Helicopter preview" width="160"></a><br><strong>Coastguard Rescue Helicopter</strong></td>
+    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/standard/animated/control-van-sar.png" alt="Control Van (SAR) preview" width="160"></a><br><strong>Control Van (SAR)</strong></td>
+    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/standard/animated/eod-heavy-equipment-vehicle.png" alt="EOD Heavy Equipment Vehicle preview" width="160"></a><br><strong>EOD Heavy Equipment Vehicle</strong></td>
+  </tr>
+</table>
+
+**[Explore all 117 static and animated vehicle graphics →](GALLERY.md)**
 
 ## The complete UK fleet
 
