@@ -1,48 +1,59 @@
 # TKB UK Emergency Fleet — Animated
 
-A complete original UK-themed vehicle graphics pack for MissionChief UK.
+A complete, original UK emergency-services vehicle graphics pack for [MissionChief UK](https://www.missionchief.co.uk/), built by **TKB Gaming**.
 
-## Release status
+**[Use the live graphics pack](https://www.missionchief.co.uk/vehicle_graphics/5897)** · **[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/)** · **[Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/)**
 
-Release **v1.0.0** covers all **117** slots in the live MissionChief UK vehicle-graphics editor.
+## The complete UK fleet
 
-- 117 transparent map-scale static PNGs
+Release **v1.0.0** covers every one of the **117 current vehicle slots** in MissionChief UK:
+
+- 117 transparent, map-scale static PNGs
 - 117 six-frame APNGs
 - 87 emergency assets with restrained alternating blue-light animation
-- 30 trailers, boats, support assets and non-blue-light vehicles with aligned static APNG frames
-- 117 full-resolution transparent masters
-- 117 archived chroma-key source images
-- Complete live-slot mapping for private MissionChief pack **5897**
+- 30 trailers, boats, support assets and non-blue-light vehicles with stable APNG frames
+- Fire, ambulance, police, coastguard, water rescue, HEMS, mountain rescue, airport, fire-investigation and EOD coverage
+- Consistent real-world relative scale across the entire fleet
 
-All release checks pass, including source decoding, alpha transparency, ordered slot coverage, unique asset IDs, real-world relative scale, APNG frame count, static/APNG alignment, and expected flashing behaviour.
+Every release asset has passed the production validation suite for decoding, alpha transparency, slot order, unique IDs, relative scale, animation frame count, static/APNG alignment and expected flashing behaviour.
 
 ## Visual standard
 
-The pack uses realistic, isolated side-elevation product artwork with UK emergency-service colour language and no copied agency logos or readable branding. New production sources were generated individually on a flat `#FF00FF` chroma background, then converted to transparent RGBA masters by the repeatable build pipeline.
+The pack uses realistic right-facing side elevations, recognisable UK emergency-service colour language and a clean, consistent map presence. The artwork is original: it does not reproduce official service logos, vehicle registrations or third-party branding.
 
-## Structure
+Emergency lighting is deliberately restrained so the fleet remains readable on a busy MissionChief map. Vehicles that should not flash remain stable.
+
+## Install in MissionChief
+
+1. Open the **[TKB UK Emergency Fleet — Animated](https://www.missionchief.co.uk/vehicle_graphics/5897)** pack.
+2. Select the pack for your MissionChief account.
+3. Enable animated vehicle graphics in MissionChief if you want the blue-light APNG versions.
+
+For broader gameplay help, missions, vehicles, buildings and operational planning, visit the **[TKB MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/)**.
+
+For MissionChief enhancements and utilities, visit **[TKB MissionChief Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/)**.
+
+## Release downloads
+
+The [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0) includes:
+
+- **`TKB-UK-Emergency-Fleet-MissionChief-Numbered-Upload-Ready-v1.0.0.zip`** — recommended ordered deployment package, with separate static and animated folders, an upload guide, manifest and SHA-256 verification
+- **`TKB-UK-Emergency-Fleet-MissionChief-Upload-Ready-v1.0.0.zip`** — compact deployment package using production asset IDs
+- **`TKB-UK-Emergency-Fleet-v1.0.0.zip`** — complete production archive containing sources, transparent masters, exports, previews, mappings, documentation and build tools
+
+## Repository structure
 
 - `assets/sources/` — representative full-resolution chroma-key source artwork
 - `assets/exports/standard/static/` — MissionChief-ready transparent PNGs
 - `assets/exports/standard/animated/` — MissionChief-ready six-frame APNGs
-- `assets/previews/` — browser-friendly map-scale, animation-frame and selected artwork QA sheets
-- `data/vehicle-slots.json` — authoritative 117-slot live editor mapping
-- `data/prototypes.json` — production specification and light placement manifest
+- `assets/previews/` — map-scale, animation-frame and selected-artwork QA sheets
+- `data/vehicle-slots.json` — authoritative 117-slot MissionChief mapping
+- `data/prototypes.json` — production specification and light-placement manifest
 - `data/final-pack-validation.json` — release-level validation report
 - `scripts/` — repeatable preparation, packaging and QA tools
-- `docs/` — standards and release checkpoints
+- `docs/` — production standards and release checkpoints
 
-The complete 117-file chroma source set, all 117 full-resolution transparent masters and the complete high-resolution QA set are included in the **full production archive** attached to the GitHub [`v1.0.0` release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0). Keeping the large working artwork in a release asset avoids duplicating hundreds of megabytes of binary history in every Git clone.
-
-## Release downloads
-
-- **Recommended for MissionChief upload:** `TKB-UK-Emergency-Fleet-MissionChief-Numbered-Upload-Ready-v1.0.0.zip`
-  - Separate `01 - Static` and `02 - Animated` folders
-  - Files ordered and named `001` through `117`
-  - Exact MissionChief vehicle labels, with only Windows-invalid filename characters normalised
-  - Includes `UPLOAD-GUIDE.csv`, `UPLOAD-MANIFEST.json` and SHA-256 verification
-- `TKB-UK-Emergency-Fleet-MissionChief-Upload-Ready-v1.0.0.zip` — original compact deployment package using production asset IDs
-- `TKB-UK-Emergency-Fleet-v1.0.0.zip` — complete production project containing sources, transparent masters, exports, previews, mappings, documentation and build tools
+Large production artwork is supplied through the release archive rather than duplicated throughout Git history.
 
 ## Rebuild and validate
 
@@ -53,8 +64,10 @@ python scripts/validate_final_pack.py
 python scripts/build_numbered_upload_package.py --version v1.0.0
 ```
 
-`build_prototypes.py` regenerates all static and animated exports plus the map-scale and APNG-frame QA sheets. `validate_final_pack.py` is the final artwork release gate and must report `"all_passed": true`. `build_numbered_upload_package.py` copies the validated exports byte-for-byte into the numbered deployment structure, verifies all 117 static and animated pairs, creates the upload guide and validates ZIP integrity.
+The final validation gate must report `"all_passed": true` before a release is published.
 
-## MissionChief deployment
+## Rights and licence
 
-Use the numbered upload-ready archive for the private working pack `TKB UK Fleet — Animated WIP` (pack ID `5897`). Work from slot `001` to slot `117`; each numbered static file and animated file corresponds directly to the same one-based row in the live MissionChief editor.
+The artwork is original and the pack is not affiliated with or endorsed by MissionChief, any UK emergency service or any vehicle manufacturer.
+
+Code and automation are MIT licensed. Artwork and visual assets are licensed under CC BY-NC-SA 4.0. See [LICENSE.md](LICENSE.md) for the exact scope and attribution requirement.
