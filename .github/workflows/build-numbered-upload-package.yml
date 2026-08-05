@@ -1,5 +1,5 @@
-# Generates the deployment archive from the canonical validated exports.
-name: Build numbered MissionChief upload package
+# Builds, validates and releases the v1.1 Modern Command Visibility profile.
+name: Build v1.1 MissionChief command pack
 
 on:
   workflow_dispatch:
@@ -12,6 +12,12 @@ on:
       - data/vehicle-slots.json
       - assets/exports/standard/static/**
       - assets/exports/standard/animated/**
+      - assets/exports/command/static/**
+      - assets/exports/command/animated/**
+      - assets/masters/v1.1/**
+      - data/v1.1-enhancement-profile.json
+      - scripts/build_v1_1_enhanced.py
+      - scripts/validate_v1_1_enhanced.py
       - .github/workflows/build-numbered-upload-package.yml
 
 permissions:
@@ -32,30 +38,45 @@ jobs:
       - name: Validate bulk uploader syntax
         run: node --check tools/tkb-missionchief-bulk-uploader.user.js
 
+      - name: Install image build dependency
+        run: python -m pip install --disable-pip-version-check Pillow
+
+      - name: Build Modern Command Visibility exports
+        run: python scripts/build_v1_1_enhanced.py
+
+      - name: Run dense-map and animation release gate
+        run: python scripts/validate_v1_1_enhanced.py
+
       - name: Build and validate numbered package
-        run: python scripts/build_numbered_upload_package.py --version v1.0.0
+        run: python scripts/build_numbered_upload_package.py --version v1.1.0 --profile command
 
       - name: Stage bulk uploader release asset
-        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.0.0.user.js
+        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.1.0.user.js
 
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: missionchief-numbered-upload-ready-v1.0.0
+          name: missionchief-modern-command-visibility-v1.1.0
           path: |
-            dist/TKB-UK-Emergency-Fleet-MissionChief-Numbered-Upload-Ready-v1.0.0.zip
-            dist/TKB-UK-Emergency-Fleet-MissionChief-Numbered-Upload-Ready-v1.0.0.zip.sha256
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.0.0.user.js
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Visibility-MissionChief-Numbered-Upload-Ready-v1.1.0.zip
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Visibility-MissionChief-Numbered-Upload-Ready-v1.1.0.zip.sha256
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.1.0.user.js
+            data/v1.1-build-report.json
+            data/v1.1-qa-report.json
+            assets/previews/v1.1/*.png
           if-no-files-found: error
           retention-days: 90
 
-      - name: Attach deployment files to v1.0.0 release
+      - name: Create or update v1.1.0 release
         if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release upload v1.0.0 \
-            dist/TKB-UK-Emergency-Fleet-MissionChief-Numbered-Upload-Ready-v1.0.0.zip \
-            dist/TKB-UK-Emergency-Fleet-MissionChief-Numbered-Upload-Ready-v1.0.0.zip.sha256 \
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.0.0.user.js \
+          gh release view v1.1.0 >/dev/null 2>&1 || gh release create v1.1.0 --target main --title "v1.1.0 — Modern Command Visibility" --notes-file docs/RELEASE_v1.1.0.md
+          gh release upload v1.1.0 \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Visibility-MissionChief-Numbered-Upload-Ready-v1.1.0.zip \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Visibility-MissionChief-Numbered-Upload-Ready-v1.1.0.zip.sha256 \
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.1.0.user.js \
+            data/v1.1-build-report.json \
+            data/v1.1-qa-report.json \
             --clobber

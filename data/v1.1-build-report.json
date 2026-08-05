@@ -1,0 +1,4367 @@
+{
+  "release": "v1.1.0",
+  "profile": "command",
+  "display_name": "Modern Command Visibility",
+  "selected_upgrades": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    9,
+    12,
+    13,
+    15
+  ],
+  "vehicles": 117,
+  "static_pngs": 117,
+  "animated_apngs": 117,
+  "frames_per_asset": 12,
+  "source_overrides": 1,
+  "rare_showcase_assets": 33,
+  "motion_counts": {
+    "amber-beacon": 6,
+    "blue-response": 83,
+    "marker-light": 9,
+    "navigation-and-wake": 2,
+    "rotor-and-blue-response": 4,
+    "static": 11,
+    "wheel-motion": 2
+  },
+  "timing_signature_count": 117,
+  "maximum_shared_timing_signature": 1,
+  "minimum_body_width": 72,
+  "maximum_body_width": 296,
+  "vehicles_detail": [
+    {
+      "slot": 1,
+      "id": "fire-rescue-pump",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 110,
+        "height": 41
+      },
+      "command_dimensions": {
+        "width": 129,
+        "height": 54
+      },
+      "body_dimensions": {
+        "width": 119,
+        "height": 44
+      },
+      "width_gain_percent": 8.2,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        77,
+        73,
+        100,
+        78,
+        174,
+        82,
+        74,
+        95,
+        67,
+        67,
+        229
+      ],
+      "cycle_ms": 1271,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 2,
+      "id": "light-4x4-pump",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 84,
+        "height": 29
+      },
+      "command_dimensions": {
+        "width": 111,
+        "height": 45
+      },
+      "body_dimensions": {
+        "width": 101,
+        "height": 35
+      },
+      "width_gain_percent": 20.2,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        68,
+        60,
+        85,
+        62,
+        166,
+        78,
+        64,
+        98,
+        77,
+        72,
+        231
+      ],
+      "cycle_ms": 1216,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 3,
+      "id": "aerial-appliance",
+      "service": "fire",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 156,
+        "height": 51
+      },
+      "command_dimensions": {
+        "width": 188,
+        "height": 68
+      },
+      "body_dimensions": {
+        "width": 178,
+        "height": 58
+      },
+      "width_gain_percent": 14.1,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        65,
+        67,
+        97,
+        68,
+        169,
+        71,
+        69,
+        101,
+        79,
+        73,
+        223
+      ],
+      "cycle_ms": 1237,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 4,
+      "id": "fire-officer",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 62,
+        "height": 23
+      },
+      "command_dimensions": {
+        "width": 84,
+        "height": 37
+      },
+      "body_dimensions": {
+        "width": 74,
+        "height": 27
+      },
+      "width_gain_percent": 19.4,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        69,
+        60,
+        85,
+        71,
+        179,
+        76,
+        71,
+        93,
+        66,
+        75,
+        233
+      ],
+      "cycle_ms": 1233,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 5,
+      "id": "rescue-support-unit",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 114,
+        "height": 40
+      },
+      "command_dimensions": {
+        "width": 133,
+        "height": 53
+      },
+      "body_dimensions": {
+        "width": 123,
+        "height": 43
+      },
+      "width_gain_percent": 7.9,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        65,
+        67,
+        97,
+        68,
+        177,
+        84,
+        67,
+        100,
+        70,
+        69,
+        221
+      ],
+      "cycle_ms": 1240,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 6,
+      "id": "frontline-ambulance",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 84,
+        "height": 31
+      },
+      "command_dimensions": {
+        "width": 111,
+        "height": 47
+      },
+      "body_dimensions": {
+        "width": 101,
+        "height": 37
+      },
+      "width_gain_percent": 20.2,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        71,
+        61,
+        94,
+        67,
+        177,
+        84,
+        67,
+        100,
+        70,
+        69,
+        221
+      ],
+      "cycle_ms": 1236,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 7,
+      "id": "water-carrier",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 124,
+        "height": 42
+      },
+      "command_dimensions": {
+        "width": 144,
+        "height": 55
+      },
+      "body_dimensions": {
+        "width": 134,
+        "height": 45
+      },
+      "width_gain_percent": 8.1,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        78,
+        73,
+        91,
+        74,
+        180,
+        85,
+        76,
+        104,
+        80,
+        82,
+        236
+      ],
+      "cycle_ms": 1314,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 8,
+      "id": "hazmat-unit",
+      "service": "fire",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 114,
+        "height": 41
+      },
+      "command_dimensions": {
+        "width": 140,
+        "height": 57
+      },
+      "body_dimensions": {
+        "width": 130,
+        "height": 47
+      },
+      "width_gain_percent": 14.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        79,
+        65,
+        96,
+        68,
+        169,
+        71,
+        69,
+        101,
+        79,
+        73,
+        232
+      ],
+      "cycle_ms": 1257,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 9,
+      "id": "police-incident-response-vehicle",
+      "service": "police",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 64,
+        "height": 21
+      },
+      "command_dimensions": {
+        "width": 87,
+        "height": 35
+      },
+      "body_dimensions": {
+        "width": 77,
+        "height": 25
+      },
+      "width_gain_percent": 20.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        68,
+        60,
+        93,
+        66,
+        176,
+        83,
+        75,
+        95,
+        67,
+        76,
+        233
+      ],
+      "cycle_ms": 1247,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 10,
+      "id": "hems",
+      "service": "ambulance",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 177,
+        "height": 54
+      },
+      "command_dimensions": {
+        "width": 212,
+        "height": 72
+      },
+      "body_dimensions": {
+        "width": 202,
+        "height": 62
+      },
+      "width_gain_percent": 14.1,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        76,
+        72,
+        91,
+        74,
+        172,
+        81,
+        65,
+        99,
+        78,
+        81,
+        227
+      ],
+      "cycle_ms": 1271,
+      "motion": "rotor-and-blue-response"
+    },
+    {
+      "slot": 11,
+      "id": "rapid-response-vehicle",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 64,
+        "height": 22
+      },
+      "command_dimensions": {
+        "width": 87,
+        "height": 36
+      },
+      "body_dimensions": {
+        "width": 77,
+        "height": 26
+      },
+      "width_gain_percent": 20.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        76,
+        72,
+        99,
+        78,
+        182,
+        86,
+        68,
+        100,
+        78,
+        81,
+        236
+      ],
+      "cycle_ms": 1311,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 12,
+      "id": "police-helicopter",
+      "service": "police",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 179,
+        "height": 56
+      },
+      "command_dimensions": {
+        "width": 214,
+        "height": 74
+      },
+      "body_dimensions": {
+        "width": 204,
+        "height": 64
+      },
+      "width_gain_percent": 14.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        66,
+        59,
+        93,
+        66,
+        168,
+        71,
+        60,
+        88,
+        64,
+        66,
+        228
+      ],
+      "cycle_ms": 1184,
+      "motion": "rotor-and-blue-response"
+    },
+    {
+      "slot": 13,
+      "id": "dog-support-unit",
+      "service": "police",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 88,
+        "height": 37
+      },
+      "command_dimensions": {
+        "width": 116,
+        "height": 55
+      },
+      "body_dimensions": {
+        "width": 106,
+        "height": 45
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        70,
+        61,
+        94,
+        67,
+        177,
+        84,
+        75,
+        95,
+        76,
+        72,
+        223
+      ],
+      "cycle_ms": 1249,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 14,
+      "id": "armed-response-vehicle",
+      "service": "police",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 66,
+        "height": 25
+      },
+      "command_dimensions": {
+        "width": 89,
+        "height": 40
+      },
+      "body_dimensions": {
+        "width": 79,
+        "height": 30
+      },
+      "width_gain_percent": 19.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        64,
+        66,
+        96,
+        76,
+        173,
+        73,
+        70,
+        101,
+        70,
+        77,
+        225
+      ],
+      "cycle_ms": 1246,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 15,
+      "id": "breathing-apparatus-support-unit",
+      "service": "fire",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 112,
+        "height": 39
+      },
+      "command_dimensions": {
+        "width": 138,
+        "height": 55
+      },
+      "body_dimensions": {
+        "width": 128,
+        "height": 45
+      },
+      "width_gain_percent": 14.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        68,
+        60,
+        85,
+        62,
+        174,
+        74,
+        62,
+        89,
+        64,
+        74,
+        232
+      ],
+      "cycle_ms": 1199,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 16,
+      "id": "incident-command-control-unit",
+      "service": "fire",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 136,
+        "height": 51
+      },
+      "command_dimensions": {
+        "width": 165,
+        "height": 68
+      },
+      "body_dimensions": {
+        "width": 155,
+        "height": 58
+      },
+      "width_gain_percent": 14.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        70,
+        61,
+        85,
+        71,
+        170,
+        72,
+        61,
+        97,
+        68,
+        76,
+        225
+      ],
+      "cycle_ms": 1211,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 17,
+      "id": "rescue-pump",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 112,
+        "height": 43
+      },
+      "command_dimensions": {
+        "width": 131,
+        "height": 56
+      },
+      "body_dimensions": {
+        "width": 121,
+        "height": 46
+      },
+      "width_gain_percent": 8.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        72,
+        62,
+        86,
+        63,
+        175,
+        83,
+        75,
+        104,
+        80,
+        82,
+        228
+      ],
+      "cycle_ms": 1265,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 18,
+      "id": "carp",
+      "service": "fire",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 133,
+        "height": 51
+      },
+      "command_dimensions": {
+        "width": 162,
+        "height": 68
+      },
+      "body_dimensions": {
+        "width": 152,
+        "height": 58
+      },
+      "width_gain_percent": 14.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        72,
+        62,
+        94,
+        67,
+        177,
+        84,
+        75,
+        104,
+        72,
+        70,
+        230
+      ],
+      "cycle_ms": 1262,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 19,
+      "id": "co-responder-vehicle",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 62,
+        "height": 26
+      },
+      "command_dimensions": {
+        "width": 84,
+        "height": 41
+      },
+      "body_dimensions": {
+        "width": 74,
+        "height": 31
+      },
+      "width_gain_percent": 19.4,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        71,
+        70,
+        98,
+        77,
+        182,
+        86,
+        68,
+        100,
+        78,
+        81,
+        227
+      ],
+      "cycle_ms": 1293,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 20,
+      "id": "joint-response-unit",
+      "service": "multi-service",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 64,
+        "height": 21
+      },
+      "command_dimensions": {
+        "width": 87,
+        "height": 35
+      },
+      "body_dimensions": {
+        "width": 77,
+        "height": 25
+      },
+      "width_gain_percent": 20.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        75,
+        72,
+        91,
+        65,
+        167,
+        79,
+        64,
+        98,
+        69,
+        68,
+        229
+      ],
+      "cycle_ms": 1232,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 21,
+      "id": "otl",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 65,
+        "height": 27
+      },
+      "command_dimensions": {
+        "width": 88,
+        "height": 42
+      },
+      "body_dimensions": {
+        "width": 78,
+        "height": 32
+      },
+      "width_gain_percent": 20.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        79,
+        65,
+        87,
+        72,
+        171,
+        72,
+        61,
+        88,
+        64,
+        74,
+        232
+      ],
+      "cycle_ms": 1220,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 22,
+      "id": "general-practitioner",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 64,
+        "height": 22
+      },
+      "command_dimensions": {
+        "width": 87,
+        "height": 36
+      },
+      "body_dimensions": {
+        "width": 77,
+        "height": 26
+      },
+      "width_gain_percent": 20.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        68,
+        68,
+        97,
+        77,
+        173,
+        82,
+        66,
+        91,
+        74,
+        79,
+        235
+      ],
+      "cycle_ms": 1265,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 23,
+      "id": "community-first-responder",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 57,
+        "height": 22
+      },
+      "command_dimensions": {
+        "width": 89,
+        "height": 40
+      },
+      "body_dimensions": {
+        "width": 79,
+        "height": 30
+      },
+      "width_gain_percent": 38.6,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        65,
+        67,
+        97,
+        77,
+        182,
+        86,
+        68,
+        100,
+        78,
+        73,
+        232
+      ],
+      "cycle_ms": 1280,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 24,
+      "id": "crew-carrier",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 94,
+        "height": 38
+      },
+      "command_dimensions": {
+        "width": 112,
+        "height": 51
+      },
+      "body_dimensions": {
+        "width": 102,
+        "height": 41
+      },
+      "width_gain_percent": 8.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        74,
+        63,
+        86,
+        63,
+        175,
+        83,
+        75,
+        104,
+        72,
+        78,
+        226
+      ],
+      "cycle_ms": 1254,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 25,
+      "id": "traffic-car",
+      "service": "police",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 65,
+        "height": 21
+      },
+      "command_dimensions": {
+        "width": 88,
+        "height": 35
+      },
+      "body_dimensions": {
+        "width": 78,
+        "height": 25
+      },
+      "width_gain_percent": 20.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        67,
+        68,
+        97,
+        68,
+        177,
+        75,
+        62,
+        97,
+        77,
+        72,
+        231
+      ],
+      "cycle_ms": 1246,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 26,
+      "id": "armed-traffic-car",
+      "service": "police",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 66,
+        "height": 25
+      },
+      "command_dimensions": {
+        "width": 89,
+        "height": 40
+      },
+      "body_dimensions": {
+        "width": 79,
+        "height": 30
+      },
+      "width_gain_percent": 19.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        72,
+        62,
+        86,
+        63,
+        175,
+        83,
+        66,
+        91,
+        65,
+        75,
+        233
+      ],
+      "cycle_ms": 1226,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 27,
+      "id": "heavy-4x4-tanker",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 126,
+        "height": 55
+      },
+      "command_dimensions": {
+        "width": 146,
+        "height": 69
+      },
+      "body_dimensions": {
+        "width": 136,
+        "height": 59
+      },
+      "width_gain_percent": 7.9,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        76,
+        64,
+        87,
+        72,
+        171,
+        81,
+        74,
+        95,
+        76,
+        72,
+        231
+      ],
+      "cycle_ms": 1254,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 28,
+      "id": "prv",
+      "service": "ambulance",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 69,
+        "height": 28
+      },
+      "command_dimensions": {
+        "width": 93,
+        "height": 44
+      },
+      "body_dimensions": {
+        "width": 83,
+        "height": 34
+      },
+      "width_gain_percent": 20.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        80,
+        66,
+        96,
+        76,
+        173,
+        82,
+        74,
+        103,
+        71,
+        69,
+        221
+      ],
+      "cycle_ms": 1266,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 29,
+      "id": "srv",
+      "service": "ambulance",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 38
+      },
+      "command_dimensions": {
+        "width": 114,
+        "height": 53
+      },
+      "body_dimensions": {
+        "width": 104,
+        "height": 43
+      },
+      "width_gain_percent": 14.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        72,
+        62,
+        86,
+        71,
+        179,
+        85,
+        76,
+        104,
+        80,
+        82,
+        236
+      ],
+      "cycle_ms": 1288,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 30,
+      "id": "welfare-vehicle",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 36
+      },
+      "command_dimensions": {
+        "width": 108,
+        "height": 49
+      },
+      "body_dimensions": {
+        "width": 98,
+        "height": 39
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        72,
+        70,
+        98,
+        77,
+        173,
+        82,
+        74,
+        103,
+        80,
+        82,
+        228
+      ],
+      "cycle_ms": 1294,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 31,
+      "id": "atv-carrier",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 117,
+        "height": 47
+      },
+      "command_dimensions": {
+        "width": 136,
+        "height": 61
+      },
+      "body_dimensions": {
+        "width": 126,
+        "height": 51
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        80,
+        66,
+        96,
+        68,
+        169,
+        80,
+        73,
+        103,
+        80,
+        82,
+        228
+      ],
+      "cycle_ms": 1280,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 32,
+      "id": "ambulance-control-unit",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 130,
+        "height": 62
+      },
+      "command_dimensions": {
+        "width": 150,
+        "height": 77
+      },
+      "body_dimensions": {
+        "width": 140,
+        "height": 67
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        70,
+        69,
+        89,
+        64,
+        175,
+        83,
+        66,
+        91,
+        65,
+        66,
+        228
+      ],
+      "cycle_ms": 1221,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 33,
+      "id": "cbrn-vehicle",
+      "service": "ambulance",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 88,
+        "height": 45
+      },
+      "command_dimensions": {
+        "width": 116,
+        "height": 64
+      },
+      "body_dimensions": {
+        "width": 106,
+        "height": 54
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        73,
+        71,
+        90,
+        73,
+        171,
+        72,
+        69,
+        101,
+        79,
+        73,
+        232
+      ],
+      "cycle_ms": 1259,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 34,
+      "id": "mass-casualty-equipment",
+      "service": "ambulance",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 124,
+        "height": 60
+      },
+      "command_dimensions": {
+        "width": 151,
+        "height": 78
+      },
+      "body_dimensions": {
+        "width": 141,
+        "height": 68
+      },
+      "width_gain_percent": 13.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        70,
+        61,
+        94,
+        75,
+        181,
+        77,
+        72,
+        94,
+        67,
+        67,
+        220
+      ],
+      "cycle_ms": 1233,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 35,
+      "id": "ambulance-officer",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 65,
+        "height": 25
+      },
+      "command_dimensions": {
+        "width": 88,
+        "height": 40
+      },
+      "body_dimensions": {
+        "width": 78,
+        "height": 30
+      },
+      "width_gain_percent": 20.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        68,
+        60,
+        93,
+        75,
+        172,
+        73,
+        61,
+        88,
+        72,
+        70,
+        230
+      ],
+      "cycle_ms": 1217,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 36,
+      "id": "bfu",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 114,
+        "height": 57
+      },
+      "command_dimensions": {
+        "width": 133,
+        "height": 72
+      },
+      "body_dimensions": {
+        "width": 123,
+        "height": 62
+      },
+      "width_gain_percent": 7.9,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        75,
+        72,
+        99,
+        69,
+        178,
+        76,
+        71,
+        93,
+        75,
+        80,
+        235
+      ],
+      "cycle_ms": 1278,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 37,
+      "id": "f-wrc",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 124,
+        "height": 48
+      },
+      "command_dimensions": {
+        "width": 144,
+        "height": 62
+      },
+      "body_dimensions": {
+        "width": 134,
+        "height": 52
+      },
+      "width_gain_percent": 8.1,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        78,
+        65,
+        87,
+        63,
+        175,
+        74,
+        62,
+        97,
+        68,
+        76,
+        233
+      ],
+      "cycle_ms": 1233,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 38,
+      "id": "wrl-cafs",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 110,
+        "height": 45
+      },
+      "command_dimensions": {
+        "width": 129,
+        "height": 59
+      },
+      "body_dimensions": {
+        "width": 119,
+        "height": 49
+      },
+      "width_gain_percent": 8.2,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        76,
+        72,
+        91,
+        74,
+        180,
+        77,
+        63,
+        98,
+        77,
+        72,
+        231
+      ],
+      "cycle_ms": 1266,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 39,
+      "id": "rp-cafs",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 113,
+        "height": 43
+      },
+      "command_dimensions": {
+        "width": 132,
+        "height": 56
+      },
+      "body_dimensions": {
+        "width": 122,
+        "height": 46
+      },
+      "width_gain_percent": 8.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        78,
+        65,
+        87,
+        72,
+        179,
+        85,
+        76,
+        104,
+        72,
+        70,
+        222
+      ],
+      "cycle_ms": 1265,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 40,
+      "id": "osu",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 121,
+        "height": 43
+      },
+      "command_dimensions": {
+        "width": 141,
+        "height": 57
+      },
+      "body_dimensions": {
+        "width": 131,
+        "height": 47
+      },
+      "width_gain_percent": 8.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        75,
+        72,
+        91,
+        65,
+        176,
+        75,
+        71,
+        93,
+        66,
+        75,
+        233
+      ],
+      "cycle_ms": 1247,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 41,
+      "id": "pm",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 110,
+        "height": 43
+      },
+      "command_dimensions": {
+        "width": 129,
+        "height": 57
+      },
+      "body_dimensions": {
+        "width": 119,
+        "height": 47
+      },
+      "width_gain_percent": 8.2,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        73,
+        71,
+        99,
+        69,
+        169,
+        71,
+        60,
+        96,
+        76,
+        72,
+        231
+      ],
+      "cycle_ms": 1242,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 42,
+      "id": "water-pod",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 83,
+        "height": 30
+      },
+      "command_dimensions": {
+        "width": 110,
+        "height": 46
+      },
+      "body_dimensions": {
+        "width": 100,
+        "height": 36
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        71,
+        70,
+        98,
+        77,
+        182,
+        86,
+        76,
+        104,
+        72,
+        78,
+        226
+      ],
+      "cycle_ms": 1295,
+      "motion": "static"
+    },
+    {
+      "slot": 43,
+      "id": "bulk-foam-pod",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 83,
+        "height": 29
+      },
+      "command_dimensions": {
+        "width": 110,
+        "height": 45
+      },
+      "body_dimensions": {
+        "width": 100,
+        "height": 35
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        75,
+        63,
+        86,
+        71,
+        179,
+        85,
+        67,
+        100,
+        78,
+        73,
+        223
+      ],
+      "cycle_ms": 1255,
+      "motion": "static"
+    },
+    {
+      "slot": 44,
+      "id": "rescue-pod",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 83,
+        "height": 33
+      },
+      "command_dimensions": {
+        "width": 110,
+        "height": 50
+      },
+      "body_dimensions": {
+        "width": 100,
+        "height": 40
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        75,
+        72,
+        99,
+        78,
+        182,
+        86,
+        76,
+        104,
+        80,
+        82,
+        236
+      ],
+      "cycle_ms": 1325,
+      "motion": "static"
+    },
+    {
+      "slot": 45,
+      "id": "command-pod",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 83,
+        "height": 49
+      },
+      "command_dimensions": {
+        "width": 110,
+        "height": 69
+      },
+      "body_dimensions": {
+        "width": 100,
+        "height": 59
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        72,
+        62,
+        94,
+        75,
+        172,
+        81,
+        74,
+        103,
+        71,
+        69,
+        230
+      ],
+      "cycle_ms": 1258,
+      "motion": "static"
+    },
+    {
+      "slot": 46,
+      "id": "welfare-pod",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 83,
+        "height": 33
+      },
+      "command_dimensions": {
+        "width": 110,
+        "height": 50
+      },
+      "body_dimensions": {
+        "width": 100,
+        "height": 40
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        69,
+        69,
+        98,
+        77,
+        173,
+        73,
+        61,
+        97,
+        77,
+        81,
+        227
+      ],
+      "cycle_ms": 1257,
+      "motion": "static"
+    },
+    {
+      "slot": 47,
+      "id": "basu-pod",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 83,
+        "height": 26
+      },
+      "command_dimensions": {
+        "width": 110,
+        "height": 41
+      },
+      "body_dimensions": {
+        "width": 100,
+        "height": 31
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        76,
+        72,
+        99,
+        69,
+        169,
+        80,
+        73,
+        103,
+        80,
+        74,
+        224
+      ],
+      "cycle_ms": 1274,
+      "motion": "static"
+    },
+    {
+      "slot": 48,
+      "id": "misting-pod",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 75,
+        "height": 35
+      },
+      "command_dimensions": {
+        "width": 100,
+        "height": 52
+      },
+      "body_dimensions": {
+        "width": 90,
+        "height": 42
+      },
+      "width_gain_percent": 20.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        70,
+        69,
+        98,
+        77,
+        173,
+        73,
+        61,
+        88,
+        72,
+        70,
+        222
+      ],
+      "cycle_ms": 1228,
+      "motion": "static"
+    },
+    {
+      "slot": 49,
+      "id": "hazardous-materials-pod",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 83,
+        "height": 28
+      },
+      "command_dimensions": {
+        "width": 110,
+        "height": 44
+      },
+      "body_dimensions": {
+        "width": 100,
+        "height": 34
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        68,
+        68,
+        89,
+        64,
+        167,
+        79,
+        73,
+        103,
+        80,
+        74,
+        224
+      ],
+      "cycle_ms": 1244,
+      "motion": "static"
+    },
+    {
+      "slot": 50,
+      "id": "osu-pod",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 86,
+        "height": 29
+      },
+      "command_dimensions": {
+        "width": 113,
+        "height": 45
+      },
+      "body_dimensions": {
+        "width": 103,
+        "height": 35
+      },
+      "width_gain_percent": 19.8,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        76,
+        72,
+        91,
+        74,
+        180,
+        77,
+        63,
+        89,
+        64,
+        66,
+        220
+      ],
+      "cycle_ms": 1227,
+      "motion": "static"
+    },
+    {
+      "slot": 51,
+      "id": "hvp",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 88,
+        "height": 30
+      },
+      "command_dimensions": {
+        "width": 116,
+        "height": 46
+      },
+      "body_dimensions": {
+        "width": 106,
+        "height": 36
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        65,
+        58,
+        92,
+        66,
+        176,
+        75,
+        62,
+        89,
+        64,
+        66,
+        228
+      ],
+      "cycle_ms": 1196,
+      "motion": "static"
+    },
+    {
+      "slot": 52,
+      "id": "psu-carrier",
+      "service": "police",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 90,
+        "height": 34
+      },
+      "command_dimensions": {
+        "width": 107,
+        "height": 47
+      },
+      "body_dimensions": {
+        "width": 97,
+        "height": 37
+      },
+      "width_gain_percent": 7.8,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        65,
+        67,
+        88,
+        64,
+        167,
+        79,
+        64,
+        90,
+        65,
+        66,
+        220
+      ],
+      "cycle_ms": 1190,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 53,
+      "id": "firearms-personnel-carrier",
+      "service": "police",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 94,
+        "height": 36
+      },
+      "command_dimensions": {
+        "width": 117,
+        "height": 51
+      },
+      "body_dimensions": {
+        "width": 107,
+        "height": 41
+      },
+      "width_gain_percent": 13.8,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        75,
+        72,
+        91,
+        74,
+        180,
+        77,
+        63,
+        89,
+        64,
+        74,
+        232
+      ],
+      "cycle_ms": 1246,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 54,
+      "id": "multiple-dog-carrier",
+      "service": "police",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 95,
+        "height": 37
+      },
+      "command_dimensions": {
+        "width": 113,
+        "height": 50
+      },
+      "body_dimensions": {
+        "width": 103,
+        "height": 40
+      },
+      "width_gain_percent": 8.4,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        80,
+        74,
+        100,
+        70,
+        170,
+        80,
+        65,
+        99,
+        78,
+        81,
+        227
+      ],
+      "cycle_ms": 1279,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 55,
+      "id": "detention-van",
+      "service": "police",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 33
+      },
+      "command_dimensions": {
+        "width": 108,
+        "height": 46
+      },
+      "body_dimensions": {
+        "width": 98,
+        "height": 36
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        79,
+        65,
+        96,
+        68,
+        177,
+        75,
+        71,
+        102,
+        71,
+        69,
+        230
+      ],
+      "cycle_ms": 1258,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 56,
+      "id": "mounted-unit",
+      "service": "police",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 117,
+        "height": 46
+      },
+      "command_dimensions": {
+        "width": 136,
+        "height": 60
+      },
+      "body_dimensions": {
+        "width": 126,
+        "height": 50
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        69,
+        69,
+        89,
+        64,
+        167,
+        79,
+        64,
+        98,
+        69,
+        68,
+        229
+      ],
+      "cycle_ms": 1220,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 57,
+      "id": "m-rav",
+      "service": "police",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 84,
+        "height": 35
+      },
+      "command_dimensions": {
+        "width": 111,
+        "height": 52
+      },
+      "body_dimensions": {
+        "width": 101,
+        "height": 42
+      },
+      "width_gain_percent": 20.2,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        65,
+        67,
+        88,
+        72,
+        171,
+        81,
+        74,
+        103,
+        80,
+        74,
+        232
+      ],
+      "cycle_ms": 1262,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 58,
+      "id": "crv",
+      "service": "coastguard",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 68,
+        "height": 32
+      },
+      "command_dimensions": {
+        "width": 92,
+        "height": 49
+      },
+      "body_dimensions": {
+        "width": 82,
+        "height": 39
+      },
+      "width_gain_percent": 20.6,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        77,
+        73,
+        100,
+        78,
+        182,
+        86,
+        76,
+        104,
+        72,
+        78,
+        234
+      ],
+      "cycle_ms": 1315,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 59,
+      "id": "coastguard-mud-rescue-unit",
+      "service": "coastguard",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 36
+      },
+      "command_dimensions": {
+        "width": 114,
+        "height": 51
+      },
+      "body_dimensions": {
+        "width": 104,
+        "height": 41
+      },
+      "width_gain_percent": 14.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        66,
+        59,
+        84,
+        62,
+        166,
+        78,
+        72,
+        94,
+        75,
+        71,
+        222
+      ],
+      "cycle_ms": 1204,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 60,
+      "id": "coastguard-rope-rescue-unit",
+      "service": "coastguard",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 38
+      },
+      "command_dimensions": {
+        "width": 114,
+        "height": 53
+      },
+      "body_dimensions": {
+        "width": 104,
+        "height": 43
+      },
+      "width_gain_percent": 14.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        75,
+        63,
+        95,
+        67,
+        177,
+        75,
+        62,
+        89,
+        73,
+        70,
+        222
+      ],
+      "cycle_ms": 1223,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 61,
+      "id": "coastguard-commander",
+      "service": "coastguard",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 73,
+        "height": 41
+      },
+      "command_dimensions": {
+        "width": 98,
+        "height": 59
+      },
+      "body_dimensions": {
+        "width": 88,
+        "height": 49
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        72,
+        62,
+        94,
+        67,
+        177,
+        84,
+        75,
+        104,
+        72,
+        78,
+        234
+      ],
+      "cycle_ms": 1274,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 62,
+      "id": "flood-rescue-unit-trailer",
+      "service": "coastguard",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 88,
+        "height": 45
+      },
+      "command_dimensions": {
+        "width": 116,
+        "height": 64
+      },
+      "body_dimensions": {
+        "width": 106,
+        "height": 54
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        72,
+        70,
+        90,
+        73,
+        171,
+        81,
+        74,
+        95,
+        76,
+        72,
+        223
+      ],
+      "cycle_ms": 1252,
+      "motion": "marker-light"
+    },
+    {
+      "slot": 63,
+      "id": "mud-decontamination-unit",
+      "service": "coastguard",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 88,
+        "height": 37
+      },
+      "command_dimensions": {
+        "width": 116,
+        "height": 55
+      },
+      "body_dimensions": {
+        "width": 106,
+        "height": 45
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        80,
+        66,
+        88,
+        72,
+        171,
+        72,
+        61,
+        97,
+        68,
+        68,
+        229
+      ],
+      "cycle_ms": 1227,
+      "motion": "static"
+    },
+    {
+      "slot": 64,
+      "id": "support-unit",
+      "service": "coastguard",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 94,
+        "height": 42
+      },
+      "command_dimensions": {
+        "width": 112,
+        "height": 56
+      },
+      "body_dimensions": {
+        "width": 102,
+        "height": 46
+      },
+      "width_gain_percent": 8.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        76,
+        72,
+        91,
+        65,
+        176,
+        83,
+        75,
+        95,
+        67,
+        76,
+        233
+      ],
+      "cycle_ms": 1264,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 65,
+      "id": "coastguard-rescue-helicopter",
+      "service": "coastguard",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 229,
+        "height": 62
+      },
+      "command_dimensions": {
+        "width": 271,
+        "height": 81
+      },
+      "body_dimensions": {
+        "width": 261,
+        "height": 71
+      },
+      "width_gain_percent": 14.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        75,
+        63,
+        95,
+        76,
+        173,
+        73,
+        70,
+        93,
+        75,
+        71,
+        231
+      ],
+      "cycle_ms": 1250,
+      "motion": "rotor-and-blue-response"
+    },
+    {
+      "slot": 66,
+      "id": "coastguard-rescue-helicopter-large",
+      "service": "coastguard",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 272,
+        "height": 78
+      },
+      "command_dimensions": {
+        "width": 306,
+        "height": 95
+      },
+      "body_dimensions": {
+        "width": 296,
+        "height": 85
+      },
+      "width_gain_percent": 8.8,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        77,
+        64,
+        95,
+        67,
+        168,
+        79,
+        73,
+        103,
+        80,
+        82,
+        228
+      ],
+      "cycle_ms": 1271,
+      "motion": "rotor-and-blue-response"
+    },
+    {
+      "slot": 67,
+      "id": "4x4-vehicle",
+      "service": "coastguard",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 65,
+        "height": 30
+      },
+      "command_dimensions": {
+        "width": 88,
+        "height": 46
+      },
+      "body_dimensions": {
+        "width": 78,
+        "height": 36
+      },
+      "width_gain_percent": 20.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        74,
+        71,
+        90,
+        65,
+        176,
+        83,
+        75,
+        104,
+        80,
+        74,
+        224
+      ],
+      "cycle_ms": 1271,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 68,
+      "id": "inland-rescue-boat-trailer",
+      "service": "coastguard",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 98,
+        "height": 37
+      },
+      "command_dimensions": {
+        "width": 116,
+        "height": 50
+      },
+      "body_dimensions": {
+        "width": 106,
+        "height": 40
+      },
+      "width_gain_percent": 8.2,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        69,
+        69,
+        89,
+        64,
+        175,
+        74,
+        70,
+        93,
+        66,
+        67,
+        220
+      ],
+      "cycle_ms": 1211,
+      "motion": "marker-light"
+    },
+    {
+      "slot": 69,
+      "id": "ilb",
+      "service": "lifeboat",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 99,
+        "height": 43
+      },
+      "command_dimensions": {
+        "width": 117,
+        "height": 56
+      },
+      "body_dimensions": {
+        "width": 107,
+        "height": 46
+      },
+      "width_gain_percent": 8.1,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        64,
+        58,
+        92,
+        66,
+        168,
+        79,
+        64,
+        98,
+        77,
+        81,
+        236
+      ],
+      "cycle_ms": 1238,
+      "motion": "navigation-and-wake"
+    },
+    {
+      "slot": 70,
+      "id": "alb",
+      "service": "lifeboat",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 214,
+        "height": 100
+      },
+      "command_dimensions": {
+        "width": 241,
+        "height": 118
+      },
+      "body_dimensions": {
+        "width": 231,
+        "height": 108
+      },
+      "width_gain_percent": 7.9,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        75,
+        72,
+        99,
+        78,
+        182,
+        86,
+        68,
+        100,
+        70,
+        77,
+        234
+      ],
+      "cycle_ms": 1296,
+      "motion": "navigation-and-wake"
+    },
+    {
+      "slot": 71,
+      "id": "rescue-watercraft-trailer",
+      "service": "lifeboat",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 26
+      },
+      "command_dimensions": {
+        "width": 108,
+        "height": 38
+      },
+      "body_dimensions": {
+        "width": 98,
+        "height": 28
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        78,
+        65,
+        96,
+        68,
+        169,
+        71,
+        69,
+        101,
+        70,
+        69,
+        230
+      ],
+      "cycle_ms": 1241,
+      "motion": "marker-light"
+    },
+    {
+      "slot": 72,
+      "id": "hovercraft-trailer",
+      "service": "lifeboat",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 104,
+        "height": 36
+      },
+      "command_dimensions": {
+        "width": 122,
+        "height": 49
+      },
+      "body_dimensions": {
+        "width": 112,
+        "height": 39
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        80,
+        66,
+        88,
+        64,
+        167,
+        70,
+        68,
+        100,
+        78,
+        81,
+        227
+      ],
+      "cycle_ms": 1244,
+      "motion": "marker-light"
+    },
+    {
+      "slot": 73,
+      "id": "hovercraft-transporter",
+      "service": "lifeboat",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 81,
+        "height": 28
+      },
+      "command_dimensions": {
+        "width": 107,
+        "height": 44
+      },
+      "body_dimensions": {
+        "width": 97,
+        "height": 34
+      },
+      "width_gain_percent": 19.8,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        72,
+        62,
+        86,
+        71,
+        179,
+        76,
+        63,
+        89,
+        64,
+        66,
+        228
+      ],
+      "cycle_ms": 1211,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 74,
+      "id": "light-4x4",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 65,
+        "height": 28
+      },
+      "command_dimensions": {
+        "width": 88,
+        "height": 44
+      },
+      "body_dimensions": {
+        "width": 78,
+        "height": 34
+      },
+      "width_gain_percent": 20.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        67,
+        59,
+        84,
+        70,
+        170,
+        80,
+        73,
+        94,
+        75,
+        71,
+        231
+      ],
+      "cycle_ms": 1229,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 75,
+      "id": "boat-trailer",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 94,
+        "height": 38
+      },
+      "command_dimensions": {
+        "width": 112,
+        "height": 51
+      },
+      "body_dimensions": {
+        "width": 102,
+        "height": 41
+      },
+      "width_gain_percent": 8.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        70,
+        61,
+        94,
+        75,
+        181,
+        86,
+        68,
+        100,
+        70,
+        77,
+        225
+      ],
+      "cycle_ms": 1262,
+      "motion": "marker-light"
+    },
+    {
+      "slot": 76,
+      "id": "major-foam-tender",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 156,
+        "height": 47
+      },
+      "command_dimensions": {
+        "width": 178,
+        "height": 61
+      },
+      "body_dimensions": {
+        "width": 168,
+        "height": 51
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        66,
+        59,
+        84,
+        62,
+        166,
+        70,
+        68,
+        92,
+        66,
+        75,
+        233
+      ],
+      "cycle_ms": 1196,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 77,
+      "id": "riv",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 98,
+        "height": 46
+      },
+      "command_dimensions": {
+        "width": 116,
+        "height": 60
+      },
+      "body_dimensions": {
+        "width": 106,
+        "height": 50
+      },
+      "width_gain_percent": 8.2,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        65,
+        58,
+        84,
+        70,
+        170,
+        80,
+        73,
+        94,
+        67,
+        76,
+        225
+      ],
+      "cycle_ms": 1217,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 78,
+      "id": "airfield-firefighting-command-vehicle",
+      "service": "fire",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 75,
+        "height": 36
+      },
+      "command_dimensions": {
+        "width": 100,
+        "height": 53
+      },
+      "body_dimensions": {
+        "width": 90,
+        "height": 43
+      },
+      "width_gain_percent": 20.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        80,
+        74,
+        92,
+        66,
+        176,
+        83,
+        75,
+        104,
+        80,
+        82,
+        228
+      ],
+      "cycle_ms": 1295,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 79,
+      "id": "rescue-stairs",
+      "service": "fire",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 156,
+        "height": 73
+      },
+      "command_dimensions": {
+        "width": 188,
+        "height": 93
+      },
+      "body_dimensions": {
+        "width": 178,
+        "height": 83
+      },
+      "width_gain_percent": 14.1,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        79,
+        65,
+        96,
+        68,
+        169,
+        80,
+        73,
+        103,
+        71,
+        78,
+        234
+      ],
+      "cycle_ms": 1271,
+      "motion": "amber-beacon"
+    },
+    {
+      "slot": 80,
+      "id": "airfield-operations-vehicle",
+      "service": "airfield",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 68,
+        "height": 29
+      },
+      "command_dimensions": {
+        "width": 92,
+        "height": 45
+      },
+      "body_dimensions": {
+        "width": 82,
+        "height": 35
+      },
+      "width_gain_percent": 20.6,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        78,
+        73,
+        100,
+        70,
+        170,
+        80,
+        73,
+        94,
+        75,
+        80,
+        235
+      ],
+      "cycle_ms": 1283,
+      "motion": "amber-beacon"
+    },
+    {
+      "slot": 81,
+      "id": "airfield-operations-supervisor",
+      "service": "airfield",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 73,
+        "height": 38
+      },
+      "command_dimensions": {
+        "width": 98,
+        "height": 56
+      },
+      "body_dimensions": {
+        "width": 88,
+        "height": 46
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        80,
+        66,
+        88,
+        72,
+        171,
+        81,
+        74,
+        95,
+        76,
+        72,
+        231
+      ],
+      "cycle_ms": 1261,
+      "motion": "amber-beacon"
+    },
+    {
+      "slot": 82,
+      "id": "medical-equipment-trailer",
+      "service": "airfield",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 78,
+        "height": 36
+      },
+      "command_dimensions": {
+        "width": 104,
+        "height": 53
+      },
+      "body_dimensions": {
+        "width": 94,
+        "height": 43
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        68,
+        68,
+        97,
+        77,
+        182,
+        86,
+        76,
+        96,
+        76,
+        72,
+        231
+      ],
+      "cycle_ms": 1284,
+      "motion": "marker-light"
+    },
+    {
+      "slot": 83,
+      "id": "armed-cell-van",
+      "service": "police",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 35
+      },
+      "command_dimensions": {
+        "width": 114,
+        "height": 50
+      },
+      "body_dimensions": {
+        "width": 104,
+        "height": 40
+      },
+      "width_gain_percent": 14.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        70,
+        61,
+        94,
+        67,
+        177,
+        84,
+        67,
+        100,
+        78,
+        73,
+        232
+      ],
+      "cycle_ms": 1258,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 84,
+      "id": "medical-cycle-responder",
+      "service": "ambulance",
+      "rare_showcase": true,
+      "source_override": "assets/masters/v1.1/medical-cycle-responder.png",
+      "standard_dimensions": {
+        "width": 26,
+        "height": 15
+      },
+      "command_dimensions": {
+        "width": 82,
+        "height": 52
+      },
+      "body_dimensions": {
+        "width": 72,
+        "height": 42
+      },
+      "width_gain_percent": 176.9,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        79,
+        74,
+        92,
+        74,
+        172,
+        73,
+        70,
+        93,
+        75,
+        71,
+        231
+      ],
+      "cycle_ms": 1259,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 85,
+      "id": "pump-trailer",
+      "service": "search-and-rescue",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 58,
+        "height": 26
+      },
+      "command_dimensions": {
+        "width": 90,
+        "height": 46
+      },
+      "body_dimensions": {
+        "width": 80,
+        "height": 36
+      },
+      "width_gain_percent": 37.9,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        71,
+        61,
+        85,
+        71,
+        170,
+        80,
+        73,
+        103,
+        71,
+        78,
+        226
+      ],
+      "cycle_ms": 1244,
+      "motion": "marker-light"
+    },
+    {
+      "slot": 86,
+      "id": "control-van-sar",
+      "service": "search-and-rescue",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 94,
+        "height": 56
+      },
+      "command_dimensions": {
+        "width": 112,
+        "height": 71
+      },
+      "body_dimensions": {
+        "width": 102,
+        "height": 61
+      },
+      "width_gain_percent": 8.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        67,
+        68,
+        89,
+        73,
+        171,
+        81,
+        65,
+        99,
+        69,
+        77,
+        234
+      ],
+      "cycle_ms": 1248,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 87,
+      "id": "operational-support-van",
+      "service": "search-and-rescue",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 41
+      },
+      "command_dimensions": {
+        "width": 108,
+        "height": 54
+      },
+      "body_dimensions": {
+        "width": 98,
+        "height": 44
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        75,
+        63,
+        86,
+        63,
+        166,
+        70,
+        68,
+        100,
+        70,
+        77,
+        225
+      ],
+      "cycle_ms": 1218,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 88,
+      "id": "operational-support-trailer",
+      "service": "search-and-rescue",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 84,
+        "height": 42
+      },
+      "command_dimensions": {
+        "width": 111,
+        "height": 60
+      },
+      "body_dimensions": {
+        "width": 101,
+        "height": 50
+      },
+      "width_gain_percent": 20.2,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        80,
+        74,
+        92,
+        74,
+        172,
+        81,
+        65,
+        90,
+        73,
+        70,
+        222
+      ],
+      "cycle_ms": 1248,
+      "motion": "marker-light"
+    },
+    {
+      "slot": 89,
+      "id": "sar-flood-rescue-trailer",
+      "service": "search-and-rescue",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 88,
+        "height": 37
+      },
+      "command_dimensions": {
+        "width": 116,
+        "height": 55
+      },
+      "body_dimensions": {
+        "width": 106,
+        "height": 45
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        79,
+        74,
+        92,
+        74,
+        172,
+        73,
+        61,
+        97,
+        77,
+        81,
+        227
+      ],
+      "cycle_ms": 1262,
+      "motion": "marker-light"
+    },
+    {
+      "slot": 90,
+      "id": "drone-vehicle-sar-hq",
+      "service": "search-and-rescue",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 81,
+        "height": 44
+      },
+      "command_dimensions": {
+        "width": 107,
+        "height": 63
+      },
+      "body_dimensions": {
+        "width": 97,
+        "height": 53
+      },
+      "width_gain_percent": 19.8,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        66,
+        59,
+        84,
+        70,
+        178,
+        84,
+        67,
+        91,
+        74,
+        79,
+        235
+      ],
+      "cycle_ms": 1242,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 91,
+      "id": "drone-vehicle-fire-station",
+      "service": "fire",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 81,
+        "height": 43
+      },
+      "command_dimensions": {
+        "width": 107,
+        "height": 61
+      },
+      "body_dimensions": {
+        "width": 97,
+        "height": 51
+      },
+      "width_gain_percent": 19.8,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        76,
+        64,
+        87,
+        72,
+        171,
+        72,
+        69,
+        101,
+        70,
+        69,
+        230
+      ],
+      "cycle_ms": 1236,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 92,
+      "id": "drone-vehicle-police-station",
+      "service": "police",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 81,
+        "height": 46
+      },
+      "command_dimensions": {
+        "width": 107,
+        "height": 65
+      },
+      "body_dimensions": {
+        "width": 97,
+        "height": 55
+      },
+      "width_gain_percent": 19.8,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        70,
+        69,
+        89,
+        64,
+        167,
+        79,
+        64,
+        98,
+        77,
+        81,
+        236
+      ],
+      "cycle_ms": 1249,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 93,
+      "id": "personal-sar-vehicle",
+      "service": "search-and-rescue",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 62,
+        "height": 25
+      },
+      "command_dimensions": {
+        "width": 84,
+        "height": 40
+      },
+      "body_dimensions": {
+        "width": 74,
+        "height": 30
+      },
+      "width_gain_percent": 19.4,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        74,
+        63,
+        86,
+        71,
+        179,
+        85,
+        67,
+        100,
+        78,
+        81,
+        236
+      ],
+      "cycle_ms": 1275,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 94,
+      "id": "sar-4x4",
+      "service": "search-and-rescue",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 68,
+        "height": 37
+      },
+      "command_dimensions": {
+        "width": 92,
+        "height": 55
+      },
+      "body_dimensions": {
+        "width": 82,
+        "height": 45
+      },
+      "width_gain_percent": 20.6,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        66,
+        67,
+        88,
+        72,
+        179,
+        76,
+        63,
+        89,
+        64,
+        66,
+        220
+      ],
+      "cycle_ms": 1205,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 95,
+      "id": "rrv-2",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 64,
+        "height": 21
+      },
+      "command_dimensions": {
+        "width": 87,
+        "height": 35
+      },
+      "body_dimensions": {
+        "width": 77,
+        "height": 25
+      },
+      "width_gain_percent": 20.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        64,
+        58,
+        84,
+        70,
+        170,
+        72,
+        69,
+        101,
+        70,
+        69,
+        230
+      ],
+      "cycle_ms": 1212,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 96,
+      "id": "community-midwife",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 61,
+        "height": 23
+      },
+      "command_dimensions": {
+        "width": 83,
+        "height": 38
+      },
+      "body_dimensions": {
+        "width": 73,
+        "height": 28
+      },
+      "width_gain_percent": 19.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        67,
+        68,
+        89,
+        64,
+        167,
+        70,
+        68,
+        92,
+        66,
+        67,
+        229
+      ],
+      "cycle_ms": 1202,
+      "motion": "wheel-motion"
+    },
+    {
+      "slot": 97,
+      "id": "specialist-paramedic-rrv",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 65,
+        "height": 23
+      },
+      "command_dimensions": {
+        "width": 88,
+        "height": 38
+      },
+      "body_dimensions": {
+        "width": 78,
+        "height": 28
+      },
+      "width_gain_percent": 20.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        78,
+        65,
+        87,
+        63,
+        175,
+        83,
+        75,
+        104,
+        80,
+        82,
+        228
+      ],
+      "cycle_ms": 1275,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 98,
+      "id": "patient-transport-service-ambulance",
+      "service": "ambulance",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 88,
+        "height": 36
+      },
+      "command_dimensions": {
+        "width": 116,
+        "height": 53
+      },
+      "body_dimensions": {
+        "width": 106,
+        "height": 43
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        64,
+        66,
+        88,
+        72,
+        179,
+        85,
+        76,
+        104,
+        72,
+        70,
+        230
+      ],
+      "cycle_ms": 1261,
+      "motion": "wheel-motion"
+    },
+    {
+      "slot": 99,
+      "id": "critical-care-transfer-ambulance",
+      "service": "ambulance",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 94,
+        "height": 36
+      },
+      "command_dimensions": {
+        "width": 117,
+        "height": 51
+      },
+      "body_dimensions": {
+        "width": 107,
+        "height": 41
+      },
+      "width_gain_percent": 13.8,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        67,
+        68,
+        89,
+        64,
+        175,
+        83,
+        75,
+        104,
+        72,
+        78,
+        234
+      ],
+      "cycle_ms": 1264,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 100,
+      "id": "mountain-rescue-4x4",
+      "service": "search-and-rescue",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 65,
+        "height": 33
+      },
+      "command_dimensions": {
+        "width": 88,
+        "height": 50
+      },
+      "body_dimensions": {
+        "width": 78,
+        "height": 40
+      },
+      "width_gain_percent": 20.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        70,
+        69,
+        98,
+        69,
+        178,
+        84,
+        67,
+        91,
+        65,
+        75,
+        224
+      ],
+      "cycle_ms": 1245,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 101,
+      "id": "control-van-mountain-rescue",
+      "service": "search-and-rescue",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 53
+      },
+      "command_dimensions": {
+        "width": 108,
+        "height": 67
+      },
+      "body_dimensions": {
+        "width": 98,
+        "height": 57
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        77,
+        64,
+        87,
+        63,
+        166,
+        70,
+        60,
+        88,
+        64,
+        74,
+        232
+      ],
+      "cycle_ms": 1200,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 102,
+      "id": "search-dog-unit",
+      "service": "search-and-rescue",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 75,
+        "height": 32
+      },
+      "command_dimensions": {
+        "width": 100,
+        "height": 48
+      },
+      "body_dimensions": {
+        "width": 90,
+        "height": 38
+      },
+      "width_gain_percent": 20.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        76,
+        64,
+        95,
+        76,
+        173,
+        73,
+        61,
+        88,
+        64,
+        66,
+        220
+      ],
+      "cycle_ms": 1211,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 103,
+      "id": "search-dog-unit-sar",
+      "service": "search-and-rescue",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 75,
+        "height": 33
+      },
+      "command_dimensions": {
+        "width": 100,
+        "height": 50
+      },
+      "body_dimensions": {
+        "width": 90,
+        "height": 40
+      },
+      "width_gain_percent": 20.0,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        72,
+        62,
+        94,
+        75,
+        181,
+        86,
+        68,
+        100,
+        70,
+        77,
+        225
+      ],
+      "cycle_ms": 1265,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 104,
+      "id": "crew-carrier-sar",
+      "service": "search-and-rescue",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 33
+      },
+      "command_dimensions": {
+        "width": 108,
+        "height": 46
+      },
+      "body_dimensions": {
+        "width": 98,
+        "height": 36
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        73,
+        62,
+        94,
+        75,
+        172,
+        81,
+        74,
+        95,
+        67,
+        76,
+        225
+      ],
+      "cycle_ms": 1249,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 105,
+      "id": "recovery-vehicle",
+      "service": "recovery",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 37
+      },
+      "command_dimensions": {
+        "width": 108,
+        "height": 50
+      },
+      "body_dimensions": {
+        "width": 98,
+        "height": 40
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        66,
+        59,
+        93,
+        75,
+        181,
+        86,
+        76,
+        104,
+        80,
+        74,
+        232
+      ],
+      "cycle_ms": 1281,
+      "motion": "amber-beacon"
+    },
+    {
+      "slot": 106,
+      "id": "flatbed-recovery-vehicle",
+      "service": "recovery",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 110,
+        "height": 42
+      },
+      "command_dimensions": {
+        "width": 129,
+        "height": 55
+      },
+      "body_dimensions": {
+        "width": 119,
+        "height": 45
+      },
+      "width_gain_percent": 8.2,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        69,
+        69,
+        89,
+        64,
+        167,
+        79,
+        64,
+        98,
+        77,
+        81,
+        227
+      ],
+      "cycle_ms": 1239,
+      "motion": "amber-beacon"
+    },
+    {
+      "slot": 107,
+      "id": "hgv-recovery-vehicle",
+      "service": "recovery",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 130,
+        "height": 49
+      },
+      "command_dimensions": {
+        "width": 150,
+        "height": 63
+      },
+      "body_dimensions": {
+        "width": 140,
+        "height": 53
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        74,
+        71,
+        90,
+        65,
+        176,
+        83,
+        66,
+        91,
+        74,
+        79,
+        235
+      ],
+      "cycle_ms": 1259,
+      "motion": "amber-beacon"
+    },
+    {
+      "slot": 108,
+      "id": "rru",
+      "service": "fire",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 110,
+        "height": 42
+      },
+      "command_dimensions": {
+        "width": 135,
+        "height": 58
+      },
+      "body_dimensions": {
+        "width": 125,
+        "height": 48
+      },
+      "width_gain_percent": 13.6,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        66,
+        59,
+        93,
+        75,
+        172,
+        73,
+        61,
+        97,
+        68,
+        68,
+        221
+      ],
+      "cycle_ms": 1208,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 109,
+      "id": "eiu",
+      "service": "police",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 72,
+        "height": 26
+      },
+      "command_dimensions": {
+        "width": 96,
+        "height": 41
+      },
+      "body_dimensions": {
+        "width": 86,
+        "height": 31
+      },
+      "width_gain_percent": 19.4,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        75,
+        72,
+        99,
+        69,
+        178,
+        84,
+        67,
+        100,
+        70,
+        69,
+        230
+      ],
+      "cycle_ms": 1268,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 110,
+      "id": "eod-commander",
+      "service": "eod",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 72,
+        "height": 37
+      },
+      "command_dimensions": {
+        "width": 96,
+        "height": 54
+      },
+      "body_dimensions": {
+        "width": 86,
+        "height": 44
+      },
+      "width_gain_percent": 19.4,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        75,
+        63,
+        95,
+        67,
+        168,
+        71,
+        60,
+        96,
+        68,
+        68,
+        221
+      ],
+      "cycle_ms": 1207,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 111,
+      "id": "eod-response-vehicle",
+      "service": "eod",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 84,
+        "height": 39
+      },
+      "command_dimensions": {
+        "width": 111,
+        "height": 57
+      },
+      "body_dimensions": {
+        "width": 101,
+        "height": 47
+      },
+      "width_gain_percent": 20.2,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        68,
+        68,
+        89,
+        64,
+        167,
+        79,
+        64,
+        98,
+        69,
+        68,
+        221
+      ],
+      "cycle_ms": 1210,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 112,
+      "id": "eod-medium-equipment-van",
+      "service": "eod",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 41
+      },
+      "command_dimensions": {
+        "width": 114,
+        "height": 57
+      },
+      "body_dimensions": {
+        "width": 104,
+        "height": 47
+      },
+      "width_gain_percent": 14.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        76,
+        64,
+        87,
+        63,
+        166,
+        70,
+        60,
+        96,
+        68,
+        76,
+        225
+      ],
+      "cycle_ms": 1206,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 113,
+      "id": "eod-heavy-equipment-vehicle",
+      "service": "eod",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 130,
+        "height": 41
+      },
+      "command_dimensions": {
+        "width": 158,
+        "height": 57
+      },
+      "body_dimensions": {
+        "width": 148,
+        "height": 47
+      },
+      "width_gain_percent": 13.8,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        69,
+        69,
+        98,
+        77,
+        182,
+        86,
+        68,
+        92,
+        74,
+        79,
+        226
+      ],
+      "cycle_ms": 1275,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 114,
+      "id": "marine-eod-response-vehicle",
+      "service": "eod",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 78,
+        "height": 32
+      },
+      "command_dimensions": {
+        "width": 104,
+        "height": 49
+      },
+      "body_dimensions": {
+        "width": 94,
+        "height": 39
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        77,
+        64,
+        87,
+        72,
+        171,
+        72,
+        69,
+        101,
+        70,
+        77,
+        225
+      ],
+      "cycle_ms": 1240,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 115,
+      "id": "marine-eod-equipment-van",
+      "service": "eod",
+      "rare_showcase": true,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 37
+      },
+      "command_dimensions": {
+        "width": 114,
+        "height": 52
+      },
+      "body_dimensions": {
+        "width": 104,
+        "height": 42
+      },
+      "width_gain_percent": 14.3,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        74,
+        71,
+        90,
+        65,
+        176,
+        83,
+        66,
+        99,
+        69,
+        68,
+        221
+      ],
+      "cycle_ms": 1237,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 116,
+      "id": "welfare-vehicle-2",
+      "service": "multi-service",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 91,
+        "height": 40
+      },
+      "command_dimensions": {
+        "width": 108,
+        "height": 53
+      },
+      "body_dimensions": {
+        "width": 98,
+        "height": 43
+      },
+      "width_gain_percent": 7.7,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        80,
+        74,
+        92,
+        74,
+        172,
+        81,
+        74,
+        103,
+        80,
+        74,
+        224
+      ],
+      "cycle_ms": 1283,
+      "motion": "blue-response"
+    },
+    {
+      "slot": 117,
+      "id": "cell-van",
+      "service": "police",
+      "rare_showcase": false,
+      "source_override": null,
+      "standard_dimensions": {
+        "width": 88,
+        "height": 38
+      },
+      "command_dimensions": {
+        "width": 116,
+        "height": 56
+      },
+      "body_dimensions": {
+        "width": 106,
+        "height": 46
+      },
+      "width_gain_percent": 20.5,
+      "frames": 12,
+      "durations_ms": [
+        155,
+        69,
+        60,
+        93,
+        66,
+        168,
+        71,
+        60,
+        88,
+        72,
+        78,
+        234
+      ],
+      "cycle_ms": 1214,
+      "motion": "blue-response"
+    }
+  ]
+}
