@@ -55,17 +55,19 @@ def copy_exact(source: Path, destination: Path) -> str:
     return source_hash
 
 
-def write_readme(package_root: Path, version: str) -> None:
+def write_readme(package_root: Path, version: str, profile: str) -> None:
+    frame_description = "twelve-frame" if profile == "command" else "six-frame"
     content = f"""# TKB UK Emergency Fleet — Numbered MissionChief Upload Package
 
 Release: {version}
-MissionChief pack: 5897 — TKB UK Fleet — Animated WIP
+Profile: {profile}
+MissionChief pack: 5897 — TKB UK Fleet — Animated
 Vehicle slots: {EXPECTED_SLOTS}
 
 ## Folder layout
 
 - `01 - Static/` — the normal/non-response PNG for every slot.
-- `02 - Animated/` — the six-frame response APNG for every slot.
+- `02 - Animated/` — the {frame_description} response APNG for every slot.
 - `UPLOAD-GUIDE.csv` — exact MissionChief label, slot, source asset and upload URL.
 - `UPLOAD-MANIFEST.json` — machine-readable equivalent with SHA-256 hashes.
 
@@ -84,10 +86,10 @@ The image files are copied byte-for-byte from the validated production exports. 
     (package_root / "README-FIRST.txt").write_text(content, encoding="utf-8", newline="\n")
 
 
-def build(root: Path, version: str) -> tuple[Path, Path, int]:
+def build(root: Path, version: str, profile: str) -> tuple[Path, Path, int]:
     mapping_path = root / "data" / "vehicle-slots.json"
-    static_source = root / "assets" / "exports" / "standard" / "static"
-    animated_source = root / "assets" / "exports" / "standard" / "animated"
+    static_source = root / "assets" / "exports" / profile / "static"
+    animated_source = root / "assets" / "exports" / profile / "animated"
 
     with mapping_path.open("r", encoding="utf-8") as handle:
         mapping: dict[str, Any] = json.load(handle)
@@ -101,7 +103,8 @@ def build(root: Path, version: str) -> tuple[Path, Path, int]:
         )
 
     dist = root / "dist"
-    package_name = f"TKB-UK-Emergency-Fleet-MissionChief-Numbered-Upload-Ready-{version}"
+    profile_label = "Modern-Command-Visibility-" if profile == "command" else ""
+    package_name = f"TKB-UK-Emergency-Fleet-{profile_label}MissionChief-Numbered-Upload-Ready-{version}"
     package_root = dist / package_name
     archive_path = dist / f"{package_name}.zip"
     checksum_path = dist / f"{package_name}.zip.sha256"
@@ -159,7 +162,7 @@ def build(root: Path, version: str) -> tuple[Path, Path, int]:
     if len(list(animated_output.glob("*.png"))) != EXPECTED_SLOTS:
         raise RuntimeError("Animated output count is not 117")
 
-    write_readme(package_root, version)
+    write_readme(package_root, version, profile)
 
     csv_path = package_root / "UPLOAD-GUIDE.csv"
     fieldnames = [
@@ -182,6 +185,7 @@ def build(root: Path, version: str) -> tuple[Path, Path, int]:
         json.dumps(
             {
                 "release": version,
+                "profile": profile,
                 "missionchief_pack_id": 5897,
                 "slots": EXPECTED_SLOTS,
                 "static_files": EXPECTED_SLOTS,
@@ -221,6 +225,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--version", default="v1.0.0", help="Release version used in archive names")
     parser.add_argument(
+        "--profile",
+        choices=("standard", "command"),
+        default="standard",
+        help="Validated export profile to package",
+    )
+    parser.add_argument(
         "--root",
         type=Path,
         default=Path(__file__).resolve().parents[1],
@@ -232,7 +242,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     try:
-        archive, checksum, count = build(args.root.resolve(), args.version)
+        archive, checksum, count = build(args.root.resolve(), args.version, args.profile)
     except Exception as exc:  # noqa: BLE001 - command-line release gate
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1

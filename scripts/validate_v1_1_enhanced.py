@@ -1,0 +1,341 @@
+#!/usr/bin/env python3
+"""Validate v1.1 exports and render automated busy-map QA evidence."""
+
+from __future__ import annotations
+
+import json
+import math
+from collections import Counter
+from pathlib import Path
+
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageOps
+
+
+ROOT = Path(__file__).resolve().parents[1]
+MANIFEST_PATH = ROOT / "data" / "prototypes.json"
+PROFILE_PATH = ROOT / "data" / "v1.1-enhancement-profile.json"
+BUILD_REPORT_PATH = ROOT / "data" / "v1.1-build-report.json"
+REPORT_PATH = ROOT / "data" / "v1.1-qa-report.json"
+STANDARD_DIR = ROOT / "assets" / "exports" / "standard" / "static"
+STATIC_DIR = ROOT / "assets" / "exports" / "command" / "static"
+ANIMATED_DIR = ROOT / "assets" / "exports" / "command" / "animated"
+PREVIEW_DIR = ROOT / "assets" / "previews" / "v1.1"
+
+
+THEMES = {
+    "light": {"base": (226, 229, 220), "road": (250, 248, 241), "edge": (188, 196, 190), "detail": (211, 188, 102)},
+    "dark": {"base": (25, 34, 44), "road": (48, 57, 66), "edge": (10, 16, 22), "detail": (104, 117, 130)},
+    "satellite": {"base": (66, 83, 58), "road": (116, 111, 95), "edge": (47, 57, 45), "detail": (154, 142, 112)},
+    "grayscale": {"base": (157, 160, 160), "road": (205, 205, 201), "edge": (112, 114, 115), "detail": (176, 176, 172)},
+}
+
+
+SHOWCASE_IDS = [
+    "fire-rescue-pump",
+    "frontline-ambulance",
+    "police-incident-response-vehicle",
+    "hems",
+    "airfield-operations-vehicle",
+    "ilb",
+    "flood-rescue-unit-trailer",
+    "medical-cycle-responder",
+    "eod-heavy-equipment-vehicle",
+]
+
+
+def rgba(path: Path) -> Image.Image:
+    with Image.open(path) as image:
+        image.load()
+        return image.convert("RGBA")
+
+
+def frames_and_durations(path: Path) -> tuple[list[Image.Image], list[int]]:
+    frames: list[Image.Image] = []
+    durations: list[int] = []
+    with Image.open(path) as image:
+        for index in range(int(getattr(image, "n_frames", 1))):
+            image.seek(index)
+            durations.append(int(image.info.get("duration", 0)))
+            frames.append(image.convert("RGBA").copy())
+    return frames, durations
+
+
+def changed(left: Image.Image, right: Image.Image) -> bool:
+    return ImageChops.difference(left, right).getbbox() is not None
+
+
+def alpha_centroid(image: Image.Image) -> tuple[float, float]:
+    alpha = image.getchannel("A")
+    width, height = image.size
+    total = sx = sy = 0.0
+    for y in range(height):
+        for x in range(width):
+            value = alpha.getpixel((x, y))
+            if value < 96:
+                continue
+            total += value
+            sx += x * value
+            sy += y * value
+    if total == 0:
+        return 0.0, 0.0
+    return sx / total, sy / total
+
+
+def half_zoom_visible_pixels(image: Image.Image) -> int:
+    width = max(1, round(image.width * 0.5))
+    height = max(1, round(image.height * 0.5))
+    reduced = image.resize((width, height), Image.Resampling.LANCZOS)
+    return sum(1 for value in reduced.getchannel("A").get_flattened_data() if value >= 64)
+
+
+def luminance(rgb: tuple[int, int, int]) -> float:
+    r, g, b = rgb
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
+
+
+def edge_contrast(image: Image.Image, background: tuple[int, int, int]) -> float:
+    alpha = image.getchannel("A")
+    eroded = alpha.filter(ImageFilter.MinFilter(3))
+    edge = ImageChops.subtract(alpha, eroded)
+    background_image = Image.new("RGBA", image.size, (*background, 255))
+    composed = Image.alpha_composite(background_image, image).convert("RGB")
+    bg_luminance = luminance(background)
+    samples = []
+    for pixel, mask in zip(composed.get_flattened_data(), edge.get_flattened_data()):
+        if mask >= 24:
+            samples.append(abs(luminance(pixel) - bg_luminance))
+    return round(sum(samples) / len(samples), 2) if samples else 0.0
+
+
+def silhouette_hash(image: Image.Image) -> str:
+    alpha = image.getchannel("A")
+    alpha = ImageOps.fit(alpha, (32, 16), method=Image.Resampling.LANCZOS)
+    pixels = list(alpha.get_flattened_data())
+    average = sum(pixels) / (32 * 16)
+    return "".join("1" if value >= average else "0" for value in pixels)
+
+
+def hamming(left: str, right: str) -> int:
+    return sum(a != b for a, b in zip(left, right))
+
+
+def background(theme_name: str, size: tuple[int, int]) -> Image.Image:
+    theme = THEMES[theme_name]
+    canvas = Image.new("RGBA", size, (*theme["base"], 255))
+    draw = ImageDraw.Draw(canvas)
+    width, height = size
+    for x in range(-240, width + 240, 215):
+        draw.line((x, 0, x + 420, height), fill=(*theme["edge"], 255), width=24)
+        draw.line((x, 0, x + 420, height), fill=(*theme["road"], 255), width=17)
+    for y in range(118, height, 175):
+        draw.line((0, y, width, y), fill=(*theme["edge"], 255), width=32)
+        draw.line((0, y, width, y), fill=(*theme["road"], 255), width=23)
+        draw.line((0, y, width, y), fill=(*theme["detail"], 255), width=2)
+    if theme_name == "satellite":
+        for x in range(50, width, 170):
+            for y in range(35, height, 145):
+                shade = 12 if (x + y) % 3 else -8
+                color = tuple(max(0, min(255, value + shade)) for value in theme["base"])
+                draw.ellipse((x, y, x + 78, y + 56), fill=(*color, 210))
+    return canvas
+
+
+def render_busy_map(theme_name: str, vehicles: list[dict]) -> Path:
+    width, height = 1800, 1080
+    canvas = background(theme_name, (width, height))
+    draw = ImageDraw.Draw(canvas)
+    font = ImageFont.load_default(size=18)
+    title_font = ImageFont.load_default(size=26)
+    zooms = [1.0, 0.75, 0.5]
+    band_height = height // 3
+    for band, zoom in enumerate(zooms):
+        top = band * band_height
+        draw.rounded_rectangle((18, top + 14, 280, top + 50), 8, fill=(10, 16, 22, 220))
+        draw.text((31, top + 23), f"{theme_name.title()} theme - {round(zoom * 100)}% icon scale", font=font, fill="white")
+        subset = vehicles[band::3]
+        for index, vehicle in enumerate(subset):
+            icon = rgba(STATIC_DIR / f"{vehicle['id']}.png")
+            scaled = icon.resize(
+                (max(1, round(icon.width * zoom)), max(1, round(icon.height * zoom))),
+                Image.Resampling.LANCZOS,
+            )
+            column = index % 13
+            row = index // 13
+            x = 35 + column * 134 + ((row * 41 + column * 17) % 34)
+            y = top + 83 + row * 79 + ((column * 13) % 19)
+            canvas.alpha_composite(scaled, (x, y))
+    draw.rounded_rectangle((width - 540, 18, width - 20, 62), 10, fill=(10, 16, 22, 225))
+    draw.text((width - 520, 29), "117-vehicle automated dense-map QA", font=title_font, fill="white")
+    PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
+    target = PREVIEW_DIR / f"busy-map-{theme_name}.png"
+    canvas.convert("RGB").save(target, format="PNG", optimize=True)
+    return target
+
+
+def render_animation_sheet(vehicle_map: dict[str, dict]) -> Path:
+    columns = 12
+    cell_width, cell_height = 212, 118
+    label_width = 240
+    width = label_width + columns * cell_width
+    height = 58 + len(SHOWCASE_IDS) * cell_height
+    canvas = Image.new("RGBA", (width, height), (15, 21, 28, 255))
+    draw = ImageDraw.Draw(canvas)
+    font = ImageFont.load_default(size=17)
+    title_font = ImageFont.load_default(size=24)
+    draw.text((20, 17), "v1.1 independent-light and motion frame audit", font=title_font, fill="white")
+    for row, asset_id in enumerate(SHOWCASE_IDS):
+        vehicle = vehicle_map[asset_id]
+        frames, _durations = frames_and_durations(ANIMATED_DIR / f"{asset_id}.png")
+        top = 58 + row * cell_height
+        draw.text((18, top + 45), vehicle["display_name"], font=font, fill=(225, 232, 238, 255))
+        for column, frame in enumerate(frames):
+            left = label_width + column * cell_width
+            draw.rounded_rectangle((left + 5, top + 5, left + cell_width - 5, top + cell_height - 5), 8, fill=(38, 48, 59, 255))
+            scale = min((cell_width - 20) / frame.width, (cell_height - 32) / frame.height)
+            size = (max(1, round(frame.width * scale)), max(1, round(frame.height * scale)))
+            thumb = frame.resize(size, Image.Resampling.NEAREST)
+            canvas.alpha_composite(thumb, (left + (cell_width - thumb.width) // 2, top + (cell_height - thumb.height) // 2 + 8))
+            draw.text((left + 10, top + 9), f"F{column + 1}", font=font, fill=(155, 174, 190, 255))
+    PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
+    target = PREVIEW_DIR / "animation-frames.png"
+    canvas.convert("RGB").save(target, format="PNG", optimize=True)
+    return target
+
+
+def main() -> None:
+    manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+    profile = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
+    build_report = json.loads(BUILD_REPORT_PATH.read_text(encoding="utf-8"))
+    vehicles = sorted(manifest["vehicles"], key=lambda item: int(item["missionchief_slot"]))
+    vehicle_map = {item["id"]: item for item in vehicles}
+    detail_map = {item["id"]: item for item in build_report["vehicles_detail"]}
+    expected = {item["id"] for item in vehicles}
+    pack_errors: list[str] = []
+
+    if {path.stem for path in STATIC_DIR.glob("*.png")} != expected:
+        pack_errors.append("command static directory does not exactly match the 117-slot manifest")
+    if {path.stem for path in ANIMATED_DIR.glob("*.png")} != expected:
+        pack_errors.append("command animated directory does not exactly match the 117-slot manifest")
+    if build_report["timing_signature_count"] < profile["qa"]["minimum_animation_signature_count"]:
+        pack_errors.append("too few distinct animation timing signatures")
+    if build_report["maximum_shared_timing_signature"] > profile["qa"]["maximum_shared_timing_signature"]:
+        pack_errors.append("too many assets share one animation timing signature")
+
+    results = []
+    timing_signatures: Counter[str] = Counter()
+    silhouette_hashes: dict[str, str] = {}
+    for vehicle in vehicles:
+        asset_id = vehicle["id"]
+        errors: list[str] = []
+        standard = rgba(STANDARD_DIR / f"{asset_id}.png")
+        static = rgba(STATIC_DIR / f"{asset_id}.png")
+        frames, durations = frames_and_durations(ANIMATED_DIR / f"{asset_id}.png")
+        detail = detail_map[asset_id]
+
+        if static.mode != "RGBA":
+            errors.append("static export is not RGBA")
+        corners = [static.getpixel((0, 0))[3], static.getpixel((static.width - 1, 0))[3], static.getpixel((0, static.height - 1))[3], static.getpixel((static.width - 1, static.height - 1))[3]]
+        if any(corners):
+            errors.append("static export has a non-transparent corner")
+        if static.width <= standard.width:
+            errors.append("command export did not gain visible width")
+        if detail["body_dimensions"]["width"] < int(profile["minimum_icon_width"]):
+            errors.append("body width is below the command-visibility minimum")
+        if static.width != detail["body_dimensions"]["width"] + 10:
+            errors.append("visibility outline padding is inconsistent")
+        if len(frames) != int(profile["frames"]):
+            errors.append(f"APNG has {len(frames)} frames instead of {profile['frames']}")
+        elif frames:
+            if changed(frames[0], static):
+                errors.append("APNG frame 1 is not identical to the static export")
+            changed_frames = sum(changed(frames[0], frame) for frame in frames[1:])
+            should_move = detail["motion"] != "static"
+            if should_move and changed_frames < 3:
+                errors.append("animated asset has fewer than three visibly changed frames")
+            if not should_move and changed_frames:
+                errors.append("static-policy asset changes across frames")
+            base_centroid = alpha_centroid(frames[0])
+            maximum_shift = 0.0
+            for frame in frames[1:]:
+                cx, cy = alpha_centroid(frame)
+                maximum_shift = max(maximum_shift, math.dist(base_centroid, (cx, cy)))
+            if maximum_shift > 2.5:
+                errors.append(f"animation alpha centroid shifts {maximum_shift:.2f}px")
+        if durations != detail["durations_ms"]:
+            errors.append("APNG timing does not match the deterministic build report")
+        timing_signatures[",".join(str(value) for value in durations)] += 1
+
+        visible_pixels = half_zoom_visible_pixels(static)
+        if visible_pixels < int(profile["qa"]["minimum_visible_pixels_at_half_zoom"]):
+            errors.append("too few visible pixels remain at half zoom")
+        contrasts = {
+            theme: edge_contrast(static, values["base"])
+            for theme, values in THEMES.items()
+        }
+        if min(contrasts.values()) < 9.0:
+            errors.append("outline contrast is too weak on at least one map theme")
+        if not changed(standard, static.resize(standard.size, Image.Resampling.LANCZOS)):
+            errors.append("modern command treatment is pixel-identical to v1.0")
+
+        silhouette_hashes[asset_id] = silhouette_hash(static)
+        results.append(
+            {
+                "slot": vehicle["missionchief_slot"],
+                "id": asset_id,
+                "motion": detail["motion"],
+                "dimensions": {"width": static.width, "height": static.height},
+                "frames": len(frames),
+                "changed_frames": sum(changed(frames[0], frame) for frame in frames[1:]) if frames else 0,
+                "cycle_ms": sum(durations),
+                "half_zoom_visible_pixels": visible_pixels,
+                "edge_contrast": contrasts,
+                "passed": not errors,
+                "errors": errors,
+            }
+        )
+
+    rare_ids = profile["rare_showcase"]
+    closest_pair = None
+    closest_distance = 10_000
+    for index, left in enumerate(rare_ids):
+        for right in rare_ids[index + 1 :]:
+            distance = hamming(silhouette_hashes[left], silhouette_hashes[right])
+            if distance < closest_distance:
+                closest_distance = distance
+                closest_pair = [left, right]
+    if closest_distance == 0:
+        pack_errors.append(f"rare showcase silhouettes collide: {closest_pair}")
+
+    previews = [str(render_busy_map(theme, vehicles).relative_to(ROOT)) for theme in profile["qa"]["themes"]]
+    previews.append(str(render_animation_sheet(vehicle_map).relative_to(ROOT)))
+
+    report = {
+        "release": profile["release"],
+        "profile": profile["profile"],
+        "vehicles": len(results),
+        "static_pngs": len(list(STATIC_DIR.glob("*.png"))),
+        "animated_apngs": len(list(ANIMATED_DIR.glob("*.png"))),
+        "frames_per_asset": profile["frames"],
+        "themes_tested": profile["qa"]["themes"],
+        "zoom_factors_tested": profile["qa"]["zoom_factors"],
+        "timing_signature_count": len(timing_signatures),
+        "maximum_shared_timing_signature": max(timing_signatures.values()),
+        "minimum_half_zoom_visible_pixels": min(item["half_zoom_visible_pixels"] for item in results),
+        "minimum_edge_contrast": min(min(item["edge_contrast"].values()) for item in results),
+        "closest_rare_silhouette_pair": closest_pair,
+        "closest_rare_silhouette_distance": closest_distance,
+        "preview_files": previews,
+        "pack_errors": pack_errors,
+        "vehicles_detail": results,
+        "all_passed": not pack_errors and all(item["passed"] for item in results),
+    }
+    REPORT_PATH.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({key: value for key, value in report.items() if key != "vehicles_detail"}, indent=2))
+    if not report["all_passed"]:
+        failed = [item for item in results if not item["passed"]]
+        print(json.dumps({"failed": failed}, indent=2))
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()
