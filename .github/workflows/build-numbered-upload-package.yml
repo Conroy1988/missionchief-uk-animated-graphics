@@ -1,0 +1,51 @@
+name: Build numbered MissionChief upload package
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - scripts/build_numbered_upload_package.py
+      - data/vehicle-slots.json
+      - assets/exports/standard/static/**
+      - assets/exports/standard/animated/**
+      - .github/workflows/build-numbered-upload-package.yml
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build and validate numbered package
+        run: python scripts/build_numbered_upload_package.py --version v1.0.0
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: missionchief-numbered-upload-ready-v1.0.0
+          path: |
+            dist/TKB-UK-Emergency-Fleet-MissionChief-Numbered-Upload-Ready-v1.0.0.zip
+            dist/TKB-UK-Emergency-Fleet-MissionChief-Numbered-Upload-Ready-v1.0.0.zip.sha256
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Attach numbered package to v1.0.0 release
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload v1.0.0 \
+            dist/TKB-UK-Emergency-Fleet-MissionChief-Numbered-Upload-Ready-v1.0.0.zip \
+            dist/TKB-UK-Emergency-Fleet-MissionChief-Numbered-Upload-Ready-v1.0.0.zip.sha256 \
+            --clobber
