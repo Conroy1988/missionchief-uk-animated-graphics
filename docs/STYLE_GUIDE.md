@@ -23,15 +23,17 @@ Large masters are retained independently from exports. All map assets are rebuil
 
 ## Animation
 
-- Six-frame APNG loop.
+- Six-frame APNG loop for the True Scale profile; twelve frames for Modern Command Visibility.
 - Alternating A/B blue-light groups with deliberate dark intervals.
 - Short bright core and restrained bloom; no whole-vehicle neon glow.
 - Animation geometry is composited onto the approved static master so the vehicle body never shifts between frames.
+- Helicopters use per-aircraft hub geometry. Baked source blades are removed before a single edge-on rotor sweep is composited, preventing a static blade from showing underneath the animation.
+- Coastguard external tail rotors receive their own rotating layer. Enclosed HEMS and police fenestrons do not receive a second synthetic rotor cross.
 
 ## Quality gates
 
 - RGBA transparency with fully transparent corners.
 - No chroma colour at map scale.
 - Correct real-world relative width.
-- Exactly six APNG frames in the standard response animation.
+- Exactly six APNG frames in True Scale and twelve in Modern Command Visibility.
 - Static and animated files share identical dimensions and vehicle alignment.

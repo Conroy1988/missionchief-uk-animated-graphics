@@ -42,6 +42,13 @@ SHOWCASE_IDS = [
     "eod-heavy-equipment-vehicle",
 ]
 
+ROTOR_SHOWCASE_IDS = [
+    "hems",
+    "police-helicopter",
+    "coastguard-rescue-helicopter",
+    "coastguard-rescue-helicopter-large",
+]
+
 
 def rgba(path: Path) -> Image.Image:
     with Image.open(path) as image:
@@ -113,6 +120,45 @@ def silhouette_hash(image: Image.Image) -> str:
     pixels = list(alpha.get_flattened_data())
     average = sum(pixels) / (32 * 16)
     return "".join("1" if value >= average else "0" for value in pixels)
+
+
+def rotor_clear_region(size: tuple[int, int], geometry: dict, padding: int = 5) -> Image.Image:
+    """Return the source-blade region that must remain free of a strong static underlay."""
+    width, height = size
+    body_width = width - padding * 2
+    body_height = height - padding * 2
+    mask = Image.new("L", size, 0)
+    draw = ImageDraw.Draw(mask)
+    clear_y = padding + round(body_height * float(geometry["clear_below"]))
+    draw.rectangle((padding, padding, padding + body_width - 1, clear_y), fill=255)
+
+    keep_points = [
+        (
+            padding + round(float(x) * (body_width - 1)),
+            padding + round(float(y) * (body_height - 1)),
+        )
+        for x, y in geometry["body_keep_polygon"]
+    ]
+    draw.polygon(keep_points, fill=0)
+
+    hub_x = padding + round(float(geometry["hub"][0]) * (body_width - 1))
+    hub_y = padding + round(float(geometry["hub"][1]) * (body_height - 1))
+    hub_rx = max(5, round(body_width * 0.032))
+    hub_ry = max(3, round(body_height * 0.09))
+    draw.ellipse((hub_x - hub_rx, hub_y - hub_ry, hub_x + hub_rx, hub_y + hub_ry), fill=0)
+    return mask
+
+
+def strong_rotor_underlay_pixels(image: Image.Image, geometry: dict) -> int:
+    mask = rotor_clear_region(image.size, geometry)
+    return sum(
+        1
+        for alpha, selected in zip(
+            image.getchannel("A").get_flattened_data(),
+            mask.get_flattened_data(),
+        )
+        if selected and alpha >= 96
+    )
 
 
 def hamming(left: str, right: str) -> int:
@@ -202,6 +248,43 @@ def render_animation_sheet(vehicle_map: dict[str, dict]) -> Path:
     return target
 
 
+def render_rotor_sheet(vehicle_map: dict[str, dict]) -> Path:
+    columns = 12
+    cell_width, cell_height = 212, 128
+    label_width = 270
+    width = label_width + columns * cell_width
+    height = 64 + len(ROTOR_SHOWCASE_IDS) * cell_height
+    canvas = Image.new("RGBA", (width, height), (15, 21, 28, 255))
+    draw = ImageDraw.Draw(canvas)
+    font = ImageFont.load_default(size=17)
+    title_font = ImageFont.load_default(size=24)
+    draw.text((20, 18), "v1.1.1 helicopter rotor frame audit", font=title_font, fill="white")
+    for row, asset_id in enumerate(ROTOR_SHOWCASE_IDS):
+        vehicle = vehicle_map[asset_id]
+        frames, _durations = frames_and_durations(ANIMATED_DIR / f"{asset_id}.png")
+        top = 64 + row * cell_height
+        draw.text((18, top + 50), vehicle["display_name"], font=font, fill=(225, 232, 238, 255))
+        for column, frame in enumerate(frames):
+            left = label_width + column * cell_width
+            draw.rounded_rectangle(
+                (left + 5, top + 5, left + cell_width - 5, top + cell_height - 5),
+                8,
+                fill=(38, 48, 59, 255),
+            )
+            scale = min((cell_width - 18) / frame.width, (cell_height - 32) / frame.height)
+            size = (max(1, round(frame.width * scale)), max(1, round(frame.height * scale)))
+            thumb = frame.resize(size, Image.Resampling.NEAREST)
+            canvas.alpha_composite(
+                thumb,
+                (left + (cell_width - thumb.width) // 2, top + (cell_height - thumb.height) // 2 + 8),
+            )
+            draw.text((left + 10, top + 9), f"F{column + 1}", font=font, fill=(155, 174, 190, 255))
+    PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
+    target = PREVIEW_DIR / "helicopter-rotor-frames.png"
+    canvas.convert("RGB").save(target, format="PNG", optimize=True)
+    return target
+
+
 def main() -> None:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
     profile = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
@@ -220,6 +303,8 @@ def main() -> None:
         pack_errors.append("too few distinct animation timing signatures")
     if build_report["maximum_shared_timing_signature"] > profile["qa"]["maximum_shared_timing_signature"]:
         pack_errors.append("too many assets share one animation timing signature")
+    if set(profile.get("rotor_geometry", {})) != set(profile["helicopters"]):
+        pack_errors.append("rotor geometry does not exactly cover the helicopter set")
 
     results = []
     timing_signatures: Counter[str] = Counter()
@@ -265,6 +350,17 @@ def main() -> None:
             errors.append("APNG timing does not match the deterministic build report")
         timing_signatures[",".join(str(value) for value in durations)] += 1
 
+        rotor_underlay_pixels = None
+        rotor_underlay_limit = None
+        if asset_id in profile["helicopters"]:
+            geometry = profile["rotor_geometry"][asset_id]
+            rotor_underlay_pixels = strong_rotor_underlay_pixels(static, geometry)
+            rotor_underlay_limit = max(120, round(static.width * static.height * 0.015))
+            if rotor_underlay_pixels > rotor_underlay_limit:
+                errors.append(
+                    f"strong static rotor underlay remains ({rotor_underlay_pixels} > {rotor_underlay_limit})"
+                )
+
         visible_pixels = half_zoom_visible_pixels(static)
         if visible_pixels < int(profile["qa"]["minimum_visible_pixels_at_half_zoom"]):
             errors.append("too few visible pixels remain at half zoom")
@@ -287,6 +383,8 @@ def main() -> None:
                 "frames": len(frames),
                 "changed_frames": sum(changed(frames[0], frame) for frame in frames[1:]) if frames else 0,
                 "cycle_ms": sum(durations),
+                "strong_rotor_underlay_pixels": rotor_underlay_pixels,
+                "strong_rotor_underlay_limit": rotor_underlay_limit,
                 "half_zoom_visible_pixels": visible_pixels,
                 "edge_contrast": contrasts,
                 "passed": not errors,
@@ -308,6 +406,7 @@ def main() -> None:
 
     previews = [str(render_busy_map(theme, vehicles).relative_to(ROOT)) for theme in profile["qa"]["themes"]]
     previews.append(str(render_animation_sheet(vehicle_map).relative_to(ROOT)))
+    previews.append(str(render_rotor_sheet(vehicle_map).relative_to(ROOT)))
 
     report = {
         "release": profile["release"],

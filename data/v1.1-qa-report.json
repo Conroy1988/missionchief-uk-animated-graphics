@@ -1,5 +1,5 @@
 {
-  "release": "v1.1.0",
+  "release": "v1.1.1",
   "profile": "command",
   "vehicles": 117,
   "static_pngs": 117,
@@ -30,7 +30,8 @@
     "assets/previews/v1.1/busy-map-dark.png",
     "assets/previews/v1.1/busy-map-satellite.png",
     "assets/previews/v1.1/busy-map-grayscale.png",
-    "assets/previews/v1.1/animation-frames.png"
+    "assets/previews/v1.1/animation-frames.png",
+    "assets/previews/v1.1/helicopter-rotor-frames.png"
   ],
   "pack_errors": [],
   "vehicles_detail": [
@@ -45,6 +46,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1271,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1237,
       "edge_contrast": {
         "light": 84.15,
@@ -66,6 +69,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1216,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 731,
       "edge_contrast": {
         "light": 89.67,
@@ -87,6 +92,8 @@
       "frames": 12,
       "changed_frames": 6,
       "cycle_ms": 1237,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 2488,
       "edge_contrast": {
         "light": 81.12,
@@ -108,6 +115,8 @@
       "frames": 12,
       "changed_frames": 6,
       "cycle_ms": 1233,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 448,
       "edge_contrast": {
         "light": 93.65,
@@ -129,6 +138,8 @@
       "frames": 12,
       "changed_frames": 7,
       "cycle_ms": 1240,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1252,
       "edge_contrast": {
         "light": 84.44,
@@ -150,6 +161,8 @@
       "frames": 12,
       "changed_frames": 9,
       "cycle_ms": 1236,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 911,
       "edge_contrast": {
         "light": 67.03,
@@ -171,6 +184,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1314,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1440,
       "edge_contrast": {
         "light": 88.66,
@@ -192,6 +207,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1257,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1413,
       "edge_contrast": {
         "light": 78.69,
@@ -213,6 +230,8 @@
       "frames": 12,
       "changed_frames": 7,
       "cycle_ms": 1247,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 461,
       "edge_contrast": {
         "light": 69.68,
@@ -234,12 +253,14 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1271,
-      "half_zoom_visible_pixels": 1743,
+      "strong_rotor_underlay_pixels": 149,
+      "strong_rotor_underlay_limit": 229,
+      "half_zoom_visible_pixels": 1459,
       "edge_contrast": {
-        "light": 73.38,
-        "dark": 55.11,
-        "satellite": 37.47,
-        "grayscale": 39.24
+        "light": 75.23,
+        "dark": 59.68,
+        "satellite": 41.3,
+        "grayscale": 41.5
       },
       "passed": true,
       "errors": []
@@ -255,6 +276,8 @@
       "frames": 12,
       "changed_frames": 6,
       "cycle_ms": 1311,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 464,
       "edge_contrast": {
         "light": 82.57,
@@ -276,12 +299,14 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1184,
-      "half_zoom_visible_pixels": 2005,
+      "strong_rotor_underlay_pixels": 208,
+      "strong_rotor_underlay_limit": 238,
+      "half_zoom_visible_pixels": 1629,
       "edge_contrast": {
-        "light": 82.81,
-        "dark": 49.66,
-        "satellite": 37.0,
-        "grayscale": 48.85
+        "light": 86.28,
+        "dark": 51.86,
+        "satellite": 40.02,
+        "grayscale": 52.42
       },
       "passed": true,
       "errors": []
@@ -297,6 +322,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1249,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1045,
       "edge_contrast": {
         "light": 72.55,
@@ -318,6 +345,8 @@
       "frames": 12,
       "changed_frames": 6,
       "cycle_ms": 1246,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 537,
       "edge_contrast": {
         "light": 83.77,
@@ -339,6 +368,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1199,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1383,
       "edge_contrast": {
         "light": 80.44,
@@ -360,6 +391,8 @@
       "frames": 12,
       "changed_frames": 6,
       "cycle_ms": 1211,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1860,
       "edge_contrast": {
         "light": 82.91,
@@ -381,6 +414,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1265,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1300,
       "edge_contrast": {
         "light": 87.78,
@@ -402,6 +437,8 @@
       "frames": 12,
       "changed_frames": 7,
       "cycle_ms": 1262,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1970,
       "edge_contrast": {
         "light": 84.31,
@@ -423,6 +460,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1293,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 513,
       "edge_contrast": {
         "light": 93.55,
@@ -444,6 +483,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1232,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 455,
       "edge_contrast": {
         "light": 68.38,
@@ -465,6 +506,8 @@
       "frames": 12,
       "changed_frames": 9,
       "cycle_ms": 1220,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 528,
       "edge_contrast": {
         "light": 80.26,
@@ -486,6 +529,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1265,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 449,
       "edge_contrast": {
         "light": 68.68,
@@ -507,6 +552,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1280,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 519,
       "edge_contrast": {
         "light": 76.39,
@@ -528,6 +575,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1254,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 951,
       "edge_contrast": {
         "light": 77.45,
@@ -549,6 +598,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1246,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 445,
       "edge_contrast": {
         "light": 66.88,
@@ -570,6 +621,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1226,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 514,
       "edge_contrast": {
         "light": 87.17,
@@ -591,6 +644,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1254,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1774,
       "edge_contrast": {
         "light": 98.35,
@@ -612,6 +667,8 @@
       "frames": 12,
       "changed_frames": 9,
       "cycle_ms": 1266,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 640,
       "edge_contrast": {
         "light": 85.84,
@@ -633,6 +690,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1288,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 981,
       "edge_contrast": {
         "light": 86.77,
@@ -654,6 +713,8 @@
       "frames": 12,
       "changed_frames": 6,
       "cycle_ms": 1294,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 836,
       "edge_contrast": {
         "light": 72.16,
@@ -675,6 +736,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1280,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1330,
       "edge_contrast": {
         "light": 89.57,
@@ -696,6 +759,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1221,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1736,
       "edge_contrast": {
         "light": 70.67,
@@ -717,6 +782,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1259,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1154,
       "edge_contrast": {
         "light": 83.49,
@@ -738,6 +805,8 @@
       "frames": 12,
       "changed_frames": 5,
       "cycle_ms": 1233,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1907,
       "edge_contrast": {
         "light": 71.93,
@@ -759,6 +828,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1217,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 453,
       "edge_contrast": {
         "light": 82.86,
@@ -780,6 +851,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1278,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1598,
       "edge_contrast": {
         "light": 88.88,
@@ -801,6 +874,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1233,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1672,
       "edge_contrast": {
         "light": 81.61,
@@ -822,6 +897,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1266,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1402,
       "edge_contrast": {
         "light": 85.89,
@@ -843,6 +920,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1265,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1340,
       "edge_contrast": {
         "light": 87.06,
@@ -864,6 +943,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1247,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1426,
       "edge_contrast": {
         "light": 86.93,
@@ -885,6 +966,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1242,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 891,
       "edge_contrast": {
         "light": 95.15,
@@ -906,6 +989,8 @@
       "frames": 12,
       "changed_frames": 0,
       "cycle_ms": 1295,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 950,
       "edge_contrast": {
         "light": 79.72,
@@ -927,6 +1012,8 @@
       "frames": 12,
       "changed_frames": 0,
       "cycle_ms": 1255,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 855,
       "edge_contrast": {
         "light": 87.65,
@@ -948,6 +1035,8 @@
       "frames": 12,
       "changed_frames": 0,
       "cycle_ms": 1325,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1066,
       "edge_contrast": {
         "light": 92.84,
@@ -969,6 +1058,8 @@
       "frames": 12,
       "changed_frames": 0,
       "cycle_ms": 1258,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 909,
       "edge_contrast": {
         "light": 81.57,
@@ -990,6 +1081,8 @@
       "frames": 12,
       "changed_frames": 0,
       "cycle_ms": 1257,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1024,
       "edge_contrast": {
         "light": 95.89,
@@ -1011,6 +1104,8 @@
       "frames": 12,
       "changed_frames": 0,
       "cycle_ms": 1274,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 819,
       "edge_contrast": {
         "light": 93.94,
@@ -1032,6 +1127,8 @@
       "frames": 12,
       "changed_frames": 0,
       "cycle_ms": 1228,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 898,
       "edge_contrast": {
         "light": 97.88,
@@ -1053,6 +1150,8 @@
       "frames": 12,
       "changed_frames": 0,
       "cycle_ms": 1244,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 879,
       "edge_contrast": {
         "light": 96.87,
@@ -1074,6 +1173,8 @@
       "frames": 12,
       "changed_frames": 0,
       "cycle_ms": 1227,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 897,
       "edge_contrast": {
         "light": 91.86,
@@ -1095,6 +1196,8 @@
       "frames": 12,
       "changed_frames": 0,
       "cycle_ms": 1196,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 991,
       "edge_contrast": {
         "light": 81.95,
@@ -1116,6 +1219,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1190,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 848,
       "edge_contrast": {
         "light": 69.95,
@@ -1137,6 +1242,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1246,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1008,
       "edge_contrast": {
         "light": 99.59,
@@ -1158,6 +1265,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1279,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 918,
       "edge_contrast": {
         "light": 72.37,
@@ -1179,6 +1288,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1258,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 825,
       "edge_contrast": {
         "light": 70.98,
@@ -1200,6 +1311,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1220,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1441,
       "edge_contrast": {
         "light": 74.32,
@@ -1221,6 +1334,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1262,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 896,
       "edge_contrast": {
         "light": 106.59,
@@ -1242,6 +1357,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1315,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 647,
       "edge_contrast": {
         "light": 92.53,
@@ -1263,6 +1380,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1204,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 970,
       "edge_contrast": {
         "light": 68.47,
@@ -1284,6 +1403,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1223,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 994,
       "edge_contrast": {
         "light": 76.62,
@@ -1305,6 +1426,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1274,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 665,
       "edge_contrast": {
         "light": 78.43,
@@ -1326,6 +1449,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1252,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1229,
       "edge_contrast": {
         "light": 62.88,
@@ -1347,6 +1472,8 @@
       "frames": 12,
       "changed_frames": 0,
       "cycle_ms": 1227,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1053,
       "edge_contrast": {
         "light": 67.11,
@@ -1368,6 +1495,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1264,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1012,
       "edge_contrast": {
         "light": 84.99,
@@ -1389,12 +1518,14 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1250,
-      "half_zoom_visible_pixels": 2692,
+      "strong_rotor_underlay_pixels": 209,
+      "strong_rotor_underlay_limit": 329,
+      "half_zoom_visible_pixels": 2087,
       "edge_contrast": {
-        "light": 80.8,
-        "dark": 51.03,
-        "satellite": 37.21,
-        "grayscale": 45.54
+        "light": 80.43,
+        "dark": 55.53,
+        "satellite": 42.59,
+        "grayscale": 49.52
       },
       "passed": true,
       "errors": []
@@ -1410,12 +1541,14 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1271,
-      "half_zoom_visible_pixels": 3526,
+      "strong_rotor_underlay_pixels": 280,
+      "strong_rotor_underlay_limit": 436,
+      "half_zoom_visible_pixels": 2734,
       "edge_contrast": {
-        "light": 83.12,
-        "dark": 50.15,
-        "satellite": 36.84,
-        "grayscale": 46.18
+        "light": 83.01,
+        "dark": 50.73,
+        "satellite": 39.5,
+        "grayscale": 48.25
       },
       "passed": true,
       "errors": []
@@ -1431,6 +1564,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1271,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 602,
       "edge_contrast": {
         "light": 105.48,
@@ -1452,6 +1587,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1211,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 683,
       "edge_contrast": {
         "light": 85.52,
@@ -1473,6 +1610,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1238,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 651,
       "edge_contrast": {
         "light": 92.86,
@@ -1494,6 +1633,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1296,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 3359,
       "edge_contrast": {
         "light": 78.51,
@@ -1515,6 +1656,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1241,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 541,
       "edge_contrast": {
         "light": 88.01,
@@ -1536,6 +1679,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1244,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 740,
       "edge_contrast": {
         "light": 77.73,
@@ -1557,6 +1702,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1211,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 703,
       "edge_contrast": {
         "light": 101.51,
@@ -1578,6 +1725,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1229,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 572,
       "edge_contrast": {
         "light": 102.49,
@@ -1599,6 +1748,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1262,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 662,
       "edge_contrast": {
         "light": 84.98,
@@ -1620,6 +1771,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1196,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1896,
       "edge_contrast": {
         "light": 82.03,
@@ -1641,6 +1794,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1217,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1150,
       "edge_contrast": {
         "light": 95.95,
@@ -1662,6 +1817,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1295,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 619,
       "edge_contrast": {
         "light": 91.34,
@@ -1683,6 +1840,8 @@
       "frames": 12,
       "changed_frames": 5,
       "cycle_ms": 1271,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 2611,
       "edge_contrast": {
         "light": 90.05,
@@ -1704,6 +1863,8 @@
       "frames": 12,
       "changed_frames": 6,
       "cycle_ms": 1283,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 523,
       "edge_contrast": {
         "light": 84.37,
@@ -1725,6 +1886,8 @@
       "frames": 12,
       "changed_frames": 6,
       "cycle_ms": 1261,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 652,
       "edge_contrast": {
         "light": 92.26,
@@ -1746,6 +1909,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1284,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 847,
       "edge_contrast": {
         "light": 70.07,
@@ -1767,6 +1932,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1258,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 929,
       "edge_contrast": {
         "light": 97.64,
@@ -1788,6 +1955,8 @@
       "frames": 12,
       "changed_frames": 5,
       "cycle_ms": 1259,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 622,
       "edge_contrast": {
         "light": 94.97,
@@ -1809,6 +1978,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1244,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 577,
       "edge_contrast": {
         "light": 90.79,
@@ -1830,6 +2001,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1248,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1046,
       "edge_contrast": {
         "light": 72.67,
@@ -1851,6 +2024,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1218,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 931,
       "edge_contrast": {
         "light": 83.0,
@@ -1872,6 +2047,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1248,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1042,
       "edge_contrast": {
         "light": 71.24,
@@ -1893,6 +2070,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1262,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1021,
       "edge_contrast": {
         "light": 62.62,
@@ -1914,6 +2093,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1242,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 824,
       "edge_contrast": {
         "light": 90.05,
@@ -1935,6 +2116,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1236,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 791,
       "edge_contrast": {
         "light": 99.25,
@@ -1956,6 +2139,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1249,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 803,
       "edge_contrast": {
         "light": 85.67,
@@ -1977,6 +2162,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1275,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 478,
       "edge_contrast": {
         "light": 88.58,
@@ -1998,6 +2185,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1205,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 762,
       "edge_contrast": {
         "light": 93.44,
@@ -2019,6 +2208,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1212,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 453,
       "edge_contrast": {
         "light": 74.08,
@@ -2040,6 +2231,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1202,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 478,
       "edge_contrast": {
         "light": 72.73,
@@ -2061,6 +2254,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1275,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 488,
       "edge_contrast": {
         "light": 84.5,
@@ -2082,6 +2277,8 @@
       "frames": 12,
       "changed_frames": 11,
       "cycle_ms": 1261,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1022,
       "edge_contrast": {
         "light": 74.88,
@@ -2103,6 +2300,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1264,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1025,
       "edge_contrast": {
         "light": 74.08,
@@ -2124,6 +2323,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1245,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 660,
       "edge_contrast": {
         "light": 102.79,
@@ -2145,6 +2346,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1200,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 917,
       "edge_contrast": {
         "light": 92.86,
@@ -2166,6 +2369,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1211,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 724,
       "edge_contrast": {
         "light": 99.83,
@@ -2187,6 +2392,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1265,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 758,
       "edge_contrast": {
         "light": 93.85,
@@ -2208,6 +2415,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1249,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 830,
       "edge_contrast": {
         "light": 76.22,
@@ -2229,6 +2438,8 @@
       "frames": 12,
       "changed_frames": 6,
       "cycle_ms": 1281,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 727,
       "edge_contrast": {
         "light": 88.27,
@@ -2250,6 +2461,8 @@
       "frames": 12,
       "changed_frames": 6,
       "cycle_ms": 1239,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 798,
       "edge_contrast": {
         "light": 86.38,
@@ -2271,6 +2484,8 @@
       "frames": 12,
       "changed_frames": 5,
       "cycle_ms": 1259,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1700,
       "edge_contrast": {
         "light": 85.57,
@@ -2292,6 +2507,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1208,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1256,
       "edge_contrast": {
         "light": 101.01,
@@ -2313,6 +2530,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1268,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 575,
       "edge_contrast": {
         "light": 86.36,
@@ -2334,6 +2553,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1207,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 629,
       "edge_contrast": {
         "light": 94.59,
@@ -2355,6 +2576,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1210,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 981,
       "edge_contrast": {
         "light": 98.9,
@@ -2376,6 +2599,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1206,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1064,
       "edge_contrast": {
         "light": 96.91,
@@ -2397,6 +2622,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1275,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1541,
       "edge_contrast": {
         "light": 101.15,
@@ -2418,6 +2645,8 @@
       "frames": 12,
       "changed_frames": 8,
       "cycle_ms": 1240,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 741,
       "edge_contrast": {
         "light": 108.05,
@@ -2439,6 +2668,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1237,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 948,
       "edge_contrast": {
         "light": 94.62,
@@ -2460,6 +2691,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1283,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 872,
       "edge_contrast": {
         "light": 82.11,
@@ -2481,6 +2714,8 @@
       "frames": 12,
       "changed_frames": 10,
       "cycle_ms": 1214,
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
       "half_zoom_visible_pixels": 1074,
       "edge_contrast": {
         "light": 75.42,

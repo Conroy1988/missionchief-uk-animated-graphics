@@ -1,5 +1,5 @@
 {
-  "release": "v1.1.0",
+  "release": "v1.1.1",
   "profile": "command",
   "display_name": "Modern Command Visibility",
   "source_profile": "standard",
@@ -16,6 +16,70 @@
     "coastguard-rescue-helicopter",
     "coastguard-rescue-helicopter-large"
   ],
+  "rotor_geometry": {
+    "hems": {
+      "hub": [0.599, 0.12],
+      "disc_width": 0.84,
+      "clear_below": 0.31,
+      "body_keep_polygon": [
+        [0.40, 0.38],
+        [0.46, 0.22],
+        [0.54, 0.15],
+        [0.60, 0.08],
+        [0.66, 0.14],
+        [0.77, 0.19],
+        [0.84, 0.38]
+      ]
+    },
+    "police-helicopter": {
+      "hub": [0.615, 0.13],
+      "disc_width": 0.84,
+      "clear_below": 0.32,
+      "body_keep_polygon": [
+        [0.42, 0.38],
+        [0.47, 0.24],
+        [0.57, 0.17],
+        [0.615, 0.08],
+        [0.68, 0.15],
+        [0.80, 0.23],
+        [0.88, 0.38]
+      ]
+    },
+    "coastguard-rescue-helicopter": {
+      "hub": [0.568, 0.10],
+      "disc_width": 0.86,
+      "tail_hub": [0.074, 0.22],
+      "tail_radius": 0.20,
+      "clear_below": 0.34,
+      "body_keep_polygon": [
+        [0.33, 0.36],
+        [0.38, 0.24],
+        [0.49, 0.18],
+        [0.55, 0.15],
+        [0.568, 0.03],
+        [0.63, 0.14],
+        [0.77, 0.22],
+        [0.83, 0.36]
+      ]
+    },
+    "coastguard-rescue-helicopter-large": {
+      "hub": [0.559, 0.12],
+      "disc_width": 0.84,
+      "tail_hub": [0.075, 0.20],
+      "tail_radius": 0.18,
+      "clear_below": 0.38,
+      "body_keep_polygon": [
+        [0.29, 0.40],
+        [0.35, 0.28],
+        [0.48, 0.24],
+        [0.53, 0.22],
+        [0.559, 0.07],
+        [0.61, 0.21],
+        [0.73, 0.25],
+        [0.79, 0.40]
+      ]
+    }
+  },
   "rare_showcase": [
     "aerial-appliance",
     "armed-cell-van",

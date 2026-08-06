@@ -242,33 +242,152 @@ def add_blue_lights(
     return result
 
 
-def rotor_overlay(size: tuple[int, int], frame_index: int, seed: int, body_size: tuple[int, int], offset: tuple[int, int]) -> Image.Image:
-    overlay = Image.new("RGBA", size, (0, 0, 0, 0))
-    if frame_index == 0:
-        return overlay
-    draw = ImageDraw.Draw(overlay)
-    width, height = body_size
-    ox, oy = offset
-    main_x = ox + round(width * 0.53)
-    main_y = oy + round(height * 0.12)
-    rotor_width = round(width * (0.58 + 0.10 * math.sin((frame_index + seed % 5) * 1.6)))
-    draw.ellipse(
-        (main_x - rotor_width // 2, main_y - 2, main_x + rotor_width // 2, main_y + 2),
-        outline=(205, 220, 228, 86),
+def remove_baked_main_rotor(image: Image.Image, geometry: dict) -> Image.Image:
+    """Remove long source blades while retaining the roof, mast and rotor hub."""
+    width, height = image.size
+    clear_mask = Image.new("L", image.size, 0)
+    draw = ImageDraw.Draw(clear_mask)
+    clear_y = min(height - 1, round(height * float(geometry["clear_below"])))
+    draw.rectangle((0, 0, width - 1, clear_y), fill=255)
+
+    keep_points = [
+        (round(float(x) * (width - 1)), round(float(y) * (height - 1)))
+        for x, y in geometry["body_keep_polygon"]
+    ]
+    draw.polygon(keep_points, fill=0)
+
+    hub_x = round(float(geometry["hub"][0]) * (width - 1))
+    hub_y = round(float(geometry["hub"][1]) * (height - 1))
+    hub_rx = max(5, round(width * 0.032))
+    hub_ry = max(3, round(height * 0.09))
+    draw.ellipse((hub_x - hub_rx, hub_y - hub_ry, hub_x + hub_rx, hub_y + hub_ry), fill=0)
+
+    cleaned = image.copy()
+    cleaned.putalpha(ImageChops.multiply(image.getchannel("A"), ImageChops.invert(clear_mask)))
+    return cleaned
+
+
+def main_rotor_sweep(size: tuple[int, int], frame_index: int, seed: int, geometry: dict) -> Image.Image:
+    """Render one coherent, edge-on high-speed rotor disc with no sharp second blade layer."""
+    width, height = size
+    hub_x = round(float(geometry["hub"][0]) * (width - 1))
+    hub_y = round(float(geometry["hub"][1]) * (height - 1))
+    radius = max(12, round(width * float(geometry["disc_width"]) / 2))
+    phase = math.radians((frame_index * 41 + seed % 31) % 360)
+
+    haze = Image.new("RGBA", size, (0, 0, 0, 0))
+    haze_draw = ImageDraw.Draw(haze)
+    disc_height = max(2, round(height * 0.045))
+    haze_draw.ellipse(
+        (hub_x - radius, hub_y - disc_height, hub_x + radius, hub_y + disc_height),
+        outline=(198, 214, 223, 54),
         width=1,
     )
-    draw.line((main_x - rotor_width // 2, main_y, main_x + rotor_width // 2, main_y), fill=(232, 240, 244, 170), width=1)
+    haze = haze.filter(ImageFilter.GaussianBlur(max(0.65, height * 0.012)))
 
-    tail_x = ox + round(width * 0.105)
-    tail_y = oy + round(height * 0.47)
-    radius = max(3, round(height * 0.105))
+    streaks = Image.new("RGBA", size, (0, 0, 0, 0))
+    streak_draw = ImageDraw.Draw(streaks)
+    outer = 0.84 + 0.10 * abs(math.sin(phase))
+    middle = 0.58 + 0.16 * abs(math.cos(phase * 1.7))
+    inner = 0.08 + 0.06 * abs(math.sin(phase * 1.3))
+    y_offset = round(math.sin(phase * 2.1))
+
+    for direction in (-1, 1):
+        start = hub_x + direction * round(radius * inner)
+        middle_end = hub_x + direction * round(radius * middle)
+        outer_end = hub_x + direction * round(radius * outer)
+        streak_draw.line(
+            (start, hub_y + y_offset, middle_end, hub_y + y_offset),
+            fill=(226, 235, 240, 118),
+            width=1,
+        )
+        streak_draw.line(
+            (middle_end, hub_y - y_offset, outer_end, hub_y - y_offset),
+            fill=(194, 210, 220, 72),
+            width=1,
+        )
+
+    secondary_length = 0.42 + 0.20 * abs(math.sin(phase + 1.1))
+    secondary_y = hub_y - y_offset - (1 if frame_index % 3 == 1 else 0)
+    streak_draw.line(
+        (
+            hub_x - round(radius * secondary_length),
+            secondary_y,
+            hub_x + round(radius * secondary_length),
+            secondary_y,
+        ),
+        fill=(210, 224, 232, 62),
+        width=1,
+    )
+    streaks = streaks.filter(ImageFilter.GaussianBlur(0.35))
+
+    return Image.alpha_composite(haze, streaks)
+
+
+def tail_rotor_sweep(size: tuple[int, int], frame_index: int, seed: int, geometry: dict) -> Image.Image:
+    """Render an external tail rotor after the baked blade cross has been removed."""
+    if "tail_hub" not in geometry:
+        return Image.new("RGBA", size, (0, 0, 0, 0))
+
+    width, height = size
+    hub_x = round(float(geometry["tail_hub"][0]) * (width - 1))
+    hub_y = round(float(geometry["tail_hub"][1]) * (height - 1))
+    radius = max(5, round(height * float(geometry["tail_radius"])))
     angle = math.radians((frame_index * 47 + seed % 360) % 360)
-    for spoke in (0, math.pi / 2):
+
+    haze = Image.new("RGBA", size, (0, 0, 0, 0))
+    haze_draw = ImageDraw.Draw(haze)
+    haze_draw.ellipse(
+        (hub_x - radius, hub_y - radius, hub_x + radius, hub_y + radius),
+        outline=(188, 207, 218, 64),
+        width=1,
+    )
+
+    blades = Image.new("RGBA", size, (0, 0, 0, 0))
+    blade_draw = ImageDraw.Draw(blades)
+    for spoke in (0.0, math.pi / 2):
         dx = round(math.cos(angle + spoke) * radius)
         dy = round(math.sin(angle + spoke) * radius)
-        draw.line((tail_x - dx, tail_y - dy, tail_x + dx, tail_y + dy), fill=(225, 237, 243, 188), width=1)
-    draw.ellipse((tail_x - radius, tail_y - radius, tail_x + radius, tail_y + radius), outline=(180, 203, 216, 105), width=1)
-    return overlay.filter(ImageFilter.GaussianBlur(0.25))
+        blade_draw.line(
+            (hub_x - dx, hub_y - dy, hub_x + dx, hub_y + dy),
+            fill=(220, 232, 238, 150),
+            width=1,
+        )
+        for direction in (-1, 1):
+            tip_x = hub_x + direction * dx
+            tip_y = hub_y + direction * dy
+            blade_draw.ellipse(
+                (tip_x - 1, tip_y - 1, tip_x + 1, tip_y + 1),
+                fill=(255, 168, 28, 205),
+            )
+    blade_draw.ellipse(
+        (hub_x - 2, hub_y - 2, hub_x + 2, hub_y + 2),
+        fill=(56, 65, 72, 245),
+        outline=(226, 235, 240, 230),
+        width=1,
+    )
+    blades = blades.filter(ImageFilter.GaussianBlur(0.22))
+    return Image.alpha_composite(haze, blades)
+
+
+def helicopter_rotor_layer(size: tuple[int, int], frame_index: int, seed: int, geometry: dict) -> Image.Image:
+    layer = main_rotor_sweep(size, frame_index, seed, geometry)
+    return Image.alpha_composite(layer, tail_rotor_sweep(size, frame_index, seed, geometry))
+
+
+def add_helicopter_rotors(
+    base: Image.Image,
+    body_size: tuple[int, int],
+    body_offset: tuple[int, int],
+    frame_index: int,
+    seed: int,
+    geometry: dict,
+) -> Image.Image:
+    """Place soft rotor motion above the visibility-edged body without outlining the blur."""
+    rotor_layer = helicopter_rotor_layer(body_size, frame_index, seed, geometry)
+    positioned = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    positioned.alpha_composite(rotor_layer, body_offset)
+    return Image.alpha_composite(base, positioned)
 
 
 def amber_overlay(size: tuple[int, int], frame_index: int, body_size: tuple[int, int], offset: tuple[int, int], seed: int) -> Image.Image:
@@ -354,6 +473,8 @@ def build_animation(
     body_size: tuple[int, int],
     body_offset: tuple[int, int],
     profile: dict,
+    rotorless_body: Image.Image | None = None,
+    rotorless_base: Image.Image | None = None,
 ) -> tuple[list[Image.Image], list[int], str]:
     asset_id = vehicle["id"]
     seed = stable_seed(asset_id)
@@ -363,12 +484,24 @@ def build_animation(
     motion = profile["motion"]
 
     for frame_index in range(profile["frames"]):
-        frame = base.copy()
+        if rotorless_body is not None and frame_index > 0:
+            geometry = profile["rotor_geometry"][asset_id]
+            if rotorless_base is None:
+                raise ValueError(f"missing rotorless base for {asset_id}")
+            frame = add_helicopter_rotors(
+                rotorless_base,
+                rotorless_body.size,
+                body_offset,
+                frame_index,
+                seed,
+                geometry,
+            )
+        else:
+            frame = base.copy()
         if vehicle.get("lights"):
             frame = add_blue_lights(frame, vehicle, frame_index, body_size, body_offset, phase)
             motion_type = "blue-response"
         if asset_id in profile["helicopters"]:
-            frame = Image.alpha_composite(frame, rotor_overlay(frame.size, frame_index, seed, body_size, body_offset))
             motion_type = "rotor-and-blue-response"
         elif asset_id in motion["amber"]:
             frame = Image.alpha_composite(frame, amber_overlay(frame.size, frame_index, body_size, body_offset, seed))
@@ -448,12 +581,35 @@ def main() -> None:
         if asset_id in rare:
             body = add_specialist_language(body, vehicle["service"], asset_id)
         body_size = body.size
-        static, offset = add_visibility_edge(body)
+        rotorless_body = None
+        rotorless_base = None
+        if asset_id in profile["helicopters"]:
+            geometry = profile["rotor_geometry"][asset_id]
+            rotorless_body = remove_baked_main_rotor(body, geometry)
+            rotorless_base, offset = add_visibility_edge(rotorless_body)
+            static = add_helicopter_rotors(
+                rotorless_base,
+                rotorless_body.size,
+                offset,
+                0,
+                stable_seed(asset_id),
+                geometry,
+            )
+        else:
+            static, offset = add_visibility_edge(body)
 
         static_path = STATIC_DIR / f"{asset_id}.png"
         static_path.parent.mkdir(parents=True, exist_ok=True)
         static.save(static_path, format="PNG", optimize=True)
-        frames, durations, motion_type = build_animation(static, vehicle, body_size, offset, profile)
+        frames, durations, motion_type = build_animation(
+            static,
+            vehicle,
+            body_size,
+            offset,
+            profile,
+            rotorless_body=rotorless_body,
+            rotorless_base=rotorless_base,
+        )
         animated_path = ANIMATED_DIR / f"{asset_id}.png"
         save_apng(frames, durations, animated_path)
 

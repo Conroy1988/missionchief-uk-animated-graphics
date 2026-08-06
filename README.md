@@ -27,12 +27,13 @@ A complete, original UK emergency-services vehicle graphics pack for [MissionChi
 
 ## The complete UK fleet
 
-Release **v1.1.0** covers every one of the **117 current vehicle slots** in MissionChief UK:
+Release **v1.1.1** covers every one of the **117 current vehicle slots** in MissionChief UK:
 
 - 117 transparent, map-scale static PNGs
 - 117 twelve-frame APNGs with a unique timing signature per vehicle
 - 87 emergency assets with independent roof, grille, body and rear blue-light rhythms
-- Rotor movement on all four helicopters
+- Per-aircraft main-rotor alignment on all four helicopters, with the old static-under-moving blade artefact removed
+- Animated external tail rotors on both coastguard helicopter variants; HEMS and police fenestrons retain their correct enclosed appearance
 - Appropriate amber, wheel, navigation, wake and marker-light movement on 19 non-blue-light assets
 - Command Visibility sizing and dual-tone map edges across the complete fleet
 - Stronger visual separation for 33 specialist and rare assets
@@ -53,7 +54,7 @@ Every icon is tested automatically at **100%, 75% and 50% scale** against light,
 
 [![Light-map dense fleet test](assets/previews/v1.1/busy-map-light.png)](assets/previews/v1.1/busy-map-light.png)
 
-**[Dark-map test](assets/previews/v1.1/busy-map-dark.png)** · **[Satellite-style test](assets/previews/v1.1/busy-map-satellite.png)** · **[Animation frame audit](assets/previews/v1.1/animation-frames.png)**
+**[Dark-map test](assets/previews/v1.1/busy-map-dark.png)** · **[Satellite-style test](assets/previews/v1.1/busy-map-satellite.png)** · **[Animation frame audit](assets/previews/v1.1/animation-frames.png)** · **[Helicopter rotor audit](assets/previews/v1.1/helicopter-rotor-frames.png)**
 
 ## Install in MissionChief
 
@@ -67,10 +68,10 @@ For MissionChief enhancements and utilities, visit **[TKB MissionChief Scripts &
 
 ## Release downloads
 
-The [v1.1.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.1.0) includes:
+The [v1.1.1 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.1.1) includes:
 
-- **`TKB-UK-Emergency-Fleet-Modern-Command-Visibility-MissionChief-Numbered-Upload-Ready-v1.1.0.zip`** — recommended ordered deployment package, with separate static and animated folders, an upload guide, manifest and SHA-256 verification
-- **`TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.1.0.user.js`** — resumable live deployment helper for pack maintainers
+- **`TKB-UK-Emergency-Fleet-Modern-Command-Visibility-MissionChief-Numbered-Upload-Ready-v1.1.1.zip`** — recommended ordered deployment package, with separate static and animated folders, an upload guide, manifest and SHA-256 verification
+- **`TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.1.1.user.js`** — resumable live deployment helper for pack maintainers
 - **`v1.1-build-report.json`** and **`v1.1-qa-report.json`** — machine-readable production evidence
 
 The [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0) remains available for players who prefer strict real-world relative scale.
@@ -97,7 +98,7 @@ Large production artwork is supplied through the release archive rather than dup
 ```bash
 python scripts/build_v1_1_enhanced.py
 python scripts/validate_v1_1_enhanced.py
-python scripts/build_numbered_upload_package.py --version v1.1.0 --profile command
+python scripts/build_numbered_upload_package.py --version v1.1.1 --profile command
 ```
 
 The final validation gate must report `"all_passed": true` before a release is published. The immutable v1.0 source profile remains documented separately in its release and checkpoint.
