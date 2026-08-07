@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the deterministic v1.1 Modern Command Visibility fleet profile."""
+"""Build the deterministic v1.2 Modern Command Clarity fleet profile."""
 
 from __future__ import annotations
 
@@ -14,11 +14,11 @@ from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "data" / "prototypes.json"
-PROFILE_PATH = ROOT / "data" / "v1.1-enhancement-profile.json"
+PROFILE_PATH = ROOT / "data" / "v1.2-enhancement-profile.json"
 STANDARD_DIR = ROOT / "assets" / "exports" / "standard" / "static"
 STATIC_DIR = ROOT / "assets" / "exports" / "command" / "static"
 ANIMATED_DIR = ROOT / "assets" / "exports" / "command" / "animated"
-REPORT_PATH = ROOT / "data" / "v1.1-build-report.json"
+REPORT_PATH = ROOT / "data" / "v1.2-build-report.json"
 
 
 SERVICE_ACCENTS = {
@@ -135,27 +135,163 @@ def add_specialist_language(image: Image.Image, service: str, asset_id: str) -> 
     return clipped_overlay(image, overlay)
 
 
-def add_visibility_edge(image: Image.Image, padding: int = 5) -> tuple[Image.Image, tuple[int, int]]:
+def roof_surface_y(image: Image.Image, start_x: float, end_x: float) -> int:
+    """Estimate a stable roof surface across one horizontal body span."""
+    alpha = image.getchannel("A")
+    left = max(0, min(image.width - 1, round(image.width * start_x)))
+    right = max(left + 1, min(image.width, round(image.width * end_x)))
+    samples: list[int] = []
+    for x in range(left, right):
+        for y in range(image.height):
+            if alpha.getpixel((x, y)) >= 80:
+                samples.append(y)
+                break
+    if not samples:
+        return max(1, round(image.height * 0.22))
+    samples.sort()
+    return samples[min(len(samples) - 1, round((len(samples) - 1) * 0.62))]
+
+
+def add_role_differentiation(
+    image: Image.Image,
+    cue: str,
+    service: str,
+) -> tuple[Image.Image, tuple[int, int]]:
+    """Add role-specific roof equipment that changes the map-scale silhouette."""
+    top_padding = max(6, min(14, round(image.height * 0.18)))
+    canvas = Image.new("RGBA", (image.width, image.height + top_padding), (0, 0, 0, 0))
+    canvas.alpha_composite(image, (0, top_padding))
+    overlay = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+    accent = SERVICE_ACCENTS.get(service, (205, 220, 230, 225))
+    accent = (*accent[:3], 245)
+    dark = (15, 24, 31, 250)
+    steel = (174, 193, 203, 246)
+    equipment = (34, 45, 52, 252)
+
+    def roof_y(left: float, right: float) -> int:
+        return top_padding + roof_surface_y(image, left, right)
+
+    def module(left: float, right: float, height: int, fill: tuple[int, int, int, int] = equipment) -> tuple[int, int, int, int]:
+        x1 = round(canvas.width * left)
+        x2 = max(x1 + 4, round(canvas.width * right))
+        bottom = roof_y(left, right) + 1
+        top = max(1, bottom - height)
+        draw.rounded_rectangle((x1 - 1, top - 1, x2 + 1, bottom + 1), radius=2, fill=dark)
+        draw.rounded_rectangle((x1, top, x2, bottom), radius=1, fill=fill, outline=accent, width=1)
+        return x1, top, x2, bottom
+
+    def mast(x_fraction: float, height: int, base_y: int | None = None, beacon: bool = False) -> None:
+        x = round(canvas.width * x_fraction)
+        bottom = base_y if base_y is not None else roof_y(x_fraction - 0.025, x_fraction + 0.025) + 1
+        top = max(1, bottom - height)
+        draw.line((x + 1, bottom, x + 1, top), fill=dark, width=3)
+        draw.line((x, bottom, x, top), fill=steel, width=1)
+        if beacon:
+            draw.ellipse((x - 2, top - 1, x + 2, top + 3), fill=dark)
+            draw.ellipse((x - 1, top, x + 1, top + 2), fill=accent)
+
+    module_height = max(4, round(image.height * 0.13))
+    if cue == "dual-service-command-pod":
+        x1, top, x2, bottom = module(0.38, 0.63, module_height, dark)
+        middle = (x1 + x2) // 2
+        draw.rectangle((x1 + 1, top + 1, middle, bottom - 1), fill=(28, 188, 118, 250))
+        draw.rectangle((middle + 1, top + 1, x2 - 1, bottom - 1), fill=(64, 166, 255, 250))
+        mast(0.66, max(4, module_height), base_y=bottom)
+    elif cue == "irv-anpr-array":
+        left_box = module(0.39, 0.48, max(3, module_height - 1))
+        right_box = module(0.62, 0.71, max(3, module_height - 1))
+        for box in (left_box, right_box):
+            x1, top, x2, bottom = box
+            draw.ellipse((x1 + 1, top + 1, min(x2 - 1, x1 + 3), min(bottom - 1, top + 3)), fill=dark)
+    elif cue == "compact-medical-pod":
+        x1, top, x2, bottom = module(0.43, 0.58, max(4, module_height - 1))
+        cx, cy = (x1 + x2) // 2, (top + bottom) // 2
+        draw.rectangle((cx - 2, cy - 1, cx + 2, cy + 1), fill=steel)
+        draw.rectangle((cx - 1, cy - 2, cx + 1, cy + 2), fill=steel)
+    elif cue == "rrv-aerial-pair":
+        left = module(0.42, 0.48, 3)
+        right = module(0.57, 0.63, 3)
+        mast(0.45, max(5, module_height), base_y=left[3])
+        mast(0.60, max(3, module_height - 1), base_y=right[3])
+    elif cue == "specialist-medical-module":
+        x1, top, x2, bottom = module(0.36, 0.60, module_height)
+        for x in range(x1 + 3, x2 - 1, max(4, (x2 - x1) // 4)):
+            draw.line((x, top + 1, x, bottom - 1), fill=dark, width=1)
+        mast(0.65, max(4, module_height - 1), base_y=bottom)
+    elif cue == "otl-command-mast":
+        box = module(0.38, 0.58, module_height)
+        mast(0.61, module_height + 2, base_y=box[3], beacon=True)
+    elif cue == "cfr-medical-beacon":
+        box = module(0.46, 0.56, module_height + 1, dark)
+        cx, cy = (box[0] + box[2]) // 2, (box[1] + box[3]) // 2
+        draw.rectangle((cx - 3, cy - 1, cx + 3, cy + 1), fill=accent)
+        draw.rectangle((cx - 1, cy - 3, cx + 1, cy + 3), fill=accent)
+    elif cue == "traffic-anpr-pods":
+        first = module(0.35, 0.43, max(3, module_height - 2))
+        second = module(0.66, 0.74, max(3, module_height - 2))
+        mast(0.76, max(3, module_height - 2), base_y=second[3])
+    elif cue == "arv-equipment-locker":
+        box = module(0.38, 0.61, module_height)
+        middle = (box[0] + box[2]) // 2
+        draw.line((middle, box[1] + 1, middle, box[3] - 1), fill=dark, width=1)
+        draw.rectangle((box[0] + 2, box[3] - 2, box[2] - 2, box[3] - 1), fill=accent)
+    elif cue == "eod-command-mast":
+        box = module(0.44, 0.62, module_height + 1)
+        mast(0.65, module_height + 6, base_y=box[3], beacon=True)
+    elif cue == "eod-response-case":
+        box = module(0.47, 0.66, module_height)
+        for x in range(box[0] + 3, box[2], max(4, (box[2] - box[0]) // 3)):
+            draw.line((x, box[1] + 1, x, box[3] - 1), fill=dark, width=1)
+    elif cue == "eod-twin-canisters":
+        module(0.41, 0.52, max(3, module_height - 2))
+        module(0.56, 0.67, max(3, module_height - 2), (62, 78, 88, 250))
+    elif cue == "eod-robot-cradle":
+        box = module(0.57, 0.74, module_height + 1, dark)
+        draw.line((box[0] + 2, box[3] - 1, box[0] + 5, box[1] + 1, box[2] - 4, box[1] + 1, box[2] - 1, box[3] - 1), fill=steel, width=1)
+        draw.ellipse((box[0] + 2, box[3] - 2, box[0] + 5, box[3] + 1), fill=accent)
+        draw.ellipse((box[2] - 5, box[3] - 2, box[2] - 2, box[3] + 1), fill=accent)
+    elif cue == "marine-eod-tube":
+        box = module(0.28, 0.70, max(3, module_height - 2), dark)
+        draw.rounded_rectangle((box[0] + 2, box[1] + 1, box[2] - 2, box[3] - 1), radius=2, fill=(54, 72, 82, 250))
+        draw.ellipse((box[2] - 5, box[1] + 1, box[2] - 2, box[3] - 1), fill=steel)
+    elif cue == "marine-eod-twin-kit":
+        module(0.41, 0.51, max(3, module_height - 2), (78, 54, 40, 250))
+        module(0.56, 0.66, max(3, module_height - 2), (44, 68, 82, 250))
+    else:
+        raise ValueError(f"unknown role differentiation cue: {cue}")
+
+    return Image.alpha_composite(canvas, overlay), (0, top_padding)
+
+
+def add_visibility_edge(
+    image: Image.Image,
+    padding: int = 5,
+    boosted: bool = False,
+) -> tuple[Image.Image, tuple[int, int]]:
     width, height = image.size
     canvas_size = (width + padding * 2, height + padding * 2)
     source_alpha = Image.new("L", canvas_size, 0)
     source_alpha.paste(image.getchannel("A"), (padding, padding))
 
-    shadow_alpha = source_alpha.filter(ImageFilter.GaussianBlur(1.5)).point(lambda value: round(value * 0.34))
+    shadow_strength = 0.58 if boosted else 0.34
+    shadow_alpha = source_alpha.filter(ImageFilter.GaussianBlur(1.8 if boosted else 1.5)).point(
+        lambda value: round(value * shadow_strength)
+    )
     shadow = Image.new("RGBA", canvas_size, (10, 15, 20, 0))
     shifted_shadow = Image.new("L", canvas_size, 0)
-    shifted_shadow.paste(shadow_alpha, (1, 2))
+    shifted_shadow.paste(shadow_alpha, (2, 3) if boosted else (1, 2))
     shadow.putalpha(shifted_shadow)
 
-    outer_mask = source_alpha.filter(ImageFilter.MaxFilter(5))
+    outer_mask = source_alpha.filter(ImageFilter.MaxFilter(7 if boosted else 5))
     outer_ring = ImageChops.subtract(outer_mask, source_alpha)
-    outer_ring = outer_ring.point(lambda value: round(value * 0.54))
+    outer_ring = outer_ring.point(lambda value: round(value * (0.86 if boosted else 0.54)))
     outer = Image.new("RGBA", canvas_size, (8, 13, 18, 0))
     outer.putalpha(outer_ring)
 
-    inner_mask = source_alpha.filter(ImageFilter.MaxFilter(3))
+    inner_mask = source_alpha.filter(ImageFilter.MaxFilter(5 if boosted else 3))
     inner_ring = ImageChops.subtract(inner_mask, source_alpha)
-    inner_ring = inner_ring.point(lambda value: round(value * 0.62))
+    inner_ring = inner_ring.point(lambda value: round(value * (0.88 if boosted else 0.62)))
     inner = Image.new("RGBA", canvas_size, (244, 248, 250, 0))
     inner.putalpha(inner_ring)
 
@@ -548,6 +684,8 @@ def main() -> None:
     vehicles = sorted(manifest["vehicles"], key=lambda item: int(item["missionchief_slot"]))
     rare = set(profile["rare_showcase"])
     overrides = profile["new_source_overrides"]
+    role_cues = profile.get("role_differentiation", {})
+    satellite_boost = set(profile.get("satellite_contrast_boost", []))
     clean_output(STATIC_DIR)
     clean_output(ANIMATED_DIR)
 
@@ -580,13 +718,19 @@ def main() -> None:
         body = modern_tone(body)
         if asset_id in rare:
             body = add_specialist_language(body, vehicle["service"], asset_id)
+        motion_reference_size = body.size
+        role_cue = role_cues.get(asset_id)
+        role_cue_offset = (0, 0)
+        if role_cue:
+            body, role_cue_offset = add_role_differentiation(body, role_cue, vehicle["service"])
         body_size = body.size
         rotorless_body = None
         rotorless_base = None
+        edge_padding = 7 if asset_id in satellite_boost else 5
         if asset_id in profile["helicopters"]:
             geometry = profile["rotor_geometry"][asset_id]
             rotorless_body = remove_baked_main_rotor(body, geometry)
-            rotorless_base, offset = add_visibility_edge(rotorless_body)
+            rotorless_base, offset = add_visibility_edge(rotorless_body, padding=edge_padding)
             static = add_helicopter_rotors(
                 rotorless_base,
                 rotorless_body.size,
@@ -596,7 +740,16 @@ def main() -> None:
                 geometry,
             )
         else:
-            static, offset = add_visibility_edge(body)
+            static, offset = add_visibility_edge(
+                body,
+                padding=edge_padding,
+                boosted=asset_id in satellite_boost,
+            )
+
+        motion_reference_offset = (
+            offset[0] + role_cue_offset[0],
+            offset[1] + role_cue_offset[1],
+        )
 
         static_path = STATIC_DIR / f"{asset_id}.png"
         static_path.parent.mkdir(parents=True, exist_ok=True)
@@ -604,8 +757,8 @@ def main() -> None:
         frames, durations, motion_type = build_animation(
             static,
             vehicle,
-            body_size,
-            offset,
+            motion_reference_size,
+            motion_reference_offset,
             profile,
             rotorless_body=rotorless_body,
             rotorless_base=rotorless_base,
@@ -622,10 +775,18 @@ def main() -> None:
                 "id": asset_id,
                 "service": vehicle["service"],
                 "rare_showcase": asset_id in rare,
+                "role_cue": role_cue,
+                "role_cue_offset": {"x": role_cue_offset[0], "y": role_cue_offset[1]},
+                "satellite_contrast_boost": asset_id in satellite_boost,
+                "edge_padding": edge_padding,
                 "source_override": str(override_path.relative_to(ROOT)) if override_path else None,
                 "standard_dimensions": {"width": standard.width, "height": standard.height},
                 "command_dimensions": {"width": static.width, "height": static.height},
                 "body_dimensions": {"width": body_size[0], "height": body_size[1]},
+                "motion_reference_dimensions": {
+                    "width": motion_reference_size[0],
+                    "height": motion_reference_size[1],
+                },
                 "width_gain_percent": round((body_size[0] / standard.width - 1) * 100, 1),
                 "frames": len(frames),
                 "durations_ms": durations,
@@ -645,6 +806,8 @@ def main() -> None:
         "frames_per_asset": profile["frames"],
         "source_overrides": sum(item["source_override"] is not None for item in results),
         "rare_showcase_assets": sum(item["rare_showcase"] for item in results),
+        "role_differentiated_assets": sum(item["role_cue"] is not None for item in results),
+        "satellite_contrast_boosted_assets": sum(item["satellite_contrast_boost"] for item in results),
         "motion_counts": dict(sorted(motion_counts.items())),
         "timing_signature_count": len(timing_signatures),
         "maximum_shared_timing_signature": max(timing_signatures.values()),

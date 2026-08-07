@@ -103,7 +103,7 @@ def build(root: Path, version: str, profile: str) -> tuple[Path, Path, int]:
         )
 
     dist = root / "dist"
-    profile_label = "Modern-Command-Visibility-" if profile == "command" else ""
+    profile_label = "Modern-Command-Clarity-" if profile == "command" else ""
     package_name = f"TKB-UK-Emergency-Fleet-{profile_label}MissionChief-Numbered-Upload-Ready-{version}"
     package_root = dist / package_name
     archive_path = dist / f"{package_name}.zip"

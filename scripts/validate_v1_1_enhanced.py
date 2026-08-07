@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate v1.1 exports and render automated busy-map QA evidence."""
+"""Validate v1.2 exports and render automated busy-map QA evidence."""
 
 from __future__ import annotations
 
@@ -13,13 +13,13 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "data" / "prototypes.json"
-PROFILE_PATH = ROOT / "data" / "v1.1-enhancement-profile.json"
-BUILD_REPORT_PATH = ROOT / "data" / "v1.1-build-report.json"
-REPORT_PATH = ROOT / "data" / "v1.1-qa-report.json"
+PROFILE_PATH = ROOT / "data" / "v1.2-enhancement-profile.json"
+BUILD_REPORT_PATH = ROOT / "data" / "v1.2-build-report.json"
+REPORT_PATH = ROOT / "data" / "v1.2-qa-report.json"
 STANDARD_DIR = ROOT / "assets" / "exports" / "standard" / "static"
 STATIC_DIR = ROOT / "assets" / "exports" / "command" / "static"
 ANIMATED_DIR = ROOT / "assets" / "exports" / "command" / "animated"
-PREVIEW_DIR = ROOT / "assets" / "previews" / "v1.1"
+PREVIEW_DIR = ROOT / "assets" / "previews" / "v1.2"
 
 
 THEMES = {
@@ -228,7 +228,7 @@ def render_animation_sheet(vehicle_map: dict[str, dict]) -> Path:
     draw = ImageDraw.Draw(canvas)
     font = ImageFont.load_default(size=17)
     title_font = ImageFont.load_default(size=24)
-    draw.text((20, 17), "v1.1 independent-light and motion frame audit", font=title_font, fill="white")
+    draw.text((20, 17), "v1.2 independent-light and motion frame audit", font=title_font, fill="white")
     for row, asset_id in enumerate(SHOWCASE_IDS):
         vehicle = vehicle_map[asset_id]
         frames, _durations = frames_and_durations(ANIMATED_DIR / f"{asset_id}.png")
@@ -258,7 +258,7 @@ def render_rotor_sheet(vehicle_map: dict[str, dict]) -> Path:
     draw = ImageDraw.Draw(canvas)
     font = ImageFont.load_default(size=17)
     title_font = ImageFont.load_default(size=24)
-    draw.text((20, 18), "v1.1.1 helicopter rotor frame audit", font=title_font, fill="white")
+    draw.text((20, 18), "v1.2 helicopter rotor regression audit", font=title_font, fill="white")
     for row, asset_id in enumerate(ROTOR_SHOWCASE_IDS):
         vehicle = vehicle_map[asset_id]
         frames, _durations = frames_and_durations(ANIMATED_DIR / f"{asset_id}.png")
@@ -285,6 +285,59 @@ def render_rotor_sheet(vehicle_map: dict[str, dict]) -> Path:
     return target
 
 
+def render_targeted_sheet(
+    title: str,
+    asset_ids: list[str],
+    theme_name: str,
+    filename: str,
+    vehicle_map: dict[str, dict],
+) -> Path:
+    """Render role/contrast targets at the three supported MissionChief scales."""
+    columns = 3
+    rows = math.ceil(len(asset_ids) / columns)
+    card_width, card_height = 590, 178
+    width, height = columns * card_width + 40, rows * card_height + 92
+    canvas = background(theme_name, (width, height))
+    draw = ImageDraw.Draw(canvas)
+    font = ImageFont.load_default(size=16)
+    title_font = ImageFont.load_default(size=26)
+    draw.rounded_rectangle((18, 14, width - 18, 68), 12, fill=(10, 16, 22, 232))
+    draw.text((34, 28), title, font=title_font, fill="white")
+    zooms = [1.0, 0.75, 0.5]
+    for index, asset_id in enumerate(asset_ids):
+        row, column = divmod(index, columns)
+        left = 20 + column * card_width
+        top = 82 + row * card_height
+        draw.rounded_rectangle(
+            (left, top, left + card_width - 14, top + card_height - 12),
+            10,
+            fill=(10, 16, 22, 218),
+            outline=(222, 232, 238, 155),
+            width=1,
+        )
+        vehicle = vehicle_map[asset_id]
+        draw.text((left + 14, top + 12), vehicle["display_name"], font=font, fill="white")
+        icon = rgba(STATIC_DIR / f"{asset_id}.png")
+        for zoom_index, zoom in enumerate(zooms):
+            scaled = icon.resize(
+                (max(1, round(icon.width * zoom)), max(1, round(icon.height * zoom))),
+                Image.Resampling.LANCZOS,
+            )
+            centre_x = left + 115 + zoom_index * 176
+            icon_y = top + 45 + max(0, (88 - scaled.height) // 2)
+            canvas.alpha_composite(scaled, (centre_x - scaled.width // 2, icon_y))
+            draw.text(
+                (centre_x - 19, top + card_height - 35),
+                f"{round(zoom * 100)}%",
+                font=font,
+                fill=(205, 218, 228, 255),
+            )
+    PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
+    target = PREVIEW_DIR / filename
+    canvas.convert("RGB").save(target, format="PNG", optimize=True)
+    return target
+
+
 def main() -> None:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
     profile = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
@@ -294,6 +347,15 @@ def main() -> None:
     detail_map = {item["id"]: item for item in build_report["vehicles_detail"]}
     expected = {item["id"] for item in vehicles}
     pack_errors: list[str] = []
+    role_cues = profile.get("role_differentiation", {})
+    satellite_boost = set(profile.get("satellite_contrast_boost", []))
+
+    unknown_role_ids = sorted(set(role_cues) - expected)
+    if unknown_role_ids:
+        pack_errors.append(f"role differentiation references unknown assets: {unknown_role_ids}")
+    unknown_satellite_ids = sorted(satellite_boost - expected)
+    if unknown_satellite_ids:
+        pack_errors.append(f"satellite contrast boost references unknown assets: {unknown_satellite_ids}")
 
     if {path.stem for path in STATIC_DIR.glob("*.png")} != expected:
         pack_errors.append("command static directory does not exactly match the 117-slot manifest")
@@ -326,8 +388,15 @@ def main() -> None:
             errors.append("command export did not gain visible width")
         if detail["body_dimensions"]["width"] < int(profile["minimum_icon_width"]):
             errors.append("body width is below the command-visibility minimum")
-        if static.width != detail["body_dimensions"]["width"] + 10:
+        edge_padding = int(detail.get("edge_padding", 5))
+        if static.width != detail["body_dimensions"]["width"] + edge_padding * 2:
             errors.append("visibility outline padding is inconsistent")
+        if static.height != detail["body_dimensions"]["height"] + edge_padding * 2:
+            errors.append("visibility outline vertical padding is inconsistent")
+        if detail.get("role_cue") != role_cues.get(asset_id):
+            errors.append("role differentiation cue does not match the profile")
+        if bool(detail.get("satellite_contrast_boost")) != (asset_id in satellite_boost):
+            errors.append("satellite contrast treatment does not match the profile")
         if len(frames) != int(profile["frames"]):
             errors.append(f"APNG has {len(frames)} frames instead of {profile['frames']}")
         elif frames:
@@ -370,6 +439,13 @@ def main() -> None:
         }
         if min(contrasts.values()) < 9.0:
             errors.append("outline contrast is too weak on at least one map theme")
+        if asset_id in satellite_boost and contrasts["satellite"] < float(
+            profile["qa"]["minimum_boosted_satellite_edge_contrast"]
+        ):
+            errors.append(
+                "boosted satellite edge contrast is below the v1.2 target "
+                f"({contrasts['satellite']} < {profile['qa']['minimum_boosted_satellite_edge_contrast']})"
+            )
         if not changed(standard, static.resize(standard.size, Image.Resampling.LANCZOS)):
             errors.append("modern command treatment is pixel-identical to v1.0")
 
@@ -404,9 +480,64 @@ def main() -> None:
     if closest_distance == 0:
         pack_errors.append(f"rare showcase silhouettes collide: {closest_pair}")
 
+    role_group_results = []
+    minimum_group_distance = int(profile["qa"]["minimum_role_group_silhouette_distance"])
+    for group in profile.get("role_confusion_groups", []):
+        group_ids = group["vehicles"]
+        unknown = sorted(set(group_ids) - expected)
+        if unknown:
+            pack_errors.append(f"role group {group['name']} references unknown assets: {unknown}")
+            continue
+        group_distance = 10_000
+        group_pair = None
+        for index, left in enumerate(group_ids):
+            for right in group_ids[index + 1 :]:
+                distance = hamming(silhouette_hashes[left], silhouette_hashes[right])
+                if distance < group_distance:
+                    group_distance = distance
+                    group_pair = [left, right]
+        passed = group_distance >= minimum_group_distance
+        role_group_results.append(
+            {
+                "name": group["name"],
+                "vehicles": group_ids,
+                "closest_pair": group_pair,
+                "minimum_silhouette_distance": group_distance,
+                "required_distance": minimum_group_distance,
+                "passed": passed,
+            }
+        )
+        if not passed:
+            pack_errors.append(
+                f"role group {group['name']} remains too similar: {group_pair} "
+                f"({group_distance} < {minimum_group_distance})"
+            )
+
     previews = [str(render_busy_map(theme, vehicles).relative_to(ROOT)) for theme in profile["qa"]["themes"]]
     previews.append(str(render_animation_sheet(vehicle_map).relative_to(ROOT)))
     previews.append(str(render_rotor_sheet(vehicle_map).relative_to(ROOT)))
+    previews.append(
+        str(
+            render_targeted_sheet(
+                "v1.2 role-differentiation audit - 100% / 75% / 50%",
+                list(role_cues),
+                "dark",
+                "role-differentiation-map-scale.png",
+                vehicle_map,
+            ).relative_to(ROOT)
+        )
+    )
+    previews.append(
+        str(
+            render_targeted_sheet(
+                "v1.2 satellite-contrast audit - 100% / 75% / 50%",
+                list(profile.get("satellite_contrast_boost", [])),
+                "satellite",
+                "satellite-contrast-map-scale.png",
+                vehicle_map,
+            ).relative_to(ROOT)
+        )
+    )
 
     report = {
         "release": profile["release"],
@@ -423,6 +554,14 @@ def main() -> None:
         "minimum_edge_contrast": min(min(item["edge_contrast"].values()) for item in results),
         "closest_rare_silhouette_pair": closest_pair,
         "closest_rare_silhouette_distance": closest_distance,
+        "role_differentiated_assets": len(role_cues),
+        "satellite_contrast_boosted_assets": len(satellite_boost),
+        "minimum_boosted_satellite_edge_contrast": min(
+            item["edge_contrast"]["satellite"]
+            for item in results
+            if item["id"] in satellite_boost
+        ),
+        "role_group_results": role_group_results,
         "preview_files": previews,
         "pack_errors": pack_errors,
         "vehicles_detail": results,

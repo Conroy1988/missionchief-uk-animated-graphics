@@ -1,0 +1,219 @@
+{
+  "release": "v1.2.0",
+  "profile": "command",
+  "display_name": "Modern Command Clarity",
+  "source_profile": "standard",
+  "frames": 12,
+  "selected_upgrades": [1, 2, 3, 5, 6, 7, 9, 12, 13, 15],
+  "minimum_icon_width": 52,
+  "maximum_icon_width": 296,
+  "new_source_overrides": {
+    "medical-cycle-responder": "assets/masters/v1.1/medical-cycle-responder.png"
+  },
+  "role_differentiation": {
+    "joint-response-unit": "dual-service-command-pod",
+    "police-incident-response-vehicle": "irv-anpr-array",
+    "rapid-response-vehicle": "compact-medical-pod",
+    "rrv-2": "rrv-aerial-pair",
+    "specialist-paramedic-rrv": "specialist-medical-module",
+    "otl": "otl-command-mast",
+    "community-first-responder": "cfr-medical-beacon",
+    "armed-traffic-car": "traffic-anpr-pods",
+    "armed-response-vehicle": "arv-equipment-locker",
+    "eod-commander": "eod-command-mast",
+    "eod-response-vehicle": "eod-response-case",
+    "eod-medium-equipment-van": "eod-twin-canisters",
+    "eod-heavy-equipment-vehicle": "eod-robot-cradle",
+    "marine-eod-response-vehicle": "marine-eod-tube",
+    "marine-eod-equipment-van": "marine-eod-twin-kit"
+  },
+  "role_confusion_groups": [
+    {
+      "name": "JRU / police IRV",
+      "vehicles": ["joint-response-unit", "police-incident-response-vehicle"]
+    },
+    {
+      "name": "RRV family",
+      "vehicles": ["rapid-response-vehicle", "rrv-2", "specialist-paramedic-rrv"]
+    },
+    {
+      "name": "OTL / CFR",
+      "vehicles": ["otl", "community-first-responder"]
+    },
+    {
+      "name": "armed traffic / ARV",
+      "vehicles": ["armed-traffic-car", "armed-response-vehicle"]
+    },
+    {
+      "name": "EOD response and equipment fleet",
+      "vehicles": [
+        "eod-commander",
+        "eod-response-vehicle",
+        "eod-medium-equipment-van",
+        "eod-heavy-equipment-vehicle",
+        "marine-eod-response-vehicle",
+        "marine-eod-equipment-van"
+      ]
+    }
+  ],
+  "satellite_contrast_boost": [
+    "rescue-pod",
+    "m-rav",
+    "hazardous-materials-pod",
+    "welfare-pod",
+    "ilb",
+    "osu-pod",
+    "mountain-rescue-4x4",
+    "drone-vehicle-fire-station",
+    "firearms-personnel-carrier",
+    "armed-cell-van",
+    "hovercraft-transporter",
+    "basu-pod",
+    "eod-medium-equipment-van",
+    "eod-commander",
+    "eod-heavy-equipment-vehicle"
+  ],
+  "helicopters": [
+    "hems",
+    "police-helicopter",
+    "coastguard-rescue-helicopter",
+    "coastguard-rescue-helicopter-large"
+  ],
+  "rotor_geometry": {
+    "hems": {
+      "hub": [0.599, 0.12],
+      "disc_width": 0.84,
+      "clear_below": 0.31,
+      "body_keep_polygon": [
+        [0.40, 0.38],
+        [0.46, 0.22],
+        [0.54, 0.15],
+        [0.60, 0.08],
+        [0.66, 0.14],
+        [0.77, 0.19],
+        [0.84, 0.38]
+      ]
+    },
+    "police-helicopter": {
+      "hub": [0.615, 0.13],
+      "disc_width": 0.84,
+      "clear_below": 0.32,
+      "body_keep_polygon": [
+        [0.42, 0.38],
+        [0.47, 0.24],
+        [0.57, 0.17],
+        [0.615, 0.08],
+        [0.68, 0.15],
+        [0.80, 0.23],
+        [0.88, 0.38]
+      ]
+    },
+    "coastguard-rescue-helicopter": {
+      "hub": [0.568, 0.10],
+      "disc_width": 0.86,
+      "tail_hub": [0.074, 0.22],
+      "tail_radius": 0.20,
+      "clear_below": 0.34,
+      "body_keep_polygon": [
+        [0.33, 0.36],
+        [0.38, 0.24],
+        [0.49, 0.18],
+        [0.55, 0.15],
+        [0.568, 0.03],
+        [0.63, 0.14],
+        [0.77, 0.22],
+        [0.83, 0.36]
+      ]
+    },
+    "coastguard-rescue-helicopter-large": {
+      "hub": [0.559, 0.12],
+      "disc_width": 0.84,
+      "tail_hub": [0.075, 0.20],
+      "tail_radius": 0.18,
+      "clear_below": 0.38,
+      "body_keep_polygon": [
+        [0.29, 0.40],
+        [0.35, 0.28],
+        [0.48, 0.24],
+        [0.53, 0.22],
+        [0.559, 0.07],
+        [0.61, 0.21],
+        [0.73, 0.25],
+        [0.79, 0.40]
+      ]
+    }
+  },
+  "rare_showcase": [
+    "aerial-appliance",
+    "armed-cell-van",
+    "armed-response-vehicle",
+    "airfield-firefighting-command-vehicle",
+    "airfield-operations-supervisor",
+    "airfield-operations-vehicle",
+    "breathing-apparatus-support-unit",
+    "carp",
+    "cbrn-vehicle",
+    "coastguard-mud-rescue-unit",
+    "coastguard-rescue-helicopter",
+    "coastguard-rescue-helicopter-large",
+    "coastguard-rope-rescue-unit",
+    "critical-care-transfer-ambulance",
+    "eiu",
+    "eod-commander",
+    "eod-heavy-equipment-vehicle",
+    "eod-medium-equipment-van",
+    "eod-response-vehicle",
+    "firearms-personnel-carrier",
+    "hazmat-unit",
+    "hems",
+    "hovercraft-transporter",
+    "incident-command-control-unit",
+    "marine-eod-equipment-van",
+    "marine-eod-response-vehicle",
+    "mass-casualty-equipment",
+    "medical-cycle-responder",
+    "police-helicopter",
+    "prv",
+    "rescue-stairs",
+    "rru",
+    "srv"
+  ],
+  "motion": {
+    "amber": [
+      "airfield-operations-vehicle",
+      "airfield-operations-supervisor",
+      "recovery-vehicle",
+      "flatbed-recovery-vehicle",
+      "hgv-recovery-vehicle",
+      "rescue-stairs"
+    ],
+    "road": [
+      "community-midwife",
+      "patient-transport-service-ambulance"
+    ],
+    "marine": [
+      "ilb",
+      "alb"
+    ],
+    "trailer": [
+      "flood-rescue-unit-trailer",
+      "inland-rescue-boat-trailer",
+      "rescue-watercraft-trailer",
+      "hovercraft-trailer",
+      "boat-trailer",
+      "medical-equipment-trailer",
+      "pump-trailer",
+      "operational-support-trailer",
+      "sar-flood-rescue-trailer"
+    ]
+  },
+  "qa": {
+    "themes": ["light", "dark", "satellite", "grayscale"],
+    "zoom_factors": [1.0, 0.75, 0.5],
+    "minimum_visible_pixels_at_half_zoom": 24,
+    "minimum_animation_signature_count": 24,
+    "maximum_shared_timing_signature": 8,
+    "minimum_role_group_silhouette_distance": 18,
+    "minimum_boosted_satellite_edge_contrast": 34.0
+  }
+}
