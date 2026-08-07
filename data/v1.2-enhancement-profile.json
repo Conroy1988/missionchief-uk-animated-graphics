@@ -1,5 +1,5 @@
 {
-  "release": "v1.2.0",
+  "release": "v1.2.1",
   "profile": "command",
   "display_name": "Modern Command Clarity",
   "source_profile": "standard",
@@ -25,78 +25,54 @@
   "new_source_overrides": {
     "medical-cycle-responder": "assets/masters/v1.1/medical-cycle-responder.png"
   },
-  "role_differentiation": {
-    "joint-response-unit": "dual-service-command-pod",
-    "police-incident-response-vehicle": "irv-anpr-array",
-    "rapid-response-vehicle": "compact-medical-pod",
-    "rrv-2": "rrv-aerial-pair",
-    "specialist-paramedic-rrv": "specialist-medical-module",
-    "otl": "otl-command-mast",
-    "community-first-responder": "cfr-medical-beacon",
-    "armed-traffic-car": "traffic-anpr-pods",
-    "armed-response-vehicle": "arv-equipment-locker",
-    "eod-commander": "eod-command-mast",
-    "eod-response-vehicle": "eod-response-case",
-    "eod-medium-equipment-van": "eod-twin-canisters",
-    "eod-heavy-equipment-vehicle": "eod-robot-cradle",
-    "marine-eod-response-vehicle": "marine-eod-tube",
-    "marine-eod-equipment-van": "marine-eod-twin-kit"
-  },
-  "role_confusion_groups": [
-    {
-      "name": "JRU / police IRV",
-      "vehicles": ["joint-response-unit", "police-incident-response-vehicle"]
-    },
-    {
-      "name": "RRV family",
-      "vehicles": ["rapid-response-vehicle", "rrv-2", "specialist-paramedic-rrv"]
-    },
-    {
-      "name": "OTL / CFR",
-      "vehicles": ["otl", "community-first-responder"]
-    },
-    {
-      "name": "armed traffic / ARV",
-      "vehicles": ["armed-traffic-car", "armed-response-vehicle"]
-    },
-    {
-      "name": "EOD response and equipment fleet",
-      "vehicles": [
-        "eod-commander",
-        "eod-response-vehicle",
-        "eod-medium-equipment-van",
-        "eod-heavy-equipment-vehicle",
-        "marine-eod-response-vehicle",
-        "marine-eod-equipment-van"
-      ]
-    }
-  ],
-  "specialist_equipment": {
-    "hazmat-unit": "hazmat-detection-rack",
-    "breathing-apparatus-support-unit": "ba-cylinder-rack",
-    "incident-command-control-unit": "command-mast-dish",
-    "ambulance-control-unit": "command-mast-dish",
-    "cbrn-vehicle": "hazmat-detection-rack",
-    "mass-casualty-equipment": "mass-casualty-cases",
-    "rescue-pod": "pod-rescue-tools",
-    "command-pod": "pod-command-array",
-    "welfare-pod": "pod-welfare-awning",
-    "basu-pod": "pod-ba-cylinders",
-    "hazardous-materials-pod": "pod-hazmat-canisters",
-    "osu-pod": "pod-operations-cases",
-    "firearms-personnel-carrier": "tactical-equipment-locker",
-    "coastguard-mud-rescue-unit": "mud-rescue-sled",
-    "coastguard-rope-rescue-unit": "rope-rescue-reels",
-    "inland-rescue-boat-trailer": "watercraft-rollbar",
-    "rescue-watercraft-trailer": "watercraft-rollbar",
-    "boat-trailer": "watercraft-rollbar",
-    "control-van-sar": "command-mast-dish",
-    "drone-vehicle-sar-hq": "drone-launch-cradle",
-    "drone-vehicle-fire-station": "drone-launch-cradle",
-    "drone-vehicle-police-station": "drone-launch-cradle",
-    "control-van-mountain-rescue": "command-mast-dish",
-    "rru": "rope-rescue-reels",
-    "eiu": "evidence-camera-mast"
+  "role_differentiation": {},
+  "role_confusion_groups": [],
+  "specialist_equipment": {},
+  "retired_generated_overlays": {
+    "role_differentiation": [
+      "joint-response-unit",
+      "police-incident-response-vehicle",
+      "rapid-response-vehicle",
+      "rrv-2",
+      "specialist-paramedic-rrv",
+      "otl",
+      "community-first-responder",
+      "armed-traffic-car",
+      "armed-response-vehicle",
+      "eod-commander",
+      "eod-response-vehicle",
+      "eod-medium-equipment-van",
+      "eod-heavy-equipment-vehicle",
+      "marine-eod-response-vehicle",
+      "marine-eod-equipment-van"
+    ],
+    "specialist_equipment": [
+      "hazmat-unit",
+      "breathing-apparatus-support-unit",
+      "incident-command-control-unit",
+      "ambulance-control-unit",
+      "cbrn-vehicle",
+      "mass-casualty-equipment",
+      "rescue-pod",
+      "command-pod",
+      "welfare-pod",
+      "basu-pod",
+      "hazardous-materials-pod",
+      "osu-pod",
+      "firearms-personnel-carrier",
+      "coastguard-mud-rescue-unit",
+      "coastguard-rope-rescue-unit",
+      "inland-rescue-boat-trailer",
+      "rescue-watercraft-trailer",
+      "boat-trailer",
+      "control-van-sar",
+      "drone-vehicle-sar-hq",
+      "drone-vehicle-fire-station",
+      "drone-vehicle-police-station",
+      "control-van-mountain-rescue",
+      "rru",
+      "eiu"
+    ]
   },
   "satellite_contrast_boost": [
     "rescue-pod",
@@ -285,9 +261,8 @@
     "maximum_shared_flash_phase": 14,
     "minimum_flash_activity_signatures": 24,
     "maximum_shared_flash_activity_signature": 8,
-    "minimum_specialist_equipment_half_zoom_pixels": 4,
     "minimum_grounding_shadow_half_zoom_pixels": 2,
-    "minimum_role_group_silhouette_distance": 18,
+    "maximum_retired_overlay_top_padding_pixels": 0,
     "minimum_boosted_satellite_edge_contrast": 34.0
   }
 }

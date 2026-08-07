@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the deterministic v1.2 Modern Command Clarity fleet profile."""
+"""Build the deterministic v1.2.1 Modern Command Clarity fleet profile."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ PROFILE_PATH = ROOT / "data" / "v1.2-enhancement-profile.json"
 STANDARD_DIR = ROOT / "assets" / "exports" / "standard" / "static"
 STATIC_DIR = ROOT / "assets" / "exports" / "command" / "static"
 ANIMATED_DIR = ROOT / "assets" / "exports" / "command" / "animated"
-REPORT_PATH = ROOT / "data" / "v1.2-build-report.json"
+REPORT_PATH = ROOT / "data" / "v1.2.1-build-report.json"
 
 
 SERVICE_ACCENTS = {
@@ -945,6 +945,17 @@ def main() -> None:
     overrides = profile["new_source_overrides"]
     role_cues = profile.get("role_differentiation", {})
     equipment_cues = profile.get("specialist_equipment", {})
+    if role_cues or equipment_cues:
+        raise ValueError(
+            "generated role and specialist roof overlays are retired in v1.2.1; "
+            "both active cue maps must remain empty"
+        )
+    retired_overlay_groups = profile.get("retired_generated_overlays", {})
+    retired_overlay_assets = {
+        asset_id
+        for group in retired_overlay_groups.values()
+        for asset_id in group
+    }
     satellite_boost = set(profile.get("satellite_contrast_boost", []))
     grounding = profile.get("grounding_shadows", {})
     aerial_shadow_assets = set(grounding.get("aerial", []))
@@ -980,25 +991,22 @@ def main() -> None:
         body = resize_width(body, target_width)
         body = modern_tone(body)
         uses_generic_specialist_language = (
-            asset_id in rare and asset_id not in role_cues and asset_id not in equipment_cues
+            asset_id in rare and asset_id not in retired_overlay_assets
         )
         if uses_generic_specialist_language:
             body = add_specialist_language(body, vehicle["service"], asset_id)
         motion_reference_size = body.size
-        equipment_cue = equipment_cues.get(asset_id)
+        equipment_cue = None
         equipment_cue_offset = (0, 0)
         equipment_metrics = {"added_alpha_pixels": 0, "half_zoom_added_alpha_pixels": 0}
-        if equipment_cue:
-            body, equipment_cue_offset, equipment_metrics = add_profiled_equipment(
-                body,
-                equipment_cue,
-                vehicle["service"],
-            )
-        role_cue = role_cues.get(asset_id)
+        role_cue = None
         role_cue_offset = (0, 0)
-        if role_cue:
-            body, role_cue_offset = add_role_differentiation(body, role_cue, vehicle["service"])
         body_size = body.size
+        retired_overlay_top_padding = (
+            max(0, body_size[1] - motion_reference_size[1])
+            if asset_id in retired_overlay_assets
+            else 0
+        )
         rotorless_body = None
         rotorless_base = None
         if asset_id in aerial_shadow_assets:
@@ -1073,6 +1081,8 @@ def main() -> None:
                 "specialist_equipment_half_zoom_added_alpha_pixels": equipment_metrics[
                     "half_zoom_added_alpha_pixels"
                 ],
+                "retired_generated_overlay": asset_id in retired_overlay_assets,
+                "retired_overlay_top_padding_pixels": retired_overlay_top_padding,
                 "satellite_contrast_boost": asset_id in satellite_boost,
                 "edge_padding": edge_padding,
                 "grounding_shadow": shadow_metrics,
@@ -1112,10 +1122,11 @@ def main() -> None:
         "specialist_equipment_assets": sum(
             item["specialist_equipment_cue"] is not None for item in results
         ),
-        "minimum_specialist_equipment_half_zoom_pixels": min(
-            item["specialist_equipment_half_zoom_added_alpha_pixels"]
-            for item in results
-            if item["specialist_equipment_cue"] is not None
+        "retired_generated_overlay_assets": sum(
+            item["retired_generated_overlay"] for item in results
+        ),
+        "maximum_retired_overlay_top_padding_pixels": max(
+            item["retired_overlay_top_padding_pixels"] for item in results
         ),
         "satellite_contrast_boosted_assets": sum(item["satellite_contrast_boost"] for item in results),
         "grounding_shadow_assets": sum(item["grounding_shadow"]["visible_pixels"] > 0 for item in results),

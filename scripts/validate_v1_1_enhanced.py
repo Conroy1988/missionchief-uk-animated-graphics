@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate v1.2 exports and render automated busy-map QA evidence."""
+"""Validate v1.2.1 exports and render automated busy-map QA evidence."""
 
 from __future__ import annotations
 
@@ -14,12 +14,12 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageOps
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "data" / "prototypes.json"
 PROFILE_PATH = ROOT / "data" / "v1.2-enhancement-profile.json"
-BUILD_REPORT_PATH = ROOT / "data" / "v1.2-build-report.json"
-REPORT_PATH = ROOT / "data" / "v1.2-qa-report.json"
+BUILD_REPORT_PATH = ROOT / "data" / "v1.2.1-build-report.json"
+REPORT_PATH = ROOT / "data" / "v1.2.1-qa-report.json"
 STANDARD_DIR = ROOT / "assets" / "exports" / "standard" / "static"
 STATIC_DIR = ROOT / "assets" / "exports" / "command" / "static"
 ANIMATED_DIR = ROOT / "assets" / "exports" / "command" / "animated"
-PREVIEW_DIR = ROOT / "assets" / "previews" / "v1.2"
+PREVIEW_DIR = ROOT / "assets" / "previews" / "v1.2.1"
 
 
 THEMES = {
@@ -214,7 +214,11 @@ def render_busy_map(theme_name: str, vehicles: list[dict]) -> Path:
     draw.text((width - 520, 29), "117-vehicle automated dense-map QA", font=title_font, fill="white")
     PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
     target = PREVIEW_DIR / f"busy-map-{theme_name}.png"
-    canvas.convert("RGB").save(target, format="PNG", optimize=True)
+    canvas.convert("RGB").quantize(
+        colors=256,
+        method=Image.Quantize.MEDIANCUT,
+        dither=Image.Dither.NONE,
+    ).save(target, format="PNG", optimize=True)
     return target
 
 
@@ -228,7 +232,7 @@ def render_animation_sheet(vehicle_map: dict[str, dict]) -> Path:
     draw = ImageDraw.Draw(canvas)
     font = ImageFont.load_default(size=17)
     title_font = ImageFont.load_default(size=24)
-    draw.text((20, 17), "v1.2 independent-light and motion frame audit", font=title_font, fill="white")
+    draw.text((20, 17), "v1.2.1 independent-light and motion frame audit", font=title_font, fill="white")
     for row, asset_id in enumerate(SHOWCASE_IDS):
         vehicle = vehicle_map[asset_id]
         frames, _durations = frames_and_durations(ANIMATED_DIR / f"{asset_id}.png")
@@ -259,7 +263,7 @@ def render_desynchronised_lights_sheet(vehicle_map: dict[str, dict], asset_ids: 
     font = ImageFont.load_default(size=16)
     title_font = ImageFont.load_default(size=26)
     draw.rounded_rectangle((18, 14, width - 18, 68), 12, fill=(10, 16, 22, 235))
-    draw.text((34, 28), "v1.2 desynchronised crowded-response frame audit", font=title_font, fill="white")
+    draw.text((34, 28), "v1.2.1 desynchronised crowded-response frame audit", font=title_font, fill="white")
     frame_map = {
         asset_id: frames_and_durations(ANIMATED_DIR / f"{asset_id}.png")[0]
         for asset_id in asset_ids
@@ -323,7 +327,7 @@ def render_rotor_sheet(vehicle_map: dict[str, dict]) -> Path:
     draw = ImageDraw.Draw(canvas)
     font = ImageFont.load_default(size=17)
     title_font = ImageFont.load_default(size=24)
-    draw.text((20, 18), "v1.2 helicopter rotor regression audit", font=title_font, fill="white")
+    draw.text((20, 18), "v1.2.1 helicopter rotor regression audit", font=title_font, fill="white")
     for row, asset_id in enumerate(ROTOR_SHOWCASE_IDS):
         vehicle = vehicle_map[asset_id]
         frames, _durations = frames_and_durations(ANIMATED_DIR / f"{asset_id}.png")
@@ -414,17 +418,28 @@ def main() -> None:
     pack_errors: list[str] = []
     role_cues = profile.get("role_differentiation", {})
     equipment_cues = profile.get("specialist_equipment", {})
+    retired_overlay_groups = profile.get("retired_generated_overlays", {})
+    retired_role_assets = set(retired_overlay_groups.get("role_differentiation", []))
+    retired_equipment_assets = set(retired_overlay_groups.get("specialist_equipment", []))
+    retired_overlay_assets = retired_role_assets | retired_equipment_assets
     satellite_boost = set(profile.get("satellite_contrast_boost", []))
     grounding = profile.get("grounding_shadows", {})
     aerial_shadow_assets = set(grounding.get("aerial", []))
     marine_shadow_assets = set(grounding.get("marine", []))
 
-    unknown_role_ids = sorted(set(role_cues) - expected)
-    if unknown_role_ids:
-        pack_errors.append(f"role differentiation references unknown assets: {unknown_role_ids}")
-    unknown_equipment_ids = sorted(set(equipment_cues) - expected)
-    if unknown_equipment_ids:
-        pack_errors.append(f"specialist equipment references unknown assets: {unknown_equipment_ids}")
+    if role_cues or equipment_cues:
+        pack_errors.append("generated role and specialist roof overlays must remain retired")
+    if set(retired_overlay_groups) != {"role_differentiation", "specialist_equipment"}:
+        pack_errors.append("retired generated-overlay groups are incomplete")
+    if len(retired_role_assets) != 15 or len(retired_equipment_assets) != 25:
+        pack_errors.append("retired generated-overlay inventory must remain 15 role + 25 specialist assets")
+    if retired_role_assets & retired_equipment_assets:
+        pack_errors.append("retired role and specialist overlay inventories overlap")
+    if len(retired_overlay_assets) != 40:
+        pack_errors.append("retired generated-overlay inventory must contain exactly 40 assets")
+    unknown_retired_ids = sorted(retired_overlay_assets - expected)
+    if unknown_retired_ids:
+        pack_errors.append(f"retired generated overlays reference unknown assets: {unknown_retired_ids}")
     unknown_satellite_ids = sorted(satellite_boost - expected)
     if unknown_satellite_ids:
         pack_errors.append(f"satellite contrast boost references unknown assets: {unknown_satellite_ids}")
@@ -450,8 +465,10 @@ def main() -> None:
         pack_errors.append("fleet does not have enough independent emergency-light activity signatures")
     if build_report["maximum_shared_flash_activity_signature"] > profile["qa"]["maximum_shared_flash_activity_signature"]:
         pack_errors.append("too many emergency vehicles share one light-activity signature")
-    if build_report["minimum_specialist_equipment_half_zoom_pixels"] < profile["qa"]["minimum_specialist_equipment_half_zoom_pixels"]:
-        pack_errors.append("specialist equipment does not remain visible at half zoom")
+    if build_report.get("retired_generated_overlay_assets") != 40:
+        pack_errors.append("build report does not cover all 40 retired generated overlays")
+    if build_report.get("maximum_retired_overlay_top_padding_pixels") != 0:
+        pack_errors.append("build report detected artificial roof-overlay padding")
     if build_report["minimum_grounding_shadow_half_zoom_pixels"] < profile["qa"]["minimum_grounding_shadow_half_zoom_pixels"]:
         pack_errors.append("grounding shadow does not remain visible at half zoom")
     if set(profile.get("rotor_geometry", {})) != set(profile["helicopters"]):
@@ -486,10 +503,16 @@ def main() -> None:
             errors.append("role differentiation cue does not match the profile")
         if detail.get("specialist_equipment_cue") != equipment_cues.get(asset_id):
             errors.append("specialist equipment cue does not match the profile")
-        if asset_id in equipment_cues and detail.get(
-            "specialist_equipment_half_zoom_added_alpha_pixels", 0
-        ) < int(profile["qa"]["minimum_specialist_equipment_half_zoom_pixels"]):
-            errors.append("specialist equipment silhouette disappears at half zoom")
+        is_retired_overlay_asset = asset_id in retired_overlay_assets
+        if bool(detail.get("retired_generated_overlay")) != is_retired_overlay_asset:
+            errors.append("retired generated-overlay inventory does not match the build report")
+        retired_top_padding = int(detail.get("retired_overlay_top_padding_pixels", 0))
+        if is_retired_overlay_asset and retired_top_padding > int(
+            profile["qa"]["maximum_retired_overlay_top_padding_pixels"]
+        ):
+            errors.append("artificial roof-overlay padding is present")
+        if is_retired_overlay_asset and detail["body_dimensions"] != detail["motion_reference_dimensions"]:
+            errors.append("retired overlay changed the corrected vehicle body dimensions")
         if bool(detail.get("satellite_contrast_boost")) != (asset_id in satellite_boost):
             errors.append("satellite contrast treatment does not match the profile")
         expected_shadow_mode = (
@@ -573,6 +596,10 @@ def main() -> None:
                 "specialist_equipment_half_zoom_added_alpha_pixels": detail.get(
                     "specialist_equipment_half_zoom_added_alpha_pixels"
                 ),
+                "retired_generated_overlay": detail.get("retired_generated_overlay"),
+                "retired_overlay_top_padding_pixels": detail.get(
+                    "retired_overlay_top_padding_pixels"
+                ),
                 "grounding_shadow": detail.get("grounding_shadow"),
                 "strong_rotor_underlay_pixels": rotor_underlay_pixels,
                 "strong_rotor_underlay_limit": rotor_underlay_limit,
@@ -595,39 +622,6 @@ def main() -> None:
     if closest_distance == 0:
         pack_errors.append(f"rare showcase silhouettes collide: {closest_pair}")
 
-    role_group_results = []
-    minimum_group_distance = int(profile["qa"]["minimum_role_group_silhouette_distance"])
-    for group in profile.get("role_confusion_groups", []):
-        group_ids = group["vehicles"]
-        unknown = sorted(set(group_ids) - expected)
-        if unknown:
-            pack_errors.append(f"role group {group['name']} references unknown assets: {unknown}")
-            continue
-        group_distance = 10_000
-        group_pair = None
-        for index, left in enumerate(group_ids):
-            for right in group_ids[index + 1 :]:
-                distance = hamming(silhouette_hashes[left], silhouette_hashes[right])
-                if distance < group_distance:
-                    group_distance = distance
-                    group_pair = [left, right]
-        passed = group_distance >= minimum_group_distance
-        role_group_results.append(
-            {
-                "name": group["name"],
-                "vehicles": group_ids,
-                "closest_pair": group_pair,
-                "minimum_silhouette_distance": group_distance,
-                "required_distance": minimum_group_distance,
-                "passed": passed,
-            }
-        )
-        if not passed:
-            pack_errors.append(
-                f"role group {group['name']} remains too similar: {group_pair} "
-                f"({group_distance} < {minimum_group_distance})"
-            )
-
     previews = [str(render_busy_map(theme, vehicles).relative_to(ROOT)) for theme in profile["qa"]["themes"]]
     previews.append(str(render_animation_sheet(vehicle_map).relative_to(ROOT)))
     previews.append(
@@ -642,10 +636,10 @@ def main() -> None:
     previews.append(
         str(
             render_targeted_sheet(
-                "v1.2 role-differentiation audit - 100% / 75% / 50%",
-                list(role_cues),
+                "v1.2.1 corrected role rooflines - 100% / 75% / 50%",
+                sorted(retired_role_assets),
                 "dark",
-                "role-differentiation-map-scale.png",
+                "corrected-role-rooflines-map-scale.png",
                 vehicle_map,
             ).relative_to(ROOT)
         )
@@ -653,10 +647,10 @@ def main() -> None:
     previews.append(
         str(
             render_targeted_sheet(
-                "v1.2 specialist-equipment silhouette audit - 100% / 75% / 50%",
-                list(equipment_cues),
+                "v1.2.1 corrected specialist rooflines - 100% / 75% / 50%",
+                sorted(retired_equipment_assets),
                 "dark",
-                "specialist-equipment-map-scale.png",
+                "corrected-specialist-rooflines-map-scale.png",
                 vehicle_map,
             ).relative_to(ROOT)
         )
@@ -664,7 +658,7 @@ def main() -> None:
     previews.append(
         str(
             render_targeted_sheet(
-                "v1.2 grounding-shadow audit - 100% / 75% / 50%",
+                "v1.2.1 grounding-shadow audit - 100% / 75% / 50%",
                 list(grounding.get("showcase", [])),
                 "satellite",
                 "grounding-shadows-map-scale.png",
@@ -675,7 +669,7 @@ def main() -> None:
     previews.append(
         str(
             render_targeted_sheet(
-                "v1.2 satellite-contrast audit - 100% / 75% / 50%",
+                "v1.2.1 satellite-contrast audit - 100% / 75% / 50%",
                 list(profile.get("satellite_contrast_boost", [])),
                 "satellite",
                 "satellite-contrast-map-scale.png",
@@ -707,10 +701,11 @@ def main() -> None:
         "closest_rare_silhouette_distance": closest_distance,
         "role_differentiated_assets": len(role_cues),
         "specialist_equipment_assets": len(equipment_cues),
-        "minimum_specialist_equipment_half_zoom_pixels": min(
-            item["specialist_equipment_half_zoom_added_alpha_pixels"]
+        "retired_generated_overlay_assets": len(retired_overlay_assets),
+        "maximum_retired_overlay_top_padding_pixels": max(
+            item["retired_overlay_top_padding_pixels"]
             for item in results
-            if item["specialist_equipment_cue"] is not None
+            if item["retired_generated_overlay"]
         ),
         "grounding_shadow_assets": len(results),
         "minimum_grounding_shadow_half_zoom_pixels": min(
@@ -722,7 +717,7 @@ def main() -> None:
             for item in results
             if item["id"] in satellite_boost
         ),
-        "role_group_results": role_group_results,
+        "role_group_results": [],
         "preview_files": previews,
         "pack_errors": pack_errors,
         "vehicles_detail": results,
