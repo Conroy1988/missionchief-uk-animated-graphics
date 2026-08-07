@@ -248,6 +248,71 @@ def render_animation_sheet(vehicle_map: dict[str, dict]) -> Path:
     return target
 
 
+def render_desynchronised_lights_sheet(vehicle_map: dict[str, dict], asset_ids: list[str]) -> Path:
+    """Render the same crowded response across all frames to expose fleet synchronisation."""
+    columns = 3
+    rows = 4
+    card_width, card_height = 600, 252
+    width, height = columns * card_width + 40, rows * card_height + 92
+    canvas = background("dark", (width, height))
+    draw = ImageDraw.Draw(canvas)
+    font = ImageFont.load_default(size=16)
+    title_font = ImageFont.load_default(size=26)
+    draw.rounded_rectangle((18, 14, width - 18, 68), 12, fill=(10, 16, 22, 235))
+    draw.text((34, 28), "v1.2 desynchronised crowded-response frame audit", font=title_font, fill="white")
+    frame_map = {
+        asset_id: frames_and_durations(ANIMATED_DIR / f"{asset_id}.png")[0]
+        for asset_id in asset_ids
+    }
+    placements = [
+        (88, 65),
+        (245, 48),
+        (420, 72),
+        (138, 125),
+        (300, 117),
+        (466, 133),
+        (70, 176),
+        (250, 177),
+        (425, 184),
+    ]
+    for frame_index in range(12):
+        row, column = divmod(frame_index, columns)
+        left = 20 + column * card_width
+        top = 82 + row * card_height
+        draw.rounded_rectangle(
+            (left, top, left + card_width - 14, top + card_height - 12),
+            10,
+            fill=(10, 16, 22, 220),
+            outline=(180, 197, 210, 165),
+            width=1,
+        )
+        draw.text((left + 14, top + 12), f"Frame {frame_index + 1}", font=font, fill="white")
+        draw.ellipse((left + 270, top + 86, left + 332, top + 148), fill=(150, 37, 37, 120), outline=(255, 183, 40, 210), width=2)
+        for index, asset_id in enumerate(asset_ids):
+            frame = frame_map[asset_id][frame_index]
+            scale = min(0.58, 116 / frame.width, 65 / frame.height)
+            thumb = frame.resize(
+                (max(1, round(frame.width * scale)), max(1, round(frame.height * scale))),
+                Image.Resampling.LANCZOS,
+            )
+            px, py = placements[index % len(placements)]
+            canvas.alpha_composite(
+                thumb,
+                (left + px - thumb.width // 2, top + py - thumb.height // 2),
+            )
+            if frame_index == 0:
+                draw.text(
+                    (left + px - 32, top + min(card_height - 30, py + 36)),
+                    vehicle_map[asset_id]["display_name"][:18],
+                    font=ImageFont.load_default(size=11),
+                    fill=(173, 188, 200, 255),
+                )
+    PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
+    target = PREVIEW_DIR / "desynchronised-lights-crowd.png"
+    canvas.convert("RGB").save(target, format="PNG", optimize=True)
+    return target
+
+
 def render_rotor_sheet(vehicle_map: dict[str, dict]) -> Path:
     columns = 12
     cell_width, cell_height = 212, 128
@@ -348,14 +413,26 @@ def main() -> None:
     expected = {item["id"] for item in vehicles}
     pack_errors: list[str] = []
     role_cues = profile.get("role_differentiation", {})
+    equipment_cues = profile.get("specialist_equipment", {})
     satellite_boost = set(profile.get("satellite_contrast_boost", []))
+    grounding = profile.get("grounding_shadows", {})
+    aerial_shadow_assets = set(grounding.get("aerial", []))
+    marine_shadow_assets = set(grounding.get("marine", []))
 
     unknown_role_ids = sorted(set(role_cues) - expected)
     if unknown_role_ids:
         pack_errors.append(f"role differentiation references unknown assets: {unknown_role_ids}")
+    unknown_equipment_ids = sorted(set(equipment_cues) - expected)
+    if unknown_equipment_ids:
+        pack_errors.append(f"specialist equipment references unknown assets: {unknown_equipment_ids}")
     unknown_satellite_ids = sorted(satellite_boost - expected)
     if unknown_satellite_ids:
         pack_errors.append(f"satellite contrast boost references unknown assets: {unknown_satellite_ids}")
+    unknown_shadow_ids = sorted((aerial_shadow_assets | marine_shadow_assets) - expected)
+    if unknown_shadow_ids:
+        pack_errors.append(f"grounding shadow profile references unknown assets: {unknown_shadow_ids}")
+    if aerial_shadow_assets & marine_shadow_assets:
+        pack_errors.append("grounding shadow aerial and marine sets overlap")
 
     if {path.stem for path in STATIC_DIR.glob("*.png")} != expected:
         pack_errors.append("command static directory does not exactly match the 117-slot manifest")
@@ -365,6 +442,18 @@ def main() -> None:
         pack_errors.append("too few distinct animation timing signatures")
     if build_report["maximum_shared_timing_signature"] > profile["qa"]["maximum_shared_timing_signature"]:
         pack_errors.append("too many assets share one animation timing signature")
+    if build_report["flash_phase_bucket_count"] < profile["qa"]["minimum_flash_phase_buckets"]:
+        pack_errors.append("fleet does not use enough independent emergency-light phase buckets")
+    if build_report["maximum_shared_flash_phase"] > profile["qa"]["maximum_shared_flash_phase"]:
+        pack_errors.append("too many emergency vehicles share one flash phase")
+    if build_report["flash_activity_signature_count"] < profile["qa"]["minimum_flash_activity_signatures"]:
+        pack_errors.append("fleet does not have enough independent emergency-light activity signatures")
+    if build_report["maximum_shared_flash_activity_signature"] > profile["qa"]["maximum_shared_flash_activity_signature"]:
+        pack_errors.append("too many emergency vehicles share one light-activity signature")
+    if build_report["minimum_specialist_equipment_half_zoom_pixels"] < profile["qa"]["minimum_specialist_equipment_half_zoom_pixels"]:
+        pack_errors.append("specialist equipment does not remain visible at half zoom")
+    if build_report["minimum_grounding_shadow_half_zoom_pixels"] < profile["qa"]["minimum_grounding_shadow_half_zoom_pixels"]:
+        pack_errors.append("grounding shadow does not remain visible at half zoom")
     if set(profile.get("rotor_geometry", {})) != set(profile["helicopters"]):
         pack_errors.append("rotor geometry does not exactly cover the helicopter set")
 
@@ -395,8 +484,27 @@ def main() -> None:
             errors.append("visibility outline vertical padding is inconsistent")
         if detail.get("role_cue") != role_cues.get(asset_id):
             errors.append("role differentiation cue does not match the profile")
+        if detail.get("specialist_equipment_cue") != equipment_cues.get(asset_id):
+            errors.append("specialist equipment cue does not match the profile")
+        if asset_id in equipment_cues and detail.get(
+            "specialist_equipment_half_zoom_added_alpha_pixels", 0
+        ) < int(profile["qa"]["minimum_specialist_equipment_half_zoom_pixels"]):
+            errors.append("specialist equipment silhouette disappears at half zoom")
         if bool(detail.get("satellite_contrast_boost")) != (asset_id in satellite_boost):
             errors.append("satellite contrast treatment does not match the profile")
+        expected_shadow_mode = (
+            "aerial"
+            if asset_id in aerial_shadow_assets
+            else "marine"
+            if asset_id in marine_shadow_assets
+            else "ground"
+        )
+        if detail.get("grounding_shadow", {}).get("mode") != expected_shadow_mode:
+            errors.append("grounding shadow mode does not match the profile")
+        if detail.get("grounding_shadow", {}).get("half_zoom_visible_pixels", 0) < int(
+            profile["qa"]["minimum_grounding_shadow_half_zoom_pixels"]
+        ):
+            errors.append("grounding shadow disappears at half zoom")
         if len(frames) != int(profile["frames"]):
             errors.append(f"APNG has {len(frames)} frames instead of {profile['frames']}")
         elif frames:
@@ -459,6 +567,13 @@ def main() -> None:
                 "frames": len(frames),
                 "changed_frames": sum(changed(frames[0], frame) for frame in frames[1:]) if frames else 0,
                 "cycle_ms": sum(durations),
+                "flash_phase": detail.get("flash_phase"),
+                "flash_activity_signature": detail.get("flash_activity_signature"),
+                "specialist_equipment_cue": detail.get("specialist_equipment_cue"),
+                "specialist_equipment_half_zoom_added_alpha_pixels": detail.get(
+                    "specialist_equipment_half_zoom_added_alpha_pixels"
+                ),
+                "grounding_shadow": detail.get("grounding_shadow"),
                 "strong_rotor_underlay_pixels": rotor_underlay_pixels,
                 "strong_rotor_underlay_limit": rotor_underlay_limit,
                 "half_zoom_visible_pixels": visible_pixels,
@@ -515,6 +630,14 @@ def main() -> None:
 
     previews = [str(render_busy_map(theme, vehicles).relative_to(ROOT)) for theme in profile["qa"]["themes"]]
     previews.append(str(render_animation_sheet(vehicle_map).relative_to(ROOT)))
+    previews.append(
+        str(
+            render_desynchronised_lights_sheet(
+                vehicle_map,
+                list(profile["animation_desynchronisation"]["showcase"]),
+            ).relative_to(ROOT)
+        )
+    )
     previews.append(str(render_rotor_sheet(vehicle_map).relative_to(ROOT)))
     previews.append(
         str(
@@ -523,6 +646,28 @@ def main() -> None:
                 list(role_cues),
                 "dark",
                 "role-differentiation-map-scale.png",
+                vehicle_map,
+            ).relative_to(ROOT)
+        )
+    )
+    previews.append(
+        str(
+            render_targeted_sheet(
+                "v1.2 specialist-equipment silhouette audit - 100% / 75% / 50%",
+                list(equipment_cues),
+                "dark",
+                "specialist-equipment-map-scale.png",
+                vehicle_map,
+            ).relative_to(ROOT)
+        )
+    )
+    previews.append(
+        str(
+            render_targeted_sheet(
+                "v1.2 grounding-shadow audit - 100% / 75% / 50%",
+                list(grounding.get("showcase", [])),
+                "satellite",
+                "grounding-shadows-map-scale.png",
                 vehicle_map,
             ).relative_to(ROOT)
         )
@@ -550,11 +695,27 @@ def main() -> None:
         "zoom_factors_tested": profile["qa"]["zoom_factors"],
         "timing_signature_count": len(timing_signatures),
         "maximum_shared_timing_signature": max(timing_signatures.values()),
+        "flash_phase_bucket_count": build_report["flash_phase_bucket_count"],
+        "maximum_shared_flash_phase": build_report["maximum_shared_flash_phase"],
+        "flash_activity_signature_count": build_report["flash_activity_signature_count"],
+        "maximum_shared_flash_activity_signature": build_report[
+            "maximum_shared_flash_activity_signature"
+        ],
         "minimum_half_zoom_visible_pixels": min(item["half_zoom_visible_pixels"] for item in results),
         "minimum_edge_contrast": min(min(item["edge_contrast"].values()) for item in results),
         "closest_rare_silhouette_pair": closest_pair,
         "closest_rare_silhouette_distance": closest_distance,
         "role_differentiated_assets": len(role_cues),
+        "specialist_equipment_assets": len(equipment_cues),
+        "minimum_specialist_equipment_half_zoom_pixels": min(
+            item["specialist_equipment_half_zoom_added_alpha_pixels"]
+            for item in results
+            if item["specialist_equipment_cue"] is not None
+        ),
+        "grounding_shadow_assets": len(results),
+        "minimum_grounding_shadow_half_zoom_pixels": min(
+            item["grounding_shadow"]["half_zoom_visible_pixels"] for item in results
+        ),
         "satellite_contrast_boosted_assets": len(satellite_boost),
         "minimum_boosted_satellite_edge_contrast": min(
             item["edge_contrast"]["satellite"]

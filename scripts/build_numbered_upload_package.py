@@ -19,6 +19,7 @@ INVALID_WINDOWS_CHARS = re.compile(r'[<>:"/\\|?*\x00-\x1f]')
 MULTISPACE = re.compile(r"\s+")
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 EXPECTED_SLOTS = 117
+ZIP_EPOCH = (1980, 1, 1, 0, 0, 0)
 
 
 def sha256(path: Path) -> str:
@@ -53,6 +54,15 @@ def copy_exact(source: Path, destination: Path) -> str:
     if source_hash != destination_hash:
         raise RuntimeError(f"Byte verification failed: {source} -> {destination}")
     return source_hash
+
+
+def add_deterministic_zip_member(archive: zipfile.ZipFile, path: Path, archive_name: Path) -> None:
+    """Write one file with stable metadata so identical inputs yield an identical archive."""
+    info = zipfile.ZipInfo(str(archive_name).replace("\\", "/"), date_time=ZIP_EPOCH)
+    info.compress_type = zipfile.ZIP_DEFLATED
+    info.create_system = 3
+    info.external_attr = (0o100644 & 0xFFFF) << 16
+    archive.writestr(info, path.read_bytes(), compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
 
 
 def write_readme(package_root: Path, version: str, profile: str) -> None:
@@ -203,7 +213,7 @@ def build(root: Path, version: str, profile: str) -> tuple[Path, Path, int]:
     with zipfile.ZipFile(archive_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for path in sorted(package_root.rglob("*")):
             if path.is_file():
-                archive.write(path, path.relative_to(dist))
+                add_deterministic_zip_member(archive, path, path.relative_to(dist))
 
     archive_hash = sha256(archive_path)
     checksum_path.write_text(f"{archive_hash}  {archive_path.name}\n", encoding="ascii")

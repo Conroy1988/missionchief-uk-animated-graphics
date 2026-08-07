@@ -31,13 +31,15 @@ Release **v1.2.0** covers every one of the **117 current vehicle slots** in Miss
 
 - 117 transparent, map-scale static PNGs
 - 117 twelve-frame APNGs with a unique timing signature per vehicle
-- 87 emergency assets with independent roof, grille, body and rear blue-light rhythms
+- 87 emergency assets distributed across 11 fleet phase offsets, 48 visible light-activity signatures and independent roof, grille, body and rear rhythms
 - Per-aircraft main-rotor alignment on all four helicopters, with the old static-under-moving blade artefact removed
 - Animated external tail rotors on both coastguard helicopter variants; HEMS and police fenestrons retain their correct enclosed appearance
 - Appropriate amber, wheel, navigation, wake and marker-light movement on 19 non-blue-light assets
 - Command Visibility sizing and dual-tone map edges across the complete fleet
 - Role-specific roof equipment and stronger silhouettes on 15 commonly confused assets, covering JRU/IRV, the RRV family, OTL/CFR, Armed Traffic/ARV and the EOD fleet
-- Reinforced light/dark dual edges on the 15 weakest satellite-map assets; the minimum targeted satellite contrast rises from 24.36 in v1.1.1 to 47.19 in v1.2.0
+- Role-authentic specialist equipment on 25 further assets, including command masts, drone cradles, rescue kit, BA/HazMat cylinders, pod equipment, rope reels, watercraft frames and evidence-camera gear
+- Reinforced light/dark dual edges on the 15 weakest satellite-map assets; the minimum targeted satellite contrast rises from 24.36 in v1.1.1 to 53.24 in v1.2.0
+- Fleet-wide contact grounding shadows, with separate restrained treatments for road vehicles, watercraft and aircraft
 - Stronger visual separation for 33 specialist and rare assets
 - Fire, ambulance, police, coastguard, water rescue, HEMS, mountain rescue, airport, fire-investigation and EOD coverage
 - The original v1.0 True Scale profile remains available and unchanged
@@ -48,7 +50,7 @@ Every release asset has passed the production validation suite for decoding, alp
 
 The pack uses realistic right-facing side elevations, recognisable UK emergency-service colour language and a clean, consistent map presence. The artwork is original: it does not reproduce official service logos, vehicle registrations or third-party branding.
 
-Emergency lighting is deliberately restrained so the fleet remains readable on a busy MissionChief map. Lightbar, grille and rear elements now run independently, and per-vehicle cadence variation prevents an entire incident from blinking in lockstep.
+Emergency lighting is deliberately restrained so the fleet remains readable on a busy MissionChief map. Lightbar, grille and rear elements run independently, while 11 deterministic phase offsets and 48 activity patterns prevent an entire incident from blinking in lockstep.
 
 ## Tested for real map conditions
 
@@ -56,7 +58,7 @@ Every icon is tested automatically at **100%, 75% and 50% scale** against light,
 
 [![Light-map dense fleet test](assets/previews/v1.2/busy-map-light.png)](assets/previews/v1.2/busy-map-light.png)
 
-**[Dark-map test](assets/previews/v1.2/busy-map-dark.png)** · **[Satellite-style test](assets/previews/v1.2/busy-map-satellite.png)** · **[Role-differentiation audit](assets/previews/v1.2/role-differentiation-map-scale.png)** · **[Satellite-contrast audit](assets/previews/v1.2/satellite-contrast-map-scale.png)** · **[Animation frame audit](assets/previews/v1.2/animation-frames.png)** · **[Helicopter rotor audit](assets/previews/v1.2/helicopter-rotor-frames.png)**
+**[Dark-map test](assets/previews/v1.2/busy-map-dark.png)** · **[Satellite-style test](assets/previews/v1.2/busy-map-satellite.png)** · **[Crowded-response light audit](assets/previews/v1.2/desynchronised-lights-crowd.png)** · **[Specialist-equipment audit](assets/previews/v1.2/specialist-equipment-map-scale.png)** · **[Grounding-shadow audit](assets/previews/v1.2/grounding-shadows-map-scale.png)** · **[Role-differentiation audit](assets/previews/v1.2/role-differentiation-map-scale.png)** · **[Satellite-contrast audit](assets/previews/v1.2/satellite-contrast-map-scale.png)** · **[Helicopter rotor audit](assets/previews/v1.2/helicopter-rotor-frames.png)**
 
 ## Install in MissionChief
 
@@ -72,7 +74,7 @@ For MissionChief enhancements and utilities, visit **[TKB MissionChief Scripts &
 
 The [v1.2.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.2.0) includes:
 
-- **`TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.0.zip`** — recommended ordered deployment package, with separate static and animated folders, an upload guide, manifest and SHA-256 verification
+- **`TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.0.zip`** — recommended ordered deployment package, with separate static and animated folders, an upload guide, manifest and reproducible SHA-256 verification
 - **`TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.0.user.js`** — resumable live deployment helper for pack maintainers
 - **`v1.2-build-report.json`** and **`v1.2-qa-report.json`** — machine-readable production evidence
 
@@ -91,7 +93,7 @@ The [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-grap
 - `data/prototypes.json` — production specification and light-placement manifest
 - `data/final-pack-validation.json` — release-level validation report
 - `scripts/` — repeatable preparation, packaging and QA tools
-- `docs/` — production standards and release checkpoints
+- `docs/` — production standards, release checkpoints and the parked future roadmap
 
 Large production artwork is supplied through the release archive rather than duplicated throughout Git history.
 

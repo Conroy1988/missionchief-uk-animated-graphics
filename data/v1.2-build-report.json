@@ -21,7 +21,11 @@
   "source_overrides": 1,
   "rare_showcase_assets": 33,
   "role_differentiated_assets": 15,
+  "specialist_equipment_assets": 25,
+  "minimum_specialist_equipment_half_zoom_pixels": 30,
   "satellite_contrast_boosted_assets": 15,
+  "grounding_shadow_assets": 117,
+  "minimum_grounding_shadow_half_zoom_pixels": 96,
   "motion_counts": {
     "amber-beacon": 6,
     "blue-response": 83,
@@ -33,6 +37,24 @@
   },
   "timing_signature_count": 117,
   "maximum_shared_timing_signature": 1,
+  "blue_response_assets": 87,
+  "flash_phase_bucket_count": 11,
+  "flash_phase_counts": {
+    "0": 12,
+    "1": 4,
+    "2": 11,
+    "3": 7,
+    "4": 6,
+    "5": 5,
+    "6": 8,
+    "7": 12,
+    "8": 5,
+    "9": 9,
+    "10": 8
+  },
+  "maximum_shared_flash_phase": 12,
+  "flash_activity_signature_count": 48,
+  "maximum_shared_flash_activity_signature": 6,
   "minimum_body_width": 72,
   "maximum_body_width": 296,
   "vehicles_detail": [
@@ -41,13 +63,26 @@
       "id": "fire-rescue-pump",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 592,
+        "half_zoom_visible_pixels": 184
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 110,
@@ -82,6 +117,8 @@
         229
       ],
       "cycle_ms": 1271,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,2,1,1,2,1,2,0,3,0,2,1",
       "motion": "blue-response"
     },
     {
@@ -89,13 +126,26 @@
       "id": "light-4x4-pump",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 495,
+        "half_zoom_visible_pixels": 154
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 84,
@@ -130,6 +180,8 @@
         231
       ],
       "cycle_ms": 1216,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,3,1,2,1,3,1,1,2,2,1",
       "motion": "blue-response"
     },
     {
@@ -137,13 +189,26 @@
       "id": "aerial-appliance",
       "service": "fire",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 859,
+        "half_zoom_visible_pixels": 265
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 156,
@@ -178,6 +243,8 @@
         223
       ],
       "cycle_ms": 1237,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,2,1,3,0,4,0,2,2,2,1",
       "motion": "blue-response"
     },
     {
@@ -185,13 +252,26 @@
       "id": "fire-officer",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 323,
+        "half_zoom_visible_pixels": 96
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 62,
@@ -226,6 +306,8 @@
         233
       ],
       "cycle_ms": 1233,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,0,1,2,0,1,0,2,0,1,1,1",
       "motion": "blue-response"
     },
     {
@@ -233,13 +315,26 @@
       "id": "rescue-support-unit",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 611,
+        "half_zoom_visible_pixels": 186
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 114,
@@ -274,6 +369,8 @@
         221
       ],
       "cycle_ms": 1240,
+      "flash_phase": 4,
+      "flash_activity_signature": "0,0,3,0,3,0,2,1,1,2,1,2",
       "motion": "blue-response"
     },
     {
@@ -281,13 +378,26 @@
       "id": "frontline-ambulance",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 483,
+        "half_zoom_visible_pixels": 151
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 84,
@@ -322,6 +432,8 @@
         221
       ],
       "cycle_ms": 1236,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,0,1,1,2,1,2,0,2,1,1,2",
       "motion": "blue-response"
     },
     {
@@ -329,13 +441,26 @@
       "id": "water-carrier",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 630,
+        "half_zoom_visible_pixels": 200
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 124,
@@ -370,6 +495,8 @@
         236
       ],
       "cycle_ms": 1314,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,1,3,1,2,2,1,2,2,2,0,3",
       "motion": "blue-response"
     },
     {
@@ -377,13 +504,26 @@
       "id": "hazmat-unit",
       "service": "fire",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "hazmat-detection-rack",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 10
+      },
+      "specialist_equipment_added_alpha_pixels": 425,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 129,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 645,
+        "half_zoom_visible_pixels": 200
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 114,
@@ -391,11 +531,11 @@
       },
       "command_dimensions": {
         "width": 140,
-        "height": 57
+        "height": 67
       },
       "body_dimensions": {
         "width": 130,
-        "height": 47
+        "height": 57
       },
       "motion_reference_dimensions": {
         "width": 130,
@@ -418,6 +558,8 @@
         232
       ],
       "cycle_ms": 1257,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,3,1,2,2,1,2,2,2,0,3,1",
       "motion": "blue-response"
     },
     {
@@ -425,13 +567,26 @@
       "id": "police-incident-response-vehicle",
       "service": "police",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": "irv-anpr-array",
       "role_cue_offset": {
         "x": 0,
         "y": 6
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 343,
+        "half_zoom_visible_pixels": 104
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 64,
@@ -466,6 +621,8 @@
         233
       ],
       "cycle_ms": 1247,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,1,2,0,1,0,2,0,1,1,1,0",
       "motion": "blue-response"
     },
     {
@@ -473,13 +630,26 @@
       "id": "hems",
       "service": "ambulance",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "aerial",
+        "visible_pixels": 500,
+        "half_zoom_visible_pixels": 140
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 177,
@@ -514,6 +684,8 @@
         227
       ],
       "cycle_ms": 1271,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,1,2,1,2,0,1,2,1,2,0,2",
       "motion": "rotor-and-blue-response"
     },
     {
@@ -521,13 +693,26 @@
       "id": "rapid-response-vehicle",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": "compact-medical-pod",
       "role_cue_offset": {
         "x": 0,
         "y": 6
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 341,
+        "half_zoom_visible_pixels": 104
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 64,
@@ -562,6 +747,8 @@
         236
       ],
       "cycle_ms": 1311,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,1,1,1,0,1,2,0,1,0,2,0",
       "motion": "blue-response"
     },
     {
@@ -569,13 +756,26 @@
       "id": "police-helicopter",
       "service": "police",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "aerial",
+        "visible_pixels": 534,
+        "half_zoom_visible_pixels": 148
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 179,
@@ -610,6 +810,8 @@
         228
       ],
       "cycle_ms": 1184,
+      "flash_phase": 4,
+      "flash_activity_signature": "0,1,2,1,0,2,1,1,2,0,1,2",
       "motion": "rotor-and-blue-response"
     },
     {
@@ -617,13 +819,26 @@
       "id": "dog-support-unit",
       "service": "police",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 520,
+        "half_zoom_visible_pixels": 164
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 88,
@@ -658,6 +873,8 @@
         223
       ],
       "cycle_ms": 1249,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,1,1,1,3,0,2,0,3,0,2,1",
       "motion": "blue-response"
     },
     {
@@ -665,13 +882,26 @@
       "id": "armed-response-vehicle",
       "service": "police",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": "arv-equipment-locker",
       "role_cue_offset": {
         "x": 0,
         "y": 6
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 375,
+        "half_zoom_visible_pixels": 116
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 66,
@@ -706,6 +936,8 @@
         225
       ],
       "cycle_ms": 1246,
+      "flash_phase": 5,
+      "flash_activity_signature": "0,2,0,1,1,1,0,1,2,0,1,0",
       "motion": "blue-response"
     },
     {
@@ -713,13 +945,26 @@
       "id": "breathing-apparatus-support-unit",
       "service": "fire",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "ba-cylinder-rack",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 10
+      },
+      "specialist_equipment_added_alpha_pixels": 329,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 93,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 641,
+        "half_zoom_visible_pixels": 199
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 112,
@@ -727,11 +972,11 @@
       },
       "command_dimensions": {
         "width": 138,
-        "height": 55
+        "height": 65
       },
       "body_dimensions": {
         "width": 128,
-        "height": 45
+        "height": 55
       },
       "motion_reference_dimensions": {
         "width": 128,
@@ -754,6 +999,8 @@
         232
       ],
       "cycle_ms": 1199,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,2,0,3,1,3,1,2,2,1,2,2",
       "motion": "blue-response"
     },
     {
@@ -761,13 +1008,26 @@
       "id": "incident-command-control-unit",
       "service": "fire",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "command-mast-dish",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 13
+      },
+      "specialist_equipment_added_alpha_pixels": 333,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 98,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 777,
+        "half_zoom_visible_pixels": 232
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 136,
@@ -775,11 +1035,11 @@
       },
       "command_dimensions": {
         "width": 165,
-        "height": 68
+        "height": 81
       },
       "body_dimensions": {
         "width": 155,
-        "height": 58
+        "height": 71
       },
       "motion_reference_dimensions": {
         "width": 155,
@@ -802,6 +1062,8 @@
         225
       ],
       "cycle_ms": 1211,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,1,2,2,2,0,3,1,3,1,2,2",
       "motion": "blue-response"
     },
     {
@@ -809,13 +1071,26 @@
       "id": "rescue-pump",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 589,
+        "half_zoom_visible_pixels": 185
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 112,
@@ -850,6 +1125,8 @@
         228
       ],
       "cycle_ms": 1265,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,1,3,1,2,2,1,2,2,2,0,3",
       "motion": "blue-response"
     },
     {
@@ -857,13 +1134,26 @@
       "id": "carp",
       "service": "fire",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 759,
+        "half_zoom_visible_pixels": 233
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 133,
@@ -898,6 +1188,8 @@
         230
       ],
       "cycle_ms": 1262,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,2,1,3,0,4,0,2,2,2,1",
       "motion": "blue-response"
     },
     {
@@ -905,13 +1197,26 @@
       "id": "co-responder-vehicle",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 324,
+        "half_zoom_visible_pixels": 98
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 62,
@@ -946,6 +1251,8 @@
         227
       ],
       "cycle_ms": 1293,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,1,0,2,1,1,1,2,1,0,2,2",
       "motion": "blue-response"
     },
     {
@@ -953,13 +1260,26 @@
       "id": "joint-response-unit",
       "service": "multi-service",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": "dual-service-command-pod",
       "role_cue_offset": {
         "x": 0,
         "y": 6
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 336,
+        "half_zoom_visible_pixels": 104
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 64,
@@ -994,6 +1314,8 @@
         229
       ],
       "cycle_ms": 1232,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,2,1,0,2,1,1,1,2,1,0",
       "motion": "blue-response"
     },
     {
@@ -1001,13 +1323,26 @@
       "id": "otl",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": "otl-command-mast",
       "role_cue_offset": {
         "x": 0,
         "y": 6
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 379,
+        "half_zoom_visible_pixels": 119
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 65,
@@ -1042,6 +1377,8 @@
         232
       ],
       "cycle_ms": 1220,
+      "flash_phase": 5,
+      "flash_activity_signature": "0,1,1,1,2,1,0,2,2,1,0,2",
       "motion": "blue-response"
     },
     {
@@ -1049,13 +1386,26 @@
       "id": "general-practitioner",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 340,
+        "half_zoom_visible_pixels": 104
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 64,
@@ -1090,6 +1440,8 @@
         235
       ],
       "cycle_ms": 1265,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,1,2,1,0,2,2,1,0,2,1,1",
       "motion": "blue-response"
     },
     {
@@ -1097,13 +1449,26 @@
       "id": "community-first-responder",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": "cfr-medical-beacon",
       "role_cue_offset": {
         "x": 0,
         "y": 6
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 374,
+        "half_zoom_visible_pixels": 114
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 57,
@@ -1138,6 +1503,8 @@
         232
       ],
       "cycle_ms": 1280,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,1,2,1,0,2,2,1,0,2,1,1",
       "motion": "blue-response"
     },
     {
@@ -1145,13 +1512,26 @@
       "id": "crew-carrier",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 514,
+        "half_zoom_visible_pixels": 160
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 94,
@@ -1186,6 +1566,8 @@
         226
       ],
       "cycle_ms": 1254,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,1,0,2,1,1,1,2,1,0,2,2",
       "motion": "blue-response"
     },
     {
@@ -1193,13 +1575,26 @@
       "id": "traffic-car",
       "service": "police",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 312,
+        "half_zoom_visible_pixels": 105
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 65,
@@ -1234,6 +1629,8 @@
         231
       ],
       "cycle_ms": 1246,
+      "flash_phase": 4,
+      "flash_activity_signature": "0,2,1,1,1,2,1,0,2,2,1,0",
       "motion": "blue-response"
     },
     {
@@ -1241,13 +1638,26 @@
       "id": "armed-traffic-car",
       "service": "police",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": "traffic-anpr-pods",
       "role_cue_offset": {
         "x": 0,
         "y": 6
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 388,
+        "half_zoom_visible_pixels": 122
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 66,
@@ -1282,6 +1692,8 @@
         233
       ],
       "cycle_ms": 1226,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,1,0,2,1,1,1,2,1,0,2,2",
       "motion": "blue-response"
     },
     {
@@ -1289,13 +1701,26 @@
       "id": "heavy-4x4-tanker",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 660,
+        "half_zoom_visible_pixels": 203
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 126,
@@ -1330,6 +1755,8 @@
         231
       ],
       "cycle_ms": 1254,
+      "flash_phase": 5,
+      "flash_activity_signature": "0,1,1,1,2,1,0,2,2,1,0,2",
       "motion": "blue-response"
     },
     {
@@ -1337,13 +1764,26 @@
       "id": "prv",
       "service": "ambulance",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 408,
+        "half_zoom_visible_pixels": 127
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 69,
@@ -1378,6 +1818,8 @@
         221
       ],
       "cycle_ms": 1266,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,1,1,2,2,1,1,3,1,1,2,3",
       "motion": "blue-response"
     },
     {
@@ -1385,13 +1827,26 @@
       "id": "srv",
       "service": "ambulance",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 519,
+        "half_zoom_visible_pixels": 161
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -1426,6 +1881,8 @@
         236
       ],
       "cycle_ms": 1288,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,1,2,3,1,1,2,2,1,1,3,1",
       "motion": "blue-response"
     },
     {
@@ -1433,13 +1890,26 @@
       "id": "welfare-vehicle",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 456,
+        "half_zoom_visible_pixels": 138
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -1474,6 +1944,8 @@
         228
       ],
       "cycle_ms": 1294,
+      "flash_phase": 1,
+      "flash_activity_signature": "0,2,1,1,2,0,2,1,2,1,1,1",
       "motion": "blue-response"
     },
     {
@@ -1481,13 +1953,26 @@
       "id": "atv-carrier",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 627,
+        "half_zoom_visible_pixels": 197
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 117,
@@ -1522,6 +2007,8 @@
         228
       ],
       "cycle_ms": 1280,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,3,0,2,1,2,1,1,2,1,2,0",
       "motion": "blue-response"
     },
     {
@@ -1529,13 +2016,26 @@
       "id": "ambulance-control-unit",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "command-mast-dish",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 15
+      },
+      "specialist_equipment_added_alpha_pixels": 367,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 112,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 700,
+        "half_zoom_visible_pixels": 213
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 130,
@@ -1543,11 +2043,11 @@
       },
       "command_dimensions": {
         "width": 150,
-        "height": 77
+        "height": 92
       },
       "body_dimensions": {
         "width": 140,
-        "height": 67
+        "height": 82
       },
       "motion_reference_dimensions": {
         "width": 140,
@@ -1570,6 +2070,8 @@
         228
       ],
       "cycle_ms": 1221,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,0,2,1,1,1,1,2,1,2,0",
       "motion": "blue-response"
     },
     {
@@ -1577,13 +2079,26 @@
       "id": "cbrn-vehicle",
       "service": "ambulance",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "hazmat-detection-rack",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 12
+      },
+      "specialist_equipment_added_alpha_pixels": 360,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 106,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 517,
+        "half_zoom_visible_pixels": 160
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 88,
@@ -1591,11 +2106,11 @@
       },
       "command_dimensions": {
         "width": 116,
-        "height": 64
+        "height": 76
       },
       "body_dimensions": {
         "width": 106,
-        "height": 54
+        "height": 66
       },
       "motion_reference_dimensions": {
         "width": 106,
@@ -1618,6 +2133,8 @@
         232
       ],
       "cycle_ms": 1259,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,2,1,2,0,2,1,2,0,2,1,1",
       "motion": "blue-response"
     },
     {
@@ -1625,13 +2142,26 @@
       "id": "mass-casualty-equipment",
       "service": "ambulance",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "mass-casualty-cases",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 15
+      },
+      "specialist_equipment_added_alpha_pixels": 566,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 160,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 701,
+        "half_zoom_visible_pixels": 217
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 124,
@@ -1639,11 +2169,11 @@
       },
       "command_dimensions": {
         "width": 151,
-        "height": 78
+        "height": 93
       },
       "body_dimensions": {
         "width": 141,
-        "height": 68
+        "height": 83
       },
       "motion_reference_dimensions": {
         "width": 141,
@@ -1666,6 +2196,8 @@
         220
       ],
       "cycle_ms": 1233,
+      "flash_phase": 8,
+      "flash_activity_signature": "0,1,2,0,2,0,2,1,1,1,1,2",
       "motion": "blue-response"
     },
     {
@@ -1673,13 +2205,26 @@
       "id": "ambulance-officer",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 345,
+        "half_zoom_visible_pixels": 103
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 65,
@@ -1714,6 +2259,8 @@
         230
       ],
       "cycle_ms": 1217,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,0,2,2,1,0,2,1,1,1,2,1",
       "motion": "blue-response"
     },
     {
@@ -1721,13 +2268,26 @@
       "id": "bfu",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 600,
+        "half_zoom_visible_pixels": 185
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 114,
@@ -1762,6 +2322,8 @@
         235
       ],
       "cycle_ms": 1278,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,2,1,3,0,3,1,2,1,2,3,1",
       "motion": "blue-response"
     },
     {
@@ -1769,13 +2331,26 @@
       "id": "f-wrc",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 624,
+        "half_zoom_visible_pixels": 194
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 124,
@@ -1810,6 +2385,8 @@
         233
       ],
       "cycle_ms": 1233,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,2,1,3,1,2,1,3,1,2,2",
       "motion": "blue-response"
     },
     {
@@ -1817,13 +2394,26 @@
       "id": "wrl-cafs",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 596,
+        "half_zoom_visible_pixels": 184
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 110,
@@ -1858,6 +2448,8 @@
         231
       ],
       "cycle_ms": 1266,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,2,1,3,1,2,1,3,1,2,2,2",
       "motion": "blue-response"
     },
     {
@@ -1865,13 +2457,26 @@
       "id": "rp-cafs",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 587,
+        "half_zoom_visible_pixels": 183
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 113,
@@ -1906,6 +2511,8 @@
         222
       ],
       "cycle_ms": 1265,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,1,2,2,2,2,1,3,1,2,1,3",
       "motion": "blue-response"
     },
     {
@@ -1913,13 +2520,26 @@
       "id": "osu",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 649,
+        "half_zoom_visible_pixels": 199
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 121,
@@ -1954,6 +2574,8 @@
         233
       ],
       "cycle_ms": 1247,
+      "flash_phase": 5,
+      "flash_activity_signature": "0,3,1,2,1,3,0,3,1,2,1,2",
       "motion": "blue-response"
     },
     {
@@ -1961,13 +2583,26 @@
       "id": "pm",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 568,
+        "half_zoom_visible_pixels": 175
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 110,
@@ -2002,6 +2637,8 @@
         231
       ],
       "cycle_ms": 1242,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,3,0,3,1,3,1,1,3,1,3,0",
       "motion": "blue-response"
     },
     {
@@ -2009,13 +2646,26 @@
       "id": "water-pod",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 343,
+        "half_zoom_visible_pixels": 101
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 83,
@@ -2050,6 +2700,8 @@
         226
       ],
       "cycle_ms": 1295,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "static"
     },
     {
@@ -2057,13 +2709,26 @@
       "id": "bulk-foam-pod",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 343,
+        "half_zoom_visible_pixels": 101
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 83,
@@ -2098,6 +2763,8 @@
         223
       ],
       "cycle_ms": 1255,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "static"
     },
     {
@@ -2105,13 +2772,26 @@
       "id": "rescue-pod",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "pod-rescue-tools",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 9
+      },
+      "specialist_equipment_added_alpha_pixels": 234,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 94,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 434,
+        "half_zoom_visible_pixels": 140
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 83,
@@ -2119,11 +2799,11 @@
       },
       "command_dimensions": {
         "width": 114,
-        "height": 54
+        "height": 63
       },
       "body_dimensions": {
         "width": 100,
-        "height": 40
+        "height": 49
       },
       "motion_reference_dimensions": {
         "width": 100,
@@ -2146,6 +2826,8 @@
         236
       ],
       "cycle_ms": 1325,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "static"
     },
     {
@@ -2153,13 +2835,26 @@
       "id": "command-pod",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "pod-command-array",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 13
+      },
+      "specialist_equipment_added_alpha_pixels": 254,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 72,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 521,
+        "half_zoom_visible_pixels": 154
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 83,
@@ -2167,11 +2862,11 @@
       },
       "command_dimensions": {
         "width": 110,
-        "height": 69
+        "height": 82
       },
       "body_dimensions": {
         "width": 100,
-        "height": 59
+        "height": 72
       },
       "motion_reference_dimensions": {
         "width": 100,
@@ -2194,6 +2889,8 @@
         230
       ],
       "cycle_ms": 1258,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "static"
     },
     {
@@ -2201,13 +2898,26 @@
       "id": "welfare-pod",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "pod-welfare-awning",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 9
+      },
+      "specialist_equipment_added_alpha_pixels": 243,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 71,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 347,
+        "half_zoom_visible_pixels": 131
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 83,
@@ -2215,11 +2925,11 @@
       },
       "command_dimensions": {
         "width": 114,
-        "height": 54
+        "height": 63
       },
       "body_dimensions": {
         "width": 100,
-        "height": 40
+        "height": 49
       },
       "motion_reference_dimensions": {
         "width": 100,
@@ -2242,6 +2952,8 @@
         227
       ],
       "cycle_ms": 1257,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "static"
     },
     {
@@ -2249,13 +2961,26 @@
       "id": "basu-pod",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "pod-ba-cylinders",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 7
+      },
+      "specialist_equipment_added_alpha_pixels": 208,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 66,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 355,
+        "half_zoom_visible_pixels": 101
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 83,
@@ -2263,11 +2988,11 @@
       },
       "command_dimensions": {
         "width": 114,
-        "height": 45
+        "height": 52
       },
       "body_dimensions": {
         "width": 100,
-        "height": 31
+        "height": 38
       },
       "motion_reference_dimensions": {
         "width": 100,
@@ -2290,6 +3015,8 @@
         224
       ],
       "cycle_ms": 1274,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "static"
     },
     {
@@ -2297,13 +3024,26 @@
       "id": "misting-pod",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 356,
+        "half_zoom_visible_pixels": 115
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 75,
@@ -2338,6 +3078,8 @@
         222
       ],
       "cycle_ms": 1228,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "static"
     },
     {
@@ -2345,13 +3087,26 @@
       "id": "hazardous-materials-pod",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "pod-hazmat-canisters",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 7
+      },
+      "specialist_equipment_added_alpha_pixels": 236,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 70,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 412,
+        "half_zoom_visible_pixels": 138
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 83,
@@ -2359,11 +3114,11 @@
       },
       "command_dimensions": {
         "width": 114,
-        "height": 48
+        "height": 55
       },
       "body_dimensions": {
         "width": 100,
-        "height": 34
+        "height": 41
       },
       "motion_reference_dimensions": {
         "width": 100,
@@ -2386,6 +3141,8 @@
         224
       ],
       "cycle_ms": 1244,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "static"
     },
     {
@@ -2393,13 +3150,26 @@
       "id": "osu-pod",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "pod-operations-cases",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 8
+      },
+      "specialist_equipment_added_alpha_pixels": 219,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 68,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 286,
+        "half_zoom_visible_pixels": 105
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 86,
@@ -2407,11 +3177,11 @@
       },
       "command_dimensions": {
         "width": 117,
-        "height": 49
+        "height": 57
       },
       "body_dimensions": {
         "width": 103,
-        "height": 35
+        "height": 43
       },
       "motion_reference_dimensions": {
         "width": 103,
@@ -2434,6 +3204,8 @@
         220
       ],
       "cycle_ms": 1227,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "static"
     },
     {
@@ -2441,13 +3213,26 @@
       "id": "hvp",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 451,
+        "half_zoom_visible_pixels": 146
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 88,
@@ -2482,6 +3267,8 @@
         228
       ],
       "cycle_ms": 1196,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "static"
     },
     {
@@ -2489,13 +3276,26 @@
       "id": "psu-carrier",
       "service": "police",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 484,
+        "half_zoom_visible_pixels": 152
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 90,
@@ -2530,6 +3330,8 @@
         220
       ],
       "cycle_ms": 1190,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,0,2,1,2,0,2,1,1,2,1",
       "motion": "blue-response"
     },
     {
@@ -2537,13 +3339,26 @@
       "id": "firearms-personnel-carrier",
       "service": "police",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "tactical-equipment-locker",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 9
+      },
+      "specialist_equipment_added_alpha_pixels": 147,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 55,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 538,
+        "half_zoom_visible_pixels": 161
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 94,
@@ -2551,11 +3366,11 @@
       },
       "command_dimensions": {
         "width": 121,
-        "height": 55
+        "height": 64
       },
       "body_dimensions": {
         "width": 107,
-        "height": 41
+        "height": 50
       },
       "motion_reference_dimensions": {
         "width": 107,
@@ -2578,6 +3393,8 @@
         232
       ],
       "cycle_ms": 1246,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,1,1,2,1,2,0,2,1,2,0,2",
       "motion": "blue-response"
     },
     {
@@ -2585,13 +3402,26 @@
       "id": "multiple-dog-carrier",
       "service": "police",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 521,
+        "half_zoom_visible_pixels": 158
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 95,
@@ -2626,6 +3456,8 @@
         227
       ],
       "cycle_ms": 1279,
+      "flash_phase": 4,
+      "flash_activity_signature": "0,2,1,2,0,2,1,1,2,1,2,0",
       "motion": "blue-response"
     },
     {
@@ -2633,13 +3465,26 @@
       "id": "detention-van",
       "service": "police",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 445,
+        "half_zoom_visible_pixels": 131
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -2674,6 +3519,8 @@
         230
       ],
       "cycle_ms": 1258,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,0,2,1,1,2,1,2,0,2,1,2",
       "motion": "blue-response"
     },
     {
@@ -2681,13 +3528,26 @@
       "id": "mounted-unit",
       "service": "police",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 621,
+        "half_zoom_visible_pixels": 192
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 117,
@@ -2722,6 +3582,8 @@
         229
       ],
       "cycle_ms": 1220,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,1,2,0,2,1,2,0,2,1,1",
       "motion": "blue-response"
     },
     {
@@ -2729,13 +3591,26 @@
       "id": "m-rav",
       "service": "police",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 491,
+        "half_zoom_visible_pixels": 155
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 84,
@@ -2770,6 +3645,8 @@
         232
       ],
       "cycle_ms": 1262,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,0,2,1,2,0,2,1,1,2,1,2",
       "motion": "blue-response"
     },
     {
@@ -2777,13 +3654,26 @@
       "id": "crv",
       "service": "coastguard",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 391,
+        "half_zoom_visible_pixels": 123
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 68,
@@ -2818,6 +3708,8 @@
         234
       ],
       "cycle_ms": 1315,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,2,0,2,1,1,2,1,2,0,2,1",
       "motion": "blue-response"
     },
     {
@@ -2825,13 +3717,26 @@
       "id": "coastguard-mud-rescue-unit",
       "service": "coastguard",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "mud-rescue-sled",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 9
+      },
+      "specialist_equipment_added_alpha_pixels": 399,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 114,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 518,
+        "half_zoom_visible_pixels": 161
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -2839,11 +3744,11 @@
       },
       "command_dimensions": {
         "width": 114,
-        "height": 51
+        "height": 60
       },
       "body_dimensions": {
         "width": 104,
-        "height": 41
+        "height": 50
       },
       "motion_reference_dimensions": {
         "width": 104,
@@ -2866,6 +3771,8 @@
         222
       ],
       "cycle_ms": 1204,
+      "flash_phase": 8,
+      "flash_activity_signature": "0,2,1,1,2,1,2,0,2,1,2,0",
       "motion": "blue-response"
     },
     {
@@ -2873,13 +3780,26 @@
       "id": "coastguard-rope-rescue-unit",
       "service": "coastguard",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "rope-rescue-reels",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 9
+      },
+      "specialist_equipment_added_alpha_pixels": 308,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 91,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 521,
+        "half_zoom_visible_pixels": 162
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -2887,11 +3807,11 @@
       },
       "command_dimensions": {
         "width": 114,
-        "height": 53
+        "height": 62
       },
       "body_dimensions": {
         "width": 104,
-        "height": 43
+        "height": 52
       },
       "motion_reference_dimensions": {
         "width": 104,
@@ -2914,6 +3834,8 @@
         222
       ],
       "cycle_ms": 1223,
+      "flash_phase": 8,
+      "flash_activity_signature": "0,2,1,1,2,1,2,0,2,1,2,0",
       "motion": "blue-response"
     },
     {
@@ -2921,13 +3843,26 @@
       "id": "coastguard-commander",
       "service": "coastguard",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 415,
+        "half_zoom_visible_pixels": 132
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 73,
@@ -2962,6 +3897,8 @@
         234
       ],
       "cycle_ms": 1274,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,1,2,1,2,0,2,1,2,0,2,1",
       "motion": "blue-response"
     },
     {
@@ -2969,13 +3906,26 @@
       "id": "flood-rescue-unit-trailer",
       "service": "coastguard",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 498,
+        "half_zoom_visible_pixels": 154
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 88,
@@ -3010,6 +3960,8 @@
         223
       ],
       "cycle_ms": 1252,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "marker-light"
     },
     {
@@ -3017,13 +3969,26 @@
       "id": "mud-decontamination-unit",
       "service": "coastguard",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 495,
+        "half_zoom_visible_pixels": 154
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 88,
@@ -3058,6 +4023,8 @@
         229
       ],
       "cycle_ms": 1227,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "static"
     },
     {
@@ -3065,13 +4032,26 @@
       "id": "support-unit",
       "service": "coastguard",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 506,
+        "half_zoom_visible_pixels": 157
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 94,
@@ -3106,6 +4086,8 @@
         233
       ],
       "cycle_ms": 1264,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,0,2,1,2,0,2,1,1,2,1,2",
       "motion": "blue-response"
     },
     {
@@ -3113,13 +4095,26 @@
       "id": "coastguard-rescue-helicopter",
       "service": "coastguard",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "aerial",
+        "visible_pixels": 691,
+        "half_zoom_visible_pixels": 194
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 229,
@@ -3154,6 +4149,8 @@
         231
       ],
       "cycle_ms": 1250,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,0,1,2,1,2,0,2,1,2,1,2",
       "motion": "rotor-and-blue-response"
     },
     {
@@ -3161,13 +4158,26 @@
       "id": "coastguard-rescue-helicopter-large",
       "service": "coastguard",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "aerial",
+        "visible_pixels": 838,
+        "half_zoom_visible_pixels": 234
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 272,
@@ -3202,6 +4212,8 @@
         228
       ],
       "cycle_ms": 1271,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,1,2,0,2,1,2,1,2,0,1,2",
       "motion": "rotor-and-blue-response"
     },
     {
@@ -3209,13 +4221,26 @@
       "id": "4x4-vehicle",
       "service": "coastguard",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 376,
+        "half_zoom_visible_pixels": 119
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 65,
@@ -3250,6 +4275,8 @@
         224
       ],
       "cycle_ms": 1271,
+      "flash_phase": 4,
+      "flash_activity_signature": "0,2,1,2,0,2,1,1,2,1,2,0",
       "motion": "blue-response"
     },
     {
@@ -3257,13 +4284,26 @@
       "id": "inland-rescue-boat-trailer",
       "service": "coastguard",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "watercraft-rollbar",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 9
+      },
+      "specialist_equipment_added_alpha_pixels": 87,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 30,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 533,
+        "half_zoom_visible_pixels": 163
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 98,
@@ -3271,11 +4311,11 @@
       },
       "command_dimensions": {
         "width": 116,
-        "height": 50
+        "height": 59
       },
       "body_dimensions": {
         "width": 106,
-        "height": 40
+        "height": 49
       },
       "motion_reference_dimensions": {
         "width": 106,
@@ -3298,6 +4338,8 @@
         220
       ],
       "cycle_ms": 1211,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "marker-light"
     },
     {
@@ -3305,13 +4347,26 @@
       "id": "ilb",
       "service": "lifeboat",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "marine",
+        "visible_pixels": 484,
+        "half_zoom_visible_pixels": 156
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 99,
@@ -3346,6 +4401,8 @@
         236
       ],
       "cycle_ms": 1238,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "navigation-and-wake"
     },
     {
@@ -3353,13 +4410,26 @@
       "id": "alb",
       "service": "lifeboat",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "marine",
+        "visible_pixels": 869,
+        "half_zoom_visible_pixels": 251
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 214,
@@ -3394,6 +4464,8 @@
         234
       ],
       "cycle_ms": 1296,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "navigation-and-wake"
     },
     {
@@ -3401,13 +4473,26 @@
       "id": "rescue-watercraft-trailer",
       "service": "lifeboat",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "watercraft-rollbar",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 7
+      },
+      "specialist_equipment_added_alpha_pixels": 83,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 31,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 461,
+        "half_zoom_visible_pixels": 142
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -3415,11 +4500,11 @@
       },
       "command_dimensions": {
         "width": 108,
-        "height": 38
+        "height": 45
       },
       "body_dimensions": {
         "width": 98,
-        "height": 28
+        "height": 35
       },
       "motion_reference_dimensions": {
         "width": 98,
@@ -3442,6 +4527,8 @@
         230
       ],
       "cycle_ms": 1241,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "marker-light"
     },
     {
@@ -3449,13 +4536,26 @@
       "id": "hovercraft-trailer",
       "service": "lifeboat",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 546,
+        "half_zoom_visible_pixels": 166
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 104,
@@ -3490,6 +4590,8 @@
         227
       ],
       "cycle_ms": 1244,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "marker-light"
     },
     {
@@ -3497,13 +4599,26 @@
       "id": "hovercraft-transporter",
       "service": "lifeboat",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 479,
+        "half_zoom_visible_pixels": 150
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 81,
@@ -3538,6 +4653,8 @@
         228
       ],
       "cycle_ms": 1211,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,1,1,2,1,2,0,2,1,2,0,2",
       "motion": "blue-response"
     },
     {
@@ -3545,13 +4662,26 @@
       "id": "light-4x4",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 377,
+        "half_zoom_visible_pixels": 118
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 65,
@@ -3586,6 +4716,8 @@
         231
       ],
       "cycle_ms": 1229,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,0,2,1,2,0,2,1,1,2,1",
       "motion": "blue-response"
     },
     {
@@ -3593,13 +4725,26 @@
       "id": "boat-trailer",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "watercraft-rollbar",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 9
+      },
+      "specialist_equipment_added_alpha_pixels": 92,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 32,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 522,
+        "half_zoom_visible_pixels": 159
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 94,
@@ -3607,11 +4752,11 @@
       },
       "command_dimensions": {
         "width": 112,
-        "height": 51
+        "height": 60
       },
       "body_dimensions": {
         "width": 102,
-        "height": 41
+        "height": 50
       },
       "motion_reference_dimensions": {
         "width": 102,
@@ -3634,6 +4779,8 @@
         225
       ],
       "cycle_ms": 1262,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "marker-light"
     },
     {
@@ -3641,13 +4788,26 @@
       "id": "major-foam-tender",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 765,
+        "half_zoom_visible_pixels": 235
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 156,
@@ -3682,6 +4842,8 @@
         233
       ],
       "cycle_ms": 1196,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,1,2,0,2,1,2,0,2,1,1",
       "motion": "blue-response"
     },
     {
@@ -3689,13 +4851,26 @@
       "id": "riv",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 498,
+        "half_zoom_visible_pixels": 156
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 98,
@@ -3730,6 +4905,8 @@
         225
       ],
       "cycle_ms": 1217,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,0,2,1,2,0,2,1,1,2,1",
       "motion": "blue-response"
     },
     {
@@ -3737,13 +4914,26 @@
       "id": "airfield-firefighting-command-vehicle",
       "service": "fire",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 426,
+        "half_zoom_visible_pixels": 134
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 75,
@@ -3778,6 +4968,8 @@
         228
       ],
       "cycle_ms": 1295,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,0,2,1,1,2,1,2,0,2,1,2",
       "motion": "blue-response"
     },
     {
@@ -3785,13 +4977,26 @@
       "id": "rescue-stairs",
       "service": "fire",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 863,
+        "half_zoom_visible_pixels": 267
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 156,
@@ -3826,6 +5031,8 @@
         234
       ],
       "cycle_ms": 1271,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "amber-beacon"
     },
     {
@@ -3833,13 +5040,26 @@
       "id": "airfield-operations-vehicle",
       "service": "airfield",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 394,
+        "half_zoom_visible_pixels": 122
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 68,
@@ -3874,6 +5094,8 @@
         235
       ],
       "cycle_ms": 1283,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "amber-beacon"
     },
     {
@@ -3881,13 +5103,26 @@
       "id": "airfield-operations-supervisor",
       "service": "airfield",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 419,
+        "half_zoom_visible_pixels": 131
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 73,
@@ -3922,6 +5157,8 @@
         231
       ],
       "cycle_ms": 1261,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "amber-beacon"
     },
     {
@@ -3929,13 +5166,26 @@
       "id": "medical-equipment-trailer",
       "service": "airfield",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 437,
+        "half_zoom_visible_pixels": 135
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 78,
@@ -3970,6 +5220,8 @@
         231
       ],
       "cycle_ms": 1284,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "marker-light"
     },
     {
@@ -3977,13 +5229,26 @@
       "id": "armed-cell-van",
       "service": "police",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 539,
+        "half_zoom_visible_pixels": 163
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -4018,6 +5283,8 @@
         232
       ],
       "cycle_ms": 1258,
+      "flash_phase": 8,
+      "flash_activity_signature": "0,2,1,1,2,1,2,0,2,1,2,0",
       "motion": "blue-response"
     },
     {
@@ -4025,13 +5292,26 @@
       "id": "medical-cycle-responder",
       "service": "ambulance",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 333,
+        "half_zoom_visible_pixels": 104
+      },
       "source_override": "assets/masters/v1.1/medical-cycle-responder.png",
       "standard_dimensions": {
         "width": 26,
@@ -4066,6 +5346,8 @@
         231
       ],
       "cycle_ms": 1259,
+      "flash_phase": 4,
+      "flash_activity_signature": "0,0,2,0,1,0,2,0,1,1,0,2",
       "motion": "blue-response"
     },
     {
@@ -4073,13 +5355,26 @@
       "id": "pump-trailer",
       "service": "search-and-rescue",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 385,
+        "half_zoom_visible_pixels": 119
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 58,
@@ -4114,6 +5409,8 @@
         226
       ],
       "cycle_ms": 1244,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "marker-light"
     },
     {
@@ -4121,13 +5418,26 @@
       "id": "control-van-sar",
       "service": "search-and-rescue",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "command-mast-dish",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 13
+      },
+      "specialist_equipment_added_alpha_pixels": 237,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 71,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 515,
+        "half_zoom_visible_pixels": 158
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 94,
@@ -4135,11 +5445,11 @@
       },
       "command_dimensions": {
         "width": 112,
-        "height": 71
+        "height": 84
       },
       "body_dimensions": {
         "width": 102,
-        "height": 61
+        "height": 74
       },
       "motion_reference_dimensions": {
         "width": 102,
@@ -4162,6 +5472,8 @@
         234
       ],
       "cycle_ms": 1248,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,0,2,1,2,0,2,1,1,2,1",
       "motion": "blue-response"
     },
     {
@@ -4169,13 +5481,26 @@
       "id": "operational-support-van",
       "service": "search-and-rescue",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 491,
+        "half_zoom_visible_pixels": 150
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -4210,6 +5535,8 @@
         225
       ],
       "cycle_ms": 1218,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,1,1,2,1,2,0,2,1,2,0,2",
       "motion": "blue-response"
     },
     {
@@ -4217,13 +5544,26 @@
       "id": "operational-support-trailer",
       "service": "search-and-rescue",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 466,
+        "half_zoom_visible_pixels": 149
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 84,
@@ -4258,6 +5598,8 @@
         222
       ],
       "cycle_ms": 1248,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "marker-light"
     },
     {
@@ -4265,13 +5607,26 @@
       "id": "sar-flood-rescue-trailer",
       "service": "search-and-rescue",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 496,
+        "half_zoom_visible_pixels": 155
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 88,
@@ -4306,6 +5661,8 @@
         227
       ],
       "cycle_ms": 1262,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "marker-light"
     },
     {
@@ -4313,13 +5670,26 @@
       "id": "drone-vehicle-sar-hq",
       "service": "search-and-rescue",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "drone-launch-cradle",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 12
+      },
+      "specialist_equipment_added_alpha_pixels": 174,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 54,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 472,
+        "half_zoom_visible_pixels": 147
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 81,
@@ -4327,11 +5697,11 @@
       },
       "command_dimensions": {
         "width": 107,
-        "height": 63
+        "height": 75
       },
       "body_dimensions": {
         "width": 97,
-        "height": 53
+        "height": 65
       },
       "motion_reference_dimensions": {
         "width": 97,
@@ -4354,6 +5724,8 @@
         235
       ],
       "cycle_ms": 1242,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,1,1,2,1,2,0,2,1,2,0,2",
       "motion": "blue-response"
     },
     {
@@ -4361,13 +5733,26 @@
       "id": "drone-vehicle-fire-station",
       "service": "fire",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "drone-launch-cradle",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 11
+      },
+      "specialist_equipment_added_alpha_pixels": 157,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 46,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 478,
+        "half_zoom_visible_pixels": 146
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 81,
@@ -4375,11 +5760,11 @@
       },
       "command_dimensions": {
         "width": 111,
-        "height": 65
+        "height": 76
       },
       "body_dimensions": {
         "width": 97,
-        "height": 51
+        "height": 62
       },
       "motion_reference_dimensions": {
         "width": 97,
@@ -4402,6 +5787,8 @@
         230
       ],
       "cycle_ms": 1236,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,1,2,1,2,0,2,1,2,0,2,1",
       "motion": "blue-response"
     },
     {
@@ -4409,13 +5796,26 @@
       "id": "drone-vehicle-police-station",
       "service": "police",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "drone-launch-cradle",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 12
+      },
+      "specialist_equipment_added_alpha_pixels": 176,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 58,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 474,
+        "half_zoom_visible_pixels": 148
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 81,
@@ -4423,11 +5823,11 @@
       },
       "command_dimensions": {
         "width": 107,
-        "height": 65
+        "height": 77
       },
       "body_dimensions": {
         "width": 97,
-        "height": 55
+        "height": 67
       },
       "motion_reference_dimensions": {
         "width": 97,
@@ -4450,6 +5850,8 @@
         236
       ],
       "cycle_ms": 1249,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,1,2,1,2,0,2,1,2,0,2,1",
       "motion": "blue-response"
     },
     {
@@ -4457,13 +5859,26 @@
       "id": "personal-sar-vehicle",
       "service": "search-and-rescue",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 326,
+        "half_zoom_visible_pixels": 97
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 62,
@@ -4498,6 +5913,8 @@
         236
       ],
       "cycle_ms": 1275,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,2,0,2,1,1,2,1,2,0,2,1",
       "motion": "blue-response"
     },
     {
@@ -4505,13 +5922,26 @@
       "id": "sar-4x4",
       "service": "search-and-rescue",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 389,
+        "half_zoom_visible_pixels": 123
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 68,
@@ -4546,6 +5976,8 @@
         220
       ],
       "cycle_ms": 1205,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,0,2,1,2,0,2,1,1,2,1,2",
       "motion": "blue-response"
     },
     {
@@ -4553,13 +5985,26 @@
       "id": "rrv-2",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": "rrv-aerial-pair",
       "role_cue_offset": {
         "x": 0,
         "y": 6
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 329,
+        "half_zoom_visible_pixels": 103
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 64,
@@ -4594,6 +6039,8 @@
         230
       ],
       "cycle_ms": 1212,
+      "flash_phase": 5,
+      "flash_activity_signature": "0,1,2,0,2,1,1,2,1,2,0,2",
       "motion": "blue-response"
     },
     {
@@ -4601,13 +6048,26 @@
       "id": "community-midwife",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 321,
+        "half_zoom_visible_pixels": 98
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 61,
@@ -4642,6 +6102,8 @@
         229
       ],
       "cycle_ms": 1202,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "wheel-motion"
     },
     {
@@ -4649,13 +6111,26 @@
       "id": "specialist-paramedic-rrv",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": "specialist-medical-module",
       "role_cue_offset": {
         "x": 0,
         "y": 6
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 368,
+        "half_zoom_visible_pixels": 113
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 65,
@@ -4690,6 +6165,8 @@
         228
       ],
       "cycle_ms": 1275,
+      "flash_phase": 8,
+      "flash_activity_signature": "0,2,1,1,2,1,2,0,2,1,2,0",
       "motion": "blue-response"
     },
     {
@@ -4697,13 +6174,26 @@
       "id": "patient-transport-service-ambulance",
       "service": "ambulance",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 535,
+        "half_zoom_visible_pixels": 165
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 88,
@@ -4738,6 +6228,8 @@
         230
       ],
       "cycle_ms": 1261,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "wheel-motion"
     },
     {
@@ -4745,13 +6237,26 @@
       "id": "critical-care-transfer-ambulance",
       "service": "ambulance",
       "rare_showcase": true,
+      "generic_specialist_language": true,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 530,
+        "half_zoom_visible_pixels": 161
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 94,
@@ -4786,6 +6291,8 @@
         234
       ],
       "cycle_ms": 1264,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,1,1,2,1,2,0,2,1,2,0,2",
       "motion": "blue-response"
     },
     {
@@ -4793,13 +6300,26 @@
       "id": "mountain-rescue-4x4",
       "service": "search-and-rescue",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 388,
+        "half_zoom_visible_pixels": 118
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 65,
@@ -4834,6 +6354,8 @@
         224
       ],
       "cycle_ms": 1245,
+      "flash_phase": 1,
+      "flash_activity_signature": "0,1,2,0,2,1,2,0,2,1,1,2",
       "motion": "blue-response"
     },
     {
@@ -4841,13 +6363,26 @@
       "id": "control-van-mountain-rescue",
       "service": "search-and-rescue",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "command-mast-dish",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 13
+      },
+      "specialist_equipment_added_alpha_pixels": 265,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 73,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 489,
+        "half_zoom_visible_pixels": 148
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -4855,11 +6390,11 @@
       },
       "command_dimensions": {
         "width": 108,
-        "height": 67
+        "height": 80
       },
       "body_dimensions": {
         "width": 98,
-        "height": 57
+        "height": 70
       },
       "motion_reference_dimensions": {
         "width": 98,
@@ -4882,6 +6417,8 @@
         232
       ],
       "cycle_ms": 1200,
+      "flash_phase": 1,
+      "flash_activity_signature": "0,1,2,0,2,1,2,0,2,1,1,2",
       "motion": "blue-response"
     },
     {
@@ -4889,13 +6426,26 @@
       "id": "search-dog-unit",
       "service": "search-and-rescue",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 440,
+        "half_zoom_visible_pixels": 135
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 75,
@@ -4930,6 +6480,8 @@
         220
       ],
       "cycle_ms": 1211,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,0,2,1,1,2,1,2,0,2,1,2",
       "motion": "blue-response"
     },
     {
@@ -4937,13 +6489,26 @@
       "id": "search-dog-unit-sar",
       "service": "search-and-rescue",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 437,
+        "half_zoom_visible_pixels": 135
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 75,
@@ -4978,6 +6543,8 @@
         225
       ],
       "cycle_ms": 1265,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,0,2,1,1,2,1,2,0,2,1,2",
       "motion": "blue-response"
     },
     {
@@ -4985,13 +6552,26 @@
       "id": "crew-carrier-sar",
       "service": "search-and-rescue",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 457,
+        "half_zoom_visible_pixels": 132
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -5026,6 +6606,8 @@
         225
       ],
       "cycle_ms": 1249,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,1,2,0,2,1,2,0,2,1,1",
       "motion": "blue-response"
     },
     {
@@ -5033,13 +6615,26 @@
       "id": "recovery-vehicle",
       "service": "recovery",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 476,
+        "half_zoom_visible_pixels": 147
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -5074,6 +6669,8 @@
         232
       ],
       "cycle_ms": 1281,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "amber-beacon"
     },
     {
@@ -5081,13 +6678,26 @@
       "id": "flatbed-recovery-vehicle",
       "service": "recovery",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 593,
+        "half_zoom_visible_pixels": 180
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 110,
@@ -5122,6 +6732,8 @@
         227
       ],
       "cycle_ms": 1239,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "amber-beacon"
     },
     {
@@ -5129,13 +6741,26 @@
       "id": "hgv-recovery-vehicle",
       "service": "recovery",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 630,
+        "half_zoom_visible_pixels": 197
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 130,
@@ -5170,6 +6795,8 @@
         235
       ],
       "cycle_ms": 1259,
+      "flash_phase": null,
+      "flash_activity_signature": null,
       "motion": "amber-beacon"
     },
     {
@@ -5177,13 +6804,26 @@
       "id": "rru",
       "service": "fire",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "rope-rescue-reels",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 11
+      },
+      "specialist_equipment_added_alpha_pixels": 362,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 100,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 622,
+        "half_zoom_visible_pixels": 192
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 110,
@@ -5191,11 +6831,11 @@
       },
       "command_dimensions": {
         "width": 135,
-        "height": 58
+        "height": 69
       },
       "body_dimensions": {
         "width": 125,
-        "height": 48
+        "height": 59
       },
       "motion_reference_dimensions": {
         "width": 125,
@@ -5218,6 +6858,8 @@
         221
       ],
       "cycle_ms": 1208,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,2,0,2,1,1,2,1,2,0,2,1",
       "motion": "blue-response"
     },
     {
@@ -5225,13 +6867,26 @@
       "id": "eiu",
       "service": "police",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": "evidence-camera-mast",
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 7
+      },
+      "specialist_equipment_added_alpha_pixels": 95,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 30,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 423,
+        "half_zoom_visible_pixels": 131
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 72,
@@ -5239,11 +6894,11 @@
       },
       "command_dimensions": {
         "width": 96,
-        "height": 41
+        "height": 48
       },
       "body_dimensions": {
         "width": 86,
-        "height": 31
+        "height": 38
       },
       "motion_reference_dimensions": {
         "width": 86,
@@ -5266,6 +6921,8 @@
         230
       ],
       "cycle_ms": 1268,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,0,2,1,2,0,2,1,1,2,1",
       "motion": "blue-response"
     },
     {
@@ -5273,13 +6930,26 @@
       "id": "eod-commander",
       "service": "eod",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": "eod-command-mast",
       "role_cue_offset": {
         "x": 0,
         "y": 8
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 425,
+        "half_zoom_visible_pixels": 131
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 72,
@@ -5314,6 +6984,8 @@
         221
       ],
       "cycle_ms": 1207,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,0,2,1,1,2,1,2,0,2,1,2",
       "motion": "blue-response"
     },
     {
@@ -5321,13 +6993,26 @@
       "id": "eod-response-vehicle",
       "service": "eod",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": "eod-response-case",
       "role_cue_offset": {
         "x": 0,
         "y": 8
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 501,
+        "half_zoom_visible_pixels": 157
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 84,
@@ -5362,6 +7047,8 @@
         221
       ],
       "cycle_ms": 1210,
+      "flash_phase": 1,
+      "flash_activity_signature": "0,1,2,0,2,1,2,0,2,1,1,2",
       "motion": "blue-response"
     },
     {
@@ -5369,13 +7056,26 @@
       "id": "eod-medium-equipment-van",
       "service": "eod",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": "eod-twin-canisters",
       "role_cue_offset": {
         "x": 0,
         "y": 8
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 545,
+        "half_zoom_visible_pixels": 165
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -5410,6 +7110,8 @@
         225
       ],
       "cycle_ms": 1206,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,1,1,2,1,2,0,2,1,2,0,2",
       "motion": "blue-response"
     },
     {
@@ -5417,13 +7119,26 @@
       "id": "eod-heavy-equipment-vehicle",
       "service": "eod",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": "eod-robot-cradle",
       "role_cue_offset": {
         "x": 0,
         "y": 8
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": true,
       "edge_padding": 7,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 707,
+        "half_zoom_visible_pixels": 210
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 130,
@@ -5458,6 +7173,8 @@
         226
       ],
       "cycle_ms": 1275,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,2,0,2,1,1,2,1,2,0,2,1",
       "motion": "blue-response"
     },
     {
@@ -5465,13 +7182,26 @@
       "id": "marine-eod-response-vehicle",
       "service": "eod",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": "marine-eod-tube",
       "role_cue_offset": {
         "x": 0,
         "y": 7
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 458,
+        "half_zoom_visible_pixels": 142
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 78,
@@ -5506,6 +7236,8 @@
         225
       ],
       "cycle_ms": 1240,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,1,2,0,2,1,2,0,2,1,1",
       "motion": "blue-response"
     },
     {
@@ -5513,13 +7245,26 @@
       "id": "marine-eod-equipment-van",
       "service": "eod",
       "rare_showcase": true,
+      "generic_specialist_language": false,
       "role_cue": "marine-eod-twin-kit",
       "role_cue_offset": {
         "x": 0,
         "y": 8
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 524,
+        "half_zoom_visible_pixels": 162
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -5554,6 +7299,8 @@
         221
       ],
       "cycle_ms": 1237,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,0,2,1,2,0,2,1,1,2,1",
       "motion": "blue-response"
     },
     {
@@ -5561,13 +7308,26 @@
       "id": "welfare-vehicle-2",
       "service": "multi-service",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 493,
+        "half_zoom_visible_pixels": 150
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 91,
@@ -5602,6 +7362,8 @@
         224
       ],
       "cycle_ms": 1283,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,2,0,2,1,1,2,1,2,0,2,1",
       "motion": "blue-response"
     },
     {
@@ -5609,13 +7371,26 @@
       "id": "cell-van",
       "service": "police",
       "rare_showcase": false,
+      "generic_specialist_language": false,
       "role_cue": null,
       "role_cue_offset": {
         "x": 0,
         "y": 0
       },
+      "specialist_equipment_cue": null,
+      "specialist_equipment_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "specialist_equipment_added_alpha_pixels": 0,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
       "satellite_contrast_boost": false,
       "edge_padding": 5,
+      "grounding_shadow": {
+        "mode": "ground",
+        "visible_pixels": 527,
+        "half_zoom_visible_pixels": 163
+      },
       "source_override": null,
       "standard_dimensions": {
         "width": 88,
@@ -5650,6 +7425,8 @@
         234
       ],
       "cycle_ms": 1214,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,1,2,0,2,1,2,0,2,1,1",
       "motion": "blue-response"
     }
   ]

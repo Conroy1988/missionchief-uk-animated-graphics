@@ -4,6 +4,21 @@
   "display_name": "Modern Command Clarity",
   "source_profile": "standard",
   "frames": 12,
+  "animation_desynchronisation": {
+    "phase_modulus": 11,
+    "per_light_phase_stride": 3,
+    "showcase": [
+      "fire-rescue-pump",
+      "frontline-ambulance",
+      "police-incident-response-vehicle",
+      "rescue-support-unit",
+      "rapid-response-vehicle",
+      "armed-response-vehicle",
+      "incident-command-control-unit",
+      "coastguard-mud-rescue-unit",
+      "drone-vehicle-fire-station"
+    ]
+  },
   "selected_upgrades": [1, 2, 3, 5, 6, 7, 9, 12, 13, 15],
   "minimum_icon_width": 52,
   "maximum_icon_width": 296,
@@ -56,6 +71,33 @@
       ]
     }
   ],
+  "specialist_equipment": {
+    "hazmat-unit": "hazmat-detection-rack",
+    "breathing-apparatus-support-unit": "ba-cylinder-rack",
+    "incident-command-control-unit": "command-mast-dish",
+    "ambulance-control-unit": "command-mast-dish",
+    "cbrn-vehicle": "hazmat-detection-rack",
+    "mass-casualty-equipment": "mass-casualty-cases",
+    "rescue-pod": "pod-rescue-tools",
+    "command-pod": "pod-command-array",
+    "welfare-pod": "pod-welfare-awning",
+    "basu-pod": "pod-ba-cylinders",
+    "hazardous-materials-pod": "pod-hazmat-canisters",
+    "osu-pod": "pod-operations-cases",
+    "firearms-personnel-carrier": "tactical-equipment-locker",
+    "coastguard-mud-rescue-unit": "mud-rescue-sled",
+    "coastguard-rope-rescue-unit": "rope-rescue-reels",
+    "inland-rescue-boat-trailer": "watercraft-rollbar",
+    "rescue-watercraft-trailer": "watercraft-rollbar",
+    "boat-trailer": "watercraft-rollbar",
+    "control-van-sar": "command-mast-dish",
+    "drone-vehicle-sar-hq": "drone-launch-cradle",
+    "drone-vehicle-fire-station": "drone-launch-cradle",
+    "drone-vehicle-police-station": "drone-launch-cradle",
+    "control-van-mountain-rescue": "command-mast-dish",
+    "rru": "rope-rescue-reels",
+    "eiu": "evidence-camera-mast"
+  },
   "satellite_contrast_boost": [
     "rescue-pod",
     "m-rav",
@@ -73,6 +115,32 @@
     "eod-commander",
     "eod-heavy-equipment-vehicle"
   ],
+  "grounding_shadows": {
+    "aerial": [
+      "hems",
+      "police-helicopter",
+      "coastguard-rescue-helicopter",
+      "coastguard-rescue-helicopter-large"
+    ],
+    "marine": [
+      "ilb",
+      "alb"
+    ],
+    "showcase": [
+      "fire-rescue-pump",
+      "frontline-ambulance",
+      "police-incident-response-vehicle",
+      "aerial-appliance",
+      "incident-command-control-unit",
+      "rescue-pod",
+      "firearms-personnel-carrier",
+      "coastguard-mud-rescue-unit",
+      "inland-rescue-boat-trailer",
+      "ilb",
+      "hems",
+      "drone-vehicle-fire-station"
+    ]
+  },
   "helicopters": [
     "hems",
     "police-helicopter",
@@ -213,6 +281,12 @@
     "minimum_visible_pixels_at_half_zoom": 24,
     "minimum_animation_signature_count": 24,
     "maximum_shared_timing_signature": 8,
+    "minimum_flash_phase_buckets": 11,
+    "maximum_shared_flash_phase": 14,
+    "minimum_flash_activity_signatures": 24,
+    "maximum_shared_flash_activity_signature": 8,
+    "minimum_specialist_equipment_half_zoom_pixels": 4,
+    "minimum_grounding_shadow_half_zoom_pixels": 2,
     "minimum_role_group_silhouette_distance": 18,
     "minimum_boosted_satellite_edge_contrast": 34.0
   }
