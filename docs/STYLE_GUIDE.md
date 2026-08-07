@@ -33,12 +33,12 @@ Large masters are retained independently from exports. All map assets are rebuil
 
 ## Role clarity and map contrast
 
-- Commonly confused roles use restrained equipment silhouettes—command pods, aerials, ANPR pods, medical modules, EOD cases and marine equipment—rather than colour-only differentiation.
-- Added equipment must remain connected to the roof line, preserve the right-facing elevation and avoid official service branding.
-- Specialist equipment should communicate capability through shape: command masts, drone cradles, rescue tools, cylinders, pod modules, watercraft frames and evidence equipment. Existing strong ladder, platform and boat silhouettes must not receive duplicate generated equipment.
+- Role clarity must come from the original vehicle artwork, proportions, livery and authentic built-in equipment—not programmatically generated roof bars.
+- Synthetic roof blocks, generic equipment boxes and colour-coded silhouette markers are prohibited.
+- If a role needs stronger differentiation, create or revise its source master and review it at map scale; do not bolt generated geometry onto an export.
 - The weakest satellite-map assets receive a stronger light inner edge, dark outer edge and shadow while retaining transparent corners.
 - Every asset receives a compact contact shadow rather than a full-body floating halo. Road, marine and aerial assets use distinct grounding treatments.
-- Role-confusion groups must remain distinguishable at 50% scale and clear the configured silhouette-distance gate.
+- The 40-asset corrected-roofline inventory must retain zero generated top padding.
 
 ## Quality gates
 
@@ -48,5 +48,5 @@ Large masters are retained independently from exports. All map assets are rebuil
 - Exactly six APNG frames in True Scale and twelve in Modern Command Clarity.
 - Static and animated files share identical dimensions and vehicle alignment.
 - The fleet must occupy all eleven emergency-light phase buckets and clear the configured light-activity diversity gates.
-- Profiled specialist equipment and grounding shadows must remain visible at 50% scale.
+- Corrected rooflines and grounding shadows must remain valid at 50% scale.
 - All targeted satellite assets clear the boosted edge-contrast threshold.
