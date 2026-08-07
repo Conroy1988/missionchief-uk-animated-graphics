@@ -3,6 +3,22 @@ name: Build v1.2.0 MissionChief command pack
 
 on:
   workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - scripts/build_numbered_upload_package.py
+      - tools/tkb-missionchief-bulk-uploader.user.js
+      - data/vehicle-slots.json
+      - assets/exports/standard/static/**
+      - assets/exports/standard/animated/**
+      - assets/exports/command/static/**
+      - assets/exports/command/animated/**
+      - assets/masters/v1.1/**
+      - data/v1.2-enhancement-profile.json
+      - scripts/build_v1_1_enhanced.py
+      - scripts/validate_v1_1_enhanced.py
+      - .github/workflows/build-numbered-upload-package.yml
   push:
     branches:
       - main
