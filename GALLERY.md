@@ -1,14 +1,20 @@
-# Complete v1.1 vehicle gallery
+# Complete v1.2 vehicle gallery
 
 See all **117 static and animated vehicle graphics** included in **TKB UK Fleet — Animated** for MissionChief UK.
 
 > **[Use TKB UK Fleet — Animated on MissionChief →](https://www.missionchief.co.uk/vehicle_graphics/5897)**
 
-[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.1.1)
+[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.2.0)
 
-The previews below use the pack's twelve-frame Modern Command Visibility APNGs. Emergency vehicles use independent light groups and varied cadence; helicopters add rotor movement, while appropriate non-blue-light assets use restrained amber, wheel, navigation, wake or marker motion. Select any preview to open the full file.
+The previews below use the pack's twelve-frame Modern Command Clarity APNGs. Emergency vehicles use independent light groups, 11 fleet phase offsets and 48 activity signatures; helicopters add rotor movement, while appropriate non-blue-light assets use restrained amber, wheel, navigation, wake or marker motion. Select any preview to open the full file.
 
 The original v1.0 True Scale exports remain available under `assets/exports/standard/` and in the [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0).
+
+## v1.2 clarity evidence
+
+[![Role-differentiation audit](assets/previews/v1.2/role-differentiation-map-scale.png)](assets/previews/v1.2/role-differentiation-map-scale.png)
+
+[Role-differentiation at 100%, 75% and 50%](assets/previews/v1.2/role-differentiation-map-scale.png) · [Specialist-equipment audit](assets/previews/v1.2/specialist-equipment-map-scale.png) · [Desynchronised crowded response](assets/previews/v1.2/desynchronised-lights-crowd.png) · [Grounding-shadow audit](assets/previews/v1.2/grounding-shadows-map-scale.png) · [Satellite-contrast audit](assets/previews/v1.2/satellite-contrast-map-scale.png) · [Full dense satellite map](assets/previews/v1.2/busy-map-satellite.png)
 
 ## Core emergency services
 
