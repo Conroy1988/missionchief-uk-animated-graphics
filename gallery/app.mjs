@@ -115,15 +115,20 @@ function initGallery() {
   if (!(root instanceof HTMLElement) || root.dataset.ready === 'true') return;
   root.dataset.ready = 'true';
 
+  const currentRelease = root.dataset.currentRelease || 'v1.4.0';
   const config = {
     catalogueUrl: root.dataset.catalogueUrl || 'vehicles.json',
     currentAssetBase: root.dataset.currentAssetBase
-      || `${RAW_REPOSITORY}/${root.dataset.currentRelease || 'v1.4.0'}/assets/exports/command`,
+      || `${RAW_REPOSITORY}/${currentRelease}/assets/exports/command`,
   };
 
   document.querySelectorAll('[data-hero-asset]').forEach((image) => {
     if (!(image instanceof HTMLImageElement)) return;
     image.src = currentAssetUrl({ asset_id: image.dataset.heroAsset }, 'animated', config.currentAssetBase);
+  });
+  document.querySelectorAll('[data-gallery-image]').forEach((image) => {
+    if (!(image instanceof HTMLImageElement)) return;
+    image.src = `${RAW_REPOSITORY}/${currentRelease}/${image.dataset.galleryImage}`;
   });
 
   const defaults = {
