@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         TKB MissionChief UK Graphics Bulk Uploader
 // @namespace    https://github.com/Conroy1988/missionchief-uk-animated-graphics
-// @version      1.3.0
-// @description  Uploads the numbered TKB UK Emergency Fleet static and animated graphics to MissionChief pack 5897, including the Modern Command Clarity profile.
+// @version      1.4.0
+// @description  Uploads the numbered TKB UK Emergency Fleet v1.4 static and animated graphics to MissionChief pack 5897, including mixed 12/18-frame APNGs.
 // @author       TKB Gaming
 // @match        https://www.missionchief.co.uk/vehicle_graphics/5897/edit*
 // @run-at       document-idle

@@ -13,7 +13,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "data" / "prototypes.json"
-PROFILE_PATH = ROOT / "data" / "v1.3-overhaul-profile.json"
+PROFILE_PATH = ROOT / "data" / "v1.4-overhaul-profile.json"
 PROFILE = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
 RELEASE = str(PROFILE["release"])
 BUILD_REPORT_PATH = ROOT / "data" / f"{RELEASE}-build-report.json"
@@ -361,7 +361,10 @@ def render_desynchronised_lights_sheet(vehicle_map: dict[str, dict], asset_ids: 
 
 
 def render_rotor_sheet(vehicle_map: dict[str, dict]) -> Path:
-    columns = 12
+    columns = max(
+        len(frames_and_durations(ANIMATED_DIR / f"{asset_id}.png")[0])
+        for asset_id in ROTOR_SHOWCASE_IDS
+    )
     cell_width, cell_height = 212, 128
     label_width = 270
     width = label_width + columns * cell_width
@@ -648,8 +651,11 @@ def main() -> None:
             profile["qa"]["minimum_grounding_shadow_half_zoom_pixels"]
         ):
             errors.append("grounding shadow disappears at half zoom")
-        if len(frames) != int(profile["frames"]):
-            errors.append(f"APNG has {len(frames)} frames instead of {profile['frames']}")
+        expected_frames = int(
+            profile.get("animation_frame_overrides", {}).get(asset_id, profile["frames"])
+        )
+        if len(frames) != expected_frames:
+            errors.append(f"APNG has {len(frames)} frames instead of {expected_frames}")
         elif frames:
             if changed(frames[0], static):
                 errors.append("APNG frame 1 is not identical to the static export")
@@ -664,7 +670,10 @@ def main() -> None:
             for frame in frames[1:]:
                 cx, cy = alpha_centroid(frame)
                 maximum_shift = max(maximum_shift, math.dist(base_centroid, (cx, cy)))
-            if maximum_shift > 2.5:
+            maximum_allowed_shift = float(
+                profile.get("anchor_alignment", {}).get("maximum_centroid_shift_pixels", 2.5)
+            )
+            if maximum_shift > maximum_allowed_shift:
                 errors.append(f"animation alpha centroid shifts {maximum_shift:.2f}px")
         if durations != detail["durations_ms"]:
             errors.append("APNG timing does not match the deterministic build report")
@@ -855,7 +864,10 @@ def main() -> None:
         "vehicles": len(results),
         "static_pngs": len(list(STATIC_DIR.glob("*.png"))),
         "animated_apngs": len(list(ANIMATED_DIR.glob("*.png"))),
-        "frames_per_asset": profile["frames"],
+        "default_frames_per_asset": profile["frames"],
+        "frame_count_distribution": dict(
+            sorted(Counter(item["frames"] for item in results).items())
+        ),
         "themes_tested": profile["qa"]["themes"],
         "zoom_factors_tested": profile["qa"]["zoom_factors"],
         "timing_signature_count": len(timing_signatures),

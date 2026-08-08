@@ -12,7 +12,7 @@ from PIL import Image, ImageChops, ImageSequence
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PROFILE_PATH = ROOT / "data" / "v1.3-overhaul-profile.json"
+PROFILE_PATH = ROOT / "data" / "v1.4-overhaul-profile.json"
 STATIC_DIR = ROOT / "assets" / "exports" / "command" / "static"
 ANIMATED_DIR = ROOT / "assets" / "exports" / "command" / "animated"
 MAXIMUM_ANCHOR_DISTANCE = 1.5

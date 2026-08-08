@@ -13,7 +13,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageFont, ImageSequence
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "data" / "prototypes.json"
-PROFILE_PATH = ROOT / "data" / "v1.3-overhaul-profile.json"
+PROFILE_PATH = ROOT / "data" / "v1.4-overhaul-profile.json"
 STATIC_DIR = ROOT / "assets" / "exports" / "command" / "static"
 ANIMATED_DIR = ROOT / "assets" / "exports" / "command" / "animated"
 

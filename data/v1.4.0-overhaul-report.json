@@ -1,0 +1,117 @@
+{
+  "release": "v1.4.0",
+  "approved_upgrades": {
+    "4": "weakest-artwork replacement wave",
+    "5": "aircraft visual and motion overhaul",
+    "6": "marine visual and motion overhaul",
+    "7": "UK service-livery accuracy audit",
+    "9": "static/animated map-anchor alignment audit",
+    "10": "18-frame specialist motion upgrade"
+  },
+  "vehicles": 117,
+  "redrawn_weak_masters": 18,
+  "marine_redraw_masters": 2,
+  "minimum_redraw_half_zoom_changed_pixels": 258,
+  "aircraft_overhaul_assets": 4,
+  "marine_motion_assets": 2,
+  "smooth_18_frame_assets": 12,
+  "frame_count_distribution": {
+    "12": 105,
+    "18": 12
+  },
+  "livery_colour_family_pixels": {
+    "airfield": {
+      "blue": 78,
+      "green": 106,
+      "navy": 101,
+      "orange": 6,
+      "red": 104,
+      "yellow": 859
+    },
+    "ambulance": {
+      "blue": 1121,
+      "green": 1475,
+      "navy": 1875,
+      "orange": 98,
+      "red": 887,
+      "yellow": 16646
+    },
+    "coastguard": {
+      "blue": 581,
+      "green": 75,
+      "navy": 685,
+      "orange": 5690,
+      "red": 3056,
+      "yellow": 2914
+    },
+    "eod": {
+      "blue": 1308,
+      "green": 64,
+      "navy": 2588,
+      "orange": 19,
+      "red": 117,
+      "yellow": 860
+    },
+    "fire": {
+      "blue": 2807,
+      "green": 739,
+      "navy": 1987,
+      "orange": 2099,
+      "red": 39288,
+      "yellow": 16046
+    },
+    "lifeboat": {
+      "blue": 281,
+      "green": 17,
+      "navy": 591,
+      "orange": 1308,
+      "red": 737,
+      "yellow": 978
+    },
+    "multi-service": {
+      "blue": 278,
+      "green": 52,
+      "navy": 452,
+      "orange": 5,
+      "red": 12,
+      "yellow": 511
+    },
+    "police": {
+      "blue": 3713,
+      "green": 213,
+      "navy": 1810,
+      "orange": 38,
+      "red": 209,
+      "yellow": 4180
+    },
+    "recovery": {
+      "blue": 151,
+      "green": 3,
+      "navy": 287,
+      "orange": 68,
+      "red": 139,
+      "yellow": 3616
+    },
+    "search-and-rescue": {
+      "blue": 496,
+      "green": 639,
+      "navy": 935,
+      "orange": 1240,
+      "red": 952,
+      "yellow": 2921
+    }
+  },
+  "anchor_aligned_assets": 117,
+  "maximum_bottom_anchor_shift_pixels": 0,
+  "animated_bytes": 9962762,
+  "v1_3_animated_bytes": 9034343,
+  "animated_size_ratio": 1.10277,
+  "preview_files": [
+    "assets/previews/v1.4.0/weakest-artwork-redraw-before-after.png",
+    "assets/previews/v1.4.0/aircraft-motion-18-frame-audit.png",
+    "assets/previews/v1.4.0/marine-motion-18-frame-audit.png",
+    "assets/previews/v1.4.0/uk-livery-accuracy-audit.png"
+  ],
+  "errors": [],
+  "all_passed": true
+}

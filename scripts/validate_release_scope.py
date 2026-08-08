@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PROFILE_PATH = ROOT / "data" / "v1.3-overhaul-profile.json"
+PROFILE_PATH = ROOT / "data" / "v1.4-overhaul-profile.json"
 
 
 def git(*args: str) -> str:

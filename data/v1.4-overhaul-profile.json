@@ -1,0 +1,407 @@
+{
+  "release": "v1.4.0",
+  "master_source_release": "v1.2.4",
+  "profile": "command",
+  "display_name": "Modern Command Clarity — Air, Marine and Redraw Edition",
+  "source_profile": "standard",
+  "frames": 12,
+  "animation_frame_overrides": {
+    "hems": 18,
+    "police-helicopter": 18,
+    "coastguard-rescue-helicopter": 18,
+    "coastguard-rescue-helicopter-large": 18,
+    "ilb": 18,
+    "alb": 18,
+    "medical-cycle-responder": 18,
+    "atv-carrier": 18,
+    "recovery-vehicle": 18,
+    "flatbed-recovery-vehicle": 18,
+    "hgv-recovery-vehicle": 18,
+    "rescue-stairs": 18
+  },
+  "selected_upgrades": [4, 5, 6, 7, 9, 10],
+  "minimum_icon_width": 50,
+  "maximum_icon_width": 296,
+  "scale_calibration": {
+    "pixels_per_metre": 13.0,
+    "minimum_body_width": 50,
+    "maximum_body_width": 276,
+    "heavy_vehicle_threshold_metres": 8.5,
+    "asset_width_overrides": {
+      "alb": 159,
+      "medical-cycle-responder": 54
+    },
+    "baseline_release": "v1.3.0",
+    "maximum_mean_length_error_percent": 2.0,
+    "maximum_asset_length_error_percent": 3.0
+  },
+  "map_scale_reductions": {
+    "alb": {
+      "baseline_command_width": 241,
+      "baseline_command_height": 118,
+      "target_body_width": 159,
+      "target_command_width": 169,
+      "target_command_height": 84,
+      "requested_reduction_percent": 30
+    }
+  },
+  "animation_desynchronisation": {
+    "phase_modulus": 11,
+    "per_light_phase_stride": 3,
+    "showcase": [
+      "fire-rescue-pump",
+      "frontline-ambulance",
+      "police-incident-response-vehicle",
+      "rescue-support-unit",
+      "rapid-response-vehicle",
+      "armed-response-vehicle",
+      "incident-command-control-unit",
+      "coastguard-mud-rescue-unit",
+      "drone-vehicle-fire-station"
+    ]
+  },
+  "new_source_overrides": {
+    "medical-cycle-responder": "assets/masters/v1.1/medical-cycle-responder.png",
+    "hems": "assets/masters/v1.2.4/hems-full-tail.png",
+    "police-helicopter": "assets/masters/v1.2.4/police-helicopter-full-tail.png",
+    "water-pod": "assets/masters/v1.2.4/water-pod-carrier.png",
+    "bulk-foam-pod": "assets/masters/v1.2.4/bulk-foam-pod-carrier.png",
+    "rescue-pod": "assets/masters/v1.2.4/rescue-pod-carrier.png",
+    "command-pod": "assets/masters/v1.2.4/command-pod-carrier.png",
+    "welfare-pod": "assets/masters/v1.2.4/welfare-pod-carrier.png",
+    "basu-pod": "assets/masters/v1.2.4/basu-pod-carrier.png",
+    "misting-pod": "assets/masters/v1.2.4/misting-pod-carrier.png",
+    "hazardous-materials-pod": "assets/masters/v1.2.4/hazardous-materials-pod-carrier.png",
+    "osu-pod": "assets/masters/v1.2.4/osu-pod-carrier.png",
+    "hvp": "assets/masters/v1.2.4/hvp-carrier.png",
+    "joint-response-unit": "assets/masters/v1.3.0/joint-response-unit.png",
+    "police-incident-response-vehicle": "assets/masters/v1.3.0/police-incident-response-vehicle.png",
+    "rapid-response-vehicle": "assets/masters/v1.3.0/rapid-response-vehicle.png",
+    "rrv-2": "assets/masters/v1.3.0/rrv-2.png",
+    "specialist-paramedic-rrv": "assets/masters/v1.3.0/specialist-paramedic-rrv.png",
+    "otl": "assets/masters/v1.3.0/otl.png",
+    "community-first-responder": "assets/masters/v1.3.0/community-first-responder.png",
+    "armed-traffic-car": "assets/masters/v1.3.0/armed-traffic-car.png",
+    "armed-response-vehicle": "assets/masters/v1.3.0/armed-response-vehicle.png",
+    "cbrn-vehicle": "assets/masters/v1.3.0/cbrn-vehicle.png",
+    "control-van-sar": "assets/masters/v1.3.0/control-van-sar.png",
+    "drone-vehicle-sar-hq": "assets/masters/v1.3.0/drone-vehicle-sar-hq.png",
+    "drone-vehicle-fire-station": "assets/masters/v1.3.0/drone-vehicle-fire-station.png",
+    "drone-vehicle-police-station": "assets/masters/v1.3.0/drone-vehicle-police-station.png",
+    "eod-commander": "assets/masters/v1.3.0/eod-commander.png",
+    "eod-response-vehicle": "assets/masters/v1.3.0/eod-response-vehicle.png",
+    "eod-medium-equipment-van": "assets/masters/v1.3.0/eod-medium-equipment-van.png",
+    "eod-heavy-equipment-vehicle": "assets/masters/v1.3.0/eod-heavy-equipment-vehicle.png",
+    "marine-eod-response-vehicle": "assets/masters/v1.3.0/marine-eod-response-vehicle.png",
+    "marine-eod-equipment-van": "assets/masters/v1.3.0/marine-eod-equipment-van.png",
+    "incident-command-control-unit": "assets/masters/v1.4.0/incident-command-control-unit.png",
+    "bfu": "assets/masters/v1.4.0/bfu.png",
+    "major-foam-tender": "assets/masters/v1.4.0/major-foam-tender.png",
+    "fire-rescue-pump": "assets/masters/v1.4.0/fire-rescue-pump.png",
+    "hazmat-unit": "assets/masters/v1.4.0/hazmat-unit.png",
+    "water-carrier": "assets/masters/v1.4.0/water-carrier.png",
+    "breathing-apparatus-support-unit": "assets/masters/v1.4.0/breathing-apparatus-support-unit.png",
+    "control-van-mountain-rescue": "assets/masters/v1.4.0/control-van-mountain-rescue.png",
+    "heavy-4x4-tanker": "assets/masters/v1.4.0/heavy-4x4-tanker.png",
+    "rescue-pump": "assets/masters/v1.4.0/rescue-pump.png",
+    "osu": "assets/masters/v1.4.0/osu.png",
+    "riv": "assets/masters/v1.4.0/riv.png",
+    "firearms-personnel-carrier": "assets/masters/v1.4.0/firearms-personnel-carrier.png",
+    "rescue-support-unit": "assets/masters/v1.4.0/rescue-support-unit.png",
+    "critical-care-transfer-ambulance": "assets/masters/v1.4.0/critical-care-transfer-ambulance.png",
+    "inland-rescue-boat-trailer": "assets/masters/v1.4.0/inland-rescue-boat-trailer.png",
+    "hovercraft-trailer": "assets/masters/v1.4.0/hovercraft-trailer.png",
+    "f-wrc": "assets/masters/v1.4.0/f-wrc.png",
+    "ilb": "assets/masters/v1.4.0/ilb.png",
+    "alb": "assets/masters/v1.4.0/alb.png"
+  },
+  "baked_master_cues": {
+    "joint-response-unit": {"family": "role", "cue": "dual-service-command-pod"},
+    "police-incident-response-vehicle": {"family": "role", "cue": "irv-anpr-array"},
+    "rapid-response-vehicle": {"family": "role", "cue": "compact-medical-pod"},
+    "rrv-2": {"family": "role", "cue": "rrv-aerial-pair"},
+    "specialist-paramedic-rrv": {"family": "role", "cue": "specialist-medical-module"},
+    "otl": {"family": "role", "cue": "otl-command-mast"},
+    "community-first-responder": {"family": "role", "cue": "cfr-medical-beacon"},
+    "armed-traffic-car": {"family": "role", "cue": "traffic-anpr-pods"},
+    "armed-response-vehicle": {"family": "role", "cue": "arv-equipment-locker"},
+    "cbrn-vehicle": {"family": "equipment", "cue": "hazmat-detection-rack"},
+    "control-van-sar": {"family": "equipment", "cue": "command-mast-dish"},
+    "drone-vehicle-sar-hq": {"family": "equipment", "cue": "drone-launch-cradle"},
+    "drone-vehicle-fire-station": {"family": "equipment", "cue": "drone-launch-cradle"},
+    "drone-vehicle-police-station": {"family": "equipment", "cue": "drone-launch-cradle"},
+    "eod-commander": {"family": "role", "cue": "eod-command-mast"},
+    "eod-response-vehicle": {"family": "role", "cue": "eod-response-case"},
+    "eod-medium-equipment-van": {"family": "role", "cue": "eod-twin-canisters"},
+    "eod-heavy-equipment-vehicle": {"family": "role", "cue": "eod-robot-cradle"},
+    "marine-eod-response-vehicle": {"family": "role", "cue": "marine-eod-tube"},
+    "marine-eod-equipment-van": {"family": "role", "cue": "marine-eod-twin-kit"},
+    "incident-command-control-unit": {"family": "redraw", "cue": "command-body-panel-pass"},
+    "bfu": {"family": "redraw", "cue": "foam-and-manifold-pass"},
+    "major-foam-tender": {"family": "redraw", "cue": "airport-foam-tender-pass"},
+    "fire-rescue-pump": {"family": "redraw", "cue": "pump-compartment-pass"},
+    "hazmat-unit": {"family": "redraw", "cue": "hazmat-compartment-pass"},
+    "water-carrier": {"family": "redraw", "cue": "tanker-panel-pass"},
+    "breathing-apparatus-support-unit": {"family": "redraw", "cue": "ba-cylinder-pass"},
+    "control-van-mountain-rescue": {"family": "redraw", "cue": "mountain-command-pass"},
+    "heavy-4x4-tanker": {"family": "redraw", "cue": "heavy-tanker-pass"},
+    "rescue-pump": {"family": "redraw", "cue": "rescue-tool-pass"},
+    "osu": {"family": "redraw", "cue": "operations-locker-pass"},
+    "riv": {"family": "redraw", "cue": "rapid-intervention-pass"},
+    "firearms-personnel-carrier": {"family": "redraw", "cue": "tactical-carrier-pass"},
+    "rescue-support-unit": {"family": "redraw", "cue": "support-compartment-pass"},
+    "critical-care-transfer-ambulance": {"family": "redraw", "cue": "critical-care-pass"},
+    "inland-rescue-boat-trailer": {"family": "redraw", "cue": "boat-trailer-structure-pass"},
+    "hovercraft-trailer": {"family": "redraw", "cue": "hovercraft-structure-pass"},
+    "f-wrc": {"family": "redraw", "cue": "wildfire-tanker-pass"},
+    "ilb": {"family": "marine", "cue": "atlantic-inshore-detail-pass"},
+    "alb": {"family": "marine", "cue": "all-weather-lifeboat-detail-pass"}
+  },
+  "baked_master_report": "data/v1.4.0-master-report.json",
+  "legacy_master_report": "data/v1.3.0-master-report.json",
+  "redraw_master_cues": {
+    "incident-command-control-unit": "command-body-panel-pass",
+    "bfu": "foam-and-manifold-pass",
+    "major-foam-tender": "airport-foam-tender-pass",
+    "fire-rescue-pump": "pump-compartment-pass",
+    "hazmat-unit": "hazmat-compartment-pass",
+    "water-carrier": "tanker-panel-pass",
+    "breathing-apparatus-support-unit": "ba-cylinder-pass",
+    "control-van-mountain-rescue": "mountain-command-pass",
+    "heavy-4x4-tanker": "heavy-tanker-pass",
+    "rescue-pump": "rescue-tool-pass",
+    "osu": "operations-locker-pass",
+    "riv": "rapid-intervention-pass",
+    "firearms-personnel-carrier": "tactical-carrier-pass",
+    "rescue-support-unit": "support-compartment-pass",
+    "critical-care-transfer-ambulance": "critical-care-pass",
+    "inland-rescue-boat-trailer": "boat-trailer-structure-pass",
+    "hovercraft-trailer": "hovercraft-structure-pass",
+    "f-wrc": "wildfire-tanker-pass"
+  },
+  "marine_master_cues": {
+    "ilb": "atlantic-inshore-detail-pass",
+    "alb": "all-weather-lifeboat-detail-pass"
+  },
+  "light_overrides_path": "data/v1.2.6-light-overrides.json",
+  "light_overrides_release": "v1.2.6",
+  "role_differentiation": {},
+  "role_confusion_groups": [],
+  "specialist_equipment": {},
+  "retired_generated_overlays": {
+    "role_differentiation": [
+      "joint-response-unit", "police-incident-response-vehicle", "rapid-response-vehicle",
+      "rrv-2", "specialist-paramedic-rrv", "otl", "community-first-responder",
+      "armed-traffic-car", "armed-response-vehicle", "eod-commander",
+      "eod-response-vehicle", "eod-medium-equipment-van", "eod-heavy-equipment-vehicle",
+      "marine-eod-response-vehicle", "marine-eod-equipment-van"
+    ],
+    "specialist_equipment": [
+      "hazmat-unit", "breathing-apparatus-support-unit", "incident-command-control-unit",
+      "ambulance-control-unit", "cbrn-vehicle", "mass-casualty-equipment", "rescue-pod",
+      "command-pod", "welfare-pod", "basu-pod", "hazardous-materials-pod", "osu-pod",
+      "firearms-personnel-carrier", "coastguard-mud-rescue-unit",
+      "coastguard-rope-rescue-unit", "inland-rescue-boat-trailer",
+      "rescue-watercraft-trailer", "boat-trailer", "control-van-sar",
+      "drone-vehicle-sar-hq", "drone-vehicle-fire-station",
+      "drone-vehicle-police-station", "control-van-mountain-rescue", "rru", "eiu"
+    ]
+  },
+  "left_facing_assets": [
+    "coastguard-commander", "patient-transport-service-ambulance",
+    "critical-care-transfer-ambulance", "control-van-sar", "operational-support-van",
+    "drone-vehicle-sar-hq", "drone-vehicle-fire-station", "drone-vehicle-police-station",
+    "crew-carrier-sar", "control-van-mountain-rescue", "search-dog-unit",
+    "search-dog-unit-sar", "mountain-rescue-4x4", "recovery-vehicle",
+    "flatbed-recovery-vehicle", "hgv-recovery-vehicle", "rru", "eiu",
+    "eod-commander", "eod-response-vehicle", "eod-medium-equipment-van",
+    "eod-heavy-equipment-vehicle", "marine-eod-response-vehicle",
+    "marine-eod-equipment-van", "welfare-vehicle-2", "cell-van"
+  ],
+  "response_running_lights": {
+    "enabled": true,
+    "headlight_colour": [255, 247, 208, 220],
+    "rear_colour": [255, 45, 30, 205],
+    "minimum_body_width": 58
+  },
+  "wheel_geometry": {
+    "medical-cycle-responder": {"centres": [[0.24, 0.78], [0.78, 0.78]], "radius_fraction": 0.17},
+    "atv-carrier": {"centres": [[0.18, 0.80], [0.78, 0.80]], "radius_fraction": 0.09},
+    "recovery-vehicle": {"centres": [[0.18, 0.79], [0.74, 0.79]], "radius_fraction": 0.10},
+    "flatbed-recovery-vehicle": {"centres": [[0.17, 0.80], [0.81, 0.80]], "radius_fraction": 0.10},
+    "hgv-recovery-vehicle": {"centres": [[0.17, 0.81], [0.62, 0.81], [0.78, 0.81]], "radius_fraction": 0.09},
+    "rescue-stairs": {"centres": [[0.18, 0.81], [0.76, 0.81]], "radius_fraction": 0.085}
+  },
+  "motion": {
+    "amber": [
+      "airfield-operations-vehicle", "airfield-operations-supervisor",
+      "recovery-vehicle", "flatbed-recovery-vehicle", "hgv-recovery-vehicle", "rescue-stairs"
+    ],
+    "wheel": [
+      "medical-cycle-responder", "atv-carrier", "recovery-vehicle",
+      "flatbed-recovery-vehicle", "hgv-recovery-vehicle", "rescue-stairs"
+    ],
+    "marine": ["ilb", "alb"],
+    "trailer": [
+      "flood-rescue-unit-trailer", "inland-rescue-boat-trailer",
+      "rescue-watercraft-trailer", "hovercraft-trailer", "boat-trailer",
+      "medical-equipment-trailer", "pump-trailer", "operational-support-trailer",
+      "sar-flood-rescue-trailer"
+    ]
+  },
+  "marine_motion": {
+    "ilb": {
+      "wake_strength": 0.78, "bow_spray": 0.58, "stern_turbulence": 0.78,
+      "waterline_shimmer": 0.68, "wake_length": 0.22,
+      "navigation": {"red": [0.17, 0.35], "green": [0.47, 0.36], "white": [0.18, 0.08]}
+    },
+    "alb": {
+      "wake_strength": 1.0, "bow_spray": 0.72, "stern_turbulence": 0.92,
+      "waterline_shimmer": 0.82, "wake_length": 0.28,
+      "navigation": {"red": [0.34, 0.33], "green": [0.64, 0.33], "white": [0.39, 0.05]}
+    }
+  },
+  "livery_accuracy": {
+    "authority_notes": [
+      "Road Vehicles Lighting and Goods Vehicles (Plating and Testing) (Amendment) Regulations 2009",
+      "RNLI official current lifeboat fleet references",
+      "Bristow official UK HM Coastguard SAR fleet references"
+    ],
+    "preserve_original_service_marks": false,
+    "required_service_colour_families": {
+      "fire": ["red", "yellow"],
+      "police": ["blue", "yellow"],
+      "ambulance": ["green", "yellow"],
+      "coastguard": ["orange", "yellow"],
+      "lifeboat": ["orange", "navy"],
+      "search-and-rescue": ["orange", "yellow"]
+    }
+  },
+  "anchor_alignment": {
+    "reference": "bottom-centre-transparent-canvas",
+    "maximum_centroid_shift_pixels": 2.0,
+    "maximum_bottom_anchor_shift_pixels": 0,
+    "require_static_frame_identity": true
+  },
+  "satellite_contrast_boost": [
+    "water-pod", "bulk-foam-pod", "rescue-pod", "command-pod", "welfare-pod",
+    "basu-pod", "misting-pod", "hazardous-materials-pod", "osu-pod", "hvp",
+    "m-rav", "ilb", "mountain-rescue-4x4", "drone-vehicle-fire-station",
+    "firearms-personnel-carrier", "armed-cell-van", "hovercraft-transporter",
+    "eod-medium-equipment-van", "eod-commander", "eod-heavy-equipment-vehicle"
+  ],
+  "grounding_shadows": {
+    "aerial": ["hems", "police-helicopter", "coastguard-rescue-helicopter", "coastguard-rescue-helicopter-large"],
+    "marine": ["ilb", "alb"],
+    "trailers": [
+      "flood-rescue-unit-trailer", "inland-rescue-boat-trailer", "rescue-watercraft-trailer",
+      "hovercraft-trailer", "boat-trailer", "medical-equipment-trailer", "pump-trailer",
+      "operational-support-trailer", "sar-flood-rescue-trailer"
+    ],
+    "showcase": [
+      "fire-rescue-pump", "frontline-ambulance", "police-incident-response-vehicle",
+      "aerial-appliance", "incident-command-control-unit", "rescue-pod",
+      "firearms-personnel-carrier", "coastguard-mud-rescue-unit",
+      "inland-rescue-boat-trailer", "ilb", "hems", "drone-vehicle-fire-station"
+    ]
+  },
+  "helicopters": ["hems", "police-helicopter", "coastguard-rescue-helicopter", "coastguard-rescue-helicopter-large"],
+  "rotor_geometry": {
+    "hems": {
+      "hub": [0.599, 0.12], "disc_width": 0.84, "clear_below": 0.31,
+      "navigation": {"nose": [0.91, 0.55], "tail": [0.05, 0.28], "anti_collision": [0.62, 0.34]},
+      "body_keep_polygon": [[0.4, 0.38], [0.46, 0.22], [0.54, 0.15], [0.6, 0.08], [0.66, 0.14], [0.77, 0.19], [0.84, 0.38]]
+    },
+    "police-helicopter": {
+      "hub": [0.615, 0.13], "disc_width": 0.84, "clear_below": 0.32,
+      "navigation": {"nose": [0.91, 0.57], "tail": [0.05, 0.27], "anti_collision": [0.63, 0.36]},
+      "body_keep_polygon": [[0.42, 0.38], [0.47, 0.24], [0.57, 0.17], [0.615, 0.08], [0.68, 0.15], [0.8, 0.23], [0.88, 0.38]]
+    },
+    "coastguard-rescue-helicopter": {
+      "hub": [0.568, 0.1], "disc_width": 0.86, "tail_hub": [0.074, 0.22], "tail_radius": 0.2,
+      "preserve_baked_tail_rotor": true, "animate_preserved_tail_rotor": true, "clear_below": 0.34,
+      "navigation": {"nose": [0.92, 0.58], "tail": [0.05, 0.27], "anti_collision": [0.59, 0.36]},
+      "body_keep_polygon": [[0.33, 0.36], [0.38, 0.24], [0.49, 0.18], [0.55, 0.15], [0.568, 0.03], [0.63, 0.14], [0.77, 0.22], [0.83, 0.36]]
+    },
+    "coastguard-rescue-helicopter-large": {
+      "hub": [0.559, 0.12], "disc_width": 0.84, "tail_hub": [0.075, 0.2], "tail_radius": 0.18,
+      "preserve_baked_tail_rotor": true, "animate_preserved_tail_rotor": true, "clear_below": 0.38,
+      "navigation": {"nose": [0.92, 0.58], "tail": [0.05, 0.25], "anti_collision": [0.58, 0.38]},
+      "body_keep_polygon": [[0.29, 0.4], [0.35, 0.28], [0.48, 0.24], [0.53, 0.22], [0.559, 0.07], [0.61, 0.21], [0.73, 0.25], [0.79, 0.4]]
+    }
+  },
+  "helicopter_edge_padding": {
+    "hems": 10,
+    "police-helicopter": 10,
+    "coastguard-rescue-helicopter": 10,
+    "coastguard-rescue-helicopter-large": 10
+  },
+  "helicopter_tail_integrity": {
+    "zone_width_fraction": 0.2,
+    "zone_height_fraction": 0.4,
+    "minimum_strong_alpha_pixels": {
+      "hems": 400,
+      "police-helicopter": 360,
+      "coastguard-rescue-helicopter": 480,
+      "coastguard-rescue-helicopter-large": 560
+    }
+  },
+  "mounted_carriers": {
+    "water-pod": {"base_vehicle": "pm", "module": "water-pod", "real_length_metres": 9.1, "minimum_body_width": 118, "minimum_command_width": 128, "expected_motion": "blue-response", "expected_lights": 4},
+    "bulk-foam-pod": {"base_vehicle": "pm", "module": "bulk-foam-pod", "real_length_metres": 9.1, "minimum_body_width": 118, "minimum_command_width": 128, "expected_motion": "blue-response", "expected_lights": 4},
+    "rescue-pod": {"base_vehicle": "pm", "module": "rescue-pod", "real_length_metres": 9.1, "minimum_body_width": 118, "minimum_command_width": 128, "expected_motion": "blue-response", "expected_lights": 4},
+    "command-pod": {"base_vehicle": "pm", "module": "command-pod", "real_length_metres": 9.1, "minimum_body_width": 118, "minimum_command_width": 128, "expected_motion": "blue-response", "expected_lights": 4},
+    "welfare-pod": {"base_vehicle": "pm", "module": "welfare-pod", "real_length_metres": 9.1, "minimum_body_width": 118, "minimum_command_width": 128, "expected_motion": "blue-response", "expected_lights": 4},
+    "basu-pod": {"base_vehicle": "pm", "module": "basu-pod", "real_length_metres": 9.1, "minimum_body_width": 118, "minimum_command_width": 128, "expected_motion": "blue-response", "expected_lights": 4},
+    "misting-pod": {"base_vehicle": "pm", "module": "misting-pod", "real_length_metres": 9.1, "minimum_body_width": 118, "minimum_command_width": 128, "expected_motion": "blue-response", "expected_lights": 4},
+    "hazardous-materials-pod": {"base_vehicle": "pm", "module": "hazardous-materials-pod", "real_length_metres": 9.1, "minimum_body_width": 118, "minimum_command_width": 128, "expected_motion": "blue-response", "expected_lights": 4},
+    "osu-pod": {"base_vehicle": "pm", "module": "osu-pod", "real_length_metres": 9.1, "minimum_body_width": 118, "minimum_command_width": 128, "expected_motion": "blue-response", "expected_lights": 4},
+    "hvp": {"base_vehicle": "pm", "module": "hvp", "real_length_metres": 9.1, "minimum_body_width": 118, "minimum_command_width": 128, "expected_motion": "blue-response", "expected_lights": 4}
+  },
+  "rare_showcase": [
+    "aerial-appliance", "armed-cell-van", "armed-response-vehicle",
+    "airfield-firefighting-command-vehicle", "airfield-operations-supervisor",
+    "airfield-operations-vehicle", "breathing-apparatus-support-unit", "carp",
+    "cbrn-vehicle", "coastguard-mud-rescue-unit", "coastguard-rescue-helicopter",
+    "coastguard-rescue-helicopter-large", "coastguard-rope-rescue-unit",
+    "critical-care-transfer-ambulance", "eiu", "eod-commander",
+    "eod-heavy-equipment-vehicle", "eod-medium-equipment-van", "eod-response-vehicle",
+    "firearms-personnel-carrier", "hazmat-unit", "hems", "hovercraft-transporter",
+    "incident-command-control-unit", "marine-eod-equipment-van",
+    "marine-eod-response-vehicle", "mass-casualty-equipment",
+    "medical-cycle-responder", "police-helicopter", "prv", "rescue-stairs", "rru", "srv"
+  ],
+  "compression": {
+    "baseline_release": "v1.3.0",
+    "baseline_animated_bytes": 9034343,
+    "maximum_total_ratio": 1.35,
+    "lossless_pixel_verification": true,
+    "preferred_disposal": 0,
+    "fallback_disposal": 1,
+    "compress_level": 9
+  },
+  "qa": {
+    "themes": ["light", "dark", "satellite", "grayscale"],
+    "zoom_factors": [1.0, 0.75, 0.5],
+    "minimum_visible_pixels_at_half_zoom": 24,
+    "minimum_animation_signature_count": 24,
+    "maximum_shared_timing_signature": 8,
+    "minimum_flash_phase_buckets": 11,
+    "maximum_shared_flash_phase": 14,
+    "minimum_flash_activity_signatures": 24,
+    "maximum_shared_flash_activity_signature": 8,
+    "minimum_grounding_shadow_half_zoom_pixels": 2,
+    "maximum_retired_overlay_top_padding_pixels": 0,
+    "minimum_boosted_satellite_edge_contrast": 34.0,
+    "minimum_helicopter_tail_margin_pixels": 6,
+    "maximum_outline_to_body_ratio": 0.56,
+    "minimum_half_zoom_detail_score": 8.0,
+    "maximum_isolated_alpha_pixels": 0,
+    "minimum_baked_master_half_zoom_pixels": 3,
+    "minimum_redraw_half_zoom_changed_pixels": 8,
+    "expected_redraw_masters": 18,
+    "expected_marine_masters": 2,
+    "expected_smooth_motion_assets": 12,
+    "smooth_motion_frames": 18
+  }
+}

@@ -66,7 +66,7 @@ def add_deterministic_zip_member(archive: zipfile.ZipFile, path: Path, archive_n
 
 
 def write_readme(package_root: Path, version: str, profile: str) -> None:
-    frame_description = "twelve-frame" if profile == "command" else "six-frame"
+    frame_description = "twelve-frame, with selected eighteen-frame motion upgrades" if profile == "command" else "six-frame"
     content = f"""# TKB UK Emergency Fleet — Numbered MissionChief Upload Package
 
 Release: {version}

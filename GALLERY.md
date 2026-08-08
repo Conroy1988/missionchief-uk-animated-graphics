@@ -1,22 +1,22 @@
-# Complete v1.3.0 vehicle gallery
+# Complete v1.4.0 vehicle gallery
 
 See all **117 static and animated vehicle graphics** included in **TKB UK Fleet — Animated** for MissionChief UK.
 
 > **[Use TKB UK Fleet — Animated on MissionChief →](https://www.missionchief.co.uk/vehicle_graphics/5897)**
 
-[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.3.0)
+[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.0)
 
-The previews below use the pack's twelve-frame Modern Command Clarity APNGs. Emergency vehicles use fixture-shaped light groups, 11 fleet phase offsets and 58 activity signatures; helicopters add elliptical rotor and aviation-light motion, while suitable non-blue-light assets use restrained amber, wheel, navigation, wake or marker movement. Select any preview to open the full file.
+The previews below use the pack's twelve-frame Modern Command Clarity APNGs, with eighteen-frame cycles for aircraft, operational lifeboats and six visible-wheel assets. Emergency vehicles use fixture-shaped light groups, 11 fleet phase offsets and 61 activity signatures; helicopters add multi-band rotor and aviation-light motion, while suitable non-blue-light assets use restrained amber, wheel, navigation, wake or marker movement. Select any preview to open the full file.
 
 The original v1.0 True Scale exports remain available under `assets/exports/standard/` and in the [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0).
 
-## v1.3.0 clarity evidence
+## v1.4.0 clarity evidence
 
-This release recalibrates the complete fleet against real vehicle lengths, rebuilds twenty weaker role masters, refines outlines, liveries and shadows, adds more realistic emergency/aviation/marine/wheel motion, and cuts total APNG weight by 51.73% without changing a decoded pixel. The approved 30% ALB reduction remains intact.
+This release redraws eighteen weaker ground assets and both operational lifeboats, deepens aircraft and marine motion, audits UK livery colour language, proves zero bottom-centre anchor movement, and upgrades twelve suitable assets to eighteen frames. The complete APNG fleet remains 46.77% smaller than v1.2.7, and the approved 30% ALB reduction remains intact.
 
-[![Fleet scale before and after](assets/previews/v1.3.0/fleet-scale-before-after.png)](assets/previews/v1.3.0/fleet-scale-before-after.png)
+[![Weakest artwork before and after](assets/previews/v1.4.0/weakest-artwork-redraw-before-after.png)](assets/previews/v1.4.0/weakest-artwork-redraw-before-after.png)
 
-[Twenty baked role masters](assets/previews/v1.3.0/baked-role-master-audit.png) · [Lighting and motion frames](assets/previews/v1.3.0/lighting-motion-audit.png) · [Outline, livery and shadow audit](assets/previews/v1.3.0/adaptive-outline-livery-shadow-audit.png) · [Complete helicopter tails at 100%, 75% and 50%](assets/previews/v1.3.0/complete-helicopter-tails-map-scale.png) · [All twelve helicopter frames](assets/previews/v1.3.0/helicopter-rotor-frames.png) · [All ten mounted specialist carriers at 100%, 75% and 50%](assets/previews/v1.3.0/mounted-specialist-carrier-map-scale.png) · [Desynchronised crowded response](assets/previews/v1.3.0/desynchronised-lights-crowd.png) · [Full dense satellite map](assets/previews/v1.3.0/busy-map-satellite.png)
+[18-frame aircraft audit](assets/previews/v1.4.0/aircraft-motion-18-frame-audit.png) · [18-frame marine audit](assets/previews/v1.4.0/marine-motion-18-frame-audit.png) · [UK livery-language audit](assets/previews/v1.4.0/uk-livery-accuracy-audit.png) · [Complete helicopter tails at 100%, 75% and 50%](assets/previews/v1.4.0/complete-helicopter-tails-map-scale.png) · [All eighteen helicopter frames](assets/previews/v1.4.0/helicopter-rotor-frames.png) · [Desynchronised crowded response](assets/previews/v1.4.0/desynchronised-lights-crowd.png) · [Full dense satellite map](assets/previews/v1.4.0/busy-map-satellite.png)
 
 ## Core emergency services
 

@@ -15,7 +15,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "data" / "prototypes.json"
-PROFILE_PATH = ROOT / "data" / "v1.3-overhaul-profile.json"
+PROFILE_PATH = ROOT / "data" / "v1.4-overhaul-profile.json"
 PROFILE = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
 RELEASE = str(PROFILE["release"])
 STANDARD_DIR = ROOT / "assets" / "exports" / "standard" / "static"
@@ -50,6 +50,10 @@ FLASH_PATTERNS = {
 
 def stable_seed(asset_id: str) -> int:
     return int(hashlib.sha256(asset_id.encode("utf-8")).hexdigest()[:12], 16)
+
+
+def frames_for_asset(asset_id: str, profile: dict) -> int:
+    return int(profile.get("animation_frame_overrides", {}).get(asset_id, profile["frames"]))
 
 
 def crop_to_alpha(image: Image.Image, padding: int = 1) -> Image.Image:
@@ -102,11 +106,43 @@ def modern_tone(image: Image.Image) -> Image.Image:
 
 
 def standardise_livery(image: Image.Image, service: str) -> tuple[Image.Image, int]:
-    """Normalise existing high-visibility colours without inventing new markings."""
+    """Normalise existing UK service colour language without inventing new markings."""
     rgba = image.convert("RGBA")
+    palette = {
+        "fire": {
+            "red": (232, 38, 32), "yellow": (255, 222, 32),
+            "green": (36, 184, 105), "blue": (38, 126, 236),
+        },
+        "police": {
+            "red": (236, 45, 36), "yellow": (255, 226, 32),
+            "green": (33, 184, 106), "blue": (35, 112, 222),
+        },
+        "ambulance": {
+            "red": (236, 45, 36), "yellow": (255, 226, 32),
+            "green": (28, 170, 93), "blue": (40, 126, 232),
+        },
+        "coastguard": {
+            "red": (243, 75, 31), "yellow": (255, 220, 31),
+            "green": (34, 183, 105), "blue": (36, 113, 213),
+        },
+        "lifeboat": {
+            "red": (244, 76, 29), "yellow": (255, 214, 28),
+            "green": (32, 176, 101), "blue": (11, 61, 104),
+        },
+        "search-and-rescue": {
+            "red": (241, 78, 30), "yellow": (255, 220, 31),
+            "green": (32, 179, 103), "blue": (33, 112, 210),
+        },
+    }.get(
+        service,
+        {
+            "red": (236, 45, 36), "yellow": (255, 225, 28),
+            "green": (36, 205, 112), "blue": (40, 126, 242),
+        },
+    )
     pixels = []
     changed = 0
-    for red, green, blue, alpha in rgba.getdata():
+    for red, green, blue, alpha in rgba.get_flattened_data():
         if alpha < 24:
             pixels.append((0, 0, 0, 0) if alpha == 0 else (red, green, blue, alpha))
             continue
@@ -114,13 +150,13 @@ def standardise_livery(image: Image.Image, service: str) -> tuple[Image.Image, i
         replacement = None
         if saturation >= 0.46 and value >= 0.28:
             if hue <= 0.065 or hue >= 0.955:
-                replacement = (round(255 * value), round(54 * value), round(38 * value))
+                replacement = tuple(round(channel * value) for channel in palette["red"])
             elif 0.105 <= hue <= 0.205:
-                replacement = (round(255 * value), round(225 * value), round(28 * value))
+                replacement = tuple(round(channel * value) for channel in palette["yellow"])
             elif 0.255 <= hue <= 0.455:
-                replacement = (round(36 * value), round(205 * value), round(112 * value))
+                replacement = tuple(round(channel * value) for channel in palette["green"])
             elif 0.52 <= hue <= 0.70:
-                replacement = (round(40 * value), round(126 * value), round(242 * value))
+                replacement = tuple(round(channel * value) for channel in palette["blue"])
         if replacement is None:
             pixels.append((red, green, blue, alpha))
         else:
@@ -134,7 +170,7 @@ def cleanup_alpha_artifacts(image: Image.Image) -> tuple[Image.Image, dict[str, 
     """Remove only sub-visible isolated alpha noise while preserving aerials and fine gear."""
     rgba = image.convert("RGBA")
     alpha = rgba.getchannel("A")
-    source = list(alpha.getdata())
+    source = list(alpha.get_flattened_data())
     cleaned = source[:]
     removed = 0
     width, height = rgba.size
@@ -159,7 +195,7 @@ def cleanup_alpha_artifacts(image: Image.Image) -> tuple[Image.Image, dict[str, 
     rgba.putalpha(alpha)
     output = []
     transparent_rgb = 0
-    for red, green, blue, value in rgba.getdata():
+    for red, green, blue, value in rgba.get_flattened_data():
         if value == 0:
             transparent_rgb += int(red != 0 or green != 0 or blue != 0)
             output.append((0, 0, 0, 0))
@@ -190,7 +226,11 @@ def half_zoom_detail_score(image: Image.Image) -> float:
     gray = reduced.convert("L")
     local_range = ImageChops.subtract(gray.filter(ImageFilter.MaxFilter(3)), gray.filter(ImageFilter.MinFilter(3)))
     alpha = reduced.getchannel("A")
-    values = [value for value, a in zip(local_range.getdata(), alpha.getdata()) if a >= 64]
+    values = [
+        value
+        for value, a in zip(local_range.get_flattened_data(), alpha.get_flattened_data())
+        if a >= 64
+    ]
     return round(sum(values) / max(1, len(values)), 2)
 
 
@@ -670,10 +710,12 @@ def add_visibility_edge(
     canvas.alpha_composite(image, (padding, padding))
     outline_pixels = sum(
         1
-        for outer_value, inner_value in zip(outer_ring.getdata(), inner_ring.getdata())
+        for outer_value, inner_value in zip(
+            outer_ring.get_flattened_data(), inner_ring.get_flattened_data()
+        )
         if outer_value >= 12 or inner_value >= 12
     )
-    body_pixels = sum(1 for value in source_alpha.getdata() if value >= 64)
+    body_pixels = sum(1 for value in source_alpha.get_flattened_data() if value >= 64)
     body_bbox = source_alpha.getbbox()
     body_bbox_area = (
         (body_bbox[2] - body_bbox[0]) * (body_bbox[3] - body_bbox[1])
@@ -734,7 +776,7 @@ def flash_activity_signature(vehicle: dict, profile: dict) -> str | None:
     stride = int(settings.get("per_light_phase_stride", 3))
     phase = vehicle_flash_phase(vehicle["id"], profile)
     activity = []
-    for frame_index in range(int(profile["frames"])):
+    for frame_index in range(frames_for_asset(str(vehicle["id"]), profile)):
         active = 0
         for index, light in enumerate(vehicle["lights"]):
             kind = light_kind(light, index)
@@ -864,9 +906,9 @@ def aviation_lights_overlay(
         draw.ellipse((px - radius, py - radius, px + radius, py + radius), fill=colour)
 
     point("nose", (76, 255, 126, 205))
-    if frame_index in {3, 8}:
+    if frame_index % 9 in {3, 4}:
         point("anti_collision", (255, 46, 34, 248), radius=2)
-    if frame_index in {5, 11}:
+    if frame_index % 6 == 5:
         point("tail", (242, 249, 255, 238))
     return overlay.filter(ImageFilter.GaussianBlur(0.18))
 
@@ -927,6 +969,14 @@ def main_rotor_sweep(size: tuple[int, int], frame_index: int, seed: int, geometr
         outline=(231, 239, 244, round(opacity * 0.72)),
         width=1,
     )
+    tertiary_radius = round(radius * (0.43 + 0.07 * abs(math.sin(phase * 1.8))))
+    haze_draw.arc(
+        (hub_x - tertiary_radius, hub_y - inner_height - 1, hub_x + tertiary_radius, hub_y + inner_height + 1),
+        188,
+        352,
+        fill=(238, 244, 247, round(opacity * 0.48)),
+        width=1,
+    )
     haze = haze.filter(ImageFilter.GaussianBlur(max(0.7, height * 0.014)))
 
     streaks = Image.new("RGBA", size, (0, 0, 0, 0))
@@ -961,6 +1011,18 @@ def main_rotor_sweep(size: tuple[int, int], frame_index: int, seed: int, geometr
             secondary_y,
         ),
         fill=(210, 224, 232, 62),
+        width=1,
+    )
+    tertiary_y = hub_y + (1 if frame_index % 2 else -1)
+    tertiary_length = 0.24 + 0.18 * abs(math.cos(phase * 1.3))
+    streak_draw.line(
+        (
+            hub_x - round(radius * tertiary_length),
+            tertiary_y,
+            hub_x + round(radius * tertiary_length),
+            tertiary_y,
+        ),
+        fill=(232, 240, 244, 48),
         width=1,
     )
     streaks = streaks.filter(ImageFilter.GaussianBlur(0.35))
@@ -1075,7 +1137,7 @@ def wheel_overlay(
         return overlay
     width, height = body_size
     ox, oy = offset
-    angle = math.radians((frame_index * 34 + seed % 90) % 180)
+    angle = math.radians((frame_index * 20 + seed % 90) % 180)
     draw = ImageDraw.Draw(overlay)
     radius = max(2, round(height * float(geometry["radius_fraction"])))
     for x_fraction, y_fraction in geometry["centres"]:
@@ -1104,26 +1166,40 @@ def marine_overlay(
     draw = ImageDraw.Draw(overlay)
     wake_strength = float(settings["wake_strength"])
     bow_strength = float(settings["bow_spray"])
-    mast_y = oy + round(height * 0.18)
-    draw.ellipse(
-        (ox + round(width * 0.58) - 1, mast_y - 1, ox + round(width * 0.58) + 1, mast_y + 1),
-        fill=(255, 48, 35, 220),
-    )
-    draw.ellipse(
-        (ox + round(width * 0.64) - 1, mast_y - 1, ox + round(width * 0.64) + 1, mast_y + 1),
-        fill=(62, 255, 128, 215),
-    )
-    if frame_index in {3, 8}:
-        px = ox + round(width * 0.61)
-        draw.ellipse((px - 1, mast_y - 2, px + 1, mast_y), fill=(235, 252, 255, 245))
+    stern_strength = float(settings.get("stern_turbulence", wake_strength))
+    shimmer_strength = float(settings.get("waterline_shimmer", wake_strength))
+    phase = math.tau * frame_index / 18.0
+    navigation = settings.get("navigation", {})
+
+    def nav_point(name: str, colour: tuple[int, int, int, int]) -> None:
+        x, y = navigation[name]
+        px = ox + round(width * float(x))
+        py = oy + round(height * float(y))
+        draw.ellipse((px - 1, py - 1, px + 1, py + 1), fill=colour)
+
+    nav_point("red", (255, 48, 35, 220))
+    nav_point("green", (62, 255, 128, 215))
+    if frame_index % 9 in {3, 4}:
+        nav_point("white", (235, 252, 255, 245))
     wake_y = oy + round(height * 0.88)
-    pulse = 0.012 * (frame_index % 4)
-    wake_len = max(5, round(width * (0.10 + pulse) * wake_strength))
-    draw.line((ox + 1, wake_y, ox + wake_len, wake_y + 1), fill=(206, 238, 255, round(102 * wake_strength)), width=1)
-    draw.line((ox + 2, wake_y + 2, ox + round(wake_len * 0.72), wake_y + 2), fill=(190, 230, 250, round(62 * wake_strength)), width=1)
+    wake_fraction = float(settings.get("wake_length", 0.18))
+    wake_len = max(5, round(width * wake_fraction * (0.86 + 0.14 * math.sin(phase)) * wake_strength))
+    draw.line((ox + 1, wake_y, ox + wake_len, wake_y + 1), fill=(206, 238, 255, round(106 * wake_strength)), width=1)
+    draw.arc(
+        (ox - round(width * 0.01), wake_y - 3, ox + round(wake_len * 0.80), wake_y + 4),
+        190,
+        342,
+        fill=(190, 230, 250, round(72 * stern_strength)),
+        width=1,
+    )
+    for ripple in range(2):
+        start = ox + round(width * (0.17 + ripple * 0.23 + 0.012 * math.sin(phase + ripple)))
+        length = round(width * (0.12 + ripple * 0.025))
+        y = oy + round(height * (0.90 + ripple * 0.025))
+        draw.arc((start, y - 2, start + length, y + 2), 188, 350, fill=(194, 232, 251, round(52 * shimmer_strength)), width=1)
     bow_x = ox + round(width * 0.965)
     bow_y = oy + round(height * 0.79)
-    spray = max(2, round(height * 0.055 * bow_strength))
+    spray = max(2, round(height * (0.052 + 0.010 * abs(math.sin(phase))) * bow_strength))
     draw.arc((bow_x - spray, bow_y - spray * 2, bow_x + spray * 2, bow_y + spray), 208, 330, fill=(225, 246, 255, round(112 * bow_strength)), width=1)
     shimmer = overlay.filter(ImageFilter.GaussianBlur(0.28))
     return Image.alpha_composite(overlay, shimmer)
@@ -1143,8 +1219,11 @@ def trailer_overlay(size: tuple[int, int], frame_index: int, body_size: tuple[in
     return overlay
 
 
-def animation_durations(seed: int) -> list[int]:
+def animation_durations(seed: int, frame_count: int) -> list[int]:
     base = [155, 72, 66, 92, 70, 174, 78, 68, 96, 72, 74, 228]
+    if frame_count > len(base):
+        base = [112, 62, 60, 64, 61, 66, 60, 63, 61, 65, 60, 64, 62, 66, 60, 63, 61, 118]
+    base = base[:frame_count]
     durations = [base[0]]
     for index, value in enumerate(base[1:], start=1):
         jitter = ((seed >> (index % 17)) % 17) - 8
@@ -1171,7 +1250,8 @@ def build_animation(
     frames: list[Image.Image] = []
     motion = profile["motion"]
 
-    for frame_index in range(profile["frames"]):
+    frame_count = frames_for_asset(asset_id, profile)
+    for frame_index in range(frame_count):
         if rotorless_body is not None and frame_index > 0:
             geometry = profile["rotor_geometry"][asset_id]
             if rotorless_base is None:
@@ -1255,7 +1335,7 @@ def build_animation(
             active_motion.append("marker-light")
         frames.append(frame)
 
-    durations = animation_durations(seed)
+    durations = animation_durations(seed, frame_count)
     motion_type = "+".join(dict.fromkeys(active_motion)) if active_motion else "static"
     return frames, durations, motion_type
 
@@ -1552,7 +1632,9 @@ def main() -> None:
         "vehicles": len(results),
         "static_pngs": len(list(STATIC_DIR.glob("*.png"))),
         "animated_apngs": len(list(ANIMATED_DIR.glob("*.png"))),
-        "frames_per_asset": profile["frames"],
+        "default_frames_per_asset": profile["frames"],
+        "frame_count_distribution": dict(sorted(Counter(item["frames"] for item in results).items())),
+        "smooth_motion_assets": sum(item["frames"] > int(profile["frames"]) for item in results),
         "source_overrides": sum(item["source_override"] is not None for item in results),
         "baked_role_master_assets": sum(item["baked_master_cue"] is not None for item in results),
         "rare_showcase_assets": sum(item["rare_showcase"] for item in results),
