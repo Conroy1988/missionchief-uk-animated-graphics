@@ -1,5 +1,5 @@
 {
-  "release": "v1.2.2",
+  "release": "v1.2.3",
   "profile": "command",
   "display_name": "Modern Command Clarity",
   "source_profile": "standard",
@@ -24,13 +24,71 @@
   "maximum_icon_width": 296,
   "new_source_overrides": {
     "medical-cycle-responder": "assets/masters/v1.1/medical-cycle-responder.png",
-    "hazardous-materials-pod": "assets/masters/v1.2.2/hazardous-materials-pod-carrier.png"
+    "water-pod": "assets/masters/v1.2.3/water-pod-carrier.png",
+    "bulk-foam-pod": "assets/masters/v1.2.3/bulk-foam-pod-carrier.png",
+    "rescue-pod": "assets/masters/v1.2.3/rescue-pod-carrier.png",
+    "command-pod": "assets/masters/v1.2.3/command-pod-carrier.png",
+    "welfare-pod": "assets/masters/v1.2.3/welfare-pod-carrier.png",
+    "basu-pod": "assets/masters/v1.2.3/basu-pod-carrier.png",
+    "misting-pod": "assets/masters/v1.2.3/misting-pod-carrier.png",
+    "hazardous-materials-pod": "assets/masters/v1.2.3/hazardous-materials-pod-carrier.png",
+    "osu-pod": "assets/masters/v1.2.3/osu-pod-carrier.png"
   },
   "source_override_widths": {
     "medical-cycle-responder": 60,
-    "hazardous-materials-pod": 119
+    "water-pod": 119,
+    "bulk-foam-pod": 119,
+    "rescue-pod": 119,
+    "command-pod": 119,
+    "welfare-pod": 119,
+    "basu-pod": 119,
+    "misting-pod": 119,
+    "hazardous-materials-pod": 119,
+    "osu-pod": 119
   },
   "light_overrides": {
+    "water-pod": [
+      {"x": 0.86, "y": 0.08, "group": "a", "size": 0.9},
+      {"x": 0.92, "y": 0.08, "group": "b", "size": 0.9},
+      {"x": 0.98, "y": 0.62, "group": "b", "size": 0.54},
+      {"x": 0.73, "y": 0.76, "group": "a", "size": 0.48}
+    ],
+    "bulk-foam-pod": [
+      {"x": 0.86, "y": 0.06, "group": "a", "size": 0.9},
+      {"x": 0.92, "y": 0.06, "group": "b", "size": 0.9},
+      {"x": 0.98, "y": 0.61, "group": "b", "size": 0.54},
+      {"x": 0.73, "y": 0.75, "group": "a", "size": 0.48}
+    ],
+    "rescue-pod": [
+      {"x": 0.86, "y": 0.12, "group": "a", "size": 0.9},
+      {"x": 0.92, "y": 0.12, "group": "b", "size": 0.9},
+      {"x": 0.98, "y": 0.64, "group": "b", "size": 0.54},
+      {"x": 0.73, "y": 0.77, "group": "a", "size": 0.48}
+    ],
+    "command-pod": [
+      {"x": 0.86, "y": 0.34, "group": "a", "size": 0.9},
+      {"x": 0.92, "y": 0.34, "group": "b", "size": 0.9},
+      {"x": 0.98, "y": 0.73, "group": "b", "size": 0.54},
+      {"x": 0.73, "y": 0.83, "group": "a", "size": 0.48}
+    ],
+    "welfare-pod": [
+      {"x": 0.86, "y": 0.12, "group": "a", "size": 0.9},
+      {"x": 0.92, "y": 0.12, "group": "b", "size": 0.9},
+      {"x": 0.98, "y": 0.64, "group": "b", "size": 0.54},
+      {"x": 0.73, "y": 0.77, "group": "a", "size": 0.48}
+    ],
+    "basu-pod": [
+      {"x": 0.86, "y": 0.07, "group": "a", "size": 0.9},
+      {"x": 0.92, "y": 0.07, "group": "b", "size": 0.9},
+      {"x": 0.98, "y": 0.60, "group": "b", "size": 0.54},
+      {"x": 0.73, "y": 0.74, "group": "a", "size": 0.48}
+    ],
+    "misting-pod": [
+      {"x": 0.86, "y": 0.22, "group": "a", "size": 0.9},
+      {"x": 0.92, "y": 0.22, "group": "b", "size": 0.9},
+      {"x": 0.98, "y": 0.68, "group": "b", "size": 0.54},
+      {"x": 0.73, "y": 0.79, "group": "a", "size": 0.48}
+    ],
     "hazardous-materials-pod": [
       {
         "x": 0.86,
@@ -56,12 +114,90 @@
         "group": "a",
         "size": 0.48
       }
+    ],
+    "osu-pod": [
+      {"x": 0.86, "y": 0.07, "group": "a", "size": 0.9},
+      {"x": 0.92, "y": 0.07, "group": "b", "size": 0.9},
+      {"x": 0.98, "y": 0.60, "group": "b", "size": 0.54},
+      {"x": 0.73, "y": 0.74, "group": "a", "size": 0.48}
     ]
   },
   "mounted_carriers": {
+    "water-pod": {
+      "base_vehicle": "pm",
+      "module": "water-pod",
+      "real_length_metres": 9.1,
+      "minimum_body_width": 119,
+      "minimum_command_width": 133,
+      "expected_motion": "blue-response",
+      "expected_lights": 4
+    },
+    "bulk-foam-pod": {
+      "base_vehicle": "pm",
+      "module": "bulk-foam-pod",
+      "real_length_metres": 9.1,
+      "minimum_body_width": 119,
+      "minimum_command_width": 133,
+      "expected_motion": "blue-response",
+      "expected_lights": 4
+    },
+    "rescue-pod": {
+      "base_vehicle": "pm",
+      "module": "rescue-pod",
+      "real_length_metres": 9.1,
+      "minimum_body_width": 119,
+      "minimum_command_width": 133,
+      "expected_motion": "blue-response",
+      "expected_lights": 4
+    },
+    "command-pod": {
+      "base_vehicle": "pm",
+      "module": "command-pod",
+      "real_length_metres": 9.1,
+      "minimum_body_width": 119,
+      "minimum_command_width": 133,
+      "expected_motion": "blue-response",
+      "expected_lights": 4
+    },
+    "welfare-pod": {
+      "base_vehicle": "pm",
+      "module": "welfare-pod",
+      "real_length_metres": 9.1,
+      "minimum_body_width": 119,
+      "minimum_command_width": 133,
+      "expected_motion": "blue-response",
+      "expected_lights": 4
+    },
+    "basu-pod": {
+      "base_vehicle": "pm",
+      "module": "basu-pod",
+      "real_length_metres": 9.1,
+      "minimum_body_width": 119,
+      "minimum_command_width": 133,
+      "expected_motion": "blue-response",
+      "expected_lights": 4
+    },
+    "misting-pod": {
+      "base_vehicle": "pm",
+      "module": "misting-pod",
+      "real_length_metres": 9.1,
+      "minimum_body_width": 119,
+      "minimum_command_width": 133,
+      "expected_motion": "blue-response",
+      "expected_lights": 4
+    },
     "hazardous-materials-pod": {
       "base_vehicle": "pm",
       "module": "hazardous-materials-pod",
+      "real_length_metres": 9.1,
+      "minimum_body_width": 119,
+      "minimum_command_width": 133,
+      "expected_motion": "blue-response",
+      "expected_lights": 4
+    },
+    "osu-pod": {
+      "base_vehicle": "pm",
+      "module": "osu-pod",
       "real_length_metres": 9.1,
       "minimum_body_width": 119,
       "minimum_command_width": 133,
@@ -119,18 +255,22 @@
     ]
   },
   "satellite_contrast_boost": [
+    "water-pod",
+    "bulk-foam-pod",
     "rescue-pod",
-    "m-rav",
-    "hazardous-materials-pod",
+    "command-pod",
     "welfare-pod",
-    "ilb",
+    "basu-pod",
+    "misting-pod",
+    "hazardous-materials-pod",
     "osu-pod",
+    "m-rav",
+    "ilb",
     "mountain-rescue-4x4",
     "drone-vehicle-fire-station",
     "firearms-personnel-carrier",
     "armed-cell-van",
     "hovercraft-transporter",
-    "basu-pod",
     "eod-medium-equipment-van",
     "eod-commander",
     "eod-heavy-equipment-vehicle"

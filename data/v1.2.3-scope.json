@@ -1,0 +1,24 @@
+{
+  "release": "v1.2.3",
+  "baseline": "v1.2.2",
+  "changed_asset_ids": [
+    "water-pod",
+    "bulk-foam-pod",
+    "rescue-pod",
+    "command-pod",
+    "welfare-pod",
+    "basu-pod",
+    "misting-pod",
+    "osu-pod"
+  ],
+  "slots": {
+    "water-pod": 42,
+    "bulk-foam-pod": 43,
+    "rescue-pod": 44,
+    "command-pod": 45,
+    "welfare-pod": 46,
+    "basu-pod": 47,
+    "misting-pod": 48,
+    "osu-pod": 50
+  }
+}

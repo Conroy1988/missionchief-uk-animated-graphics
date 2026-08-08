@@ -51,6 +51,18 @@ ROTOR_SHOWCASE_IDS = [
     "coastguard-rescue-helicopter-large",
 ]
 
+EXPECTED_MOUNTED_CARRIERS = {
+    "water-pod",
+    "bulk-foam-pod",
+    "rescue-pod",
+    "command-pod",
+    "welfare-pod",
+    "basu-pod",
+    "misting-pod",
+    "hazardous-materials-pod",
+    "osu-pod",
+}
+
 
 def rgba(path: Path) -> Image.Image:
     with Image.open(path) as image:
@@ -454,6 +466,18 @@ def main() -> None:
     unknown_mounted_carriers = sorted(set(mounted_carriers) - expected)
     if unknown_mounted_carriers:
         pack_errors.append(f"mounted-carrier profile references unknown assets: {unknown_mounted_carriers}")
+    if set(mounted_carriers) != EXPECTED_MOUNTED_CARRIERS:
+        pack_errors.append(
+            "mounted-carrier profile must exactly cover all nine fire-service pod assets"
+        )
+    for carrier_id, carrier in mounted_carriers.items():
+        expected_source = profile.get("new_source_overrides", {}).get(carrier_id)
+        if carrier.get("base_vehicle") != "pm":
+            pack_errors.append(f"{carrier_id} is not mounted on the PM chassis")
+        if carrier.get("module") != carrier_id:
+            pack_errors.append(f"{carrier_id} mounted-carrier module identity is incorrect")
+        if expected_source != f"assets/masters/{RELEASE}/{carrier_id}-carrier.png":
+            pack_errors.append(f"{carrier_id} does not use its release-specific carrier master")
 
     if {path.stem for path in STATIC_DIR.glob("*.png")} != expected:
         pack_errors.append("command static directory does not exactly match the 117-slot manifest")
