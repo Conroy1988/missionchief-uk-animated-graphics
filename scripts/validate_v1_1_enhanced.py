@@ -61,6 +61,12 @@ EXPECTED_MOUNTED_CARRIERS = {
     "misting-pod",
     "hazardous-materials-pod",
     "osu-pod",
+    "hvp",
+}
+
+EXPECTED_FULL_TAIL_SOURCES = {
+    "hems": "hems-full-tail.png",
+    "police-helicopter": "police-helicopter-full-tail.png",
 }
 
 
@@ -441,6 +447,7 @@ def main() -> None:
     aerial_shadow_assets = set(grounding.get("aerial", []))
     marine_shadow_assets = set(grounding.get("marine", []))
     mounted_carriers = profile.get("mounted_carriers", {})
+    helicopter_edge_padding = profile.get("helicopter_edge_padding", {})
 
     if role_cues or equipment_cues:
         pack_errors.append("generated role and specialist roof overlays must remain retired")
@@ -468,7 +475,7 @@ def main() -> None:
         pack_errors.append(f"mounted-carrier profile references unknown assets: {unknown_mounted_carriers}")
     if set(mounted_carriers) != EXPECTED_MOUNTED_CARRIERS:
         pack_errors.append(
-            "mounted-carrier profile must exactly cover all nine fire-service pod assets"
+            "mounted-carrier profile must exactly cover all ten fire-service specialist modules"
         )
     for carrier_id, carrier in mounted_carriers.items():
         expected_source = profile.get("new_source_overrides", {}).get(carrier_id)
@@ -503,6 +510,12 @@ def main() -> None:
         pack_errors.append("grounding shadow does not remain visible at half zoom")
     if set(profile.get("rotor_geometry", {})) != set(profile["helicopters"]):
         pack_errors.append("rotor geometry does not exactly cover the helicopter set")
+    if set(helicopter_edge_padding) != set(profile["helicopters"]):
+        pack_errors.append("helicopter edge-padding profile does not exactly cover the helicopter set")
+    for asset_id, filename in EXPECTED_FULL_TAIL_SOURCES.items():
+        expected_source = f"assets/masters/{RELEASE}/{filename}"
+        if profile.get("new_source_overrides", {}).get(asset_id) != expected_source:
+            pack_errors.append(f"{asset_id} does not use its release-specific full-tail master")
 
     results = []
     timing_signatures: Counter[str] = Counter()
@@ -603,6 +616,18 @@ def main() -> None:
                 errors.append(
                     f"strong static rotor underlay remains ({rotor_underlay_pixels} > {rotor_underlay_limit})"
                 )
+            tail_margin = min(
+                image.getchannel("A").getbbox()[0]
+                for image in [static, *frames]
+                if image.getchannel("A").getbbox() is not None
+            )
+            if tail_margin < int(profile["qa"]["minimum_helicopter_tail_margin_pixels"]):
+                errors.append(
+                    f"helicopter tail margin is clipped ({tail_margin} < "
+                    f"{profile['qa']['minimum_helicopter_tail_margin_pixels']})"
+                )
+        else:
+            tail_margin = None
 
         visible_pixels = half_zoom_visible_pixels(static)
         if visible_pixels < int(profile["qa"]["minimum_visible_pixels_at_half_zoom"]):
@@ -646,6 +671,7 @@ def main() -> None:
                 "grounding_shadow": detail.get("grounding_shadow"),
                 "strong_rotor_underlay_pixels": rotor_underlay_pixels,
                 "strong_rotor_underlay_limit": rotor_underlay_limit,
+                "helicopter_tail_margin_pixels": tail_margin,
                 "half_zoom_visible_pixels": visible_pixels,
                 "edge_contrast": contrasts,
                 "passed": not errors,
@@ -723,10 +749,10 @@ def main() -> None:
     previews.append(
         str(
             render_targeted_sheet(
-                f"{RELEASE} mounted pod-carrier audit - 100% / 75% / 50%",
+                f"{RELEASE} mounted specialist-carrier audit - 100% / 75% / 50%",
                 sorted(mounted_carriers),
                 "light",
-                "mounted-pod-carrier-map-scale.png",
+                "mounted-specialist-carrier-map-scale.png",
                 vehicle_map,
             ).relative_to(ROOT)
         )
@@ -768,6 +794,11 @@ def main() -> None:
         "satellite_contrast_boosted_assets": len(satellite_boost),
         "mounted_carrier_assets": len(mounted_carriers),
         "mounted_carrier_ids": sorted(mounted_carriers),
+        "minimum_helicopter_tail_margin_pixels": min(
+            item["helicopter_tail_margin_pixels"]
+            for item in results
+            if item["helicopter_tail_margin_pixels"] is not None
+        ),
         "minimum_boosted_satellite_edge_contrast": min(
             item["edge_contrast"]["satellite"]
             for item in results

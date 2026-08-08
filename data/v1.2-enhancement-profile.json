@@ -1,5 +1,5 @@
 {
-  "release": "v1.2.3",
+  "release": "v1.2.4",
   "profile": "command",
   "display_name": "Modern Command Clarity",
   "source_profile": "standard",
@@ -24,18 +24,23 @@
   "maximum_icon_width": 296,
   "new_source_overrides": {
     "medical-cycle-responder": "assets/masters/v1.1/medical-cycle-responder.png",
-    "water-pod": "assets/masters/v1.2.3/water-pod-carrier.png",
-    "bulk-foam-pod": "assets/masters/v1.2.3/bulk-foam-pod-carrier.png",
-    "rescue-pod": "assets/masters/v1.2.3/rescue-pod-carrier.png",
-    "command-pod": "assets/masters/v1.2.3/command-pod-carrier.png",
-    "welfare-pod": "assets/masters/v1.2.3/welfare-pod-carrier.png",
-    "basu-pod": "assets/masters/v1.2.3/basu-pod-carrier.png",
-    "misting-pod": "assets/masters/v1.2.3/misting-pod-carrier.png",
-    "hazardous-materials-pod": "assets/masters/v1.2.3/hazardous-materials-pod-carrier.png",
-    "osu-pod": "assets/masters/v1.2.3/osu-pod-carrier.png"
+    "hems": "assets/masters/v1.2.4/hems-full-tail.png",
+    "police-helicopter": "assets/masters/v1.2.4/police-helicopter-full-tail.png",
+    "water-pod": "assets/masters/v1.2.4/water-pod-carrier.png",
+    "bulk-foam-pod": "assets/masters/v1.2.4/bulk-foam-pod-carrier.png",
+    "rescue-pod": "assets/masters/v1.2.4/rescue-pod-carrier.png",
+    "command-pod": "assets/masters/v1.2.4/command-pod-carrier.png",
+    "welfare-pod": "assets/masters/v1.2.4/welfare-pod-carrier.png",
+    "basu-pod": "assets/masters/v1.2.4/basu-pod-carrier.png",
+    "misting-pod": "assets/masters/v1.2.4/misting-pod-carrier.png",
+    "hazardous-materials-pod": "assets/masters/v1.2.4/hazardous-materials-pod-carrier.png",
+    "osu-pod": "assets/masters/v1.2.4/osu-pod-carrier.png",
+    "hvp": "assets/masters/v1.2.4/hvp-carrier.png"
   },
   "source_override_widths": {
     "medical-cycle-responder": 60,
+    "hems": 218,
+    "police-helicopter": 220,
     "water-pod": 119,
     "bulk-foam-pod": 119,
     "rescue-pod": 119,
@@ -44,7 +49,8 @@
     "basu-pod": 119,
     "misting-pod": 119,
     "hazardous-materials-pod": 119,
-    "osu-pod": 119
+    "osu-pod": 119,
+    "hvp": 119
   },
   "light_overrides": {
     "water-pod": [
@@ -120,6 +126,12 @@
       {"x": 0.92, "y": 0.07, "group": "b", "size": 0.9},
       {"x": 0.98, "y": 0.60, "group": "b", "size": 0.54},
       {"x": 0.73, "y": 0.74, "group": "a", "size": 0.48}
+    ],
+    "hvp": [
+      {"x": 0.86, "y": 0.08, "group": "a", "size": 0.9},
+      {"x": 0.92, "y": 0.08, "group": "b", "size": 0.9},
+      {"x": 0.98, "y": 0.62, "group": "b", "size": 0.54},
+      {"x": 0.73, "y": 0.76, "group": "a", "size": 0.48}
     ]
   },
   "mounted_carriers": {
@@ -203,6 +215,15 @@
       "minimum_command_width": 133,
       "expected_motion": "blue-response",
       "expected_lights": 4
+    },
+    "hvp": {
+      "base_vehicle": "pm",
+      "module": "hvp",
+      "real_length_metres": 9.1,
+      "minimum_body_width": 119,
+      "minimum_command_width": 133,
+      "expected_motion": "blue-response",
+      "expected_lights": 4
     }
   },
   "role_differentiation": {},
@@ -264,6 +285,7 @@
     "misting-pod",
     "hazardous-materials-pod",
     "osu-pod",
+    "hvp",
     "m-rav",
     "ilb",
     "mountain-rescue-4x4",
@@ -371,6 +393,12 @@
       ]
     }
   },
+  "helicopter_edge_padding": {
+    "hems": 10,
+    "police-helicopter": 10,
+    "coastguard-rescue-helicopter": 10,
+    "coastguard-rescue-helicopter-large": 10
+  },
   "rare_showcase": [
     "aerial-appliance",
     "armed-cell-van",
@@ -447,6 +475,7 @@
     "maximum_shared_flash_activity_signature": 8,
     "minimum_grounding_shadow_half_zoom_pixels": 2,
     "maximum_retired_overlay_top_padding_pixels": 0,
-    "minimum_boosted_satellite_edge_contrast": 34.0
+    "minimum_boosted_satellite_edge_contrast": 34.0,
+    "minimum_helicopter_tail_margin_pixels": 6
   }
 }

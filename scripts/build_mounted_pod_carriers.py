@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the complete mounted fire-service pod-carrier family deterministically."""
+"""Build the complete mounted fire-service specialist-carrier family deterministically."""
 
 from __future__ import annotations
 
@@ -15,9 +15,9 @@ from PIL import Image, ImageChops, ImageDraw
 ROOT = Path(__file__).resolve().parents[1]
 STANDARD_DIR = ROOT / "assets" / "exports" / "standard" / "static"
 PRIME_MOVER_PATH = STANDARD_DIR / "pm.png"
-TARGET_DIR = ROOT / "assets" / "masters" / "v1.2.3"
+TARGET_DIR = ROOT / "assets" / "masters" / "v1.2.4"
 
-POD_CONFIG = {
+MODULE_CONFIG = {
     "water-pod": (83, 30),
     "bulk-foam-pod": (83, 29),
     "rescue-pod": (83, 33),
@@ -27,6 +27,7 @@ POD_CONFIG = {
     "misting-pod": (75, 35),
     "hazardous-materials-pod": (83, 28),
     "osu-pod": (86, 29),
+    "hvp": (88, 30),
 }
 
 MODULE_WIDTH = 79
@@ -52,10 +53,10 @@ def target_path(asset_id: str) -> Path:
 
 
 def build_one(asset_id: str, prime_mover: Image.Image) -> tuple[Image.Image, Image.Image, int]:
-    """Mount one existing pod body on the established three-axle PM chassis."""
+    """Mount one specialist module on the established three-axle PM chassis."""
     source_path = STANDARD_DIR / f"{asset_id}.png"
     pod = rgba(source_path)
-    expected_size = POD_CONFIG[asset_id]
+    expected_size = MODULE_CONFIG[asset_id]
     if pod.size != expected_size:
         raise ValueError(f"unexpected {asset_id} source dimensions: {pod.size}")
 
@@ -149,7 +150,7 @@ def main() -> None:
         raise ValueError(f"unexpected PM source dimensions: {prime_mover.size}")
 
     results = []
-    for asset_id in POD_CONFIG:
+    for asset_id in MODULE_CONFIG:
         carrier, mounted_pod, chassis_shift = build_one(asset_id, prime_mover)
         validate_one(asset_id, carrier, mounted_pod, prime_mover, chassis_shift)
         rendered = png_bytes(carrier)
