@@ -52,8 +52,9 @@ def main() -> None:
     if not overrides_path:
         raise SystemExit("profile does not declare light_overrides_path")
     placement_data = json.loads((ROOT / overrides_path).read_text(encoding="utf-8"))
-    if placement_data.get("release") != release:
-        raise SystemExit("light-placement release does not match the active profile")
+    placement_release = str(profile.get("light_overrides_release", release))
+    if placement_data.get("release") != placement_release:
+        raise SystemExit("light-placement data does not match the declared source release")
 
     build_report = json.loads((ROOT / "data" / f"{release}-build-report.json").read_text(encoding="utf-8"))
     details = {item["id"]: item for item in build_report["vehicles_detail"]}
