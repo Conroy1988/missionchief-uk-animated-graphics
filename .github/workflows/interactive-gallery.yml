@@ -1,0 +1,63 @@
+name: Validate interactive vehicle gallery
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - gallery/**
+      - tests/gallery.test.mjs
+      - scripts/build_interactive_gallery.py
+      - data/vehicle-slots.json
+      - data/prototypes.json
+      - data/v1.2.6-scope.json
+      - data/v1.4-overhaul-profile.json
+      - assets/exports/command/**
+      - .github/workflows/interactive-gallery.yml
+  push:
+    branches:
+      - main
+    paths:
+      - gallery/**
+      - tests/gallery.test.mjs
+      - scripts/build_interactive_gallery.py
+      - data/vehicle-slots.json
+      - data/prototypes.json
+      - data/v1.2.6-scope.json
+      - data/v1.4-overhaul-profile.json
+      - assets/exports/command/**
+      - .github/workflows/interactive-gallery.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out all stable release tags
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: Validate generated catalogue and historical comparisons
+        run: python scripts/build_interactive_gallery.py --check --site-output dist/gallery-site
+
+      - name: Test search, filtering, sorting, state and asset routing
+        run: node --test tests/gallery.test.mjs
+
+      - name: Validate browser JavaScript syntax
+        run: node --check gallery/app.mjs
+
+      - name: Verify deployable site payload
+        run: |
+          test -f dist/gallery-site/index.html
+          test -f dist/gallery-site/vehicles.json
+          test "$(find dist/gallery-site/assets/exports/command/static -type f -name '*.png' | wc -l)" -eq 117
+          test "$(find dist/gallery-site/assets/exports/command/animated -type f -name '*.png' | wc -l)" -eq 117
