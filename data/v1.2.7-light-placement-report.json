@@ -1,0 +1,2203 @@
+{
+  "release": "v1.2.7",
+  "audited_assets": 61,
+  "audited_lights": 196,
+  "maximum_anchor_distance_pixels": 1.0,
+  "maximum_allowed_anchor_distance_pixels": 1.5,
+  "minimum_flash_difference": 179,
+  "all_passed": true,
+  "errors": [],
+  "vehicles_detail": [
+    {
+      "id": "hems",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 160,
+            "y": 26
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 362
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 20,
+            "y": 11
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 287
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "police-helicopter",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 165,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 243
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 23,
+            "y": 11
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 271
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "cbrn-vehicle",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 79,
+            "y": 17
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 454
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 82,
+            "y": 17
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 438
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 108,
+            "y": 39
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 381
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "bfu",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 113,
+            "y": 16
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 617
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 118,
+            "y": 16
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 352
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 125,
+            "y": 43
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 607
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 13,
+            "y": 35
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 455
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "osu",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 117,
+            "y": 8
+          },
+          "anchor_distance_pixels": 1.0,
+          "maximum_flash_difference": 541
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 125,
+            "y": 8
+          },
+          "anchor_distance_pixels": 1.0,
+          "maximum_flash_difference": 408
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 132,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 537
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 9,
+            "y": 35
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 373
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "pm",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 106,
+            "y": 8
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 488
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 114,
+            "y": 8
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 451
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 121,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 566
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 10,
+            "y": 35
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 655
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "water-pod",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 108,
+            "y": 11
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 468
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 116,
+            "y": 11
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 613
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 123,
+            "y": 37
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 557
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 10,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 542
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "bulk-foam-pod",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 108,
+            "y": 10
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 452
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 116,
+            "y": 10
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 625
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 123,
+            "y": 36
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 567
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 10,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 480
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "rescue-pod",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 108,
+            "y": 13
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 495
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 116,
+            "y": 13
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 589
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 123,
+            "y": 39
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 544
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 10,
+            "y": 36
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 538
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "command-pod",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 108,
+            "y": 30
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 517
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 116,
+            "y": 30
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 540
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 123,
+            "y": 56
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 539
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 10,
+            "y": 48
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 503
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "welfare-pod",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 108,
+            "y": 13
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 493
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 116,
+            "y": 13
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 586
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 123,
+            "y": 39
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 541
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 10,
+            "y": 36
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 521
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "basu-pod",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 108,
+            "y": 10
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 494
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 116,
+            "y": 10
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 456
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 123,
+            "y": 35
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 572
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 10,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 538
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "misting-pod",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 108,
+            "y": 19
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 521
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 116,
+            "y": 19
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 512
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 123,
+            "y": 45
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 549
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 10,
+            "y": 40
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 563
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "hazardous-materials-pod",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 108,
+            "y": 10
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 495
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 116,
+            "y": 10
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 457
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 123,
+            "y": 35
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 572
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 10,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 523
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "osu-pod",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 108,
+            "y": 10
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 492
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 116,
+            "y": 10
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 456
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 123,
+            "y": 35
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 570
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 10,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 524
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "hvp",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 108,
+            "y": 11
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 528
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 116,
+            "y": 11
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 631
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 123,
+            "y": 36
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 455
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 10,
+            "y": 34
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 526
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "psu-carrier",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 70,
+            "y": 6
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 258
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 7,
+            "y": 32
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 619
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 101,
+            "y": 29
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 426
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "firearms-personnel-carrier",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 76,
+            "y": 8
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 464
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 10,
+            "y": 34
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 549
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 109,
+            "y": 34
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 634
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "multiple-dog-carrier",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 70,
+            "y": 6
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 322
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 10,
+            "y": 31
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 506
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 106,
+            "y": 31
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 562
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "detention-van",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 70,
+            "y": 5
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 282
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 11,
+            "y": 29
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 516
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 100,
+            "y": 31
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 500
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "mounted-unit",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 116,
+            "y": 11
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 514
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 13,
+            "y": 36
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 481
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 129,
+            "y": 35
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 331
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "m-rav",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 59,
+            "y": 7
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 400
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 15,
+            "y": 30
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 563
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 103,
+            "y": 28
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 489
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "crv",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 48,
+            "y": 9
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 289
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 11,
+            "y": 32
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 644
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 84,
+            "y": 31
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 430
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "coastguard-mud-rescue-unit",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 73,
+            "y": 5
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 295
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 10,
+            "y": 25
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 490
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 107,
+            "y": 31
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 441
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "coastguard-rope-rescue-unit",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 77,
+            "y": 7
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 378
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 10,
+            "y": 30
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 475
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 104,
+            "y": 30
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 372
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "coastguard-commander",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 51,
+            "y": 23
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 615
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 11,
+            "y": 35
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 558
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 92,
+            "y": 34
+          },
+          "anchor_distance_pixels": 1.0,
+          "maximum_flash_difference": 692
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "support-unit",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 73,
+            "y": 8
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 387
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 9,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 438
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 105,
+            "y": 34
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 284
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "coastguard-rescue-helicopter",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 168,
+            "y": 39
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 364
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 30,
+            "y": 38
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 257
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 236,
+            "y": 63
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 516
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "coastguard-rescue-helicopter-large",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 208,
+            "y": 49
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 429
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 37,
+            "y": 37
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 435
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 283,
+            "y": 69
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 692
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "4x4-vehicle",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 53,
+            "y": 10
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 454
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 7,
+            "y": 28
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 696
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 81,
+            "y": 29
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 655
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "hovercraft-transporter",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 65,
+            "y": 10
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 488
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 7,
+            "y": 31
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 410
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 101,
+            "y": 29
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 576
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "light-4x4",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 52,
+            "y": 9
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 413
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 7,
+            "y": 29
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 430
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 81,
+            "y": 28
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 602
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "major-foam-tender",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 139,
+            "y": 13
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 474
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 11,
+            "y": 36
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 425
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 164,
+            "y": 36
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 451
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "riv",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 60,
+            "y": 9
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 213
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 7,
+            "y": 28
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 566
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 106,
+            "y": 36
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 578
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "airfield-firefighting-command-vehicle",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 50,
+            "y": 19
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 430
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 7,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 477
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 94,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 415
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "armed-cell-van",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 44,
+            "y": 7
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 304
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 8,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 462
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 110,
+            "y": 35
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 366
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "control-van-sar",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 40,
+            "y": 24
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 448
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 7,
+            "y": 50
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 179
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 104,
+            "y": 45
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 486
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "operational-support-van",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 38,
+            "y": 9
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 541
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 7,
+            "y": 35
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 508
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 101,
+            "y": 34
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 475
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "drone-vehicle-sar-hq",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 46,
+            "y": 23
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 651
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 8,
+            "y": 40
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 596
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 96,
+            "y": 40
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 527
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "drone-vehicle-fire-station",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 52,
+            "y": 24
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 545
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 8,
+            "y": 40
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 419
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 103,
+            "y": 40
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 413
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "drone-vehicle-police-station",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 49,
+            "y": 26
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 308
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 5,
+            "y": 45
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 424
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 94,
+            "y": 42
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 395
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "personal-sar-vehicle",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 42,
+            "y": 8
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 196
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 6,
+            "y": 23
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 351
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 78,
+            "y": 23
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 475
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "sar-4x4",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 40,
+            "y": 10
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 255
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 7,
+            "y": 30
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 538
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 80,
+            "y": 27
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 390
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "rrv-2",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 48,
+            "y": 5
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 470
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 8,
+            "y": 20
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 382
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 80,
+            "y": 20
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 519
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "specialist-paramedic-rrv",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 49,
+            "y": 5
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 375
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 6,
+            "y": 20
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 242
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 81,
+            "y": 22
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 518
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "critical-care-transfer-ambulance",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 36,
+            "y": 6
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 285
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 108,
+            "y": 7
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 390
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 9,
+            "y": 29
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 318
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 109,
+            "y": 30
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 483
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "mountain-rescue-4x4",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 40,
+            "y": 13
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 477
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 12,
+            "y": 31
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 524
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 84,
+            "y": 30
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 578
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "control-van-mountain-rescue",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 38,
+            "y": 23
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 520
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 8,
+            "y": 49
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 445
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 98,
+            "y": 46
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 546
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "search-dog-unit",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 47,
+            "y": 9
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 402
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 8,
+            "y": 28
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 653
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 92,
+            "y": 29
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 595
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "search-dog-unit-sar",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 47,
+            "y": 7
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 384
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 7,
+            "y": 28
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 575
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 92,
+            "y": 29
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 731
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "crew-carrier-sar",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 37,
+            "y": 6
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 322
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 8,
+            "y": 30
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 536
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 101,
+            "y": 31
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 556
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "rru",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 53,
+            "y": 9
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 393
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 119,
+            "y": 9
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 416
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 10,
+            "y": 34
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 370
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 125,
+            "y": 25
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 525
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "eiu",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 46,
+            "y": 6
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 506
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 8,
+            "y": 21
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 387
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 80,
+            "y": 22
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 593
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "eod-commander",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 50,
+            "y": 21
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 588
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 10,
+            "y": 41
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 501
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 85,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 453
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "eod-response-vehicle",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 41,
+            "y": 9
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 240
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 9,
+            "y": 40
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 516
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 103,
+            "y": 34
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 498
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "eod-medium-equipment-van",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 45,
+            "y": 8
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 410
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 12,
+            "y": 32
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 588
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 104,
+            "y": 34
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 479
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "eod-heavy-equipment-vehicle",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 23,
+            "y": 12
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 369
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 16,
+            "y": 32
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 542
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 133,
+            "y": 10
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 371
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "marine-eod-response-vehicle",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 41,
+            "y": 12
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 448
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 8,
+            "y": 29
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 452
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 92,
+            "y": 25
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 486
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "marine-eod-equipment-van",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 41,
+            "y": 7
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 563
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 8,
+            "y": 31
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 516
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 100,
+            "y": 31
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 519
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "welfare-vehicle-2",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 35,
+            "y": 11
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 306
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 8,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 433
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 98,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 492
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "cell-van",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 44,
+            "y": 6
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 438
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 8,
+            "y": 33
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 405
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 108,
+            "y": 34
+          },
+          "anchor_distance_pixels": 0.0,
+          "maximum_flash_difference": 510
+        }
+      ],
+      "passed": true,
+      "errors": []
+    }
+  ]
+}

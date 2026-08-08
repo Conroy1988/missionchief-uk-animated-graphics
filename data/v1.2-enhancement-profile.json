@@ -1,5 +1,5 @@
 {
-  "release": "v1.2.6",
+  "release": "v1.2.7",
   "master_source_release": "v1.2.4",
   "profile": "command",
   "display_name": "Modern Command Clarity",
@@ -51,9 +51,21 @@
     "misting-pod": 119,
     "hazardous-materials-pod": 119,
     "osu-pod": 119,
-    "hvp": 119
+    "hvp": 119,
+    "alb": 159
+  },
+  "map_scale_reductions": {
+    "alb": {
+      "baseline_command_width": 241,
+      "baseline_command_height": 118,
+      "target_body_width": 159,
+      "target_command_width": 169,
+      "target_command_height": 84,
+      "requested_reduction_percent": 30
+    }
   },
   "light_overrides_path": "data/v1.2.6-light-overrides.json",
+  "light_overrides_release": "v1.2.6",
   "light_overrides": {
     "water-pod": [
       {"x": 0.86, "y": 0.08, "group": "a", "size": 0.9},

@@ -1,0 +1,14 @@
+{
+  "release": "v1.2.7",
+  "baseline": "v1.2.6",
+  "changed_variants": [
+    "static",
+    "animated"
+  ],
+  "changed_asset_ids": [
+    "alb"
+  ],
+  "slots": {
+    "alb": 70
+  }
+}

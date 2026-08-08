@@ -1,5 +1,5 @@
-# Builds, validates and releases the v1.2.6 emergency-light placement correction.
-name: Build v1.2.6 MissionChief command pack
+# Builds, validates and releases the v1.2.7 ALB map-scale correction.
+name: Build v1.2.7 MissionChief command pack
 
 on:
   workflow_dispatch:
@@ -24,13 +24,13 @@ on:
       - scripts/build_helicopter_tail_masters.py
       - scripts/validate_release_scope.py
       - data/v1.2.6-light-overrides.json
-      - data/v1.2.6-scope.json
+      - data/v1.2.7-scope.json
       - scripts/build_v1_1_enhanced.py
       - scripts/validate_v1_1_enhanced.py
       - scripts/validate_light_placement.py
       - scripts/audit_emergency_light_placement.py
-      - docs/RELEASE_v1.2.6.md
-      - docs/CHECKPOINT_v1.2.6.md
+      - docs/RELEASE_v1.2.7.md
+      - docs/CHECKPOINT_v1.2.7.md
       - .github/workflows/build-numbered-upload-package.yml
   push:
     branches:
@@ -53,13 +53,13 @@ on:
       - scripts/build_helicopter_tail_masters.py
       - scripts/validate_release_scope.py
       - data/v1.2.6-light-overrides.json
-      - data/v1.2.6-scope.json
+      - data/v1.2.7-scope.json
       - scripts/build_v1_1_enhanced.py
       - scripts/validate_v1_1_enhanced.py
       - scripts/validate_light_placement.py
       - scripts/audit_emergency_light_placement.py
-      - docs/RELEASE_v1.2.6.md
-      - docs/CHECKPOINT_v1.2.6.md
+      - docs/RELEASE_v1.2.7.md
+      - docs/CHECKPOINT_v1.2.7.md
       - .github/workflows/build-numbered-upload-package.yml
 
 permissions:
@@ -98,43 +98,43 @@ jobs:
         run: python scripts/validate_v1_1_enhanced.py
 
       - name: Verify every corrected flash remains anchored to its vehicle
-        run: python scripts/validate_light_placement.py --report data/v1.2.6-light-placement-report.json
+        run: python scripts/validate_light_placement.py --report data/v1.2.7-light-placement-report.json
 
-      - name: Verify exact animated-asset release scope
+      - name: Verify exact static and animated release scope
         run: python scripts/validate_release_scope.py
 
       - name: Build and validate numbered package
-        run: python scripts/build_numbered_upload_package.py --version v1.2.6 --profile command
+        run: python scripts/build_numbered_upload_package.py --version v1.2.7 --profile command
 
       - name: Stage bulk uploader release asset
-        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.6.user.js
+        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.7.user.js
 
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: missionchief-modern-command-clarity-v1.2.6
+          name: missionchief-modern-command-clarity-v1.2.7
           path: |
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.6.zip
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.6.zip.sha256
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.6.user.js
-            data/v1.2.6-build-report.json
-            data/v1.2.6-qa-report.json
-            data/v1.2.6-light-placement-report.json
-            assets/previews/v1.2.6/*.png
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.7.zip
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.7.zip.sha256
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.7.user.js
+            data/v1.2.7-build-report.json
+            data/v1.2.7-qa-report.json
+            data/v1.2.7-light-placement-report.json
+            assets/previews/v1.2.7/*.png
           if-no-files-found: error
           retention-days: 90
 
-      - name: Create or update v1.2.6 release
+      - name: Create or update v1.2.7 release
         if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v1.2.6 >/dev/null 2>&1 || gh release create v1.2.6 --target main --title "v1.2.6 — Accurate Emergency-Light Placement" --notes-file docs/RELEASE_v1.2.6.md
-          gh release upload v1.2.6 \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.6.zip \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.6.zip.sha256 \
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.6.user.js \
-            data/v1.2.6-build-report.json \
-            data/v1.2.6-qa-report.json \
-            data/v1.2.6-light-placement-report.json \
+          gh release view v1.2.7 >/dev/null 2>&1 || gh release create v1.2.7 --target main --title "v1.2.7 — Correct ALB Map Scale" --notes-file docs/RELEASE_v1.2.7.md
+          gh release upload v1.2.7 \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.7.zip \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.7.zip.sha256 \
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.7.user.js \
+            data/v1.2.7-build-report.json \
+            data/v1.2.7-qa-report.json \
+            data/v1.2.7-light-placement-report.json \
             --clobber

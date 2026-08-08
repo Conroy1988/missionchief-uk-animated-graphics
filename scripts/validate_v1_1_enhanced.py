@@ -473,6 +473,7 @@ def main() -> None:
     aerial_shadow_assets = set(grounding.get("aerial", []))
     marine_shadow_assets = set(grounding.get("marine", []))
     mounted_carriers = profile.get("mounted_carriers", {})
+    map_scale_reductions = profile.get("map_scale_reductions", {})
     helicopter_edge_padding = profile.get("helicopter_edge_padding", {})
     tail_integrity = profile.get("helicopter_tail_integrity", {})
     master_source_release = str(profile.get("master_source_release", ""))
@@ -505,6 +506,17 @@ def main() -> None:
         pack_errors.append(
             "mounted-carrier profile must exactly cover all ten fire-service specialist modules"
         )
+    unknown_reduced_assets = sorted(set(map_scale_reductions) - expected)
+    if unknown_reduced_assets:
+        pack_errors.append(
+            f"map-scale reductions reference unknown assets: {unknown_reduced_assets}"
+        )
+    for asset_id, reduction in map_scale_reductions.items():
+        expected_body_width = int(reduction["target_body_width"])
+        if int(profile.get("source_override_widths", {}).get(asset_id, -1)) != expected_body_width:
+            pack_errors.append(
+                f"{asset_id} map-scale target does not match its deterministic body-width override"
+            )
     for carrier_id, carrier in mounted_carriers.items():
         expected_source = profile.get("new_source_overrides", {}).get(carrier_id)
         if carrier.get("base_vehicle") != "pm":
@@ -571,8 +583,18 @@ def main() -> None:
         corners = [static.getpixel((0, 0))[3], static.getpixel((static.width - 1, 0))[3], static.getpixel((0, static.height - 1))[3], static.getpixel((static.width - 1, static.height - 1))[3]]
         if any(corners):
             errors.append("static export has a non-transparent corner")
-        if static.width <= standard.width:
+        reduction = map_scale_reductions.get(asset_id)
+        if static.width <= standard.width and reduction is None:
             errors.append("command export did not gain visible width")
+        if reduction is not None:
+            target_dimensions = (
+                int(reduction["target_command_width"]),
+                int(reduction["target_command_height"]),
+            )
+            if static.size != target_dimensions:
+                errors.append(
+                    f"intentional map-scale reduction is {static.size}, expected {target_dimensions}"
+                )
         if detail["body_dimensions"]["width"] < int(profile["minimum_icon_width"]):
             errors.append("body width is below the command-visibility minimum")
         edge_padding = int(detail.get("edge_padding", 5))

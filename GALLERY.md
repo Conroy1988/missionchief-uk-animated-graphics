@@ -1,20 +1,22 @@
-# Complete v1.2.6 vehicle gallery
+# Complete v1.2.7 vehicle gallery
 
 See all **117 static and animated vehicle graphics** included in **TKB UK Fleet — Animated** for MissionChief UK.
 
 > **[Use TKB UK Fleet — Animated on MissionChief →](https://www.missionchief.co.uk/vehicle_graphics/5897)**
 
-[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.2.6)
+[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.2.7)
 
 The previews below use the pack's twelve-frame Modern Command Clarity APNGs. Emergency vehicles use independent light groups, 11 fleet phase offsets and 54 activity signatures; helicopters add rotor movement, while appropriate non-blue-light assets use restrained amber, wheel, navigation, wake or marker motion. Select any preview to open the full file.
 
 The original v1.0 True Scale exports remain available under `assets/exports/standard/` and in the [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0).
 
-## v1.2.6 clarity evidence
+## v1.2.7 clarity evidence
 
-[![Complete mounted specialist-carrier family](assets/previews/v1.2.6/mounted-specialist-carrier-map-scale.png)](assets/previews/v1.2.6/mounted-specialist-carrier-map-scale.png)
+This release corrects the oversized ALB at slot 70, reducing its map footprint by approximately 30% while retaining its complete silhouette and navigation/wake animation.
 
-[Complete helicopter tails at 100%, 75% and 50%](assets/previews/v1.2.6/complete-helicopter-tails-map-scale.png) · [All twelve helicopter frames](assets/previews/v1.2.6/helicopter-rotor-frames.png) · [All ten mounted specialist carriers at 100%, 75% and 50%](assets/previews/v1.2.6/mounted-specialist-carrier-map-scale.png) · [Corrected role rooflines](assets/previews/v1.2.6/corrected-role-rooflines-map-scale.png) · [Corrected specialist rooflines](assets/previews/v1.2.6/corrected-specialist-rooflines-map-scale.png) · [Desynchronised crowded response](assets/previews/v1.2.6/desynchronised-lights-crowd.png) · [Grounding-shadow audit](assets/previews/v1.2.6/grounding-shadows-map-scale.png) · [Satellite-contrast audit](assets/previews/v1.2.6/satellite-contrast-map-scale.png) · [Full dense satellite map](assets/previews/v1.2.6/busy-map-satellite.png)
+[![Complete mounted specialist-carrier family](assets/previews/v1.2.7/mounted-specialist-carrier-map-scale.png)](assets/previews/v1.2.7/mounted-specialist-carrier-map-scale.png)
+
+[Complete helicopter tails at 100%, 75% and 50%](assets/previews/v1.2.7/complete-helicopter-tails-map-scale.png) · [All twelve helicopter frames](assets/previews/v1.2.7/helicopter-rotor-frames.png) · [All ten mounted specialist carriers at 100%, 75% and 50%](assets/previews/v1.2.7/mounted-specialist-carrier-map-scale.png) · [Corrected role rooflines](assets/previews/v1.2.7/corrected-role-rooflines-map-scale.png) · [Corrected specialist rooflines](assets/previews/v1.2.7/corrected-specialist-rooflines-map-scale.png) · [Desynchronised crowded response](assets/previews/v1.2.7/desynchronised-lights-crowd.png) · [Grounding-shadow audit](assets/previews/v1.2.7/grounding-shadows-map-scale.png) · [Satellite-contrast audit](assets/previews/v1.2.7/satellite-contrast-map-scale.png) · [Full dense satellite map](assets/previews/v1.2.7/busy-map-satellite.png)
 
 ## Core emergency services
 
