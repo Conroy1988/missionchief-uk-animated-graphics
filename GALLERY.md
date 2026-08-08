@@ -1,20 +1,20 @@
-# Complete v1.2.2 vehicle gallery
+# Complete v1.2.3 vehicle gallery
 
 See all **117 static and animated vehicle graphics** included in **TKB UK Fleet — Animated** for MissionChief UK.
 
 > **[Use TKB UK Fleet — Animated on MissionChief →](https://www.missionchief.co.uk/vehicle_graphics/5897)**
 
-[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.2.2)
+[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.2.3)
 
-The previews below use the pack's twelve-frame Modern Command Clarity APNGs. Emergency vehicles use independent light groups, 11 fleet phase offsets and 48 activity signatures; helicopters add rotor movement, while appropriate non-blue-light assets use restrained amber, wheel, navigation, wake or marker motion. Select any preview to open the full file.
+The previews below use the pack's twelve-frame Modern Command Clarity APNGs. Emergency vehicles use independent light groups, 11 fleet phase offsets and 54 activity signatures; helicopters add rotor movement, while appropriate non-blue-light assets use restrained amber, wheel, navigation, wake or marker motion. Select any preview to open the full file.
 
 The original v1.0 True Scale exports remain available under `assets/exports/standard/` and in the [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0).
 
-## v1.2.2 clarity evidence
+## v1.2.3 clarity evidence
 
-[![Mounted Hazardous Materials Pod carrier](assets/previews/v1.2.2/mounted-pod-carrier-map-scale.png)](assets/previews/v1.2.2/mounted-pod-carrier-map-scale.png)
+[![Complete mounted pod-carrier family](assets/previews/v1.2.3/mounted-pod-carrier-map-scale.png)](assets/previews/v1.2.3/mounted-pod-carrier-map-scale.png)
 
-[Mounted HazMat carrier at 100%, 75% and 50%](assets/previews/v1.2.2/mounted-pod-carrier-map-scale.png) · [Corrected role rooflines](assets/previews/v1.2.2/corrected-role-rooflines-map-scale.png) · [Corrected specialist rooflines](assets/previews/v1.2.2/corrected-specialist-rooflines-map-scale.png) · [Desynchronised crowded response](assets/previews/v1.2.2/desynchronised-lights-crowd.png) · [Grounding-shadow audit](assets/previews/v1.2.2/grounding-shadows-map-scale.png) · [Satellite-contrast audit](assets/previews/v1.2.2/satellite-contrast-map-scale.png) · [Full dense satellite map](assets/previews/v1.2.2/busy-map-satellite.png)
+[All nine mounted pod carriers at 100%, 75% and 50%](assets/previews/v1.2.3/mounted-pod-carrier-map-scale.png) · [Corrected role rooflines](assets/previews/v1.2.3/corrected-role-rooflines-map-scale.png) · [Corrected specialist rooflines](assets/previews/v1.2.3/corrected-specialist-rooflines-map-scale.png) · [Desynchronised crowded response](assets/previews/v1.2.3/desynchronised-lights-crowd.png) · [Grounding-shadow audit](assets/previews/v1.2.3/grounding-shadows-map-scale.png) · [Satellite-contrast audit](assets/previews/v1.2.3/satellite-contrast-map-scale.png) · [Full dense satellite map](assets/previews/v1.2.3/busy-map-satellite.png)
 
 ## Core emergency services
 
