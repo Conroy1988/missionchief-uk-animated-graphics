@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail closed unless v1.2.5 changes exactly the four helicopter pairs."""
+"""Fail closed unless release exports match the declared asset scope."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SCOPE_PATH = ROOT / "data" / "v1.2.5-scope.json"
+PROFILE_PATH = ROOT / "data" / "v1.2-enhancement-profile.json"
 
 
 def git(*args: str) -> str:
@@ -24,13 +24,21 @@ def git(*args: str) -> str:
 
 
 def main() -> None:
-    scope = json.loads(SCOPE_PATH.read_text(encoding="utf-8"))
+    profile = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
+    release = str(profile["release"])
+    scope_path = ROOT / "data" / f"{release}-scope.json"
+    if not scope_path.is_file():
+        raise SystemExit(f"missing release scope: {scope_path.relative_to(ROOT)}")
+    scope = json.loads(scope_path.read_text(encoding="utf-8"))
+    if str(scope.get("release")) != release:
+        raise SystemExit("release scope does not match the active profile")
     baseline = str(scope["baseline"])
     expected_ids = set(scope["changed_asset_ids"])
+    expected_variants = tuple(scope.get("changed_variants", ("static", "animated")))
     expected_paths = {
         f"assets/exports/command/{variant}/{asset_id}.png"
         for asset_id in expected_ids
-        for variant in ("static", "animated")
+        for variant in expected_variants
     }
 
     try:
@@ -86,7 +94,8 @@ def main() -> None:
             {
                 "status": "PASS",
                 "baseline": baseline,
-                "changed_pairs": len(expected_ids),
+                "changed_assets": len(expected_ids),
+                "changed_variants": expected_variants,
                 "changed_files": len(changed_paths),
                 "asset_ids": sorted(expected_ids),
                 "slots": actual_slots,

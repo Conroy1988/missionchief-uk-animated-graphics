@@ -1,5 +1,5 @@
 {
-  "release": "v1.2.5",
+  "release": "v1.2.6",
   "master_source_release": "v1.2.4",
   "profile": "command",
   "display_name": "Modern Command Clarity",
@@ -53,6 +53,7 @@
     "osu-pod": 119,
     "hvp": 119
   },
+  "light_overrides_path": "data/v1.2.6-light-overrides.json",
   "light_overrides": {
     "water-pod": [
       {"x": 0.86, "y": 0.08, "group": "a", "size": 0.9},

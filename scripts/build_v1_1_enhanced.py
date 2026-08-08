@@ -965,7 +965,11 @@ def main() -> None:
     rare = set(profile["rare_showcase"])
     overrides = profile["new_source_overrides"]
     override_widths = profile.get("source_override_widths", {})
-    light_overrides = profile.get("light_overrides", {})
+    light_overrides = dict(profile.get("light_overrides", {}))
+    light_overrides_path = profile.get("light_overrides_path")
+    if light_overrides_path:
+        placement_data = json.loads((ROOT / light_overrides_path).read_text(encoding="utf-8"))
+        light_overrides.update(placement_data["vehicles"])
     role_cues = profile.get("role_differentiation", {})
     equipment_cues = profile.get("specialist_equipment", {})
     if role_cues or equipment_cues:
