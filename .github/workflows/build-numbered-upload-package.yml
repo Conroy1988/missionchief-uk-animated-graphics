@@ -1,5 +1,5 @@
-# Builds, validates and releases the v1.2.4 HVP and helicopter-tail hotfix.
-name: Build v1.2.4 MissionChief command pack
+# Builds, validates and releases the v1.2.5 complete-helicopter-tail hotfix.
+name: Build v1.2.5 MissionChief command pack
 
 on:
   workflow_dispatch:
@@ -23,11 +23,11 @@ on:
       - scripts/build_mounted_pod_carriers.py
       - scripts/build_helicopter_tail_masters.py
       - scripts/validate_release_scope.py
-      - data/v1.2.4-scope.json
+      - data/v1.2.5-scope.json
       - scripts/build_v1_1_enhanced.py
       - scripts/validate_v1_1_enhanced.py
-      - docs/RELEASE_v1.2.4.md
-      - docs/CHECKPOINT_v1.2.4.md
+      - docs/RELEASE_v1.2.5.md
+      - docs/CHECKPOINT_v1.2.5.md
       - .github/workflows/build-numbered-upload-package.yml
   push:
     branches:
@@ -49,11 +49,11 @@ on:
       - scripts/build_mounted_pod_carriers.py
       - scripts/build_helicopter_tail_masters.py
       - scripts/validate_release_scope.py
-      - data/v1.2.4-scope.json
+      - data/v1.2.5-scope.json
       - scripts/build_v1_1_enhanced.py
       - scripts/validate_v1_1_enhanced.py
-      - docs/RELEASE_v1.2.4.md
-      - docs/CHECKPOINT_v1.2.4.md
+      - docs/RELEASE_v1.2.5.md
+      - docs/CHECKPOINT_v1.2.5.md
       - .github/workflows/build-numbered-upload-package.yml
 
 permissions:
@@ -91,39 +91,39 @@ jobs:
       - name: Run dense-map and animation release gate
         run: python scripts/validate_v1_1_enhanced.py
 
-      - name: Verify exact five-pair release scope
+      - name: Verify exact four-pair release scope
         run: python scripts/validate_release_scope.py
 
       - name: Build and validate numbered package
-        run: python scripts/build_numbered_upload_package.py --version v1.2.4 --profile command
+        run: python scripts/build_numbered_upload_package.py --version v1.2.5 --profile command
 
       - name: Stage bulk uploader release asset
-        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.4.user.js
+        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.5.user.js
 
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: missionchief-modern-command-clarity-v1.2.4
+          name: missionchief-modern-command-clarity-v1.2.5
           path: |
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.4.zip
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.4.zip.sha256
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.4.user.js
-            data/v1.2.4-build-report.json
-            data/v1.2.4-qa-report.json
-            assets/previews/v1.2.4/*.png
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.5.zip
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.5.zip.sha256
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.5.user.js
+            data/v1.2.5-build-report.json
+            data/v1.2.5-qa-report.json
+            assets/previews/v1.2.5/*.png
           if-no-files-found: error
           retention-days: 90
 
-      - name: Create or update v1.2.4 release
+      - name: Create or update v1.2.5 release
         if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v1.2.4 >/dev/null 2>&1 || gh release create v1.2.4 --target main --title "v1.2.4 — HVP & Helicopter Tail Hotfix" --notes-file docs/RELEASE_v1.2.4.md
-          gh release upload v1.2.4 \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.4.zip \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.4.zip.sha256 \
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.4.user.js \
-            data/v1.2.4-build-report.json \
-            data/v1.2.4-qa-report.json \
+          gh release view v1.2.5 >/dev/null 2>&1 || gh release create v1.2.5 --target main --title "v1.2.5 — Complete Helicopter Tails" --notes-file docs/RELEASE_v1.2.5.md
+          gh release upload v1.2.5 \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.5.zip \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.5.zip.sha256 \
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.5.user.js \
+            data/v1.2.5-build-report.json \
+            data/v1.2.5-qa-report.json \
             --clobber

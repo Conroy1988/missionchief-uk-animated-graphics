@@ -69,6 +69,11 @@ EXPECTED_FULL_TAIL_SOURCES = {
     "police-helicopter": "police-helicopter-full-tail.png",
 }
 
+EXPECTED_PRESERVED_TAIL_ROTORS = {
+    "coastguard-rescue-helicopter",
+    "coastguard-rescue-helicopter-large",
+}
+
 
 def rgba(path: Path) -> Image.Image:
     with Image.open(path) as image:
@@ -106,6 +111,21 @@ def alpha_centroid(image: Image.Image) -> tuple[float, float]:
     if total == 0:
         return 0.0, 0.0
     return sx / total, sy / total
+
+
+def complete_tail_upper_pixels(
+    image: Image.Image,
+    width_fraction: float,
+    height_fraction: float,
+) -> int:
+    """Count structural tail pixels in the upper-left tail-integrity zone."""
+    alpha = image.getchannel("A")
+    right = max(1, round(image.width * width_fraction))
+    bottom = max(1, round(image.height * height_fraction))
+    return sum(
+        value >= 96
+        for value in alpha.crop((0, 0, right, bottom)).get_flattened_data()
+    )
 
 
 def half_zoom_visible_pixels(image: Image.Image) -> int:
@@ -150,7 +170,11 @@ def rotor_clear_region(size: tuple[int, int], geometry: dict, padding: int = 5) 
     mask = Image.new("L", size, 0)
     draw = ImageDraw.Draw(mask)
     clear_y = padding + round(body_height * float(geometry["clear_below"]))
-    draw.rectangle((padding, padding, padding + body_width - 1, clear_y), fill=255)
+    hub_x = padding + round(float(geometry["hub"][0]) * (body_width - 1))
+    rotor_radius = max(12, round(body_width * float(geometry["disc_width"]) / 2))
+    clear_left = max(padding, hub_x - rotor_radius)
+    clear_right = min(padding + body_width - 1, hub_x + rotor_radius)
+    draw.rectangle((clear_left, padding, clear_right, clear_y), fill=255)
 
     keep_points = [
         (
@@ -161,7 +185,6 @@ def rotor_clear_region(size: tuple[int, int], geometry: dict, padding: int = 5) 
     ]
     draw.polygon(keep_points, fill=0)
 
-    hub_x = padding + round(float(geometry["hub"][0]) * (body_width - 1))
     hub_y = padding + round(float(geometry["hub"][1]) * (body_height - 1))
     hub_rx = max(5, round(body_width * 0.032))
     hub_ry = max(3, round(body_height * 0.09))
@@ -412,7 +435,10 @@ def render_targeted_sheet(
                 (max(1, round(icon.width * zoom)), max(1, round(icon.height * zoom))),
                 Image.Resampling.LANCZOS,
             )
-            centre_x = left + 115 + zoom_index * 176
+            # Leave enough room for the 316px large Coastguard helicopter at
+            # 100% scale; the former 115px first centre clipped the evidence
+            # sheet even though the exported asset itself was complete.
+            centre_x = left + (170, 350, 490)[zoom_index]
             icon_y = top + 45 + max(0, (88 - scaled.height) // 2)
             canvas.alpha_composite(scaled, (centre_x - scaled.width // 2, icon_y))
             draw.text(
@@ -448,6 +474,8 @@ def main() -> None:
     marine_shadow_assets = set(grounding.get("marine", []))
     mounted_carriers = profile.get("mounted_carriers", {})
     helicopter_edge_padding = profile.get("helicopter_edge_padding", {})
+    tail_integrity = profile.get("helicopter_tail_integrity", {})
+    master_source_release = str(profile.get("master_source_release", ""))
 
     if role_cues or equipment_cues:
         pack_errors.append("generated role and specialist roof overlays must remain retired")
@@ -483,7 +511,7 @@ def main() -> None:
             pack_errors.append(f"{carrier_id} is not mounted on the PM chassis")
         if carrier.get("module") != carrier_id:
             pack_errors.append(f"{carrier_id} mounted-carrier module identity is incorrect")
-        if expected_source != f"assets/masters/{RELEASE}/{carrier_id}-carrier.png":
+        if expected_source != f"assets/masters/{master_source_release}/{carrier_id}-carrier.png":
             pack_errors.append(f"{carrier_id} does not use its release-specific carrier master")
 
     if {path.stem for path in STATIC_DIR.glob("*.png")} != expected:
@@ -512,10 +540,20 @@ def main() -> None:
         pack_errors.append("rotor geometry does not exactly cover the helicopter set")
     if set(helicopter_edge_padding) != set(profile["helicopters"]):
         pack_errors.append("helicopter edge-padding profile does not exactly cover the helicopter set")
+    tail_thresholds = tail_integrity.get("minimum_strong_alpha_pixels", {})
+    if set(tail_thresholds) != set(profile["helicopters"]):
+        pack_errors.append("helicopter tail-integrity thresholds do not exactly cover the helicopter set")
+    preserved_tail_rotors = {
+        asset_id
+        for asset_id, geometry in profile.get("rotor_geometry", {}).items()
+        if geometry.get("preserve_baked_tail_rotor", False)
+    }
+    if preserved_tail_rotors != EXPECTED_PRESERVED_TAIL_ROTORS:
+        pack_errors.append("preserved tail-rotor geometry does not exactly cover both Coastguard helicopters")
     for asset_id, filename in EXPECTED_FULL_TAIL_SOURCES.items():
-        expected_source = f"assets/masters/{RELEASE}/{filename}"
+        expected_source = f"assets/masters/{master_source_release}/{filename}"
         if profile.get("new_source_overrides", {}).get(asset_id) != expected_source:
-            pack_errors.append(f"{asset_id} does not use its release-specific full-tail master")
+            pack_errors.append(f"{asset_id} does not use its deterministic full-tail master")
 
     results = []
     timing_signatures: Counter[str] = Counter()
@@ -608,6 +646,7 @@ def main() -> None:
 
         rotor_underlay_pixels = None
         rotor_underlay_limit = None
+        tail_upper_pixels = None
         if asset_id in profile["helicopters"]:
             geometry = profile["rotor_geometry"][asset_id]
             rotor_underlay_pixels = strong_rotor_underlay_pixels(static, geometry)
@@ -625,6 +664,20 @@ def main() -> None:
                 errors.append(
                     f"helicopter tail margin is clipped ({tail_margin} < "
                     f"{profile['qa']['minimum_helicopter_tail_margin_pixels']})"
+                )
+            tail_upper_pixels = min(
+                complete_tail_upper_pixels(
+                    image,
+                    float(tail_integrity["zone_width_fraction"]),
+                    float(tail_integrity["zone_height_fraction"]),
+                )
+                for image in [static, *frames]
+            )
+            tail_threshold = int(tail_thresholds[asset_id])
+            if tail_upper_pixels < tail_threshold:
+                errors.append(
+                    f"helicopter upper tail is structurally incomplete "
+                    f"({tail_upper_pixels} < {tail_threshold})"
                 )
         else:
             tail_margin = None
@@ -672,6 +725,7 @@ def main() -> None:
                 "strong_rotor_underlay_pixels": rotor_underlay_pixels,
                 "strong_rotor_underlay_limit": rotor_underlay_limit,
                 "helicopter_tail_margin_pixels": tail_margin,
+                "helicopter_complete_tail_upper_pixels": tail_upper_pixels,
                 "half_zoom_visible_pixels": visible_pixels,
                 "edge_contrast": contrasts,
                 "passed": not errors,
@@ -702,6 +756,17 @@ def main() -> None:
         )
     )
     previews.append(str(render_rotor_sheet(vehicle_map).relative_to(ROOT)))
+    previews.append(
+        str(
+            render_targeted_sheet(
+                f"{RELEASE} complete helicopter tails - 100% / 75% / 50%",
+                ROTOR_SHOWCASE_IDS,
+                "dark",
+                "complete-helicopter-tails-map-scale.png",
+                vehicle_map,
+            ).relative_to(ROOT)
+        )
+    )
     previews.append(
         str(
             render_targeted_sheet(
@@ -798,6 +863,11 @@ def main() -> None:
             item["helicopter_tail_margin_pixels"]
             for item in results
             if item["helicopter_tail_margin_pixels"] is not None
+        ),
+        "minimum_helicopter_complete_tail_upper_pixels": min(
+            item["helicopter_complete_tail_upper_pixels"]
+            for item in results
+            if item["helicopter_complete_tail_upper_pixels"] is not None
         ),
         "minimum_boosted_satellite_edge_contrast": min(
             item["edge_contrast"]["satellite"]
