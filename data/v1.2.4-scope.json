@@ -1,0 +1,18 @@
+{
+  "release": "v1.2.4",
+  "baseline": "v1.2.3",
+  "changed_asset_ids": [
+    "hems",
+    "police-helicopter",
+    "hvp",
+    "coastguard-rescue-helicopter",
+    "coastguard-rescue-helicopter-large"
+  ],
+  "slots": {
+    "hems": 10,
+    "police-helicopter": 12,
+    "hvp": 51,
+    "coastguard-rescue-helicopter": 65,
+    "coastguard-rescue-helicopter-large": 66
+  }
+}

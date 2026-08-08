@@ -1,4 +1,4 @@
-# TKB UK Emergency Fleet — Animated v1.2.3
+# TKB UK Emergency Fleet — Animated v1.2.4
 
 A complete, original UK emergency-services vehicle graphics pack for [MissionChief UK](https://www.missionchief.co.uk/), built by **TKB Gaming**.
 
@@ -27,7 +27,7 @@ A complete, original UK emergency-services vehicle graphics pack for [MissionChi
 
 ## The complete UK fleet
 
-Release **v1.2.3** covers every one of the **117 current vehicle slots** in MissionChief UK:
+Release **v1.2.4** covers every one of the **117 current vehicle slots** in MissionChief UK:
 
 - 117 transparent, map-scale static PNGs
 - 117 twelve-frame APNGs with a unique timing signature per vehicle
@@ -40,6 +40,8 @@ Release **v1.2.3** covers every one of the **117 current vehicle slots** in Miss
 - A fail-closed 40-asset roofline regression gate that rejects any return of generated top-padding blocks
 - A coherent nine-vehicle mounted pod family across slots 42–50: Water, Bulk Foam, Rescue, Command, Welfare, BASU, Misting, Hazardous Materials and OSU
 - Every pod role now retains its distinct module on a complete three-axle prime mover with visible cab, chassis, wheels and four-point response lighting
+- The HVP at slot 51 now mounts its pump, hose banks and manifolds on the same complete prime-mover platform instead of appearing as a self-propelled module
+- Complete, unclipped tail geometry on HEMS, Police and both Coastguard helicopters, with a protected margin behind every static and animated tail frame
 - Reinforced light/dark dual edges on the 15 weakest satellite-map assets; the minimum targeted satellite contrast remains above the v1.2 target
 - Fleet-wide contact grounding shadows, with separate restrained treatments for road vehicles, watercraft and aircraft
 - Command Visibility sizing retained for 33 specialist and rare assets
@@ -58,9 +60,9 @@ Emergency lighting is deliberately restrained so the fleet remains readable on a
 
 Every icon is tested automatically at **100%, 75% and 50% scale** against light, dark, grayscale and satellite-style backgrounds. The release gate checks half-zoom survival, edge contrast, corrected rooflines, frame stability and all 117 static/animated slot pairs.
 
-[![Light-map dense fleet test](assets/previews/v1.2.3/busy-map-light.png)](assets/previews/v1.2.3/busy-map-light.png)
+[![Light-map dense fleet test](assets/previews/v1.2.4/busy-map-light.png)](assets/previews/v1.2.4/busy-map-light.png)
 
-**[Complete mounted-pod fleet audit](assets/previews/v1.2.3/mounted-pod-carrier-map-scale.png)** · **[Dark-map test](assets/previews/v1.2.3/busy-map-dark.png)** · **[Satellite-style test](assets/previews/v1.2.3/busy-map-satellite.png)** · **[Crowded-response light audit](assets/previews/v1.2.3/desynchronised-lights-crowd.png)** · **[Corrected role rooflines](assets/previews/v1.2.3/corrected-role-rooflines-map-scale.png)** · **[Corrected specialist rooflines](assets/previews/v1.2.3/corrected-specialist-rooflines-map-scale.png)** · **[Grounding-shadow audit](assets/previews/v1.2.3/grounding-shadows-map-scale.png)** · **[Satellite-contrast audit](assets/previews/v1.2.3/satellite-contrast-map-scale.png)** · **[Helicopter rotor audit](assets/previews/v1.2.3/helicopter-rotor-frames.png)**
+**[Complete mounted specialist-carrier audit](assets/previews/v1.2.4/mounted-specialist-carrier-map-scale.png)** · **[Dark-map test](assets/previews/v1.2.4/busy-map-dark.png)** · **[Satellite-style test](assets/previews/v1.2.4/busy-map-satellite.png)** · **[Crowded-response light audit](assets/previews/v1.2.4/desynchronised-lights-crowd.png)** · **[Corrected role rooflines](assets/previews/v1.2.4/corrected-role-rooflines-map-scale.png)** · **[Corrected specialist rooflines](assets/previews/v1.2.4/corrected-specialist-rooflines-map-scale.png)** · **[Grounding-shadow audit](assets/previews/v1.2.4/grounding-shadows-map-scale.png)** · **[Satellite-contrast audit](assets/previews/v1.2.4/satellite-contrast-map-scale.png)** · **[Helicopter rotor audit](assets/previews/v1.2.4/helicopter-rotor-frames.png)**
 
 ## Install in MissionChief
 
@@ -74,11 +76,11 @@ For MissionChief enhancements and utilities, visit **[TKB MissionChief Scripts &
 
 ## Release downloads
 
-The [v1.2.3 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.2.3) includes:
+The [v1.2.4 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.2.4) includes:
 
-- **`TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.3.zip`** — recommended ordered deployment package, with separate static and animated folders, an upload guide, manifest and reproducible SHA-256 verification
-- **`TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.3.user.js`** — resumable live deployment helper for pack maintainers
-- **`v1.2.3-build-report.json`** and **`v1.2.3-qa-report.json`** — machine-readable production evidence
+- **`TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.2.4.zip`** — recommended ordered deployment package, with separate static and animated folders, an upload guide, manifest and reproducible SHA-256 verification
+- **`TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.2.4.user.js`** — resumable live deployment helper for pack maintainers
+- **`v1.2.4-build-report.json`** and **`v1.2.4-qa-report.json`** — machine-readable production evidence
 
 The [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0) remains available for players who prefer strict real-world relative scale.
 
@@ -87,9 +89,9 @@ The [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-grap
 - `assets/sources/` — representative full-resolution chroma-key source artwork
 - `assets/exports/standard/static/` — MissionChief-ready transparent PNGs
 - `assets/exports/standard/animated/` — MissionChief-ready six-frame APNGs
-- `assets/exports/command/static/` — v1.2.3 Modern Command Clarity PNGs
-- `assets/exports/command/animated/` — v1.2.3 twelve-frame APNGs
-- `assets/masters/` — deterministic command-profile replacement masters, including the complete v1.2.3 mounted pod-carrier family
+- `assets/exports/command/static/` — v1.2.4 Modern Command Clarity PNGs
+- `assets/exports/command/animated/` — v1.2.4 twelve-frame APNGs
+- `assets/masters/` — deterministic command-profile replacement masters, including the v1.2.4 mounted specialist-carrier family and full-tail helicopter sources
 - `assets/previews/` — map-scale, animation-frame and selected-artwork QA sheets
 - `data/vehicle-slots.json` — authoritative 117-slot MissionChief mapping
 - `data/prototypes.json` — production specification and light-placement manifest
@@ -103,10 +105,11 @@ Large production artwork is supplied through the release archive rather than dup
 
 ```bash
 python scripts/build_mounted_pod_carriers.py --check
+python scripts/build_helicopter_tail_masters.py --check
 python scripts/build_v1_1_enhanced.py
 python scripts/validate_v1_1_enhanced.py
 python scripts/validate_release_scope.py
-python scripts/build_numbered_upload_package.py --version v1.2.3 --profile command
+python scripts/build_numbered_upload_package.py --version v1.2.4 --profile command
 ```
 
 The final validation gate must report `"all_passed": true` before a release is published. The immutable v1.0 source profile remains documented separately in its release and checkpoint.

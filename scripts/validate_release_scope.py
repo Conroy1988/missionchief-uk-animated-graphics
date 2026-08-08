@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail closed unless v1.2.3 changes exactly the eight intended pod pairs."""
+"""Fail closed unless v1.2.4 changes exactly the intended HVP and helicopter pairs."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SCOPE_PATH = ROOT / "data" / "v1.2.3-scope.json"
+SCOPE_PATH = ROOT / "data" / "v1.2.4-scope.json"
 
 
 def git(*args: str) -> str:

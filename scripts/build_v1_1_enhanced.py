@@ -1029,7 +1029,10 @@ def main() -> None:
             shadow_mode = "marine"
         else:
             shadow_mode = "ground"
-        edge_padding = 7 if asset_id in satellite_boost else 5
+        helicopter_padding = profile.get("helicopter_edge_padding", {})
+        edge_padding = int(
+            helicopter_padding.get(asset_id, 7 if asset_id in satellite_boost else 5)
+        )
         if asset_id in profile["helicopters"]:
             geometry = profile["rotor_geometry"][asset_id]
             rotorless_body = remove_baked_main_rotor(body, geometry)
