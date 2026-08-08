@@ -1,0 +1,51 @@
+{
+  "release": "v1.3.0",
+  "approved_upgrades": {
+    "1": "fleet-wide real-length scale calibration",
+    "2": "twenty rebuilt weak vehicle masters",
+    "3": "adaptive low-sticker visibility outlines",
+    "4": "fixture-shaped emergency lighting",
+    "5": "steady response headlights and rear lamps",
+    "6": "elliptical helicopter rotor and aviation-light motion",
+    "7": "class-weighted marine navigation and wake motion",
+    "8": "selective fixture-aligned wheel animation",
+    "9": "baked role differentiation",
+    "10": "standardised UK high-visibility livery palette",
+    "11": "fleet-wide alpha artefact cleanup",
+    "12": "native half-scale readability polish",
+    "13": "vehicle-class grounding shadows",
+    "14": "baked specialist equipment",
+    "16": "lossless APNG optimisation"
+  },
+  "vehicles": 117,
+  "baked_source_masters": 20,
+  "mean_length_scale_error_percent": 0.285,
+  "maximum_length_scale_error_percent": 0.855,
+  "maximum_outline_to_body_ratio": 0.5486,
+  "response_running_light_assets": 91,
+  "animated_coastguard_tail_rotors": 2,
+  "marine_motion_assets": 2,
+  "selective_wheel_motion_assets": 6,
+  "shadow_classes": {
+    "aerial-separated": 4,
+    "heavy-ground": 36,
+    "light-ground": 66,
+    "marine-waterline": 2,
+    "trailer": 9
+  },
+  "livery_pixels_normalised": 123679,
+  "isolated_alpha_pixels_remaining": 0,
+  "minimum_half_zoom_detail_score": 81.28,
+  "baseline_animated_bytes": 18718182,
+  "v1_3_animated_bytes": 9034343,
+  "animated_size_reduction_percent": 51.73,
+  "lossless_verified_apngs": 117,
+  "preview_files": [
+    "assets/previews/v1.3.0/fleet-scale-before-after.png",
+    "assets/previews/v1.3.0/baked-role-master-audit.png",
+    "assets/previews/v1.3.0/lighting-motion-audit.png",
+    "assets/previews/v1.3.0/adaptive-outline-livery-shadow-audit.png"
+  ],
+  "errors": [],
+  "all_passed": true
+}

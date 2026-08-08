@@ -1,0 +1,589 @@
+{
+  "release": "v1.3.0",
+  "masters": 20,
+  "all_cues_baked_into_source_masters": true,
+  "runtime_generated_roof_overlays": false,
+  "vehicles": [
+    {
+      "slot": 14,
+      "id": "armed-response-vehicle",
+      "family": "role",
+      "cue": "arv-equipment-locker",
+      "service": "police",
+      "source": "assets/exports/standard/static/armed-response-vehicle.png",
+      "target": "assets/masters/v1.3.0/armed-response-vehicle.png",
+      "original_dimensions": {
+        "width": 66,
+        "height": 25
+      },
+      "master_dimensions": {
+        "width": 66,
+        "height": 28
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8888888888888888,
+        "y_offset": 0.1111111111111111
+      },
+      "half_zoom_added_alpha_pixels": 15,
+      "sha256": "f44a3d5e1e79d7e02fdb84a3bc69988d8746a0acf90cf5d4e907c17b597899ec"
+    },
+    {
+      "slot": 26,
+      "id": "armed-traffic-car",
+      "family": "role",
+      "cue": "traffic-anpr-pods",
+      "service": "police",
+      "source": "assets/exports/standard/static/armed-traffic-car.png",
+      "target": "assets/masters/v1.3.0/armed-traffic-car.png",
+      "original_dimensions": {
+        "width": 66,
+        "height": 25
+      },
+      "master_dimensions": {
+        "width": 66,
+        "height": 28
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8888888888888888,
+        "y_offset": 0.1111111111111111
+      },
+      "half_zoom_added_alpha_pixels": 16,
+      "sha256": "3c7ca54e47fa5d1ddb13877147693383be590872f6153484e309fd24c0084c32"
+    },
+    {
+      "slot": 33,
+      "id": "cbrn-vehicle",
+      "family": "equipment",
+      "cue": "hazmat-detection-rack",
+      "service": "ambulance",
+      "source": "assets/exports/standard/static/cbrn-vehicle.png",
+      "target": "assets/masters/v1.3.0/cbrn-vehicle.png",
+      "original_dimensions": {
+        "width": 88,
+        "height": 45
+      },
+      "master_dimensions": {
+        "width": 88,
+        "height": 49
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 4
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9166666666666666,
+        "y_offset": 0.08333333333333333
+      },
+      "half_zoom_added_alpha_pixels": 82,
+      "sha256": "8eb589dd98592e89e8b36ac45866bd7dbfaf899c893dceb189ab6bab006de4cf"
+    },
+    {
+      "slot": 23,
+      "id": "community-first-responder",
+      "family": "role",
+      "cue": "cfr-medical-beacon",
+      "service": "ambulance",
+      "source": "assets/exports/standard/static/community-first-responder.png",
+      "target": "assets/masters/v1.3.0/community-first-responder.png",
+      "original_dimensions": {
+        "width": 57,
+        "height": 22
+      },
+      "master_dimensions": {
+        "width": 57,
+        "height": 25
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.875,
+        "y_offset": 0.125
+      },
+      "half_zoom_added_alpha_pixels": 8,
+      "sha256": "19ddf8402c405f3ba689aa484b333d4f2053e5d300f66c28c2f8f07598a53508"
+    },
+    {
+      "slot": 86,
+      "id": "control-van-sar",
+      "family": "equipment",
+      "cue": "command-mast-dish",
+      "service": "search-and-rescue",
+      "source": "assets/exports/standard/static/control-van-sar.png",
+      "target": "assets/masters/v1.3.0/control-van-sar.png",
+      "original_dimensions": {
+        "width": 94,
+        "height": 56
+      },
+      "master_dimensions": {
+        "width": 94,
+        "height": 57
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 1
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9821428571428571,
+        "y_offset": 0.017857142857142856
+      },
+      "half_zoom_added_alpha_pixels": 72,
+      "sha256": "5409a052af9ca3f8138ce416e07453709526330c7acb84988dbcd910b2bab61d"
+    },
+    {
+      "slot": 91,
+      "id": "drone-vehicle-fire-station",
+      "family": "equipment",
+      "cue": "drone-launch-cradle",
+      "service": "fire",
+      "source": "assets/exports/standard/static/drone-vehicle-fire-station.png",
+      "target": "assets/masters/v1.3.0/drone-vehicle-fire-station.png",
+      "original_dimensions": {
+        "width": 81,
+        "height": 43
+      },
+      "master_dimensions": {
+        "width": 81,
+        "height": 44
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 1
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9767441860465116,
+        "y_offset": 0.023255813953488372
+      },
+      "half_zoom_added_alpha_pixels": 37,
+      "sha256": "240678d3d5748d2eef65032e0d7c94c479b1b44584fa7f69d76d5cc601543a13"
+    },
+    {
+      "slot": 92,
+      "id": "drone-vehicle-police-station",
+      "family": "equipment",
+      "cue": "drone-launch-cradle",
+      "service": "police",
+      "source": "assets/exports/standard/static/drone-vehicle-police-station.png",
+      "target": "assets/masters/v1.3.0/drone-vehicle-police-station.png",
+      "original_dimensions": {
+        "width": 81,
+        "height": 46
+      },
+      "master_dimensions": {
+        "width": 81,
+        "height": 47
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 1
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9782608695652174,
+        "y_offset": 0.021739130434782608
+      },
+      "half_zoom_added_alpha_pixels": 38,
+      "sha256": "7b401cc4b4027b5ae4ad3b6a8b474c6be7db6febbee8bdf168ca53f022b0deb6"
+    },
+    {
+      "slot": 90,
+      "id": "drone-vehicle-sar-hq",
+      "family": "equipment",
+      "cue": "drone-launch-cradle",
+      "service": "search-and-rescue",
+      "source": "assets/exports/standard/static/drone-vehicle-sar-hq.png",
+      "target": "assets/masters/v1.3.0/drone-vehicle-sar-hq.png",
+      "original_dimensions": {
+        "width": 81,
+        "height": 44
+      },
+      "master_dimensions": {
+        "width": 81,
+        "height": 45
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 1
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9772727272727273,
+        "y_offset": 0.022727272727272728
+      },
+      "half_zoom_added_alpha_pixels": 36,
+      "sha256": "013af5247a66c4ccd9673bf459f3bd192113ba6fd0ff9a61d8f3228c1308ad02"
+    },
+    {
+      "slot": 110,
+      "id": "eod-commander",
+      "family": "role",
+      "cue": "eod-command-mast",
+      "service": "eod",
+      "source": "assets/exports/standard/static/eod-commander.png",
+      "target": "assets/masters/v1.3.0/eod-commander.png",
+      "original_dimensions": {
+        "width": 72,
+        "height": 37
+      },
+      "master_dimensions": {
+        "width": 72,
+        "height": 38
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 1
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.972972972972973,
+        "y_offset": 0.02702702702702703
+      },
+      "half_zoom_added_alpha_pixels": 33,
+      "sha256": "546340b8051dbc11ed23cb79538301d93f77121b0b39bd870f9a58a71b7fef5e"
+    },
+    {
+      "slot": 113,
+      "id": "eod-heavy-equipment-vehicle",
+      "family": "role",
+      "cue": "eod-robot-cradle",
+      "service": "eod",
+      "source": "assets/exports/standard/static/eod-heavy-equipment-vehicle.png",
+      "target": "assets/masters/v1.3.0/eod-heavy-equipment-vehicle.png",
+      "original_dimensions": {
+        "width": 130,
+        "height": 41
+      },
+      "master_dimensions": {
+        "width": 130,
+        "height": 46
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 5
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8888888888888888,
+        "y_offset": 0.1111111111111111
+      },
+      "half_zoom_added_alpha_pixels": 51,
+      "sha256": "1f5ab478d7b5513620ff7c1a4f1e9417a6a3320f72e82ee3db635eb1d0bc179c"
+    },
+    {
+      "slot": 112,
+      "id": "eod-medium-equipment-van",
+      "family": "role",
+      "cue": "eod-twin-canisters",
+      "service": "eod",
+      "source": "assets/exports/standard/static/eod-medium-equipment-van.png",
+      "target": "assets/masters/v1.3.0/eod-medium-equipment-van.png",
+      "original_dimensions": {
+        "width": 91,
+        "height": 41
+      },
+      "master_dimensions": {
+        "width": 91,
+        "height": 43
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 2
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9523809523809523,
+        "y_offset": 0.047619047619047616
+      },
+      "half_zoom_added_alpha_pixels": 30,
+      "sha256": "c5c15a5908c8d5cac40fde1e92e5afc7f769315a16345adafd389f6fe5a06cc3"
+    },
+    {
+      "slot": 111,
+      "id": "eod-response-vehicle",
+      "family": "role",
+      "cue": "eod-response-case",
+      "service": "eod",
+      "source": "assets/exports/standard/static/eod-response-vehicle.png",
+      "target": "assets/masters/v1.3.0/eod-response-vehicle.png",
+      "original_dimensions": {
+        "width": 84,
+        "height": 39
+      },
+      "master_dimensions": {
+        "width": 84,
+        "height": 42
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.926829268292683,
+        "y_offset": 0.07317073170731707
+      },
+      "half_zoom_added_alpha_pixels": 28,
+      "sha256": "4661bcd64789a6f3d3a53887afdf9a388e624f22441f16e5b98da50b206b49be"
+    },
+    {
+      "slot": 20,
+      "id": "joint-response-unit",
+      "family": "role",
+      "cue": "dual-service-command-pod",
+      "service": "multi-service",
+      "source": "assets/exports/standard/static/joint-response-unit.png",
+      "target": "assets/masters/v1.3.0/joint-response-unit.png",
+      "original_dimensions": {
+        "width": 64,
+        "height": 21
+      },
+      "master_dimensions": {
+        "width": 64,
+        "height": 24
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8695652173913043,
+        "y_offset": 0.13043478260869565
+      },
+      "half_zoom_added_alpha_pixels": 32,
+      "sha256": "6b9dbd81b1f031506316402d371c4d4e2019cdd17434b612cecd9c6db981f3ad"
+    },
+    {
+      "slot": 115,
+      "id": "marine-eod-equipment-van",
+      "family": "role",
+      "cue": "marine-eod-twin-kit",
+      "service": "eod",
+      "source": "assets/exports/standard/static/marine-eod-equipment-van.png",
+      "target": "assets/masters/v1.3.0/marine-eod-equipment-van.png",
+      "original_dimensions": {
+        "width": 91,
+        "height": 37
+      },
+      "master_dimensions": {
+        "width": 91,
+        "height": 39
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 2
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9473684210526315,
+        "y_offset": 0.05263157894736842
+      },
+      "half_zoom_added_alpha_pixels": 31,
+      "sha256": "5f8747bae05cb7fbadfd19859aa75f7b97e20949c70bb0cd7a5f598c1de4b816"
+    },
+    {
+      "slot": 114,
+      "id": "marine-eod-response-vehicle",
+      "family": "role",
+      "cue": "marine-eod-tube",
+      "service": "eod",
+      "source": "assets/exports/standard/static/marine-eod-response-vehicle.png",
+      "target": "assets/masters/v1.3.0/marine-eod-response-vehicle.png",
+      "original_dimensions": {
+        "width": 78,
+        "height": 32
+      },
+      "master_dimensions": {
+        "width": 78,
+        "height": 33
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 1
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.96875,
+        "y_offset": 0.03125
+      },
+      "half_zoom_added_alpha_pixels": 25,
+      "sha256": "e7ac4b5f72a7e1632ae25b2edf12611abcfa65b3c6d06a852650ff812e991121"
+    },
+    {
+      "slot": 21,
+      "id": "otl",
+      "family": "role",
+      "cue": "otl-command-mast",
+      "service": "ambulance",
+      "source": "assets/exports/standard/static/otl.png",
+      "target": "assets/masters/v1.3.0/otl.png",
+      "original_dimensions": {
+        "width": 65,
+        "height": 27
+      },
+      "master_dimensions": {
+        "width": 65,
+        "height": 31
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 4
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8666666666666667,
+        "y_offset": 0.13333333333333333
+      },
+      "half_zoom_added_alpha_pixels": 21,
+      "sha256": "7bb395331c7e86a8a540a3e83c2e000e2a0e3bb449f0a900fe312794aa165072"
+    },
+    {
+      "slot": 9,
+      "id": "police-incident-response-vehicle",
+      "family": "role",
+      "cue": "irv-anpr-array",
+      "service": "police",
+      "source": "assets/exports/standard/static/police-incident-response-vehicle.png",
+      "target": "assets/masters/v1.3.0/police-incident-response-vehicle.png",
+      "original_dimensions": {
+        "width": 64,
+        "height": 21
+      },
+      "master_dimensions": {
+        "width": 64,
+        "height": 24
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8695652173913043,
+        "y_offset": 0.13043478260869565
+      },
+      "half_zoom_added_alpha_pixels": 16,
+      "sha256": "4700fad93d1644165afb09d6e2c7b2a70795411228a19471b9e70131d882430f"
+    },
+    {
+      "slot": 11,
+      "id": "rapid-response-vehicle",
+      "family": "role",
+      "cue": "compact-medical-pod",
+      "service": "ambulance",
+      "source": "assets/exports/standard/static/rapid-response-vehicle.png",
+      "target": "assets/masters/v1.3.0/rapid-response-vehicle.png",
+      "original_dimensions": {
+        "width": 64,
+        "height": 22
+      },
+      "master_dimensions": {
+        "width": 64,
+        "height": 24
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 2
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9130434782608695,
+        "y_offset": 0.08695652173913043
+      },
+      "half_zoom_added_alpha_pixels": 9,
+      "sha256": "06a5cc94af7580960bae0b1db05b8fe0336cca78ae1cc565e1884a710af4c749"
+    },
+    {
+      "slot": 95,
+      "id": "rrv-2",
+      "family": "role",
+      "cue": "rrv-aerial-pair",
+      "service": "ambulance",
+      "source": "assets/exports/standard/static/rrv-2.png",
+      "target": "assets/masters/v1.3.0/rrv-2.png",
+      "original_dimensions": {
+        "width": 64,
+        "height": 21
+      },
+      "master_dimensions": {
+        "width": 64,
+        "height": 24
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8695652173913043,
+        "y_offset": 0.13043478260869565
+      },
+      "half_zoom_added_alpha_pixels": 14,
+      "sha256": "4e945ce2880fd44f481c410d214d3d80313665adf6fea43d30dc88e4c7eda6db"
+    },
+    {
+      "slot": 97,
+      "id": "specialist-paramedic-rrv",
+      "family": "role",
+      "cue": "specialist-medical-module",
+      "service": "ambulance",
+      "source": "assets/exports/standard/static/specialist-paramedic-rrv.png",
+      "target": "assets/masters/v1.3.0/specialist-paramedic-rrv.png",
+      "original_dimensions": {
+        "width": 65,
+        "height": 23
+      },
+      "master_dimensions": {
+        "width": 65,
+        "height": 25
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 2
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9166666666666666,
+        "y_offset": 0.08333333333333333
+      },
+      "half_zoom_added_alpha_pixels": 18,
+      "sha256": "49be82c0ee1f4f8b19040b7a6c6a77b999cf65224566e05be3633f879c11333a"
+    }
+  ],
+  "all_passed": true
+}

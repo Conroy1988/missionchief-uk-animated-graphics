@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PROFILE_PATH = ROOT / "data" / "v1.2-enhancement-profile.json"
+PROFILE_PATH = ROOT / "data" / "v1.3-overhaul-profile.json"
 
 
 def git(*args: str) -> str:
@@ -33,7 +33,10 @@ def main() -> None:
     if str(scope.get("release")) != release:
         raise SystemExit("release scope does not match the active profile")
     baseline = str(scope["baseline"])
-    expected_ids = set(scope["changed_asset_ids"])
+    declared_ids = scope["changed_asset_ids"]
+    mapping = json.loads((ROOT / "data" / "vehicle-slots.json").read_text(encoding="utf-8"))
+    all_ids = {str(item["asset_id"]) for item in mapping["slots"]}
+    expected_ids = all_ids if declared_ids == "all" else set(declared_ids)
     expected_variants = tuple(scope.get("changed_variants", ("static", "animated")))
     expected_paths = {
         f"assets/exports/command/{variant}/{asset_id}.png"
@@ -70,13 +73,16 @@ def main() -> None:
             )
         )
 
-    mapping = json.loads((ROOT / "data" / "vehicle-slots.json").read_text(encoding="utf-8"))
     actual_slots = {
         str(item["asset_id"]): int(item["slot"])
         for item in mapping["slots"]
         if str(item["asset_id"]) in expected_ids
     }
-    expected_slots = {str(key): int(value) for key, value in scope["slots"].items()}
+    expected_slots = (
+        {str(item["asset_id"]): int(item["slot"]) for item in mapping["slots"]}
+        if scope["slots"] == "all"
+        else {str(key): int(value) for key, value in scope["slots"].items()}
+    )
     if actual_slots != expected_slots:
         raise SystemExit(
             json.dumps(
