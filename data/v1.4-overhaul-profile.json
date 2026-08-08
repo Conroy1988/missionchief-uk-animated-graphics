@@ -1,5 +1,6 @@
 {
-  "release": "v1.4.0",
+  "release": "v1.4.1",
+  "master_art_release": "v1.4.0",
   "master_source_release": "v1.2.4",
   "profile": "command",
   "display_name": "Modern Command Clarity — Air, Marine and Redraw Edition",
@@ -185,6 +186,7 @@
   },
   "light_overrides_path": "data/v1.2.6-light-overrides.json",
   "light_overrides_release": "v1.2.6",
+  "current_light_fixtures_path": "data/v1.4.1-light-fixtures.json",
   "role_differentiation": {},
   "role_confusion_groups": [],
   "specialist_equipment": {},

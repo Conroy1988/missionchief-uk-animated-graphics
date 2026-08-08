@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v1.4.0",
+  "release": "v1.4.1",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -73,7 +73,7 @@
     {
       "id": "lighting",
       "label": "Lighting changes",
-      "count": 61
+      "count": 66
     },
     {
       "id": "grounding-shadow",
@@ -88,8 +88,14 @@
   ],
   "releases": [
     {
+      "id": "v1.4.1",
+      "label": "v1.4.1 · Current",
+      "profile": "command",
+      "summary": "Emergency-light fixture accuracy"
+    },
+    {
       "id": "v1.4.0",
-      "label": "v1.4.0 · Current",
+      "label": "v1.4.0",
       "profile": "command",
       "summary": "Air, marine and redraw overhaul"
     },
@@ -436,13 +442,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "role-differentiation"
+        "role-differentiation",
+        "lighting"
       ],
       "cue": "Arv equipment locker",
       "static_path": "assets/exports/command/static/armed-response-vehicle.png",
       "animated_path": "assets/exports/command/animated/armed-response-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "014 14 slot 14 arv arv armed-response-vehicle armed response vehicle police police 01 core services arv equipment locker grounding shadows role differentiation"
+      "search_text": "014 14 slot 14 arv arv armed-response-vehicle armed response vehicle police police 01 core services arv equipment locker grounding shadows role differentiation lighting changes"
     },
     {
       "slot": 15,
@@ -578,13 +585,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "role-differentiation"
+        "role-differentiation",
+        "lighting"
       ],
       "cue": "Dual service command pod",
       "static_path": "assets/exports/command/static/joint-response-unit.png",
       "animated_path": "assets/exports/command/animated/joint-response-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "020 20 slot 20 joint response unit joint-response-unit joint-response-unit joint response unit multi-service multi-service 01 core services dual service command pod grounding shadows role differentiation"
+      "search_text": "020 20 slot 20 joint response unit joint-response-unit joint-response-unit joint response unit multi-service multi-service 01 core services dual service command pod grounding shadows role differentiation lighting changes"
     },
     {
       "slot": 21,
@@ -602,13 +610,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "role-differentiation"
+        "role-differentiation",
+        "lighting"
       ],
       "cue": "Otl command mast",
       "static_path": "assets/exports/command/static/otl.png",
       "animated_path": "assets/exports/command/animated/otl.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "021 21 slot 21 otl otl otl otl ambulance ambulance 01 core services otl command mast grounding shadows role differentiation"
+      "search_text": "021 21 slot 21 otl otl otl otl ambulance ambulance 01 core services otl command mast grounding shadows role differentiation lighting changes"
     },
     {
       "slot": 22,
@@ -649,13 +658,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "role-differentiation"
+        "role-differentiation",
+        "lighting"
       ],
       "cue": "Cfr medical beacon",
       "static_path": "assets/exports/command/static/community-first-responder.png",
       "animated_path": "assets/exports/command/animated/community-first-responder.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "023 23 slot 23 community first responder community-first-responder community-first-responder community first responder ambulance ambulance 01 core services cfr medical beacon grounding shadows role differentiation"
+      "search_text": "023 23 slot 23 community first responder community-first-responder community-first-responder community first responder ambulance ambulance 01 core services cfr medical beacon grounding shadows role differentiation lighting changes"
     },
     {
       "slot": 24,
@@ -719,13 +729,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "role-differentiation"
+        "role-differentiation",
+        "lighting"
       ],
       "cue": "Traffic anpr pods",
       "static_path": "assets/exports/command/static/armed-traffic-car.png",
       "animated_path": "assets/exports/command/animated/armed-traffic-car.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "026 26 slot 26 armed traffic car armed-traffic-car armed-traffic-car armed traffic car police police 01 core services traffic anpr pods grounding shadows role differentiation"
+      "search_text": "026 26 slot 26 armed traffic car armed-traffic-car armed-traffic-car armed traffic car police police 01 core services traffic anpr pods grounding shadows role differentiation lighting changes"
     },
     {
       "slot": 27,
@@ -2908,6 +2919,8 @@
     "data/vehicle-slots.json",
     "data/prototypes.json",
     "data/v1.4-overhaul-profile.json",
-    "data/v1.2.6-scope.json"
+    "data/v1.2.6-scope.json",
+    "data/v1.4.1-scope.json",
+    "data/v1.4.1-light-fixtures.json"
   ]
 }

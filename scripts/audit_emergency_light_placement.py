@@ -10,6 +10,8 @@ from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageFont, ImageSequence
 
+from build_v1_1_enhanced import transform_lights
+
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "data" / "prototypes.json"
@@ -73,7 +75,7 @@ def render_page(
     for row, vehicle in enumerate(vehicles):
         asset_id = vehicle["id"]
         detail = details[asset_id]
-        lights = profile.get("light_overrides", {}).get(asset_id, vehicle.get("lights", []))
+        lights = profile.get("effective_lights", {}).get(asset_id, vehicle.get("lights", []))
         y0 = header_height + row * row_height
         draw.rounded_rectangle((12, y0 + 8, width - 12, y0 + row_height - 8), radius=9, fill=(32, 45, 57, 255))
         draw.text((28, y0 + 24), f"{int(vehicle['missionchief_slot']):03}  {vehicle['display_name']}", fill="white", font=label_font)
@@ -130,13 +132,28 @@ def main() -> None:
     if light_overrides_path:
         placement_data = json.loads((ROOT / light_overrides_path).read_text(encoding="utf-8"))
         light_overrides.update(placement_data["vehicles"])
-    profile["light_overrides"] = light_overrides
     report = json.loads((ROOT / "data" / f"{profile['release']}-build-report.json").read_text(encoding="utf-8"))
     details = {item["id"]: item for item in report["vehicles_detail"]}
+    master_report = json.loads((ROOT / profile["baked_master_report"]).read_text(encoding="utf-8"))
+    transforms = {item["id"]: item["light_transform"] for item in master_report["vehicles"]}
+    effective_lights = {
+        vehicle["id"]: transform_lights(
+            light_overrides.get(vehicle["id"], vehicle.get("lights", [])),
+            transforms.get(vehicle["id"]),
+        )
+        for vehicle in manifest["vehicles"]
+    }
+    current_fixtures_path = profile.get("current_light_fixtures_path")
+    if current_fixtures_path:
+        current = json.loads((ROOT / str(current_fixtures_path)).read_text(encoding="utf-8"))
+        if str(current.get("release")) != str(profile["release"]):
+            raise SystemExit("current light-fixture data does not match the active release")
+        effective_lights.update(current.get("vehicles", {}))
+    profile["effective_lights"] = effective_lights
     lit = [
         vehicle
         for vehicle in manifest["vehicles"]
-        if profile.get("light_overrides", {}).get(vehicle["id"], vehicle.get("lights", []))
+        if effective_lights.get(vehicle["id"], vehicle.get("lights", []))
     ]
     paths = []
     for start in range(0, len(lit), args.page_size):

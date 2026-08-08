@@ -1,0 +1,39 @@
+{
+  "release": "v1.4.1",
+  "baseline": "v1.4.0",
+  "changed_asset_ids": [
+    "armed-response-vehicle",
+    "joint-response-unit",
+    "otl",
+    "community-first-responder",
+    "armed-traffic-car",
+    "cbrn-vehicle",
+    "control-van-sar",
+    "drone-vehicle-police-station",
+    "specialist-paramedic-rrv",
+    "eod-commander",
+    "eod-response-vehicle",
+    "eod-medium-equipment-van",
+    "eod-heavy-equipment-vehicle",
+    "marine-eod-response-vehicle",
+    "marine-eod-equipment-van"
+  ],
+  "changed_variants": ["animated"],
+  "slots": {
+    "armed-response-vehicle": 14,
+    "joint-response-unit": 20,
+    "otl": 21,
+    "community-first-responder": 23,
+    "armed-traffic-car": 26,
+    "cbrn-vehicle": 33,
+    "control-van-sar": 86,
+    "drone-vehicle-police-station": 92,
+    "specialist-paramedic-rrv": 97,
+    "eod-commander": 110,
+    "eod-response-vehicle": 111,
+    "eod-medium-equipment-van": 112,
+    "eod-heavy-equipment-vehicle": 113,
+    "marine-eod-response-vehicle": 114,
+    "marine-eod-equipment-van": 115
+  }
+}

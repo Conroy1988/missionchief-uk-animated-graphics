@@ -13,6 +13,7 @@ from PIL import Image, ImageChops, ImageSequence
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILE_PATH = ROOT / "data" / "v1.4-overhaul-profile.json"
+MANIFEST_PATH = ROOT / "data" / "prototypes.json"
 STATIC_DIR = ROOT / "assets" / "exports" / "command" / "static"
 ANIMATED_DIR = ROOT / "assets" / "exports" / "command" / "animated"
 MAXIMUM_ANCHOR_DISTANCE = 1.5
@@ -62,12 +63,41 @@ def main() -> None:
     master_transforms = {
         item["id"]: item["light_transform"] for item in master_report["vehicles"]
     }
+    manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+    current_fixture_data = {"vehicles": {}}
+    current_fixtures_path = profile.get("current_light_fixtures_path")
+    if current_fixtures_path:
+        current_fixture_data = json.loads(
+            (ROOT / str(current_fixtures_path)).read_text(encoding="utf-8")
+        )
+        if str(current_fixture_data.get("release")) != release:
+            raise SystemExit("current light-fixture data does not match the active release")
+    current_lights = current_fixture_data.get("vehicles", {})
+    base_overrides = placement_data["vehicles"]
+    audited_ids = set(base_overrides) | set(current_lights)
+    effective_lights = {}
+    for vehicle in manifest["vehicles"]:
+        asset_id = str(vehicle["id"])
+        if asset_id not in audited_ids:
+            continue
+        lights = base_overrides.get(asset_id, vehicle.get("lights", []))
+        transform = master_transforms.get(asset_id)
+        transformed = []
+        for light in lights:
+            item = dict(light)
+            if transform is not None:
+                item["x"] = float(transform["x_offset"]) + float(item["x"]) * float(transform["x_scale"])
+                item["y"] = float(transform["y_offset"]) + float(item["y"]) * float(transform["y_scale"])
+            transformed.append(item)
+        effective_lights[asset_id] = current_lights.get(asset_id, transformed)
     errors: list[str] = []
     vehicles_detail = []
     maximum_distance = 0.0
     minimum_flash_difference = math.inf
 
-    for asset_id, lights in placement_data["vehicles"].items():
+    for asset_id, lights in effective_lights.items():
+        if not lights:
+            continue
         detail = details.get(asset_id)
         if detail is None:
             errors.append(f"unknown audited asset: {asset_id}")
@@ -82,13 +112,9 @@ def main() -> None:
         light_detail = []
         vehicle_errors = []
 
-        transform = master_transforms.get(asset_id)
         for index, light in enumerate(lights, start=1):
             x_fraction = float(light["x"])
             y_fraction = float(light["y"])
-            if transform is not None:
-                x_fraction = float(transform["x_offset"]) + x_fraction * float(transform["x_scale"])
-                y_fraction = float(transform["y_offset"]) + y_fraction * float(transform["y_scale"])
             if not 0.0 <= x_fraction <= 1.0 or not 0.0 <= y_fraction <= 1.0:
                 vehicle_errors.append(f"light {index} is outside normalised body coordinates")
             px = edge_padding + round(x_fraction * (body_width - 1))
@@ -124,8 +150,8 @@ def main() -> None:
 
     report = {
         "release": release,
-        "audited_assets": len(placement_data["vehicles"]),
-        "audited_lights": sum(len(lights) for lights in placement_data["vehicles"].values()),
+        "audited_assets": sum(bool(lights) for lights in effective_lights.values()),
+        "audited_lights": sum(len(lights) for lights in effective_lights.values()),
         "maximum_anchor_distance_pixels": round(maximum_distance, 2),
         "maximum_allowed_anchor_distance_pixels": MAXIMUM_ANCHOR_DISTANCE,
         "minimum_flash_difference": int(minimum_flash_difference),

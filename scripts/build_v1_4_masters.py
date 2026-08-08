@@ -16,9 +16,11 @@ from build_v1_1_enhanced import crop_to_alpha
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILE_PATH = ROOT / "data" / "v1.4-overhaul-profile.json"
+PROFILE = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
+MASTER_RELEASE = str(PROFILE.get("master_art_release", PROFILE["release"]))
 STANDARD_DIR = ROOT / "assets" / "exports" / "standard" / "static"
-OUTPUT_DIR = ROOT / "assets" / "masters" / "v1.4.0"
-REPORT_PATH = ROOT / "data" / "v1.4.0-master-report.json"
+OUTPUT_DIR = ROOT / "assets" / "masters" / MASTER_RELEASE
+REPORT_PATH = ROOT / "data" / f"{MASTER_RELEASE}-master-report.json"
 
 
 def sha256(path: Path) -> str:
@@ -259,7 +261,7 @@ def build(destination: Path) -> dict:
         )
     combined.sort(key=lambda item: int(item["slot"]))
     return {
-        "release": profile["release"],
+        "release": MASTER_RELEASE,
         "masters": len(combined),
         "legacy_masters": len(legacy_details),
         "redraw_masters": len(redraws),

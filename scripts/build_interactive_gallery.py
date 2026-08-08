@@ -19,8 +19,14 @@ REPOSITORY_URL = "https://github.com/Conroy1988/missionchief-uk-animated-graphic
 
 RELEASES = [
     {
+        "id": "v1.4.1",
+        "label": "v1.4.1 · Current",
+        "profile": "command",
+        "summary": "Emergency-light fixture accuracy",
+    },
+    {
         "id": "v1.4.0",
-        "label": "v1.4.0 · Current",
+        "label": "v1.4.0",
         "profile": "command",
         "summary": "Air, marine and redraw overhaul",
     },
@@ -123,11 +129,12 @@ def build_catalogue() -> dict:
     prototypes = load_json(ROOT / "data/prototypes.json")["vehicles"]
     profile = load_json(ROOT / "data/v1.4-overhaul-profile.json")
     lighting_scope = load_json(ROOT / "data/v1.2.6-scope.json")["changed_asset_ids"]
+    corrected_fixture_scope = load_json(ROOT / "data/v1.4.1-scope.json")["changed_asset_ids"]
 
     prototypes_by_slot = {item["missionchief_slot"]: item for item in prototypes}
     cue_data = profile["baked_master_cues"]
     frame_overrides = profile["animation_frame_overrides"]
-    lighting_assets = set(lighting_scope)
+    lighting_assets = set(lighting_scope) | set(corrected_fixture_scope)
     vehicles = []
 
     for slot in slots:
@@ -216,7 +223,7 @@ def build_catalogue() -> dict:
 
     return {
         "schema_version": 1,
-        "release": "v1.4.0",
+        "release": str(profile["release"]),
         "title": "TKB UK Emergency Fleet",
         "edition": "Interactive Gallery",
         "pack_id": 5897,
@@ -238,6 +245,8 @@ def build_catalogue() -> dict:
             "data/prototypes.json",
             "data/v1.4-overhaul-profile.json",
             "data/v1.2.6-scope.json",
+            "data/v1.4.1-scope.json",
+            "data/v1.4.1-light-fixtures.json",
         ],
     }
 
@@ -248,6 +257,8 @@ def serialise(catalogue: dict) -> str:
 
 def validate_historical_assets(catalogue: dict) -> None:
     for release in RELEASES:
+        if release["id"] == catalogue["release"]:
+            continue
         tree = git_tree(release["id"])
         profile = release["profile"]
         for vehicle in catalogue["vehicles"]:

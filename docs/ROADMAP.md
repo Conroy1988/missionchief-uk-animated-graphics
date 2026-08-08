@@ -15,7 +15,7 @@ Planned capabilities:
 - direct links to the matching static/APNG asset and MissionChief pack
 - responsive desktop, tablet and mobile layout
 
-Status: delivered on 8 August 2026. The gallery is presentation-only and does not alter the live v1.4.0 MissionChief pack.
+Status: delivered on 8 August 2026. The gallery is presentation-only, tracks the current validated release and does not itself alter the live MissionChief pack.
 
 Release contract:
 

@@ -27,6 +27,8 @@ const defaults = {
 };
 
 test('catalogue contains one ordered record for every live MissionChief slot', () => {
+  assert.equal(catalogue.release, 'v1.4.1');
+  assert.equal(catalogue.releases[0].id, 'v1.4.1');
   assert.equal(catalogue.total, 117);
   assert.equal(catalogue.vehicles.length, 117);
   assert.deepEqual(catalogue.vehicles.map((vehicle) => vehicle.slot), Array.from({ length: 117 }, (_, index) => index + 1));
@@ -94,4 +96,3 @@ test('view state has a compact shareable URL round trip', () => {
   const parsed = parseViewState(`?${query}`, defaults);
   assert.deepEqual(parsed, source);
 });
-
