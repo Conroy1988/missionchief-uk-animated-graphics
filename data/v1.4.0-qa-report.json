@@ -1,0 +1,4642 @@
+{
+  "release": "v1.4.0",
+  "profile": "command",
+  "vehicles": 117,
+  "static_pngs": 117,
+  "animated_apngs": 117,
+  "default_frames_per_asset": 12,
+  "frame_count_distribution": {
+    "12": 105,
+    "18": 12
+  },
+  "themes_tested": [
+    "light",
+    "dark",
+    "satellite",
+    "grayscale"
+  ],
+  "zoom_factors_tested": [
+    1.0,
+    0.75,
+    0.5
+  ],
+  "timing_signature_count": 117,
+  "maximum_shared_timing_signature": 1,
+  "flash_phase_bucket_count": 11,
+  "maximum_shared_flash_phase": 14,
+  "flash_activity_signature_count": 61,
+  "maximum_shared_flash_activity_signature": 5,
+  "minimum_half_zoom_visible_pixels": 276,
+  "minimum_edge_contrast": 31.34,
+  "closest_rare_silhouette_pair": [
+    "coastguard-rope-rescue-unit",
+    "srv"
+  ],
+  "closest_rare_silhouette_distance": 13,
+  "role_differentiated_assets": 0,
+  "specialist_equipment_assets": 0,
+  "retired_generated_overlay_assets": 40,
+  "maximum_retired_overlay_top_padding_pixels": 0,
+  "grounding_shadow_assets": 117,
+  "minimum_grounding_shadow_half_zoom_pixels": 53,
+  "satellite_contrast_boosted_assets": 20,
+  "mounted_carrier_assets": 10,
+  "mounted_carrier_ids": [
+    "basu-pod",
+    "bulk-foam-pod",
+    "command-pod",
+    "hazardous-materials-pod",
+    "hvp",
+    "misting-pod",
+    "osu-pod",
+    "rescue-pod",
+    "water-pod",
+    "welfare-pod"
+  ],
+  "minimum_helicopter_tail_margin_pixels": 7,
+  "minimum_helicopter_complete_tail_upper_pixels": 379,
+  "minimum_boosted_satellite_edge_contrast": 41.45,
+  "role_group_results": [],
+  "preview_files": [
+    "assets/previews/v1.4.0/busy-map-light.png",
+    "assets/previews/v1.4.0/busy-map-dark.png",
+    "assets/previews/v1.4.0/busy-map-satellite.png",
+    "assets/previews/v1.4.0/busy-map-grayscale.png",
+    "assets/previews/v1.4.0/animation-frames.png",
+    "assets/previews/v1.4.0/desynchronised-lights-crowd.png",
+    "assets/previews/v1.4.0/helicopter-rotor-frames.png",
+    "assets/previews/v1.4.0/complete-helicopter-tails-map-scale.png",
+    "assets/previews/v1.4.0/corrected-role-rooflines-map-scale.png",
+    "assets/previews/v1.4.0/corrected-specialist-rooflines-map-scale.png",
+    "assets/previews/v1.4.0/grounding-shadows-map-scale.png",
+    "assets/previews/v1.4.0/satellite-contrast-map-scale.png",
+    "assets/previews/v1.4.0/mounted-specialist-carrier-map-scale.png"
+  ],
+  "pack_errors": [],
+  "vehicles_detail": [
+    {
+      "slot": 1,
+      "id": "fire-rescue-pump",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 118,
+        "height": 49
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1271,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,2,1,1,2,1,2,0,3,0,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 570,
+        "half_zoom_visible_pixels": 158
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1057,
+      "edge_contrast": {
+        "light": 76.17,
+        "dark": 53.08,
+        "satellite": 42.61,
+        "grayscale": 46.0
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 2,
+      "id": "light-4x4-pump",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 92,
+        "height": 37
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1216,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,3,1,2,1,3,1,1,2,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 301,
+        "half_zoom_visible_pixels": 95
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 499,
+      "edge_contrast": {
+        "light": 85.38,
+        "dark": 49.26,
+        "satellite": 35.68,
+        "grayscale": 47.08
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 3,
+      "id": "aerial-appliance",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 166,
+        "height": 61
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1237,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,2,1,3,0,4,0,2,2,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 783,
+        "half_zoom_visible_pixels": 240
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 2003,
+      "edge_contrast": {
+        "light": 80.66,
+        "dark": 57.42,
+        "satellite": 47.22,
+        "grayscale": 51.7
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 4,
+      "id": "fire-officer",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 70,
+        "height": 31
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1233,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,0,1,2,0,1,0,2,0,1,1,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 218,
+        "half_zoom_visible_pixels": 75
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 333,
+      "edge_contrast": {
+        "light": 91.09,
+        "dark": 47.37,
+        "satellite": 39.1,
+        "grayscale": 52.05
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 5,
+      "id": "rescue-support-unit",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 122,
+        "height": 48
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1240,
+      "flash_phase": 4,
+      "flash_activity_signature": "0,0,3,0,3,0,2,1,1,2,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 608,
+        "half_zoom_visible_pixels": 170
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1113,
+      "edge_contrast": {
+        "light": 74.97,
+        "dark": 55.49,
+        "satellite": 45.73,
+        "grayscale": 48.04
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 6,
+      "id": "frontline-ambulance",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 92,
+        "height": 39
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1236,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,0,1,1,2,1,2,0,2,1,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 305,
+        "half_zoom_visible_pixels": 101
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 631,
+      "edge_contrast": {
+        "light": 51.12,
+        "dark": 88.6,
+        "satellite": 64.79,
+        "grayscale": 36.34
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 7,
+      "id": "water-carrier",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 132,
+        "height": 50
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1314,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,1,3,1,2,2,1,2,2,2,0,3",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 618,
+        "half_zoom_visible_pixels": 179
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1225,
+      "edge_contrast": {
+        "light": 85.84,
+        "dark": 47.7,
+        "satellite": 37.26,
+        "grayscale": 47.35
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 8,
+      "id": "hazmat-unit",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 122,
+        "height": 49
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1257,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,3,1,2,2,1,2,2,2,0,3,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 606,
+        "half_zoom_visible_pixels": 164
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1110,
+      "edge_contrast": {
+        "light": 71.43,
+        "dark": 58.47,
+        "satellite": 45.5,
+        "grayscale": 44.38
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 9,
+      "id": "police-incident-response-vehicle",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 72,
+        "height": 32
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1247,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,1,2,0,1,0,2,0,1,1,1,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 229,
+        "half_zoom_visible_pixels": 75
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 316,
+      "edge_contrast": {
+        "light": 65.45,
+        "dark": 85.4,
+        "satellite": 66.34,
+        "grayscale": 49.09
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 10,
+      "id": "hems",
+      "motion": "blue-response+rotor+aviation-lights",
+      "dimensions": {
+        "width": 197,
+        "height": 73
+      },
+      "frames": 18,
+      "changed_frames": 17,
+      "cycle_ms": 1249,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,0,1,1,1,0,2,0,1,1,1,1,0,1,1,1,0,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "aerial",
+        "class": "aerial-separated",
+        "opacity": 46,
+        "blur_radius": 2.55,
+        "visible_pixels": 643,
+        "half_zoom_visible_pixels": 189
+      },
+      "strong_rotor_underlay_pixels": 19,
+      "strong_rotor_underlay_limit": 216,
+      "helicopter_tail_margin_pixels": 7,
+      "helicopter_complete_tail_upper_pixels": 414,
+      "half_zoom_visible_pixels": 1218,
+      "edge_contrast": {
+        "light": 75.9,
+        "dark": 62.95,
+        "satellite": 46.99,
+        "grayscale": 46.19
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 11,
+      "id": "rapid-response-vehicle",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 72,
+        "height": 32
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1311,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,1,1,1,0,1,2,0,1,0,2,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 227,
+        "half_zoom_visible_pixels": 75
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 327,
+      "edge_contrast": {
+        "light": 76.63,
+        "dark": 67.81,
+        "satellite": 52.97,
+        "grayscale": 48.23
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 12,
+      "id": "police-helicopter",
+      "motion": "blue-response+rotor+aviation-lights",
+      "dimensions": {
+        "width": 199,
+        "height": 75
+      },
+      "frames": 18,
+      "changed_frames": 17,
+      "cycle_ms": 1153,
+      "flash_phase": 4,
+      "flash_activity_signature": "0,1,1,1,0,1,1,1,1,0,1,1,1,1,1,0,1,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "aerial",
+        "class": "aerial-separated",
+        "opacity": 46,
+        "blur_radius": 2.55,
+        "visible_pixels": 684,
+        "half_zoom_visible_pixels": 205
+      },
+      "strong_rotor_underlay_pixels": 73,
+      "strong_rotor_underlay_limit": 224,
+      "helicopter_tail_margin_pixels": 8,
+      "helicopter_complete_tail_upper_pixels": 379,
+      "half_zoom_visible_pixels": 1388,
+      "edge_contrast": {
+        "light": 82.39,
+        "dark": 56.11,
+        "satellite": 47.07,
+        "grayscale": 52.13
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 13,
+      "id": "dog-support-unit",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 96,
+        "height": 45
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1249,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,1,1,1,3,0,2,0,3,0,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 325,
+        "half_zoom_visible_pixels": 103
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 682,
+      "edge_contrast": {
+        "light": 59.86,
+        "dark": 81.46,
+        "satellite": 61.78,
+        "grayscale": 44.35
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 14,
+      "id": "armed-response-vehicle",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 74,
+        "height": 36
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1246,
+      "flash_phase": 5,
+      "flash_activity_signature": "0,2,0,1,1,1,0,1,2,0,1,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 237,
+        "half_zoom_visible_pixels": 78
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 383,
+      "edge_contrast": {
+        "light": 79.25,
+        "dark": 68.23,
+        "satellite": 55.62,
+        "grayscale": 51.02
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 15,
+      "id": "breathing-apparatus-support-unit",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 120,
+        "height": 47
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1199,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,2,0,3,1,3,1,2,2,1,2,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 592,
+        "half_zoom_visible_pixels": 167
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1062,
+      "edge_contrast": {
+        "light": 72.82,
+        "dark": 58.52,
+        "satellite": 46.05,
+        "grayscale": 45.5
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 16,
+      "id": "incident-command-control-unit",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 144,
+        "height": 59
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1211,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,1,2,2,2,0,3,1,3,1,2,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 716,
+        "half_zoom_visible_pixels": 203
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1513,
+      "edge_contrast": {
+        "light": 73.66,
+        "dark": 57.52,
+        "satellite": 45.12,
+        "grayscale": 46.31
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 17,
+      "id": "rescue-pump",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 120,
+        "height": 51
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1265,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,1,3,1,2,2,1,2,2,2,0,3",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 583,
+        "half_zoom_visible_pixels": 167
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1146,
+      "edge_contrast": {
+        "light": 78.69,
+        "dark": 52.97,
+        "satellite": 41.64,
+        "grayscale": 47.11
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 18,
+      "id": "carp",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 141,
+        "height": 59
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1262,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,2,1,3,0,4,0,2,2,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 704,
+        "half_zoom_visible_pixels": 199
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1543,
+      "edge_contrast": {
+        "light": 77.89,
+        "dark": 58.51,
+        "satellite": 45.67,
+        "grayscale": 49.19
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 19,
+      "id": "co-responder-vehicle",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 70,
+        "height": 34
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1293,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,1,0,2,1,1,1,2,1,0,2,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 214,
+        "half_zoom_visible_pixels": 69
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 365,
+      "edge_contrast": {
+        "light": 94.16,
+        "dark": 45.14,
+        "satellite": 35.58,
+        "grayscale": 53.18
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 20,
+      "id": "joint-response-unit",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 72,
+        "height": 32
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1232,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,2,1,0,2,1,1,1,2,1,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 198,
+        "half_zoom_visible_pixels": 61
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 325,
+      "edge_contrast": {
+        "light": 68.09,
+        "dark": 81.3,
+        "satellite": 64.69,
+        "grayscale": 51.88
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 21,
+      "id": "otl",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 73,
+        "height": 39
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1220,
+      "flash_phase": 5,
+      "flash_activity_signature": "0,1,2,0,1,2,0,3,0,1,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 234,
+        "half_zoom_visible_pixels": 81
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 394,
+      "edge_contrast": {
+        "light": 79.96,
+        "dark": 65.97,
+        "satellite": 53.06,
+        "grayscale": 52.33
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 22,
+      "id": "general-practitioner",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 72,
+        "height": 30
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1265,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,1,2,1,0,2,2,1,0,2,1,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 215,
+        "half_zoom_visible_pixels": 66
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 315,
+      "edge_contrast": {
+        "light": 56.49,
+        "dark": 85.76,
+        "satellite": 61.99,
+        "grayscale": 40.19
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 23,
+      "id": "community-first-responder",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 65,
+        "height": 33
+      },
+      "frames": 12,
+      "changed_frames": 9,
+      "cycle_ms": 1280,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,1,2,1,0,2,2,1,0,2,1,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 199,
+        "half_zoom_visible_pixels": 53
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 276,
+      "edge_contrast": {
+        "light": 67.53,
+        "dark": 79.66,
+        "satellite": 58.55,
+        "grayscale": 44.17
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 24,
+      "id": "crew-carrier",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 102,
+        "height": 46
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1254,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,1,0,2,1,1,1,2,1,0,2,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 348,
+        "half_zoom_visible_pixels": 111
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 797,
+      "edge_contrast": {
+        "light": 67.35,
+        "dark": 69.48,
+        "satellite": 51.72,
+        "grayscale": 41.44
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 25,
+      "id": "traffic-car",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 73,
+        "height": 29
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1246,
+      "flash_phase": 4,
+      "flash_activity_signature": "0,2,1,1,1,2,1,0,2,2,1,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 205,
+        "half_zoom_visible_pixels": 61
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 292,
+      "edge_contrast": {
+        "light": 57.34,
+        "dark": 84.83,
+        "satellite": 61.86,
+        "grayscale": 43.68
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 26,
+      "id": "armed-traffic-car",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 74,
+        "height": 36
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1226,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,1,0,2,1,1,1,2,1,0,2,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 238,
+        "half_zoom_visible_pixels": 79
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 369,
+      "edge_contrast": {
+        "light": 89.11,
+        "dark": 58.92,
+        "satellite": 51.76,
+        "grayscale": 58.37
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 27,
+      "id": "heavy-4x4-tanker",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 134,
+        "height": 63
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1254,
+      "flash_phase": 5,
+      "flash_activity_signature": "0,1,1,1,2,1,0,2,2,1,0,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 634,
+        "half_zoom_visible_pixels": 179
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1571,
+      "edge_contrast": {
+        "light": 91.03,
+        "dark": 41.08,
+        "satellite": 35.45,
+        "grayscale": 51.96
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 28,
+      "id": "prv",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 77,
+        "height": 36
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1266,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,1,1,2,2,1,1,3,1,1,2,3",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 244,
+        "half_zoom_visible_pixels": 79
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 429,
+      "edge_contrast": {
+        "light": 80.9,
+        "dark": 56.67,
+        "satellite": 46.18,
+        "grayscale": 51.21
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 29,
+      "id": "srv",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 99,
+        "height": 46
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1288,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,1,2,3,1,1,2,2,1,1,3,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 330,
+        "half_zoom_visible_pixels": 108
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 770,
+      "edge_contrast": {
+        "light": 78.34,
+        "dark": 59.83,
+        "satellite": 45.12,
+        "grayscale": 45.98
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 30,
+      "id": "welfare-vehicle",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 99,
+        "height": 44
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1294,
+      "flash_phase": 1,
+      "flash_activity_signature": "0,2,1,1,2,0,2,1,2,1,1,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 330,
+        "half_zoom_visible_pixels": 107
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 720,
+      "edge_contrast": {
+        "light": 58.96,
+        "dark": 82.14,
+        "satellite": 62.33,
+        "grayscale": 41.0
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 31,
+      "id": "atv-carrier",
+      "motion": "blue-response+wheel-motion",
+      "dimensions": {
+        "width": 125,
+        "height": 55
+      },
+      "frames": 18,
+      "changed_frames": 17,
+      "cycle_ms": 1304,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,3,0,2,1,2,1,1,2,1,2,0,3,0,2,1,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 611,
+        "half_zoom_visible_pixels": 171
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1153,
+      "edge_contrast": {
+        "light": 79.5,
+        "dark": 58.92,
+        "satellite": 46.87,
+        "grayscale": 46.56
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 32,
+      "id": "ambulance-control-unit",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 138,
+        "height": 70
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1221,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,0,2,1,1,1,1,2,1,2,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 687,
+        "half_zoom_visible_pixels": 193
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1513,
+      "edge_contrast": {
+        "light": 57.13,
+        "dark": 69.68,
+        "satellite": 53.38,
+        "grayscale": 37.27
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 33,
+      "id": "cbrn-vehicle",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 96,
+        "height": 57
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1259,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,0,1,2,0,3,0,1,2,1,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 322,
+        "half_zoom_visible_pixels": 104
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 841,
+      "edge_contrast": {
+        "light": 85.56,
+        "dark": 64.76,
+        "satellite": 54.36,
+        "grayscale": 53.06
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 34,
+      "id": "mass-casualty-equipment",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 132,
+        "height": 68
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1233,
+      "flash_phase": 8,
+      "flash_activity_signature": "0,1,2,0,2,0,2,1,1,1,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 656,
+        "half_zoom_visible_pixels": 185
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1499,
+      "edge_contrast": {
+        "light": 59.29,
+        "dark": 68.85,
+        "satellite": 53.9,
+        "grayscale": 39.28
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 35,
+      "id": "ambulance-officer",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 73,
+        "height": 33
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1217,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,0,2,2,1,0,2,1,1,1,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 233,
+        "half_zoom_visible_pixels": 63
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 297,
+      "edge_contrast": {
+        "light": 73.81,
+        "dark": 67.53,
+        "satellite": 52.58,
+        "grayscale": 46.73
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 36,
+      "id": "bfu",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 122,
+        "height": 65
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1278,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,2,1,3,1,2,2,2,2,1,3,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 597,
+        "half_zoom_visible_pixels": 165
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1352,
+      "edge_contrast": {
+        "light": 79.68,
+        "dark": 50.98,
+        "satellite": 41.0,
+        "grayscale": 47.26
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 37,
+      "id": "f-wrc",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 132,
+        "height": 56
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1233,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,2,1,3,1,2,1,3,1,2,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 613,
+        "half_zoom_visible_pixels": 175
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1407,
+      "edge_contrast": {
+        "light": 74.73,
+        "dark": 54.45,
+        "satellite": 44.82,
+        "grayscale": 46.35
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 38,
+      "id": "wrl-cafs",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 118,
+        "height": 53
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1266,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,2,1,3,1,2,1,3,1,2,2,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 575,
+        "half_zoom_visible_pixels": 158
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1147,
+      "edge_contrast": {
+        "light": 78.87,
+        "dark": 60.49,
+        "satellite": 45.87,
+        "grayscale": 44.91
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 39,
+      "id": "rp-cafs",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 121,
+        "height": 51
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1265,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,1,2,2,2,2,1,3,1,2,1,3",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 580,
+        "half_zoom_visible_pixels": 168
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1180,
+      "edge_contrast": {
+        "light": 84.13,
+        "dark": 49.72,
+        "satellite": 39.69,
+        "grayscale": 48.71
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 40,
+      "id": "osu",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 129,
+        "height": 51
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1247,
+      "flash_phase": 5,
+      "flash_activity_signature": "0,3,1,2,1,3,1,2,2,2,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 631,
+        "half_zoom_visible_pixels": 179
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1254,
+      "edge_contrast": {
+        "light": 76.53,
+        "dark": 60.08,
+        "satellite": 49.24,
+        "grayscale": 50.07
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 41,
+      "id": "pm",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 118,
+        "height": 51
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1242,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,3,1,2,2,2,2,1,3,1,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 545,
+        "half_zoom_visible_pixels": 158
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 771,
+      "edge_contrast": {
+        "light": 88.27,
+        "dark": 47.73,
+        "satellite": 36.63,
+        "grayscale": 48.79
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 42,
+      "id": "water-pod",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 130,
+        "height": 60
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1295,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,2,1,3,1,2,2,2,2,1,3,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 120,
+        "blur_radius": 1.12,
+        "visible_pixels": 592,
+        "half_zoom_visible_pixels": 169
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1359,
+      "edge_contrast": {
+        "light": 74.37,
+        "dark": 64.45,
+        "satellite": 50.63,
+        "grayscale": 43.78
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 43,
+      "id": "bulk-foam-pod",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 130,
+        "height": 59
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1255,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,2,1,3,1,2,1,3,1,2,2,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 120,
+        "blur_radius": 1.12,
+        "visible_pixels": 592,
+        "half_zoom_visible_pixels": 170
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1333,
+      "edge_contrast": {
+        "light": 80.11,
+        "dark": 62.69,
+        "satellite": 50.6,
+        "grayscale": 47.57
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 44,
+      "id": "rescue-pod",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 130,
+        "height": 62
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1325,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,1,2,1,3,1,2,2,2,2,1,3",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 120,
+        "blur_radius": 1.12,
+        "visible_pixels": 592,
+        "half_zoom_visible_pixels": 169
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1412,
+      "edge_contrast": {
+        "light": 88.73,
+        "dark": 52.17,
+        "satellite": 41.45,
+        "grayscale": 49.66
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 45,
+      "id": "command-pod",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 130,
+        "height": 80
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1258,
+      "flash_phase": 8,
+      "flash_activity_signature": "0,1,3,1,2,2,2,2,1,3,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 120,
+        "blur_radius": 1.12,
+        "visible_pixels": 592,
+        "half_zoom_visible_pixels": 169
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1371,
+      "edge_contrast": {
+        "light": 73.18,
+        "dark": 64.12,
+        "satellite": 48.75,
+        "grayscale": 40.51
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 46,
+      "id": "welfare-pod",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 130,
+        "height": 62
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1257,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,2,1,3,1,2,2,2,2,1,3,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 120,
+        "blur_radius": 1.12,
+        "visible_pixels": 592,
+        "half_zoom_visible_pixels": 169
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1380,
+      "edge_contrast": {
+        "light": 90.63,
+        "dark": 56.44,
+        "satellite": 45.6,
+        "grayscale": 52.17
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 47,
+      "id": "basu-pod",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 130,
+        "height": 58
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1274,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,2,2,2,1,3,1,2,1,3,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 120,
+        "blur_radius": 1.12,
+        "visible_pixels": 592,
+        "half_zoom_visible_pixels": 169
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1326,
+      "edge_contrast": {
+        "light": 80.07,
+        "dark": 64.09,
+        "satellite": 51.4,
+        "grayscale": 48.53
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 48,
+      "id": "misting-pod",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 130,
+        "height": 69
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1228,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,2,2,2,1,3,1,2,1,3,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 120,
+        "blur_radius": 1.12,
+        "visible_pixels": 592,
+        "half_zoom_visible_pixels": 165
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1455,
+      "edge_contrast": {
+        "light": 87.38,
+        "dark": 59.15,
+        "satellite": 45.84,
+        "grayscale": 49.9
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 49,
+      "id": "hazardous-materials-pod",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 130,
+        "height": 58
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1244,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,3,1,2,2,2,2,1,3,1,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 120,
+        "blur_radius": 1.12,
+        "visible_pixels": 592,
+        "half_zoom_visible_pixels": 169
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1324,
+      "edge_contrast": {
+        "light": 81.99,
+        "dark": 62.34,
+        "satellite": 50.27,
+        "grayscale": 49.63
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 50,
+      "id": "osu-pod",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 130,
+        "height": 58
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1227,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,2,1,3,1,2,1,3,1,2,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 120,
+        "blur_radius": 1.12,
+        "visible_pixels": 592,
+        "half_zoom_visible_pixels": 169
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1300,
+      "edge_contrast": {
+        "light": 89.51,
+        "dark": 54.38,
+        "satellite": 44.8,
+        "grayscale": 53.3
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 51,
+      "id": "hvp",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 130,
+        "height": 58
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1196,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,1,2,2,2,2,1,3,1,2,1,3",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 120,
+        "blur_radius": 1.12,
+        "visible_pixels": 592,
+        "half_zoom_visible_pixels": 169
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1324,
+      "edge_contrast": {
+        "light": 77.48,
+        "dark": 65.01,
+        "satellite": 50.61,
+        "grayscale": 46.89
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 52,
+      "id": "psu-carrier",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 98,
+        "height": 42
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1190,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,0,2,1,2,0,2,1,1,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 327,
+        "half_zoom_visible_pixels": 104
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 691,
+      "edge_contrast": {
+        "light": 51.91,
+        "dark": 90.39,
+        "satellite": 69.74,
+        "grayscale": 44.15
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 53,
+      "id": "firearms-personnel-carrier",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 106,
+        "height": 48
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1246,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,1,1,2,1,2,0,2,1,2,0,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 94,
+        "blur_radius": 0.92,
+        "visible_pixels": 344,
+        "half_zoom_visible_pixels": 111
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 778,
+      "edge_contrast": {
+        "light": 87.4,
+        "dark": 69.13,
+        "satellite": 52.35,
+        "grayscale": 48.22
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 54,
+      "id": "multiple-dog-carrier",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 103,
+        "height": 45
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1279,
+      "flash_phase": 4,
+      "flash_activity_signature": "0,2,1,2,0,2,1,1,2,1,2,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 353,
+        "half_zoom_visible_pixels": 113
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 753,
+      "edge_contrast": {
+        "light": 60.46,
+        "dark": 78.17,
+        "satellite": 60.72,
+        "grayscale": 44.54
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 55,
+      "id": "detention-van",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 99,
+        "height": 41
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1258,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,0,2,1,1,2,1,2,0,2,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 333,
+        "half_zoom_visible_pixels": 107
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 683,
+      "edge_contrast": {
+        "light": 56.91,
+        "dark": 85.6,
+        "satellite": 65.26,
+        "grayscale": 45.32
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 56,
+      "id": "mounted-unit",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 125,
+        "height": 54
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1220,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,0,3,0,2,1,2,1,1,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 604,
+        "half_zoom_visible_pixels": 170
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1220,
+      "edge_contrast": {
+        "light": 61.66,
+        "dark": 75.58,
+        "satellite": 59.94,
+        "grayscale": 43.89
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 57,
+      "id": "m-rav",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 96,
+        "height": 47
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1262,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,0,2,1,2,0,2,1,1,2,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 94,
+        "blur_radius": 0.92,
+        "visible_pixels": 295,
+        "half_zoom_visible_pixels": 102
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 656,
+      "edge_contrast": {
+        "light": 91.24,
+        "dark": 59.2,
+        "satellite": 45.78,
+        "grayscale": 51.19
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 58,
+      "id": "crv",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 76,
+        "height": 40
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1315,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,2,0,2,1,1,2,1,2,0,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 237,
+        "half_zoom_visible_pixels": 75
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 442,
+      "edge_contrast": {
+        "light": 89.6,
+        "dark": 51.27,
+        "satellite": 42.99,
+        "grayscale": 54.22
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 59,
+      "id": "coastguard-mud-rescue-unit",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 99,
+        "height": 44
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1204,
+      "flash_phase": 8,
+      "flash_activity_signature": "0,2,1,1,2,1,2,0,2,1,2,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 327,
+        "half_zoom_visible_pixels": 106
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 727,
+      "edge_contrast": {
+        "light": 57.53,
+        "dark": 80.3,
+        "satellite": 59.88,
+        "grayscale": 39.89
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 60,
+      "id": "coastguard-rope-rescue-unit",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 99,
+        "height": 46
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1223,
+      "flash_phase": 8,
+      "flash_activity_signature": "0,2,1,1,2,1,2,0,2,1,2,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 332,
+        "half_zoom_visible_pixels": 108
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 776,
+      "edge_contrast": {
+        "light": 65.55,
+        "dark": 72.65,
+        "satellite": 55.4,
+        "grayscale": 41.79
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 61,
+      "id": "coastguard-commander",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 81,
+        "height": 49
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1274,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,1,2,0,2,1,2,1,2,0,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 260,
+        "half_zoom_visible_pixels": 85
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 428,
+      "edge_contrast": {
+        "light": 74.36,
+        "dark": 71.48,
+        "satellite": 60.55,
+        "grayscale": 52.35
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 62,
+      "id": "flood-rescue-unit-trailer",
+      "motion": "marker-light",
+      "dimensions": {
+        "width": 96,
+        "height": 53
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1252,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "trailer",
+        "opacity": 82,
+        "blur_radius": 0.82,
+        "visible_pixels": 390,
+        "half_zoom_visible_pixels": 115
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 822,
+      "edge_contrast": {
+        "light": 50.46,
+        "dark": 82.48,
+        "satellite": 62.12,
+        "grayscale": 37.55
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 63,
+      "id": "mud-decontamination-unit",
+      "motion": "static",
+      "dimensions": {
+        "width": 96,
+        "height": 45
+      },
+      "frames": 12,
+      "changed_frames": 0,
+      "cycle_ms": 1227,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 307,
+        "half_zoom_visible_pixels": 95
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 672,
+      "edge_contrast": {
+        "light": 53.36,
+        "dark": 78.72,
+        "satellite": 58.78,
+        "grayscale": 36.53
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 64,
+      "id": "support-unit",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 102,
+        "height": 50
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1264,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,0,2,1,2,0,2,1,1,2,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 340,
+        "half_zoom_visible_pixels": 107
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 836,
+      "edge_contrast": {
+        "light": 76.19,
+        "dark": 63.02,
+        "satellite": 48.42,
+        "grayscale": 46.49
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 65,
+      "id": "coastguard-rescue-helicopter",
+      "motion": "blue-response+rotor+aviation-lights",
+      "dimensions": {
+        "width": 249,
+        "height": 82
+      },
+      "frames": 18,
+      "changed_frames": 17,
+      "cycle_ms": 1268,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,0,1,2,1,2,0,2,1,2,1,2,0,1,2,1,2,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "aerial",
+        "class": "aerial-separated",
+        "opacity": 46,
+        "blur_radius": 2.55,
+        "visible_pixels": 845,
+        "half_zoom_visible_pixels": 249
+      },
+      "strong_rotor_underlay_pixels": 50,
+      "strong_rotor_underlay_limit": 306,
+      "helicopter_tail_margin_pixels": 8,
+      "helicopter_complete_tail_upper_pixels": 514,
+      "half_zoom_visible_pixels": 1734,
+      "edge_contrast": {
+        "light": 76.18,
+        "dark": 59.0,
+        "satellite": 44.25,
+        "grayscale": 47.79
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 66,
+      "id": "coastguard-rescue-helicopter-large",
+      "motion": "blue-response+rotor+aviation-lights",
+      "dimensions": {
+        "width": 292,
+        "height": 98
+      },
+      "frames": 18,
+      "changed_frames": 17,
+      "cycle_ms": 1260,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,1,2,0,2,1,2,1,2,0,1,2,1,2,0,2,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "aerial",
+        "class": "aerial-separated",
+        "opacity": 46,
+        "blur_radius": 2.55,
+        "visible_pixels": 1107,
+        "half_zoom_visible_pixels": 320
+      },
+      "strong_rotor_underlay_pixels": 117,
+      "strong_rotor_underlay_limit": 429,
+      "helicopter_tail_margin_pixels": 9,
+      "helicopter_complete_tail_upper_pixels": 582,
+      "half_zoom_visible_pixels": 2440,
+      "edge_contrast": {
+        "light": 73.44,
+        "dark": 58.54,
+        "satellite": 43.46,
+        "grayscale": 45.53
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 67,
+      "id": "4x4-vehicle",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 73,
+        "height": 38
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1271,
+      "flash_phase": 4,
+      "flash_activity_signature": "0,2,1,2,0,2,1,1,2,1,2,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 232,
+        "half_zoom_visible_pixels": 76
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 402,
+      "edge_contrast": {
+        "light": 102.53,
+        "dark": 35.29,
+        "satellite": 31.34,
+        "grayscale": 58.84
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 68,
+      "id": "inland-rescue-boat-trailer",
+      "motion": "marker-light",
+      "dimensions": {
+        "width": 106,
+        "height": 45
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1211,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "trailer",
+        "opacity": 82,
+        "blur_radius": 0.82,
+        "visible_pixels": 466,
+        "half_zoom_visible_pixels": 135
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 563,
+      "edge_contrast": {
+        "light": 72.1,
+        "dark": 65.58,
+        "satellite": 49.53,
+        "grayscale": 42.59
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 69,
+      "id": "ilb",
+      "motion": "navigation-and-wake",
+      "dimensions": {
+        "width": 111,
+        "height": 55
+      },
+      "frames": 18,
+      "changed_frames": 17,
+      "cycle_ms": 1188,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "marine",
+        "class": "marine-waterline",
+        "opacity": 58,
+        "blur_radius": 1.2,
+        "visible_pixels": 444,
+        "half_zoom_visible_pixels": 121
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 575,
+      "edge_contrast": {
+        "light": 80.49,
+        "dark": 78.1,
+        "satellite": 53.42,
+        "grayscale": 44.76
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 70,
+      "id": "alb",
+      "motion": "navigation-and-wake",
+      "dimensions": {
+        "width": 169,
+        "height": 84
+      },
+      "frames": 18,
+      "changed_frames": 17,
+      "cycle_ms": 1284,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "marine",
+        "class": "marine-waterline",
+        "opacity": 58,
+        "blur_radius": 1.2,
+        "visible_pixels": 494,
+        "half_zoom_visible_pixels": 172
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1652,
+      "edge_contrast": {
+        "light": 80.72,
+        "dark": 47.57,
+        "satellite": 37.97,
+        "grayscale": 47.41
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 71,
+      "id": "rescue-watercraft-trailer",
+      "motion": "marker-light",
+      "dimensions": {
+        "width": 99,
+        "height": 34
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1241,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "trailer",
+        "opacity": 82,
+        "blur_radius": 0.82,
+        "visible_pixels": 405,
+        "half_zoom_visible_pixels": 126
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 462,
+      "edge_contrast": {
+        "light": 83.12,
+        "dark": 60.97,
+        "satellite": 44.74,
+        "grayscale": 45.91
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 72,
+      "id": "hovercraft-trailer",
+      "motion": "marker-light",
+      "dimensions": {
+        "width": 112,
+        "height": 44
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1244,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "trailer",
+        "opacity": 82,
+        "blur_radius": 0.82,
+        "visible_pixels": 470,
+        "half_zoom_visible_pixels": 144
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 623,
+      "edge_contrast": {
+        "light": 61.26,
+        "dark": 75.8,
+        "satellite": 55.13,
+        "grayscale": 36.81
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 73,
+      "id": "hovercraft-transporter",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 93,
+        "height": 40
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1211,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,1,1,2,1,2,0,2,1,2,0,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 94,
+        "blur_radius": 0.92,
+        "visible_pixels": 292,
+        "half_zoom_visible_pixels": 95
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 511,
+      "edge_contrast": {
+        "light": 85.07,
+        "dark": 69.18,
+        "satellite": 54.54,
+        "grayscale": 49.5
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 74,
+      "id": "light-4x4",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 73,
+        "height": 36
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1229,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,0,2,1,2,0,2,1,1,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 231,
+        "half_zoom_visible_pixels": 75
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 387,
+      "edge_contrast": {
+        "light": 98.92,
+        "dark": 40.86,
+        "satellite": 34.55,
+        "grayscale": 56.38
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 75,
+      "id": "boat-trailer",
+      "motion": "marker-light",
+      "dimensions": {
+        "width": 102,
+        "height": 46
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1262,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "trailer",
+        "opacity": 82,
+        "blur_radius": 0.82,
+        "visible_pixels": 440,
+        "half_zoom_visible_pixels": 131
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 523,
+      "edge_contrast": {
+        "light": 75.58,
+        "dark": 58.99,
+        "satellite": 44.3,
+        "grayscale": 40.61
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 76,
+      "id": "major-foam-tender",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 166,
+        "height": 57
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1196,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,1,2,0,2,1,2,0,2,1,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 739,
+        "half_zoom_visible_pixels": 228
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1714,
+      "edge_contrast": {
+        "light": 77.64,
+        "dark": 56.51,
+        "satellite": 49.46,
+        "grayscale": 53.37
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 77,
+      "id": "riv",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 106,
+        "height": 54
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1217,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,0,2,1,2,0,2,1,1,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 338,
+        "half_zoom_visible_pixels": 109
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 957,
+      "edge_contrast": {
+        "light": 86.69,
+        "dark": 45.95,
+        "satellite": 36.71,
+        "grayscale": 49.7
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 78,
+      "id": "airfield-firefighting-command-vehicle",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 83,
+        "height": 44
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1295,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,0,1,2,1,2,0,2,1,2,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 260,
+        "half_zoom_visible_pixels": 87
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 442,
+      "edge_contrast": {
+        "light": 87.44,
+        "dark": 48.97,
+        "satellite": 38.62,
+        "grayscale": 48.97
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 79,
+      "id": "rescue-stairs",
+      "motion": "amber-beacon+wheel-motion",
+      "dimensions": {
+        "width": 166,
+        "height": 83
+      },
+      "frames": 18,
+      "changed_frames": 17,
+      "cycle_ms": 1298,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 789,
+        "half_zoom_visible_pixels": 247
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 2199,
+      "edge_contrast": {
+        "light": 91.35,
+        "dark": 41.06,
+        "satellite": 34.81,
+        "grayscale": 52.76
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 80,
+      "id": "airfield-operations-vehicle",
+      "motion": "amber-beacon",
+      "dimensions": {
+        "width": 76,
+        "height": 37
+      },
+      "frames": 12,
+      "changed_frames": 6,
+      "cycle_ms": 1283,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 239,
+        "half_zoom_visible_pixels": 76
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 346,
+      "edge_contrast": {
+        "light": 78.45,
+        "dark": 55.85,
+        "satellite": 44.46,
+        "grayscale": 48.61
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 81,
+      "id": "airfield-operations-supervisor",
+      "motion": "amber-beacon",
+      "dimensions": {
+        "width": 81,
+        "height": 46
+      },
+      "frames": 12,
+      "changed_frames": 6,
+      "cycle_ms": 1261,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 262,
+        "half_zoom_visible_pixels": 86
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 436,
+      "edge_contrast": {
+        "light": 87.22,
+        "dark": 51.61,
+        "satellite": 46.0,
+        "grayscale": 51.6
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 82,
+      "id": "medical-equipment-trailer",
+      "motion": "marker-light",
+      "dimensions": {
+        "width": 86,
+        "height": 44
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1284,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "trailer",
+        "opacity": 82,
+        "blur_radius": 0.82,
+        "visible_pixels": 333,
+        "half_zoom_visible_pixels": 103
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 582,
+      "edge_contrast": {
+        "light": 56.86,
+        "dark": 79.81,
+        "satellite": 61.44,
+        "grayscale": 41.93
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 83,
+      "id": "armed-cell-van",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 103,
+        "height": 47
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1258,
+      "flash_phase": 8,
+      "flash_activity_signature": "0,2,1,1,2,1,2,0,2,1,2,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 94,
+        "blur_radius": 0.92,
+        "visible_pixels": 336,
+        "half_zoom_visible_pixels": 110
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 763,
+      "edge_contrast": {
+        "light": 81.37,
+        "dark": 66.99,
+        "satellite": 52.39,
+        "grayscale": 47.45
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 84,
+      "id": "medical-cycle-responder",
+      "motion": "blue-response+wheel-motion",
+      "dimensions": {
+        "width": 62,
+        "height": 40
+      },
+      "frames": 18,
+      "changed_frames": 17,
+      "cycle_ms": 1223,
+      "flash_phase": 4,
+      "flash_activity_signature": "0,0,2,0,1,0,2,0,1,1,0,2,0,2,0,1,0,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 177,
+        "half_zoom_visible_pixels": 57
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 323,
+      "edge_contrast": {
+        "light": 82.44,
+        "dark": 47.39,
+        "satellite": 34.51,
+        "grayscale": 45.8
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 85,
+      "id": "pump-trailer",
+      "motion": "marker-light",
+      "dimensions": {
+        "width": 66,
+        "height": 34
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1244,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "trailer",
+        "opacity": 82,
+        "blur_radius": 0.82,
+        "visible_pixels": 260,
+        "half_zoom_visible_pixels": 78
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 307,
+      "edge_contrast": {
+        "light": 80.53,
+        "dark": 50.86,
+        "satellite": 35.36,
+        "grayscale": 45.47
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 86,
+      "id": "control-van-sar",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 102,
+        "height": 65
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1248,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,1,2,1,2,0,1,2,1,2,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 348,
+        "half_zoom_visible_pixels": 111
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 898,
+      "edge_contrast": {
+        "light": 72.21,
+        "dark": 77.32,
+        "satellite": 63.56,
+        "grayscale": 50.81
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 87,
+      "id": "operational-support-van",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 99,
+        "height": 49
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1218,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,1,1,2,1,2,0,2,1,2,0,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 338,
+        "half_zoom_visible_pixels": 109
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 789,
+      "edge_contrast": {
+        "light": 69.92,
+        "dark": 65.1,
+        "satellite": 48.94,
+        "grayscale": 41.8
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 88,
+      "id": "operational-support-trailer",
+      "motion": "marker-light",
+      "dimensions": {
+        "width": 92,
+        "height": 50
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1248,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "trailer",
+        "opacity": 82,
+        "blur_radius": 0.82,
+        "visible_pixels": 359,
+        "half_zoom_visible_pixels": 111
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 711,
+      "edge_contrast": {
+        "light": 56.45,
+        "dark": 82.53,
+        "satellite": 62.68,
+        "grayscale": 43.01
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 89,
+      "id": "sar-flood-rescue-trailer",
+      "motion": "marker-light",
+      "dimensions": {
+        "width": 96,
+        "height": 45
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1262,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "trailer",
+        "opacity": 82,
+        "blur_radius": 0.82,
+        "visible_pixels": 389,
+        "half_zoom_visible_pixels": 117
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 693,
+      "edge_contrast": {
+        "light": 46.83,
+        "dark": 94.88,
+        "satellite": 72.41,
+        "grayscale": 43.24
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 90,
+      "id": "drone-vehicle-sar-hq",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 89,
+        "height": 53
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1242,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,2,1,2,0,2,1,2,1,2,0,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 293,
+        "half_zoom_visible_pixels": 94
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 573,
+      "edge_contrast": {
+        "light": 84.81,
+        "dark": 60.09,
+        "satellite": 51.94,
+        "grayscale": 53.39
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 91,
+      "id": "drone-vehicle-fire-station",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 93,
+        "height": 56
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1236,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,1,2,0,2,1,2,1,2,0,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 94,
+        "blur_radius": 0.92,
+        "visible_pixels": 292,
+        "half_zoom_visible_pixels": 96
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 595,
+      "edge_contrast": {
+        "light": 85.26,
+        "dark": 69.82,
+        "satellite": 53.88,
+        "grayscale": 53.14
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 92,
+      "id": "drone-vehicle-police-station",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 89,
+        "height": 55
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1249,
+      "flash_phase": 10,
+      "flash_activity_signature": "0,1,2,0,2,1,2,1,2,0,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 296,
+        "half_zoom_visible_pixels": 98
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 591,
+      "edge_contrast": {
+        "light": 80.79,
+        "dark": 68.79,
+        "satellite": 57.36,
+        "grayscale": 52.37
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 93,
+      "id": "personal-sar-vehicle",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 70,
+        "height": 33
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1275,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,2,0,2,1,1,2,1,2,0,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 217,
+        "half_zoom_visible_pixels": 55
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 321,
+      "edge_contrast": {
+        "light": 85.46,
+        "dark": 63.02,
+        "satellite": 51.74,
+        "grayscale": 54.9
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 94,
+      "id": "sar-4x4",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 76,
+        "height": 45
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1205,
+      "flash_phase": 3,
+      "flash_activity_signature": "0,0,2,1,2,0,2,1,1,2,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 237,
+        "half_zoom_visible_pixels": 76
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 491,
+      "edge_contrast": {
+        "light": 87.32,
+        "dark": 54.84,
+        "satellite": 46.93,
+        "grayscale": 56.45
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 95,
+      "id": "rrv-2",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 72,
+        "height": 32
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1212,
+      "flash_phase": 5,
+      "flash_activity_signature": "0,1,2,0,2,1,1,2,1,2,0,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 198,
+        "half_zoom_visible_pixels": 59
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 308,
+      "edge_contrast": {
+        "light": 68.27,
+        "dark": 74.42,
+        "satellite": 57.43,
+        "grayscale": 48.44
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 96,
+      "id": "community-midwife",
+      "motion": "static",
+      "dimensions": {
+        "width": 69,
+        "height": 31
+      },
+      "frames": 12,
+      "changed_frames": 0,
+      "cycle_ms": 1202,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 213,
+        "half_zoom_visible_pixels": 74
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 325,
+      "edge_contrast": {
+        "light": 61.06,
+        "dark": 83.69,
+        "satellite": 63.13,
+        "grayscale": 43.75
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 97,
+      "id": "specialist-paramedic-rrv",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 73,
+        "height": 33
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1275,
+      "flash_phase": 8,
+      "flash_activity_signature": "0,2,1,1,2,1,2,0,2,1,2,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 234,
+        "half_zoom_visible_pixels": 61
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 329,
+      "edge_contrast": {
+        "light": 83.26,
+        "dark": 61.83,
+        "satellite": 48.34,
+        "grayscale": 52.8
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 98,
+      "id": "patient-transport-service-ambulance",
+      "motion": "static",
+      "dimensions": {
+        "width": 96,
+        "height": 44
+      },
+      "frames": 12,
+      "changed_frames": 0,
+      "cycle_ms": 1261,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 333,
+        "half_zoom_visible_pixels": 106
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 729,
+      "edge_contrast": {
+        "light": 55.8,
+        "dark": 87.98,
+        "satellite": 69.44,
+        "grayscale": 46.42
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 99,
+      "id": "critical-care-transfer-ambulance",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 102,
+        "height": 44
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1264,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,2,1,2,3,1,2,1,3,0,3,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 345,
+        "half_zoom_visible_pixels": 109
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 759,
+      "edge_contrast": {
+        "light": 57.83,
+        "dark": 79.72,
+        "satellite": 61.17,
+        "grayscale": 41.26
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 100,
+      "id": "mountain-rescue-4x4",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 77,
+        "height": 45
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1245,
+      "flash_phase": 1,
+      "flash_activity_signature": "0,1,2,0,2,1,2,0,2,1,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 94,
+        "blur_radius": 0.92,
+        "visible_pixels": 232,
+        "half_zoom_visible_pixels": 75
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 453,
+      "edge_contrast": {
+        "light": 87.37,
+        "dark": 71.3,
+        "satellite": 50.72,
+        "grayscale": 49.27
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 101,
+      "id": "control-van-mountain-rescue",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 99,
+        "height": 61
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1200,
+      "flash_phase": 1,
+      "flash_activity_signature": "0,0,2,1,2,1,2,0,1,2,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 335,
+        "half_zoom_visible_pixels": 107
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 730,
+      "edge_contrast": {
+        "light": 84.65,
+        "dark": 47.89,
+        "satellite": 36.48,
+        "grayscale": 45.58
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 102,
+      "id": "search-dog-unit",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 83,
+        "height": 40
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1211,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,0,2,1,1,2,1,2,0,2,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 265,
+        "half_zoom_visible_pixels": 86
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 505,
+      "edge_contrast": {
+        "light": 94.84,
+        "dark": 44.68,
+        "satellite": 39.23,
+        "grayscale": 53.71
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 103,
+      "id": "search-dog-unit-sar",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 83,
+        "height": 41
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1265,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,0,2,1,1,2,1,2,0,2,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 265,
+        "half_zoom_visible_pixels": 85
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 516,
+      "edge_contrast": {
+        "light": 86.09,
+        "dark": 64.68,
+        "satellite": 53.53,
+        "grayscale": 54.91
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 104,
+      "id": "crew-carrier-sar",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 99,
+        "height": 41
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1249,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,1,2,0,2,1,2,0,2,1,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 335,
+        "half_zoom_visible_pixels": 107
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 681,
+      "edge_contrast": {
+        "light": 65.79,
+        "dark": 70.85,
+        "satellite": 50.15,
+        "grayscale": 39.44
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 105,
+      "id": "recovery-vehicle",
+      "motion": "amber-beacon+wheel-motion",
+      "dimensions": {
+        "width": 99,
+        "height": 45
+      },
+      "frames": 18,
+      "changed_frames": 16,
+      "cycle_ms": 1267,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 327,
+        "half_zoom_visible_pixels": 105
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 583,
+      "edge_contrast": {
+        "light": 78.1,
+        "dark": 66.14,
+        "satellite": 53.29,
+        "grayscale": 49.13
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 106,
+      "id": "flatbed-recovery-vehicle",
+      "motion": "amber-beacon+wheel-motion",
+      "dimensions": {
+        "width": 118,
+        "height": 50
+      },
+      "frames": 18,
+      "changed_frames": 17,
+      "cycle_ms": 1213,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 572,
+        "half_zoom_visible_pixels": 163
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 696,
+      "edge_contrast": {
+        "light": 75.27,
+        "dark": 57.84,
+        "satellite": 48.23,
+        "grayscale": 45.84
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 107,
+      "id": "hgv-recovery-vehicle",
+      "motion": "amber-beacon+wheel-motion",
+      "dimensions": {
+        "width": 138,
+        "height": 57
+      },
+      "frames": 18,
+      "changed_frames": 17,
+      "cycle_ms": 1248,
+      "flash_phase": null,
+      "flash_activity_signature": null,
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 617,
+        "half_zoom_visible_pixels": 179
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1392,
+      "edge_contrast": {
+        "light": 73.84,
+        "dark": 67.12,
+        "satellite": 53.6,
+        "grayscale": 48.94
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 108,
+      "id": "rru",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 118,
+        "height": 50
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1208,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,0,3,1,2,1,2,3,1,2,1,3",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 108,
+        "blur_radius": 1.12,
+        "visible_pixels": 576,
+        "half_zoom_visible_pixels": 163
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 968,
+      "edge_contrast": {
+        "light": 91.52,
+        "dark": 34.82,
+        "satellite": 32.98,
+        "grayscale": 52.4
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 109,
+      "id": "eiu",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 80,
+        "height": 34
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1268,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,0,2,1,2,0,2,1,1,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 259,
+        "half_zoom_visible_pixels": 83
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 413,
+      "edge_contrast": {
+        "light": 72.56,
+        "dark": 66.93,
+        "satellite": 52.82,
+        "grayscale": 48.0
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 110,
+      "id": "eod-commander",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 84,
+        "height": 50
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1207,
+      "flash_phase": 7,
+      "flash_activity_signature": "0,0,1,2,1,2,0,2,1,2,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 94,
+        "blur_radius": 0.92,
+        "visible_pixels": 256,
+        "half_zoom_visible_pixels": 82
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 491,
+      "edge_contrast": {
+        "light": 80.47,
+        "dark": 74.67,
+        "satellite": 57.85,
+        "grayscale": 51.16
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 111,
+      "id": "eod-response-vehicle",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 92,
+        "height": 50
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1210,
+      "flash_phase": 1,
+      "flash_activity_signature": "0,1,2,0,2,1,2,0,2,1,1,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 305,
+        "half_zoom_visible_pixels": 97
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 711,
+      "edge_contrast": {
+        "light": 91.74,
+        "dark": 49.79,
+        "satellite": 42.83,
+        "grayscale": 52.77
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 112,
+      "id": "eod-medium-equipment-van",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 103,
+        "height": 55
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1206,
+      "flash_phase": 9,
+      "flash_activity_signature": "0,1,1,2,1,2,0,2,1,2,0,2",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 94,
+        "blur_radius": 0.92,
+        "visible_pixels": 341,
+        "half_zoom_visible_pixels": 113
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 880,
+      "edge_contrast": {
+        "light": 77.09,
+        "dark": 69.15,
+        "satellite": 54.25,
+        "grayscale": 47.55
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 113,
+      "id": "eod-heavy-equipment-vehicle",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 142,
+        "height": 58
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1275,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,3,0,2,1,2,1,1,2,1,2,0",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "heavy-ground",
+        "opacity": 120,
+        "blur_radius": 1.12,
+        "visible_pixels": 649,
+        "half_zoom_visible_pixels": 189
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 1252,
+      "edge_contrast": {
+        "light": 80.49,
+        "dark": 56.98,
+        "satellite": 50.27,
+        "grayscale": 52.55
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 114,
+      "id": "marine-eod-response-vehicle",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 86,
+        "height": 41
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1240,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,1,2,0,2,1,2,0,2,1,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 275,
+        "half_zoom_visible_pixels": 86
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 522,
+      "edge_contrast": {
+        "light": 104.73,
+        "dark": 42.89,
+        "satellite": 41.51,
+        "grayscale": 59.33
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 115,
+      "id": "marine-eod-equipment-van",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 99,
+        "height": 47
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1237,
+      "flash_phase": 2,
+      "flash_activity_signature": "0,2,0,2,1,2,0,2,1,1,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": true,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 336,
+        "half_zoom_visible_pixels": 110
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 769,
+      "edge_contrast": {
+        "light": 88.64,
+        "dark": 50.19,
+        "satellite": 39.86,
+        "grayscale": 49.29
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 116,
+      "id": "welfare-vehicle-2",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 99,
+        "height": 48
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1283,
+      "flash_phase": 6,
+      "flash_activity_signature": "0,2,0,2,1,1,2,1,2,0,2,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 338,
+        "half_zoom_visible_pixels": 108
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 746,
+      "edge_contrast": {
+        "light": 70.05,
+        "dark": 73.5,
+        "satellite": 58.27,
+        "grayscale": 48.11
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 117,
+      "id": "cell-van",
+      "motion": "blue-response",
+      "dimensions": {
+        "width": 96,
+        "height": 46
+      },
+      "frames": 12,
+      "changed_frames": 11,
+      "cycle_ms": 1214,
+      "flash_phase": 0,
+      "flash_activity_signature": "0,2,1,2,0,2,1,2,0,2,1,1",
+      "specialist_equipment_cue": null,
+      "specialist_equipment_half_zoom_added_alpha_pixels": 0,
+      "retired_generated_overlay": false,
+      "retired_overlay_top_padding_pixels": 0,
+      "grounding_shadow": {
+        "mode": "ground",
+        "class": "light-ground",
+        "opacity": 82,
+        "blur_radius": 0.92,
+        "visible_pixels": 328,
+        "half_zoom_visible_pixels": 106
+      },
+      "strong_rotor_underlay_pixels": null,
+      "strong_rotor_underlay_limit": null,
+      "helicopter_tail_margin_pixels": null,
+      "helicopter_complete_tail_upper_pixels": null,
+      "half_zoom_visible_pixels": 737,
+      "edge_contrast": {
+        "light": 56.45,
+        "dark": 77.22,
+        "satellite": 59.09,
+        "grayscale": 41.8
+      },
+      "passed": true,
+      "errors": []
+    }
+  ],
+  "all_passed": true
+}

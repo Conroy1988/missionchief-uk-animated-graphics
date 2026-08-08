@@ -1,0 +1,1212 @@
+{
+  "release": "v1.4.0",
+  "masters": 40,
+  "legacy_masters": 20,
+  "redraw_masters": 18,
+  "marine_masters": 2,
+  "all_redraws_preserve_anchor_silhouettes": true,
+  "protected_service_marks_added": false,
+  "vehicles": [
+    {
+      "slot": 1,
+      "id": "fire-rescue-pump",
+      "family": "redraw",
+      "cue": "pump-compartment-pass",
+      "service": "fire",
+      "source": "assets/exports/standard/static/fire-rescue-pump.png",
+      "target": "assets/masters/v1.4.0/fire-rescue-pump.png",
+      "original_dimensions": {
+        "width": 110,
+        "height": 41
+      },
+      "master_dimensions": {
+        "width": 110,
+        "height": 41
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 466,
+      "alpha_silhouette_preserved": true,
+      "sha256": "e7568206444e2b2492e3cfe84516e0ef54d08b2c8400260dbbf3abf24dd7fc35"
+    },
+    {
+      "slot": 5,
+      "id": "rescue-support-unit",
+      "family": "redraw",
+      "cue": "support-compartment-pass",
+      "service": "fire",
+      "source": "assets/exports/standard/static/rescue-support-unit.png",
+      "target": "assets/masters/v1.4.0/rescue-support-unit.png",
+      "original_dimensions": {
+        "width": 114,
+        "height": 40
+      },
+      "master_dimensions": {
+        "width": 114,
+        "height": 40
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 482,
+      "alpha_silhouette_preserved": true,
+      "sha256": "831450649aa355dab2befa169095f3f9f361e7a598326f136910f75d89421ed0"
+    },
+    {
+      "slot": 7,
+      "id": "water-carrier",
+      "family": "redraw",
+      "cue": "tanker-panel-pass",
+      "service": "fire",
+      "source": "assets/exports/standard/static/water-carrier.png",
+      "target": "assets/masters/v1.4.0/water-carrier.png",
+      "original_dimensions": {
+        "width": 124,
+        "height": 42
+      },
+      "master_dimensions": {
+        "width": 124,
+        "height": 42
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 569,
+      "alpha_silhouette_preserved": true,
+      "sha256": "8e6401749a19b8d66e3405be23986aa19e05063bbff299bb9c327cf761b1bde3"
+    },
+    {
+      "slot": 8,
+      "id": "hazmat-unit",
+      "family": "redraw",
+      "cue": "hazmat-compartment-pass",
+      "service": "fire",
+      "source": "assets/exports/standard/static/hazmat-unit.png",
+      "target": "assets/masters/v1.4.0/hazmat-unit.png",
+      "original_dimensions": {
+        "width": 114,
+        "height": 41
+      },
+      "master_dimensions": {
+        "width": 114,
+        "height": 41
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 469,
+      "alpha_silhouette_preserved": true,
+      "sha256": "8b997624733bf97afb47b52c4019f0d9d1a3c0d671ee837e9f5a914f738a8493"
+    },
+    {
+      "slot": 9,
+      "id": "police-incident-response-vehicle",
+      "family": "role",
+      "cue": "irv-anpr-array",
+      "service": "police",
+      "source": "assets/exports/standard/static/police-incident-response-vehicle.png",
+      "target": "assets/masters/v1.3.0/police-incident-response-vehicle.png",
+      "original_dimensions": {
+        "width": 64,
+        "height": 21
+      },
+      "master_dimensions": {
+        "width": 64,
+        "height": 24
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8695652173913043,
+        "y_offset": 0.13043478260869565
+      },
+      "half_zoom_added_alpha_pixels": 16,
+      "sha256": "4700fad93d1644165afb09d6e2c7b2a70795411228a19471b9e70131d882430f"
+    },
+    {
+      "slot": 11,
+      "id": "rapid-response-vehicle",
+      "family": "role",
+      "cue": "compact-medical-pod",
+      "service": "ambulance",
+      "source": "assets/exports/standard/static/rapid-response-vehicle.png",
+      "target": "assets/masters/v1.3.0/rapid-response-vehicle.png",
+      "original_dimensions": {
+        "width": 64,
+        "height": 22
+      },
+      "master_dimensions": {
+        "width": 64,
+        "height": 24
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 2
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9130434782608695,
+        "y_offset": 0.08695652173913043
+      },
+      "half_zoom_added_alpha_pixels": 9,
+      "sha256": "06a5cc94af7580960bae0b1db05b8fe0336cca78ae1cc565e1884a710af4c749"
+    },
+    {
+      "slot": 14,
+      "id": "armed-response-vehicle",
+      "family": "role",
+      "cue": "arv-equipment-locker",
+      "service": "police",
+      "source": "assets/exports/standard/static/armed-response-vehicle.png",
+      "target": "assets/masters/v1.3.0/armed-response-vehicle.png",
+      "original_dimensions": {
+        "width": 66,
+        "height": 25
+      },
+      "master_dimensions": {
+        "width": 66,
+        "height": 28
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8888888888888888,
+        "y_offset": 0.1111111111111111
+      },
+      "half_zoom_added_alpha_pixels": 15,
+      "sha256": "f44a3d5e1e79d7e02fdb84a3bc69988d8746a0acf90cf5d4e907c17b597899ec"
+    },
+    {
+      "slot": 15,
+      "id": "breathing-apparatus-support-unit",
+      "family": "redraw",
+      "cue": "ba-cylinder-pass",
+      "service": "fire",
+      "source": "assets/exports/standard/static/breathing-apparatus-support-unit.png",
+      "target": "assets/masters/v1.4.0/breathing-apparatus-support-unit.png",
+      "original_dimensions": {
+        "width": 112,
+        "height": 39
+      },
+      "master_dimensions": {
+        "width": 112,
+        "height": 39
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 528,
+      "alpha_silhouette_preserved": true,
+      "sha256": "ab010576818d63e7ed73fd377b7504b4657809ea4a5f7894728cd978002a49e9"
+    },
+    {
+      "slot": 16,
+      "id": "incident-command-control-unit",
+      "family": "redraw",
+      "cue": "command-body-panel-pass",
+      "service": "fire",
+      "source": "assets/exports/standard/static/incident-command-control-unit.png",
+      "target": "assets/masters/v1.4.0/incident-command-control-unit.png",
+      "original_dimensions": {
+        "width": 136,
+        "height": 51
+      },
+      "master_dimensions": {
+        "width": 136,
+        "height": 51
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 812,
+      "alpha_silhouette_preserved": true,
+      "sha256": "d4d32dc374fd001f6f4f1832ea7d8f89c94c0ff6216e5a65c25d55aa65159491"
+    },
+    {
+      "slot": 17,
+      "id": "rescue-pump",
+      "family": "redraw",
+      "cue": "rescue-tool-pass",
+      "service": "fire",
+      "source": "assets/exports/standard/static/rescue-pump.png",
+      "target": "assets/masters/v1.4.0/rescue-pump.png",
+      "original_dimensions": {
+        "width": 112,
+        "height": 43
+      },
+      "master_dimensions": {
+        "width": 112,
+        "height": 43
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 451,
+      "alpha_silhouette_preserved": true,
+      "sha256": "651e255e8a4a7a3c832bf38502ff6415499c219debb4b7b03a184b0139757849"
+    },
+    {
+      "slot": 20,
+      "id": "joint-response-unit",
+      "family": "role",
+      "cue": "dual-service-command-pod",
+      "service": "multi-service",
+      "source": "assets/exports/standard/static/joint-response-unit.png",
+      "target": "assets/masters/v1.3.0/joint-response-unit.png",
+      "original_dimensions": {
+        "width": 64,
+        "height": 21
+      },
+      "master_dimensions": {
+        "width": 64,
+        "height": 24
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8695652173913043,
+        "y_offset": 0.13043478260869565
+      },
+      "half_zoom_added_alpha_pixels": 32,
+      "sha256": "6b9dbd81b1f031506316402d371c4d4e2019cdd17434b612cecd9c6db981f3ad"
+    },
+    {
+      "slot": 21,
+      "id": "otl",
+      "family": "role",
+      "cue": "otl-command-mast",
+      "service": "ambulance",
+      "source": "assets/exports/standard/static/otl.png",
+      "target": "assets/masters/v1.3.0/otl.png",
+      "original_dimensions": {
+        "width": 65,
+        "height": 27
+      },
+      "master_dimensions": {
+        "width": 65,
+        "height": 31
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 4
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8666666666666667,
+        "y_offset": 0.13333333333333333
+      },
+      "half_zoom_added_alpha_pixels": 21,
+      "sha256": "7bb395331c7e86a8a540a3e83c2e000e2a0e3bb449f0a900fe312794aa165072"
+    },
+    {
+      "slot": 23,
+      "id": "community-first-responder",
+      "family": "role",
+      "cue": "cfr-medical-beacon",
+      "service": "ambulance",
+      "source": "assets/exports/standard/static/community-first-responder.png",
+      "target": "assets/masters/v1.3.0/community-first-responder.png",
+      "original_dimensions": {
+        "width": 57,
+        "height": 22
+      },
+      "master_dimensions": {
+        "width": 57,
+        "height": 25
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.875,
+        "y_offset": 0.125
+      },
+      "half_zoom_added_alpha_pixels": 8,
+      "sha256": "19ddf8402c405f3ba689aa484b333d4f2053e5d300f66c28c2f8f07598a53508"
+    },
+    {
+      "slot": 26,
+      "id": "armed-traffic-car",
+      "family": "role",
+      "cue": "traffic-anpr-pods",
+      "service": "police",
+      "source": "assets/exports/standard/static/armed-traffic-car.png",
+      "target": "assets/masters/v1.3.0/armed-traffic-car.png",
+      "original_dimensions": {
+        "width": 66,
+        "height": 25
+      },
+      "master_dimensions": {
+        "width": 66,
+        "height": 28
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8888888888888888,
+        "y_offset": 0.1111111111111111
+      },
+      "half_zoom_added_alpha_pixels": 16,
+      "sha256": "3c7ca54e47fa5d1ddb13877147693383be590872f6153484e309fd24c0084c32"
+    },
+    {
+      "slot": 27,
+      "id": "heavy-4x4-tanker",
+      "family": "redraw",
+      "cue": "heavy-tanker-pass",
+      "service": "fire",
+      "source": "assets/exports/standard/static/heavy-4x4-tanker.png",
+      "target": "assets/masters/v1.4.0/heavy-4x4-tanker.png",
+      "original_dimensions": {
+        "width": 126,
+        "height": 55
+      },
+      "master_dimensions": {
+        "width": 126,
+        "height": 55
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 769,
+      "alpha_silhouette_preserved": true,
+      "sha256": "65475b426fcedfc11ec7f262d26ae293530e5e3737cb36acc3fa9f3ad53f4048"
+    },
+    {
+      "slot": 33,
+      "id": "cbrn-vehicle",
+      "family": "equipment",
+      "cue": "hazmat-detection-rack",
+      "service": "ambulance",
+      "source": "assets/exports/standard/static/cbrn-vehicle.png",
+      "target": "assets/masters/v1.3.0/cbrn-vehicle.png",
+      "original_dimensions": {
+        "width": 88,
+        "height": 45
+      },
+      "master_dimensions": {
+        "width": 88,
+        "height": 49
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 4
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9166666666666666,
+        "y_offset": 0.08333333333333333
+      },
+      "half_zoom_added_alpha_pixels": 82,
+      "sha256": "8eb589dd98592e89e8b36ac45866bd7dbfaf899c893dceb189ab6bab006de4cf"
+    },
+    {
+      "slot": 36,
+      "id": "bfu",
+      "family": "redraw",
+      "cue": "foam-and-manifold-pass",
+      "service": "fire",
+      "source": "assets/exports/standard/static/bfu.png",
+      "target": "assets/masters/v1.4.0/bfu.png",
+      "original_dimensions": {
+        "width": 114,
+        "height": 57
+      },
+      "master_dimensions": {
+        "width": 114,
+        "height": 57
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 668,
+      "alpha_silhouette_preserved": true,
+      "sha256": "475d63339ad28081ef0020f63d915c5e696a7755b5440c2dd44d632e2db98f43"
+    },
+    {
+      "slot": 37,
+      "id": "f-wrc",
+      "family": "redraw",
+      "cue": "wildfire-tanker-pass",
+      "service": "fire",
+      "source": "assets/exports/standard/static/f-wrc.png",
+      "target": "assets/masters/v1.4.0/f-wrc.png",
+      "original_dimensions": {
+        "width": 124,
+        "height": 48
+      },
+      "master_dimensions": {
+        "width": 124,
+        "height": 48
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 691,
+      "alpha_silhouette_preserved": true,
+      "sha256": "85b7d963bbab7dd7f1f5a2a399bca1e0058526cb03d4e2484bd3c9297c2a1f30"
+    },
+    {
+      "slot": 40,
+      "id": "osu",
+      "family": "redraw",
+      "cue": "operations-locker-pass",
+      "service": "fire",
+      "source": "assets/exports/standard/static/osu.png",
+      "target": "assets/masters/v1.4.0/osu.png",
+      "original_dimensions": {
+        "width": 121,
+        "height": 43
+      },
+      "master_dimensions": {
+        "width": 121,
+        "height": 43
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 652,
+      "alpha_silhouette_preserved": true,
+      "sha256": "9755f50160a906465f3dc5e26bfc19f27db333faf2972d7f43c1c67616c00751"
+    },
+    {
+      "slot": 53,
+      "id": "firearms-personnel-carrier",
+      "family": "redraw",
+      "cue": "tactical-carrier-pass",
+      "service": "police",
+      "source": "assets/exports/standard/static/firearms-personnel-carrier.png",
+      "target": "assets/masters/v1.4.0/firearms-personnel-carrier.png",
+      "original_dimensions": {
+        "width": 94,
+        "height": 36
+      },
+      "master_dimensions": {
+        "width": 94,
+        "height": 36
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 258,
+      "alpha_silhouette_preserved": true,
+      "sha256": "41fe7958762e5b73bf422df4f9c39addcb9b699cdf62d2f4fe4d02ce70e29b87"
+    },
+    {
+      "slot": 68,
+      "id": "inland-rescue-boat-trailer",
+      "family": "redraw",
+      "cue": "boat-trailer-structure-pass",
+      "service": "coastguard",
+      "source": "assets/exports/standard/static/inland-rescue-boat-trailer.png",
+      "target": "assets/masters/v1.4.0/inland-rescue-boat-trailer.png",
+      "original_dimensions": {
+        "width": 98,
+        "height": 37
+      },
+      "master_dimensions": {
+        "width": 98,
+        "height": 37
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 373,
+      "alpha_silhouette_preserved": true,
+      "sha256": "e0e28664a4f6dfb27fb0250207c75a26eb313f7f7b793755927edd420ea5a16e"
+    },
+    {
+      "slot": 69,
+      "id": "ilb",
+      "family": "marine",
+      "cue": "atlantic-inshore-detail-pass",
+      "service": "lifeboat",
+      "source": "assets/exports/standard/static/ilb.png",
+      "target": "assets/masters/v1.4.0/ilb.png",
+      "original_dimensions": {
+        "width": 99,
+        "height": 43
+      },
+      "master_dimensions": {
+        "width": 99,
+        "height": 43
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 356,
+      "alpha_silhouette_preserved": true,
+      "sha256": "e8cb02f78d5526457e313425f7e66a4244e7532d85dd3e7b6a8a0a93344aca63"
+    },
+    {
+      "slot": 70,
+      "id": "alb",
+      "family": "marine",
+      "cue": "all-weather-lifeboat-detail-pass",
+      "service": "lifeboat",
+      "source": "assets/exports/standard/static/alb.png",
+      "target": "assets/masters/v1.4.0/alb.png",
+      "original_dimensions": {
+        "width": 214,
+        "height": 100
+      },
+      "master_dimensions": {
+        "width": 214,
+        "height": 100
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 1451,
+      "alpha_silhouette_preserved": true,
+      "sha256": "3e6708dacd1eacbe7c4958153634f5b153f64d19c10779222a61cbff11f0954c"
+    },
+    {
+      "slot": 72,
+      "id": "hovercraft-trailer",
+      "family": "redraw",
+      "cue": "hovercraft-structure-pass",
+      "service": "lifeboat",
+      "source": "assets/exports/standard/static/hovercraft-trailer.png",
+      "target": "assets/masters/v1.4.0/hovercraft-trailer.png",
+      "original_dimensions": {
+        "width": 104,
+        "height": 36
+      },
+      "master_dimensions": {
+        "width": 104,
+        "height": 36
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 445,
+      "alpha_silhouette_preserved": true,
+      "sha256": "88cadfa2f7346123a625a26826a1bf53bf20d72c2faca763db3cd538af110f16"
+    },
+    {
+      "slot": 76,
+      "id": "major-foam-tender",
+      "family": "redraw",
+      "cue": "airport-foam-tender-pass",
+      "service": "fire",
+      "source": "assets/exports/standard/static/major-foam-tender.png",
+      "target": "assets/masters/v1.4.0/major-foam-tender.png",
+      "original_dimensions": {
+        "width": 156,
+        "height": 47
+      },
+      "master_dimensions": {
+        "width": 156,
+        "height": 47
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 760,
+      "alpha_silhouette_preserved": true,
+      "sha256": "0bf16084118bb7a5ae810ec4d58e31dd411f184a3fd1132b52e3e660357961f9"
+    },
+    {
+      "slot": 77,
+      "id": "riv",
+      "family": "redraw",
+      "cue": "rapid-intervention-pass",
+      "service": "fire",
+      "source": "assets/exports/standard/static/riv.png",
+      "target": "assets/masters/v1.4.0/riv.png",
+      "original_dimensions": {
+        "width": 98,
+        "height": 46
+      },
+      "master_dimensions": {
+        "width": 98,
+        "height": 46
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 561,
+      "alpha_silhouette_preserved": true,
+      "sha256": "70b6e4507577f8d580550e1664b706edb36ccd0829a5405e20084f7b85757042"
+    },
+    {
+      "slot": 86,
+      "id": "control-van-sar",
+      "family": "equipment",
+      "cue": "command-mast-dish",
+      "service": "search-and-rescue",
+      "source": "assets/exports/standard/static/control-van-sar.png",
+      "target": "assets/masters/v1.3.0/control-van-sar.png",
+      "original_dimensions": {
+        "width": 94,
+        "height": 56
+      },
+      "master_dimensions": {
+        "width": 94,
+        "height": 57
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 1
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9821428571428571,
+        "y_offset": 0.017857142857142856
+      },
+      "half_zoom_added_alpha_pixels": 72,
+      "sha256": "5409a052af9ca3f8138ce416e07453709526330c7acb84988dbcd910b2bab61d"
+    },
+    {
+      "slot": 90,
+      "id": "drone-vehicle-sar-hq",
+      "family": "equipment",
+      "cue": "drone-launch-cradle",
+      "service": "search-and-rescue",
+      "source": "assets/exports/standard/static/drone-vehicle-sar-hq.png",
+      "target": "assets/masters/v1.3.0/drone-vehicle-sar-hq.png",
+      "original_dimensions": {
+        "width": 81,
+        "height": 44
+      },
+      "master_dimensions": {
+        "width": 81,
+        "height": 45
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 1
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9772727272727273,
+        "y_offset": 0.022727272727272728
+      },
+      "half_zoom_added_alpha_pixels": 36,
+      "sha256": "013af5247a66c4ccd9673bf459f3bd192113ba6fd0ff9a61d8f3228c1308ad02"
+    },
+    {
+      "slot": 91,
+      "id": "drone-vehicle-fire-station",
+      "family": "equipment",
+      "cue": "drone-launch-cradle",
+      "service": "fire",
+      "source": "assets/exports/standard/static/drone-vehicle-fire-station.png",
+      "target": "assets/masters/v1.3.0/drone-vehicle-fire-station.png",
+      "original_dimensions": {
+        "width": 81,
+        "height": 43
+      },
+      "master_dimensions": {
+        "width": 81,
+        "height": 44
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 1
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9767441860465116,
+        "y_offset": 0.023255813953488372
+      },
+      "half_zoom_added_alpha_pixels": 37,
+      "sha256": "240678d3d5748d2eef65032e0d7c94c479b1b44584fa7f69d76d5cc601543a13"
+    },
+    {
+      "slot": 92,
+      "id": "drone-vehicle-police-station",
+      "family": "equipment",
+      "cue": "drone-launch-cradle",
+      "service": "police",
+      "source": "assets/exports/standard/static/drone-vehicle-police-station.png",
+      "target": "assets/masters/v1.3.0/drone-vehicle-police-station.png",
+      "original_dimensions": {
+        "width": 81,
+        "height": 46
+      },
+      "master_dimensions": {
+        "width": 81,
+        "height": 47
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 1
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9782608695652174,
+        "y_offset": 0.021739130434782608
+      },
+      "half_zoom_added_alpha_pixels": 38,
+      "sha256": "7b401cc4b4027b5ae4ad3b6a8b474c6be7db6febbee8bdf168ca53f022b0deb6"
+    },
+    {
+      "slot": 95,
+      "id": "rrv-2",
+      "family": "role",
+      "cue": "rrv-aerial-pair",
+      "service": "ambulance",
+      "source": "assets/exports/standard/static/rrv-2.png",
+      "target": "assets/masters/v1.3.0/rrv-2.png",
+      "original_dimensions": {
+        "width": 64,
+        "height": 21
+      },
+      "master_dimensions": {
+        "width": 64,
+        "height": 24
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8695652173913043,
+        "y_offset": 0.13043478260869565
+      },
+      "half_zoom_added_alpha_pixels": 14,
+      "sha256": "4e945ce2880fd44f481c410d214d3d80313665adf6fea43d30dc88e4c7eda6db"
+    },
+    {
+      "slot": 97,
+      "id": "specialist-paramedic-rrv",
+      "family": "role",
+      "cue": "specialist-medical-module",
+      "service": "ambulance",
+      "source": "assets/exports/standard/static/specialist-paramedic-rrv.png",
+      "target": "assets/masters/v1.3.0/specialist-paramedic-rrv.png",
+      "original_dimensions": {
+        "width": 65,
+        "height": 23
+      },
+      "master_dimensions": {
+        "width": 65,
+        "height": 25
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 2
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9166666666666666,
+        "y_offset": 0.08333333333333333
+      },
+      "half_zoom_added_alpha_pixels": 18,
+      "sha256": "49be82c0ee1f4f8b19040b7a6c6a77b999cf65224566e05be3633f879c11333a"
+    },
+    {
+      "slot": 99,
+      "id": "critical-care-transfer-ambulance",
+      "family": "redraw",
+      "cue": "critical-care-pass",
+      "service": "ambulance",
+      "source": "assets/exports/standard/static/critical-care-transfer-ambulance.png",
+      "target": "assets/masters/v1.4.0/critical-care-transfer-ambulance.png",
+      "original_dimensions": {
+        "width": 94,
+        "height": 36
+      },
+      "master_dimensions": {
+        "width": 94,
+        "height": 36
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 431,
+      "alpha_silhouette_preserved": true,
+      "sha256": "6ff85bc7fbd15476d71fe6527ed4dd468c3264938039637e333b9fcaa458ec12"
+    },
+    {
+      "slot": 101,
+      "id": "control-van-mountain-rescue",
+      "family": "redraw",
+      "cue": "mountain-command-pass",
+      "service": "search-and-rescue",
+      "source": "assets/exports/standard/static/control-van-mountain-rescue.png",
+      "target": "assets/masters/v1.4.0/control-van-mountain-rescue.png",
+      "original_dimensions": {
+        "width": 91,
+        "height": 53
+      },
+      "master_dimensions": {
+        "width": 91,
+        "height": 53
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 1.0,
+        "y_offset": 0.0
+      },
+      "half_zoom_added_alpha_pixels": 0,
+      "half_zoom_changed_pixels": 418,
+      "alpha_silhouette_preserved": true,
+      "sha256": "d7d764dce285079271a92269be79f8973cf8a55c0533345f5d241477e5968328"
+    },
+    {
+      "slot": 110,
+      "id": "eod-commander",
+      "family": "role",
+      "cue": "eod-command-mast",
+      "service": "eod",
+      "source": "assets/exports/standard/static/eod-commander.png",
+      "target": "assets/masters/v1.3.0/eod-commander.png",
+      "original_dimensions": {
+        "width": 72,
+        "height": 37
+      },
+      "master_dimensions": {
+        "width": 72,
+        "height": 38
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 1
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.972972972972973,
+        "y_offset": 0.02702702702702703
+      },
+      "half_zoom_added_alpha_pixels": 33,
+      "sha256": "546340b8051dbc11ed23cb79538301d93f77121b0b39bd870f9a58a71b7fef5e"
+    },
+    {
+      "slot": 111,
+      "id": "eod-response-vehicle",
+      "family": "role",
+      "cue": "eod-response-case",
+      "service": "eod",
+      "source": "assets/exports/standard/static/eod-response-vehicle.png",
+      "target": "assets/masters/v1.3.0/eod-response-vehicle.png",
+      "original_dimensions": {
+        "width": 84,
+        "height": 39
+      },
+      "master_dimensions": {
+        "width": 84,
+        "height": 42
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 3
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.926829268292683,
+        "y_offset": 0.07317073170731707
+      },
+      "half_zoom_added_alpha_pixels": 28,
+      "sha256": "4661bcd64789a6f3d3a53887afdf9a388e624f22441f16e5b98da50b206b49be"
+    },
+    {
+      "slot": 112,
+      "id": "eod-medium-equipment-van",
+      "family": "role",
+      "cue": "eod-twin-canisters",
+      "service": "eod",
+      "source": "assets/exports/standard/static/eod-medium-equipment-van.png",
+      "target": "assets/masters/v1.3.0/eod-medium-equipment-van.png",
+      "original_dimensions": {
+        "width": 91,
+        "height": 41
+      },
+      "master_dimensions": {
+        "width": 91,
+        "height": 43
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 2
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9523809523809523,
+        "y_offset": 0.047619047619047616
+      },
+      "half_zoom_added_alpha_pixels": 30,
+      "sha256": "c5c15a5908c8d5cac40fde1e92e5afc7f769315a16345adafd389f6fe5a06cc3"
+    },
+    {
+      "slot": 113,
+      "id": "eod-heavy-equipment-vehicle",
+      "family": "role",
+      "cue": "eod-robot-cradle",
+      "service": "eod",
+      "source": "assets/exports/standard/static/eod-heavy-equipment-vehicle.png",
+      "target": "assets/masters/v1.3.0/eod-heavy-equipment-vehicle.png",
+      "original_dimensions": {
+        "width": 130,
+        "height": 41
+      },
+      "master_dimensions": {
+        "width": 130,
+        "height": 46
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 5
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.8888888888888888,
+        "y_offset": 0.1111111111111111
+      },
+      "half_zoom_added_alpha_pixels": 51,
+      "sha256": "1f5ab478d7b5513620ff7c1a4f1e9417a6a3320f72e82ee3db635eb1d0bc179c"
+    },
+    {
+      "slot": 114,
+      "id": "marine-eod-response-vehicle",
+      "family": "role",
+      "cue": "marine-eod-tube",
+      "service": "eod",
+      "source": "assets/exports/standard/static/marine-eod-response-vehicle.png",
+      "target": "assets/masters/v1.3.0/marine-eod-response-vehicle.png",
+      "original_dimensions": {
+        "width": 78,
+        "height": 32
+      },
+      "master_dimensions": {
+        "width": 78,
+        "height": 33
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 1
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.96875,
+        "y_offset": 0.03125
+      },
+      "half_zoom_added_alpha_pixels": 25,
+      "sha256": "e7ac4b5f72a7e1632ae25b2edf12611abcfa65b3c6d06a852650ff812e991121"
+    },
+    {
+      "slot": 115,
+      "id": "marine-eod-equipment-van",
+      "family": "role",
+      "cue": "marine-eod-twin-kit",
+      "service": "eod",
+      "source": "assets/exports/standard/static/marine-eod-equipment-van.png",
+      "target": "assets/masters/v1.3.0/marine-eod-equipment-van.png",
+      "original_dimensions": {
+        "width": 91,
+        "height": 37
+      },
+      "master_dimensions": {
+        "width": 91,
+        "height": 39
+      },
+      "content_offset": {
+        "x": 0,
+        "y": 2
+      },
+      "light_transform": {
+        "x_scale": 1.0,
+        "x_offset": 0.0,
+        "y_scale": 0.9473684210526315,
+        "y_offset": 0.05263157894736842
+      },
+      "half_zoom_added_alpha_pixels": 31,
+      "sha256": "5f8747bae05cb7fbadfd19859aa75f7b97e20949c70bb0cd7a5f598c1de4b816"
+    }
+  ],
+  "all_passed": true
+}

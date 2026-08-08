@@ -1,0 +1,7 @@
+{
+  "release": "v1.4.0",
+  "baseline": "v1.3.0",
+  "changed_asset_ids": "all",
+  "changed_variants": ["static", "animated"],
+  "slots": "all"
+}

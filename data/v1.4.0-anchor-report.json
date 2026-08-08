@@ -1,0 +1,1883 @@
+{
+  "release": "v1.4.0",
+  "reference": "bottom-centre-transparent-canvas",
+  "vehicles": 117,
+  "maximum_bottom_anchor_shift_pixels": 0,
+  "static_frame_identity_assets": 117,
+  "vehicles_detail": [
+    {
+      "slot": 1,
+      "id": "fire-rescue-pump",
+      "canvas": {
+        "width": 118,
+        "height": 49
+      },
+      "bottom_centre_anchor": {
+        "x": 58.5,
+        "y": 48
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 2,
+      "id": "light-4x4-pump",
+      "canvas": {
+        "width": 92,
+        "height": 37
+      },
+      "bottom_centre_anchor": {
+        "x": 45.5,
+        "y": 36
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 3,
+      "id": "aerial-appliance",
+      "canvas": {
+        "width": 166,
+        "height": 61
+      },
+      "bottom_centre_anchor": {
+        "x": 82.5,
+        "y": 60
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 4,
+      "id": "fire-officer",
+      "canvas": {
+        "width": 70,
+        "height": 31
+      },
+      "bottom_centre_anchor": {
+        "x": 34.5,
+        "y": 30
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 5,
+      "id": "rescue-support-unit",
+      "canvas": {
+        "width": 122,
+        "height": 48
+      },
+      "bottom_centre_anchor": {
+        "x": 60.5,
+        "y": 47
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 6,
+      "id": "frontline-ambulance",
+      "canvas": {
+        "width": 92,
+        "height": 39
+      },
+      "bottom_centre_anchor": {
+        "x": 45.5,
+        "y": 38
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 7,
+      "id": "water-carrier",
+      "canvas": {
+        "width": 132,
+        "height": 50
+      },
+      "bottom_centre_anchor": {
+        "x": 65.5,
+        "y": 49
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 8,
+      "id": "hazmat-unit",
+      "canvas": {
+        "width": 122,
+        "height": 49
+      },
+      "bottom_centre_anchor": {
+        "x": 60.5,
+        "y": 48
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 9,
+      "id": "police-incident-response-vehicle",
+      "canvas": {
+        "width": 72,
+        "height": 32
+      },
+      "bottom_centre_anchor": {
+        "x": 35.5,
+        "y": 31
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 10,
+      "id": "hems",
+      "canvas": {
+        "width": 197,
+        "height": 73
+      },
+      "bottom_centre_anchor": {
+        "x": 98.0,
+        "y": 72
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 11,
+      "id": "rapid-response-vehicle",
+      "canvas": {
+        "width": 72,
+        "height": 32
+      },
+      "bottom_centre_anchor": {
+        "x": 35.5,
+        "y": 31
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 12,
+      "id": "police-helicopter",
+      "canvas": {
+        "width": 199,
+        "height": 75
+      },
+      "bottom_centre_anchor": {
+        "x": 99.0,
+        "y": 74
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 13,
+      "id": "dog-support-unit",
+      "canvas": {
+        "width": 96,
+        "height": 45
+      },
+      "bottom_centre_anchor": {
+        "x": 47.5,
+        "y": 44
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 14,
+      "id": "armed-response-vehicle",
+      "canvas": {
+        "width": 74,
+        "height": 36
+      },
+      "bottom_centre_anchor": {
+        "x": 36.5,
+        "y": 35
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 15,
+      "id": "breathing-apparatus-support-unit",
+      "canvas": {
+        "width": 120,
+        "height": 47
+      },
+      "bottom_centre_anchor": {
+        "x": 59.5,
+        "y": 46
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 16,
+      "id": "incident-command-control-unit",
+      "canvas": {
+        "width": 144,
+        "height": 59
+      },
+      "bottom_centre_anchor": {
+        "x": 71.5,
+        "y": 58
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 17,
+      "id": "rescue-pump",
+      "canvas": {
+        "width": 120,
+        "height": 51
+      },
+      "bottom_centre_anchor": {
+        "x": 59.5,
+        "y": 50
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 18,
+      "id": "carp",
+      "canvas": {
+        "width": 141,
+        "height": 59
+      },
+      "bottom_centre_anchor": {
+        "x": 70.0,
+        "y": 58
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 19,
+      "id": "co-responder-vehicle",
+      "canvas": {
+        "width": 70,
+        "height": 34
+      },
+      "bottom_centre_anchor": {
+        "x": 34.5,
+        "y": 33
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 20,
+      "id": "joint-response-unit",
+      "canvas": {
+        "width": 72,
+        "height": 32
+      },
+      "bottom_centre_anchor": {
+        "x": 35.5,
+        "y": 31
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 21,
+      "id": "otl",
+      "canvas": {
+        "width": 73,
+        "height": 39
+      },
+      "bottom_centre_anchor": {
+        "x": 36.0,
+        "y": 38
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 22,
+      "id": "general-practitioner",
+      "canvas": {
+        "width": 72,
+        "height": 30
+      },
+      "bottom_centre_anchor": {
+        "x": 35.5,
+        "y": 29
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 23,
+      "id": "community-first-responder",
+      "canvas": {
+        "width": 65,
+        "height": 33
+      },
+      "bottom_centre_anchor": {
+        "x": 32.0,
+        "y": 32
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 24,
+      "id": "crew-carrier",
+      "canvas": {
+        "width": 102,
+        "height": 46
+      },
+      "bottom_centre_anchor": {
+        "x": 50.5,
+        "y": 45
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 25,
+      "id": "traffic-car",
+      "canvas": {
+        "width": 73,
+        "height": 29
+      },
+      "bottom_centre_anchor": {
+        "x": 36.0,
+        "y": 28
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 26,
+      "id": "armed-traffic-car",
+      "canvas": {
+        "width": 74,
+        "height": 36
+      },
+      "bottom_centre_anchor": {
+        "x": 36.5,
+        "y": 35
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 27,
+      "id": "heavy-4x4-tanker",
+      "canvas": {
+        "width": 134,
+        "height": 63
+      },
+      "bottom_centre_anchor": {
+        "x": 66.5,
+        "y": 62
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 28,
+      "id": "prv",
+      "canvas": {
+        "width": 77,
+        "height": 36
+      },
+      "bottom_centre_anchor": {
+        "x": 38.0,
+        "y": 35
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 29,
+      "id": "srv",
+      "canvas": {
+        "width": 99,
+        "height": 46
+      },
+      "bottom_centre_anchor": {
+        "x": 49.0,
+        "y": 45
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 30,
+      "id": "welfare-vehicle",
+      "canvas": {
+        "width": 99,
+        "height": 44
+      },
+      "bottom_centre_anchor": {
+        "x": 49.0,
+        "y": 43
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 31,
+      "id": "atv-carrier",
+      "canvas": {
+        "width": 125,
+        "height": 55
+      },
+      "bottom_centre_anchor": {
+        "x": 62.0,
+        "y": 54
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 32,
+      "id": "ambulance-control-unit",
+      "canvas": {
+        "width": 138,
+        "height": 70
+      },
+      "bottom_centre_anchor": {
+        "x": 68.5,
+        "y": 69
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 33,
+      "id": "cbrn-vehicle",
+      "canvas": {
+        "width": 96,
+        "height": 57
+      },
+      "bottom_centre_anchor": {
+        "x": 47.5,
+        "y": 56
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 34,
+      "id": "mass-casualty-equipment",
+      "canvas": {
+        "width": 132,
+        "height": 68
+      },
+      "bottom_centre_anchor": {
+        "x": 65.5,
+        "y": 67
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 35,
+      "id": "ambulance-officer",
+      "canvas": {
+        "width": 73,
+        "height": 33
+      },
+      "bottom_centre_anchor": {
+        "x": 36.0,
+        "y": 32
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 36,
+      "id": "bfu",
+      "canvas": {
+        "width": 122,
+        "height": 65
+      },
+      "bottom_centre_anchor": {
+        "x": 60.5,
+        "y": 64
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 37,
+      "id": "f-wrc",
+      "canvas": {
+        "width": 132,
+        "height": 56
+      },
+      "bottom_centre_anchor": {
+        "x": 65.5,
+        "y": 55
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 38,
+      "id": "wrl-cafs",
+      "canvas": {
+        "width": 118,
+        "height": 53
+      },
+      "bottom_centre_anchor": {
+        "x": 58.5,
+        "y": 52
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 39,
+      "id": "rp-cafs",
+      "canvas": {
+        "width": 121,
+        "height": 51
+      },
+      "bottom_centre_anchor": {
+        "x": 60.0,
+        "y": 50
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 40,
+      "id": "osu",
+      "canvas": {
+        "width": 129,
+        "height": 51
+      },
+      "bottom_centre_anchor": {
+        "x": 64.0,
+        "y": 50
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 41,
+      "id": "pm",
+      "canvas": {
+        "width": 118,
+        "height": 51
+      },
+      "bottom_centre_anchor": {
+        "x": 58.5,
+        "y": 50
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 42,
+      "id": "water-pod",
+      "canvas": {
+        "width": 130,
+        "height": 60
+      },
+      "bottom_centre_anchor": {
+        "x": 64.5,
+        "y": 59
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 43,
+      "id": "bulk-foam-pod",
+      "canvas": {
+        "width": 130,
+        "height": 59
+      },
+      "bottom_centre_anchor": {
+        "x": 64.5,
+        "y": 58
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 44,
+      "id": "rescue-pod",
+      "canvas": {
+        "width": 130,
+        "height": 62
+      },
+      "bottom_centre_anchor": {
+        "x": 64.5,
+        "y": 61
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 45,
+      "id": "command-pod",
+      "canvas": {
+        "width": 130,
+        "height": 80
+      },
+      "bottom_centre_anchor": {
+        "x": 64.5,
+        "y": 79
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 46,
+      "id": "welfare-pod",
+      "canvas": {
+        "width": 130,
+        "height": 62
+      },
+      "bottom_centre_anchor": {
+        "x": 64.5,
+        "y": 61
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 47,
+      "id": "basu-pod",
+      "canvas": {
+        "width": 130,
+        "height": 58
+      },
+      "bottom_centre_anchor": {
+        "x": 64.5,
+        "y": 57
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 48,
+      "id": "misting-pod",
+      "canvas": {
+        "width": 130,
+        "height": 69
+      },
+      "bottom_centre_anchor": {
+        "x": 64.5,
+        "y": 68
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 49,
+      "id": "hazardous-materials-pod",
+      "canvas": {
+        "width": 130,
+        "height": 58
+      },
+      "bottom_centre_anchor": {
+        "x": 64.5,
+        "y": 57
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 50,
+      "id": "osu-pod",
+      "canvas": {
+        "width": 130,
+        "height": 58
+      },
+      "bottom_centre_anchor": {
+        "x": 64.5,
+        "y": 57
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 51,
+      "id": "hvp",
+      "canvas": {
+        "width": 130,
+        "height": 58
+      },
+      "bottom_centre_anchor": {
+        "x": 64.5,
+        "y": 57
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 52,
+      "id": "psu-carrier",
+      "canvas": {
+        "width": 98,
+        "height": 42
+      },
+      "bottom_centre_anchor": {
+        "x": 48.5,
+        "y": 41
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 53,
+      "id": "firearms-personnel-carrier",
+      "canvas": {
+        "width": 106,
+        "height": 48
+      },
+      "bottom_centre_anchor": {
+        "x": 52.5,
+        "y": 47
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 54,
+      "id": "multiple-dog-carrier",
+      "canvas": {
+        "width": 103,
+        "height": 45
+      },
+      "bottom_centre_anchor": {
+        "x": 51.0,
+        "y": 44
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 55,
+      "id": "detention-van",
+      "canvas": {
+        "width": 99,
+        "height": 41
+      },
+      "bottom_centre_anchor": {
+        "x": 49.0,
+        "y": 40
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 56,
+      "id": "mounted-unit",
+      "canvas": {
+        "width": 125,
+        "height": 54
+      },
+      "bottom_centre_anchor": {
+        "x": 62.0,
+        "y": 53
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 57,
+      "id": "m-rav",
+      "canvas": {
+        "width": 96,
+        "height": 47
+      },
+      "bottom_centre_anchor": {
+        "x": 47.5,
+        "y": 46
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 58,
+      "id": "crv",
+      "canvas": {
+        "width": 76,
+        "height": 40
+      },
+      "bottom_centre_anchor": {
+        "x": 37.5,
+        "y": 39
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 59,
+      "id": "coastguard-mud-rescue-unit",
+      "canvas": {
+        "width": 99,
+        "height": 44
+      },
+      "bottom_centre_anchor": {
+        "x": 49.0,
+        "y": 43
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 60,
+      "id": "coastguard-rope-rescue-unit",
+      "canvas": {
+        "width": 99,
+        "height": 46
+      },
+      "bottom_centre_anchor": {
+        "x": 49.0,
+        "y": 45
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 61,
+      "id": "coastguard-commander",
+      "canvas": {
+        "width": 81,
+        "height": 49
+      },
+      "bottom_centre_anchor": {
+        "x": 40.0,
+        "y": 48
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 62,
+      "id": "flood-rescue-unit-trailer",
+      "canvas": {
+        "width": 96,
+        "height": 53
+      },
+      "bottom_centre_anchor": {
+        "x": 47.5,
+        "y": 52
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 63,
+      "id": "mud-decontamination-unit",
+      "canvas": {
+        "width": 96,
+        "height": 45
+      },
+      "bottom_centre_anchor": {
+        "x": 47.5,
+        "y": 44
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 64,
+      "id": "support-unit",
+      "canvas": {
+        "width": 102,
+        "height": 50
+      },
+      "bottom_centre_anchor": {
+        "x": 50.5,
+        "y": 49
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 65,
+      "id": "coastguard-rescue-helicopter",
+      "canvas": {
+        "width": 249,
+        "height": 82
+      },
+      "bottom_centre_anchor": {
+        "x": 124.0,
+        "y": 81
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 66,
+      "id": "coastguard-rescue-helicopter-large",
+      "canvas": {
+        "width": 292,
+        "height": 98
+      },
+      "bottom_centre_anchor": {
+        "x": 145.5,
+        "y": 97
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 67,
+      "id": "4x4-vehicle",
+      "canvas": {
+        "width": 73,
+        "height": 38
+      },
+      "bottom_centre_anchor": {
+        "x": 36.0,
+        "y": 37
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 68,
+      "id": "inland-rescue-boat-trailer",
+      "canvas": {
+        "width": 106,
+        "height": 45
+      },
+      "bottom_centre_anchor": {
+        "x": 52.5,
+        "y": 44
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 69,
+      "id": "ilb",
+      "canvas": {
+        "width": 111,
+        "height": 55
+      },
+      "bottom_centre_anchor": {
+        "x": 55.0,
+        "y": 54
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 70,
+      "id": "alb",
+      "canvas": {
+        "width": 169,
+        "height": 84
+      },
+      "bottom_centre_anchor": {
+        "x": 84.0,
+        "y": 83
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 71,
+      "id": "rescue-watercraft-trailer",
+      "canvas": {
+        "width": 99,
+        "height": 34
+      },
+      "bottom_centre_anchor": {
+        "x": 49.0,
+        "y": 33
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 72,
+      "id": "hovercraft-trailer",
+      "canvas": {
+        "width": 112,
+        "height": 44
+      },
+      "bottom_centre_anchor": {
+        "x": 55.5,
+        "y": 43
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 73,
+      "id": "hovercraft-transporter",
+      "canvas": {
+        "width": 93,
+        "height": 40
+      },
+      "bottom_centre_anchor": {
+        "x": 46.0,
+        "y": 39
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 74,
+      "id": "light-4x4",
+      "canvas": {
+        "width": 73,
+        "height": 36
+      },
+      "bottom_centre_anchor": {
+        "x": 36.0,
+        "y": 35
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 75,
+      "id": "boat-trailer",
+      "canvas": {
+        "width": 102,
+        "height": 46
+      },
+      "bottom_centre_anchor": {
+        "x": 50.5,
+        "y": 45
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 76,
+      "id": "major-foam-tender",
+      "canvas": {
+        "width": 166,
+        "height": 57
+      },
+      "bottom_centre_anchor": {
+        "x": 82.5,
+        "y": 56
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 77,
+      "id": "riv",
+      "canvas": {
+        "width": 106,
+        "height": 54
+      },
+      "bottom_centre_anchor": {
+        "x": 52.5,
+        "y": 53
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 78,
+      "id": "airfield-firefighting-command-vehicle",
+      "canvas": {
+        "width": 83,
+        "height": 44
+      },
+      "bottom_centre_anchor": {
+        "x": 41.0,
+        "y": 43
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 79,
+      "id": "rescue-stairs",
+      "canvas": {
+        "width": 166,
+        "height": 83
+      },
+      "bottom_centre_anchor": {
+        "x": 82.5,
+        "y": 82
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 80,
+      "id": "airfield-operations-vehicle",
+      "canvas": {
+        "width": 76,
+        "height": 37
+      },
+      "bottom_centre_anchor": {
+        "x": 37.5,
+        "y": 36
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 81,
+      "id": "airfield-operations-supervisor",
+      "canvas": {
+        "width": 81,
+        "height": 46
+      },
+      "bottom_centre_anchor": {
+        "x": 40.0,
+        "y": 45
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 82,
+      "id": "medical-equipment-trailer",
+      "canvas": {
+        "width": 86,
+        "height": 44
+      },
+      "bottom_centre_anchor": {
+        "x": 42.5,
+        "y": 43
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 83,
+      "id": "armed-cell-van",
+      "canvas": {
+        "width": 103,
+        "height": 47
+      },
+      "bottom_centre_anchor": {
+        "x": 51.0,
+        "y": 46
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 84,
+      "id": "medical-cycle-responder",
+      "canvas": {
+        "width": 62,
+        "height": 40
+      },
+      "bottom_centre_anchor": {
+        "x": 30.5,
+        "y": 39
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 85,
+      "id": "pump-trailer",
+      "canvas": {
+        "width": 66,
+        "height": 34
+      },
+      "bottom_centre_anchor": {
+        "x": 32.5,
+        "y": 33
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 86,
+      "id": "control-van-sar",
+      "canvas": {
+        "width": 102,
+        "height": 65
+      },
+      "bottom_centre_anchor": {
+        "x": 50.5,
+        "y": 64
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 87,
+      "id": "operational-support-van",
+      "canvas": {
+        "width": 99,
+        "height": 49
+      },
+      "bottom_centre_anchor": {
+        "x": 49.0,
+        "y": 48
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 88,
+      "id": "operational-support-trailer",
+      "canvas": {
+        "width": 92,
+        "height": 50
+      },
+      "bottom_centre_anchor": {
+        "x": 45.5,
+        "y": 49
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 89,
+      "id": "sar-flood-rescue-trailer",
+      "canvas": {
+        "width": 96,
+        "height": 45
+      },
+      "bottom_centre_anchor": {
+        "x": 47.5,
+        "y": 44
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 90,
+      "id": "drone-vehicle-sar-hq",
+      "canvas": {
+        "width": 89,
+        "height": 53
+      },
+      "bottom_centre_anchor": {
+        "x": 44.0,
+        "y": 52
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 91,
+      "id": "drone-vehicle-fire-station",
+      "canvas": {
+        "width": 93,
+        "height": 56
+      },
+      "bottom_centre_anchor": {
+        "x": 46.0,
+        "y": 55
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 92,
+      "id": "drone-vehicle-police-station",
+      "canvas": {
+        "width": 89,
+        "height": 55
+      },
+      "bottom_centre_anchor": {
+        "x": 44.0,
+        "y": 54
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 93,
+      "id": "personal-sar-vehicle",
+      "canvas": {
+        "width": 70,
+        "height": 33
+      },
+      "bottom_centre_anchor": {
+        "x": 34.5,
+        "y": 32
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 94,
+      "id": "sar-4x4",
+      "canvas": {
+        "width": 76,
+        "height": 45
+      },
+      "bottom_centre_anchor": {
+        "x": 37.5,
+        "y": 44
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 95,
+      "id": "rrv-2",
+      "canvas": {
+        "width": 72,
+        "height": 32
+      },
+      "bottom_centre_anchor": {
+        "x": 35.5,
+        "y": 31
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 96,
+      "id": "community-midwife",
+      "canvas": {
+        "width": 69,
+        "height": 31
+      },
+      "bottom_centre_anchor": {
+        "x": 34.0,
+        "y": 30
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 97,
+      "id": "specialist-paramedic-rrv",
+      "canvas": {
+        "width": 73,
+        "height": 33
+      },
+      "bottom_centre_anchor": {
+        "x": 36.0,
+        "y": 32
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 98,
+      "id": "patient-transport-service-ambulance",
+      "canvas": {
+        "width": 96,
+        "height": 44
+      },
+      "bottom_centre_anchor": {
+        "x": 47.5,
+        "y": 43
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 99,
+      "id": "critical-care-transfer-ambulance",
+      "canvas": {
+        "width": 102,
+        "height": 44
+      },
+      "bottom_centre_anchor": {
+        "x": 50.5,
+        "y": 43
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 100,
+      "id": "mountain-rescue-4x4",
+      "canvas": {
+        "width": 77,
+        "height": 45
+      },
+      "bottom_centre_anchor": {
+        "x": 38.0,
+        "y": 44
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 101,
+      "id": "control-van-mountain-rescue",
+      "canvas": {
+        "width": 99,
+        "height": 61
+      },
+      "bottom_centre_anchor": {
+        "x": 49.0,
+        "y": 60
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 102,
+      "id": "search-dog-unit",
+      "canvas": {
+        "width": 83,
+        "height": 40
+      },
+      "bottom_centre_anchor": {
+        "x": 41.0,
+        "y": 39
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 103,
+      "id": "search-dog-unit-sar",
+      "canvas": {
+        "width": 83,
+        "height": 41
+      },
+      "bottom_centre_anchor": {
+        "x": 41.0,
+        "y": 40
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 104,
+      "id": "crew-carrier-sar",
+      "canvas": {
+        "width": 99,
+        "height": 41
+      },
+      "bottom_centre_anchor": {
+        "x": 49.0,
+        "y": 40
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 105,
+      "id": "recovery-vehicle",
+      "canvas": {
+        "width": 99,
+        "height": 45
+      },
+      "bottom_centre_anchor": {
+        "x": 49.0,
+        "y": 44
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 106,
+      "id": "flatbed-recovery-vehicle",
+      "canvas": {
+        "width": 118,
+        "height": 50
+      },
+      "bottom_centre_anchor": {
+        "x": 58.5,
+        "y": 49
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 107,
+      "id": "hgv-recovery-vehicle",
+      "canvas": {
+        "width": 138,
+        "height": 57
+      },
+      "bottom_centre_anchor": {
+        "x": 68.5,
+        "y": 56
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 108,
+      "id": "rru",
+      "canvas": {
+        "width": 118,
+        "height": 50
+      },
+      "bottom_centre_anchor": {
+        "x": 58.5,
+        "y": 49
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 109,
+      "id": "eiu",
+      "canvas": {
+        "width": 80,
+        "height": 34
+      },
+      "bottom_centre_anchor": {
+        "x": 39.5,
+        "y": 33
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 110,
+      "id": "eod-commander",
+      "canvas": {
+        "width": 84,
+        "height": 50
+      },
+      "bottom_centre_anchor": {
+        "x": 41.5,
+        "y": 49
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 111,
+      "id": "eod-response-vehicle",
+      "canvas": {
+        "width": 92,
+        "height": 50
+      },
+      "bottom_centre_anchor": {
+        "x": 45.5,
+        "y": 49
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 112,
+      "id": "eod-medium-equipment-van",
+      "canvas": {
+        "width": 103,
+        "height": 55
+      },
+      "bottom_centre_anchor": {
+        "x": 51.0,
+        "y": 54
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 113,
+      "id": "eod-heavy-equipment-vehicle",
+      "canvas": {
+        "width": 142,
+        "height": 58
+      },
+      "bottom_centre_anchor": {
+        "x": 70.5,
+        "y": 57
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 114,
+      "id": "marine-eod-response-vehicle",
+      "canvas": {
+        "width": 86,
+        "height": 41
+      },
+      "bottom_centre_anchor": {
+        "x": 42.5,
+        "y": 40
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 115,
+      "id": "marine-eod-equipment-van",
+      "canvas": {
+        "width": 99,
+        "height": 47
+      },
+      "bottom_centre_anchor": {
+        "x": 49.0,
+        "y": 46
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 116,
+      "id": "welfare-vehicle-2",
+      "canvas": {
+        "width": 99,
+        "height": 48
+      },
+      "bottom_centre_anchor": {
+        "x": 49.0,
+        "y": 47
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 117,
+      "id": "cell-van",
+      "canvas": {
+        "width": 96,
+        "height": 46
+      },
+      "bottom_centre_anchor": {
+        "x": 47.5,
+        "y": 45
+      },
+      "maximum_bottom_anchor_shift_pixels": 0,
+      "static_frame_identity": true,
+      "passed": true,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "all_passed": true
+}
