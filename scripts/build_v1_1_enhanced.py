@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the deterministic v1.2.1 Modern Command Clarity fleet profile."""
+"""Build the deterministic Modern Command Clarity fleet profile."""
 
 from __future__ import annotations
 
@@ -15,10 +15,12 @@ from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "data" / "prototypes.json"
 PROFILE_PATH = ROOT / "data" / "v1.2-enhancement-profile.json"
+PROFILE = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
+RELEASE = str(PROFILE["release"])
 STANDARD_DIR = ROOT / "assets" / "exports" / "standard" / "static"
 STATIC_DIR = ROOT / "assets" / "exports" / "command" / "static"
 ANIMATED_DIR = ROOT / "assets" / "exports" / "command" / "animated"
-REPORT_PATH = ROOT / "data" / "v1.2.1-build-report.json"
+REPORT_PATH = ROOT / "data" / f"{RELEASE}-build-report.json"
 
 
 SERVICE_ACCENTS = {
@@ -65,9 +67,15 @@ def crop_to_alpha(image: Image.Image, padding: int = 1) -> Image.Image:
     )
 
 
-def command_width(width: int, asset_id: str, rare: bool, override: bool, maximum: int) -> int:
-    if override:
-        target = 60
+def command_width(
+    width: int,
+    asset_id: str,
+    rare: bool,
+    override_width: int | None,
+    maximum: int,
+) -> int:
+    if override_width is not None:
+        target = override_width
     elif width < 42:
         target = max(54, round(width * 1.75))
     elif width < 60:
@@ -939,15 +947,17 @@ def clean_output(directory: Path) -> None:
 
 def main() -> None:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
-    profile = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
+    profile = PROFILE
     vehicles = sorted(manifest["vehicles"], key=lambda item: int(item["missionchief_slot"]))
     rare = set(profile["rare_showcase"])
     overrides = profile["new_source_overrides"]
+    override_widths = profile.get("source_override_widths", {})
+    light_overrides = profile.get("light_overrides", {})
     role_cues = profile.get("role_differentiation", {})
     equipment_cues = profile.get("specialist_equipment", {})
     if role_cues or equipment_cues:
         raise ValueError(
-            "generated role and specialist roof overlays are retired in v1.2.1; "
+            "generated role and specialist roof overlays are retired; "
             "both active cue maps must remain empty"
         )
     retired_overlay_groups = profile.get("retired_generated_overlays", {})
@@ -968,6 +978,10 @@ def main() -> None:
     motion_counts: Counter[str] = Counter()
     for vehicle in vehicles:
         asset_id = vehicle["id"]
+        animation_vehicle = {
+            **vehicle,
+            "lights": light_overrides.get(asset_id, vehicle.get("lights", [])),
+        }
         standard_path = STANDARD_DIR / f"{asset_id}.png"
         if not standard_path.is_file():
             raise FileNotFoundError(standard_path)
@@ -985,7 +999,7 @@ def main() -> None:
             standard.width,
             asset_id,
             asset_id in rare,
-            override_path is not None,
+            int(override_widths[asset_id]) if asset_id in override_widths else None,
             int(profile["maximum_icon_width"]),
         )
         body = resize_width(body, target_width)
@@ -1050,7 +1064,7 @@ def main() -> None:
         static.save(static_path, format="PNG", optimize=True)
         frames, durations, motion_type = build_animation(
             static,
-            vehicle,
+            animation_vehicle,
             motion_reference_size,
             motion_reference_offset,
             profile,
@@ -1096,10 +1110,13 @@ def main() -> None:
                 },
                 "width_gain_percent": round((body_size[0] / standard.width - 1) * 100, 1),
                 "frames": len(frames),
+                "response_light_count": len(animation_vehicle.get("lights", [])),
                 "durations_ms": durations,
                 "cycle_ms": sum(durations),
-                "flash_phase": vehicle_flash_phase(asset_id, profile) if vehicle.get("lights") else None,
-                "flash_activity_signature": flash_activity_signature(vehicle, profile),
+                "flash_phase": vehicle_flash_phase(asset_id, profile)
+                if animation_vehicle.get("lights")
+                else None,
+                "flash_activity_signature": flash_activity_signature(animation_vehicle, profile),
                 "motion": motion_type,
             }
         )

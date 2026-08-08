@@ -1,5 +1,5 @@
 {
-  "release": "v1.2.1",
+  "release": "v1.2.2",
   "profile": "command",
   "display_name": "Modern Command Clarity",
   "source_profile": "standard",
@@ -23,7 +23,51 @@
   "minimum_icon_width": 52,
   "maximum_icon_width": 296,
   "new_source_overrides": {
-    "medical-cycle-responder": "assets/masters/v1.1/medical-cycle-responder.png"
+    "medical-cycle-responder": "assets/masters/v1.1/medical-cycle-responder.png",
+    "hazardous-materials-pod": "assets/masters/v1.2.2/hazardous-materials-pod-carrier.png"
+  },
+  "source_override_widths": {
+    "medical-cycle-responder": 60,
+    "hazardous-materials-pod": 119
+  },
+  "light_overrides": {
+    "hazardous-materials-pod": [
+      {
+        "x": 0.86,
+        "y": 0.07,
+        "group": "a",
+        "size": 0.9
+      },
+      {
+        "x": 0.92,
+        "y": 0.07,
+        "group": "b",
+        "size": 0.9
+      },
+      {
+        "x": 0.98,
+        "y": 0.6,
+        "group": "b",
+        "size": 0.54
+      },
+      {
+        "x": 0.73,
+        "y": 0.74,
+        "group": "a",
+        "size": 0.48
+      }
+    ]
+  },
+  "mounted_carriers": {
+    "hazardous-materials-pod": {
+      "base_vehicle": "pm",
+      "module": "hazardous-materials-pod",
+      "real_length_metres": 9.1,
+      "minimum_body_width": 119,
+      "minimum_command_width": 133,
+      "expected_motion": "blue-response",
+      "expected_lights": 4
+    }
   },
   "role_differentiation": {},
   "role_confusion_groups": [],

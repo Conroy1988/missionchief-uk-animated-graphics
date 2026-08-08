@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate v1.2.1 exports and render automated busy-map QA evidence."""
+"""Validate Modern Command Clarity exports and render busy-map QA evidence."""
 
 from __future__ import annotations
 
@@ -14,12 +14,14 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageOps
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "data" / "prototypes.json"
 PROFILE_PATH = ROOT / "data" / "v1.2-enhancement-profile.json"
-BUILD_REPORT_PATH = ROOT / "data" / "v1.2.1-build-report.json"
-REPORT_PATH = ROOT / "data" / "v1.2.1-qa-report.json"
+PROFILE = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
+RELEASE = str(PROFILE["release"])
+BUILD_REPORT_PATH = ROOT / "data" / f"{RELEASE}-build-report.json"
+REPORT_PATH = ROOT / "data" / f"{RELEASE}-qa-report.json"
 STANDARD_DIR = ROOT / "assets" / "exports" / "standard" / "static"
 STATIC_DIR = ROOT / "assets" / "exports" / "command" / "static"
 ANIMATED_DIR = ROOT / "assets" / "exports" / "command" / "animated"
-PREVIEW_DIR = ROOT / "assets" / "previews" / "v1.2.1"
+PREVIEW_DIR = ROOT / "assets" / "previews" / RELEASE
 
 
 THEMES = {
@@ -232,7 +234,7 @@ def render_animation_sheet(vehicle_map: dict[str, dict]) -> Path:
     draw = ImageDraw.Draw(canvas)
     font = ImageFont.load_default(size=17)
     title_font = ImageFont.load_default(size=24)
-    draw.text((20, 17), "v1.2.1 independent-light and motion frame audit", font=title_font, fill="white")
+    draw.text((20, 17), f"{RELEASE} independent-light and motion frame audit", font=title_font, fill="white")
     for row, asset_id in enumerate(SHOWCASE_IDS):
         vehicle = vehicle_map[asset_id]
         frames, _durations = frames_and_durations(ANIMATED_DIR / f"{asset_id}.png")
@@ -263,7 +265,7 @@ def render_desynchronised_lights_sheet(vehicle_map: dict[str, dict], asset_ids: 
     font = ImageFont.load_default(size=16)
     title_font = ImageFont.load_default(size=26)
     draw.rounded_rectangle((18, 14, width - 18, 68), 12, fill=(10, 16, 22, 235))
-    draw.text((34, 28), "v1.2.1 desynchronised crowded-response frame audit", font=title_font, fill="white")
+    draw.text((34, 28), f"{RELEASE} desynchronised crowded-response frame audit", font=title_font, fill="white")
     frame_map = {
         asset_id: frames_and_durations(ANIMATED_DIR / f"{asset_id}.png")[0]
         for asset_id in asset_ids
@@ -327,7 +329,7 @@ def render_rotor_sheet(vehicle_map: dict[str, dict]) -> Path:
     draw = ImageDraw.Draw(canvas)
     font = ImageFont.load_default(size=17)
     title_font = ImageFont.load_default(size=24)
-    draw.text((20, 18), "v1.2.1 helicopter rotor regression audit", font=title_font, fill="white")
+    draw.text((20, 18), f"{RELEASE} helicopter rotor regression audit", font=title_font, fill="white")
     for row, asset_id in enumerate(ROTOR_SHOWCASE_IDS):
         vehicle = vehicle_map[asset_id]
         frames, _durations = frames_and_durations(ANIMATED_DIR / f"{asset_id}.png")
@@ -409,7 +411,7 @@ def render_targeted_sheet(
 
 def main() -> None:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
-    profile = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
+    profile = PROFILE
     build_report = json.loads(BUILD_REPORT_PATH.read_text(encoding="utf-8"))
     vehicles = sorted(manifest["vehicles"], key=lambda item: int(item["missionchief_slot"]))
     vehicle_map = {item["id"]: item for item in vehicles}
@@ -426,6 +428,7 @@ def main() -> None:
     grounding = profile.get("grounding_shadows", {})
     aerial_shadow_assets = set(grounding.get("aerial", []))
     marine_shadow_assets = set(grounding.get("marine", []))
+    mounted_carriers = profile.get("mounted_carriers", {})
 
     if role_cues or equipment_cues:
         pack_errors.append("generated role and specialist roof overlays must remain retired")
@@ -448,6 +451,9 @@ def main() -> None:
         pack_errors.append(f"grounding shadow profile references unknown assets: {unknown_shadow_ids}")
     if aerial_shadow_assets & marine_shadow_assets:
         pack_errors.append("grounding shadow aerial and marine sets overlap")
+    unknown_mounted_carriers = sorted(set(mounted_carriers) - expected)
+    if unknown_mounted_carriers:
+        pack_errors.append(f"mounted-carrier profile references unknown assets: {unknown_mounted_carriers}")
 
     if {path.stem for path in STATIC_DIR.glob("*.png")} != expected:
         pack_errors.append("command static directory does not exactly match the 117-slot manifest")
@@ -515,6 +521,19 @@ def main() -> None:
             errors.append("retired overlay changed the corrected vehicle body dimensions")
         if bool(detail.get("satellite_contrast_boost")) != (asset_id in satellite_boost):
             errors.append("satellite contrast treatment does not match the profile")
+        if asset_id in mounted_carriers:
+            carrier = mounted_carriers[asset_id]
+            expected_source = profile.get("new_source_overrides", {}).get(asset_id)
+            if detail.get("source_override") != expected_source:
+                errors.append("mounted carrier does not use its deterministic source override")
+            if detail["body_dimensions"]["width"] < int(carrier["minimum_body_width"]):
+                errors.append("mounted carrier body is too short to include its cab and chassis")
+            if static.width < int(carrier["minimum_command_width"]):
+                errors.append("mounted carrier command export is too short")
+            if detail["motion"] != carrier["expected_motion"]:
+                errors.append("mounted carrier response animation does not match policy")
+            if int(detail.get("response_light_count", 0)) != int(carrier["expected_lights"]):
+                errors.append("mounted carrier emergency-light inventory is incomplete")
         expected_shadow_mode = (
             "aerial"
             if asset_id in aerial_shadow_assets
@@ -636,7 +655,7 @@ def main() -> None:
     previews.append(
         str(
             render_targeted_sheet(
-                "v1.2.1 corrected role rooflines - 100% / 75% / 50%",
+                f"{RELEASE} corrected role rooflines - 100% / 75% / 50%",
                 sorted(retired_role_assets),
                 "dark",
                 "corrected-role-rooflines-map-scale.png",
@@ -647,7 +666,7 @@ def main() -> None:
     previews.append(
         str(
             render_targeted_sheet(
-                "v1.2.1 corrected specialist rooflines - 100% / 75% / 50%",
+                f"{RELEASE} corrected specialist rooflines - 100% / 75% / 50%",
                 sorted(retired_equipment_assets),
                 "dark",
                 "corrected-specialist-rooflines-map-scale.png",
@@ -658,7 +677,7 @@ def main() -> None:
     previews.append(
         str(
             render_targeted_sheet(
-                "v1.2.1 grounding-shadow audit - 100% / 75% / 50%",
+                f"{RELEASE} grounding-shadow audit - 100% / 75% / 50%",
                 list(grounding.get("showcase", [])),
                 "satellite",
                 "grounding-shadows-map-scale.png",
@@ -669,10 +688,21 @@ def main() -> None:
     previews.append(
         str(
             render_targeted_sheet(
-                "v1.2.1 satellite-contrast audit - 100% / 75% / 50%",
+                f"{RELEASE} satellite-contrast audit - 100% / 75% / 50%",
                 list(profile.get("satellite_contrast_boost", [])),
                 "satellite",
                 "satellite-contrast-map-scale.png",
+                vehicle_map,
+            ).relative_to(ROOT)
+        )
+    )
+    previews.append(
+        str(
+            render_targeted_sheet(
+                f"{RELEASE} mounted pod-carrier audit - 100% / 75% / 50%",
+                sorted(mounted_carriers),
+                "light",
+                "mounted-pod-carrier-map-scale.png",
                 vehicle_map,
             ).relative_to(ROOT)
         )
@@ -712,6 +742,8 @@ def main() -> None:
             item["grounding_shadow"]["half_zoom_visible_pixels"] for item in results
         ),
         "satellite_contrast_boosted_assets": len(satellite_boost),
+        "mounted_carrier_assets": len(mounted_carriers),
+        "mounted_carrier_ids": sorted(mounted_carriers),
         "minimum_boosted_satellite_edge_contrast": min(
             item["edge_contrast"]["satellite"]
             for item in results
