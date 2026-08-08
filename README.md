@@ -4,7 +4,7 @@ A complete, original UK emergency-services vehicle graphics pack for [MissionChi
 
 > **[Use TKB UK Fleet — Animated on MissionChief →](https://www.missionchief.co.uk/vehicle_graphics/5897)**
 
-**[Preview all 117 vehicle graphics](GALLERY.md)** · **[See the automated map tests](#tested-for-real-map-conditions)** · **[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/)** · **[Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/)**
+**[Open the interactive fleet gallery](https://tkb-gaming.scot/games/missionchief/guides/fleet-gallery/)** · **[Markdown gallery](GALLERY.md)** · **[See the automated map tests](#tested-for-real-map-conditions)** · **[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/)** · **[Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/)**
 
 ## Preview the full fleet
 
@@ -23,7 +23,9 @@ A complete, original UK emergency-services vehicle graphics pack for [MissionChi
   </tr>
 </table>
 
-**[Explore all 117 static and animated vehicle graphics →](GALLERY.md)**
+**[Explore all 117 graphics in the interactive map gallery →](https://tkb-gaming.scot/games/missionchief/guides/fleet-gallery/)**
+
+Search by name, slot or role; filter by service and improvement type; switch static/APNG playback; test 100%, 75% and 50% scales on four map simulations; and compare stable releases side by side. The accessibility-first Markdown gallery remains available in [GALLERY.md](GALLERY.md).
 
 ## The complete UK fleet
 
@@ -107,6 +109,7 @@ The [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-grap
 - `assets/exports/command/animated/` — v1.4.0 twelve- and eighteen-frame APNGs
 - `assets/masters/` — deterministic command-profile replacement masters, including v1.2.4 carriers/full-tail aircraft, twenty baked v1.3.0 role masters and twenty v1.4.0 redraw/marine masters
 - `assets/previews/` — map-scale, animation-frame and selected-artwork QA sheets
+- `gallery/` — interactive gallery source, deterministic 117-vehicle catalogue and responsive browser client
 - `data/vehicle-slots.json` — authoritative 117-slot MissionChief mapping
 - `data/prototypes.json` — production specification and light-placement manifest
 - `data/final-pack-validation.json` — release-level validation report
@@ -128,6 +131,8 @@ python scripts/validate_v1_4_overhaul.py
 python scripts/validate_release_scope.py
 python scripts/validate_light_placement.py --report data/v1.4.0-light-placement-report.json
 python scripts/build_numbered_upload_package.py --version v1.4.0 --profile command
+python scripts/build_interactive_gallery.py --check --site-output dist/gallery-site
+node --test tests/gallery.test.mjs
 ```
 
 The final validation gate must report `"all_passed": true` before a release is published. The immutable v1.0 source profile remains documented separately in its release and checkpoint.
