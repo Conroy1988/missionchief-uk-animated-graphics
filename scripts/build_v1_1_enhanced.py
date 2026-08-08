@@ -743,6 +743,11 @@ def adaptive_edge_padding(asset_id: str, body_width: int, boosted: bool, profile
 
 
 def light_kind(light: dict, index: int) -> str:
+    declared = light.get("kind")
+    if declared is not None:
+        if declared not in FLASH_PATTERNS:
+            raise ValueError(f"unknown declared light kind: {declared}")
+        return str(declared)
     x = float(light["x"])
     y = float(light["y"])
     if x >= 0.83:
@@ -786,8 +791,43 @@ def flash_activity_signature(vehicle: dict, profile: dict) -> str | None:
     return ",".join(str(value) for value in activity)
 
 
-def blue_flash(size: tuple[int, int], px: int, py: int, strength: float, kind: str, flip: bool) -> Image.Image:
+def blue_flash(
+    size: tuple[int, int],
+    px: int,
+    py: int,
+    strength: float,
+    kind: str,
+    flip: bool,
+    fixture: str | None = None,
+) -> Image.Image:
     width, height = size
+    if fixture in {"compact-bar", "compact-point"}:
+        glow = Image.new("RGBA", size, (0, 0, 0, 0))
+        glow_draw = ImageDraw.Draw(glow)
+        if fixture == "compact-bar":
+            glow_draw.rounded_rectangle(
+                (px - 2, py - 1, px + 2, py + 1),
+                radius=1,
+                fill=(0, 116, 255, 94),
+            )
+        else:
+            glow_draw.ellipse(
+                (px - 2, py - 1, px + 2, py + 1),
+                fill=(0, 116, 255, 88),
+            )
+        glow = glow.filter(ImageFilter.GaussianBlur(0.58))
+
+        core = Image.new("RGBA", size, (0, 0, 0, 0))
+        core_draw = ImageDraw.Draw(core)
+        if fixture == "compact-bar":
+            core_draw.line((px - 1, py, px + 1, py), fill=(55, 175, 255, 246), width=1)
+            highlight_x = px - 1 if flip else px + 1
+            core_draw.point((highlight_x, py), fill=(228, 251, 255, 255))
+        else:
+            core_draw.point((px, py), fill=(229, 251, 255, 255))
+            core_draw.point((px - 1 if flip else px + 1, py), fill=(67, 181, 255, 236))
+        return Image.alpha_composite(glow, core)
+
     radius = max(2, round(max(3.0, height * 0.075) * strength))
     glow = Image.new("RGBA", size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(glow)
@@ -855,6 +895,7 @@ def add_blue_lights(
             float(light.get("size", 1.0)),
             kind,
             flip=(kind == "roof_a"),
+            fixture=light.get("fixture"),
         )
         result = Image.alpha_composite(result, overlay)
     return result
@@ -866,6 +907,7 @@ def response_running_lights_overlay(
     body_size: tuple[int, int],
     offset: tuple[int, int],
     left_facing: bool,
+    geometry: dict | None = None,
 ) -> Image.Image:
     overlay = Image.new("RGBA", size, (0, 0, 0, 0))
     if frame_index == 0:
@@ -874,11 +916,22 @@ def response_running_lights_overlay(
     if width < 58:
         return overlay
     ox, oy = offset
-    front_x = ox + round(width * (0.035 if left_facing else 0.965))
-    rear_x = ox + round(width * (0.965 if left_facing else 0.035))
-    lamp_y = oy + round(height * 0.64)
-    rear_y = oy + round(height * 0.61)
+    compact = geometry is not None
+    if geometry is not None:
+        front_x = ox + round(float(geometry["front"][0]) * (width - 1))
+        lamp_y = oy + round(float(geometry["front"][1]) * (height - 1))
+        rear_x = ox + round(float(geometry["rear"][0]) * (width - 1))
+        rear_y = oy + round(float(geometry["rear"][1]) * (height - 1))
+    else:
+        front_x = ox + round(width * (0.035 if left_facing else 0.965))
+        rear_x = ox + round(width * (0.965 if left_facing else 0.035))
+        lamp_y = oy + round(height * 0.64)
+        rear_y = oy + round(height * 0.61)
     draw = ImageDraw.Draw(overlay)
+    if compact:
+        draw.line((front_x - 1, lamp_y, front_x + 1, lamp_y), fill=(255, 247, 208, 198), width=1)
+        draw.line((rear_x - 1, rear_y, rear_x + 1, rear_y), fill=(255, 48, 31, 186), width=1)
+        return overlay.filter(ImageFilter.GaussianBlur(0.12))
     draw.rounded_rectangle((front_x - 2, lamp_y - 1, front_x + 2, lamp_y + 1), radius=1, fill=(255, 247, 208, 212))
     draw.rectangle((rear_x - 1, rear_y - 1, rear_x + 1, rear_y + 1), fill=(255, 48, 31, 198))
     return overlay.filter(ImageFilter.GaussianBlur(0.22))
@@ -1287,6 +1340,7 @@ def build_animation(
                         body_size,
                         body_offset,
                         asset_id in set(profile.get("left_facing_assets", [])),
+                        vehicle.get("running_lights"),
                     ),
                 )
         if asset_id in profile["helicopters"]:
@@ -1429,6 +1483,16 @@ def main() -> None:
     if light_overrides_path:
         placement_data = json.loads((ROOT / light_overrides_path).read_text(encoding="utf-8"))
         light_overrides.update(placement_data["vehicles"])
+    current_fixture_data = {"vehicles": {}, "running_lights": {}}
+    current_fixtures_path = profile.get("current_light_fixtures_path")
+    if current_fixtures_path:
+        current_fixture_data = json.loads(
+            (ROOT / str(current_fixtures_path)).read_text(encoding="utf-8")
+        )
+        if str(current_fixture_data.get("release")) != str(profile["release"]):
+            raise ValueError("current light-fixture data does not match the active release")
+    current_light_overrides = current_fixture_data.get("vehicles", {})
+    running_light_overrides = current_fixture_data.get("running_lights", {})
     role_cues = profile.get("role_differentiation", {})
     equipment_cues = profile.get("specialist_equipment", {})
     if role_cues or equipment_cues:
@@ -1453,12 +1517,14 @@ def main() -> None:
         asset_id = vehicle["id"]
         master_detail = master_map.get(asset_id)
         light_transform = master_detail.get("light_transform") if master_detail else None
+        transformed_lights = transform_lights(
+            light_overrides.get(asset_id, vehicle.get("lights", [])),
+            light_transform,
+        )
         animation_vehicle = {
             **vehicle,
-            "lights": transform_lights(
-                light_overrides.get(asset_id, vehicle.get("lights", [])),
-                light_transform,
-            ),
+            "lights": current_light_overrides.get(asset_id, transformed_lights),
+            "running_lights": running_light_overrides.get(asset_id),
         }
         standard_path = STANDARD_DIR / f"{asset_id}.png"
         if not standard_path.is_file():

@@ -1,0 +1,975 @@
+{
+  "release": "v1.4.1",
+  "baseline": "v1.4.0",
+  "corrected_assets": 15,
+  "static_assets_unchanged": true,
+  "equipment_modules_preserved": true,
+  "floating_lamp_pixels": 0,
+  "all_passed": true,
+  "errors": [],
+  "vehicles": [
+    {
+      "slot": 14,
+      "id": "armed-response-vehicle",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 34,
+            "y": 7
+          },
+          "distance": 0.0,
+          "maximum_difference": 318
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 40,
+            "y": 7
+          },
+          "distance": 0.0,
+          "maximum_difference": 707
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 66,
+            "y": 18
+          },
+          "distance": 0.0,
+          "maximum_difference": 278
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 8,
+            "y": 18
+          },
+          "distance": 0.0,
+          "maximum_difference": 464
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 69,
+            "y": 20
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 6,
+            "y": 18
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 45,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 20,
+      "id": "joint-response-unit",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 35,
+            "y": 13
+          },
+          "distance": 0.0,
+          "maximum_difference": 383
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 42,
+            "y": 13
+          },
+          "distance": 0.0,
+          "maximum_difference": 373
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 66,
+            "y": 18
+          },
+          "distance": 0.0,
+          "maximum_difference": 468
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 7,
+            "y": 17
+          },
+          "distance": 0.0,
+          "maximum_difference": 333
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 67,
+            "y": 20
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 6,
+            "y": 17
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 50,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 21,
+      "id": "otl",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 29,
+            "y": 11
+          },
+          "distance": 0.0,
+          "maximum_difference": 525
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 31,
+            "y": 11
+          },
+          "distance": 0.0,
+          "maximum_difference": 525
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 67,
+            "y": 23
+          },
+          "distance": 0.0,
+          "maximum_difference": 369
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 7,
+            "y": 20
+          },
+          "distance": 0.0,
+          "maximum_difference": 474
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 68,
+            "y": 23
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 6,
+            "y": 20
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 39,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 23,
+      "id": "community-first-responder",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 24,
+            "y": 8
+          },
+          "distance": 0.0,
+          "maximum_difference": 472
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 28,
+            "y": 8
+          },
+          "distance": 0.0,
+          "maximum_difference": 472
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 59,
+            "y": 18
+          },
+          "distance": 0.0,
+          "maximum_difference": 231
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 7,
+            "y": 17
+          },
+          "distance": 0.0,
+          "maximum_difference": 626
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 60,
+            "y": 19
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 6,
+            "y": 17
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 10,
+      "maximum_changed_pixels": 46,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 26,
+      "id": "armed-traffic-car",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 29,
+            "y": 7
+          },
+          "distance": 0.0,
+          "maximum_difference": 443
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 32,
+            "y": 7
+          },
+          "distance": 0.0,
+          "maximum_difference": 731
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 67,
+            "y": 18
+          },
+          "distance": 0.0,
+          "maximum_difference": 503
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 7,
+            "y": 18
+          },
+          "distance": 0.0,
+          "maximum_difference": 464
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 69,
+            "y": 20
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 6,
+            "y": 18
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 38,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 33,
+      "id": "cbrn-vehicle",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 13,
+            "y": 16
+          },
+          "distance": 0.0,
+          "maximum_difference": 318
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 16,
+            "y": 16
+          },
+          "distance": 0.0,
+          "maximum_difference": 302
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 43,
+            "y": 16
+          },
+          "distance": 0.0,
+          "maximum_difference": 533
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 57,
+            "y": 16
+          },
+          "distance": 0.0,
+          "maximum_difference": 466
+        },
+        {
+          "index": 5,
+          "pixel": {
+            "x": 91,
+            "y": 37
+          },
+          "distance": 1.0,
+          "maximum_difference": 695
+        },
+        {
+          "index": 6,
+          "pixel": {
+            "x": 8,
+            "y": 35
+          },
+          "distance": 0.0,
+          "maximum_difference": 529
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 91,
+            "y": 38
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 8,
+            "y": 34
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 83,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 86,
+      "id": "control-van-sar",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 33,
+            "y": 23
+          },
+          "distance": 0.0,
+          "maximum_difference": 455
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 36,
+            "y": 23
+          },
+          "distance": 0.0,
+          "maximum_difference": 734
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 8,
+            "y": 46
+          },
+          "distance": 0.0,
+          "maximum_difference": 403
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 92,
+            "y": 40
+          },
+          "distance": 0.0,
+          "maximum_difference": 244
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 5,
+            "y": 46
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 95,
+            "y": 43
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 53,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 92,
+      "id": "drone-vehicle-police-station",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 38,
+            "y": 23
+          },
+          "distance": 0.0,
+          "maximum_difference": 686
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 52,
+            "y": 23
+          },
+          "distance": 0.0,
+          "maximum_difference": 683
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 7,
+            "y": 37
+          },
+          "distance": 0.0,
+          "maximum_difference": 252
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 79,
+            "y": 33
+          },
+          "distance": 0.0,
+          "maximum_difference": 307
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 5,
+            "y": 37
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 80,
+            "y": 34
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 42,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 97,
+      "id": "specialist-paramedic-rrv",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 33,
+            "y": 7
+          },
+          "distance": 0.0,
+          "maximum_difference": 635
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 41,
+            "y": 7
+          },
+          "distance": 0.0,
+          "maximum_difference": 424
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 6,
+            "y": 18
+          },
+          "distance": 0.0,
+          "maximum_difference": 516
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 66,
+            "y": 15
+          },
+          "distance": 0.0,
+          "maximum_difference": 224
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 5,
+            "y": 18
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 66,
+            "y": 15
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 45,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 110,
+      "id": "eod-commander",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 38,
+            "y": 17
+          },
+          "distance": 0.0,
+          "maximum_difference": 474
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 51,
+            "y": 17
+          },
+          "distance": 0.0,
+          "maximum_difference": 474
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 7,
+            "y": 33
+          },
+          "distance": 0.0,
+          "maximum_difference": 556
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 74,
+            "y": 29
+          },
+          "distance": 0.0,
+          "maximum_difference": 342
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 7,
+            "y": 33
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 74,
+            "y": 29
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 44,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 111,
+      "id": "eod-response-vehicle",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 34,
+            "y": 10
+          },
+          "distance": 0.0,
+          "maximum_difference": 264
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 39,
+            "y": 10
+          },
+          "distance": 0.0,
+          "maximum_difference": 143
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 6,
+            "y": 33
+          },
+          "distance": 0.0,
+          "maximum_difference": 632
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 84,
+            "y": 31
+          },
+          "distance": 0.0,
+          "maximum_difference": 362
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 6,
+            "y": 33
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 84,
+            "y": 31
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 53,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 112,
+      "id": "eod-medium-equipment-van",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 37,
+            "y": 9
+          },
+          "distance": 0.0,
+          "maximum_difference": 394
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 41,
+            "y": 9
+          },
+          "distance": 0.0,
+          "maximum_difference": 734
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 7,
+            "y": 33
+          },
+          "distance": 0.0,
+          "maximum_difference": 707
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 94,
+            "y": 32
+          },
+          "distance": 0.0,
+          "maximum_difference": 285
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 7,
+            "y": 33
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 94,
+            "y": 32
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 45,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 113,
+      "id": "eod-heavy-equipment-vehicle",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 16,
+            "y": 14
+          },
+          "distance": 0.0,
+          "maximum_difference": 335
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 19,
+            "y": 14
+          },
+          "distance": 0.0,
+          "maximum_difference": 335
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 7,
+            "y": 31
+          },
+          "distance": 0.0,
+          "maximum_difference": 552
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 112,
+            "y": 14
+          },
+          "distance": 0.0,
+          "maximum_difference": 679
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 7,
+            "y": 31
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 115,
+            "y": 31
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 47,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 114,
+      "id": "marine-eod-response-vehicle",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 56,
+            "y": 7
+          },
+          "distance": 0.0,
+          "maximum_difference": 601
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 59,
+            "y": 7
+          },
+          "distance": 0.0,
+          "maximum_difference": 678
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 5,
+            "y": 22
+          },
+          "distance": 0.0,
+          "maximum_difference": 651
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 77,
+            "y": 20
+          },
+          "distance": 0.0,
+          "maximum_difference": 225
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 5,
+            "y": 22
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 77,
+            "y": 20
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 46,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 115,
+      "id": "marine-eod-equipment-van",
+      "lights": [
+        {
+          "index": 1,
+          "pixel": {
+            "x": 35,
+            "y": 7
+          },
+          "distance": 0.0,
+          "maximum_difference": 253
+        },
+        {
+          "index": 2,
+          "pixel": {
+            "x": 39,
+            "y": 7
+          },
+          "distance": 0.0,
+          "maximum_difference": 734
+        },
+        {
+          "index": 3,
+          "pixel": {
+            "x": 6,
+            "y": 29
+          },
+          "distance": 0.0,
+          "maximum_difference": 598
+        },
+        {
+          "index": 4,
+          "pixel": {
+            "x": 91,
+            "y": 28
+          },
+          "distance": 0.0,
+          "maximum_difference": 382
+        }
+      ],
+      "running_lights": {
+        "front": {
+          "pixel": {
+            "x": 6,
+            "y": 29
+          },
+          "distance": 0.0
+        },
+        "rear": {
+          "pixel": {
+            "x": 91,
+            "y": 28
+          },
+          "distance": 0.0
+        }
+      },
+      "changed_frames": 11,
+      "maximum_changed_pixels": 51,
+      "outside_fixture_pixels": 0,
+      "passed": true,
+      "errors": []
+    }
+  ]
+}

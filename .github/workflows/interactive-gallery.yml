@@ -11,6 +11,8 @@ on:
       - data/vehicle-slots.json
       - data/prototypes.json
       - data/v1.2.6-scope.json
+      - data/v1.4.1-scope.json
+      - data/v1.4.1-light-fixtures.json
       - data/v1.4-overhaul-profile.json
       - assets/exports/command/**
       - .github/workflows/interactive-gallery.yml
@@ -24,6 +26,8 @@ on:
       - data/vehicle-slots.json
       - data/prototypes.json
       - data/v1.2.6-scope.json
+      - data/v1.4.1-scope.json
+      - data/v1.4.1-light-fixtures.json
       - data/v1.4-overhaul-profile.json
       - assets/exports/command/**
       - .github/workflows/interactive-gallery.yml

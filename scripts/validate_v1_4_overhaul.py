@@ -15,11 +15,13 @@ from PIL import Image, ImageChops, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILE_PATH = ROOT / "data" / "v1.4-overhaul-profile.json"
+PROFILE = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
+RELEASE = str(PROFILE["release"])
 STATIC_DIR = ROOT / "assets" / "exports" / "command" / "static"
 ANIMATED_DIR = ROOT / "assets" / "exports" / "command" / "animated"
-PREVIEW_DIR = ROOT / "assets" / "previews" / "v1.4.0"
-REPORT_PATH = ROOT / "data" / "v1.4.0-overhaul-report.json"
-ANCHOR_REPORT_PATH = ROOT / "data" / "v1.4.0-anchor-report.json"
+PREVIEW_DIR = ROOT / "assets" / "previews" / RELEASE
+REPORT_PATH = ROOT / "data" / f"{RELEASE}-overhaul-report.json"
+ANCHOR_REPORT_PATH = ROOT / "data" / f"{RELEASE}-anchor-report.json"
 
 
 UPGRADE_NAMES = {
@@ -200,10 +202,10 @@ def anchor_audit(vehicle_map: dict[str, dict], profile: dict) -> dict:
 
 
 def main() -> None:
-    profile = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
-    build = json.loads((ROOT / "data" / "v1.4.0-build-report.json").read_text(encoding="utf-8"))
-    core = json.loads((ROOT / "data" / "v1.4.0-qa-report.json").read_text(encoding="utf-8"))
-    masters = json.loads((ROOT / "data" / "v1.4.0-master-report.json").read_text(encoding="utf-8"))
+    profile = PROFILE
+    build = json.loads((ROOT / "data" / f"{RELEASE}-build-report.json").read_text(encoding="utf-8"))
+    core = json.loads((ROOT / "data" / f"{RELEASE}-qa-report.json").read_text(encoding="utf-8"))
+    masters = json.loads((ROOT / profile["baked_master_report"]).read_text(encoding="utf-8"))
     manifest = json.loads((ROOT / "data" / "prototypes.json").read_text(encoding="utf-8"))
     vehicle_map = {item["id"]: item for item in manifest["vehicles"]}
     details = {item["id"]: item for item in build["vehicles_detail"]}
