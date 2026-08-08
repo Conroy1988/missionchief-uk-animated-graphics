@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#071118">
+    <meta name="description" content="Explore all 117 static and animated TKB UK Emergency Fleet graphics for MissionChief UK.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <link rel="canonical" href="https://tkb-gaming.scot/games/missionchief/guides/fleet-gallery/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TKB Gaming">
+    <meta property="og:title" content="TKB UK Emergency Fleet · Interactive Gallery">
+    <meta property="og:description" content="Search 117 MissionChief UK vehicle graphics, test map conditions and compare stable releases.">
+    <meta property="og:url" content="https://tkb-gaming.scot/games/missionchief/guides/fleet-gallery/">
+    <meta property="og:image" content="https://tkb-gaming.scot/images/tkb-command-network-social.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TKB UK Emergency Fleet · Interactive Gallery">
+    <meta name="twitter:description" content="Search 117 MissionChief UK vehicle graphics, test map conditions and compare stable releases.">
+    <meta name="twitter:image" content="https://tkb-gaming.scot/images/tkb-command-network-social.png">
+    <title>TKB UK Emergency Fleet · Interactive Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="app.mjs"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "TKB UK Emergency Fleet Interactive Gallery",
+        "description": "Interactive catalogue of 117 static and animated MissionChief UK vehicle graphics.",
+        "url": "https://tkb-gaming.scot/games/missionchief/guides/fleet-gallery/",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "TKB Gaming",
+          "url": "https://tkb-gaming.scot/"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "name": "TKB UK Emergency Fleet",
+          "numberOfItems": 117
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#fleet-grid">Skip to the fleet</a>
+
+    <header class="site-header">
+      <a class="brand" href="https://tkb-gaming.scot/" aria-label="TKB Gaming home">
+        <span class="brand-mark" aria-hidden="true">TKB</span>
+        <span>
+          <strong>UK Emergency Fleet</strong>
+          <small>MissionChief command assets</small>
+        </span>
+      </a>
+      <nav class="header-links" aria-label="Project links">
+        <a href="https://tkb-gaming.scot/games/missionchief/guides/">UK Guide</a>
+        <a href="https://github.com/Conroy1988/missionchief-uk-animated-graphics">GitHub</a>
+        <a class="button button-primary" href="https://www.missionchief.co.uk/vehicle_graphics/5897">Use pack <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-pulse"></span> v1.4.0 · Production fleet</p>
+          <h1 id="hero-title">Every response.<br><span>One command view.</span></h1>
+          <p class="hero-lede">Inspect all 117 MissionChief UK vehicle slots at true map scale. Search the fleet, test four map conditions, control APNG playback and compare stable releases.</p>
+          <div class="hero-actions">
+            <a class="button button-primary button-large" href="#explore">Explore the fleet</a>
+            <button class="button button-ghost button-large" id="random-vehicle" type="button">Surprise me</button>
+          </div>
+          <dl class="hero-metrics" aria-label="Fleet summary">
+            <div><dt>117</dt><dd>vehicle slots</dd></div>
+            <div><dt>234</dt><dd>release assets</dd></div>
+            <div><dt>12–18</dt><dd>APNG frames</dd></div>
+            <div><dt>100/75/50</dt><dd>map scales</dd></div>
+          </dl>
+        </div>
+
+        <div class="command-visual" aria-label="Representative animated fleet preview">
+          <div class="visual-topline">
+            <span>LIVE MAP PREVIEW</span>
+            <span class="signal-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <div class="visual-map map-satellite">
+            <span class="map-ring ring-one"></span>
+            <span class="map-ring ring-two"></span>
+            <img class="hero-unit hero-fire" src="assets/exports/command/animated/fire-rescue-pump.png" alt="">
+            <img class="hero-unit hero-police" src="assets/exports/command/animated/police-incident-response-vehicle.png" alt="">
+            <img class="hero-unit hero-ambulance" src="assets/exports/command/animated/frontline-ambulance.png" alt="">
+            <img class="hero-unit hero-hems" src="assets/exports/command/animated/hems.png" alt="">
+            <div class="incident-pin"><span></span><b>INCIDENT 01</b></div>
+          </div>
+          <div class="visual-status">
+            <span><i class="dot dot-blue"></i>Independent light phases</span>
+            <span><i class="dot dot-green"></i>Anchor verified</span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="explorer"
+        id="explore"
+        aria-labelledby="explorer-title"
+        data-fleet-gallery
+        data-catalogue-url="vehicles.json"
+        data-current-asset-base="assets/exports/command"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Fleet intelligence</p>
+            <h2 id="explorer-title">Interactive asset gallery</h2>
+          </div>
+          <p>Filters, preview settings and comparisons update instantly. Select a vehicle for its full specification and direct files.</p>
+        </div>
+
+        <div class="control-deck" aria-label="Gallery controls">
+          <div class="search-row">
+            <label class="search-box" for="fleet-search">
+              <span aria-hidden="true">⌕</span>
+              <input id="fleet-search" type="search" autocomplete="off" placeholder="Search name, slot, role or equipment…">
+              <kbd>/</kbd>
+            </label>
+            <label class="select-control">
+              <span>Focus view</span>
+              <select id="focus-filter">
+                <option value="all">All improvements</option>
+              </select>
+            </label>
+            <label class="select-control">
+              <span>Sort</span>
+              <select id="sort-order">
+                <option value="slot">Slot order</option>
+                <option value="name">Vehicle name</option>
+                <option value="service">Service</option>
+                <option value="size-desc">Largest first</option>
+                <option value="size-asc">Smallest first</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset class="service-filter">
+            <legend>Service</legend>
+            <div class="chip-row" id="service-chips"></div>
+          </fieldset>
+
+          <div class="preview-controls">
+            <fieldset class="control-group">
+              <legend>Asset</legend>
+              <div class="segmented" id="asset-mode">
+                <button type="button" data-mode="animated" aria-pressed="true">Animated</button>
+                <button type="button" data-mode="static" aria-pressed="false">Static</button>
+              </div>
+            </fieldset>
+
+            <fieldset class="control-group">
+              <legend>Playback</legend>
+              <div class="button-cluster">
+                <button class="icon-button" id="playback-toggle" type="button" aria-pressed="false"><span aria-hidden="true">Ⅱ</span> Pause</button>
+                <button class="icon-button" id="restart-animation" type="button"><span aria-hidden="true">↻</span> Restart</button>
+              </div>
+            </fieldset>
+
+            <fieldset class="control-group">
+              <legend>Map scale</legend>
+              <div class="segmented" id="scale-mode">
+                <button type="button" data-scale="100" aria-pressed="true">100%</button>
+                <button type="button" data-scale="75" aria-pressed="false">75%</button>
+                <button type="button" data-scale="50" aria-pressed="false">50%</button>
+              </div>
+            </fieldset>
+
+            <label class="select-control map-select">
+              <span>Map condition</span>
+              <select id="map-mode">
+                <option value="satellite">Satellite-style</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="grayscale">Grayscale</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="comparison-controls">
+            <label class="switch-control">
+              <input id="compare-toggle" type="checkbox">
+              <span class="switch" aria-hidden="true"></span>
+              <span><strong>Release compare</strong><small>Show the current asset beside a stable baseline</small></span>
+            </label>
+            <label class="select-control comparison-release">
+              <span>Compare against</span>
+              <select id="comparison-release"></select>
+            </label>
+          </div>
+        </div>
+
+        <div class="results-bar">
+          <p id="result-summary" aria-live="polite">Loading fleet catalogue…</p>
+          <div>
+            <button class="text-button" id="share-view" type="button">Copy view link</button>
+            <button class="text-button" id="clear-filters" type="button">Reset controls</button>
+          </div>
+        </div>
+
+        <div class="fleet-grid" id="fleet-grid" aria-busy="true"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span aria-hidden="true">⌕</span>
+          <h3>No matching unit</h3>
+          <p>Try another service, focus view or search term.</p>
+          <button class="button button-primary" type="button" data-reset>Reset the gallery</button>
+        </div>
+      </section>
+
+      <section class="evidence" aria-labelledby="evidence-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Release evidence</p>
+            <h2 id="evidence-title">Built for hostile map conditions</h2>
+          </div>
+          <p>Every exported pair is validated for transparency, animation geometry, bottom-centre anchoring, half-scale survival and service clarity.</p>
+        </div>
+        <div class="evidence-grid">
+          <a class="evidence-card evidence-wide" href="https://github.com/Conroy1988/missionchief-uk-animated-graphics/blob/v1.4.0/assets/previews/v1.4.0/busy-map-satellite.png">
+            <img src="https://raw.githubusercontent.com/Conroy1988/missionchief-uk-animated-graphics/v1.4.0/assets/previews/v1.4.0/busy-map-satellite.png" alt="Dense fleet test on a satellite-style map">
+            <span><b>Dense satellite test</b><small>117 units · simultaneous map pressure</small></span>
+          </a>
+          <a class="evidence-card" href="https://github.com/Conroy1988/missionchief-uk-animated-graphics/blob/v1.4.0/assets/previews/v1.4.0/weakest-artwork-redraw-before-after.png">
+            <img src="https://raw.githubusercontent.com/Conroy1988/missionchief-uk-animated-graphics/v1.4.0/assets/previews/v1.4.0/weakest-artwork-redraw-before-after.png" alt="Before and after detail redraw comparison">
+            <span><b>Redraw audit</b><small>Weakest artwork rebuilt</small></span>
+          </a>
+          <a class="evidence-card" href="https://github.com/Conroy1988/missionchief-uk-animated-graphics/blob/v1.4.0/assets/previews/v1.4.0/desynchronised-lights-crowd.png">
+            <img src="https://raw.githubusercontent.com/Conroy1988/missionchief-uk-animated-graphics/v1.4.0/assets/previews/v1.4.0/desynchronised-lights-crowd.png" alt="Crowded response with desynchronised emergency lights">
+            <span><b>Light-phase audit</b><small>11 independent phase buckets</small></span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <strong>TKB UK Emergency Fleet</strong>
+        <p>Original map-scale artwork for MissionChief UK. No official service logos, registrations or copied manufacturer branding.</p>
+      </div>
+      <nav aria-label="Footer links">
+        <a href="https://www.missionchief.co.uk/vehicle_graphics/5897">MissionChief pack</a>
+        <a href="https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.0">v1.4.0 release</a>
+        <a href="https://github.com/Conroy1988/missionchief-uk-animated-graphics/blob/main/LICENSE.md">Licence</a>
+      </nav>
+    </footer>
+
+    <dialog class="vehicle-dialog" id="vehicle-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-shell">
+        <button class="dialog-close" id="dialog-close" type="button" aria-label="Close vehicle details">×</button>
+        <div id="dialog-content"></div>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
