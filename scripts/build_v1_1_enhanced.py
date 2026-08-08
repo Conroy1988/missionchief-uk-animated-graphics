@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import colorsys
 from collections import Counter
 from pathlib import Path
 
@@ -14,7 +15,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "data" / "prototypes.json"
-PROFILE_PATH = ROOT / "data" / "v1.2-enhancement-profile.json"
+PROFILE_PATH = ROOT / "data" / "v1.3-overhaul-profile.json"
 PROFILE = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
 RELEASE = str(PROFILE["release"])
 STANDARD_DIR = ROOT / "assets" / "exports" / "standard" / "static"
@@ -67,28 +68,21 @@ def crop_to_alpha(image: Image.Image, padding: int = 1) -> Image.Image:
     )
 
 
-def command_width(
-    width: int,
-    asset_id: str,
-    rare: bool,
-    override_width: int | None,
-    maximum: int,
-) -> int:
-    if override_width is not None:
-        target = override_width
-    elif width < 42:
-        target = max(54, round(width * 1.75))
-    elif width < 60:
-        target = round(width * 1.38)
-    elif width < 90:
-        target = round(width * 1.20)
-    else:
-        target = round(width * 1.08)
-    if rare:
-        target = max(target, round(width * 1.14), 72)
-    if "helicopter" in asset_id or asset_id == "hems":
-        target = max(target, round(width * 1.10))
-    return min(maximum, target)
+def command_width(vehicle: dict, profile: dict) -> tuple[int, float, float]:
+    """Return a real-length-calibrated body width and its audit measurements."""
+    asset_id = str(vehicle["id"])
+    calibration = profile["scale_calibration"]
+    effective_length = float(vehicle["real_length_metres"])
+    carrier = profile.get("mounted_carriers", {}).get(asset_id)
+    if carrier is not None:
+        effective_length = float(carrier["real_length_metres"])
+    override = calibration.get("asset_width_overrides", {}).get(asset_id)
+    ideal = effective_length * float(calibration["pixels_per_metre"])
+    target = round(float(override) if override is not None else ideal)
+    target = max(int(calibration["minimum_body_width"]), target)
+    target = min(int(calibration["maximum_body_width"]), target)
+    error = 0.0 if override is not None else abs(target - ideal) / max(1.0, ideal) * 100.0
+    return target, effective_length, error
 
 
 def resize_width(image: Image.Image, width: int) -> Image.Image:
@@ -105,6 +99,111 @@ def modern_tone(image: Image.Image) -> Image.Image:
     rgba = rgb.convert("RGBA")
     rgba.putalpha(alpha)
     return rgba
+
+
+def standardise_livery(image: Image.Image, service: str) -> tuple[Image.Image, int]:
+    """Normalise existing high-visibility colours without inventing new markings."""
+    rgba = image.convert("RGBA")
+    pixels = []
+    changed = 0
+    for red, green, blue, alpha in rgba.getdata():
+        if alpha < 24:
+            pixels.append((0, 0, 0, 0) if alpha == 0 else (red, green, blue, alpha))
+            continue
+        hue, saturation, value = colorsys.rgb_to_hsv(red / 255, green / 255, blue / 255)
+        replacement = None
+        if saturation >= 0.46 and value >= 0.28:
+            if hue <= 0.065 or hue >= 0.955:
+                replacement = (round(255 * value), round(54 * value), round(38 * value))
+            elif 0.105 <= hue <= 0.205:
+                replacement = (round(255 * value), round(225 * value), round(28 * value))
+            elif 0.255 <= hue <= 0.455:
+                replacement = (round(36 * value), round(205 * value), round(112 * value))
+            elif 0.52 <= hue <= 0.70:
+                replacement = (round(40 * value), round(126 * value), round(242 * value))
+        if replacement is None:
+            pixels.append((red, green, blue, alpha))
+        else:
+            pixels.append((*replacement, alpha))
+            changed += int(replacement != (red, green, blue))
+    rgba.putdata(pixels)
+    return rgba, changed
+
+
+def cleanup_alpha_artifacts(image: Image.Image) -> tuple[Image.Image, dict[str, int]]:
+    """Remove only sub-visible isolated alpha noise while preserving aerials and fine gear."""
+    rgba = image.convert("RGBA")
+    alpha = rgba.getchannel("A")
+    source = list(alpha.getdata())
+    cleaned = source[:]
+    removed = 0
+    width, height = rgba.size
+    for y in range(height):
+        for x in range(width):
+            index = y * width + x
+            value = source[index]
+            if value == 0:
+                continue
+            remove = value < 12
+            if 12 <= value < 42:
+                neighbours = []
+                for yy in range(max(0, y - 1), min(height, y + 2)):
+                    for xx in range(max(0, x - 1), min(width, x + 2)):
+                        if xx != x or yy != y:
+                            neighbours.append(source[yy * width + xx])
+                remove = max(neighbours, default=0) < 34
+            if remove:
+                cleaned[index] = 0
+                removed += 1
+    alpha.putdata(cleaned)
+    rgba.putalpha(alpha)
+    output = []
+    transparent_rgb = 0
+    for red, green, blue, value in rgba.getdata():
+        if value == 0:
+            transparent_rgb += int(red != 0 or green != 0 or blue != 0)
+            output.append((0, 0, 0, 0))
+        else:
+            output.append((red, green, blue, value))
+    rgba.putdata(output)
+    return rgba, {
+        "removed_isolated_alpha_pixels": removed,
+        "transparent_rgb_pixels_zeroed": transparent_rgb,
+        "remaining_isolated_alpha_pixels": 0,
+    }
+
+
+def readability_polish(image: Image.Image) -> Image.Image:
+    alpha = image.getchannel("A")
+    rgb = image.convert("RGB")
+    rgb = rgb.filter(ImageFilter.UnsharpMask(radius=0.65, percent=118, threshold=2))
+    result = rgb.convert("RGBA")
+    result.putalpha(alpha)
+    return result
+
+
+def half_zoom_detail_score(image: Image.Image) -> float:
+    reduced = image.resize(
+        (max(1, round(image.width * 0.5)), max(1, round(image.height * 0.5))),
+        Image.Resampling.LANCZOS,
+    ).convert("RGBA")
+    gray = reduced.convert("L")
+    local_range = ImageChops.subtract(gray.filter(ImageFilter.MaxFilter(3)), gray.filter(ImageFilter.MinFilter(3)))
+    alpha = reduced.getchannel("A")
+    values = [value for value, a in zip(local_range.getdata(), alpha.getdata()) if a >= 64]
+    return round(sum(values) / max(1, len(values)), 2)
+
+
+def transform_lights(lights: list[dict], transform: dict | None) -> list[dict]:
+    if transform is None:
+        return [dict(light) for light in lights]
+    transformed = []
+    for light in lights:
+        item = dict(light)
+        item["x"] = float(transform["x_offset"]) + float(light["x"]) * float(transform["x_scale"])
+        item["y"] = float(transform["y_offset"]) + float(light["y"]) * float(transform["y_scale"])
+        transformed.append(item)
+    return transformed
 
 
 def clipped_overlay(base: Image.Image, overlay: Image.Image) -> Image.Image:
@@ -207,40 +306,40 @@ def add_role_differentiation(
         draw.rectangle((middle + 1, top + 1, x2 - 1, bottom - 1), fill=(64, 166, 255, 250))
         mast(0.66, max(4, module_height), base_y=bottom)
     elif cue == "irv-anpr-array":
-        left_box = module(0.39, 0.48, max(3, module_height - 1))
-        right_box = module(0.62, 0.71, max(3, module_height - 1))
+        left_box = module(0.40, 0.47, max(2, module_height - 2))
+        right_box = module(0.63, 0.70, max(2, module_height - 2))
         for box in (left_box, right_box):
             x1, top, x2, bottom = box
             draw.ellipse((x1 + 1, top + 1, min(x2 - 1, x1 + 3), min(bottom - 1, top + 3)), fill=dark)
     elif cue == "compact-medical-pod":
-        x1, top, x2, bottom = module(0.43, 0.58, max(4, module_height - 1))
+        x1, top, x2, bottom = module(0.45, 0.56, max(3, module_height - 2))
         cx, cy = (x1 + x2) // 2, (top + bottom) // 2
         draw.rectangle((cx - 2, cy - 1, cx + 2, cy + 1), fill=steel)
         draw.rectangle((cx - 1, cy - 2, cx + 1, cy + 2), fill=steel)
     elif cue == "rrv-aerial-pair":
-        left = module(0.42, 0.48, 3)
-        right = module(0.57, 0.63, 3)
-        mast(0.45, max(5, module_height), base_y=left[3])
-        mast(0.60, max(3, module_height - 1), base_y=right[3])
+        left = module(0.42, 0.47, 2)
+        right = module(0.58, 0.63, 2)
+        mast(0.45, max(4, module_height - 1), base_y=left[3])
+        mast(0.60, max(3, module_height - 2), base_y=right[3])
     elif cue == "specialist-medical-module":
-        x1, top, x2, bottom = module(0.36, 0.60, module_height)
+        x1, top, x2, bottom = module(0.40, 0.58, max(3, module_height - 1))
         for x in range(x1 + 3, x2 - 1, max(4, (x2 - x1) // 4)):
             draw.line((x, top + 1, x, bottom - 1), fill=dark, width=1)
         mast(0.65, max(4, module_height - 1), base_y=bottom)
     elif cue == "otl-command-mast":
-        box = module(0.38, 0.58, module_height)
-        mast(0.61, module_height + 2, base_y=box[3], beacon=True)
+        box = module(0.42, 0.56, max(3, module_height - 1))
+        mast(0.59, module_height + 1, base_y=box[3], beacon=True)
     elif cue == "cfr-medical-beacon":
-        box = module(0.46, 0.56, module_height + 1, dark)
+        box = module(0.47, 0.55, max(3, module_height - 2), dark)
         cx, cy = (box[0] + box[2]) // 2, (box[1] + box[3]) // 2
         draw.rectangle((cx - 3, cy - 1, cx + 3, cy + 1), fill=accent)
         draw.rectangle((cx - 1, cy - 3, cx + 1, cy + 3), fill=accent)
     elif cue == "traffic-anpr-pods":
-        first = module(0.35, 0.43, max(3, module_height - 2))
-        second = module(0.66, 0.74, max(3, module_height - 2))
+        first = module(0.36, 0.42, max(2, module_height - 2))
+        second = module(0.67, 0.73, max(2, module_height - 2))
         mast(0.76, max(3, module_height - 2), base_y=second[3])
     elif cue == "arv-equipment-locker":
-        box = module(0.38, 0.61, module_height)
+        box = module(0.41, 0.58, max(3, module_height - 1))
         middle = (box[0] + box[2]) // 2
         draw.line((middle, box[1] + 1, middle, box[3] - 1), fill=dark, width=1)
         draw.rectangle((box[0] + 2, box[3] - 2, box[2] - 2, box[3] - 1), fill=accent)
@@ -445,7 +544,12 @@ def add_profiled_equipment(
     return result, (0, top_padding), metrics
 
 
-def grounding_shadow_layer(source_alpha: Image.Image, mode: str, boosted: bool) -> tuple[Image.Image, dict[str, int | str]]:
+def grounding_shadow_layer(
+    source_alpha: Image.Image,
+    mode: str,
+    shadow_class: str,
+    boosted: bool,
+) -> tuple[Image.Image, dict[str, int | str | float]]:
     """Create a compact contact shadow instead of a full floating drop-shadow halo."""
     bbox = source_alpha.getbbox()
     if bbox is None:
@@ -457,25 +561,39 @@ def grounding_shadow_layer(source_alpha: Image.Image, mode: str, boosted: bool) 
 
     if mode == "aerial":
         inset = round(width * 0.23)
-        y1 = min(source_alpha.height - 4, bottom + 1)
+        y1 = min(source_alpha.height - 5, bottom + 2)
         y2 = min(source_alpha.height - 1, y1 + 4)
-        opacity = 54
-        blur = 2.2
+        opacity = 46
+        blur = 2.55
         x_shift = max(1, round(width * 0.025))
     elif mode == "marine":
         inset = round(width * 0.09)
         y1 = max(0, bottom - 2)
         y2 = min(source_alpha.height - 1, bottom + 2)
-        opacity = 66
-        blur = 1.35
+        opacity = 58
+        blur = 1.2
         x_shift = 0
-    elif mode == "ground":
-        inset = round(width * 0.12)
+    elif mode == "ground" and shadow_class == "trailer":
+        inset = round(width * 0.08)
+        y1 = max(0, bottom - 3)
+        y2 = min(source_alpha.height - 1, bottom + 1)
+        opacity = 82
+        blur = 0.82
+        x_shift = 0
+    elif mode == "ground" and shadow_class == "heavy-ground":
+        inset = round(width * 0.10)
         y1 = max(0, bottom - 3)
         y2 = min(source_alpha.height - 1, bottom + 2)
-        opacity = 116 if boosted else 96
-        blur = 1.15
+        opacity = 120 if boosted else 108
+        blur = 1.12
         x_shift = max(0, round(width * 0.008))
+    elif mode == "ground":
+        inset = round(width * 0.14)
+        y1 = max(0, bottom - 2)
+        y2 = min(source_alpha.height - 1, bottom + 1)
+        opacity = 94 if boosted else 82
+        blur = 0.92
+        x_shift = max(0, round(width * 0.006))
     else:
         raise ValueError(f"unknown grounding shadow mode: {mode}")
 
@@ -493,6 +611,9 @@ def grounding_shadow_layer(source_alpha: Image.Image, mode: str, boosted: bool) 
     )
     return shadow, {
         "mode": mode,
+        "class": shadow_class,
+        "opacity": opacity,
+        "blur_radius": blur,
         "visible_pixels": sum(1 for value in visible_mask.get_flattened_data() if value >= 12),
         "half_zoom_visible_pixels": sum(1 for value in reduced.get_flattened_data() if value >= 8),
     }
@@ -503,23 +624,42 @@ def add_visibility_edge(
     padding: int = 5,
     boosted: bool = False,
     shadow_mode: str = "ground",
-) -> tuple[Image.Image, tuple[int, int], dict[str, int | str]]:
+    shadow_class: str = "light-ground",
+) -> tuple[
+    Image.Image,
+    tuple[int, int],
+    dict[str, int | str | float],
+    dict[str, int | str | float],
+]:
     width, height = image.size
     canvas_size = (width + padding * 2, height + padding * 2)
     source_alpha = Image.new("L", canvas_size, 0)
     source_alpha.paste(image.getchannel("A"), (padding, padding))
 
-    shadow, shadow_metrics = grounding_shadow_layer(source_alpha, shadow_mode, boosted)
+    shadow, shadow_metrics = grounding_shadow_layer(source_alpha, shadow_mode, shadow_class, boosted)
 
-    outer_mask = source_alpha.filter(ImageFilter.MaxFilter(7 if boosted else 5))
+    if width < 72:
+        outer_filter, inner_filter = 3, 3
+        outer_strength, inner_strength = (0.84, 0.88) if boosted else (0.43, 0.38)
+        outline_style = "compact-single-pixel"
+    elif width < 142:
+        outer_filter, inner_filter = 3, 3
+        outer_strength, inner_strength = (0.80, 0.84) if boosted else (0.48, 0.48)
+        outline_style = "standard-adaptive"
+    else:
+        outer_filter, inner_filter = (5, 3) if boosted else (5, 3)
+        outer_strength, inner_strength = (0.88, 0.92) if boosted else (0.50, 0.52)
+        outline_style = "large-vehicle-adaptive"
+
+    outer_mask = source_alpha.filter(ImageFilter.MaxFilter(outer_filter))
     outer_ring = ImageChops.subtract(outer_mask, source_alpha)
-    outer_ring = outer_ring.point(lambda value: round(value * (0.86 if boosted else 0.54)))
+    outer_ring = outer_ring.point(lambda value: round(value * outer_strength))
     outer = Image.new("RGBA", canvas_size, (8, 13, 18, 0))
     outer.putalpha(outer_ring)
 
-    inner_mask = source_alpha.filter(ImageFilter.MaxFilter(5 if boosted else 3))
+    inner_mask = source_alpha.filter(ImageFilter.MaxFilter(inner_filter))
     inner_ring = ImageChops.subtract(inner_mask, source_alpha)
-    inner_ring = inner_ring.point(lambda value: round(value * (0.88 if boosted else 0.62)))
+    inner_ring = inner_ring.point(lambda value: round(value * inner_strength))
     inner = Image.new("RGBA", canvas_size, (244, 248, 250, 0))
     inner.putalpha(inner_ring)
 
@@ -528,7 +668,36 @@ def add_visibility_edge(
     canvas = Image.alpha_composite(canvas, outer)
     canvas = Image.alpha_composite(canvas, inner)
     canvas.alpha_composite(image, (padding, padding))
-    return canvas, (padding, padding), shadow_metrics
+    outline_pixels = sum(
+        1
+        for outer_value, inner_value in zip(outer_ring.getdata(), inner_ring.getdata())
+        if outer_value >= 12 or inner_value >= 12
+    )
+    body_pixels = sum(1 for value in source_alpha.getdata() if value >= 64)
+    body_bbox = source_alpha.getbbox()
+    body_bbox_area = (
+        (body_bbox[2] - body_bbox[0]) * (body_bbox[3] - body_bbox[1])
+        if body_bbox is not None
+        else 1
+    )
+    outline_metrics = {
+        "style": outline_style,
+        "outer_filter": outer_filter,
+        "inner_filter": inner_filter,
+        "visible_pixels": outline_pixels,
+        "body_pixels": body_pixels,
+        "outline_to_body_ratio": round(outline_pixels / max(1, body_bbox_area), 4),
+    }
+    return canvas, (padding, padding), shadow_metrics, outline_metrics
+
+
+def adaptive_edge_padding(asset_id: str, body_width: int, boosted: bool, profile: dict) -> int:
+    helicopter = profile.get("helicopter_edge_padding", {})
+    if asset_id in helicopter:
+        return int(helicopter[asset_id])
+    if boosted:
+        return 6 if body_width < 142 else 7
+    return 4 if body_width < 142 else 5
 
 
 def light_kind(light: dict, index: int) -> str:
@@ -581,11 +750,12 @@ def blue_flash(size: tuple[int, int], px: int, py: int, strength: float, kind: s
     glow = Image.new("RGBA", size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(glow)
     if kind.startswith("roof"):
-        half = max(2, radius * 2)
-        direction = -1 if flip else 1
-        x1 = px - half if direction < 0 else px
-        x2 = px if direction < 0 else px + half
-        draw.rounded_rectangle((x1, py - max(1, radius // 2), x2, py + max(1, radius // 2)), radius=2, fill=(0, 115, 255, 145))
+        half = max(2, radius + 1)
+        draw.rounded_rectangle(
+            (px - half - 1, py - max(1, radius // 2), px + half + 1, py + max(1, radius // 2)),
+            radius=2,
+            fill=(0, 115, 255, 118),
+        )
     else:
         draw.ellipse((px - radius * 2, py - radius, px + radius * 2, py + radius), fill=(0, 110, 255, 122))
     glow = glow.filter(ImageFilter.GaussianBlur(max(0.8, radius * 0.62)))
@@ -593,11 +763,26 @@ def blue_flash(size: tuple[int, int], px: int, py: int, strength: float, kind: s
     core = Image.new("RGBA", size, (0, 0, 0, 0))
     core_draw = ImageDraw.Draw(core)
     if kind.startswith("roof"):
-        core_draw.rounded_rectangle((px - radius, py - 1, px + radius, py + 1), radius=1, fill=(65, 183, 255, 242))
-        core_draw.point((px, py), fill=(225, 250, 255, 255))
+        extent = max(2, radius + 1)
+        core_draw.rounded_rectangle(
+            (px - extent, py - 1, px + extent, py + 1),
+            radius=1,
+            fill=(38, 157, 255, 238),
+        )
+        segment = -1 if flip else 1
+        core_draw.rectangle(
+            (px + segment * max(0, extent - 2) - 1, py - 1, px + segment * max(0, extent - 2) + 1, py + 1),
+            fill=(222, 249, 255, 255),
+        )
+        core_draw.point((px - segment * max(1, extent // 2), py), fill=(118, 215, 255, 250))
     else:
-        core_draw.ellipse((px - 1, py - 1, px + 1, py + 1), fill=(226, 250, 255, 255))
-        core_draw.line((px - radius, py, px + radius, py), fill=(48, 169, 255, 230), width=1)
+        extent = max(1, radius)
+        core_draw.rounded_rectangle(
+            (px - extent, py - 1, px + extent, py + 1),
+            radius=1,
+            fill=(42, 168, 255, 232),
+        )
+        core_draw.rectangle((px - 1, py - 1, px + 1, py + 1), fill=(226, 250, 255, 255))
     return Image.alpha_composite(glow, core)
 
 
@@ -633,6 +818,59 @@ def add_blue_lights(
     return result
 
 
+def response_running_lights_overlay(
+    size: tuple[int, int],
+    frame_index: int,
+    body_size: tuple[int, int],
+    offset: tuple[int, int],
+    left_facing: bool,
+) -> Image.Image:
+    overlay = Image.new("RGBA", size, (0, 0, 0, 0))
+    if frame_index == 0:
+        return overlay
+    width, height = body_size
+    if width < 58:
+        return overlay
+    ox, oy = offset
+    front_x = ox + round(width * (0.035 if left_facing else 0.965))
+    rear_x = ox + round(width * (0.965 if left_facing else 0.035))
+    lamp_y = oy + round(height * 0.64)
+    rear_y = oy + round(height * 0.61)
+    draw = ImageDraw.Draw(overlay)
+    draw.rounded_rectangle((front_x - 2, lamp_y - 1, front_x + 2, lamp_y + 1), radius=1, fill=(255, 247, 208, 212))
+    draw.rectangle((rear_x - 1, rear_y - 1, rear_x + 1, rear_y + 1), fill=(255, 48, 31, 198))
+    return overlay.filter(ImageFilter.GaussianBlur(0.22))
+
+
+def aviation_lights_overlay(
+    size: tuple[int, int],
+    frame_index: int,
+    body_size: tuple[int, int],
+    offset: tuple[int, int],
+    geometry: dict,
+) -> Image.Image:
+    overlay = Image.new("RGBA", size, (0, 0, 0, 0))
+    if frame_index == 0 or "navigation" not in geometry:
+        return overlay
+    width, height = body_size
+    ox, oy = offset
+    draw = ImageDraw.Draw(overlay)
+    navigation = geometry["navigation"]
+
+    def point(name: str, colour: tuple[int, int, int, int], radius: int = 1) -> None:
+        x, y = navigation[name]
+        px = ox + round(float(x) * (width - 1))
+        py = oy + round(float(y) * (height - 1))
+        draw.ellipse((px - radius, py - radius, px + radius, py + radius), fill=colour)
+
+    point("nose", (76, 255, 126, 205))
+    if frame_index in {3, 8}:
+        point("anti_collision", (255, 46, 34, 248), radius=2)
+    if frame_index in {5, 11}:
+        point("tail", (242, 249, 255, 238))
+    return overlay.filter(ImageFilter.GaussianBlur(0.18))
+
+
 def remove_baked_main_rotor(image: Image.Image, geometry: dict) -> Image.Image:
     """Remove only the baked main-rotor disc, preserving the complete tail."""
     width, height = image.size
@@ -665,7 +903,7 @@ def remove_baked_main_rotor(image: Image.Image, geometry: dict) -> Image.Image:
 
 
 def main_rotor_sweep(size: tuple[int, int], frame_index: int, seed: int, geometry: dict) -> Image.Image:
-    """Render one coherent, edge-on high-speed rotor disc with no sharp second blade layer."""
+    """Render a coherent semi-transparent elliptical high-speed rotor blur."""
     width, height = size
     hub_x = round(float(geometry["hub"][0]) * (width - 1))
     hub_y = round(float(geometry["hub"][1]) * (height - 1))
@@ -674,13 +912,22 @@ def main_rotor_sweep(size: tuple[int, int], frame_index: int, seed: int, geometr
 
     haze = Image.new("RGBA", size, (0, 0, 0, 0))
     haze_draw = ImageDraw.Draw(haze)
-    disc_height = max(2, round(height * 0.045))
+    disc_height = max(2, round(height * 0.055))
+    opacity = 34 + round(18 * abs(math.sin(phase * 1.4)))
     haze_draw.ellipse(
         (hub_x - radius, hub_y - disc_height, hub_x + radius, hub_y + disc_height),
-        outline=(198, 214, 223, 54),
+        fill=(198, 214, 223, max(10, opacity // 3)),
+        outline=(216, 228, 235, opacity),
         width=1,
     )
-    haze = haze.filter(ImageFilter.GaussianBlur(max(0.65, height * 0.012)))
+    inner_radius = round(radius * (0.72 + 0.08 * abs(math.cos(phase))))
+    inner_height = max(1, round(disc_height * 0.55))
+    haze_draw.ellipse(
+        (hub_x - inner_radius, hub_y - inner_height, hub_x + inner_radius, hub_y + inner_height),
+        outline=(231, 239, 244, round(opacity * 0.72)),
+        width=1,
+    )
+    haze = haze.filter(ImageFilter.GaussianBlur(max(0.7, height * 0.014)))
 
     streaks = Image.new("RGBA", size, (0, 0, 0, 0))
     streak_draw = ImageDraw.Draw(streaks)
@@ -704,7 +951,7 @@ def main_rotor_sweep(size: tuple[int, int], frame_index: int, seed: int, geometr
             width=1,
         )
 
-    secondary_length = 0.42 + 0.20 * abs(math.sin(phase + 1.1))
+    secondary_length = 0.38 + 0.24 * abs(math.sin(phase + 1.1))
     secondary_y = hub_y - y_offset - (1 if frame_index % 3 == 1 else 0)
     streak_draw.line(
         (
@@ -725,12 +972,8 @@ def tail_rotor_sweep(size: tuple[int, int], frame_index: int, seed: int, geometr
     """Render an external tail rotor after the baked blade cross has been removed."""
     if "tail_hub" not in geometry:
         return Image.new("RGBA", size, (0, 0, 0, 0))
-    if geometry.get("preserve_baked_tail_rotor", False):
-        # The retained Coastguard artwork already contains a complete, opaque
-        # tail rotor.  Keeping that structural silhouette is preferable to
-        # replacing it with the former one-pixel procedural outline, which
-        # looked severed at MissionChief scale.  Main-rotor motion still makes
-        # every response APNG visibly animated.
+    preserve_structure = bool(geometry.get("preserve_baked_tail_rotor", False))
+    if preserve_structure and not geometry.get("animate_preserved_tail_rotor", False):
         return Image.new("RGBA", size, (0, 0, 0, 0))
 
     width, height = size
@@ -743,9 +986,16 @@ def tail_rotor_sweep(size: tuple[int, int], frame_index: int, seed: int, geometr
     haze_draw = ImageDraw.Draw(haze)
     haze_draw.ellipse(
         (hub_x - radius, hub_y - radius, hub_x + radius, hub_y + radius),
-        outline=(188, 207, 218, 64),
+        outline=(188, 207, 218, 54 if preserve_structure else 64),
         width=1,
     )
+    if preserve_structure:
+        inset = max(2, radius - 2)
+        haze_draw.ellipse(
+            (hub_x - inset, hub_y - inset, hub_x + inset, hub_y + inset),
+            outline=(224, 233, 238, 38),
+            width=1,
+        )
 
     blades = Image.new("RGBA", size, (0, 0, 0, 0))
     blade_draw = ImageDraw.Draw(blades)
@@ -754,7 +1004,7 @@ def tail_rotor_sweep(size: tuple[int, int], frame_index: int, seed: int, geometr
         dy = round(math.sin(angle + spoke) * radius)
         blade_draw.line(
             (hub_x - dx, hub_y - dy, hub_x + dx, hub_y + dy),
-            fill=(220, 232, 238, 150),
+            fill=(220, 232, 238, 84 if preserve_structure else 150),
             width=1,
         )
         for direction in (-1, 1):
@@ -762,12 +1012,12 @@ def tail_rotor_sweep(size: tuple[int, int], frame_index: int, seed: int, geometr
             tip_y = hub_y + direction * dy
             blade_draw.ellipse(
                 (tip_x - 1, tip_y - 1, tip_x + 1, tip_y + 1),
-                fill=(255, 168, 28, 205),
+                fill=(255, 168, 28, 118 if preserve_structure else 205),
             )
     blade_draw.ellipse(
         (hub_x - 2, hub_y - 2, hub_x + 2, hub_y + 2),
-        fill=(56, 65, 72, 245),
-        outline=(226, 235, 240, 230),
+        fill=(56, 65, 72, 138 if preserve_structure else 245),
+        outline=(226, 235, 240, 148 if preserve_structure else 230),
         width=1,
     )
     blades = blades.filter(ImageFilter.GaussianBlur(0.22))
@@ -812,40 +1062,71 @@ def amber_overlay(size: tuple[int, int], frame_index: int, body_size: tuple[int,
     return glow
 
 
-def wheel_overlay(size: tuple[int, int], frame_index: int, body_size: tuple[int, int], offset: tuple[int, int], seed: int) -> Image.Image:
+def wheel_overlay(
+    size: tuple[int, int],
+    frame_index: int,
+    body_size: tuple[int, int],
+    offset: tuple[int, int],
+    seed: int,
+    geometry: dict,
+) -> Image.Image:
     overlay = Image.new("RGBA", size, (0, 0, 0, 0))
     if frame_index == 0:
         return overlay
     width, height = body_size
     ox, oy = offset
-    radius = max(2, round(height * 0.085))
     angle = math.radians((frame_index * 34 + seed % 90) % 180)
     draw = ImageDraw.Draw(overlay)
-    for fraction in (0.24, 0.78):
-        px = ox + round(width * fraction)
-        py = oy + round(height * 0.80)
+    radius = max(2, round(height * float(geometry["radius_fraction"])))
+    for x_fraction, y_fraction in geometry["centres"]:
+        px = ox + round(width * float(x_fraction))
+        py = oy + round(height * float(y_fraction))
         dx = round(math.cos(angle) * radius)
         dy = round(math.sin(angle) * radius)
-        draw.line((px - dx, py - dy, px + dx, py + dy), fill=(204, 215, 220, 185), width=1)
-        draw.line((px + dy, py - dx, px - dy, py + dx), fill=(130, 145, 152, 150), width=1)
+        draw.line((px - dx, py - dy, px + dx, py + dy), fill=(214, 224, 229, 176), width=1)
+        draw.line((px + dy, py - dx, px - dy, py + dx), fill=(126, 141, 149, 142), width=1)
+        draw.ellipse((px - 1, py - 1, px + 1, py + 1), fill=(205, 215, 220, 190))
     return overlay
 
 
-def marine_overlay(size: tuple[int, int], frame_index: int, body_size: tuple[int, int], offset: tuple[int, int]) -> Image.Image:
+def marine_overlay(
+    size: tuple[int, int],
+    frame_index: int,
+    body_size: tuple[int, int],
+    offset: tuple[int, int],
+    settings: dict,
+) -> Image.Image:
     overlay = Image.new("RGBA", size, (0, 0, 0, 0))
     if frame_index == 0:
         return overlay
     width, height = body_size
     ox, oy = offset
     draw = ImageDraw.Draw(overlay)
-    if frame_index % 3 == 1:
+    wake_strength = float(settings["wake_strength"])
+    bow_strength = float(settings["bow_spray"])
+    mast_y = oy + round(height * 0.18)
+    draw.ellipse(
+        (ox + round(width * 0.58) - 1, mast_y - 1, ox + round(width * 0.58) + 1, mast_y + 1),
+        fill=(255, 48, 35, 220),
+    )
+    draw.ellipse(
+        (ox + round(width * 0.64) - 1, mast_y - 1, ox + round(width * 0.64) + 1, mast_y + 1),
+        fill=(62, 255, 128, 215),
+    )
+    if frame_index in {3, 8}:
         px = ox + round(width * 0.61)
-        py = oy + round(height * 0.18)
-        draw.ellipse((px - 1, py - 1, px + 1, py + 1), fill=(232, 252, 255, 245))
+        draw.ellipse((px - 1, mast_y - 2, px + 1, mast_y), fill=(235, 252, 255, 245))
     wake_y = oy + round(height * 0.88)
-    wake_len = max(4, round(width * (0.09 + (frame_index % 4) * 0.012)))
-    draw.line((ox + 1, wake_y, ox + wake_len, wake_y + 1), fill=(206, 238, 255, 95), width=1)
-    return overlay
+    pulse = 0.012 * (frame_index % 4)
+    wake_len = max(5, round(width * (0.10 + pulse) * wake_strength))
+    draw.line((ox + 1, wake_y, ox + wake_len, wake_y + 1), fill=(206, 238, 255, round(102 * wake_strength)), width=1)
+    draw.line((ox + 2, wake_y + 2, ox + round(wake_len * 0.72), wake_y + 2), fill=(190, 230, 250, round(62 * wake_strength)), width=1)
+    bow_x = ox + round(width * 0.965)
+    bow_y = oy + round(height * 0.79)
+    spray = max(2, round(height * 0.055 * bow_strength))
+    draw.arc((bow_x - spray, bow_y - spray * 2, bow_x + spray * 2, bow_y + spray), 208, 330, fill=(225, 246, 255, round(112 * bow_strength)), width=1)
+    shimmer = overlay.filter(ImageFilter.GaussianBlur(0.28))
+    return Image.alpha_composite(overlay, shimmer)
 
 
 def trailer_overlay(size: tuple[int, int], frame_index: int, body_size: tuple[int, int], offset: tuple[int, int], seed: int) -> Image.Image:
@@ -886,7 +1167,7 @@ def build_animation(
     phase = vehicle_flash_phase(asset_id, profile)
     phase_modulus = int(desynchronisation.get("phase_modulus", 11))
     phase_stride = int(desynchronisation.get("per_light_phase_stride", 3))
-    motion_type = "static"
+    active_motion: list[str] = []
     frames: list[Image.Image] = []
     motion = profile["motion"]
 
@@ -916,40 +1197,115 @@ def build_animation(
                 phase_modulus,
                 phase_stride,
             )
-            motion_type = "blue-response"
+            active_motion.append("blue-response")
+            if frame_index > 0 and asset_id not in profile["helicopters"]:
+                frame = Image.alpha_composite(
+                    frame,
+                    response_running_lights_overlay(
+                        frame.size,
+                        frame_index,
+                        body_size,
+                        body_offset,
+                        asset_id in set(profile.get("left_facing_assets", [])),
+                    ),
+                )
         if asset_id in profile["helicopters"]:
-            motion_type = "rotor-and-blue-response"
-        elif asset_id in motion["amber"]:
+            frame = Image.alpha_composite(
+                frame,
+                aviation_lights_overlay(
+                    frame.size,
+                    frame_index,
+                    body_size,
+                    body_offset,
+                    profile["rotor_geometry"][asset_id],
+                ),
+            )
+            active_motion.append("rotor")
+            active_motion.append("aviation-lights")
+        if asset_id in motion["amber"]:
             frame = Image.alpha_composite(frame, amber_overlay(frame.size, frame_index, body_size, body_offset, seed))
-            motion_type = "amber-beacon"
-        elif asset_id in motion["road"]:
-            frame = Image.alpha_composite(frame, wheel_overlay(frame.size, frame_index, body_size, body_offset, seed))
-            motion_type = "wheel-motion"
-        elif asset_id in motion["marine"]:
-            frame = Image.alpha_composite(frame, marine_overlay(frame.size, frame_index, body_size, body_offset))
-            motion_type = "navigation-and-wake"
-        elif asset_id in motion["trailer"]:
+            active_motion.append("amber-beacon")
+        if asset_id in motion["wheel"]:
+            frame = Image.alpha_composite(
+                frame,
+                wheel_overlay(
+                    frame.size,
+                    frame_index,
+                    body_size,
+                    body_offset,
+                    seed,
+                    profile["wheel_geometry"][asset_id],
+                ),
+            )
+            active_motion.append("wheel-motion")
+        if asset_id in motion["marine"]:
+            frame = Image.alpha_composite(
+                frame,
+                marine_overlay(
+                    frame.size,
+                    frame_index,
+                    body_size,
+                    body_offset,
+                    profile["marine_motion"][asset_id],
+                ),
+            )
+            active_motion.append("navigation-and-wake")
+        if asset_id in motion["trailer"]:
             frame = Image.alpha_composite(frame, trailer_overlay(frame.size, frame_index, body_size, body_offset, seed))
-            motion_type = "marker-light"
+            active_motion.append("marker-light")
         frames.append(frame)
 
     durations = animation_durations(seed)
+    motion_type = "+".join(dict.fromkeys(active_motion)) if active_motion else "static"
     return frames, durations, motion_type
 
 
-def save_apng(frames: list[Image.Image], durations: list[int], target: Path) -> None:
+def frames_decode_exact(path: Path, expected: list[Image.Image]) -> bool:
+    with Image.open(path) as animation:
+        if int(getattr(animation, "n_frames", 1)) != len(expected):
+            return False
+        for index, frame in enumerate(expected):
+            animation.seek(index)
+            decoded = animation.convert("RGBA")
+            if ImageChops.difference(decoded, frame).getbbox() is not None:
+                return False
+    return True
+
+
+def save_apng(
+    frames: list[Image.Image],
+    durations: list[int],
+    target: Path,
+    profile: dict,
+) -> dict[str, int | bool]:
     target.parent.mkdir(parents=True, exist_ok=True)
-    frames[0].save(
-        target,
-        format="PNG",
-        save_all=True,
-        append_images=frames[1:],
-        duration=durations,
-        loop=0,
-        disposal=1,
-        blend=0,
-        optimize=False,
-    )
+    compression = profile["compression"]
+    preferred = int(compression["preferred_disposal"])
+    fallback = int(compression["fallback_disposal"])
+    selected = fallback
+    for disposal in (preferred, fallback):
+        frames[0].save(
+            target,
+            format="PNG",
+            save_all=True,
+            append_images=frames[1:],
+            duration=durations,
+            loop=0,
+            disposal=disposal,
+            blend=0,
+            optimize=True,
+            compress_level=int(compression["compress_level"]),
+        )
+        if frames_decode_exact(target, frames):
+            selected = disposal
+            break
+    else:
+        raise ValueError(f"lossless APNG verification failed: {target.name}")
+    return {
+        "bytes": target.stat().st_size,
+        "disposal": selected,
+        "lossless_verified": True,
+    }
 
 
 def clean_output(directory: Path) -> None:
@@ -958,13 +1314,36 @@ def clean_output(directory: Path) -> None:
         path.unlink()
 
 
+def shadow_class_for(vehicle: dict, asset_id: str, profile: dict) -> tuple[str, str]:
+    grounding = profile.get("grounding_shadows", {})
+    if asset_id in set(grounding.get("aerial", [])):
+        return "aerial", "aerial-separated"
+    if asset_id in set(grounding.get("marine", [])):
+        return "marine", "marine-waterline"
+    if asset_id in set(grounding.get("trailers", [])):
+        return "ground", "trailer"
+    effective_length = float(vehicle["real_length_metres"])
+    carrier = profile.get("mounted_carriers", {}).get(asset_id)
+    if carrier is not None:
+        effective_length = float(carrier["real_length_metres"])
+    if effective_length >= float(profile["scale_calibration"]["heavy_vehicle_threshold_metres"]):
+        return "ground", "heavy-ground"
+    return "ground", "light-ground"
+
+
 def main() -> None:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
     profile = PROFILE
     vehicles = sorted(manifest["vehicles"], key=lambda item: int(item["missionchief_slot"]))
     rare = set(profile["rare_showcase"])
     overrides = profile["new_source_overrides"]
-    override_widths = profile.get("source_override_widths", {})
+    master_report_path = ROOT / str(profile["baked_master_report"])
+    if not master_report_path.is_file():
+        raise FileNotFoundError(master_report_path)
+    master_report = json.loads(master_report_path.read_text(encoding="utf-8"))
+    master_map = {item["id"]: item for item in master_report["vehicles"]}
+    if set(master_map) != set(profile["baked_master_cues"]):
+        raise ValueError("baked v1.3 master report does not match the configured cue inventory")
     light_overrides = dict(profile.get("light_overrides", {}))
     light_overrides_path = profile.get("light_overrides_path")
     if light_overrides_path:
@@ -984,9 +1363,6 @@ def main() -> None:
         for asset_id in group
     }
     satellite_boost = set(profile.get("satellite_contrast_boost", []))
-    grounding = profile.get("grounding_shadows", {})
-    aerial_shadow_assets = set(grounding.get("aerial", []))
-    marine_shadow_assets = set(grounding.get("marine", []))
     clean_output(STATIC_DIR)
     clean_output(ANIMATED_DIR)
 
@@ -995,9 +1371,14 @@ def main() -> None:
     motion_counts: Counter[str] = Counter()
     for vehicle in vehicles:
         asset_id = vehicle["id"]
+        master_detail = master_map.get(asset_id)
+        light_transform = master_detail.get("light_transform") if master_detail else None
         animation_vehicle = {
             **vehicle,
-            "lights": light_overrides.get(asset_id, vehicle.get("lights", [])),
+            "lights": transform_lights(
+                light_overrides.get(asset_id, vehicle.get("lights", [])),
+                light_transform,
+            ),
         }
         standard_path = STANDARD_DIR / f"{asset_id}.png"
         if not standard_path.is_file():
@@ -1008,24 +1389,17 @@ def main() -> None:
         override_path = ROOT / overrides[asset_id] if asset_id in overrides else None
         if override_path is not None:
             with Image.open(override_path) as source:
-                body = crop_to_alpha(source, padding=8)
+                body = crop_to_alpha(source, padding=1 if master_detail else 8)
         else:
             body = standard
 
-        target_width = command_width(
-            standard.width,
-            asset_id,
-            asset_id in rare,
-            int(override_widths[asset_id]) if asset_id in override_widths else None,
-            int(profile["maximum_icon_width"]),
-        )
+        target_width, effective_length, scale_error = command_width(vehicle, profile)
         body = resize_width(body, target_width)
         body = modern_tone(body)
-        uses_generic_specialist_language = (
-            asset_id in rare and asset_id not in retired_overlay_assets
-        )
-        if uses_generic_specialist_language:
-            body = add_specialist_language(body, vehicle["service"], asset_id)
+        body, livery_pixels = standardise_livery(body, vehicle["service"])
+        body = readability_polish(body)
+        body, cleanup_metrics = cleanup_alpha_artifacts(body)
+        uses_generic_specialist_language = False
         motion_reference_size = body.size
         equipment_cue = None
         equipment_cue_offset = (0, 0)
@@ -1040,23 +1414,21 @@ def main() -> None:
         )
         rotorless_body = None
         rotorless_base = None
-        if asset_id in aerial_shadow_assets:
-            shadow_mode = "aerial"
-        elif asset_id in marine_shadow_assets:
-            shadow_mode = "marine"
-        else:
-            shadow_mode = "ground"
-        helicopter_padding = profile.get("helicopter_edge_padding", {})
-        edge_padding = int(
-            helicopter_padding.get(asset_id, 7 if asset_id in satellite_boost else 5)
+        shadow_mode, shadow_class = shadow_class_for(vehicle, asset_id, profile)
+        edge_padding = adaptive_edge_padding(
+            asset_id,
+            body.width,
+            asset_id in satellite_boost,
+            profile,
         )
         if asset_id in profile["helicopters"]:
             geometry = profile["rotor_geometry"][asset_id]
             rotorless_body = remove_baked_main_rotor(body, geometry)
-            rotorless_base, offset, shadow_metrics = add_visibility_edge(
+            rotorless_base, offset, shadow_metrics, outline_metrics = add_visibility_edge(
                 rotorless_body,
                 padding=edge_padding,
                 shadow_mode=shadow_mode,
+                shadow_class=shadow_class,
             )
             static = add_helicopter_rotors(
                 rotorless_base,
@@ -1067,11 +1439,12 @@ def main() -> None:
                 geometry,
             )
         else:
-            static, offset, shadow_metrics = add_visibility_edge(
+            static, offset, shadow_metrics, outline_metrics = add_visibility_edge(
                 body,
                 padding=edge_padding,
                 boosted=asset_id in satellite_boost,
                 shadow_mode=shadow_mode,
+                shadow_class=shadow_class,
             )
 
         motion_reference_offset = (
@@ -1092,7 +1465,7 @@ def main() -> None:
             rotorless_base=rotorless_base,
         )
         animated_path = ANIMATED_DIR / f"{asset_id}.png"
-        save_apng(frames, durations, animated_path)
+        compression_metrics = save_apng(frames, durations, animated_path, profile)
 
         signature = ",".join(str(value) for value in durations)
         timing_signatures[signature] += 1
@@ -1120,7 +1493,12 @@ def main() -> None:
                 "satellite_contrast_boost": asset_id in satellite_boost,
                 "edge_padding": edge_padding,
                 "grounding_shadow": shadow_metrics,
+                "adaptive_outline": outline_metrics,
                 "source_override": str(override_path.relative_to(ROOT)) if override_path else None,
+                "baked_master_cue": profile.get("baked_master_cues", {}).get(asset_id),
+                "baked_master_half_zoom_added_alpha_pixels": (
+                    master_detail.get("half_zoom_added_alpha_pixels") if master_detail else None
+                ),
                 "standard_dimensions": {"width": standard.width, "height": standard.height},
                 "command_dimensions": {"width": static.width, "height": static.height},
                 "body_dimensions": {"width": body_size[0], "height": body_size[1]},
@@ -1129,8 +1507,28 @@ def main() -> None:
                     "height": motion_reference_size[1],
                 },
                 "width_gain_percent": round((body_size[0] / standard.width - 1) * 100, 1),
+                "effective_real_length_metres": effective_length,
+                "calibrated_target_body_width": target_width,
+                "length_scale_error_percent": round(scale_error, 3),
+                "livery_pixels_normalised": livery_pixels,
+                "alpha_cleanup": cleanup_metrics,
+                "half_zoom_detail_score": half_zoom_detail_score(static),
                 "frames": len(frames),
                 "response_light_count": len(animation_vehicle.get("lights", [])),
+                "fixture_shaped_emergency_lights": bool(animation_vehicle.get("lights")),
+                "response_running_lights": bool(
+                    animation_vehicle.get("lights")
+                    and asset_id not in profile["helicopters"]
+                    and body_size[0] >= int(profile["response_running_lights"]["minimum_body_width"])
+                ),
+                "aviation_navigation_lights": asset_id in profile["helicopters"],
+                "preserved_tail_rotor_animated": bool(
+                    profile.get("rotor_geometry", {})
+                    .get(asset_id, {})
+                    .get("animate_preserved_tail_rotor", False)
+                ),
+                "marine_motion_profile": profile.get("marine_motion", {}).get(asset_id),
+                "wheel_geometry": profile.get("wheel_geometry", {}).get(asset_id),
                 "durations_ms": durations,
                 "cycle_ms": sum(durations),
                 "flash_phase": vehicle_flash_phase(asset_id, profile)
@@ -1138,6 +1536,7 @@ def main() -> None:
                 else None,
                 "flash_activity_signature": flash_activity_signature(animation_vehicle, profile),
                 "motion": motion_type,
+                "apng_compression": compression_metrics,
             }
         )
 
@@ -1146,6 +1545,7 @@ def main() -> None:
     flash_activity_signatures = Counter(item["flash_activity_signature"] for item in blue_results)
     report = {
         "release": profile["release"],
+        "all_passed": True,
         "profile": profile["profile"],
         "display_name": profile["display_name"],
         "selected_upgrades": profile["selected_upgrades"],
@@ -1154,6 +1554,7 @@ def main() -> None:
         "animated_apngs": len(list(ANIMATED_DIR.glob("*.png"))),
         "frames_per_asset": profile["frames"],
         "source_overrides": sum(item["source_override"] is not None for item in results),
+        "baked_role_master_assets": sum(item["baked_master_cue"] is not None for item in results),
         "rare_showcase_assets": sum(item["rare_showcase"] for item in results),
         "role_differentiated_assets": sum(item["role_cue"] is not None for item in results),
         "specialist_equipment_assets": sum(
@@ -1169,6 +1570,29 @@ def main() -> None:
         "grounding_shadow_assets": sum(item["grounding_shadow"]["visible_pixels"] > 0 for item in results),
         "minimum_grounding_shadow_half_zoom_pixels": min(
             item["grounding_shadow"]["half_zoom_visible_pixels"] for item in results
+        ),
+        "shadow_class_counts": dict(sorted(Counter(item["grounding_shadow"]["class"] for item in results).items())),
+        "outline_style_counts": dict(sorted(Counter(item["adaptive_outline"]["style"] for item in results).items())),
+        "maximum_outline_to_body_ratio": max(item["adaptive_outline"]["outline_to_body_ratio"] for item in results),
+        "mean_length_scale_error_percent": round(
+            sum(item["length_scale_error_percent"] for item in results) / len(results), 3
+        ),
+        "maximum_length_scale_error_percent": max(item["length_scale_error_percent"] for item in results),
+        "minimum_half_zoom_detail_score": min(item["half_zoom_detail_score"] for item in results),
+        "livery_pixels_normalised": sum(item["livery_pixels_normalised"] for item in results),
+        "isolated_alpha_pixels_remaining": sum(
+            item["alpha_cleanup"]["remaining_isolated_alpha_pixels"] for item in results
+        ),
+        "animated_bytes": sum(item["apng_compression"]["bytes"] for item in results),
+        "animated_baseline_bytes": int(profile["compression"]["baseline_animated_bytes"]),
+        "animated_size_ratio": round(
+            sum(item["apng_compression"]["bytes"] for item in results)
+            / int(profile["compression"]["baseline_animated_bytes"]),
+            5,
+        ),
+        "preferred_disposal_assets": sum(
+            item["apng_compression"]["disposal"] == int(profile["compression"]["preferred_disposal"])
+            for item in results
         ),
         "motion_counts": dict(sorted(motion_counts.items())),
         "timing_signature_count": len(timing_signatures),

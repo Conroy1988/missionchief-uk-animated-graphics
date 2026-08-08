@@ -13,7 +13,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "data" / "prototypes.json"
-PROFILE_PATH = ROOT / "data" / "v1.2-enhancement-profile.json"
+PROFILE_PATH = ROOT / "data" / "v1.3-overhaul-profile.json"
 PROFILE = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
 RELEASE = str(PROFILE["release"])
 BUILD_REPORT_PATH = ROOT / "data" / f"{RELEASE}-build-report.json"
@@ -513,7 +513,11 @@ def main() -> None:
         )
     for asset_id, reduction in map_scale_reductions.items():
         expected_body_width = int(reduction["target_body_width"])
-        if int(profile.get("source_override_widths", {}).get(asset_id, -1)) != expected_body_width:
+        if int(
+            profile.get("scale_calibration", {})
+            .get("asset_width_overrides", {})
+            .get(asset_id, -1)
+        ) != expected_body_width:
             pack_errors.append(
                 f"{asset_id} map-scale target does not match its deterministic body-width override"
             )

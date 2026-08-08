@@ -12,7 +12,7 @@ from PIL import Image, ImageChops, ImageSequence
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PROFILE_PATH = ROOT / "data" / "v1.2-enhancement-profile.json"
+PROFILE_PATH = ROOT / "data" / "v1.3-overhaul-profile.json"
 STATIC_DIR = ROOT / "assets" / "exports" / "command" / "static"
 ANIMATED_DIR = ROOT / "assets" / "exports" / "command" / "animated"
 MAXIMUM_ANCHOR_DISTANCE = 1.5
@@ -58,6 +58,10 @@ def main() -> None:
 
     build_report = json.loads((ROOT / "data" / f"{release}-build-report.json").read_text(encoding="utf-8"))
     details = {item["id"]: item for item in build_report["vehicles_detail"]}
+    master_report = json.loads((ROOT / profile["baked_master_report"]).read_text(encoding="utf-8"))
+    master_transforms = {
+        item["id"]: item["light_transform"] for item in master_report["vehicles"]
+    }
     errors: list[str] = []
     vehicles_detail = []
     maximum_distance = 0.0
@@ -78,9 +82,13 @@ def main() -> None:
         light_detail = []
         vehicle_errors = []
 
+        transform = master_transforms.get(asset_id)
         for index, light in enumerate(lights, start=1):
             x_fraction = float(light["x"])
             y_fraction = float(light["y"])
+            if transform is not None:
+                x_fraction = float(transform["x_offset"]) + x_fraction * float(transform["x_scale"])
+                y_fraction = float(transform["y_offset"]) + y_fraction * float(transform["y_scale"])
             if not 0.0 <= x_fraction <= 1.0 or not 0.0 <= y_fraction <= 1.0:
                 vehicle_errors.append(f"light {index} is outside normalised body coordinates")
             px = edge_padding + round(x_fraction * (body_width - 1))
