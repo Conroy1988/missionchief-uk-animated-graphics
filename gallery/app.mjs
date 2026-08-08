@@ -1,4 +1,3 @@
-const REPOSITORY = 'https://github.com/Conroy1988/missionchief-uk-animated-graphics';
 const RAW_REPOSITORY = 'https://raw.githubusercontent.com/Conroy1988/missionchief-uk-animated-graphics';
 
 export const SERVICE_COLOURS = Object.freeze({
@@ -118,8 +117,14 @@ function initGallery() {
 
   const config = {
     catalogueUrl: root.dataset.catalogueUrl || 'vehicles.json',
-    currentAssetBase: root.dataset.currentAssetBase || 'assets/exports/command',
+    currentAssetBase: root.dataset.currentAssetBase
+      || `${RAW_REPOSITORY}/${root.dataset.currentRelease || 'v1.4.0'}/assets/exports/command`,
   };
+
+  document.querySelectorAll('[data-hero-asset]').forEach((image) => {
+    if (!(image instanceof HTMLImageElement)) return;
+    image.src = currentAssetUrl({ asset_id: image.dataset.heroAsset }, 'animated', config.currentAssetBase);
+  });
 
   const defaults = {
     search: '',
@@ -272,8 +277,7 @@ function initGallery() {
     if (!vehicle || !(dialog instanceof HTMLDialogElement) || !(dialogContent instanceof HTMLElement)) return;
     const mode = state.mode === 'animated' && state.playing ? 'animated' : 'static';
     const focus = vehicle.focus.map((item) => `<li>${escapeHtml(FOCUS_LABELS[item] || item)}</li>`).join('');
-    const staticBlob = `${REPOSITORY}/blob/${catalogue.release}/${vehicle.static_path}`;
-    const animatedBlob = `${REPOSITORY}/blob/${catalogue.release}/${vehicle.animated_path}`;
+    dialogContent.dataset.vehicleId = vehicle.id;
     dialogContent.innerHTML = `<div class="dialog-grid" style="--preview-scale:${state.scale / 100};--service-colour:${SERVICE_COLOURS[vehicle.service] || '#67e8f9'}">
       <div class="dialog-preview map-${state.map}">
         <img src="${escapeHtml(assetUrl(vehicle, mode))}" alt="${escapeHtml(vehicle.label)} ${mode} vehicle graphic" width="${vehicle.width}" height="${vehicle.height}">
@@ -291,13 +295,34 @@ function initGallery() {
         </dl>
         <ul class="focus-list">${focus}</ul>
         <div class="dialog-actions">
-          <a class="button button-ghost" href="${escapeHtml(staticBlob)}" target="_blank" rel="noopener noreferrer">Static PNG ↗</a>
-          <a class="button button-ghost" href="${escapeHtml(animatedBlob)}" target="_blank" rel="noopener noreferrer">Animated APNG ↗</a>
+          <button class="button button-ghost" type="button" data-download-asset="static">Static PNG ↓</button>
+          <button class="button button-ghost" type="button" data-download-asset="animated">Animated APNG ↓</button>
           <a class="button button-primary" href="${escapeHtml(vehicle.missionchief_url)}" target="_blank" rel="noopener noreferrer">Open MissionChief pack ↗</a>
         </div>
       </div>
     </div>`;
     dialog.showModal();
+  }
+
+  async function downloadAsset(vehicle, mode, button) {
+    button.disabled = true;
+    try {
+      const response = await fetch(assetUrl(vehicle, mode), { credentials: 'omit' });
+      if (!response.ok) throw new Error(`Asset request failed: ${response.status}`);
+      const href = URL.createObjectURL(await response.blob());
+      const download = document.createElement('a');
+      download.href = href;
+      download.download = `${vehicle.asset_id}-${mode === 'animated' ? 'animated' : 'static'}.png`;
+      document.body.append(download);
+      download.click();
+      download.remove();
+      window.setTimeout(() => URL.revokeObjectURL(href), 1000);
+      notify(`${mode === 'animated' ? 'Animated APNG' : 'Static PNG'} download started`);
+    } catch {
+      notify('The asset download could not be started');
+    } finally {
+      button.disabled = false;
+    }
   }
 
   elements.search.addEventListener('input', () => {
@@ -356,6 +381,12 @@ function initGallery() {
     } catch {
       notify('Copy was blocked — use the browser address bar');
     }
+  });
+  dialogContent?.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-download-asset]');
+    if (!(button instanceof HTMLButtonElement)) return;
+    const vehicle = catalogue?.vehicles.find((item) => item.id === dialogContent.dataset.vehicleId);
+    if (vehicle) downloadAsset(vehicle, button.dataset.downloadAsset, button);
   });
   dialogClose?.addEventListener('click', () => dialog.close());
   dialog?.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
