@@ -634,12 +634,19 @@ def add_blue_lights(
 
 
 def remove_baked_main_rotor(image: Image.Image, geometry: dict) -> Image.Image:
-    """Remove long source blades while retaining the roof, mast and rotor hub."""
+    """Remove only the baked main-rotor disc, preserving the complete tail."""
     width, height = image.size
     clear_mask = Image.new("L", image.size, 0)
     draw = ImageDraw.Draw(clear_mask)
     clear_y = min(height - 1, round(height * float(geometry["clear_below"])))
-    draw.rectangle((0, 0, width - 1, clear_y), fill=255)
+    hub_x = round(float(geometry["hub"][0]) * (width - 1))
+    rotor_radius = max(12, round(width * float(geometry["disc_width"]) / 2))
+    # The previous full-width rectangle also erased the upper fin/fenestron on
+    # HEMS and Police and the upper half of both Coastguard tail rotors.  Scope
+    # the removal to the main-rotor sweep so no tail pixel is collateral damage.
+    clear_left = max(0, hub_x - rotor_radius)
+    clear_right = min(width - 1, hub_x + rotor_radius)
+    draw.rectangle((clear_left, 0, clear_right, clear_y), fill=255)
 
     keep_points = [
         (round(float(x) * (width - 1)), round(float(y) * (height - 1)))
@@ -647,7 +654,6 @@ def remove_baked_main_rotor(image: Image.Image, geometry: dict) -> Image.Image:
     ]
     draw.polygon(keep_points, fill=0)
 
-    hub_x = round(float(geometry["hub"][0]) * (width - 1))
     hub_y = round(float(geometry["hub"][1]) * (height - 1))
     hub_rx = max(5, round(width * 0.032))
     hub_ry = max(3, round(height * 0.09))
@@ -718,6 +724,13 @@ def main_rotor_sweep(size: tuple[int, int], frame_index: int, seed: int, geometr
 def tail_rotor_sweep(size: tuple[int, int], frame_index: int, seed: int, geometry: dict) -> Image.Image:
     """Render an external tail rotor after the baked blade cross has been removed."""
     if "tail_hub" not in geometry:
+        return Image.new("RGBA", size, (0, 0, 0, 0))
+    if geometry.get("preserve_baked_tail_rotor", False):
+        # The retained Coastguard artwork already contains a complete, opaque
+        # tail rotor.  Keeping that structural silhouette is preferable to
+        # replacing it with the former one-pixel procedural outline, which
+        # looked severed at MissionChief scale.  Main-rotor motion still makes
+        # every response APNG visibly animated.
         return Image.new("RGBA", size, (0, 0, 0, 0))
 
     width, height = size
