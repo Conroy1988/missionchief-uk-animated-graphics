@@ -1,4 +1,4 @@
-# Complete v1.4.0 vehicle gallery
+# Complete v1.4.2 vehicle gallery
 
 See all **117 static and animated vehicle graphics** included in **TKB UK Fleet — Animated** for MissionChief UK.
 
@@ -6,19 +6,19 @@ See all **117 static and animated vehicle graphics** included in **TKB UK Fleet 
 
 > **[Open the interactive fleet gallery →](https://tkb-gaming.scot/games/missionchief/guides/fleet-gallery/)** — instant search, service and improvement filters, APNG controls, four map conditions, three scales and stable-release comparisons.
 
-[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.0)
+[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.2)
 
 The previews below use the pack's twelve-frame Modern Command Clarity APNGs, with eighteen-frame cycles for aircraft, operational lifeboats and six visible-wheel assets. Emergency vehicles use fixture-shaped light groups, 11 fleet phase offsets and 61 activity signatures; helicopters add multi-band rotor and aviation-light motion, while suitable non-blue-light assets use restrained amber, wheel, navigation, wake or marker movement. Select any preview to open the full file.
 
 The original v1.0 True Scale exports remain available under `assets/exports/standard/` and in the [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0).
 
-## v1.4.0 clarity evidence
+## v1.4.2 full-fleet lighting evidence
 
-This release redraws eighteen weaker ground assets and both operational lifeboats, deepens aircraft and marine motion, audits UK livery colour language, proves zero bottom-centre anchor movement, and upgrades twelve suitable assets to eighteen frames. The complete APNG fleet remains 46.77% smaller than v1.2.7, and the approved 30% ALB reduction remains intact.
+This release rebuilds every animated asset in both profiles. All 234 APNGs use full-canvas frame controls and compact silhouette-clipped emitters. The audit decoded all 2,178 frames across light, dark, satellite and grayscale maps and found zero partial update frames, zero box-shaped light components and zero blue pixels beyond the one-pixel vehicle silhouette allowance.
 
-[![Weakest artwork before and after](assets/previews/v1.4.0/weakest-artwork-redraw-before-after.png)](assets/previews/v1.4.0/weakest-artwork-redraw-before-after.png)
+[![Full fleet on a satellite map](assets/previews/v1.4.2/full-fleet-lighting-satellite.png)](assets/previews/v1.4.2/full-fleet-lighting-satellite.png)
 
-[18-frame aircraft audit](assets/previews/v1.4.0/aircraft-motion-18-frame-audit.png) · [18-frame marine audit](assets/previews/v1.4.0/marine-motion-18-frame-audit.png) · [UK livery-language audit](assets/previews/v1.4.0/uk-livery-accuracy-audit.png) · [Complete helicopter tails at 100%, 75% and 50%](assets/previews/v1.4.0/complete-helicopter-tails-map-scale.png) · [All eighteen helicopter frames](assets/previews/v1.4.0/helicopter-rotor-frames.png) · [Desynchronised crowded response](assets/previews/v1.4.0/desynchronised-lights-crowd.png) · [Full dense satellite map](assets/previews/v1.4.0/busy-map-satellite.png)
+[Light-map fleet audit](assets/previews/v1.4.2/full-fleet-lighting-light.png) · [Dark-map fleet audit](assets/previews/v1.4.2/full-fleet-lighting-dark.png) · [Grayscale fleet audit](assets/previews/v1.4.2/full-fleet-lighting-grayscale.png) · [18-frame aircraft audit](assets/previews/v1.4.2/aircraft-motion-18-frame-audit.png) · [18-frame marine audit](assets/previews/v1.4.2/marine-motion-18-frame-audit.png) · [Complete helicopter tails at 100%, 75% and 50%](assets/previews/v1.4.2/complete-helicopter-tails-map-scale.png)
 
 ## Core emergency services
 

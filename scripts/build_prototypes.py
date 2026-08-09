@@ -6,7 +6,9 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
+
+from apng_full_frame import save_full_frame_apng
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,6 +33,17 @@ def crop_to_alpha(image: Image.Image, padding: int = 6) -> Image.Image:
     return rgba.crop((left, top, right, bottom))
 
 
+def normalise_transparent_rgb(image: Image.Image) -> Image.Image:
+    rgba = image.convert("RGBA")
+    rgba.putdata(
+        [
+            (0, 0, 0, 0) if alpha == 0 else (red, green, blue, alpha)
+            for red, green, blue, alpha in rgba.get_flattened_data()
+        ]
+    )
+    return rgba
+
+
 def resize_to_real_scale(image: Image.Image, metres: float, ppm: float) -> Image.Image:
     target_width = max(1, round(metres * ppm))
     target_height = max(1, round(image.height * target_width / image.width))
@@ -48,39 +61,51 @@ def resize_to_real_scale(image: Image.Image, metres: float, ppm: float) -> Image
     alpha_pixels[0, target_height - 1] = 0
     alpha_pixels[target_width - 1, target_height - 1] = 0
     resized.putalpha(alpha)
-    return resized
+    # Normalise fully transparent pixels as transparent black. Hidden source
+    # colours can bleed at APNG update-tile boundaries in some map renderers.
+    return normalise_transparent_rgb(resized)
 
 
-def blue_flash(size: tuple[int, int], x: float, y: float, strength: float) -> Image.Image:
+def blue_flash(
+    size: tuple[int, int],
+    x: float,
+    y: float,
+    strength: float,
+    clip_mask: Image.Image,
+) -> Image.Image:
+    """Render a compact optical emitter without a rectangular APNG light tile.
+
+    The original standard renderer painted a broad, filled ellipse around every
+    coordinate. At MissionChief map scale that falloff quantised into a visible
+    block. Keep the flare to a tiny antialiased lens and clip it to the vehicle
+    silhouette plus one pixel, so a lamp can shine without producing a floating
+    patch on the map.
+    """
     width, height = size
     px = round(x * (width - 1))
     py = round(y * (height - 1))
-    radius = max(2, round(max(3.0, height * 0.10) * strength))
 
     glow = Image.new("RGBA", size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(glow)
     draw.ellipse(
-        (px - radius * 2, py - radius, px + radius * 2, py + radius),
-        fill=(0, 120, 255, 105),
+        (px - 2, py - 1, px + 2, py + 1),
+        fill=(0, 118, 255, round(72 + 18 * min(1.0, strength))),
     )
-    glow = glow.filter(ImageFilter.GaussianBlur(max(1.0, radius * 0.72)))
+    glow = glow.filter(ImageFilter.GaussianBlur(0.52))
+    glow.putalpha(ImageChops.multiply(glow.getchannel("A"), clip_mask))
 
     core = Image.new("RGBA", size, (0, 0, 0, 0))
     core_draw = ImageDraw.Draw(core)
-    core_radius = max(1, radius // 3)
-    core_draw.ellipse(
-        (px - core_radius, py - core_radius, px + core_radius, py + core_radius),
-        fill=(210, 242, 255, 255),
-    )
-    core_draw.ellipse(
-        (px - radius, py - max(1, radius // 3), px + radius, py + max(1, radius // 3)),
-        fill=(45, 165, 255, 225),
-    )
+    core_draw.line((px - 1, py, px + 1, py), fill=(52, 176, 255, 248), width=1)
+    core_draw.point((px, py), fill=(228, 251, 255, 255))
+    core.putalpha(ImageChops.multiply(core.getchannel("A"), clip_mask))
     return Image.alpha_composite(glow, core)
 
 
 def light_frame(base: Image.Image, lights: list[dict], active: set[str]) -> Image.Image:
     frame = base.copy()
+    clip_mask = base.getchannel("A").point(lambda value: 255 if value else 0)
+    clip_mask = clip_mask.filter(ImageFilter.MaxFilter(3))
     for light in lights:
         if light["group"] not in active:
             continue
@@ -89,6 +114,7 @@ def light_frame(base: Image.Image, lights: list[dict], active: set[str]) -> Imag
             float(light["x"]),
             float(light["y"]),
             float(light.get("size", 1.0)),
+            clip_mask,
         )
         frame = Image.alpha_composite(frame, overlay)
     return frame
@@ -99,16 +125,13 @@ def save_apng(base: Image.Image, lights: list[dict], target: Path) -> tuple[list
     durations = [120, 105, 85, 105, 90, 275]
     frames = [light_frame(base, lights, state) for state in sequence]
     target.parent.mkdir(parents=True, exist_ok=True)
-    frames[0].save(
+    save_full_frame_apng(
+        frames,
+        durations,
         target,
-        format="PNG",
-        save_all=True,
-        append_images=frames[1:],
-        duration=durations,
-        loop=0,
-        disposal=1,
+        compress_level=9,
+        disposal=0,
         blend=0,
-        optimize=False,
     )
     return frames, durations
 
@@ -199,13 +222,23 @@ def main() -> None:
     vehicles = sorted(manifest["vehicles"], key=lambda item: int(item.get("missionchief_slot", 9999)))
     for vehicle in vehicles:
         source = ROOT / vehicle["source"]
-        master = Image.open(source).convert("RGBA")
-        cropped = crop_to_alpha(master)
-        export = resize_to_real_scale(cropped, float(vehicle["real_length_metres"]), ppm)
-
         static_path = STATIC_DIR / f"{vehicle['id']}.png"
         animated_path = ANIMATED_DIR / f"{vehicle['id']}.png"
-        export.save(static_path, format="PNG", optimize=True)
+        source_fallback = False
+        if source.is_file():
+            master = Image.open(source).convert("RGBA")
+            cropped = crop_to_alpha(master)
+            export = resize_to_real_scale(cropped, float(vehicle["real_length_metres"]), ppm)
+        elif static_path.is_file():
+            # Some original true-scale source masters were never committed.
+            # Their approved production PNGs are lossless and remain the only
+            # authoritative source available to local and CI rebuilds.
+            export = normalise_transparent_rgb(Image.open(static_path).convert("RGBA"))
+            source_fallback = True
+        else:
+            raise FileNotFoundError(f"missing source and production fallback for {vehicle['id']}")
+        if not source_fallback:
+            export.save(static_path, format="PNG", optimize=True)
         frames, _durations = save_apng(export, vehicle["lights"], animated_path)
 
         corners = [export.getpixel((0, 0))[3], export.getpixel((export.width - 1, 0))[3], export.getpixel((0, export.height - 1))[3], export.getpixel((export.width - 1, export.height - 1))[3]]
@@ -213,6 +246,8 @@ def main() -> None:
             "id": vehicle["id"],
             "static": str(static_path.relative_to(ROOT)),
             "animated": str(animated_path.relative_to(ROOT)),
+            "source_fallback": source_fallback,
+            "static_preserved_from_production_fallback": source_fallback,
             "dimensions": {"width": export.width, "height": export.height},
             "alpha_mode": export.mode,
             "transparent_corners": all(value == 0 for value in corners),
@@ -228,6 +263,7 @@ def main() -> None:
     report = {
         "pack": manifest["pack"]["name"],
         "profile": "standard",
+        "production_static_fallbacks": sum(item["source_fallback"] for item in results),
         "all_passed": all(item["passed"] for item in results),
         "vehicles": results,
     }

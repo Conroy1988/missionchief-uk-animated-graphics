@@ -1,4 +1,4 @@
-# TKB UK Emergency Fleet — Animated v1.4.1
+# TKB UK Emergency Fleet — Animated v1.4.2
 
 A complete, original UK emergency-services vehicle graphics pack for [MissionChief UK](https://www.missionchief.co.uk/), built by **TKB Gaming**.
 
@@ -29,7 +29,7 @@ Search by name, slot or role; filter by service and improvement type; switch sta
 
 ## The complete UK fleet
 
-Release **v1.4.1** covers every one of the **117 current vehicle slots** in MissionChief UK:
+Release **v1.4.2** covers every one of the **117 current vehicle slots** in MissionChief UK:
 
 - 117 transparent, map-scale static PNGs
 - 105 twelve-frame APNGs plus 12 carefully selected eighteen-frame aircraft, marine and visible-wheel animations, with a unique timing signature per vehicle
@@ -44,6 +44,8 @@ Release **v1.4.1** covers every one of the **117 current vehicle slots** in Miss
 - 97 emergency assets distributed across 11 fleet phase offsets, 65 visible light-activity signatures and independent roof, grille, body and rear rhythms
 - 228 fixture-specific emergency-light anchors audited across 66 vehicles, including left-facing, specialist, carrier and helicopter assets
 - Fifteen specialist response vehicles corrected with compact, vehicle-specific LED fixtures so command screens, detector boards, drone cradles, medical markings, EOD equipment and tow gear never flash as emergency lamps
+- Every emergency-light emitter across both production profiles rebuilt as a compact, silhouette-clipped point or bar instead of a filled rectangle or ellipse
+- All 234 animated APNGs rebuilt with full-canvas frame controls, eliminating the partial update rectangles that rendered as pale boxes in MissionChief
 - Fixture-shaped LED cores and restrained bloom instead of generic flash points, plus subtle steady headlights and rear lamps on 91 response vehicles
 - Semi-transparent elliptical main-rotor blur, aviation-light rhythms and moving haze on both preserved Coastguard tail rotors
 - Improved red/green navigation lighting, bow spray, stern turbulence and class-weighted wakes for both operational lifeboats
@@ -61,7 +63,7 @@ Release **v1.4.1** covers every one of the **117 current vehicle slots** in Miss
 - Reinforced light/dark dual edges on the 15 weakest satellite-map assets; the minimum targeted satellite contrast remains above the v1.2 target
 - Fleet-wide contact grounding shadows with five weight-appropriate classes for light vehicles, heavy vehicles, trailers, watercraft and aircraft
 - Native half-scale sharpening and artefact cleanup across all 117 assets, with zero isolated alpha pixels remaining
-- Lossless APNG delta-frame optimisation: despite twelve 18-frame upgrades, the complete animated fleet remains **46.77% smaller** than v1.2.7 while decoding pixel-for-pixel identically
+- A full-fleet regression gate that decodes all 2,178 frames and rejects partial APNG updates, box-shaped light regions, off-silhouette blue pixels and hidden RGB in transparent pixels
 - Fire, ambulance, police, coastguard, water rescue, HEMS, mountain rescue, airport, fire-investigation and EOD coverage
 - The original v1.0 True Scale profile remains available and unchanged
 
@@ -77,9 +79,9 @@ Emergency lighting is deliberately restrained so the fleet remains readable on a
 
 Every icon is tested automatically at **100%, 75% and 50% scale** against light, dark, grayscale and satellite-style backgrounds. The release gate checks half-zoom survival, edge contrast, corrected rooflines, frame stability and all 117 static/animated slot pairs.
 
-[![Light-map dense fleet test](assets/previews/v1.4.1/busy-map-light.png)](assets/previews/v1.4.1/busy-map-light.png)
+[![Full-fleet light-map audit](assets/previews/v1.4.2/full-fleet-lighting-light.png)](assets/previews/v1.4.2/full-fleet-lighting-light.png)
 
-**[Corrected specialist light fixtures](assets/previews/v1.4.1/corrected-light-fixtures.png)** · **[Eighteen weakest-artwork redraws](assets/previews/v1.4.1/weakest-artwork-redraw-before-after.png)** · **[18-frame aircraft audit](assets/previews/v1.4.1/aircraft-motion-18-frame-audit.png)** · **[18-frame marine audit](assets/previews/v1.4.1/marine-motion-18-frame-audit.png)** · **[UK livery-language audit](assets/previews/v1.4.1/uk-livery-accuracy-audit.png)** · **[Complete helicopter-tail audit](assets/previews/v1.4.1/complete-helicopter-tails-map-scale.png)** · **[Satellite-style test](assets/previews/v1.4.1/busy-map-satellite.png)** · **[Crowded-response light audit](assets/previews/v1.4.1/desynchronised-lights-crowd.png)**
+**[Dark-map full-fleet audit](assets/previews/v1.4.2/full-fleet-lighting-dark.png)** · **[Satellite full-fleet audit](assets/previews/v1.4.2/full-fleet-lighting-satellite.png)** · **[Grayscale full-fleet audit](assets/previews/v1.4.2/full-fleet-lighting-grayscale.png)** · **[18-frame aircraft audit](assets/previews/v1.4.2/aircraft-motion-18-frame-audit.png)** · **[18-frame marine audit](assets/previews/v1.4.2/marine-motion-18-frame-audit.png)** · **[Complete helicopter-tail audit](assets/previews/v1.4.2/complete-helicopter-tails-map-scale.png)**
 
 ## Install in MissionChief
 
@@ -93,11 +95,11 @@ For MissionChief enhancements and utilities, visit **[TKB MissionChief Scripts &
 
 ## Release downloads
 
-The [v1.4.1 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.1) includes:
+The [v1.4.2 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.2) includes:
 
-- **`TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.1.zip`** — recommended ordered deployment package, with separate static and animated folders, an upload guide, manifest and reproducible SHA-256 verification
-- **`TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.1.user.js`** — resumable live deployment helper for pack maintainers
-- **`v1.4.1-build-report.json`**, **`v1.4.1-qa-report.json`**, **`v1.4.1-overhaul-report.json`**, **`v1.4.1-anchor-report.json`**, **`v1.4.1-fixture-accuracy-report.json`** and **`v1.4.1-light-placement-report.json`** — machine-readable production evidence; unchanged v1.4.0 master artwork retains its original report
+- **`TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.2.zip`** — recommended ordered deployment package, with separate static and animated folders, an upload guide, manifest and reproducible SHA-256 verification
+- **`TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.2.user.js`** — resumable live deployment helper for pack maintainers
+- **`v1.4.2-build-report.json`**, **`v1.4.2-qa-report.json`**, **`v1.4.2-overhaul-report.json`**, **`v1.4.2-anchor-report.json`**, **`v1.4.2-full-fleet-lighting-report.json`** and **`v1.4.2-light-placement-report.json`** — machine-readable production evidence for every image and animation frame
 
 The [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0) remains available for players who prefer strict real-world relative scale.
 
@@ -106,8 +108,8 @@ The [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-grap
 - `assets/sources/` — representative full-resolution chroma-key source artwork
 - `assets/exports/standard/static/` — MissionChief-ready transparent PNGs
 - `assets/exports/standard/animated/` — MissionChief-ready six-frame APNGs
-- `assets/exports/command/static/` — v1.4.1 Modern Command Clarity PNGs
-- `assets/exports/command/animated/` — v1.4.1 twelve- and eighteen-frame APNGs
+- `assets/exports/command/static/` — v1.4.2 Modern Command Clarity PNGs
+- `assets/exports/command/animated/` — v1.4.2 twelve- and eighteen-frame APNGs
 - `assets/masters/` — deterministic command-profile replacement masters, including v1.2.4 carriers/full-tail aircraft, twenty baked v1.3.0 role masters and twenty v1.4.0 redraw/marine masters
 - `assets/previews/` — map-scale, animation-frame and selected-artwork QA sheets
 - `gallery/` — interactive gallery source, deterministic 117-vehicle catalogue and responsive browser client
@@ -129,10 +131,10 @@ python scripts/build_v1_4_masters.py --check
 python scripts/build_v1_1_enhanced.py
 python scripts/validate_v1_1_enhanced.py
 python scripts/validate_v1_4_overhaul.py
-python scripts/validate_fixture_accuracy.py
+python scripts/validate_full_fleet_lighting.py
 python scripts/validate_release_scope.py
-python scripts/validate_light_placement.py --report data/v1.4.1-light-placement-report.json
-python scripts/build_numbered_upload_package.py --version v1.4.1 --profile command
+python scripts/validate_light_placement.py --report data/v1.4.2-light-placement-report.json
+python scripts/build_numbered_upload_package.py --version v1.4.2 --profile command
 python scripts/build_interactive_gallery.py --check --site-output dist/gallery-site
 node --test tests/gallery.test.mjs
 ```

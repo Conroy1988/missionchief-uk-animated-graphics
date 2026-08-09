@@ -37,11 +37,21 @@ def main() -> None:
     mapping = json.loads((ROOT / "data" / "vehicle-slots.json").read_text(encoding="utf-8"))
     all_ids = {str(item["asset_id"]) for item in mapping["slots"]}
     expected_ids = all_ids if declared_ids == "all" else set(declared_ids)
-    expected_variants = tuple(scope.get("changed_variants", ("static", "animated")))
+    profile_variants = scope.get("profile_variants")
+    if profile_variants is None:
+        expected_profiles = tuple(scope.get("changed_profiles", ("command",)))
+        expected_variants = tuple(scope.get("changed_variants", ("static", "animated")))
+        profile_variants = {profile_name: expected_variants for profile_name in expected_profiles}
+    else:
+        profile_variants = {
+            str(profile_name): tuple(variants)
+            for profile_name, variants in profile_variants.items()
+        }
     expected_paths = {
-        f"assets/exports/command/{variant}/{asset_id}.png"
+        f"assets/exports/{profile_name}/{variant}/{asset_id}.png"
+        for profile_name, variants in profile_variants.items()
         for asset_id in expected_ids
-        for variant in expected_variants
+        for variant in variants
     }
 
     try:
@@ -56,8 +66,7 @@ def main() -> None:
             "--name-only",
             baseline,
             "--",
-            "assets/exports/command/static",
-            "assets/exports/command/animated",
+            *(f"assets/exports/{profile_name}" for profile_name in profile_variants),
         ).splitlines()
         if line
     }
@@ -100,8 +109,8 @@ def main() -> None:
             {
                 "status": "PASS",
                 "baseline": baseline,
+                "profile_variants": profile_variants,
                 "changed_assets": len(expected_ids),
-                "changed_variants": expected_variants,
                 "changed_files": len(changed_paths),
                 "asset_ids": sorted(expected_ids),
                 "slots": actual_slots,
