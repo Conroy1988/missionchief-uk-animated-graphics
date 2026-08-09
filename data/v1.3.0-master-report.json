@@ -482,20 +482,20 @@
       },
       "master_dimensions": {
         "width": 64,
-        "height": 24
+        "height": 22
       },
       "content_offset": {
         "x": 0,
-        "y": 3
+        "y": 1
       },
       "light_transform": {
         "x_scale": 1.0,
         "x_offset": 0.0,
-        "y_scale": 0.8695652173913043,
-        "y_offset": 0.13043478260869565
+        "y_scale": 0.9523809523809523,
+        "y_offset": 0.047619047619047616
       },
-      "half_zoom_added_alpha_pixels": 16,
-      "sha256": "4700fad93d1644165afb09d6e2c7b2a70795411228a19471b9e70131d882430f"
+      "half_zoom_added_alpha_pixels": 8,
+      "sha256": "bcbdd7f8434bb002a94ea5615fe3b30fd501058f9545d14d09e5a9b64cf3fada"
     },
     {
       "slot": 11,

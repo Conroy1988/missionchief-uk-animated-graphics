@@ -349,11 +349,20 @@ def add_role_differentiation(
         draw.rectangle((middle + 1, top + 1, x2 - 1, bottom - 1), fill=(64, 166, 255, 250))
         mast(0.66, max(4, module_height), base_y=bottom)
     elif cue == "irv-anpr-array":
-        left_box = module(0.40, 0.47, max(2, module_height - 2))
-        right_box = module(0.63, 0.70, max(2, module_height - 2))
-        for box in (left_box, right_box):
-            x1, top, x2, bottom = box
-            draw.ellipse((x1 + 1, top + 1, min(x2 - 1, x1 + 3), min(bottom - 1, top + 3)), fill=dark)
+        # The earlier twin-module treatment put two large police-blue outlines
+        # above an already recognisable roof lightbar. At MissionChief scale
+        # those outlines merged into blue blobs. Keep the IRV silhouette cue as
+        # one low-profile dark housing, with only two isolated blue lens pixels.
+        x1 = round(canvas.width * 0.40)
+        x2 = round(canvas.width * 0.55)
+        bottom = roof_y(0.40, 0.55) + 1
+        top = max(1, bottom - 2)
+        middle = (x1 + x2) // 2
+        draw.rectangle((x1 - 1, top, x2 + 1, bottom), fill=dark)
+        draw.line((x1, bottom, x2, bottom), fill=steel, width=1)
+        draw.point((x1 + 2, top), fill=accent)
+        draw.point((x2 - 2, top), fill=accent)
+        draw.point((middle, top + 1), fill=(8, 13, 17, 255))
     elif cue == "compact-medical-pod":
         x1, top, x2, bottom = module(0.45, 0.56, max(3, module_height - 2))
         cx, cy = (x1 + x2) // 2, (top + bottom) // 2

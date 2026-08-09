@@ -1,5 +1,5 @@
-# Builds, validates and releases the v1.4.3 isolated point-lamp correction.
-name: Build v1.4.3 MissionChief command pack
+# Builds, validates and releases the v1.4.4 IRV roof-light correction.
+name: Build v1.4.4 MissionChief command pack
 
 on:
   workflow_dispatch:
@@ -33,8 +33,8 @@ on:
       - data/v1.2.6-light-overrides.json
       - data/v1.3.0-scope.json
       - data/v1.4.0-scope.json
-      - data/v1.4.3-scope.json
-      - data/v1.4.3-light-fixtures.json
+      - data/v1.4.4-scope.json
+      - data/v1.4.4-light-fixtures.json
       - scripts/build_v1_1_enhanced.py
       - scripts/build_prototypes.py
       - scripts/validate_v1_1_enhanced.py
@@ -43,13 +43,14 @@ on:
       - scripts/validate_light_placement.py
       - scripts/validate_full_fleet_lighting.py
       - scripts/validate_point_emitters.py
+      - scripts/validate_irv_lighting.py
       - scripts/audit_emergency_light_placement.py
       - docs/RELEASE_v1.3.0.md
       - docs/CHECKPOINT_v1.3.0.md
       - docs/RELEASE_v1.4.0.md
       - docs/CHECKPOINT_v1.4.0.md
-      - docs/RELEASE_v1.4.3.md
-      - docs/CHECKPOINT_v1.4.3.md
+      - docs/RELEASE_v1.4.4.md
+      - docs/CHECKPOINT_v1.4.4.md
       - .github/workflows/build-numbered-upload-package.yml
   push:
     branches:
@@ -81,8 +82,8 @@ on:
       - data/v1.2.6-light-overrides.json
       - data/v1.3.0-scope.json
       - data/v1.4.0-scope.json
-      - data/v1.4.3-scope.json
-      - data/v1.4.3-light-fixtures.json
+      - data/v1.4.4-scope.json
+      - data/v1.4.4-light-fixtures.json
       - scripts/build_v1_1_enhanced.py
       - scripts/build_prototypes.py
       - scripts/validate_v1_1_enhanced.py
@@ -91,13 +92,14 @@ on:
       - scripts/validate_light_placement.py
       - scripts/validate_full_fleet_lighting.py
       - scripts/validate_point_emitters.py
+      - scripts/validate_irv_lighting.py
       - scripts/audit_emergency_light_placement.py
       - docs/RELEASE_v1.3.0.md
       - docs/CHECKPOINT_v1.3.0.md
       - docs/RELEASE_v1.4.0.md
       - docs/CHECKPOINT_v1.4.0.md
-      - docs/RELEASE_v1.4.3.md
-      - docs/CHECKPOINT_v1.4.3.md
+      - docs/RELEASE_v1.4.4.md
+      - docs/CHECKPOINT_v1.4.4.md
       - .github/workflows/build-numbered-upload-package.yml
 
 permissions:
@@ -141,6 +143,9 @@ jobs:
       - name: Build Modern Command Clarity exports
         run: python scripts/build_v1_1_enhanced.py
 
+      - name: Reject any return of the IRV roof-light blob
+        run: python scripts/validate_irv_lighting.py
+
       - name: Build True Scale exports with the full-frame APNG encoder
         run: python scripts/build_prototypes.py
 
@@ -151,7 +156,7 @@ jobs:
         run: python scripts/validate_v1_4_overhaul.py
 
       - name: Verify every corrected flash remains anchored to its vehicle
-        run: python scripts/validate_light_placement.py --report data/v1.4.3-light-placement-report.json
+        run: python scripts/validate_light_placement.py --report data/v1.4.4-light-placement-report.json
 
       - name: Audit every production image and APNG frame for bars, boxes and oversized lamps
         run: python scripts/validate_full_fleet_lighting.py
@@ -160,45 +165,45 @@ jobs:
         run: python scripts/validate_release_scope.py
 
       - name: Build and validate numbered package
-        run: python scripts/build_numbered_upload_package.py --version v1.4.3 --profile command
+        run: python scripts/build_numbered_upload_package.py --version v1.4.4 --profile command
 
       - name: Stage bulk uploader release asset
-        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.3.user.js
+        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.4.user.js
 
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: missionchief-modern-command-clarity-v1.4.3
+          name: missionchief-modern-command-clarity-v1.4.4
           path: |
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.3.zip
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.3.zip.sha256
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.3.user.js
-            data/v1.4.3-build-report.json
-            data/v1.4.3-qa-report.json
-            data/v1.4.3-light-placement-report.json
-            data/v1.4.3-full-fleet-lighting-report.json
-            data/v1.4.3-anchor-report.json
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.4.zip
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.4.zip.sha256
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.4.user.js
+            data/v1.4.4-build-report.json
+            data/v1.4.4-qa-report.json
+            data/v1.4.4-light-placement-report.json
+            data/v1.4.4-full-fleet-lighting-report.json
+            data/v1.4.4-anchor-report.json
             data/v1.4.0-master-report.json
-            data/v1.4.3-overhaul-report.json
-            assets/previews/v1.4.3/*.png
+            data/v1.4.4-overhaul-report.json
+            assets/previews/v1.4.4/*.png
           if-no-files-found: error
           retention-days: 90
 
-      - name: Create or update v1.4.3 release
+      - name: Create or update v1.4.4 release
         if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v1.4.3 >/dev/null 2>&1 || gh release create v1.4.3 --target main --title "v1.4.3 — Isolated Point-Lamp Emergency Lighting" --notes-file docs/RELEASE_v1.4.3.md
-          gh release upload v1.4.3 \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.3.zip \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.3.zip.sha256 \
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.3.user.js \
-            data/v1.4.3-build-report.json \
-            data/v1.4.3-qa-report.json \
-            data/v1.4.3-light-placement-report.json \
-            data/v1.4.3-full-fleet-lighting-report.json \
-            data/v1.4.3-anchor-report.json \
+          gh release view v1.4.4 >/dev/null 2>&1 || gh release create v1.4.4 --target main --title "v1.4.4 — IRV Roof-Light Repair" --notes-file docs/RELEASE_v1.4.4.md
+          gh release upload v1.4.4 \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.4.zip \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.4.zip.sha256 \
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.4.user.js \
+            data/v1.4.4-build-report.json \
+            data/v1.4.4-qa-report.json \
+            data/v1.4.4-light-placement-report.json \
+            data/v1.4.4-full-fleet-lighting-report.json \
+            data/v1.4.4-anchor-report.json \
             data/v1.4.0-master-report.json \
-            data/v1.4.3-overhaul-report.json \
+            data/v1.4.4-overhaul-report.json \
             --clobber

@@ -1,9 +1,9 @@
 {
-  "release": "v1.4.3",
+  "release": "v1.4.4",
   "master_art_release": "v1.4.0",
   "master_source_release": "v1.2.4",
   "profile": "command",
-  "display_name": "Modern Command Clarity — Isolated Point-Lamp Edition",
+  "display_name": "Modern Command Clarity — IRV Lighting Repair",
   "source_profile": "standard",
   "frames": 12,
   "animation_frame_overrides": {
@@ -186,7 +186,7 @@
   },
   "light_overrides_path": "data/v1.2.6-light-overrides.json",
   "light_overrides_release": "v1.2.6",
-  "current_light_fixtures_path": "data/v1.4.3-light-fixtures.json",
+  "current_light_fixtures_path": "data/v1.4.4-light-fixtures.json",
   "emergency_light_renderer": {
     "model": "isolated-point-v3",
     "full_canvas_apng_frames": true,
