@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v1.4.5",
+  "release": "v1.4.6",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -88,8 +88,14 @@
   ],
   "releases": [
     {
+      "id": "v1.4.6",
+      "label": "v1.4.6 · Current",
+      "profile": "command",
+      "summary": "ARV roof-light repair"
+    },
+    {
       "id": "v1.4.5",
-      "label": "v1.4.5 · Current",
+      "label": "v1.4.5",
       "profile": "command",
       "summary": "RRV roof-light repair"
     },
@@ -473,18 +479,18 @@
       "production_batch": "01-core-services",
       "real_length_metres": 5.1,
       "width": 74,
-      "height": 36,
+      "height": 34,
       "frames": 12,
       "focus": [
         "grounding-shadow",
         "role-differentiation",
         "lighting"
       ],
-      "cue": "Arv equipment locker",
+      "cue": "Arv low profile lightbar",
       "static_path": "assets/exports/command/static/armed-response-vehicle.png",
       "animated_path": "assets/exports/command/animated/armed-response-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "014 14 slot 14 arv arv armed-response-vehicle armed response vehicle police police 01 core services arv equipment locker grounding shadows role differentiation lighting changes"
+      "search_text": "014 14 slot 14 arv arv armed-response-vehicle armed response vehicle police police 01 core services arv low profile lightbar grounding shadows role differentiation lighting changes"
     },
     {
       "slot": 15,
@@ -2975,8 +2981,8 @@
     "data/prototypes.json",
     "data/v1.4-overhaul-profile.json",
     "data/v1.2.6-scope.json",
-    "data/v1.4.5-build-report.json",
-    "data/v1.4.5-scope.json",
-    "data/v1.4.5-light-fixtures.json"
+    "data/v1.4.6-build-report.json",
+    "data/v1.4.6-scope.json",
+    "data/v1.4.6-light-fixtures.json"
   ]
 }

@@ -90,7 +90,7 @@
     "otl": {"family": "role", "cue": "otl-command-mast"},
     "community-first-responder": {"family": "role", "cue": "cfr-medical-beacon"},
     "armed-traffic-car": {"family": "role", "cue": "traffic-anpr-pods"},
-    "armed-response-vehicle": {"family": "role", "cue": "arv-equipment-locker"},
+    "armed-response-vehicle": {"family": "role", "cue": "arv-low-profile-lightbar"},
     "cbrn-vehicle": {"family": "equipment", "cue": "hazmat-detection-rack"},
     "control-van-sar": {"family": "equipment", "cue": "command-mast-dish"},
     "drone-vehicle-sar-hq": {"family": "equipment", "cue": "drone-launch-cradle"},
