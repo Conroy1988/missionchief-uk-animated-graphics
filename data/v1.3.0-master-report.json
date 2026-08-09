@@ -8,7 +8,7 @@
       "slot": 14,
       "id": "armed-response-vehicle",
       "family": "role",
-      "cue": "arv-equipment-locker",
+      "cue": "arv-low-profile-lightbar",
       "service": "police",
       "source": "assets/exports/standard/static/armed-response-vehicle.png",
       "target": "assets/masters/v1.3.0/armed-response-vehicle.png",
@@ -18,20 +18,20 @@
       },
       "master_dimensions": {
         "width": 66,
-        "height": 28
+        "height": 26
       },
       "content_offset": {
         "x": 0,
-        "y": 3
+        "y": 1
       },
       "light_transform": {
         "x_scale": 1.0,
         "x_offset": 0.0,
-        "y_scale": 0.8888888888888888,
-        "y_offset": 0.1111111111111111
+        "y_scale": 0.96,
+        "y_offset": 0.04
       },
-      "half_zoom_added_alpha_pixels": 15,
-      "sha256": "f44a3d5e1e79d7e02fdb84a3bc69988d8746a0acf90cf5d4e907c17b597899ec"
+      "half_zoom_added_alpha_pixels": 3,
+      "sha256": "748a779c661f37c473df3d5a13d6914e1d9c8e1e6181534908c09402853e191c"
     },
     {
       "slot": 26,

@@ -27,8 +27,8 @@ const defaults = {
 };
 
 test('catalogue contains one ordered record for every live MissionChief slot', () => {
-  assert.equal(catalogue.release, 'v1.4.5');
-  assert.equal(catalogue.releases[0].id, 'v1.4.5');
+  assert.equal(catalogue.release, 'v1.4.6');
+  assert.equal(catalogue.releases[0].id, 'v1.4.6');
   assert.equal(catalogue.total, 117);
   assert.equal(catalogue.vehicles.length, 117);
   assert.deepEqual(catalogue.vehicles.map((vehicle) => vehicle.slot), Array.from({ length: 117 }, (_, index) => index + 1));

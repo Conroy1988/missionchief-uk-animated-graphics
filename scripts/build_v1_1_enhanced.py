@@ -399,11 +399,20 @@ def add_role_differentiation(
         first = module(0.36, 0.42, max(2, module_height - 2))
         second = module(0.67, 0.73, max(2, module_height - 2))
         mast(0.76, max(3, module_height - 2), base_y=second[3])
-    elif cue == "arv-equipment-locker":
-        box = module(0.41, 0.58, max(3, module_height - 1))
-        middle = (box[0] + box[2]) // 2
-        draw.line((middle, box[1] + 1, middle, box[3] - 1), fill=dark, width=1)
-        draw.rectangle((box[0] + 2, box[3] - 2, box[2] - 2, box[3] - 1), fill=accent)
+    elif cue == "arv-low-profile-lightbar":
+        # The source ARV already carries a recognisable slim roof lightbar. The
+        # former "equipment locker" added a tall police-blue outlined box above
+        # it, which became a detached blue lump at MissionChief scale. Keep one
+        # shallow dark housing and expose only two isolated blue lens pixels.
+        x1 = round(canvas.width * 0.42)
+        x2 = round(canvas.width * 0.58)
+        bottom = roof_y(0.42, 0.58) + 1
+        top = max(1, bottom - 1)
+        emergency_blue = (64, 166, 255, 250)
+        draw.rectangle((x1 - 1, top, x2 + 1, bottom), fill=dark)
+        draw.line((x1, bottom, x2, bottom), fill=steel, width=1)
+        draw.point((x1 + 2, top), fill=emergency_blue)
+        draw.point((x2 - 2, top), fill=emergency_blue)
     elif cue == "eod-command-mast":
         box = module(0.44, 0.62, module_height + 1)
         mast(0.65, module_height + 6, base_y=box[3], beacon=True)
