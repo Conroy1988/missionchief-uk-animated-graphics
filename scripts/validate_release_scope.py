@@ -36,7 +36,6 @@ def main() -> None:
     declared_ids = scope["changed_asset_ids"]
     mapping = json.loads((ROOT / "data" / "vehicle-slots.json").read_text(encoding="utf-8"))
     all_ids = {str(item["asset_id"]) for item in mapping["slots"]}
-    expected_ids = all_ids if declared_ids == "all" else set(declared_ids)
     profile_variants = scope.get("profile_variants")
     if profile_variants is None:
         expected_profiles = tuple(scope.get("changed_profiles", ("command",)))
@@ -47,10 +46,34 @@ def main() -> None:
             str(profile_name): tuple(variants)
             for profile_name, variants in profile_variants.items()
         }
+    if declared_ids == "profile-emergency-lit":
+        manifest = json.loads((ROOT / "data" / "prototypes.json").read_text(encoding="utf-8"))
+        standard_ids = {
+            str(vehicle["id"])
+            for vehicle in manifest["vehicles"]
+            if vehicle.get("lights")
+        }
+        build = json.loads((ROOT / "data" / f"{release}-build-report.json").read_text(encoding="utf-8"))
+        command_ids = {
+            str(vehicle["id"])
+            for vehicle in build["vehicles_detail"]
+            if vehicle.get("response_light_count")
+        }
+        profile_ids = {
+            profile_name: command_ids if profile_name == "command" else standard_ids
+            for profile_name in profile_variants
+        }
+    else:
+        if declared_ids == "all":
+            expected_ids = all_ids
+        else:
+            expected_ids = set(declared_ids)
+        profile_ids = {profile_name: expected_ids for profile_name in profile_variants}
+    expected_ids = set().union(*profile_ids.values())
     expected_paths = {
         f"assets/exports/{profile_name}/{variant}/{asset_id}.png"
         for profile_name, variants in profile_variants.items()
-        for asset_id in expected_ids
+        for asset_id in profile_ids[profile_name]
         for variant in variants
     }
 
@@ -87,11 +110,16 @@ def main() -> None:
         for item in mapping["slots"]
         if str(item["asset_id"]) in expected_ids
     }
-    expected_slots = (
-        {str(item["asset_id"]): int(item["slot"]) for item in mapping["slots"]}
-        if scope["slots"] == "all"
-        else {str(key): int(value) for key, value in scope["slots"].items()}
-    )
+    if scope["slots"] == "all":
+        expected_slots = {str(item["asset_id"]): int(item["slot"]) for item in mapping["slots"]}
+    elif scope["slots"] == "profile-emergency-lit":
+        expected_slots = {
+            str(item["asset_id"]): int(item["slot"])
+            for item in mapping["slots"]
+            if str(item["asset_id"]) in expected_ids
+        }
+    else:
+        expected_slots = {str(key): int(value) for key, value in scope["slots"].items()}
     if actual_slots != expected_slots:
         raise SystemExit(
             json.dumps(
@@ -111,6 +139,10 @@ def main() -> None:
                 "baseline": baseline,
                 "profile_variants": profile_variants,
                 "changed_assets": len(expected_ids),
+                "changed_assets_by_profile": {
+                    profile_name: len(asset_ids)
+                    for profile_name, asset_ids in profile_ids.items()
+                },
                 "changed_files": len(changed_paths),
                 "asset_ids": sorted(expected_ids),
                 "slots": actual_slots,

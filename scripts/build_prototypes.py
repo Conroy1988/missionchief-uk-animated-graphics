@@ -9,6 +9,7 @@ from pathlib import Path
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 from apng_full_frame import save_full_frame_apng
+from emergency_light import render_point_emitter
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -72,41 +73,25 @@ def blue_flash(
     y: float,
     strength: float,
     clip_mask: Image.Image,
+    variant: int = 0,
 ) -> Image.Image:
-    """Render a compact optical emitter without a rectangular APNG light tile.
-
-    The original standard renderer painted a broad, filled ellipse around every
-    coordinate. At MissionChief map scale that falloff quantised into a visible
-    block. Keep the flare to a tiny antialiased lens and clip it to the vehicle
-    silhouette plus one pixel, so a lamp can shine without producing a floating
-    patch on the map.
-    """
+    """Render the same isolated point lamp used by the command profile."""
     width, height = size
     px = round(x * (width - 1))
     py = round(y * (height - 1))
-
-    glow = Image.new("RGBA", size, (0, 0, 0, 0))
-    draw = ImageDraw.Draw(glow)
-    draw.ellipse(
-        (px - 2, py - 1, px + 2, py + 1),
-        fill=(0, 118, 255, round(72 + 18 * min(1.0, strength))),
-    )
-    glow = glow.filter(ImageFilter.GaussianBlur(0.52))
-    glow.putalpha(ImageChops.multiply(glow.getchannel("A"), clip_mask))
-
-    core = Image.new("RGBA", size, (0, 0, 0, 0))
-    core_draw = ImageDraw.Draw(core)
-    core_draw.line((px - 1, py, px + 1, py), fill=(52, 176, 255, 248), width=1)
-    core_draw.point((px, py), fill=(228, 251, 255, 255))
-    core.putalpha(ImageChops.multiply(core.getchannel("A"), clip_mask))
-    return Image.alpha_composite(glow, core)
+    return render_point_emitter(size, px, py, strength, clip_mask, variant)
 
 
-def light_frame(base: Image.Image, lights: list[dict], active: set[str]) -> Image.Image:
+def light_frame(
+    base: Image.Image,
+    lights: list[dict],
+    active: set[str],
+    frame_index: int,
+) -> Image.Image:
     frame = base.copy()
     clip_mask = base.getchannel("A").point(lambda value: 255 if value else 0)
     clip_mask = clip_mask.filter(ImageFilter.MaxFilter(3))
-    for light in lights:
+    for index, light in enumerate(lights):
         if light["group"] not in active:
             continue
         overlay = blue_flash(
@@ -115,6 +100,7 @@ def light_frame(base: Image.Image, lights: list[dict], active: set[str]) -> Imag
             float(light["y"]),
             float(light.get("size", 1.0)),
             clip_mask,
+            (frame_index + index) % 2,
         )
         frame = Image.alpha_composite(frame, overlay)
     return frame
@@ -123,7 +109,10 @@ def light_frame(base: Image.Image, lights: list[dict], active: set[str]) -> Imag
 def save_apng(base: Image.Image, lights: list[dict], target: Path) -> tuple[list[Image.Image], list[int]]:
     sequence = [set(), {"a"}, set(), {"b"}, {"a", "b"}, set()]
     durations = [120, 105, 85, 105, 90, 275]
-    frames = [light_frame(base, lights, state) for state in sequence]
+    frames = [
+        light_frame(base, lights, state, frame_index)
+        for frame_index, state in enumerate(sequence)
+    ]
     target.parent.mkdir(parents=True, exist_ok=True)
     save_full_frame_apng(
         frames,

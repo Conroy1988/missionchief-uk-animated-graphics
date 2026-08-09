@@ -1,5 +1,5 @@
-# Builds, validates and releases the v1.4.2 full-fleet lighting correction.
-name: Build v1.4.2 MissionChief command pack
+# Builds, validates and releases the v1.4.3 isolated point-lamp correction.
+name: Build v1.4.3 MissionChief command pack
 
 on:
   workflow_dispatch:
@@ -9,6 +9,7 @@ on:
     paths:
       - scripts/build_numbered_upload_package.py
       - scripts/apng_full_frame.py
+      - scripts/emergency_light.py
       - tools/tkb-missionchief-bulk-uploader.user.js
       - data/vehicle-slots.json
       - assets/exports/standard/static/**
@@ -32,8 +33,8 @@ on:
       - data/v1.2.6-light-overrides.json
       - data/v1.3.0-scope.json
       - data/v1.4.0-scope.json
-      - data/v1.4.2-scope.json
-      - data/v1.4.2-light-fixtures.json
+      - data/v1.4.3-scope.json
+      - data/v1.4.3-light-fixtures.json
       - scripts/build_v1_1_enhanced.py
       - scripts/build_prototypes.py
       - scripts/validate_v1_1_enhanced.py
@@ -41,13 +42,14 @@ on:
       - scripts/validate_v1_4_overhaul.py
       - scripts/validate_light_placement.py
       - scripts/validate_full_fleet_lighting.py
+      - scripts/validate_point_emitters.py
       - scripts/audit_emergency_light_placement.py
       - docs/RELEASE_v1.3.0.md
       - docs/CHECKPOINT_v1.3.0.md
       - docs/RELEASE_v1.4.0.md
       - docs/CHECKPOINT_v1.4.0.md
-      - docs/RELEASE_v1.4.2.md
-      - docs/CHECKPOINT_v1.4.2.md
+      - docs/RELEASE_v1.4.3.md
+      - docs/CHECKPOINT_v1.4.3.md
       - .github/workflows/build-numbered-upload-package.yml
   push:
     branches:
@@ -55,6 +57,7 @@ on:
     paths:
       - scripts/build_numbered_upload_package.py
       - scripts/apng_full_frame.py
+      - scripts/emergency_light.py
       - tools/tkb-missionchief-bulk-uploader.user.js
       - data/vehicle-slots.json
       - assets/exports/standard/static/**
@@ -78,8 +81,8 @@ on:
       - data/v1.2.6-light-overrides.json
       - data/v1.3.0-scope.json
       - data/v1.4.0-scope.json
-      - data/v1.4.2-scope.json
-      - data/v1.4.2-light-fixtures.json
+      - data/v1.4.3-scope.json
+      - data/v1.4.3-light-fixtures.json
       - scripts/build_v1_1_enhanced.py
       - scripts/build_prototypes.py
       - scripts/validate_v1_1_enhanced.py
@@ -87,13 +90,14 @@ on:
       - scripts/validate_v1_4_overhaul.py
       - scripts/validate_light_placement.py
       - scripts/validate_full_fleet_lighting.py
+      - scripts/validate_point_emitters.py
       - scripts/audit_emergency_light_placement.py
       - docs/RELEASE_v1.3.0.md
       - docs/CHECKPOINT_v1.3.0.md
       - docs/RELEASE_v1.4.0.md
       - docs/CHECKPOINT_v1.4.0.md
-      - docs/RELEASE_v1.4.2.md
-      - docs/CHECKPOINT_v1.4.2.md
+      - docs/RELEASE_v1.4.3.md
+      - docs/CHECKPOINT_v1.4.3.md
       - .github/workflows/build-numbered-upload-package.yml
 
 permissions:
@@ -131,6 +135,9 @@ jobs:
       - name: Verify deterministic v1.4 redraw and marine masters
         run: python scripts/build_v1_4_masters.py --check
 
+      - name: Reject any emergency-light primitive that can draw a line, ellipse, box or blur
+        run: python scripts/validate_point_emitters.py
+
       - name: Build Modern Command Clarity exports
         run: python scripts/build_v1_1_enhanced.py
 
@@ -144,54 +151,54 @@ jobs:
         run: python scripts/validate_v1_4_overhaul.py
 
       - name: Verify every corrected flash remains anchored to its vehicle
-        run: python scripts/validate_light_placement.py --report data/v1.4.2-light-placement-report.json
+        run: python scripts/validate_light_placement.py --report data/v1.4.3-light-placement-report.json
 
-      - name: Audit every production image, APNG frame and map condition for light boxes
+      - name: Audit every production image and APNG frame for bars, boxes and oversized lamps
         run: python scripts/validate_full_fleet_lighting.py
 
       - name: Verify exact static and animated release scope
         run: python scripts/validate_release_scope.py
 
       - name: Build and validate numbered package
-        run: python scripts/build_numbered_upload_package.py --version v1.4.2 --profile command
+        run: python scripts/build_numbered_upload_package.py --version v1.4.3 --profile command
 
       - name: Stage bulk uploader release asset
-        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.2.user.js
+        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.3.user.js
 
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: missionchief-modern-command-clarity-v1.4.2
+          name: missionchief-modern-command-clarity-v1.4.3
           path: |
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.2.zip
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.2.zip.sha256
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.2.user.js
-            data/v1.4.2-build-report.json
-            data/v1.4.2-qa-report.json
-            data/v1.4.2-light-placement-report.json
-            data/v1.4.2-full-fleet-lighting-report.json
-            data/v1.4.2-anchor-report.json
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.3.zip
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.3.zip.sha256
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.3.user.js
+            data/v1.4.3-build-report.json
+            data/v1.4.3-qa-report.json
+            data/v1.4.3-light-placement-report.json
+            data/v1.4.3-full-fleet-lighting-report.json
+            data/v1.4.3-anchor-report.json
             data/v1.4.0-master-report.json
-            data/v1.4.2-overhaul-report.json
-            assets/previews/v1.4.2/*.png
+            data/v1.4.3-overhaul-report.json
+            assets/previews/v1.4.3/*.png
           if-no-files-found: error
           retention-days: 90
 
-      - name: Create or update v1.4.2 release
+      - name: Create or update v1.4.3 release
         if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v1.4.2 >/dev/null 2>&1 || gh release create v1.4.2 --target main --title "v1.4.2 — Full-Fleet Light-Box Elimination" --notes-file docs/RELEASE_v1.4.2.md
-          gh release upload v1.4.2 \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.2.zip \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.2.zip.sha256 \
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.2.user.js \
-            data/v1.4.2-build-report.json \
-            data/v1.4.2-qa-report.json \
-            data/v1.4.2-light-placement-report.json \
-            data/v1.4.2-full-fleet-lighting-report.json \
-            data/v1.4.2-anchor-report.json \
+          gh release view v1.4.3 >/dev/null 2>&1 || gh release create v1.4.3 --target main --title "v1.4.3 — Isolated Point-Lamp Emergency Lighting" --notes-file docs/RELEASE_v1.4.3.md
+          gh release upload v1.4.3 \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.3.zip \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.3.zip.sha256 \
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.3.user.js \
+            data/v1.4.3-build-report.json \
+            data/v1.4.3-qa-report.json \
+            data/v1.4.3-light-placement-report.json \
+            data/v1.4.3-full-fleet-lighting-report.json \
+            data/v1.4.3-anchor-report.json \
             data/v1.4.0-master-report.json \
-            data/v1.4.2-overhaul-report.json \
+            data/v1.4.3-overhaul-report.json \
             --clobber
