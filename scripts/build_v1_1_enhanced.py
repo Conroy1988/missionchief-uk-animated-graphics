@@ -364,10 +364,19 @@ def add_role_differentiation(
         draw.point((x2 - 2, top), fill=accent)
         draw.point((middle, top + 1), fill=(8, 13, 17, 255))
     elif cue == "compact-medical-pod":
-        x1, top, x2, bottom = module(0.45, 0.56, max(3, module_height - 2))
-        cx, cy = (x1 + x2) // 2, (top + bottom) // 2
-        draw.rectangle((cx - 2, cy - 1, cx + 2, cy + 1), fill=steel)
-        draw.rectangle((cx - 1, cy - 2, cx + 1, cy + 2), fill=steel)
+        # The source RRV already has a correctly positioned roof lightbar. The
+        # former medical-box overlay sat above it and became a large green and
+        # white lump at MissionChief scale. Re-ink the existing bar as one slim
+        # housing with two separated blue lenses, without increasing the roofline.
+        x1 = round(canvas.width * 0.36)
+        x2 = round(canvas.width * 0.47)
+        bottom = roof_y(0.36, 0.49) + 1
+        top = max(1, bottom - 1)
+        emergency_blue = (64, 166, 255, 250)
+        draw.rectangle((x1 - 1, top, x2 + 1, bottom), fill=dark)
+        draw.line((x1, bottom, x2, bottom), fill=steel, width=1)
+        draw.point((x1 + 2, top), fill=emergency_blue)
+        draw.point((x2 - 2, top), fill=emergency_blue)
     elif cue == "rrv-aerial-pair":
         left = module(0.42, 0.47, 2)
         right = module(0.58, 0.63, 2)
