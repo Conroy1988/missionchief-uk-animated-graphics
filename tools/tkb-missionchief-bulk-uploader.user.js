@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         TKB MissionChief UK Graphics Bulk Uploader
 // @namespace    https://github.com/Conroy1988/missionchief-uk-animated-graphics
-// @version      1.4.1
-// @description  Uploads the numbered TKB UK Emergency Fleet v1.4.1 static and animated graphics to MissionChief pack 5897, including fixture-accurate emergency lighting.
+// @version      1.4.2
+// @description  Uploads the fully audited TKB UK Emergency Fleet v1.4.2 static and animated graphics to MissionChief pack 5897, with box-free compact emergency lighting.
 // @author       TKB Gaming
 // @match        https://www.missionchief.co.uk/vehicle_graphics/5897/edit*
 // @run-at       document-idle

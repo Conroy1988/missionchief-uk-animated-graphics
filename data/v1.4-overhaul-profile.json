@@ -1,9 +1,9 @@
 {
-  "release": "v1.4.1",
+  "release": "v1.4.2",
   "master_art_release": "v1.4.0",
   "master_source_release": "v1.2.4",
   "profile": "command",
-  "display_name": "Modern Command Clarity — Air, Marine and Redraw Edition",
+  "display_name": "Modern Command Clarity — Full-Fleet Optical Emitter Edition",
   "source_profile": "standard",
   "frames": 12,
   "animation_frame_overrides": {
@@ -186,7 +186,13 @@
   },
   "light_overrides_path": "data/v1.2.6-light-overrides.json",
   "light_overrides_release": "v1.2.6",
-  "current_light_fixtures_path": "data/v1.4.1-light-fixtures.json",
+  "current_light_fixtures_path": "data/v1.4.2-light-fixtures.json",
+  "emergency_light_renderer": {
+    "model": "compact-silhouette-v2",
+    "full_canvas_apng_frames": true,
+    "maximum_silhouette_expansion_pixels": 1,
+    "legacy_filled_light_tiles": false
+  },
   "role_differentiation": {},
   "role_confusion_groups": [],
   "specialist_equipment": {},
@@ -376,7 +382,7 @@
   "compression": {
     "baseline_release": "v1.3.0",
     "baseline_animated_bytes": 9034343,
-    "maximum_total_ratio": 1.35,
+    "maximum_total_ratio": 1.70,
     "lossless_pixel_verification": true,
     "preferred_disposal": 0,
     "fallback_disposal": 1,

@@ -1,0 +1,10 @@
+{
+  "release": "v1.4.2",
+  "baseline": "v1.4.1",
+  "profile_variants": {
+    "standard": ["animated"],
+    "command": ["animated"]
+  },
+  "changed_asset_ids": "all",
+  "slots": "all"
+}

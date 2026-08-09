@@ -19,8 +19,14 @@ REPOSITORY_URL = "https://github.com/Conroy1988/missionchief-uk-animated-graphic
 
 RELEASES = [
     {
+        "id": "v1.4.2",
+        "label": "v1.4.2 · Current",
+        "profile": "command",
+        "summary": "Full-fleet light-box elimination",
+    },
+    {
         "id": "v1.4.1",
-        "label": "v1.4.1 · Current",
+        "label": "v1.4.1",
         "profile": "command",
         "summary": "Emergency-light fixture accuracy",
     },
@@ -129,12 +135,16 @@ def build_catalogue() -> dict:
     prototypes = load_json(ROOT / "data/prototypes.json")["vehicles"]
     profile = load_json(ROOT / "data/v1.4-overhaul-profile.json")
     lighting_scope = load_json(ROOT / "data/v1.2.6-scope.json")["changed_asset_ids"]
-    corrected_fixture_scope = load_json(ROOT / "data/v1.4.1-scope.json")["changed_asset_ids"]
+    build_report = load_json(ROOT / "data/v1.4.2-build-report.json")
 
     prototypes_by_slot = {item["missionchief_slot"]: item for item in prototypes}
     cue_data = profile["baked_master_cues"]
     frame_overrides = profile["animation_frame_overrides"]
-    lighting_assets = set(lighting_scope) | set(corrected_fixture_scope)
+    lighting_assets = set(lighting_scope) | {
+        item["id"]
+        for item in build_report["vehicles_detail"]
+        if item["response_light_count"] > 0
+    }
     vehicles = []
 
     for slot in slots:
@@ -245,8 +255,9 @@ def build_catalogue() -> dict:
             "data/prototypes.json",
             "data/v1.4-overhaul-profile.json",
             "data/v1.2.6-scope.json",
-            "data/v1.4.1-scope.json",
-            "data/v1.4.1-light-fixtures.json",
+            "data/v1.4.2-build-report.json",
+            "data/v1.4.2-scope.json",
+            "data/v1.4.2-light-fixtures.json",
         ],
     }
 

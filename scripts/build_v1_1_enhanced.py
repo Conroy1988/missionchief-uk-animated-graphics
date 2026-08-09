@@ -12,6 +12,8 @@ from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
+from apng_full_frame import save_full_frame_apng
+
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "data" / "prototypes.json"
@@ -799,72 +801,40 @@ def blue_flash(
     kind: str,
     flip: bool,
     fixture: str | None = None,
+    clip_mask: Image.Image | None = None,
 ) -> Image.Image:
-    width, height = size
-    if fixture in {"compact-bar", "compact-point"}:
-        glow = Image.new("RGBA", size, (0, 0, 0, 0))
-        glow_draw = ImageDraw.Draw(glow)
-        if fixture == "compact-bar":
-            glow_draw.rounded_rectangle(
-                (px - 2, py - 1, px + 2, py + 1),
-                radius=1,
-                fill=(0, 116, 255, 94),
-            )
-        else:
-            glow_draw.ellipse(
-                (px - 2, py - 1, px + 2, py + 1),
-                fill=(0, 116, 255, 88),
-            )
-        glow = glow.filter(ImageFilter.GaussianBlur(0.58))
+    """Render one physical LED emitter, never a broad filled light box.
 
-        core = Image.new("RGBA", size, (0, 0, 0, 0))
-        core_draw = ImageDraw.Draw(core)
-        if fixture == "compact-bar":
-            core_draw.line((px - 1, py, px + 1, py), fill=(55, 175, 255, 246), width=1)
-            highlight_x = px - 1 if flip else px + 1
-            core_draw.point((highlight_x, py), fill=(228, 251, 255, 255))
-        else:
-            core_draw.point((px, py), fill=(229, 251, 255, 255))
-            core_draw.point((px - 1 if flip else px + 1, py), fill=(67, 181, 255, 236))
-        return Image.alpha_composite(glow, core)
+    All response lights now use the compact optical model. ``fixture`` remains
+    accepted for manifest compatibility, but an undeclared fixture is inferred
+    from its role instead of falling back to the legacy rectangle/ellipse glow.
+    The final alpha is clipped to the vehicle silhouette plus one pixel.
+    """
+    if fixture is None:
+        fixture = "compact-bar" if kind.startswith("roof") else "compact-point"
+    if fixture not in {"compact-bar", "compact-point"}:
+        raise ValueError(f"unknown emergency-light fixture: {fixture}")
 
-    radius = max(2, round(max(3.0, height * 0.075) * strength))
     glow = Image.new("RGBA", size, (0, 0, 0, 0))
-    draw = ImageDraw.Draw(glow)
-    if kind.startswith("roof"):
-        half = max(2, radius + 1)
-        draw.rounded_rectangle(
-            (px - half - 1, py - max(1, radius // 2), px + half + 1, py + max(1, radius // 2)),
-            radius=2,
-            fill=(0, 115, 255, 118),
-        )
+    glow_draw = ImageDraw.Draw(glow)
+    if fixture == "compact-bar":
+        glow_draw.ellipse((px - 2, py - 1, px + 2, py + 1), fill=(0, 116, 255, 88))
     else:
-        draw.ellipse((px - radius * 2, py - radius, px + radius * 2, py + radius), fill=(0, 110, 255, 122))
-    glow = glow.filter(ImageFilter.GaussianBlur(max(0.8, radius * 0.62)))
+        glow_draw.ellipse((px - 1, py - 1, px + 1, py + 1), fill=(0, 116, 255, 82))
+    glow = glow.filter(ImageFilter.GaussianBlur(0.52 if fixture == "compact-bar" else 0.42))
+    if clip_mask is not None:
+        glow.putalpha(ImageChops.multiply(glow.getchannel("A"), clip_mask))
 
     core = Image.new("RGBA", size, (0, 0, 0, 0))
     core_draw = ImageDraw.Draw(core)
-    if kind.startswith("roof"):
-        extent = max(2, radius + 1)
-        core_draw.rounded_rectangle(
-            (px - extent, py - 1, px + extent, py + 1),
-            radius=1,
-            fill=(38, 157, 255, 238),
-        )
-        segment = -1 if flip else 1
-        core_draw.rectangle(
-            (px + segment * max(0, extent - 2) - 1, py - 1, px + segment * max(0, extent - 2) + 1, py + 1),
-            fill=(222, 249, 255, 255),
-        )
-        core_draw.point((px - segment * max(1, extent // 2), py), fill=(118, 215, 255, 250))
+    if fixture == "compact-bar":
+        core_draw.line((px - 1, py, px + 1, py), fill=(55, 175, 255, 248), width=1)
+        core_draw.point((px - 1 if flip else px + 1, py), fill=(228, 251, 255, 255))
     else:
-        extent = max(1, radius)
-        core_draw.rounded_rectangle(
-            (px - extent, py - 1, px + extent, py + 1),
-            radius=1,
-            fill=(42, 168, 255, 232),
-        )
-        core_draw.rectangle((px - 1, py - 1, px + 1, py + 1), fill=(226, 250, 255, 255))
+        core_draw.point((px, py), fill=(229, 251, 255, 255))
+        core_draw.point((px - 1 if flip else px + 1, py), fill=(67, 181, 255, 238))
+    if clip_mask is not None:
+        core.putalpha(ImageChops.multiply(core.getchannel("A"), clip_mask))
     return Image.alpha_composite(glow, core)
 
 
@@ -881,6 +851,8 @@ def add_blue_lights(
     body_width, body_height = body_size
     offset_x, offset_y = body_offset
     result = frame
+    clip_mask = frame.getchannel("A").point(lambda value: 255 if value else 0)
+    clip_mask = clip_mask.filter(ImageFilter.MaxFilter(3))
     for index, light in enumerate(vehicle.get("lights", [])):
         kind = light_kind(light, index)
         subphase = (phase + index * phase_stride + (index * index % 3)) % phase_modulus
@@ -896,6 +868,7 @@ def add_blue_lights(
             kind,
             flip=(kind == "roof_a"),
             fixture=light.get("fixture"),
+            clip_mask=clip_mask,
         )
         result = Image.alpha_composite(result, overlay)
     return result
@@ -1414,30 +1387,21 @@ def save_apng(
 ) -> dict[str, int | bool]:
     target.parent.mkdir(parents=True, exist_ok=True)
     compression = profile["compression"]
-    preferred = int(compression["preferred_disposal"])
-    fallback = int(compression["fallback_disposal"])
-    selected = fallback
-    for disposal in (preferred, fallback):
-        frames[0].save(
-            target,
-            format="PNG",
-            save_all=True,
-            append_images=frames[1:],
-            duration=durations,
-            loop=0,
-            disposal=disposal,
-            blend=0,
-            optimize=True,
-            compress_level=int(compression["compress_level"]),
-        )
-        if frames_decode_exact(target, frames):
-            selected = disposal
-            break
-    else:
+    save_full_frame_apng(
+        frames,
+        durations,
+        target,
+        compress_level=int(compression["compress_level"]),
+        disposal=0,
+        blend=0,
+    )
+    if not frames_decode_exact(target, frames):
         raise ValueError(f"lossless APNG verification failed: {target.name}")
     return {
         "bytes": target.stat().st_size,
-        "disposal": selected,
+        "disposal": 0,
+        "full_canvas_frames": len(frames),
+        "partial_update_frames": 0,
         "lossless_verified": True,
     }
 

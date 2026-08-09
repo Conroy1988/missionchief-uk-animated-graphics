@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v1.4.1",
+  "release": "v1.4.2",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -73,7 +73,7 @@
     {
       "id": "lighting",
       "label": "Lighting changes",
-      "count": 66
+      "count": 97
     },
     {
       "id": "grounding-shadow",
@@ -88,8 +88,14 @@
   ],
   "releases": [
     {
+      "id": "v1.4.2",
+      "label": "v1.4.2 · Current",
+      "profile": "command",
+      "summary": "Full-fleet light-box elimination"
+    },
+    {
       "id": "v1.4.1",
-      "label": "v1.4.1 · Current",
+      "label": "v1.4.1",
       "profile": "command",
       "summary": "Emergency-light fixture accuracy"
     },
@@ -135,13 +141,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "redraw"
+        "redraw",
+        "lighting"
       ],
       "cue": "Pump compartment detail pass",
       "static_path": "assets/exports/command/static/fire-rescue-pump.png",
       "animated_path": "assets/exports/command/animated/fire-rescue-pump.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "001 1 slot 1 water ladder water-ladder fire-rescue-pump fire rescue pump fire fire 01 core services pump compartment detail pass grounding shadows v1.4 redraws"
+      "search_text": "001 1 slot 1 water ladder water-ladder fire-rescue-pump fire rescue pump fire fire 01 core services pump compartment detail pass grounding shadows v1.4 redraws lighting changes"
     },
     {
       "slot": 2,
@@ -158,13 +165,14 @@
       "height": 37,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/light-4x4-pump.png",
       "animated_path": "assets/exports/command/animated/light-4x4-pump.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "002 2 slot 2 light 4x4 pump (l4p) light-4x4-pump-l4p light-4x4-pump light 4x4 pump fire fire 01 core services  grounding shadows"
+      "search_text": "002 2 slot 2 light 4x4 pump (l4p) light-4x4-pump-l4p light-4x4-pump light 4x4 pump fire fire 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 3,
@@ -181,13 +189,14 @@
       "height": 61,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/aerial-appliance.png",
       "animated_path": "assets/exports/command/animated/aerial-appliance.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "003 3 slot 3 aerial appliance aerial-appliance aerial-appliance aerial appliance fire fire 01 core services  grounding shadows"
+      "search_text": "003 3 slot 3 aerial appliance aerial-appliance aerial-appliance aerial appliance fire fire 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 4,
@@ -204,13 +213,14 @@
       "height": 31,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/fire-officer.png",
       "animated_path": "assets/exports/command/animated/fire-officer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "004 4 slot 4 fire officer fire-officer fire-officer fire officer fire fire 01 core services  grounding shadows"
+      "search_text": "004 4 slot 4 fire officer fire-officer fire-officer fire officer fire fire 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 5,
@@ -228,13 +238,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "redraw"
+        "redraw",
+        "lighting"
       ],
       "cue": "Support compartment detail pass",
       "static_path": "assets/exports/command/static/rescue-support-unit.png",
       "animated_path": "assets/exports/command/animated/rescue-support-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "005 5 slot 5 rescue support unit (rsu) rescue-support-unit-rsu rescue-support-unit rescue support unit fire fire 01 core services support compartment detail pass grounding shadows v1.4 redraws"
+      "search_text": "005 5 slot 5 rescue support unit (rsu) rescue-support-unit-rsu rescue-support-unit rescue support unit fire fire 01 core services support compartment detail pass grounding shadows v1.4 redraws lighting changes"
     },
     {
       "slot": 6,
@@ -251,13 +262,14 @@
       "height": 39,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/frontline-ambulance.png",
       "animated_path": "assets/exports/command/animated/frontline-ambulance.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "006 6 slot 6 ambulance ambulance frontline-ambulance frontline ambulance ambulance ambulance 01 core services  grounding shadows"
+      "search_text": "006 6 slot 6 ambulance ambulance frontline-ambulance frontline ambulance ambulance ambulance 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 7,
@@ -275,13 +287,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "redraw"
+        "redraw",
+        "lighting"
       ],
       "cue": "Tanker panel detail pass",
       "static_path": "assets/exports/command/static/water-carrier.png",
       "animated_path": "assets/exports/command/animated/water-carrier.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "007 7 slot 7 water carrier water-carrier water-carrier water carrier fire fire 01 core services tanker panel detail pass grounding shadows v1.4 redraws"
+      "search_text": "007 7 slot 7 water carrier water-carrier water-carrier water carrier fire fire 01 core services tanker panel detail pass grounding shadows v1.4 redraws lighting changes"
     },
     {
       "slot": 8,
@@ -299,13 +312,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "redraw"
+        "redraw",
+        "lighting"
       ],
       "cue": "Hazmat compartment detail pass",
       "static_path": "assets/exports/command/static/hazmat-unit.png",
       "animated_path": "assets/exports/command/animated/hazmat-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "008 8 slot 8 hazmat unit hazmat-unit hazmat-unit hazmat unit fire fire 01 core services hazmat compartment detail pass grounding shadows v1.4 redraws"
+      "search_text": "008 8 slot 8 hazmat unit hazmat-unit hazmat-unit hazmat unit fire fire 01 core services hazmat compartment detail pass grounding shadows v1.4 redraws lighting changes"
     },
     {
       "slot": 9,
@@ -323,13 +337,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "role-differentiation"
+        "role-differentiation",
+        "lighting"
       ],
       "cue": "Irv anpr array",
       "static_path": "assets/exports/command/static/police-incident-response-vehicle.png",
       "animated_path": "assets/exports/command/animated/police-incident-response-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "009 9 slot 9 irv irv police-incident-response-vehicle police incident response vehicle police police 01 core services irv anpr array grounding shadows role differentiation"
+      "search_text": "009 9 slot 9 irv irv police-incident-response-vehicle police incident response vehicle police police 01 core services irv anpr array grounding shadows role differentiation lighting changes"
     },
     {
       "slot": 10,
@@ -371,13 +386,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "role-differentiation"
+        "role-differentiation",
+        "lighting"
       ],
       "cue": "Compact medical pod",
       "static_path": "assets/exports/command/static/rapid-response-vehicle.png",
       "animated_path": "assets/exports/command/animated/rapid-response-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "011 11 slot 11 rrv rrv rapid-response-vehicle rapid response vehicle ambulance ambulance 01 core services compact medical pod grounding shadows role differentiation"
+      "search_text": "011 11 slot 11 rrv rrv rapid-response-vehicle rapid response vehicle ambulance ambulance 01 core services compact medical pod grounding shadows role differentiation lighting changes"
     },
     {
       "slot": 12,
@@ -418,13 +434,14 @@
       "height": 45,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/dog-support-unit.png",
       "animated_path": "assets/exports/command/animated/dog-support-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "013 13 slot 13 dsu dsu dog-support-unit dog support unit police police 01 core services  grounding shadows"
+      "search_text": "013 13 slot 13 dsu dsu dog-support-unit dog support unit police police 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 14,
@@ -467,13 +484,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "redraw"
+        "redraw",
+        "lighting"
       ],
       "cue": "Ba cylinder detail pass",
       "static_path": "assets/exports/command/static/breathing-apparatus-support-unit.png",
       "animated_path": "assets/exports/command/animated/breathing-apparatus-support-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "015 15 slot 15 basu basu breathing-apparatus-support-unit breathing apparatus support unit fire fire 01 core services ba cylinder detail pass grounding shadows v1.4 redraws"
+      "search_text": "015 15 slot 15 basu basu breathing-apparatus-support-unit breathing apparatus support unit fire fire 01 core services ba cylinder detail pass grounding shadows v1.4 redraws lighting changes"
     },
     {
       "slot": 16,
@@ -491,13 +509,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "redraw"
+        "redraw",
+        "lighting"
       ],
       "cue": "Command body panel detail pass",
       "static_path": "assets/exports/command/static/incident-command-control-unit.png",
       "animated_path": "assets/exports/command/animated/incident-command-control-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "016 16 slot 16 iccu iccu incident-command-control-unit incident command and control unit fire fire 01 core services command body panel detail pass grounding shadows v1.4 redraws"
+      "search_text": "016 16 slot 16 iccu iccu incident-command-control-unit incident command and control unit fire fire 01 core services command body panel detail pass grounding shadows v1.4 redraws lighting changes"
     },
     {
       "slot": 17,
@@ -515,13 +534,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "redraw"
+        "redraw",
+        "lighting"
       ],
       "cue": "Rescue tool detail pass",
       "static_path": "assets/exports/command/static/rescue-pump.png",
       "animated_path": "assets/exports/command/animated/rescue-pump.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "017 17 slot 17 rescue pump rescue-pump rescue-pump rescue pump fire fire 01 core services rescue tool detail pass grounding shadows v1.4 redraws"
+      "search_text": "017 17 slot 17 rescue pump rescue-pump rescue-pump rescue pump fire fire 01 core services rescue tool detail pass grounding shadows v1.4 redraws lighting changes"
     },
     {
       "slot": 18,
@@ -538,13 +558,14 @@
       "height": 59,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/carp.png",
       "animated_path": "assets/exports/command/animated/carp.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "018 18 slot 18 carp carp carp carp fire fire 01 core services  grounding shadows"
+      "search_text": "018 18 slot 18 carp carp carp carp fire fire 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 19,
@@ -561,13 +582,14 @@
       "height": 34,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/co-responder-vehicle.png",
       "animated_path": "assets/exports/command/animated/co-responder-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "019 19 slot 19 co-responder vehicle co-responder-vehicle co-responder-vehicle co-responder vehicle fire fire 01 core services  grounding shadows"
+      "search_text": "019 19 slot 19 co-responder vehicle co-responder-vehicle co-responder-vehicle co-responder vehicle fire fire 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 20,
@@ -634,13 +656,14 @@
       "height": 30,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/general-practitioner.png",
       "animated_path": "assets/exports/command/animated/general-practitioner.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "022 22 slot 22 general practitioner general-practitioner general-practitioner general practitioner ambulance ambulance 01 core services  grounding shadows"
+      "search_text": "022 22 slot 22 general practitioner general-practitioner general-practitioner general practitioner ambulance ambulance 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 23,
@@ -682,13 +705,14 @@
       "height": 46,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/crew-carrier.png",
       "animated_path": "assets/exports/command/animated/crew-carrier.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "024 24 slot 24 crew carrier crew-carrier crew-carrier crew carrier ambulance ambulance 01 core services  grounding shadows"
+      "search_text": "024 24 slot 24 crew carrier crew-carrier crew-carrier crew carrier ambulance ambulance 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 25,
@@ -705,13 +729,14 @@
       "height": 29,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/traffic-car.png",
       "animated_path": "assets/exports/command/animated/traffic-car.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "025 25 slot 25 traffic car traffic-car traffic-car traffic car police police 01 core services  grounding shadows"
+      "search_text": "025 25 slot 25 traffic car traffic-car traffic-car traffic car police police 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 26,
@@ -754,13 +779,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "redraw"
+        "redraw",
+        "lighting"
       ],
       "cue": "Heavy tanker detail pass",
       "static_path": "assets/exports/command/static/heavy-4x4-tanker.png",
       "animated_path": "assets/exports/command/animated/heavy-4x4-tanker.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "027 27 slot 27 heavy 4x4 tanker heavy-4x4-tanker heavy-4x4-tanker heavy 4x4 tanker fire fire 01 core services heavy tanker detail pass grounding shadows v1.4 redraws"
+      "search_text": "027 27 slot 27 heavy 4x4 tanker heavy-4x4-tanker heavy-4x4-tanker heavy 4x4 tanker fire fire 01 core services heavy tanker detail pass grounding shadows v1.4 redraws lighting changes"
     },
     {
       "slot": 28,
@@ -777,13 +803,14 @@
       "height": 36,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/prv.png",
       "animated_path": "assets/exports/command/animated/prv.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "028 28 slot 28 prv prv prv prv ambulance ambulance 01 core services  grounding shadows"
+      "search_text": "028 28 slot 28 prv prv prv prv ambulance ambulance 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 29,
@@ -800,13 +827,14 @@
       "height": 46,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/srv.png",
       "animated_path": "assets/exports/command/animated/srv.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "029 29 slot 29 srv srv srv srv ambulance ambulance 01 core services  grounding shadows"
+      "search_text": "029 29 slot 29 srv srv srv srv ambulance ambulance 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 30,
@@ -823,13 +851,14 @@
       "height": 44,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/welfare-vehicle.png",
       "animated_path": "assets/exports/command/animated/welfare-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "030 30 slot 30 welfare vehicle welfare-vehicle welfare-vehicle welfare vehicle ambulance ambulance 01 core services  grounding shadows"
+      "search_text": "030 30 slot 30 welfare vehicle welfare-vehicle welfare-vehicle welfare vehicle ambulance ambulance 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 31,
@@ -846,13 +875,14 @@
       "height": 55,
       "frames": 18,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/atv-carrier.png",
       "animated_path": "assets/exports/command/animated/atv-carrier.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "031 31 slot 31 atv carrier atv-carrier atv-carrier atv carrier ambulance ambulance 01 core services  grounding shadows"
+      "search_text": "031 31 slot 31 atv carrier atv-carrier atv-carrier atv carrier ambulance ambulance 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 32,
@@ -869,13 +899,14 @@
       "height": 70,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/ambulance-control-unit.png",
       "animated_path": "assets/exports/command/animated/ambulance-control-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "032 32 slot 32 ambulance control unit ambulance-control-unit ambulance-control-unit ambulance control unit ambulance ambulance 01 core services  grounding shadows"
+      "search_text": "032 32 slot 32 ambulance control unit ambulance-control-unit ambulance-control-unit ambulance control unit ambulance ambulance 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 33,
@@ -917,13 +948,14 @@
       "height": 68,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/mass-casualty-equipment.png",
       "animated_path": "assets/exports/command/animated/mass-casualty-equipment.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "034 34 slot 34 mass casualty equipment mass-casualty-equipment mass-casualty-equipment mass casualty equipment ambulance ambulance 01 core services  grounding shadows"
+      "search_text": "034 34 slot 34 mass casualty equipment mass-casualty-equipment mass-casualty-equipment mass casualty equipment ambulance ambulance 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 35,
@@ -940,13 +972,14 @@
       "height": 33,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/ambulance-officer.png",
       "animated_path": "assets/exports/command/animated/ambulance-officer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "035 35 slot 35 ambulance officer ambulance-officer ambulance-officer ambulance officer ambulance ambulance 01 core services  grounding shadows"
+      "search_text": "035 35 slot 35 ambulance officer ambulance-officer ambulance-officer ambulance officer ambulance ambulance 01 core services  grounding shadows lighting changes"
     },
     {
       "slot": 36,
@@ -989,13 +1022,14 @@
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "redraw"
+        "redraw",
+        "lighting"
       ],
       "cue": "Wildfire tanker detail pass",
       "static_path": "assets/exports/command/static/f-wrc.png",
       "animated_path": "assets/exports/command/animated/f-wrc.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "037 37 slot 37 f/wrc f-wrc f-wrc f/wrc fire fire 02 fire specialist and pods wildfire tanker detail pass grounding shadows v1.4 redraws"
+      "search_text": "037 37 slot 37 f/wrc f-wrc f-wrc f/wrc fire fire 02 fire specialist and pods wildfire tanker detail pass grounding shadows v1.4 redraws lighting changes"
     },
     {
       "slot": 38,
@@ -1012,13 +1046,14 @@
       "height": 53,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/wrl-cafs.png",
       "animated_path": "assets/exports/command/animated/wrl-cafs.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "038 38 slot 38 wrl cafs wrl-cafs wrl-cafs wrl cafs fire fire 02 fire specialist and pods  grounding shadows"
+      "search_text": "038 38 slot 38 wrl cafs wrl-cafs wrl-cafs wrl cafs fire fire 02 fire specialist and pods  grounding shadows lighting changes"
     },
     {
       "slot": 39,
@@ -1035,13 +1070,14 @@
       "height": 51,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/rp-cafs.png",
       "animated_path": "assets/exports/command/animated/rp-cafs.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "039 39 slot 39 rp cafs rp-cafs rp-cafs rp cafs fire fire 02 fire specialist and pods  grounding shadows"
+      "search_text": "039 39 slot 39 rp cafs rp-cafs rp-cafs rp cafs fire fire 02 fire specialist and pods  grounding shadows lighting changes"
     },
     {
       "slot": 40,
@@ -2108,13 +2144,14 @@
       "height": 40,
       "frames": 18,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting"
       ],
       "cue": null,
       "static_path": "assets/exports/command/static/medical-cycle-responder.png",
       "animated_path": "assets/exports/command/animated/medical-cycle-responder.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "084 84 slot 84 medical cycle responder medical-cycle-responder medical-cycle-responder medical cycle responder ambulance ambulance 06 sar and medical expansion  grounding shadows"
+      "search_text": "084 84 slot 84 medical cycle responder medical-cycle-responder medical-cycle-responder medical cycle responder ambulance ambulance 06 sar and medical expansion  grounding shadows lighting changes"
     },
     {
       "slot": 85,
@@ -2920,7 +2957,8 @@
     "data/prototypes.json",
     "data/v1.4-overhaul-profile.json",
     "data/v1.2.6-scope.json",
-    "data/v1.4.1-scope.json",
-    "data/v1.4.1-light-fixtures.json"
+    "data/v1.4.2-build-report.json",
+    "data/v1.4.2-scope.json",
+    "data/v1.4.2-light-fixtures.json"
   ]
 }
