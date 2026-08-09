@@ -13,6 +13,7 @@ from pathlib import Path
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
 from apng_full_frame import save_full_frame_apng
+from emergency_light import ALLOWED_EMERGENCY_FIXTURES, POINT_EMITTER_FIXTURE, render_point_emitter
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -802,40 +803,14 @@ def blue_flash(
     flip: bool,
     fixture: str | None = None,
     clip_mask: Image.Image | None = None,
+    variant: int = 0,
 ) -> Image.Image:
-    """Render one physical LED emitter, never a broad filled light box.
-
-    All response lights now use the compact optical model. ``fixture`` remains
-    accepted for manifest compatibility, but an undeclared fixture is inferred
-    from its role instead of falling back to the legacy rectangle/ellipse glow.
-    The final alpha is clipped to the vehicle silhouette plus one pixel.
-    """
+    """Render one isolated lamp using the fleet-wide point-emitter primitive."""
     if fixture is None:
-        fixture = "compact-bar" if kind.startswith("roof") else "compact-point"
-    if fixture not in {"compact-bar", "compact-point"}:
+        fixture = POINT_EMITTER_FIXTURE
+    if fixture not in ALLOWED_EMERGENCY_FIXTURES:
         raise ValueError(f"unknown emergency-light fixture: {fixture}")
-
-    glow = Image.new("RGBA", size, (0, 0, 0, 0))
-    glow_draw = ImageDraw.Draw(glow)
-    if fixture == "compact-bar":
-        glow_draw.ellipse((px - 2, py - 1, px + 2, py + 1), fill=(0, 116, 255, 88))
-    else:
-        glow_draw.ellipse((px - 1, py - 1, px + 1, py + 1), fill=(0, 116, 255, 82))
-    glow = glow.filter(ImageFilter.GaussianBlur(0.52 if fixture == "compact-bar" else 0.42))
-    if clip_mask is not None:
-        glow.putalpha(ImageChops.multiply(glow.getchannel("A"), clip_mask))
-
-    core = Image.new("RGBA", size, (0, 0, 0, 0))
-    core_draw = ImageDraw.Draw(core)
-    if fixture == "compact-bar":
-        core_draw.line((px - 1, py, px + 1, py), fill=(55, 175, 255, 248), width=1)
-        core_draw.point((px - 1 if flip else px + 1, py), fill=(228, 251, 255, 255))
-    else:
-        core_draw.point((px, py), fill=(229, 251, 255, 255))
-        core_draw.point((px - 1 if flip else px + 1, py), fill=(67, 181, 255, 238))
-    if clip_mask is not None:
-        core.putalpha(ImageChops.multiply(core.getchannel("A"), clip_mask))
-    return Image.alpha_composite(glow, core)
+    return render_point_emitter(size, px, py, strength, clip_mask, variant)
 
 
 def add_blue_lights(
@@ -869,6 +844,7 @@ def add_blue_lights(
             flip=(kind == "roof_a"),
             fixture=light.get("fixture"),
             clip_mask=clip_mask,
+            variant=(frame_index + index) % 2,
         )
         result = Image.alpha_composite(result, overlay)
     return result
@@ -1293,17 +1269,6 @@ def build_animation(
         else:
             frame = base.copy()
         if vehicle.get("lights"):
-            frame = add_blue_lights(
-                frame,
-                vehicle,
-                frame_index,
-                body_size,
-                body_offset,
-                phase,
-                phase_modulus,
-                phase_stride,
-            )
-            active_motion.append("blue-response")
             if frame_index > 0 and asset_id not in profile["helicopters"]:
                 frame = Image.alpha_composite(
                     frame,
@@ -1316,6 +1281,17 @@ def build_animation(
                         vehicle.get("running_lights"),
                     ),
                 )
+            frame = add_blue_lights(
+                frame,
+                vehicle,
+                frame_index,
+                body_size,
+                body_offset,
+                phase,
+                phase_modulus,
+                phase_stride,
+            )
+            active_motion.append("blue-response")
         if asset_id in profile["helicopters"]:
             frame = Image.alpha_composite(
                 frame,
@@ -1625,6 +1601,16 @@ def main() -> None:
                 "half_zoom_detail_score": half_zoom_detail_score(static),
                 "frames": len(frames),
                 "response_light_count": len(animation_vehicle.get("lights", [])),
+                "response_light_pixels": [
+                    {
+                        "x": motion_reference_offset[0]
+                        + round(float(light["x"]) * (motion_reference_size[0] - 1)),
+                        "y": motion_reference_offset[1]
+                        + round(float(light["y"]) * (motion_reference_size[1] - 1)),
+                        "fixture": str(light.get("fixture", POINT_EMITTER_FIXTURE)),
+                    }
+                    for light in animation_vehicle.get("lights", [])
+                ],
                 "fixture_shaped_emergency_lights": bool(animation_vehicle.get("lights")),
                 "response_running_lights": bool(
                     animation_vehicle.get("lights")

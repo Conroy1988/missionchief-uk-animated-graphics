@@ -1,9 +1,9 @@
 {
-  "release": "v1.4.2",
+  "release": "v1.4.3",
   "master_art_release": "v1.4.0",
   "master_source_release": "v1.2.4",
   "profile": "command",
-  "display_name": "Modern Command Clarity — Full-Fleet Optical Emitter Edition",
+  "display_name": "Modern Command Clarity — Isolated Point-Lamp Edition",
   "source_profile": "standard",
   "frames": 12,
   "animation_frame_overrides": {
@@ -186,12 +186,15 @@
   },
   "light_overrides_path": "data/v1.2.6-light-overrides.json",
   "light_overrides_release": "v1.2.6",
-  "current_light_fixtures_path": "data/v1.4.2-light-fixtures.json",
+  "current_light_fixtures_path": "data/v1.4.3-light-fixtures.json",
   "emergency_light_renderer": {
-    "model": "compact-silhouette-v2",
+    "model": "isolated-point-v3",
     "full_canvas_apng_frames": true,
     "maximum_silhouette_expansion_pixels": 1,
-    "legacy_filled_light_tiles": false
+    "legacy_filled_light_tiles": false,
+    "maximum_connected_width_pixels": 2,
+    "maximum_connected_height_pixels": 2,
+    "elongated_bar_components_allowed": 0
   },
   "role_differentiation": {},
   "role_confusion_groups": [],

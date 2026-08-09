@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v1.4.2",
+  "release": "v1.4.3",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -88,8 +88,14 @@
   ],
   "releases": [
     {
+      "id": "v1.4.3",
+      "label": "v1.4.3 · Current",
+      "profile": "command",
+      "summary": "Isolated point-lamp emergency lighting"
+    },
+    {
       "id": "v1.4.2",
-      "label": "v1.4.2 · Current",
+      "label": "v1.4.2",
       "profile": "command",
       "summary": "Full-fleet light-box elimination"
     },
@@ -2957,8 +2963,8 @@
     "data/prototypes.json",
     "data/v1.4-overhaul-profile.json",
     "data/v1.2.6-scope.json",
-    "data/v1.4.2-build-report.json",
-    "data/v1.4.2-scope.json",
-    "data/v1.4.2-light-fixtures.json"
+    "data/v1.4.3-build-report.json",
+    "data/v1.4.3-scope.json",
+    "data/v1.4.3-light-fixtures.json"
   ]
 }

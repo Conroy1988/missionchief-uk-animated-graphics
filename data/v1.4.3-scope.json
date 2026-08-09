@@ -1,0 +1,10 @@
+{
+  "release": "v1.4.3",
+  "baseline": "v1.4.2",
+  "profile_variants": {
+    "standard": ["animated"],
+    "command": ["animated"]
+  },
+  "changed_asset_ids": "profile-emergency-lit",
+  "slots": "profile-emergency-lit"
+}
