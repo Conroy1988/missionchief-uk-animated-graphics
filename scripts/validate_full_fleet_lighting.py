@@ -9,6 +9,7 @@ import math
 import struct
 import subprocess
 from collections import deque
+from functools import lru_cache
 from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
@@ -26,6 +27,7 @@ THEMES = {
 }
 
 
+@lru_cache(maxsize=None)
 def git_bytes(revision: str, relative: Path) -> bytes:
     return subprocess.check_output(
         ["git", "show", f"{revision}:{relative.as_posix()}"],
@@ -329,6 +331,12 @@ def main() -> None:
         if "static" in variants
         for asset_id in changed_ids
     }
+    baseline_exceptions = scope.get("baseline_exceptions", {}).get(BASELINE, {})
+    allowed_static_changes.update(
+        f"assets/exports/{profile_name}/static/{asset_id}.png"
+        for profile_name, variants in baseline_exceptions.items()
+        for asset_id in variants.get("static", [])
+    )
     manifest = json.loads((ROOT / "data" / "prototypes.json").read_text(encoding="utf-8"))
     vehicles = sorted(manifest["vehicles"], key=lambda item: int(item["missionchief_slot"]))
     expected_ids = {str(vehicle["id"]) for vehicle in vehicles}

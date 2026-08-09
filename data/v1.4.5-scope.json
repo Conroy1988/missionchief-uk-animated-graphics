@@ -1,0 +1,21 @@
+{
+  "release": "v1.4.5",
+  "baseline": "v1.4.4",
+  "profile_variants": {
+    "command": ["static", "animated"]
+  },
+  "changed_asset_ids": ["rapid-response-vehicle"],
+  "slots": {
+    "rapid-response-vehicle": 11
+  },
+  "baseline_exceptions": {
+    "v1.4.2": {
+      "command": {
+        "static": [
+          "police-incident-response-vehicle",
+          "rapid-response-vehicle"
+        ]
+      }
+    }
+  }
+}
