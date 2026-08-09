@@ -1,0 +1,11 @@
+{
+  "release": "v1.4.4",
+  "baseline": "v1.4.3",
+  "profile_variants": {
+    "command": ["static", "animated"]
+  },
+  "changed_asset_ids": ["police-incident-response-vehicle"],
+  "slots": {
+    "police-incident-response-vehicle": 9
+  }
+}

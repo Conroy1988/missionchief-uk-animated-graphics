@@ -319,6 +319,16 @@ def render_bar_regression_sheet(vehicles: list[dict], target: Path) -> int:
 def main() -> None:
     profile = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
     release = str(profile["release"])
+    scope = json.loads((ROOT / "data" / f"{release}-scope.json").read_text(encoding="utf-8"))
+    changed_ids = scope.get("changed_asset_ids", [])
+    if not isinstance(changed_ids, list):
+        changed_ids = []
+    allowed_static_changes = {
+        f"assets/exports/{profile_name}/static/{asset_id}.png"
+        for profile_name, variants in scope.get("profile_variants", {}).items()
+        if "static" in variants
+        for asset_id in changed_ids
+    }
     manifest = json.loads((ROOT / "data" / "prototypes.json").read_text(encoding="utf-8"))
     vehicles = sorted(manifest["vehicles"], key=lambda item: int(item["missionchief_slot"]))
     expected_ids = {str(vehicle["id"]) for vehicle in vehicles}
@@ -373,7 +383,8 @@ def main() -> None:
             if ImageChops.difference(
                 normalise_transparent_rgb(static), normalise_transparent_rgb(baseline_static)
             ).getbbox() is not None:
-                asset_errors.append(f"visible static artwork changed from {BASELINE}")
+                if relative_static.as_posix() not in allowed_static_changes:
+                    asset_errors.append(f"visible static artwork changed from {BASELINE}")
             else:
                 visibly_unchanged_statics += 1
 

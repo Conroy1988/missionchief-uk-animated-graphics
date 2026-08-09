@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v1.4.3",
+  "release": "v1.4.4",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -88,8 +88,14 @@
   ],
   "releases": [
     {
+      "id": "v1.4.4",
+      "label": "v1.4.4 · Current",
+      "profile": "command",
+      "summary": "IRV roof-light repair"
+    },
+    {
       "id": "v1.4.3",
-      "label": "v1.4.3 · Current",
+      "label": "v1.4.3",
       "profile": "command",
       "summary": "Isolated point-lamp emergency lighting"
     },
@@ -339,7 +345,7 @@
       "production_batch": "01-core-services",
       "real_length_metres": 4.9,
       "width": 72,
-      "height": 32,
+      "height": 30,
       "frames": 12,
       "focus": [
         "grounding-shadow",
@@ -2963,8 +2969,8 @@
     "data/prototypes.json",
     "data/v1.4-overhaul-profile.json",
     "data/v1.2.6-scope.json",
-    "data/v1.4.3-build-report.json",
-    "data/v1.4.3-scope.json",
-    "data/v1.4.3-light-fixtures.json"
+    "data/v1.4.4-build-report.json",
+    "data/v1.4.4-scope.json",
+    "data/v1.4.4-light-fixtures.json"
   ]
 }

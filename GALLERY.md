@@ -1,4 +1,4 @@
-# Complete v1.4.3 vehicle gallery
+# Complete v1.4.4 vehicle gallery
 
 See all **117 static and animated vehicle graphics** included in **TKB UK Fleet — Animated** for MissionChief UK.
 
@@ -6,19 +6,21 @@ See all **117 static and animated vehicle graphics** included in **TKB UK Fleet 
 
 > **[Open the interactive fleet gallery →](https://tkb-gaming.scot/games/missionchief/guides/fleet-gallery/)** — instant search, service and improvement filters, APNG controls, four map conditions, three scales and stable-release comparisons.
 
-[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.3)
+[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.4)
 
 The previews below use the pack's twelve-frame Modern Command Clarity APNGs, with eighteen-frame cycles for aircraft, operational lifeboats and six visible-wheel assets. Emergency vehicles use isolated one-pixel point lamps, 11 fleet phase offsets and independent activity signatures; helicopters add multi-band rotor and aviation-light motion, while suitable non-blue-light assets use restrained amber, wheel, navigation, wake or marker movement. Select any preview to open the full file.
 
 The original v1.0 True Scale exports remain available under `assets/exports/standard/` and in the [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0).
 
-## v1.4.3 full-fleet lighting evidence
+## v1.4.4 full-fleet lighting evidence
 
-This release replaces the elongated v1.4.2 light geometry in 184 lit APNGs while keeping every static image unchanged. The audit inspected all 468 production files and all 2,178 frames across light, dark, satellite and grayscale maps. Every emergency lamp is now a single source pixel, with zero bars, oversized components, boxes, partial updates or escaped blue pixels.
+This release retains v1.4.3's fleet-wide isolated point lamps and repairs the IRV's separate baked roof defect: two oversized blue ANPR modules are replaced by one dark low-profile housing with two separated one-pixel lenses. The audit inspects all 468 production files and all 2,178 frames across light, dark, satellite and grayscale maps, while a dedicated IRV gate rejects any joined roof-light component.
 
-[![Full fleet on a satellite map](assets/previews/v1.4.3/full-fleet-lighting-satellite.png)](assets/previews/v1.4.3/full-fleet-lighting-satellite.png)
+[![IRV roof-light repair before and after](assets/previews/v1.4.4/irv-roof-light-before-after.png)](assets/previews/v1.4.4/irv-roof-light-before-after.png)
 
-[v1.4.2 bars versus v1.4.3 point lamps](assets/previews/v1.4.3/point-lamps-before-after.png) · [Light-map fleet audit](assets/previews/v1.4.3/full-fleet-lighting-light.png) · [Dark-map fleet audit](assets/previews/v1.4.3/full-fleet-lighting-dark.png) · [Grayscale fleet audit](assets/previews/v1.4.3/full-fleet-lighting-grayscale.png) · [18-frame aircraft audit](assets/previews/v1.4.3/aircraft-motion-18-frame-audit.png) · [18-frame marine audit](assets/previews/v1.4.3/marine-motion-18-frame-audit.png) · [Complete helicopter tails at 100%, 75% and 50%](assets/previews/v1.4.3/complete-helicopter-tails-map-scale.png)
+[![Full fleet on a satellite map](assets/previews/v1.4.4/full-fleet-lighting-satellite.png)](assets/previews/v1.4.4/full-fleet-lighting-satellite.png)
+
+[v1.4.2 bars versus v1.4.4 point lamps](assets/previews/v1.4.4/point-lamps-before-after.png) · [Light-map fleet audit](assets/previews/v1.4.4/full-fleet-lighting-light.png) · [Dark-map fleet audit](assets/previews/v1.4.4/full-fleet-lighting-dark.png) · [Grayscale fleet audit](assets/previews/v1.4.4/full-fleet-lighting-grayscale.png) · [18-frame aircraft audit](assets/previews/v1.4.4/aircraft-motion-18-frame-audit.png) · [18-frame marine audit](assets/previews/v1.4.4/marine-motion-18-frame-audit.png) · [Complete helicopter tails at 100%, 75% and 50%](assets/previews/v1.4.4/complete-helicopter-tails-map-scale.png)
 
 ## Core emergency services
 
