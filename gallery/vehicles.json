@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v1.4.6",
+  "release": "v1.4.7",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -88,8 +88,14 @@
   ],
   "releases": [
     {
+      "id": "v1.4.7",
+      "label": "v1.4.7 · Current",
+      "profile": "command",
+      "summary": "Joint Response Unit roof-light repair"
+    },
+    {
       "id": "v1.4.6",
-      "label": "v1.4.6 · Current",
+      "label": "v1.4.6",
       "profile": "command",
       "summary": "ARV roof-light repair"
     },
@@ -627,18 +633,18 @@
       "production_batch": "01-core-services",
       "real_length_metres": 4.9,
       "width": 72,
-      "height": 32,
+      "height": 30,
       "frames": 12,
       "focus": [
         "grounding-shadow",
         "role-differentiation",
         "lighting"
       ],
-      "cue": "Dual service command pod",
+      "cue": "Joint response low profile lightbar",
       "static_path": "assets/exports/command/static/joint-response-unit.png",
       "animated_path": "assets/exports/command/animated/joint-response-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "020 20 slot 20 joint response unit joint-response-unit joint-response-unit joint response unit multi-service multi-service 01 core services dual service command pod grounding shadows role differentiation lighting changes"
+      "search_text": "020 20 slot 20 joint response unit joint-response-unit joint-response-unit joint response unit multi-service multi-service 01 core services joint response low profile lightbar grounding shadows role differentiation lighting changes"
     },
     {
       "slot": 21,
@@ -2981,8 +2987,8 @@
     "data/prototypes.json",
     "data/v1.4-overhaul-profile.json",
     "data/v1.2.6-scope.json",
-    "data/v1.4.6-build-report.json",
-    "data/v1.4.6-scope.json",
-    "data/v1.4.6-light-fixtures.json"
+    "data/v1.4.7-build-report.json",
+    "data/v1.4.7-scope.json",
+    "data/v1.4.7-light-fixtures.json"
   ]
 }

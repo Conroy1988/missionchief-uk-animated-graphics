@@ -82,7 +82,7 @@
     "marine-eod-equipment-van": "assets/masters/v1.3.0/marine-eod-equipment-van.png"
   },
   "baked_master_cues": {
-    "joint-response-unit": {"family": "role", "cue": "dual-service-command-pod"},
+    "joint-response-unit": {"family": "role", "cue": "joint-response-low-profile-lightbar"},
     "police-incident-response-vehicle": {"family": "role", "cue": "irv-anpr-array"},
     "rapid-response-vehicle": {"family": "role", "cue": "compact-medical-pod"},
     "rrv-2": {"family": "role", "cue": "rrv-aerial-pair"},
