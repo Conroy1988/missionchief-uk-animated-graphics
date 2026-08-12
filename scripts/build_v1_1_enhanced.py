@@ -342,12 +342,21 @@ def add_role_differentiation(
             draw.ellipse((x - 1, top, x + 1, top + 2), fill=accent)
 
     module_height = max(4, round(image.height * 0.13))
-    if cue == "dual-service-command-pod":
-        x1, top, x2, bottom = module(0.38, 0.63, module_height, dark)
-        middle = (x1 + x2) // 2
-        draw.rectangle((x1 + 1, top + 1, middle, bottom - 1), fill=(28, 188, 118, 250))
-        draw.rectangle((middle + 1, top + 1, x2 - 1, bottom - 1), fill=(64, 166, 255, 250))
-        mast(0.66, max(4, module_height), base_y=bottom)
+    if cue == "joint-response-low-profile-lightbar":
+        # The former dual-service command pod placed a tall cyan/green block
+        # above the source vehicle's existing roof lamp. At MissionChief scale
+        # it read as a detached blue blob rather than emergency lighting. Keep
+        # the joint-response estate silhouette and re-ink the source position as
+        # one shallow housing with two isolated blue lens pixels.
+        x1 = round(canvas.width * 0.40)
+        x2 = round(canvas.width * 0.55)
+        bottom = roof_y(0.40, 0.55) + 1
+        top = max(1, bottom - 1)
+        emergency_blue = (64, 166, 255, 250)
+        draw.rectangle((x1 - 1, top, x2 + 1, bottom), fill=dark)
+        draw.line((x1, bottom, x2, bottom), fill=steel, width=1)
+        draw.point((x1 + 2, top), fill=emergency_blue)
+        draw.point((x2 - 2, top), fill=emergency_blue)
     elif cue == "irv-anpr-array":
         # The earlier twin-module treatment put two large police-blue outlines
         # above an already recognisable roof lightbar. At MissionChief scale

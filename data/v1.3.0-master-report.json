@@ -356,7 +356,7 @@
       "slot": 20,
       "id": "joint-response-unit",
       "family": "role",
-      "cue": "dual-service-command-pod",
+      "cue": "joint-response-low-profile-lightbar",
       "service": "multi-service",
       "source": "assets/exports/standard/static/joint-response-unit.png",
       "target": "assets/masters/v1.3.0/joint-response-unit.png",
@@ -366,20 +366,20 @@
       },
       "master_dimensions": {
         "width": 64,
-        "height": 24
+        "height": 22
       },
       "content_offset": {
         "x": 0,
-        "y": 3
+        "y": 1
       },
       "light_transform": {
         "x_scale": 1.0,
         "x_offset": 0.0,
-        "y_scale": 0.8695652173913043,
-        "y_offset": 0.13043478260869565
+        "y_scale": 0.9523809523809523,
+        "y_offset": 0.047619047619047616
       },
-      "half_zoom_added_alpha_pixels": 32,
-      "sha256": "6b9dbd81b1f031506316402d371c4d4e2019cdd17434b612cecd9c6db981f3ad"
+      "half_zoom_added_alpha_pixels": 6,
+      "sha256": "b9e7bf9f6460955f575935509a9e653ddce9cdc8ed68a30c81039de4c3ab4f7b"
     },
     {
       "slot": 115,
