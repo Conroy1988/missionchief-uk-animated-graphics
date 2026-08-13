@@ -429,11 +429,34 @@ def add_role_differentiation(
         draw.line((x1 - 1, light_y, x2 + 1, light_y), fill=dark, width=1)
         draw.point((x1 + 2, light_y), fill=emergency_blue)
         draw.point((x2 - 2, light_y), fill=emergency_blue)
-    elif cue == "cfr-medical-beacon":
-        box = module(0.47, 0.55, max(3, module_height - 2), dark)
-        cx, cy = (box[0] + box[2]) // 2, (box[1] + box[3]) // 2
-        draw.rectangle((cx - 3, cy - 1, cx + 3, cy + 1), fill=accent)
-        draw.rectangle((cx - 1, cy - 3, cx + 1, cy + 3), fill=accent)
+    elif cue == "cfr-low-profile-lightbar":
+        # The former medical-beacon treatment placed a large green cross-box
+        # above a source car that already carried a correctly positioned roof
+        # light. At MissionChief scale it read as a detached green block. Erase
+        # the source strip's soft antialiasing and re-ink the same position as
+        # one single-row dark housing with two isolated blue lens pixels.
+        source_left = round(canvas.width * 0.32)
+        source_right = round(canvas.width * 0.47)
+        source_light_y = min(
+            y
+            for y in range(image.height)
+            if any(
+                image.getpixel((x, y))[3] >= 80
+                and image.getpixel((x, y))[2] - image.getpixel((x, y))[0] >= 80
+                and image.getpixel((x, y))[2] - image.getpixel((x, y))[1] >= 60
+                for x in range(source_left, source_right + 1)
+            )
+        )
+        for x in range(source_left, source_right + 1):
+            canvas.putpixel((x, top_padding + source_light_y), (0, 0, 0, 0))
+
+        x1 = round(canvas.width * 0.34)
+        x2 = round(canvas.width * 0.45)
+        light_y = top_padding + source_light_y
+        emergency_blue = (64, 166, 255, 250)
+        draw.line((x1 - 1, light_y, x2 + 1, light_y), fill=dark, width=1)
+        draw.point((x1 + 2, light_y), fill=emergency_blue)
+        draw.point((x2 - 2, light_y), fill=emergency_blue)
     elif cue == "traffic-anpr-pods":
         first = module(0.36, 0.42, max(2, module_height - 2))
         second = module(0.67, 0.73, max(2, module_height - 2))

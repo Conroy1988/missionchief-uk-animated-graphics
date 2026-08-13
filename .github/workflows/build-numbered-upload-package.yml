@@ -1,5 +1,5 @@
-# Builds, validates and releases the v1.4.9 OTL roof-mast correction.
-name: Build v1.4.9 MissionChief command pack
+# Builds, validates and releases the v1.4.10 Community First Responder roof-cross correction.
+name: Build v1.4.10 MissionChief command pack
 
 on:
   workflow_dispatch:
@@ -33,8 +33,8 @@ on:
       - data/v1.2.6-light-overrides.json
       - data/v1.3.0-scope.json
       - data/v1.4.0-scope.json
-      - data/v1.4.9-scope.json
-      - data/v1.4.9-light-fixtures.json
+      - data/v1.4.10-scope.json
+      - data/v1.4.10-light-fixtures.json
       - scripts/build_v1_1_enhanced.py
       - scripts/build_prototypes.py
       - scripts/validate_v1_1_enhanced.py
@@ -49,13 +49,14 @@ on:
       - scripts/validate_arv_lighting.py
       - scripts/validate_joint_response_unit_lighting.py
       - scripts/validate_otl_lighting.py
+      - scripts/validate_community_first_responder_lighting.py
       - scripts/audit_emergency_light_placement.py
       - docs/RELEASE_v1.3.0.md
       - docs/CHECKPOINT_v1.3.0.md
       - docs/RELEASE_v1.4.0.md
       - docs/CHECKPOINT_v1.4.0.md
-      - docs/RELEASE_v1.4.9.md
-      - docs/CHECKPOINT_v1.4.9.md
+      - docs/RELEASE_v1.4.10.md
+      - docs/CHECKPOINT_v1.4.10.md
       - .github/workflows/build-numbered-upload-package.yml
   push:
     branches:
@@ -87,8 +88,8 @@ on:
       - data/v1.2.6-light-overrides.json
       - data/v1.3.0-scope.json
       - data/v1.4.0-scope.json
-      - data/v1.4.9-scope.json
-      - data/v1.4.9-light-fixtures.json
+      - data/v1.4.10-scope.json
+      - data/v1.4.10-light-fixtures.json
       - scripts/build_v1_1_enhanced.py
       - scripts/build_prototypes.py
       - scripts/validate_v1_1_enhanced.py
@@ -103,13 +104,14 @@ on:
       - scripts/validate_arv_lighting.py
       - scripts/validate_joint_response_unit_lighting.py
       - scripts/validate_otl_lighting.py
+      - scripts/validate_community_first_responder_lighting.py
       - scripts/audit_emergency_light_placement.py
       - docs/RELEASE_v1.3.0.md
       - docs/CHECKPOINT_v1.3.0.md
       - docs/RELEASE_v1.4.0.md
       - docs/CHECKPOINT_v1.4.0.md
-      - docs/RELEASE_v1.4.9.md
-      - docs/CHECKPOINT_v1.4.9.md
+      - docs/RELEASE_v1.4.10.md
+      - docs/CHECKPOINT_v1.4.10.md
       - .github/workflows/build-numbered-upload-package.yml
 
 permissions:
@@ -168,6 +170,9 @@ jobs:
       - name: Reject any return of the raised OTL command box or beacon mast
         run: python scripts/validate_otl_lighting.py
 
+      - name: Reject any return of the raised Community First Responder medical cross-box
+        run: python scripts/validate_community_first_responder_lighting.py
+
       - name: Build True Scale exports with the full-frame APNG encoder
         run: python scripts/build_prototypes.py
 
@@ -178,7 +183,7 @@ jobs:
         run: python scripts/validate_v1_4_overhaul.py
 
       - name: Verify every corrected flash remains anchored to its vehicle
-        run: python scripts/validate_light_placement.py --report data/v1.4.9-light-placement-report.json
+        run: python scripts/validate_light_placement.py --report data/v1.4.10-light-placement-report.json
 
       - name: Audit every production image and APNG frame for bars, boxes and oversized lamps
         run: python scripts/validate_full_fleet_lighting.py
@@ -190,45 +195,45 @@ jobs:
         run: python scripts/validate_release_scope.py
 
       - name: Build and validate numbered package
-        run: python scripts/build_numbered_upload_package.py --version v1.4.9 --profile command
+        run: python scripts/build_numbered_upload_package.py --version v1.4.10 --profile command
 
       - name: Stage bulk uploader release asset
-        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.9.user.js
+        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.10.user.js
 
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: missionchief-modern-command-clarity-v1.4.9
+          name: missionchief-modern-command-clarity-v1.4.10
           path: |
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.9.zip
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.9.zip.sha256
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.9.user.js
-            data/v1.4.9-build-report.json
-            data/v1.4.9-qa-report.json
-            data/v1.4.9-light-placement-report.json
-            data/v1.4.9-full-fleet-lighting-report.json
-            data/v1.4.9-anchor-report.json
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.10.zip
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.10.zip.sha256
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.10.user.js
+            data/v1.4.10-build-report.json
+            data/v1.4.10-qa-report.json
+            data/v1.4.10-light-placement-report.json
+            data/v1.4.10-full-fleet-lighting-report.json
+            data/v1.4.10-anchor-report.json
             data/v1.4.0-master-report.json
-            data/v1.4.9-overhaul-report.json
-            assets/previews/v1.4.9/*.png
+            data/v1.4.10-overhaul-report.json
+            assets/previews/v1.4.10/*.png
           if-no-files-found: error
           retention-days: 90
 
-      - name: Create or update v1.4.9 release
+      - name: Create or update v1.4.10 release
         if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v1.4.9 >/dev/null 2>&1 || gh release create v1.4.9 --target main --title "v1.4.9 — OTL Roof-Mast Repair" --notes-file docs/RELEASE_v1.4.9.md
-          gh release upload v1.4.9 \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.9.zip \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.9.zip.sha256 \
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.9.user.js \
-            data/v1.4.9-build-report.json \
-            data/v1.4.9-qa-report.json \
-            data/v1.4.9-light-placement-report.json \
-            data/v1.4.9-full-fleet-lighting-report.json \
-            data/v1.4.9-anchor-report.json \
+          gh release view v1.4.10 >/dev/null 2>&1 || gh release create v1.4.10 --target main --title "v1.4.10 — Community First Responder Roof-Cross Repair" --notes-file docs/RELEASE_v1.4.10.md
+          gh release upload v1.4.10 \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.10.zip \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.10.zip.sha256 \
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.10.user.js \
+            data/v1.4.10-build-report.json \
+            data/v1.4.10-qa-report.json \
+            data/v1.4.10-light-placement-report.json \
+            data/v1.4.10-full-fleet-lighting-report.json \
+            data/v1.4.10-anchor-report.json \
             data/v1.4.0-master-report.json \
-            data/v1.4.9-overhaul-report.json \
+            data/v1.4.10-overhaul-report.json \
             --clobber

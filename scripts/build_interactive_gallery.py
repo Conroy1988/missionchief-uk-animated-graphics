@@ -19,8 +19,14 @@ REPOSITORY_URL = "https://github.com/Conroy1988/missionchief-uk-animated-graphic
 
 RELEASES = [
     {
+        "id": "v1.4.10",
+        "label": "v1.4.10 · Current",
+        "profile": "command",
+        "summary": "Community First Responder roof-cross repair",
+    },
+    {
         "id": "v1.4.9",
-        "label": "v1.4.9 · Current",
+        "label": "v1.4.9",
         "profile": "command",
         "summary": "OTL roof-mast repair",
     },
@@ -177,7 +183,7 @@ def build_catalogue() -> dict:
     prototypes = load_json(ROOT / "data/prototypes.json")["vehicles"]
     profile = load_json(ROOT / "data/v1.4-overhaul-profile.json")
     lighting_scope = load_json(ROOT / "data/v1.2.6-scope.json")["changed_asset_ids"]
-    build_report = load_json(ROOT / "data/v1.4.9-build-report.json")
+    build_report = load_json(ROOT / "data/v1.4.10-build-report.json")
 
     prototypes_by_slot = {item["missionchief_slot"]: item for item in prototypes}
     cue_data = profile["baked_master_cues"]
@@ -297,9 +303,9 @@ def build_catalogue() -> dict:
             "data/prototypes.json",
             "data/v1.4-overhaul-profile.json",
             "data/v1.2.6-scope.json",
-            "data/v1.4.9-build-report.json",
-            "data/v1.4.9-scope.json",
-            "data/v1.4.9-light-fixtures.json",
+            "data/v1.4.10-build-report.json",
+            "data/v1.4.10-scope.json",
+            "data/v1.4.10-light-fixtures.json",
         ],
     }
 

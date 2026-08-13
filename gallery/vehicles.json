@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v1.4.9",
+  "release": "v1.4.10",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -88,8 +88,14 @@
   ],
   "releases": [
     {
+      "id": "v1.4.10",
+      "label": "v1.4.10 · Current",
+      "profile": "command",
+      "summary": "Community First Responder roof-cross repair"
+    },
+    {
       "id": "v1.4.9",
-      "label": "v1.4.9 · Current",
+      "label": "v1.4.9",
       "profile": "command",
       "summary": "OTL roof-mast repair"
     },
@@ -719,18 +725,18 @@
       "production_batch": "01-core-services",
       "real_length_metres": 4.4,
       "width": 65,
-      "height": 33,
+      "height": 31,
       "frames": 12,
       "focus": [
         "grounding-shadow",
         "role-differentiation",
         "lighting"
       ],
-      "cue": "Cfr medical beacon",
+      "cue": "Cfr low profile lightbar",
       "static_path": "assets/exports/command/static/community-first-responder.png",
       "animated_path": "assets/exports/command/animated/community-first-responder.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "023 23 slot 23 community first responder community-first-responder community-first-responder community first responder ambulance ambulance 01 core services cfr medical beacon grounding shadows role differentiation lighting changes"
+      "search_text": "023 23 slot 23 community first responder community-first-responder community-first-responder community first responder ambulance ambulance 01 core services cfr low profile lightbar grounding shadows role differentiation lighting changes"
     },
     {
       "slot": 24,
@@ -2999,8 +3005,8 @@
     "data/prototypes.json",
     "data/v1.4-overhaul-profile.json",
     "data/v1.2.6-scope.json",
-    "data/v1.4.9-build-report.json",
-    "data/v1.4.9-scope.json",
-    "data/v1.4.9-light-fixtures.json"
+    "data/v1.4.10-build-report.json",
+    "data/v1.4.10-scope.json",
+    "data/v1.4.10-light-fixtures.json"
   ]
 }

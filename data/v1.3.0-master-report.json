@@ -95,7 +95,7 @@
       "slot": 23,
       "id": "community-first-responder",
       "family": "role",
-      "cue": "cfr-medical-beacon",
+      "cue": "cfr-low-profile-lightbar",
       "service": "ambulance",
       "source": "assets/exports/standard/static/community-first-responder.png",
       "target": "assets/masters/v1.3.0/community-first-responder.png",
@@ -105,20 +105,20 @@
       },
       "master_dimensions": {
         "width": 57,
-        "height": 25
+        "height": 23
       },
       "content_offset": {
         "x": 0,
-        "y": 3
+        "y": 1
       },
       "light_transform": {
         "x_scale": 1.0,
         "x_offset": 0.0,
-        "y_scale": 0.875,
-        "y_offset": 0.125
+        "y_scale": 0.9545454545454546,
+        "y_offset": 0.045454545454545456
       },
-      "half_zoom_added_alpha_pixels": 8,
-      "sha256": "19ddf8402c405f3ba689aa484b333d4f2053e5d300f66c28c2f8f07598a53508"
+      "half_zoom_added_alpha_pixels": 3,
+      "sha256": "0c01d43b1f75caa4d8d84fc3d702bbe5a6c01129353c59e62a3aa2eb5f43f1c3"
     },
     {
       "slot": 86,
