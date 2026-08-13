@@ -396,9 +396,39 @@ def add_role_differentiation(
         for x in range(x1 + 3, x2 - 1, max(4, (x2 - x1) // 4)):
             draw.line((x, top + 1, x, bottom - 1), fill=dark, width=1)
         mast(0.65, max(4, module_height - 1), base_y=bottom)
-    elif cue == "otl-command-mast":
-        box = module(0.42, 0.56, max(3, module_height - 1))
-        mast(0.59, module_height + 1, base_y=box[3], beacon=True)
+    elif cue == "otl-low-profile-lightbar":
+        # The former command-module treatment placed a tall green box and mast
+        # above the OTL source vehicle's existing roof light. At MissionChief
+        # scale it read as detached equipment and obscured the intended estate
+        # silhouette. Remove the source strip's soft blue antialiasing and its
+        # two detached noise pixels, then re-ink the same position as one dark
+        # single-row housing with exactly two isolated blue lens pixels.
+        source_left = round(canvas.width * 0.37)
+        source_right = round(canvas.width * 0.50)
+        source_light_y = min(
+            y
+            for y in range(image.height)
+            if any(
+                image.getpixel((x, y))[3] >= 80
+                and image.getpixel((x, y))[2] - image.getpixel((x, y))[0] >= 80
+                and image.getpixel((x, y))[2] - image.getpixel((x, y))[1] >= 60
+                for x in range(source_left, source_right + 1)
+            )
+        )
+        for y in range(source_light_y):
+            for x in range(canvas.width):
+                if image.getpixel((x, y))[3] < 32:
+                    canvas.putpixel((x, top_padding + y), (0, 0, 0, 0))
+        for x in range(source_left, source_right + 1):
+            canvas.putpixel((x, top_padding + source_light_y), (0, 0, 0, 0))
+
+        x1 = round(canvas.width * 0.38)
+        x2 = round(canvas.width * 0.49)
+        light_y = top_padding + source_light_y
+        emergency_blue = (64, 166, 255, 250)
+        draw.line((x1 - 1, light_y, x2 + 1, light_y), fill=dark, width=1)
+        draw.point((x1 + 2, light_y), fill=emergency_blue)
+        draw.point((x2 - 2, light_y), fill=emergency_blue)
     elif cue == "cfr-medical-beacon":
         box = module(0.47, 0.55, max(3, module_height - 2), dark)
         cx, cy = (box[0] + box[2]) // 2, (box[1] + box[3]) // 2

@@ -344,7 +344,7 @@
       "slot": 21,
       "id": "otl",
       "family": "role",
-      "cue": "otl-command-mast",
+      "cue": "otl-low-profile-lightbar",
       "service": "ambulance",
       "source": "assets/exports/standard/static/otl.png",
       "target": "assets/masters/v1.3.0/otl.png",
@@ -354,20 +354,20 @@
       },
       "master_dimensions": {
         "width": 65,
-        "height": 31
+        "height": 27
       },
       "content_offset": {
         "x": 0,
-        "y": 4
+        "y": 0
       },
       "light_transform": {
         "x_scale": 1.0,
         "x_offset": 0.0,
-        "y_scale": 0.8666666666666667,
-        "y_offset": 0.13333333333333333
+        "y_scale": 1.0,
+        "y_offset": 0.0
       },
-      "half_zoom_added_alpha_pixels": 21,
-      "sha256": "7bb395331c7e86a8a540a3e83c2e000e2a0e3bb449f0a900fe312794aa165072"
+      "half_zoom_added_alpha_pixels": 5,
+      "sha256": "7897a55df0b7c2ffac26882ab5bf2a7b62ddbda69f8607bde7db5ea7080ca161"
     },
     {
       "slot": 23,

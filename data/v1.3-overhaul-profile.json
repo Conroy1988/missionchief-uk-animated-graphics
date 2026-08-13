@@ -87,7 +87,7 @@
     "rapid-response-vehicle": {"family": "role", "cue": "compact-medical-pod"},
     "rrv-2": {"family": "role", "cue": "rrv-aerial-pair"},
     "specialist-paramedic-rrv": {"family": "role", "cue": "specialist-medical-module"},
-    "otl": {"family": "role", "cue": "otl-command-mast"},
+    "otl": {"family": "role", "cue": "otl-low-profile-lightbar"},
     "community-first-responder": {"family": "role", "cue": "cfr-medical-beacon"},
     "armed-traffic-car": {"family": "role", "cue": "traffic-anpr-pods"},
     "armed-response-vehicle": {"family": "role", "cue": "arv-low-profile-lightbar"},
