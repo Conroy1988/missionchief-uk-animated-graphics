@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v1.4.8",
+  "release": "v1.4.9",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -88,8 +88,14 @@
   ],
   "releases": [
     {
+      "id": "v1.4.9",
+      "label": "v1.4.9 · Current",
+      "profile": "command",
+      "summary": "OTL roof-mast repair"
+    },
+    {
       "id": "v1.4.8",
-      "label": "v1.4.8 · Current",
+      "label": "v1.4.8",
       "profile": "command",
       "summary": "ARV duplicate roof-light repair"
     },
@@ -664,18 +670,18 @@
       "production_batch": "01-core-services",
       "real_length_metres": 5.0,
       "width": 73,
-      "height": 39,
+      "height": 35,
       "frames": 12,
       "focus": [
         "grounding-shadow",
         "role-differentiation",
         "lighting"
       ],
-      "cue": "Otl command mast",
+      "cue": "Otl low profile lightbar",
       "static_path": "assets/exports/command/static/otl.png",
       "animated_path": "assets/exports/command/animated/otl.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "021 21 slot 21 otl otl otl otl ambulance ambulance 01 core services otl command mast grounding shadows role differentiation lighting changes"
+      "search_text": "021 21 slot 21 otl otl otl otl ambulance ambulance 01 core services otl low profile lightbar grounding shadows role differentiation lighting changes"
     },
     {
       "slot": 22,
@@ -2993,8 +2999,8 @@
     "data/prototypes.json",
     "data/v1.4-overhaul-profile.json",
     "data/v1.2.6-scope.json",
-    "data/v1.4.8-build-report.json",
-    "data/v1.4.8-scope.json",
-    "data/v1.4.8-light-fixtures.json"
+    "data/v1.4.9-build-report.json",
+    "data/v1.4.9-scope.json",
+    "data/v1.4.9-light-fixtures.json"
   ]
 }

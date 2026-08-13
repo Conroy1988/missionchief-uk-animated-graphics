@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         TKB MissionChief UK Graphics Bulk Uploader
 // @namespace    https://github.com/Conroy1988/missionchief-uk-animated-graphics
-// @version      1.4.8
-// @description  Uploads the fully audited TKB UK Emergency Fleet v1.4.8 assets to MissionChief pack 5897 with corrected IRV, RRV, Joint Response Unit and duplicate ARV roof lighting.
+// @version      1.4.9
+// @description  Uploads the fully audited TKB UK Emergency Fleet v1.4.9 assets to MissionChief pack 5897 with corrected IRV, RRV, ARV, Joint Response Unit and OTL roof lighting.
 // @author       TKB Gaming
 // @match        https://www.missionchief.co.uk/vehicle_graphics/5897/edit*
 // @run-at       document-idle
