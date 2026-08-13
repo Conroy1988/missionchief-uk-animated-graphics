@@ -25,10 +25,11 @@
 14. `python scripts/validate_v1_4_overhaul.py`
 15. `python scripts/validate_light_placement.py --report data/v1.4.9-light-placement-report.json`
 16. `python scripts/validate_full_fleet_lighting.py`
-17. `python scripts/validate_release_scope.py`
-18. `python scripts/build_numbered_upload_package.py --version v1.4.9 --profile command`
-19. `python scripts/build_interactive_gallery.py --check --site-output dist/gallery-site`
-20. `node --test tests/gallery.test.mjs`
+17. `python scripts/validate_release_png_integrity.py`
+18. `python scripts/validate_release_scope.py`
+19. `python scripts/build_numbered_upload_package.py --version v1.4.9 --profile command`
+20. `python scripts/build_interactive_gallery.py --check --site-output dist/gallery-site`
+21. `node --test tests/gallery.test.mjs`
 
 ## Fail-closed OTL contract
 
