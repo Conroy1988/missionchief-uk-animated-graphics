@@ -89,7 +89,7 @@
     "specialist-paramedic-rrv": {"family": "role", "cue": "specialist-medical-module"},
     "otl": {"family": "role", "cue": "otl-low-profile-lightbar"},
     "community-first-responder": {"family": "role", "cue": "cfr-low-profile-lightbar"},
-    "armed-traffic-car": {"family": "role", "cue": "traffic-anpr-pods"},
+    "armed-traffic-car": {"family": "role", "cue": "armed-traffic-low-profile-lightbar"},
     "armed-response-vehicle": {"family": "role", "cue": "arv-low-profile-lightbar"},
     "cbrn-vehicle": {"family": "equipment", "cue": "hazmat-detection-rack"},
     "control-van-sar": {"family": "equipment", "cue": "command-mast-dish"},
