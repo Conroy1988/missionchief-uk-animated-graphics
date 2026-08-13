@@ -1,4 +1,4 @@
-# Complete v1.4.7 vehicle gallery
+# Complete v1.4.8 vehicle gallery
 
 See all **117 static and animated vehicle graphics** included in **TKB UK Fleet — Animated** for MissionChief UK.
 
@@ -6,27 +6,27 @@ See all **117 static and animated vehicle graphics** included in **TKB UK Fleet 
 
 > **[Open the interactive fleet gallery →](https://tkb-gaming.scot/games/missionchief/guides/fleet-gallery/)** — instant search, service and improvement filters, APNG controls, four map conditions, three scales and stable-release comparisons.
 
-[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.7)
+[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/) · [Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/) · [Release downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.8)
 
 The previews below use the pack's twelve-frame Modern Command Clarity APNGs, with eighteen-frame cycles for aircraft, operational lifeboats and six visible-wheel assets. Emergency vehicles use isolated one-pixel point lamps, 11 fleet phase offsets and independent activity signatures; helicopters add multi-band rotor and aviation-light motion, while suitable non-blue-light assets use restrained amber, wheel, navigation, wake or marker movement. Select any preview to open the full file.
 
 The original v1.0 True Scale exports remain available under `assets/exports/standard/` and in the [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0).
 
-## v1.4.7 full-fleet lighting evidence
+## v1.4.8 full-fleet lighting evidence
 
-This release retains the fleet-wide isolated point lamps plus the IRV, RRV and ARV repairs, then corrects the Joint Response Unit's separate baked roof defect: the oversized green-and-cyan command box and mast are removed and the original lamp position becomes one slim dark housing with two separated one-pixel blue lenses. The audit inspects all 468 production files and all 2,178 frames across light, dark, satellite and grayscale maps, while dedicated IRV, RRV, ARV and Joint Response Unit gates reject joined or oversized roof-light geometry.
+This release retains the fleet-wide isolated point lamps plus the IRV, RRV and Joint Response Unit repairs, then corrects the ARV's remaining stacked fixture: the source artwork's detached blue roof strip is erased before one integrated single-row dark housing with exactly two separated one-pixel blue lenses is drawn. The audit inspects all 468 production files and all 2,178 frames across light, dark, satellite and grayscale maps, while dedicated IRV, RRV, ARV and Joint Response Unit gates reject joined, stacked or oversized roof-light geometry.
 
-[![Joint Response Unit roof-light repair before and after](assets/previews/v1.4.7/joint-response-unit-roof-light-before-after.png)](assets/previews/v1.4.7/joint-response-unit-roof-light-before-after.png)
+[![ARV duplicate roof-light repair before and after](assets/previews/v1.4.8/arv-roof-light-before-after.png)](assets/previews/v1.4.8/arv-roof-light-before-after.png)
 
-[ARV roof-light repair retained from v1.4.6](assets/previews/v1.4.7/arv-roof-light-before-after.png)
+[Joint Response Unit roof-light repair retained from v1.4.7](assets/previews/v1.4.8/joint-response-unit-roof-light-before-after.png)
 
-[RRV roof-light repair retained from v1.4.5](assets/previews/v1.4.7/rrv-roof-light-before-after.png)
+[RRV roof-light repair retained from v1.4.5](assets/previews/v1.4.8/rrv-roof-light-before-after.png)
 
-[IRV roof-light repair retained from v1.4.4](assets/previews/v1.4.7/irv-roof-light-before-after.png)
+[IRV roof-light repair retained from v1.4.4](assets/previews/v1.4.8/irv-roof-light-before-after.png)
 
-[![Full fleet on a satellite map](assets/previews/v1.4.7/full-fleet-lighting-satellite.png)](assets/previews/v1.4.7/full-fleet-lighting-satellite.png)
+[![Full fleet on a satellite map](assets/previews/v1.4.8/full-fleet-lighting-satellite.png)](assets/previews/v1.4.8/full-fleet-lighting-satellite.png)
 
-[v1.4.2 bars versus v1.4.7 point lamps](assets/previews/v1.4.7/point-lamps-before-after.png) · [Light-map fleet audit](assets/previews/v1.4.7/full-fleet-lighting-light.png) · [Dark-map fleet audit](assets/previews/v1.4.7/full-fleet-lighting-dark.png) · [Grayscale fleet audit](assets/previews/v1.4.7/full-fleet-lighting-grayscale.png) · [18-frame aircraft audit](assets/previews/v1.4.7/aircraft-motion-18-frame-audit.png) · [18-frame marine audit](assets/previews/v1.4.7/marine-motion-18-frame-audit.png) · [Complete helicopter tails at 100%, 75% and 50%](assets/previews/v1.4.7/complete-helicopter-tails-map-scale.png)
+[v1.4.2 bars versus v1.4.8 point lamps](assets/previews/v1.4.8/point-lamps-before-after.png) · [Light-map fleet audit](assets/previews/v1.4.8/full-fleet-lighting-light.png) · [Dark-map fleet audit](assets/previews/v1.4.8/full-fleet-lighting-dark.png) · [Grayscale fleet audit](assets/previews/v1.4.8/full-fleet-lighting-grayscale.png) · [18-frame aircraft audit](assets/previews/v1.4.8/aircraft-motion-18-frame-audit.png) · [18-frame marine audit](assets/previews/v1.4.8/marine-motion-18-frame-audit.png) · [Complete helicopter tails at 100%, 75% and 50%](assets/previews/v1.4.8/complete-helicopter-tails-map-scale.png)
 
 ## Core emergency services
 

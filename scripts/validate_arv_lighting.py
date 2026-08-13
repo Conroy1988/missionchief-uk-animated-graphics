@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reject any return of the ARV roof-box and misaligned-light regression."""
+"""Reject stacked, oversized or misaligned ARV roof-light geometry."""
 
 from __future__ import annotations
 
@@ -18,12 +18,12 @@ MASTER_PATH = ROOT / "assets" / "masters" / "v1.3.0" / f"{ASSET_ID}.png"
 STATIC_PATH = ROOT / "assets" / "exports" / "command" / "static" / f"{ASSET_ID}.png"
 ANIMATED_PATH = ROOT / "assets" / "exports" / "command" / "animated" / f"{ASSET_ID}.png"
 PROFILE_PATH = ROOT / "data" / "v1.4-overhaul-profile.json"
-BASELINE = "v1.4.5"
+BASELINE = "v1.4.7"
 
 
 def strong_blue(pixel: tuple[int, int, int, int]) -> bool:
     red, green, blue, alpha = pixel
-    return alpha >= 128 and blue >= 220 and blue - red >= 20 and blue - green >= 5
+    return alpha >= 128 and blue >= 220 and blue - red >= 70 and blue - green >= 40
 
 
 def blue_points(image: Image.Image, box: tuple[int, int, int, int]) -> set[tuple[int, int]]:
@@ -68,6 +68,19 @@ def require_isolated_pair(
         raise SystemExit(f"{label} contains a joined blue roof-light component")
 
 
+def require_no_unexpected_roof_blue(
+    image: Image.Image,
+    box: tuple[int, int, int, int],
+    expected: set[tuple[int, int]],
+    label: str,
+) -> None:
+    actual = blue_points(image, box)
+    if not actual.issubset(expected):
+        raise SystemExit(f"{label} contains unexpected roof blue: {sorted(actual - expected)}")
+    if any(len(component) != 1 for component in components(actual)):
+        raise SystemExit(f"{label} contains a joined blue roof-light component")
+
+
 def tagged_image(relative: Path) -> Image.Image:
     data = subprocess.check_output(["git", "show", f"{BASELINE}:{relative.as_posix()}"], cwd=ROOT)
     return Image.open(io.BytesIO(data)).convert("RGBA")
@@ -106,8 +119,8 @@ def render_before_after(static: Image.Image, release: str) -> Path:
     canvas = Image.new("RGB", (1240, 520), (13, 20, 28))
     draw = ImageDraw.Draw(canvas)
     draw.text((24, 18), "ARV roof-light repair — MissionChief slot 14", font=font(28), fill="white")
-    draw.text((340, 64), f"{BASELINE} · raised equipment box", font=font(17), fill=(255, 166, 166))
-    draw.text((840, 64), f"{release} · slim isolated lightbar", font=font(17), fill=(148, 235, 190))
+    draw.text((340, 64), f"{BASELINE} · stacked source and replacement bars", font=font(17), fill=(255, 166, 166))
+    draw.text((840, 64), f"{release} · one integrated lightbar", font=font(17), fill=(148, 235, 190))
 
     rows = [
         ("Native static", old_static, static, 1),
@@ -144,21 +157,21 @@ def main() -> None:
         static = image.convert("RGBA")
     old_static = tagged_image(STATIC_PATH.relative_to(ROOT))
 
-    if master.size != (66, 26):
+    if master.size != (66, 25):
         raise SystemExit(f"ARV master dimensions changed: {master.size}")
-    if static.size != (74, 34):
+    if static.size != (74, 33):
         raise SystemExit(f"ARV command dimensions changed: {static.size}")
-    if old_static.size != (74, 36):
+    if old_static.size != (74, 34):
         raise SystemExit(f"ARV baseline dimensions changed: {old_static.size}")
-    if master.getchannel("A").getbbox() != (0, 1, 66, 26):
+    if master.getchannel("A").getbbox() != (0, 1, 66, 25):
         raise SystemExit("ARV master no longer has the approved low roofline and bottom anchor")
     if static.getchannel("A").getbbox()[-1] != static.height:
         raise SystemExit("ARV command graphic moved away from its bottom-centre map anchor")
 
-    require_isolated_pair(master, (28, 2, 39, 3), {(30, 2), (36, 2)}, "master")
-    require_isolated_pair(static, (32, 6, 43, 7), {(34, 6), (40, 6)}, "command static")
+    require_isolated_pair(master, (22, 0, 41, 3), {(30, 1), (36, 1)}, "master")
+    require_isolated_pair(static, (27, 4, 45, 7), {(34, 5), (40, 5)}, "command static")
 
-    expected_pixels = [(34, 6), (40, 6), (66, 16), (8, 16)]
+    expected_pixels = [(34, 5), (40, 5), (66, 16), (8, 16)]
     actual_pixels = [(int(item["x"]), int(item["y"])) for item in detail["response_light_pixels"]]
     if actual_pixels != expected_pixels:
         raise SystemExit(f"ARV animation fixtures changed: expected {expected_pixels}, found {actual_pixels}")
@@ -174,13 +187,13 @@ def main() -> None:
             frame = animation.convert("RGBA")
             if index == 0 and ImageChops.difference(frame, static).getbbox() is not None:
                 raise SystemExit("ARV APNG frame zero no longer matches the static PNG")
-            require_isolated_pair(frame, (32, 6, 43, 7), {(34, 6), (40, 6)}, f"frame {index}")
+            require_no_unexpected_roof_blue(frame, (27, 4, 45, 7), {(34, 5), (40, 5)}, f"frame {index}")
             difference = ImageChops.difference(frame, static)
-            for point in ((34, 6), (40, 6)):
+            for point in ((34, 5), (40, 5)):
                 if difference.getpixel(point) != (0, 0, 0, 0):
                     changed_roof_points.add(point)
 
-    if changed_roof_points != {(34, 6), (40, 6)}:
+    if changed_roof_points != {(34, 5), (40, 5)}:
         raise SystemExit(f"ARV roof emitters do not flash independently: {sorted(changed_roof_points)}")
 
     preview = render_before_after(static, release)
