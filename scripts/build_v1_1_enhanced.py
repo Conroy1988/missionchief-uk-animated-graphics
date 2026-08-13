@@ -409,17 +409,22 @@ def add_role_differentiation(
         second = module(0.67, 0.73, max(2, module_height - 2))
         mast(0.76, max(3, module_height - 2), base_y=second[3])
     elif cue == "arv-low-profile-lightbar":
-        # The source ARV already carries a recognisable slim roof lightbar. The
-        # former "equipment locker" added a tall police-blue outlined box above
-        # it, which became a detached blue lump at MissionChief scale. Keep one
-        # shallow dark housing and expose only two isolated blue lens pixels.
+        # The source ARV carries an anti-aliased blue strip on the very top row.
+        # The earlier equipment-locker repair drew a replacement housing below
+        # that strip without removing it, leaving two stacked roof fixtures at
+        # MissionChief scale. Erase the detached source strip before re-inking
+        # one shallow housing with two isolated blue lens pixels.
+        source_top = image.getchannel("A").getbbox()[1]
+        source_left = round(canvas.width * 0.34)
+        source_right = round(canvas.width * 0.51)
+        for x in range(source_left, source_right + 1):
+            canvas.putpixel((x, top_padding + source_top), (0, 0, 0, 0))
         x1 = round(canvas.width * 0.42)
         x2 = round(canvas.width * 0.58)
         bottom = roof_y(0.42, 0.58) + 1
         top = max(1, bottom - 1)
         emergency_blue = (64, 166, 255, 250)
-        draw.rectangle((x1 - 1, top, x2 + 1, bottom), fill=dark)
-        draw.line((x1, bottom, x2, bottom), fill=steel, width=1)
+        draw.line((x1 - 1, top, x2 + 1, top), fill=dark, width=1)
         draw.point((x1 + 2, top), fill=emergency_blue)
         draw.point((x2 - 2, top), fill=emergency_blue)
     elif cue == "eod-command-mast":

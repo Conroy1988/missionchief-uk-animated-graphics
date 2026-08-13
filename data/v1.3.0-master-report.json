@@ -18,20 +18,20 @@
       },
       "master_dimensions": {
         "width": 66,
-        "height": 26
+        "height": 25
       },
       "content_offset": {
         "x": 0,
-        "y": 1
+        "y": 0
       },
       "light_transform": {
         "x_scale": 1.0,
         "x_offset": 0.0,
-        "y_scale": 0.96,
-        "y_offset": 0.04
+        "y_scale": 1.0,
+        "y_offset": 0.0
       },
       "half_zoom_added_alpha_pixels": 3,
-      "sha256": "748a779c661f37c473df3d5a13d6914e1d9c8e1e6181534908c09402853e191c"
+      "sha256": "d0e7d264b9d87e4ba2e7c211e9d5e0f7d3883768200669ca165dccb6bf5ef374"
     },
     {
       "slot": 26,
