@@ -1,0 +1,168 @@
+{
+  "release": "v1.4.10",
+  "coordinate_space": "normalised current baked-master motion-reference body coordinates",
+  "fixture_standard": "All fleet emitters use one isolated point-lamp model; declared entries retain manually audited specialist coordinates.",
+  "vehicles": {
+    "police-incident-response-vehicle": [
+      {
+        "x": 0.4444,
+        "y": 0.0476,
+        "group": "a",
+        "kind": "roof_a",
+        "fixture": "point-emitter",
+        "size": 0.68
+      },
+      {
+        "x": 0.5238,
+        "y": 0.0476,
+        "group": "b",
+        "kind": "roof_b",
+        "fixture": "point-emitter",
+        "size": 0.68
+      },
+      {
+        "x": 0.955,
+        "y": 0.7619,
+        "group": "a",
+        "kind": "front",
+        "fixture": "point-emitter",
+        "size": 0.55
+      }
+    ],
+    "rapid-response-vehicle": [
+      {
+        "x": 0.3968,
+        "y": 0.0455,
+        "group": "a",
+        "kind": "roof_a",
+        "fixture": "point-emitter",
+        "size": 0.64
+      },
+      {
+        "x": 0.4444,
+        "y": 0.0455,
+        "group": "b",
+        "kind": "roof_b",
+        "fixture": "point-emitter",
+        "size": 0.64
+      },
+      {
+        "x": 0.97,
+        "y": 0.64,
+        "group": "a",
+        "kind": "front",
+        "fixture": "point-emitter",
+        "size": 0.55
+      }
+    ],
+    "armed-response-vehicle": [
+      {"x": 0.4615, "y": 0.0417, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.68},
+      {"x": 0.5538, "y": 0.0417, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.68},
+      {"x": 0.9538, "y": 0.4800, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.62},
+      {"x": 0.0615, "y": 0.4800, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.58}
+    ],
+    "joint-response-unit": [
+      {"x": 0.4444, "y": 0.0476, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.68},
+      {"x": 0.5238, "y": 0.0476, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.68},
+      {"x": 0.9841, "y": 0.5714, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.58},
+      {"x": 0.0476, "y": 0.5238, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.54}
+    ],
+    "otl": [
+      {"x": 0.4219, "y": 0.0385, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.4688, "y": 0.0385, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.9844, "y": 0.5769, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.58},
+      {"x": 0.0469, "y": 0.4615, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.54}
+    ],
+    "community-first-responder": [
+      {"x": 0.3750, "y": 0.0455, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.62},
+      {"x": 0.4286, "y": 0.0455, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.62},
+      {"x": 0.9821, "y": 0.5455, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.0536, "y": 0.5000, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.52}
+    ],
+    "armed-traffic-car": [
+      {"x": 0.3846, "y": 0.1111, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.68},
+      {"x": 0.4308, "y": 0.1111, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.68},
+      {"x": 0.9692, "y": 0.5185, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.58},
+      {"x": 0.0462, "y": 0.5185, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.54}
+    ],
+    "cbrn-vehicle": [
+      {"x": 0.1034, "y": 0.2500, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.66},
+      {"x": 0.1379, "y": 0.2500, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.66},
+      {"x": 0.4483, "y": 0.2500, "group": "a", "kind": "body_a", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.6092, "y": 0.2500, "group": "b", "kind": "body_b", "fixture": "point-emitter", "size": 0.56},
+      {"x": 1.0000, "y": 0.6875, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.0460, "y": 0.6458, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.52}
+    ],
+    "control-van-sar": [
+      {"x": 0.3118, "y": 0.3393, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.66},
+      {"x": 0.3441, "y": 0.3393, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.66},
+      {"x": 0.0430, "y": 0.7500, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.9462, "y": 0.6429, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.52}
+    ],
+    "drone-vehicle-police-station": [
+      {"x": 0.4250, "y": 0.4130, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.6000, "y": 0.4130, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.0375, "y": 0.7174, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.9375, "y": 0.6304, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.52}
+    ],
+    "specialist-paramedic-rrv": [
+      {"x": 0.4531, "y": 0.1250, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.5781, "y": 0.1250, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.0313, "y": 0.5833, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.9688, "y": 0.4583, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.52}
+    ],
+    "eod-commander": [
+      {"x": 0.4507, "y": 0.2973, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.62},
+      {"x": 0.6338, "y": 0.2973, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.62},
+      {"x": 0.0141, "y": 0.7297, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.9577, "y": 0.6216, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.52}
+    ],
+    "eod-response-vehicle": [
+      {"x": 0.3614, "y": 0.1463, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.4217, "y": 0.1463, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.0241, "y": 0.7073, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.9639, "y": 0.6585, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.52}
+    ],
+    "eod-medium-equipment-van": [
+      {"x": 0.3444, "y": 0.0714, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.3889, "y": 0.0714, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.0111, "y": 0.6429, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.9778, "y": 0.6190, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.52}
+    ],
+    "eod-heavy-equipment-vehicle": [
+      {"x": 0.0775, "y": 0.1778, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.66},
+      {"x": 0.1008, "y": 0.1778, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.66},
+      {"x": 0.0078, "y": 0.5556, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.8217, "y": 0.1778, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.52}
+    ],
+    "marine-eod-response-vehicle": [
+      {"x": 0.6753, "y": 0.0938, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.7143, "y": 0.0938, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.0130, "y": 0.5625, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.9481, "y": 0.5000, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.52}
+    ],
+    "marine-eod-equipment-van": [
+      {"x": 0.3444, "y": 0.0789, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.3889, "y": 0.0789, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.64},
+      {"x": 0.0222, "y": 0.6579, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.9667, "y": 0.6316, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.52}
+    ]
+  },
+  "running_lights": {
+    "armed-response-vehicle": {"front": [1.0000, 0.5600], "rear": [0.0308, 0.4800]},
+    "joint-response-unit": {"front": [1.0000, 0.6667], "rear": [0.0317, 0.5238]},
+    "otl": {"front": [1.0000, 0.6333], "rear": [0.0313, 0.5333]},
+    "community-first-responder": {"front": [1.0000, 0.6250], "rear": [0.0357, 0.5417]},
+    "armed-traffic-car": {"front": [1.0000, 0.5926], "rear": [0.0308, 0.5185]},
+    "cbrn-vehicle": {"front": [1.0000, 0.7083], "rear": [0.0460, 0.6250]},
+    "control-van-sar": {"front": [0.0108, 0.7500], "rear": [0.9785, 0.6964]},
+    "drone-vehicle-police-station": {"front": [0.0125, 0.7174], "rear": [0.9500, 0.6522]},
+    "specialist-paramedic-rrv": {"front": [0.0156, 0.5833], "rear": [0.9688, 0.4583]},
+    "eod-commander": {"front": [0.0141, 0.7297], "rear": [0.9577, 0.6216]},
+    "eod-response-vehicle": {"front": [0.0241, 0.7073], "rear": [0.9639, 0.6585]},
+    "eod-medium-equipment-van": {"front": [0.0111, 0.6429], "rear": [0.9778, 0.6190]},
+    "eod-heavy-equipment-vehicle": {"front": [0.0078, 0.5556], "rear": [0.8450, 0.5556]},
+    "marine-eod-response-vehicle": {"front": [0.0130, 0.5625], "rear": [0.9481, 0.5000]},
+    "marine-eod-equipment-van": {"front": [0.0222, 0.6579], "rear": [0.9667, 0.6316]}
+  }
+}
