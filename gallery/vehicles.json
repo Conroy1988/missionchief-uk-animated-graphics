@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v1.4.11",
+  "release": "v1.4.12",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -88,8 +88,14 @@
   ],
   "releases": [
     {
+      "id": "v1.4.12",
+      "label": "v1.4.12 · Current",
+      "profile": "command",
+      "summary": "SAR Control Van roof-equipment repair"
+    },
+    {
       "id": "v1.4.11",
-      "label": "v1.4.11 · Current",
+      "label": "v1.4.11",
       "profile": "command",
       "summary": "Armed Traffic Car and CBRN roof-equipment repairs"
     },
@@ -2249,11 +2255,11 @@
         "specialist-equipment",
         "lighting"
       ],
-      "cue": "Command mast dish",
+      "cue": "Low-profile SAR command array",
       "static_path": "assets/exports/command/static/control-van-sar.png",
       "animated_path": "assets/exports/command/animated/control-van-sar.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "086 86 slot 86 control van (sar) control-van-sar control-van-sar control van (sar) search-and-rescue sar 06 sar and medical expansion command mast dish grounding shadows specialist equipment lighting changes"
+      "search_text": "086 86 slot 86 control van (sar) control-van-sar control-van-sar control van (sar) search-and-rescue sar 06 sar and medical expansion low-profile sar command array grounding shadows specialist equipment lighting changes"
     },
     {
       "slot": 87,
@@ -3011,8 +3017,8 @@
     "data/prototypes.json",
     "data/v1.4-overhaul-profile.json",
     "data/v1.2.6-scope.json",
-    "data/v1.4.11-build-report.json",
-    "data/v1.4.11-scope.json",
-    "data/v1.4.11-light-fixtures.json"
+    "data/v1.4.12-build-report.json",
+    "data/v1.4.12-scope.json",
+    "data/v1.4.12-light-fixtures.json"
   ]
 }

@@ -27,10 +27,10 @@ const defaults = {
 };
 
 test('catalogue contains one ordered record for every live MissionChief slot', () => {
-  assert.equal(catalogue.release, 'v1.4.11');
-  assert.equal(catalogue.releases[0].id, 'v1.4.11');
-  assert.equal(catalogue.releases[1].id, 'v1.4.10');
-  assert.equal(catalogue.releases[2].id, 'v1.4.9');
+  assert.equal(catalogue.release, 'v1.4.12');
+  assert.equal(catalogue.releases[0].id, 'v1.4.12');
+  assert.equal(catalogue.releases[1].id, 'v1.4.11');
+  assert.equal(catalogue.releases[2].id, 'v1.4.10');
   assert.equal(catalogue.total, 117);
   assert.equal(catalogue.vehicles.length, 117);
   assert.deepEqual(catalogue.vehicles.map((vehicle) => vehicle.slot), Array.from({ length: 117 }, (_, index) => index + 1));
@@ -39,6 +39,11 @@ test('catalogue contains one ordered record for every live MissionChief slot', (
   assert.deepEqual(
     { slot: cbrn.slot, width: cbrn.width, height: cbrn.height, frames: cbrn.frames, cue: cbrn.cue },
     { slot: 33, width: 96, height: 54, frames: 12, cue: 'Low-profile CBRN detector array' },
+  );
+  const sarControl = catalogue.vehicles.find((vehicle) => vehicle.id === 'control-van-sar');
+  assert.deepEqual(
+    { slot: sarControl.slot, width: sarControl.width, height: sarControl.height, frames: sarControl.frames, cue: sarControl.cue },
+    { slot: 86, width: 102, height: 65, frames: 12, cue: 'Low-profile SAR command array' },
   );
 });
 

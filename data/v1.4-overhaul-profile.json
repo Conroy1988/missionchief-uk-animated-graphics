@@ -1,9 +1,9 @@
 {
-  "release": "v1.4.11",
+  "release": "v1.4.12",
   "master_art_release": "v1.4.0",
   "master_source_release": "v1.2.4",
   "profile": "command",
-  "display_name": "Modern Command Clarity — Armed Traffic Car and CBRN Roof-Equipment Repairs",
+  "display_name": "Modern Command Clarity — SAR Control Van Roof-Equipment Repair",
   "source_profile": "standard",
   "frames": 12,
   "animation_frame_overrides": {
@@ -127,7 +127,7 @@
     "armed-traffic-car": {"family": "role", "cue": "armed-traffic-low-profile-lightbar"},
     "armed-response-vehicle": {"family": "role", "cue": "arv-low-profile-lightbar"},
     "cbrn-vehicle": {"family": "equipment", "cue": "cbrn-low-profile-detector-array"},
-    "control-van-sar": {"family": "equipment", "cue": "command-mast-dish"},
+    "control-van-sar": {"family": "equipment", "cue": "sar-control-low-profile-command-array"},
     "drone-vehicle-sar-hq": {"family": "equipment", "cue": "drone-launch-cradle"},
     "drone-vehicle-fire-station": {"family": "equipment", "cue": "drone-launch-cradle"},
     "drone-vehicle-police-station": {"family": "equipment", "cue": "drone-launch-cradle"},
@@ -186,7 +186,7 @@
   },
   "light_overrides_path": "data/v1.2.6-light-overrides.json",
   "light_overrides_release": "v1.2.6",
-  "current_light_fixtures_path": "data/v1.4.11-light-fixtures.json",
+  "current_light_fixtures_path": "data/v1.4.12-light-fixtures.json",
   "emergency_light_renderer": {
     "model": "isolated-point-v3",
     "full_canvas_apng_frames": true,
