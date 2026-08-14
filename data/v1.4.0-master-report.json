@@ -830,7 +830,7 @@
       "slot": 90,
       "id": "drone-vehicle-sar-hq",
       "family": "equipment",
-      "cue": "drone-launch-cradle",
+      "cue": "sar-drone-low-profile-stowage-rail",
       "service": "search-and-rescue",
       "source": "assets/exports/standard/static/drone-vehicle-sar-hq.png",
       "target": "assets/masters/v1.3.0/drone-vehicle-sar-hq.png",
@@ -852,8 +852,8 @@
         "y_scale": 0.9772727272727273,
         "y_offset": 0.022727272727272728
       },
-      "half_zoom_added_alpha_pixels": 36,
-      "sha256": "013af5247a66c4ccd9673bf459f3bd192113ba6fd0ff9a61d8f3228c1308ad02"
+      "half_zoom_added_alpha_pixels": 12,
+      "sha256": "bb42f5f79ac0efea605a6a2064f44b3b10cdb91545a6eb09e55656e4c61e4dd6"
     },
     {
       "slot": 91,

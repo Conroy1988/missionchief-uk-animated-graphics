@@ -93,7 +93,7 @@
     "armed-response-vehicle": {"family": "role", "cue": "arv-low-profile-lightbar"},
     "cbrn-vehicle": {"family": "equipment", "cue": "cbrn-low-profile-detector-array"},
     "control-van-sar": {"family": "equipment", "cue": "sar-control-low-profile-command-array"},
-    "drone-vehicle-sar-hq": {"family": "equipment", "cue": "drone-launch-cradle"},
+    "drone-vehicle-sar-hq": {"family": "equipment", "cue": "sar-drone-low-profile-stowage-rail"},
     "drone-vehicle-fire-station": {"family": "equipment", "cue": "drone-launch-cradle"},
     "drone-vehicle-police-station": {"family": "equipment", "cue": "drone-launch-cradle"},
     "eod-commander": {"family": "role", "cue": "eod-command-mast"},
