@@ -522,11 +522,11 @@
       "id": "cbrn-vehicle",
       "canvas": {
         "width": 96,
-        "height": 57
+        "height": 54
       },
       "bottom_centre_anchor": {
         "x": 47.5,
-        "y": 56
+        "y": 53
       },
       "maximum_bottom_anchor_shift_pixels": 0,
       "static_frame_identity": true,

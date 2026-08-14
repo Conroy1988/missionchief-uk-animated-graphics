@@ -91,7 +91,7 @@
       "id": "v1.4.11",
       "label": "v1.4.11 · Current",
       "profile": "command",
-      "summary": "Armed Traffic Car roof-pod repair"
+      "summary": "Armed Traffic Car and CBRN roof-equipment repairs"
     },
     {
       "id": "v1.4.10",
@@ -974,18 +974,18 @@
       "production_batch": "01-core-services",
       "real_length_metres": 6.8,
       "width": 96,
-      "height": 57,
+      "height": 54,
       "frames": 12,
       "focus": [
         "grounding-shadow",
         "specialist-equipment",
         "lighting"
       ],
-      "cue": "Hazmat detection rack",
+      "cue": "Low-profile CBRN detector array",
       "static_path": "assets/exports/command/static/cbrn-vehicle.png",
       "animated_path": "assets/exports/command/animated/cbrn-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "033 33 slot 33 cbrn vehicle cbrn-vehicle cbrn-vehicle cbrn vehicle ambulance ambulance 01 core services hazmat detection rack grounding shadows specialist equipment lighting changes"
+      "search_text": "033 33 slot 33 cbrn vehicle cbrn-vehicle cbrn-vehicle cbrn vehicle ambulance ambulance 01 core services low-profile cbrn detector array grounding shadows specialist equipment lighting changes"
     },
     {
       "slot": 34,

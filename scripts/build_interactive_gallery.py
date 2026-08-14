@@ -22,7 +22,7 @@ RELEASES = [
         "id": "v1.4.11",
         "label": "v1.4.11 · Current",
         "profile": "command",
-        "summary": "Armed Traffic Car roof-pod repair",
+        "summary": "Armed Traffic Car and CBRN roof-equipment repairs",
     },
     {
         "id": "v1.4.10",
@@ -170,6 +170,8 @@ def png_frame_count(path: Path) -> int:
 def humanise_cue(cue: str | None) -> str | None:
     if not cue:
         return None
+    if cue == "cbrn-low-profile-detector-array":
+        return "Low-profile CBRN detector array"
     return cue.replace("-pass", " detail pass").replace("-", " ").capitalize()
 
 

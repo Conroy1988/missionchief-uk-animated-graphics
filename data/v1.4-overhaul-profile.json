@@ -3,7 +3,7 @@
   "master_art_release": "v1.4.0",
   "master_source_release": "v1.2.4",
   "profile": "command",
-  "display_name": "Modern Command Clarity — Armed Traffic Car Roof-Pod Repair",
+  "display_name": "Modern Command Clarity — Armed Traffic Car and CBRN Roof-Equipment Repairs",
   "source_profile": "standard",
   "frames": 12,
   "animation_frame_overrides": {
@@ -126,7 +126,7 @@
     "community-first-responder": {"family": "role", "cue": "cfr-low-profile-lightbar"},
     "armed-traffic-car": {"family": "role", "cue": "armed-traffic-low-profile-lightbar"},
     "armed-response-vehicle": {"family": "role", "cue": "arv-low-profile-lightbar"},
-    "cbrn-vehicle": {"family": "equipment", "cue": "hazmat-detection-rack"},
+    "cbrn-vehicle": {"family": "equipment", "cue": "cbrn-low-profile-detector-array"},
     "control-van-sar": {"family": "equipment", "cue": "command-mast-dish"},
     "drone-vehicle-sar-hq": {"family": "equipment", "cue": "drone-launch-cradle"},
     "drone-vehicle-fire-station": {"family": "equipment", "cue": "drone-launch-cradle"},

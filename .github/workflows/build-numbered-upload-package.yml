@@ -1,4 +1,4 @@
-# Builds, validates and releases the v1.4.11 Armed Traffic Car roof-pod correction.
+# Builds, validates and releases the v1.4.11 Armed Traffic Car and CBRN roof-equipment corrections.
 name: Build v1.4.11 MissionChief command pack
 
 on:
@@ -51,6 +51,7 @@ on:
       - scripts/validate_otl_lighting.py
       - scripts/validate_community_first_responder_lighting.py
       - scripts/validate_armed_traffic_car_lighting.py
+      - scripts/validate_cbrn_vehicle_lighting.py
       - scripts/audit_emergency_light_placement.py
       - docs/RELEASE_v1.3.0.md
       - docs/CHECKPOINT_v1.3.0.md
@@ -107,6 +108,7 @@ on:
       - scripts/validate_otl_lighting.py
       - scripts/validate_community_first_responder_lighting.py
       - scripts/validate_armed_traffic_car_lighting.py
+      - scripts/validate_cbrn_vehicle_lighting.py
       - scripts/audit_emergency_light_placement.py
       - docs/RELEASE_v1.3.0.md
       - docs/CHECKPOINT_v1.3.0.md
@@ -178,6 +180,9 @@ jobs:
       - name: Reject any return of the Armed Traffic Car roof pods or beacon mast
         run: python scripts/validate_armed_traffic_car_lighting.py
 
+      - name: Reject any return of the raised CBRN detector cabinet or mast
+        run: python scripts/validate_cbrn_vehicle_lighting.py
+
       - name: Build True Scale exports with the full-frame APNG encoder
         run: python scripts/build_prototypes.py
 
@@ -229,7 +234,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v1.4.11 >/dev/null 2>&1 || gh release create v1.4.11 --target main --title "v1.4.11 — Armed Traffic Car Roof-Pod Repair" --notes-file docs/RELEASE_v1.4.11.md
+          gh release view v1.4.11 >/dev/null 2>&1 || gh release create v1.4.11 --target main --title "v1.4.11 — Armed Traffic Car and CBRN Roof-Equipment Repairs" --notes-file docs/RELEASE_v1.4.11.md
           gh release upload v1.4.11 \
             dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.11.zip \
             dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.11.zip.sha256 \

@@ -29,12 +29,12 @@
       "yellow": 859
     },
     "ambulance": {
-      "blue": 1112,
-      "green": 1410,
-      "navy": 1886,
+      "blue": 1116,
+      "green": 1333,
+      "navy": 1884,
       "orange": 98,
       "red": 887,
-      "yellow": 16681
+      "yellow": 16666
     },
     "coastguard": {
       "blue": 581,
@@ -103,9 +103,9 @@
   },
   "anchor_aligned_assets": 117,
   "maximum_bottom_anchor_shift_pixels": 0,
-  "animated_bytes": 14672330,
+  "animated_bytes": 14670726,
   "v1_3_animated_bytes": 9034343,
-  "animated_size_ratio": 1.62406,
+  "animated_size_ratio": 1.62388,
   "preview_files": [
     "assets/previews/v1.4.11/weakest-artwork-redraw-before-after.png",
     "assets/previews/v1.4.11/aircraft-motion-18-frame-audit.png",

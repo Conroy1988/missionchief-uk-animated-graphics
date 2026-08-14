@@ -32,6 +32,7 @@ Search by name, slot or role; filter by service and improvement type; switch sta
 Release **v1.4.11** covers every one of the **117 current vehicle slots** in MissionChief UK:
 
 - 117 transparent, map-scale static PNGs
+- A rebuilt CBRN Vehicle roof profile with the oversized detector cabinet and separate mast removed, replaced by one single-row detector rail with three isolated amber sensor pixels while all six response-light emitters remain fixture-aligned
 - A rebuilt Armed Traffic Car roofline with the raised twin ANPR-style pods and beacon mast removed, replaced by one shallow integrated dark lightbar with exactly two isolated blue lenses and fixture-aligned independent flashes
 - A rebuilt Community First Responder roofline with the raised green medical cross-box removed, replaced by one integrated single-row dark lightbar with exactly two isolated blue lenses and fixture-aligned independent flashes
 - A rebuilt Operational Team Leader roofline with the raised green command box and beacon mast removed, replaced by one integrated single-row dark lightbar with exactly two isolated blue lenses and fixture-aligned independent flashes
@@ -58,7 +59,7 @@ Release **v1.4.11** covers every one of the **117 current vehicle slots** in Mis
 - Improved red/green navigation lighting, bow spray, stern turbulence and class-weighted wakes for both operational lifeboats
 - Selective wheel motion on six suitable cycle, ATV, recovery and airport assets, aligned to declared wheel geometry
 - Twenty rebuilt role-specific masters with command, ANPR, medical, drone, CBRN and EOD equipment baked into the source artwork
-- A standardised UK high-visibility colour pass across 123,712 livery pixels without introducing copied service marks
+- A standardised UK high-visibility colour pass across 123,624 livery pixels without introducing copied service marks
 - Adaptive compact, standard and large-vehicle outlines that reduce the cut-out effect while retaining satellite-map contrast
 - ALB map footprint reduced by approximately 30%, with both its static and eighteen-frame navigation/wake variants corrected
 - Clean, original rooflines on the 40 vehicles affected by v1.2.0's artificial role and equipment overlays
@@ -85,6 +86,8 @@ Emergency lighting is deliberately restrained so the fleet remains readable on a
 ## Tested for real map conditions
 
 Every icon is tested automatically at **100%, 75% and 50% scale** against light, dark, grayscale and satellite-style backgrounds. The release gate checks half-zoom survival, edge contrast, corrected rooflines, frame stability and all 117 static/animated slot pairs.
+
+[![CBRN detector-array repair before and after](assets/previews/v1.4.11/cbrn-detector-array-before-after.png)](assets/previews/v1.4.11/cbrn-detector-array-before-after.png)
 
 [![Armed Traffic Car roof-pod repair before and after](assets/previews/v1.4.11/armed-traffic-car-roof-pods-before-after.png)](assets/previews/v1.4.11/armed-traffic-car-roof-pods-before-after.png)
 
@@ -158,6 +161,7 @@ python scripts/validate_joint_response_unit_lighting.py
 python scripts/validate_otl_lighting.py
 python scripts/validate_community_first_responder_lighting.py
 python scripts/validate_armed_traffic_car_lighting.py
+python scripts/validate_cbrn_vehicle_lighting.py
 python scripts/build_prototypes.py
 python scripts/validate_v1_1_enhanced.py
 python scripts/validate_v1_4_overhaul.py

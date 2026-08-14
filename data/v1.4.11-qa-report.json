@@ -1328,7 +1328,7 @@
       "motion": "blue-response",
       "dimensions": {
         "width": 96,
-        "height": 57
+        "height": 54
       },
       "frames": 12,
       "changed_frames": 11,
@@ -1345,18 +1345,18 @@
         "opacity": 82,
         "blur_radius": 0.92,
         "visible_pixels": 322,
-        "half_zoom_visible_pixels": 104
+        "half_zoom_visible_pixels": 106
       },
       "strong_rotor_underlay_pixels": null,
       "strong_rotor_underlay_limit": null,
       "helicopter_tail_margin_pixels": null,
       "helicopter_complete_tail_upper_pixels": null,
-      "half_zoom_visible_pixels": 841,
+      "half_zoom_visible_pixels": 805,
       "edge_contrast": {
-        "light": 85.56,
-        "dark": 64.76,
-        "satellite": 54.36,
-        "grayscale": 53.06
+        "light": 80.19,
+        "dark": 66.37,
+        "satellite": 53.35,
+        "grayscale": 49.45
       },
       "passed": true,
       "errors": []

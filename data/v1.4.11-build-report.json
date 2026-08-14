@@ -2,7 +2,7 @@
   "release": "v1.4.11",
   "all_passed": true,
   "profile": "command",
-  "display_name": "Modern Command Clarity \u2014 Armed Traffic Car Roof-Pod Repair",
+  "display_name": "Modern Command Clarity \u2014 Armed Traffic Car and CBRN Roof-Equipment Repairs",
   "selected_upgrades": [
     4,
     5,
@@ -46,11 +46,11 @@
   "mean_length_scale_error_percent": 0.285,
   "maximum_length_scale_error_percent": 0.855,
   "minimum_half_zoom_detail_score": 85.73,
-  "livery_pixels_normalised": 123712,
+  "livery_pixels_normalised": 123624,
   "isolated_alpha_pixels_remaining": 0,
-  "animated_bytes": 14672330,
+  "animated_bytes": 14670726,
   "animated_baseline_bytes": 9034343,
-  "animated_size_ratio": 1.62406,
+  "animated_size_ratio": 1.62388,
   "preferred_disposal_assets": 117,
   "motion_counts": {
     "amber-beacon": 2,
@@ -4056,80 +4056,80 @@
         "opacity": 82,
         "blur_radius": 0.92,
         "visible_pixels": 322,
-        "half_zoom_visible_pixels": 104
+        "half_zoom_visible_pixels": 106
       },
       "adaptive_outline": {
         "style": "standard-adaptive",
         "outer_filter": 3,
         "inner_filter": 3,
-        "visible_pixels": 505,
-        "body_pixels": 2958,
-        "outline_to_body_ratio": 0.1196
+        "visible_pixels": 540,
+        "body_pixels": 2733,
+        "outline_to_body_ratio": 0.1427
       },
       "source_override": "assets/masters/v1.3.0/cbrn-vehicle.png",
       "baked_master_cue": {
         "family": "equipment",
-        "cue": "hazmat-detection-rack"
+        "cue": "cbrn-low-profile-detector-array"
       },
-      "baked_master_half_zoom_added_alpha_pixels": 82,
+      "baked_master_half_zoom_added_alpha_pixels": 8,
       "standard_dimensions": {
         "width": 88,
         "height": 45
       },
       "command_dimensions": {
         "width": 96,
-        "height": 57
+        "height": 54
       },
       "body_dimensions": {
         "width": 88,
-        "height": 49
+        "height": 46
       },
       "motion_reference_dimensions": {
         "width": 88,
-        "height": 49
+        "height": 46
       },
       "width_gain_percent": 0.0,
       "effective_real_length_metres": 6.8,
       "calibrated_target_body_width": 88,
       "length_scale_error_percent": 0.452,
-      "livery_pixels_normalised": 1529,
+      "livery_pixels_normalised": 1441,
       "alpha_cleanup": {
-        "removed_isolated_alpha_pixels": 54,
-        "transparent_rgb_pixels_zeroed": 50,
+        "removed_isolated_alpha_pixels": 66,
+        "transparent_rgb_pixels_zeroed": 61,
         "remaining_isolated_alpha_pixels": 0
       },
-      "half_zoom_detail_score": 123.56,
+      "half_zoom_detail_score": 117.5,
       "frames": 12,
       "response_light_count": 6,
       "response_light_pixels": [
         {
           "x": 13,
-          "y": 16,
+          "y": 13,
           "fixture": "point-emitter"
         },
         {
           "x": 16,
-          "y": 16,
+          "y": 13,
           "fixture": "point-emitter"
         },
         {
           "x": 43,
-          "y": 16,
+          "y": 13,
           "fixture": "point-emitter"
         },
         {
           "x": 57,
-          "y": 16,
+          "y": 13,
           "fixture": "point-emitter"
         },
         {
           "x": 91,
-          "y": 37,
+          "y": 34,
           "fixture": "point-emitter"
         },
         {
           "x": 8,
-          "y": 35,
+          "y": 32,
           "fixture": "point-emitter"
         }
       ],
@@ -4158,7 +4158,7 @@
       "flash_activity_signature": "0,3,1,5,1,2,3,2,3,1,4,1",
       "motion": "blue-response",
       "apng_compression": {
-        "bytes": 105599,
+        "bytes": 103995,
         "disposal": 0,
         "full_canvas_frames": 12,
         "partial_update_frames": 0,

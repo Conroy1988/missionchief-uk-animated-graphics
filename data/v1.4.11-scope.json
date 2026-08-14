@@ -4,9 +4,10 @@
   "profile_variants": {
     "command": ["static", "animated"]
   },
-  "changed_asset_ids": ["armed-traffic-car"],
+  "changed_asset_ids": ["armed-traffic-car", "cbrn-vehicle"],
   "slots": {
-    "armed-traffic-car": 26
+    "armed-traffic-car": 26,
+    "cbrn-vehicle": 33
   },
   "baseline_exceptions": {
     "v1.4.2": {
@@ -14,6 +15,7 @@
         "static": [
           "armed-traffic-car",
           "armed-response-vehicle",
+          "cbrn-vehicle",
           "community-first-responder",
           "joint-response-unit",
           "otl",

@@ -348,7 +348,7 @@
           "index": 1,
           "pixel": {
             "x": 13,
-            "y": 16
+            "y": 13
           },
           "anchor_distance_pixels": 0.0,
           "maximum_flash_difference": 456
@@ -357,7 +357,7 @@
           "index": 2,
           "pixel": {
             "x": 16,
-            "y": 16
+            "y": 13
           },
           "anchor_distance_pixels": 0.0,
           "maximum_flash_difference": 264
@@ -366,25 +366,25 @@
           "index": 3,
           "pixel": {
             "x": 43,
-            "y": 16
+            "y": 13
           },
           "anchor_distance_pixels": 0.0,
-          "maximum_flash_difference": 188
+          "maximum_flash_difference": 187
         },
         {
           "index": 4,
           "pixel": {
             "x": 57,
-            "y": 16
+            "y": 13
           },
           "anchor_distance_pixels": 0.0,
-          "maximum_flash_difference": 518
+          "maximum_flash_difference": 519
         },
         {
           "index": 5,
           "pixel": {
             "x": 91,
-            "y": 37
+            "y": 34
           },
           "anchor_distance_pixels": 1.0,
           "maximum_flash_difference": 695
@@ -393,10 +393,10 @@
           "index": 6,
           "pixel": {
             "x": 8,
-            "y": 35
+            "y": 32
           },
           "anchor_distance_pixels": 0.0,
-          "maximum_flash_difference": 483
+          "maximum_flash_difference": 485
         }
       ],
       "passed": true,

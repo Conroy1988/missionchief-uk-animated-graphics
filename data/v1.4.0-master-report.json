@@ -462,7 +462,7 @@
       "slot": 33,
       "id": "cbrn-vehicle",
       "family": "equipment",
-      "cue": "hazmat-detection-rack",
+      "cue": "cbrn-low-profile-detector-array",
       "service": "ambulance",
       "source": "assets/exports/standard/static/cbrn-vehicle.png",
       "target": "assets/masters/v1.3.0/cbrn-vehicle.png",
@@ -472,20 +472,20 @@
       },
       "master_dimensions": {
         "width": 88,
-        "height": 49
+        "height": 46
       },
       "content_offset": {
         "x": 0,
-        "y": 4
+        "y": 1
       },
       "light_transform": {
         "x_scale": 1.0,
         "x_offset": 0.0,
-        "y_scale": 0.9166666666666666,
-        "y_offset": 0.08333333333333333
+        "y_scale": 0.9777777777777777,
+        "y_offset": 0.022222222222222223
       },
-      "half_zoom_added_alpha_pixels": 82,
-      "sha256": "8eb589dd98592e89e8b36ac45866bd7dbfaf899c893dceb189ab6bab006de4cf"
+      "half_zoom_added_alpha_pixels": 8,
+      "sha256": "ca0d305db696de3b5e0dbd064ee8d18ed29ce2537aa1b8902f466fda61a5f690"
     },
     {
       "slot": 36,

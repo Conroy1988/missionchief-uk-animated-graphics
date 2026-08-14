@@ -8,7 +8,7 @@
   "apng_control_frames_audited": 2178,
   "standard_lit_vehicles": 87,
   "command_lit_vehicles": 97,
-  "visible_static_assets_unchanged": 227,
+  "visible_static_assets_unchanged": 226,
   "changed_apngs": 184,
   "partial_update_frames": 0,
   "box_shaped_light_components": 0,
@@ -4094,9 +4094,9 @@
       "largest_blue_component": {
         "pixels": 1,
         "left": 43,
-        "top": 16,
+        "top": 13,
         "right": 44,
-        "bottom": 17,
+        "bottom": 14,
         "width": 1,
         "height": 1,
         "rectangularity": 1.0

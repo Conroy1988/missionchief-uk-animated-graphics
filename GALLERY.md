@@ -14,7 +14,9 @@ The original v1.0 True Scale exports remain available under `assets/exports/stan
 
 ## v1.4.11 full-fleet lighting evidence
 
-This release retains the fleet-wide isolated point lamps plus the IRV, RRV, ARV, Joint Response Unit, OTL and Community First Responder repairs, then corrects the Armed Traffic Car: the raised twin ANPR-style pods and beacon mast are removed before the source roofline is re-inked as one shallow integrated dark housing with exactly two separated one-pixel blue lenses. The audit inspects all 468 production files and all 2,178 frames across light, dark, satellite and grayscale maps, while dedicated IRV, RRV, ARV, Joint Response Unit, OTL, Community First Responder and Armed Traffic Car gates reject joined, stacked, oversized or raised roof-light geometry.
+This release retains the fleet-wide isolated point lamps plus the IRV, RRV, ARV, Joint Response Unit, OTL and Community First Responder repairs, then corrects two more vehicles. The Armed Traffic Car loses its raised twin ANPR-style pods and beacon mast in favour of one shallow integrated housing with two separated one-pixel blue lenses. The CBRN Vehicle loses its oversized raised detector cabinet and separate mast in favour of one single-row detector rail with three isolated amber sensor pixels. The audit inspects all 468 production files and all 2,178 frames across light, dark, satellite and grayscale maps, while eight dedicated vehicle gates reject joined, stacked, oversized or raised roof geometry.
+
+[![CBRN detector-array repair before and after](assets/previews/v1.4.11/cbrn-detector-array-before-after.png)](assets/previews/v1.4.11/cbrn-detector-array-before-after.png)
 
 [![Armed Traffic Car roof-pod repair before and after](assets/previews/v1.4.11/armed-traffic-car-roof-pods-before-after.png)](assets/previews/v1.4.11/armed-traffic-car-roof-pods-before-after.png)
 

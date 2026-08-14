@@ -3,8 +3,8 @@
 ## Fixed scope
 
 - Baseline: `v1.4.10`
-- Vehicle: slot 26, Armed Traffic Car
-- Export changes: command static PNG and command animated APNG only
+- Vehicles: slot 26, Armed Traffic Car; slot 33, CBRN Vehicle
+- Export changes: command static PNG and command animated APNG for both vehicles only
 - Standard profile changes: none
 
 ## Required gates
@@ -22,16 +22,17 @@
 11. `python scripts/validate_otl_lighting.py`
 12. `python scripts/validate_community_first_responder_lighting.py`
 13. `python scripts/validate_armed_traffic_car_lighting.py`
-14. `python scripts/build_prototypes.py`
-15. `python scripts/validate_v1_1_enhanced.py`
-16. `python scripts/validate_v1_4_overhaul.py`
-17. `python scripts/validate_light_placement.py --report data/v1.4.11-light-placement-report.json`
-18. `python scripts/validate_full_fleet_lighting.py`
-19. `python scripts/validate_release_png_integrity.py`
-20. `python scripts/validate_release_scope.py`
-21. `python scripts/build_numbered_upload_package.py --version v1.4.11 --profile command`
-22. `python scripts/build_interactive_gallery.py --check --site-output dist/gallery-site`
-23. `node --test tests/gallery.test.mjs`
+14. `python scripts/validate_cbrn_vehicle_lighting.py`
+15. `python scripts/build_prototypes.py`
+16. `python scripts/validate_v1_1_enhanced.py`
+17. `python scripts/validate_v1_4_overhaul.py`
+18. `python scripts/validate_light_placement.py --report data/v1.4.11-light-placement-report.json`
+19. `python scripts/validate_full_fleet_lighting.py`
+20. `python scripts/validate_release_png_integrity.py`
+21. `python scripts/validate_release_scope.py`
+22. `python scripts/build_numbered_upload_package.py --version v1.4.11 --profile command`
+23. `python scripts/build_interactive_gallery.py --check --site-output dist/gallery-site`
+24. `node --test tests/gallery.test.mjs`
 
 ## Fail-closed Armed Traffic Car contract
 
@@ -47,6 +48,20 @@
 - Each roof emitter flashes during at least one frame while the other remains static
 - APNG frame zero is visually identical to the static PNG; all 12 frames are full canvas
 - Bottom-centre map anchor remains unchanged
-- Exact release scope is two command-profile files for slot 26
 
-The release is deployable only when every gate passes and `data/v1.4.11-scope.json` reports no missing or unexpected export path.
+## Fail-closed CBRN Vehicle contract
+
+- Master dimensions: 88×46
+- Command dimensions: 96×54; v1.4.10 defective baseline: 96×57
+- Master alpha bounds: `(0, 1, 88, 46)`
+- Command alpha bounds: `(3, 6, 93, 54)`
+- Added detector geometry: exactly one row spanning `(35, 4)` through `(53, 4)`, with no cabinet or mast pixels above it
+- Static master detector indicators: exactly `(37, 4)`, `(43, 4)` and `(49, 4)`
+- Static command detector indicators: exactly `(41, 8)`, `(47, 8)` and `(53, 8)`
+- Animated response fixtures: `(13, 13)`, `(16, 13)`, `(43, 13)`, `(57, 13)`, `(91, 34)` and `(8, 32)`
+- All six response emitters flash; both roof pairs demonstrate independent activity
+- Detector indicator pixels remain static throughout the animation
+- APNG frame zero is visually identical to the static PNG; all 12 frames are full canvas
+- Bottom-centre map anchor remains unchanged
+
+The release is deployable only when every gate passes and `data/v1.4.11-scope.json` reports exactly four command-profile files for slots 26 and 33, with no missing or unexpected export path.

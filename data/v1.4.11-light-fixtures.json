@@ -86,12 +86,12 @@
       {"x": 0.0462, "y": 0.5185, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.54}
     ],
     "cbrn-vehicle": [
-      {"x": 0.1034, "y": 0.2500, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.66},
-      {"x": 0.1379, "y": 0.2500, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.66},
-      {"x": 0.4483, "y": 0.2500, "group": "a", "kind": "body_a", "fixture": "point-emitter", "size": 0.56},
-      {"x": 0.6092, "y": 0.2500, "group": "b", "kind": "body_b", "fixture": "point-emitter", "size": 0.56},
-      {"x": 1.0000, "y": 0.6875, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.56},
-      {"x": 0.0460, "y": 0.6458, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.52}
+      {"x": 0.1034, "y": 0.2000, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.66},
+      {"x": 0.1379, "y": 0.2000, "group": "b", "kind": "roof_b", "fixture": "point-emitter", "size": 0.66},
+      {"x": 0.4483, "y": 0.2000, "group": "a", "kind": "body_a", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.6092, "y": 0.2000, "group": "b", "kind": "body_b", "fixture": "point-emitter", "size": 0.56},
+      {"x": 1.0000, "y": 0.6667, "group": "a", "kind": "front", "fixture": "point-emitter", "size": 0.56},
+      {"x": 0.0460, "y": 0.6222, "group": "b", "kind": "rear", "fixture": "point-emitter", "size": 0.52}
     ],
     "control-van-sar": [
       {"x": 0.3118, "y": 0.3393, "group": "a", "kind": "roof_a", "fixture": "point-emitter", "size": 0.66},
@@ -154,7 +154,7 @@
     "otl": {"front": [1.0000, 0.6333], "rear": [0.0313, 0.5333]},
     "community-first-responder": {"front": [1.0000, 0.6250], "rear": [0.0357, 0.5417]},
     "armed-traffic-car": {"front": [1.0000, 0.5926], "rear": [0.0308, 0.5185]},
-    "cbrn-vehicle": {"front": [1.0000, 0.7083], "rear": [0.0460, 0.6250]},
+    "cbrn-vehicle": {"front": [1.0000, 0.6889], "rear": [0.0460, 0.6000]},
     "control-van-sar": {"front": [0.0108, 0.7500], "rear": [0.9785, 0.6964]},
     "drone-vehicle-police-station": {"front": [0.0125, 0.7174], "rear": [0.9500, 0.6522]},
     "specialist-paramedic-rrv": {"front": [0.0156, 0.5833], "rear": [0.9688, 0.4583]},
