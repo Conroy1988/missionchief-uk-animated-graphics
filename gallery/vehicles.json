@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v1.4.12",
+  "release": "v1.4.13",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -88,8 +88,14 @@
   ],
   "releases": [
     {
+      "id": "v1.4.13",
+      "label": "v1.4.13 · Current",
+      "profile": "command",
+      "summary": "SAR Drone Vehicle roof-equipment repair"
+    },
+    {
       "id": "v1.4.12",
-      "label": "v1.4.12 · Current",
+      "label": "v1.4.12",
       "profile": "command",
       "summary": "SAR Control Van roof-equipment repair"
     },
@@ -2350,11 +2356,11 @@
         "specialist-equipment",
         "lighting"
       ],
-      "cue": "Drone launch cradle",
+      "cue": "Low-profile SAR drone stowage rail",
       "static_path": "assets/exports/command/static/drone-vehicle-sar-hq.png",
       "animated_path": "assets/exports/command/animated/drone-vehicle-sar-hq.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "090 90 slot 90 drone vehicle (sar hq) drone-vehicle-sar-hq drone-vehicle-sar-hq drone vehicle (sar hq) search-and-rescue sar 06 sar and medical expansion drone launch cradle grounding shadows specialist equipment lighting changes"
+      "search_text": "090 90 slot 90 drone vehicle (sar hq) drone-vehicle-sar-hq drone-vehicle-sar-hq drone vehicle (sar hq) search-and-rescue sar 06 sar and medical expansion low-profile sar drone stowage rail grounding shadows specialist equipment lighting changes"
     },
     {
       "slot": 91,
@@ -3017,8 +3023,8 @@
     "data/prototypes.json",
     "data/v1.4-overhaul-profile.json",
     "data/v1.2.6-scope.json",
-    "data/v1.4.12-build-report.json",
-    "data/v1.4.12-scope.json",
-    "data/v1.4.12-light-fixtures.json"
+    "data/v1.4.13-build-report.json",
+    "data/v1.4.13-scope.json",
+    "data/v1.4.13-light-fixtures.json"
   ]
 }

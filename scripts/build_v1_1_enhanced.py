@@ -608,6 +608,23 @@ def add_profiled_equipment(
         outlined_line((cx - arm, cy + 3, cx + arm, cy - 3), fill=steel, width=1)
         for px, py in ((cx - arm, cy - 3), (cx + arm, cy + 3), (cx - arm, cy + 3), (cx + arm, cy - 3)):
             draw.ellipse((px - 2, py - 1, px + 2, py + 1), fill=dark, outline=accent, width=1)
+    elif cue == "sar-drone-low-profile-stowage-rail":
+        # The original SAR treatment drew a deep orange-edged launch box and
+        # a fully spread drone above the roof. At MissionChief scale it read
+        # as a detached roof ornament and overwhelmed the genuine emergency
+        # lightbar and rear mast. Keep the specialist role visible with one
+        # shallow attached rail and a compact, longitudinally folded airframe.
+        left = round(canvas.width * 0.38)
+        right = round(canvas.width * 0.62)
+        bottom = roof_y(0.38, 0.62)
+        rail_y = max(2, bottom - 2)
+        cx = (left + right) // 2
+        draw.line((left - 1, rail_y, right + 1, rail_y), fill=dark, width=1)
+        draw.line((cx - 5, rail_y - 1, cx + 5, rail_y - 1), fill=dark, width=1)
+        draw.line((cx - 2, rail_y - 1, cx + 2, rail_y - 1), fill=steel, width=1)
+        draw.point((cx, rail_y - 2), fill=steel)
+        draw.point((cx - 5, rail_y - 1), fill=accent)
+        draw.point((cx + 5, rail_y - 1), fill=accent)
     elif cue == "tactical-equipment-locker":
         locker = box(0.34, 0.67, max(4, module_height - 1), dark)
         third = max(4, (locker[2] - locker[0]) // 3)

@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         TKB MissionChief UK Graphics Bulk Uploader
 // @namespace    https://github.com/Conroy1988/missionchief-uk-animated-graphics
-// @version      1.4.12
-// @description  Uploads the fully audited TKB UK Emergency Fleet v1.4.12 assets to pack 5897 with the repaired low-profile SAR Control Van command rail.
+// @version      1.4.13
+// @description  Uploads the fully audited TKB UK Emergency Fleet v1.4.13 assets to pack 5897 with the repaired low-profile SAR Drone Vehicle stowage rail.
 // @author       TKB Gaming
 // @match        https://www.missionchief.co.uk/vehicle_graphics/5897/edit*
 // @run-at       document-idle
