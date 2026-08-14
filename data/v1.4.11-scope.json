@@ -1,0 +1,28 @@
+{
+  "release": "v1.4.11",
+  "baseline": "v1.4.10",
+  "profile_variants": {
+    "command": ["static", "animated"]
+  },
+  "changed_asset_ids": ["armed-traffic-car", "cbrn-vehicle"],
+  "slots": {
+    "armed-traffic-car": 26,
+    "cbrn-vehicle": 33
+  },
+  "baseline_exceptions": {
+    "v1.4.2": {
+      "command": {
+        "static": [
+          "armed-traffic-car",
+          "armed-response-vehicle",
+          "cbrn-vehicle",
+          "community-first-responder",
+          "joint-response-unit",
+          "otl",
+          "police-incident-response-vehicle",
+          "rapid-response-vehicle"
+        ]
+      }
+    }
+  }
+}

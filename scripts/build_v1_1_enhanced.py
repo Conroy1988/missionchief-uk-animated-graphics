@@ -457,10 +457,21 @@ def add_role_differentiation(
         draw.line((x1 - 1, light_y, x2 + 1, light_y), fill=dark, width=1)
         draw.point((x1 + 2, light_y), fill=emergency_blue)
         draw.point((x2 - 2, light_y), fill=emergency_blue)
-    elif cue == "traffic-anpr-pods":
-        first = module(0.36, 0.42, max(2, module_height - 2))
-        second = module(0.67, 0.73, max(2, module_height - 2))
-        mast(0.76, max(3, module_height - 2), base_y=second[3])
+    elif cue == "armed-traffic-low-profile-lightbar":
+        # The former traffic-ANPR treatment drew two raised blue-ringed pods
+        # and a separate mast above the estate roof. At MissionChief scale the
+        # equipment read as two detached circular beacons. Keep the distinct
+        # Armed Traffic Car body and livery, but use the same disciplined roof
+        # language as the repaired police fleet: one shallow dark housing with
+        # exactly two separated blue lens pixels and no raised mast.
+        x1 = round(canvas.width * 0.36)
+        x2 = round(canvas.width * 0.52)
+        bottom = roof_y(0.36, 0.52) + 1
+        light_y = max(1, bottom - 1)
+        emergency_blue = (64, 166, 255, 250)
+        draw.line((x1 - 1, light_y, x2 + 1, light_y), fill=dark, width=1)
+        draw.point((x1 + 2, light_y), fill=emergency_blue)
+        draw.point((x2 - 2, light_y), fill=emergency_blue)
     elif cue == "arv-low-profile-lightbar":
         # The source ARV carries an anti-aliased blue strip on the very top row.
         # The earlier equipment-locker repair drew a replacement housing below
@@ -596,6 +607,20 @@ def add_profiled_equipment(
         for index in range(count):
             cx = round(rack[0] + spacing * (index + 1))
             draw.rounded_rectangle((cx - radius, rack[1] + 1, cx + radius, rack[3] - 1), radius=radius, fill=(72, 91, 101, 252), outline=steel, width=1)
+    elif cue == "cbrn-low-profile-detector-array":
+        # The former CBRN treatment added a deep, full-width cabinet and a
+        # separate mast above an already equipped ambulance roof. At map scale
+        # that silhouette read as a giant illuminated box rather than compact
+        # detection equipment. Keep the specialist identity with one shallow
+        # detector rail, three isolated sensor pixels and no mast.
+        left = round(canvas.width * 0.39)
+        right = round(canvas.width * 0.59)
+        bottom = roof_y(0.39, 0.59)
+        rail_y = max(1, bottom - 2)
+        draw.line((left - 1, rail_y, right + 1, rail_y), fill=dark, width=1)
+        for fraction in (0.42, 0.49, 0.56):
+            cx = round(canvas.width * fraction)
+            draw.point((cx, rail_y), fill=(200, 211, 91, 250))
     elif cue in {"hazmat-detection-rack", "pod-hazmat-canisters"}:
         rack = box(0.34, 0.65, module_height + 2, dark)
         for index in range(3):
