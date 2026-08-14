@@ -1,5 +1,5 @@
-# Builds, validates and releases the v1.4.11 Armed Traffic Car and CBRN roof-equipment corrections.
-name: Build v1.4.11 MissionChief command pack
+# Builds, validates and releases the v1.4.12 SAR Control Van roof-equipment correction.
+name: Build v1.4.12 MissionChief command pack
 
 on:
   workflow_dispatch:
@@ -33,8 +33,8 @@ on:
       - data/v1.2.6-light-overrides.json
       - data/v1.3.0-scope.json
       - data/v1.4.0-scope.json
-      - data/v1.4.11-scope.json
-      - data/v1.4.11-light-fixtures.json
+      - data/v1.4.12-scope.json
+      - data/v1.4.12-light-fixtures.json
       - scripts/build_v1_1_enhanced.py
       - scripts/build_prototypes.py
       - scripts/validate_v1_1_enhanced.py
@@ -52,13 +52,14 @@ on:
       - scripts/validate_community_first_responder_lighting.py
       - scripts/validate_armed_traffic_car_lighting.py
       - scripts/validate_cbrn_vehicle_lighting.py
+      - scripts/validate_control_van_sar_lighting.py
       - scripts/audit_emergency_light_placement.py
       - docs/RELEASE_v1.3.0.md
       - docs/CHECKPOINT_v1.3.0.md
       - docs/RELEASE_v1.4.0.md
       - docs/CHECKPOINT_v1.4.0.md
-      - docs/RELEASE_v1.4.11.md
-      - docs/CHECKPOINT_v1.4.11.md
+      - docs/RELEASE_v1.4.12.md
+      - docs/CHECKPOINT_v1.4.12.md
       - .github/workflows/build-numbered-upload-package.yml
   push:
     branches:
@@ -90,8 +91,8 @@ on:
       - data/v1.2.6-light-overrides.json
       - data/v1.3.0-scope.json
       - data/v1.4.0-scope.json
-      - data/v1.4.11-scope.json
-      - data/v1.4.11-light-fixtures.json
+      - data/v1.4.12-scope.json
+      - data/v1.4.12-light-fixtures.json
       - scripts/build_v1_1_enhanced.py
       - scripts/build_prototypes.py
       - scripts/validate_v1_1_enhanced.py
@@ -109,13 +110,14 @@ on:
       - scripts/validate_community_first_responder_lighting.py
       - scripts/validate_armed_traffic_car_lighting.py
       - scripts/validate_cbrn_vehicle_lighting.py
+      - scripts/validate_control_van_sar_lighting.py
       - scripts/audit_emergency_light_placement.py
       - docs/RELEASE_v1.3.0.md
       - docs/CHECKPOINT_v1.3.0.md
       - docs/RELEASE_v1.4.0.md
       - docs/CHECKPOINT_v1.4.0.md
-      - docs/RELEASE_v1.4.11.md
-      - docs/CHECKPOINT_v1.4.11.md
+      - docs/RELEASE_v1.4.12.md
+      - docs/CHECKPOINT_v1.4.12.md
       - .github/workflows/build-numbered-upload-package.yml
 
 permissions:
@@ -183,6 +185,9 @@ jobs:
       - name: Reject any return of the raised CBRN detector cabinet or mast
         run: python scripts/validate_cbrn_vehicle_lighting.py
 
+      - name: Reject any return of the SAR Control Van cabinet or duplicate dish mast
+        run: python scripts/validate_control_van_sar_lighting.py
+
       - name: Build True Scale exports with the full-frame APNG encoder
         run: python scripts/build_prototypes.py
 
@@ -193,7 +198,7 @@ jobs:
         run: python scripts/validate_v1_4_overhaul.py
 
       - name: Verify every corrected flash remains anchored to its vehicle
-        run: python scripts/validate_light_placement.py --report data/v1.4.11-light-placement-report.json
+        run: python scripts/validate_light_placement.py --report data/v1.4.12-light-placement-report.json
 
       - name: Audit every production image and APNG frame for bars, boxes and oversized lamps
         run: python scripts/validate_full_fleet_lighting.py
@@ -205,45 +210,45 @@ jobs:
         run: python scripts/validate_release_scope.py
 
       - name: Build and validate numbered package
-        run: python scripts/build_numbered_upload_package.py --version v1.4.11 --profile command
+        run: python scripts/build_numbered_upload_package.py --version v1.4.12 --profile command
 
       - name: Stage bulk uploader release asset
-        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.11.user.js
+        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.12.user.js
 
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: missionchief-modern-command-clarity-v1.4.11
+          name: missionchief-modern-command-clarity-v1.4.12
           path: |
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.11.zip
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.11.zip.sha256
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.11.user.js
-            data/v1.4.11-build-report.json
-            data/v1.4.11-qa-report.json
-            data/v1.4.11-light-placement-report.json
-            data/v1.4.11-full-fleet-lighting-report.json
-            data/v1.4.11-anchor-report.json
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.12.zip
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.12.zip.sha256
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.12.user.js
+            data/v1.4.12-build-report.json
+            data/v1.4.12-qa-report.json
+            data/v1.4.12-light-placement-report.json
+            data/v1.4.12-full-fleet-lighting-report.json
+            data/v1.4.12-anchor-report.json
             data/v1.4.0-master-report.json
-            data/v1.4.11-overhaul-report.json
-            assets/previews/v1.4.11/*.png
+            data/v1.4.12-overhaul-report.json
+            assets/previews/v1.4.12/*.png
           if-no-files-found: error
           retention-days: 90
 
-      - name: Create or update v1.4.11 release
+      - name: Create or update v1.4.12 release
         if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v1.4.11 >/dev/null 2>&1 || gh release create v1.4.11 --target main --title "v1.4.11 — Armed Traffic Car and CBRN Roof-Equipment Repairs" --notes-file docs/RELEASE_v1.4.11.md
-          gh release upload v1.4.11 \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.11.zip \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.11.zip.sha256 \
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.11.user.js \
-            data/v1.4.11-build-report.json \
-            data/v1.4.11-qa-report.json \
-            data/v1.4.11-light-placement-report.json \
-            data/v1.4.11-full-fleet-lighting-report.json \
-            data/v1.4.11-anchor-report.json \
+          gh release view v1.4.12 >/dev/null 2>&1 || gh release create v1.4.12 --target main --title "v1.4.12 — SAR Control Van Roof-Equipment Repair" --notes-file docs/RELEASE_v1.4.12.md
+          gh release upload v1.4.12 \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.12.zip \
+            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.12.zip.sha256 \
+            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.12.user.js \
+            data/v1.4.12-build-report.json \
+            data/v1.4.12-qa-report.json \
+            data/v1.4.12-light-placement-report.json \
+            data/v1.4.12-full-fleet-lighting-report.json \
+            data/v1.4.12-anchor-report.json \
             data/v1.4.0-master-report.json \
-            data/v1.4.11-overhaul-report.json \
+            data/v1.4.12-overhaul-report.json \
             --clobber

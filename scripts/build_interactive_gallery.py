@@ -19,8 +19,14 @@ REPOSITORY_URL = "https://github.com/Conroy1988/missionchief-uk-animated-graphic
 
 RELEASES = [
     {
+        "id": "v1.4.12",
+        "label": "v1.4.12 · Current",
+        "profile": "command",
+        "summary": "SAR Control Van roof-equipment repair",
+    },
+    {
         "id": "v1.4.11",
-        "label": "v1.4.11 · Current",
+        "label": "v1.4.11",
         "profile": "command",
         "summary": "Armed Traffic Car and CBRN roof-equipment repairs",
     },
@@ -172,6 +178,8 @@ def humanise_cue(cue: str | None) -> str | None:
         return None
     if cue == "cbrn-low-profile-detector-array":
         return "Low-profile CBRN detector array"
+    if cue == "sar-control-low-profile-command-array":
+        return "Low-profile SAR command array"
     return cue.replace("-pass", " detail pass").replace("-", " ").capitalize()
 
 
@@ -191,7 +199,7 @@ def build_catalogue() -> dict:
     prototypes = load_json(ROOT / "data/prototypes.json")["vehicles"]
     profile = load_json(ROOT / "data/v1.4-overhaul-profile.json")
     lighting_scope = load_json(ROOT / "data/v1.2.6-scope.json")["changed_asset_ids"]
-    build_report = load_json(ROOT / "data/v1.4.11-build-report.json")
+    build_report = load_json(ROOT / "data/v1.4.12-build-report.json")
 
     prototypes_by_slot = {item["missionchief_slot"]: item for item in prototypes}
     cue_data = profile["baked_master_cues"]
@@ -311,9 +319,9 @@ def build_catalogue() -> dict:
             "data/prototypes.json",
             "data/v1.4-overhaul-profile.json",
             "data/v1.2.6-scope.json",
-            "data/v1.4.11-build-report.json",
-            "data/v1.4.11-scope.json",
-            "data/v1.4.11-light-fixtures.json",
+            "data/v1.4.12-build-report.json",
+            "data/v1.4.12-scope.json",
+            "data/v1.4.12-light-fixtures.json",
         ],
     }
 

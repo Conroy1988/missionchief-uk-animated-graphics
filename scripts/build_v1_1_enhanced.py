@@ -581,6 +581,21 @@ def add_profiled_equipment(
         platform_y = y - lift - 8
         draw.rectangle((platform_x - 1, platform_y - 1, platform_x + platform_w + 1, platform_y + 7), fill=dark)
         draw.rectangle((platform_x, platform_y, platform_x + platform_w, platform_y + 6), fill=equipment, outline=accent, width=1)
+    elif cue == "sar-control-low-profile-command-array":
+        # The former SAR control treatment added a deep orange-edged cabinet
+        # and a second dish mast above a source van that already carries an
+        # emergency lightbar and rear communications mast. At MissionChief
+        # scale the duplicate equipment dominated the entire vehicle. Preserve
+        # the source fixtures and identify the command role with one shallow
+        # rail containing three isolated amber status pixels.
+        left = round(canvas.width * 0.37)
+        right = round(canvas.width * 0.56)
+        bottom = roof_y(0.37, 0.56)
+        rail_y = max(1, bottom - 2)
+        draw.line((left - 1, rail_y, right + 1, rail_y), fill=dark, width=1)
+        for fraction in (0.40, 0.465, 0.53):
+            cx = round(canvas.width * fraction)
+            draw.point((cx, rail_y), fill=(245, 151, 43, 250))
     elif cue == "command-mast-dish":
         box(0.36, 0.57, module_height)
         mast(0.62, module_height + 8, dish=True)

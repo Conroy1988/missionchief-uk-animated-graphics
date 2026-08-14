@@ -801,7 +801,7 @@
       "slot": 86,
       "id": "control-van-sar",
       "family": "equipment",
-      "cue": "command-mast-dish",
+      "cue": "sar-control-low-profile-command-array",
       "service": "search-and-rescue",
       "source": "assets/exports/standard/static/control-van-sar.png",
       "target": "assets/masters/v1.3.0/control-van-sar.png",
@@ -823,8 +823,8 @@
         "y_scale": 0.9821428571428571,
         "y_offset": 0.017857142857142856
       },
-      "half_zoom_added_alpha_pixels": 72,
-      "sha256": "5409a052af9ca3f8138ce416e07453709526330c7acb84988dbcd910b2bab61d"
+      "half_zoom_added_alpha_pixels": 15,
+      "sha256": "e7c8c23f6c5193e5aae831c106efe565e300860f8428794072a5c42c28f1b65a"
     },
     {
       "slot": 90,
