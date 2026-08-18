@@ -19,8 +19,14 @@ REPOSITORY_URL = "https://github.com/Conroy1988/missionchief-uk-animated-graphic
 
 RELEASES = [
     {
+        "id": "v1.4.14",
+        "label": "v1.4.14 · Current",
+        "profile": "command",
+        "summary": "Complete trailer towing-unit overhaul",
+    },
+    {
         "id": "v1.4.13",
-        "label": "v1.4.13 · Current",
+        "label": "v1.4.13",
         "profile": "command",
         "summary": "SAR Drone Vehicle roof-equipment repair",
     },
@@ -136,6 +142,7 @@ SERVICE_LABELS = {
 }
 
 FOCUS_LABELS = {
+    "complete-towing-unit": "Complete towing units",
     "role-differentiation": "Role differentiation",
     "specialist-equipment": "Specialist equipment",
     "lighting": "Lighting changes",
@@ -207,9 +214,10 @@ def build_catalogue() -> dict:
     prototypes = load_json(ROOT / "data/prototypes.json")["vehicles"]
     profile = load_json(ROOT / "data/v1.4-overhaul-profile.json")
     lighting_scope = load_json(ROOT / "data/v1.2.6-scope.json")["changed_asset_ids"]
-    build_report = load_json(ROOT / "data/v1.4.13-build-report.json")
+    build_report = load_json(ROOT / "data/v1.4.14-build-report.json")
 
     prototypes_by_slot = {item["missionchief_slot"]: item for item in prototypes}
+    prototypes_by_id = {item["id"]: item for item in prototypes}
     cue_data = profile["baked_master_cues"]
     frame_overrides = profile["animation_frame_overrides"]
     lighting_assets = set(lighting_scope) | {
@@ -253,9 +261,16 @@ def build_catalogue() -> dict:
                 focus.append("redraw")
         if asset_id in lighting_assets:
             focus.append("lighting")
+        tow_config = profile.get("towed_units", {}).get(asset_id)
+        if tow_config:
+            focus.append("complete-towing-unit")
 
         service = prototype["service"]
-        cue_label = humanise_cue(cue["cue"] if cue else None)
+        cue_label = (
+            f"Complete {prototypes_by_id[tow_config['tow_vehicle']]['display_name']} towing unit"
+            if tow_config
+            else humanise_cue(cue["cue"] if cue else None)
+        )
         search_parts = [
             f"{slot['slot']:03}",
             str(slot["slot"]),
@@ -282,7 +297,9 @@ def build_catalogue() -> dict:
                 "service": service,
                 "service_label": SERVICE_LABELS[service],
                 "production_batch": slot["production_batch"],
-                "real_length_metres": prototype["real_length_metres"],
+                "real_length_metres": (
+                    tow_config["real_length_metres"] if tow_config else prototype["real_length_metres"]
+                ),
                 "width": width,
                 "height": height,
                 "frames": actual_frames,
@@ -327,9 +344,11 @@ def build_catalogue() -> dict:
             "data/prototypes.json",
             "data/v1.4-overhaul-profile.json",
             "data/v1.2.6-scope.json",
-            "data/v1.4.13-build-report.json",
-            "data/v1.4.13-scope.json",
-            "data/v1.4.13-light-fixtures.json",
+            "data/v1.4.14-build-report.json",
+            "data/v1.4.14-scope.json",
+            "data/v1.4.14-light-fixtures.json",
+            "data/v1.4.14-trailer-tow-master-report.json",
+            "data/v1.4.14-trailer-tow-validation.json",
         ],
     }
 

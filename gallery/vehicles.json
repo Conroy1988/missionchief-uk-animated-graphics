@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v1.4.13",
+  "release": "v1.4.14",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -61,6 +61,11 @@
   ],
   "focus_views": [
     {
+      "id": "complete-towing-unit",
+      "label": "Complete towing units",
+      "count": 9
+    },
+    {
       "id": "role-differentiation",
       "label": "Role differentiation",
       "count": 15
@@ -73,7 +78,7 @@
     {
       "id": "lighting",
       "label": "Lighting changes",
-      "count": 97
+      "count": 105
     },
     {
       "id": "grounding-shadow",
@@ -88,8 +93,14 @@
   ],
   "releases": [
     {
+      "id": "v1.4.14",
+      "label": "v1.4.14 · Current",
+      "profile": "command",
+      "summary": "Complete trailer towing-unit overhaul"
+    },
+    {
       "id": "v1.4.13",
-      "label": "v1.4.13 · Current",
+      "label": "v1.4.13",
       "profile": "command",
       "summary": "SAR Drone Vehicle roof-equipment repair"
     },
@@ -1685,18 +1696,20 @@
       "service": "coastguard",
       "service_label": "Coastguard",
       "production_batch": "04-coastguard-rnli-water-rescue",
-      "real_length_metres": 6.8,
-      "width": 96,
-      "height": 53,
+      "real_length_metres": 11.8,
+      "width": 163,
+      "height": 54,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting",
+        "complete-towing-unit"
       ],
-      "cue": null,
+      "cue": "Complete 4x4 Vehicle towing unit",
       "static_path": "assets/exports/command/static/flood-rescue-unit-trailer.png",
       "animated_path": "assets/exports/command/animated/flood-rescue-unit-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "062 62 slot 62 flood rescue unit (trailer) flood-rescue-unit-trailer flood-rescue-unit-trailer flood rescue unit (trailer) coastguard coastguard 04 coastguard rnli water rescue  grounding shadows"
+      "search_text": "062 62 slot 62 flood rescue unit (trailer) flood-rescue-unit-trailer flood-rescue-unit-trailer flood rescue unit (trailer) coastguard coastguard 04 coastguard rnli water rescue complete 4x4 vehicle towing unit grounding shadows lighting changes complete towing units"
     },
     {
       "slot": 63,
@@ -1827,19 +1840,21 @@
       "service": "coastguard",
       "service_label": "Coastguard",
       "production_batch": "04-coastguard-rnli-water-rescue",
-      "real_length_metres": 7.5,
-      "width": 106,
-      "height": 45,
+      "real_length_metres": 12.5,
+      "width": 172,
+      "height": 46,
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "redraw"
+        "redraw",
+        "lighting",
+        "complete-towing-unit"
       ],
-      "cue": "Boat trailer structure detail pass",
+      "cue": "Complete 4x4 Vehicle towing unit",
       "static_path": "assets/exports/command/static/inland-rescue-boat-trailer.png",
       "animated_path": "assets/exports/command/animated/inland-rescue-boat-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "068 68 slot 68 inland rescue boat (trailer) inland-rescue-boat-trailer inland-rescue-boat-trailer inland rescue boat (trailer) coastguard coastguard 04 coastguard rnli water rescue boat trailer structure detail pass grounding shadows v1.4 redraws"
+      "search_text": "068 68 slot 68 inland rescue boat (trailer) inland-rescue-boat-trailer inland-rescue-boat-trailer inland rescue boat (trailer) coastguard coastguard 04 coastguard rnli water rescue complete 4x4 vehicle towing unit grounding shadows v1.4 redraws lighting changes complete towing units"
     },
     {
       "slot": 69,
@@ -1897,18 +1912,20 @@
       "service": "lifeboat",
       "service_label": "Lifeboat",
       "production_batch": "04-coastguard-rnli-water-rescue",
-      "real_length_metres": 7.0,
-      "width": 99,
-      "height": 34,
+      "real_length_metres": 13.2,
+      "width": 182,
+      "height": 38,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting",
+        "complete-towing-unit"
       ],
-      "cue": null,
+      "cue": "Complete Hovercraft Transporter towing unit",
       "static_path": "assets/exports/command/static/rescue-watercraft-trailer.png",
       "animated_path": "assets/exports/command/animated/rescue-watercraft-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "071 71 slot 71 rescue watercraft (trailer) rescue-watercraft-trailer rescue-watercraft-trailer rescue watercraft (trailer) lifeboat lifeboat 04 coastguard rnli water rescue  grounding shadows"
+      "search_text": "071 71 slot 71 rescue watercraft (trailer) rescue-watercraft-trailer rescue-watercraft-trailer rescue watercraft (trailer) lifeboat lifeboat 04 coastguard rnli water rescue complete hovercraft transporter towing unit grounding shadows lighting changes complete towing units"
     },
     {
       "slot": 72,
@@ -1920,19 +1937,21 @@
       "service": "lifeboat",
       "service_label": "Lifeboat",
       "production_batch": "04-coastguard-rnli-water-rescue",
-      "real_length_metres": 8.0,
-      "width": 112,
-      "height": 44,
+      "real_length_metres": 14.2,
+      "width": 195,
+      "height": 46,
       "frames": 12,
       "focus": [
         "grounding-shadow",
-        "redraw"
+        "redraw",
+        "lighting",
+        "complete-towing-unit"
       ],
-      "cue": "Hovercraft structure detail pass",
+      "cue": "Complete Hovercraft Transporter towing unit",
       "static_path": "assets/exports/command/static/hovercraft-trailer.png",
       "animated_path": "assets/exports/command/animated/hovercraft-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "072 72 slot 72 hovercraft (trailer) hovercraft-trailer hovercraft-trailer hovercraft (trailer) lifeboat lifeboat 04 coastguard rnli water rescue hovercraft structure detail pass grounding shadows v1.4 redraws"
+      "search_text": "072 72 slot 72 hovercraft (trailer) hovercraft-trailer hovercraft-trailer hovercraft (trailer) lifeboat lifeboat 04 coastguard rnli water rescue complete hovercraft transporter towing unit grounding shadows v1.4 redraws lighting changes complete towing units"
     },
     {
       "slot": 73,
@@ -1992,18 +2011,20 @@
       "service": "fire",
       "service_label": "Fire",
       "production_batch": "04-coastguard-rnli-water-rescue",
-      "real_length_metres": 7.2,
-      "width": 102,
-      "height": 46,
+      "real_length_metres": 12.2,
+      "width": 169,
+      "height": 48,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting",
+        "complete-towing-unit"
       ],
-      "cue": null,
+      "cue": "Complete Light 4x4 towing unit",
       "static_path": "assets/exports/command/static/boat-trailer.png",
       "animated_path": "assets/exports/command/animated/boat-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "075 75 slot 75 boat trailer boat-trailer boat-trailer boat trailer fire fire 04 coastguard rnli water rescue  grounding shadows"
+      "search_text": "075 75 slot 75 boat trailer boat-trailer boat-trailer boat trailer fire fire 04 coastguard rnli water rescue complete light 4x4 towing unit grounding shadows lighting changes complete towing units"
     },
     {
       "slot": 76,
@@ -2158,18 +2179,19 @@
       "service": "airfield",
       "service_label": "Airfield",
       "production_batch": "05-airfield-and-specialist",
-      "real_length_metres": 6.0,
-      "width": 86,
-      "height": 44,
+      "real_length_metres": 11.2,
+      "width": 156,
+      "height": 46,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "complete-towing-unit"
       ],
-      "cue": null,
+      "cue": "Complete Airfield Operations Vehicle towing unit",
       "static_path": "assets/exports/command/static/medical-equipment-trailer.png",
       "animated_path": "assets/exports/command/animated/medical-equipment-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "082 82 slot 82 medical equipment trailer medical-equipment-trailer medical-equipment-trailer medical equipment trailer airfield airfield 05 airfield and specialist  grounding shadows"
+      "search_text": "082 82 slot 82 medical equipment trailer medical-equipment-trailer medical-equipment-trailer medical equipment trailer airfield airfield 05 airfield and specialist complete airfield operations vehicle towing unit grounding shadows complete towing units"
     },
     {
       "slot": 83,
@@ -2229,18 +2251,20 @@
       "service": "search-and-rescue",
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
-      "real_length_metres": 4.5,
-      "width": 66,
-      "height": 34,
+      "real_length_metres": 9.7,
+      "width": 134,
+      "height": 44,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting",
+        "complete-towing-unit"
       ],
-      "cue": null,
+      "cue": "Complete SAR 4x4 towing unit",
       "static_path": "assets/exports/command/static/pump-trailer.png",
       "animated_path": "assets/exports/command/animated/pump-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "085 85 slot 85 pump trailer pump-trailer pump-trailer pump trailer search-and-rescue sar 06 sar and medical expansion  grounding shadows"
+      "search_text": "085 85 slot 85 pump trailer pump-trailer pump-trailer pump trailer search-and-rescue sar 06 sar and medical expansion complete sar 4x4 towing unit grounding shadows lighting changes complete towing units"
     },
     {
       "slot": 86,
@@ -2301,18 +2325,20 @@
       "service": "search-and-rescue",
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
-      "real_length_metres": 6.5,
-      "width": 92,
-      "height": 50,
+      "real_length_metres": 11.7,
+      "width": 162,
+      "height": 51,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting",
+        "complete-towing-unit"
       ],
-      "cue": null,
+      "cue": "Complete SAR 4x4 towing unit",
       "static_path": "assets/exports/command/static/operational-support-trailer.png",
       "animated_path": "assets/exports/command/animated/operational-support-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "088 88 slot 88 operational support trailer operational-support-trailer operational-support-trailer operational support trailer search-and-rescue sar 06 sar and medical expansion  grounding shadows"
+      "search_text": "088 88 slot 88 operational support trailer operational-support-trailer operational-support-trailer operational support trailer search-and-rescue sar 06 sar and medical expansion complete sar 4x4 towing unit grounding shadows lighting changes complete towing units"
     },
     {
       "slot": 89,
@@ -2324,18 +2350,20 @@
       "service": "search-and-rescue",
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
-      "real_length_metres": 6.8,
-      "width": 96,
-      "height": 45,
+      "real_length_metres": 12.0,
+      "width": 166,
+      "height": 47,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "grounding-shadow",
+        "lighting",
+        "complete-towing-unit"
       ],
-      "cue": null,
+      "cue": "Complete SAR 4x4 towing unit",
       "static_path": "assets/exports/command/static/sar-flood-rescue-trailer.png",
       "animated_path": "assets/exports/command/animated/sar-flood-rescue-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "089 89 slot 89 sar flood rescue (trailer) sar-flood-rescue-trailer sar-flood-rescue-trailer sar flood rescue (trailer) search-and-rescue sar 06 sar and medical expansion  grounding shadows"
+      "search_text": "089 89 slot 89 sar flood rescue (trailer) sar-flood-rescue-trailer sar-flood-rescue-trailer sar flood rescue (trailer) search-and-rescue sar 06 sar and medical expansion complete sar 4x4 towing unit grounding shadows lighting changes complete towing units"
     },
     {
       "slot": 90,
@@ -3023,8 +3051,10 @@
     "data/prototypes.json",
     "data/v1.4-overhaul-profile.json",
     "data/v1.2.6-scope.json",
-    "data/v1.4.13-build-report.json",
-    "data/v1.4.13-scope.json",
-    "data/v1.4.13-light-fixtures.json"
+    "data/v1.4.14-build-report.json",
+    "data/v1.4.14-scope.json",
+    "data/v1.4.14-light-fixtures.json",
+    "data/v1.4.14-trailer-tow-master-report.json",
+    "data/v1.4.14-trailer-tow-validation.json"
   ]
 }

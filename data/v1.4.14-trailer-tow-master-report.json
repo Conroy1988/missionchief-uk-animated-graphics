@@ -1,0 +1,722 @@
+{
+  "release": "v1.4.14",
+  "purpose": "complete road-going tow vehicle and trailer composites for standalone MissionChief slots",
+  "trailer_composites": 9,
+  "bare_trailers_remaining": 0,
+  "vehicles": [
+    {
+      "id": "flood-rescue-unit-trailer",
+      "tow_vehicle": "4x4-vehicle",
+      "hitch_side": "right",
+      "hitch_gap_pixels": 2,
+      "tow_source": "assets/exports/standard/static/4x4-vehicle.png",
+      "trailer_source": "assets/exports/standard/static/flood-rescue-unit-trailer.png",
+      "target": "assets/masters/v1.4.14/flood-rescue-unit-trailer.png",
+      "tow_dimensions": {
+        "width": 65,
+        "height": 30
+      },
+      "trailer_dimensions": {
+        "width": 88,
+        "height": 45
+      },
+      "master_dimensions": {
+        "width": 155,
+        "height": 45
+      },
+      "tow_offset": {
+        "x": 90,
+        "y": 15
+      },
+      "trailer_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "tow_anchor": {
+        "x": 90,
+        "y": 34
+      },
+      "trailer_anchor": {
+        "x": 87,
+        "y": 36
+      },
+      "tow_visible_pixels": 1289,
+      "trailer_visible_pixels": 2688,
+      "master_visible_pixels": 3985,
+      "hitch_connected": true,
+      "complete_towing_unit": true,
+      "effective_real_length_metres": 11.8,
+      "response_lights": [
+        {
+          "x": 0.734,
+          "y": 0.3903,
+          "group": "a",
+          "kind": "roof_a",
+          "fixture": "point-emitter",
+          "size": 0.88
+        },
+        {
+          "x": 0.5948,
+          "y": 0.7364,
+          "group": "b",
+          "kind": "rear",
+          "fixture": "point-emitter",
+          "size": 0.55
+        },
+        {
+          "x": 0.9855,
+          "y": 0.6243,
+          "group": "a",
+          "kind": "front",
+          "fixture": "point-emitter",
+          "size": 0.48
+        }
+      ],
+      "running_lights": {
+        "front": [
+          0.985,
+          0.64
+        ],
+        "rear": [
+          0.012,
+          0.68
+        ]
+      },
+      "response_lighting": "blue",
+      "slot": 62,
+      "service": "coastguard",
+      "sha256": "c0bb1d6f59f24aee7ef5b43551f09b2525f34b3baa32315c4c5b43d436abe03d"
+    },
+    {
+      "id": "inland-rescue-boat-trailer",
+      "tow_vehicle": "4x4-vehicle",
+      "hitch_side": "right",
+      "hitch_gap_pixels": 2,
+      "tow_source": "assets/exports/standard/static/4x4-vehicle.png",
+      "trailer_source": "assets/masters/v1.4.0/inland-rescue-boat-trailer.png",
+      "target": "assets/masters/v1.4.14/inland-rescue-boat-trailer.png",
+      "tow_dimensions": {
+        "width": 65,
+        "height": 30
+      },
+      "trailer_dimensions": {
+        "width": 98,
+        "height": 37
+      },
+      "master_dimensions": {
+        "width": 165,
+        "height": 37
+      },
+      "tow_offset": {
+        "x": 100,
+        "y": 7
+      },
+      "trailer_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "tow_anchor": {
+        "x": 100,
+        "y": 26
+      },
+      "trailer_anchor": {
+        "x": 97,
+        "y": 29
+      },
+      "tow_visible_pixels": 1289,
+      "trailer_visible_pixels": 1490,
+      "master_visible_pixels": 2790,
+      "hitch_connected": true,
+      "complete_towing_unit": true,
+      "effective_real_length_metres": 12.5,
+      "response_lights": [
+        {
+          "x": 0.7502,
+          "y": 0.2549,
+          "group": "a",
+          "kind": "roof_a",
+          "fixture": "point-emitter",
+          "size": 0.88
+        },
+        {
+          "x": 0.6195,
+          "y": 0.6778,
+          "group": "b",
+          "kind": "rear",
+          "fixture": "point-emitter",
+          "size": 0.55
+        },
+        {
+          "x": 0.9863,
+          "y": 0.5408,
+          "group": "a",
+          "kind": "front",
+          "fixture": "point-emitter",
+          "size": 0.48
+        }
+      ],
+      "running_lights": {
+        "front": [
+          0.985,
+          0.64
+        ],
+        "rear": [
+          0.012,
+          0.68
+        ]
+      },
+      "response_lighting": "blue",
+      "slot": 68,
+      "service": "coastguard",
+      "sha256": "b9e327ab3a10d59a284316408d209b90456454fbde83f04dc8f232c0cd528834"
+    },
+    {
+      "id": "rescue-watercraft-trailer",
+      "tow_vehicle": "hovercraft-transporter",
+      "hitch_side": "right",
+      "hitch_gap_pixels": 2,
+      "tow_source": "assets/exports/standard/static/hovercraft-transporter.png",
+      "trailer_source": "assets/exports/standard/static/rescue-watercraft-trailer.png",
+      "target": "assets/masters/v1.4.14/rescue-watercraft-trailer.png",
+      "tow_dimensions": {
+        "width": 81,
+        "height": 28
+      },
+      "trailer_dimensions": {
+        "width": 91,
+        "height": 26
+      },
+      "master_dimensions": {
+        "width": 174,
+        "height": 28
+      },
+      "tow_offset": {
+        "x": 93,
+        "y": 0
+      },
+      "trailer_offset": {
+        "x": 0,
+        "y": 2
+      },
+      "tow_anchor": {
+        "x": 93,
+        "y": 19
+      },
+      "trailer_anchor": {
+        "x": 90,
+        "y": 20
+      },
+      "tow_visible_pixels": 1462,
+      "trailer_visible_pixels": 1288,
+      "master_visible_pixels": 2756,
+      "hitch_connected": true,
+      "complete_towing_unit": true,
+      "effective_real_length_metres": 13.2,
+      "response_lights": [
+        {
+          "x": 0.704,
+          "y": 0.075,
+          "group": "a",
+          "kind": "roof_a",
+          "fixture": "point-emitter",
+          "size": 0.88
+        },
+        {
+          "x": 0.5491,
+          "y": 0.6,
+          "group": "b",
+          "kind": "rear",
+          "fixture": "point-emitter",
+          "size": 0.55
+        },
+        {
+          "x": 0.9838,
+          "y": 0.43,
+          "group": "a",
+          "kind": "front",
+          "fixture": "point-emitter",
+          "size": 0.48
+        }
+      ],
+      "running_lights": {
+        "front": [
+          0.985,
+          0.64
+        ],
+        "rear": [
+          0.012,
+          0.68
+        ]
+      },
+      "response_lighting": "blue",
+      "slot": 71,
+      "service": "lifeboat",
+      "sha256": "eb1d8773811ecbe5eb5d39bdfa59eb5b8c2998228fb5a9a269c8f001a735a09c"
+    },
+    {
+      "id": "hovercraft-trailer",
+      "tow_vehicle": "hovercraft-transporter",
+      "hitch_side": "right",
+      "hitch_gap_pixels": 2,
+      "tow_source": "assets/exports/standard/static/hovercraft-transporter.png",
+      "trailer_source": "assets/masters/v1.4.0/hovercraft-trailer.png",
+      "target": "assets/masters/v1.4.14/hovercraft-trailer.png",
+      "tow_dimensions": {
+        "width": 81,
+        "height": 28
+      },
+      "trailer_dimensions": {
+        "width": 104,
+        "height": 36
+      },
+      "master_dimensions": {
+        "width": 187,
+        "height": 36
+      },
+      "tow_offset": {
+        "x": 106,
+        "y": 8
+      },
+      "trailer_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "tow_anchor": {
+        "x": 106,
+        "y": 27
+      },
+      "trailer_anchor": {
+        "x": 103,
+        "y": 28
+      },
+      "tow_visible_pixels": 1462,
+      "trailer_visible_pixels": 1798,
+      "master_visible_pixels": 3266,
+      "hitch_connected": true,
+      "complete_towing_unit": true,
+      "effective_real_length_metres": 14.2,
+      "response_lights": [
+        {
+          "x": 0.7247,
+          "y": 0.2864,
+          "group": "a",
+          "kind": "roof_a",
+          "fixture": "point-emitter",
+          "size": 0.88
+        },
+        {
+          "x": 0.5806,
+          "y": 0.6914,
+          "group": "b",
+          "kind": "rear",
+          "fixture": "point-emitter",
+          "size": 0.55
+        },
+        {
+          "x": 0.9849,
+          "y": 0.5603,
+          "group": "a",
+          "kind": "front",
+          "fixture": "point-emitter",
+          "size": 0.48
+        }
+      ],
+      "running_lights": {
+        "front": [
+          0.985,
+          0.64
+        ],
+        "rear": [
+          0.012,
+          0.68
+        ]
+      },
+      "response_lighting": "blue",
+      "slot": 72,
+      "service": "lifeboat",
+      "sha256": "19ffacb6e6099954dde1017600263d598882b21387d7dfee6693c6e7c76e88cf"
+    },
+    {
+      "id": "boat-trailer",
+      "tow_vehicle": "light-4x4",
+      "hitch_side": "right",
+      "hitch_gap_pixels": 2,
+      "tow_source": "assets/exports/standard/static/light-4x4.png",
+      "trailer_source": "assets/exports/standard/static/boat-trailer.png",
+      "target": "assets/masters/v1.4.14/boat-trailer.png",
+      "tow_dimensions": {
+        "width": 65,
+        "height": 28
+      },
+      "trailer_dimensions": {
+        "width": 94,
+        "height": 38
+      },
+      "master_dimensions": {
+        "width": 161,
+        "height": 38
+      },
+      "tow_offset": {
+        "x": 96,
+        "y": 10
+      },
+      "trailer_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "tow_anchor": {
+        "x": 96,
+        "y": 27
+      },
+      "trailer_anchor": {
+        "x": 93,
+        "y": 30
+      },
+      "tow_visible_pixels": 1189,
+      "trailer_visible_pixels": 1372,
+      "master_visible_pixels": 2572,
+      "hitch_connected": true,
+      "complete_towing_unit": true,
+      "effective_real_length_metres": 12.2,
+      "response_lights": [
+        {
+          "x": 0.744,
+          "y": 0.325,
+          "group": "a",
+          "kind": "roof_a",
+          "fixture": "point-emitter",
+          "size": 0.88
+        },
+        {
+          "x": 0.61,
+          "y": 0.7081,
+          "group": "b",
+          "kind": "rear",
+          "fixture": "point-emitter",
+          "size": 0.55
+        },
+        {
+          "x": 0.986,
+          "y": 0.5841,
+          "group": "a",
+          "kind": "front",
+          "fixture": "point-emitter",
+          "size": 0.48
+        }
+      ],
+      "running_lights": {
+        "front": [
+          0.985,
+          0.64
+        ],
+        "rear": [
+          0.012,
+          0.68
+        ]
+      },
+      "response_lighting": "blue",
+      "slot": 75,
+      "service": "fire",
+      "sha256": "d1f6c3573fb13dff9ff670ecbfaada4eecdef1cd76247b4ee1e9c3a32853c9b2"
+    },
+    {
+      "id": "medical-equipment-trailer",
+      "tow_vehicle": "airfield-operations-vehicle",
+      "hitch_side": "left",
+      "hitch_gap_pixels": 2,
+      "tow_source": "assets/exports/standard/static/airfield-operations-vehicle.png",
+      "trailer_source": "assets/exports/standard/static/medical-equipment-trailer.png",
+      "target": "assets/masters/v1.4.14/medical-equipment-trailer.png",
+      "tow_dimensions": {
+        "width": 68,
+        "height": 29
+      },
+      "trailer_dimensions": {
+        "width": 78,
+        "height": 36
+      },
+      "master_dimensions": {
+        "width": 148,
+        "height": 36
+      },
+      "tow_offset": {
+        "x": 0,
+        "y": 7
+      },
+      "trailer_offset": {
+        "x": 70,
+        "y": 0
+      },
+      "tow_anchor": {
+        "x": 67,
+        "y": 27
+      },
+      "trailer_anchor": {
+        "x": 70,
+        "y": 28
+      },
+      "tow_visible_pixels": 1091,
+      "trailer_visible_pixels": 1884,
+      "master_visible_pixels": 2980,
+      "hitch_connected": true,
+      "complete_towing_unit": true,
+      "effective_real_length_metres": 11.2,
+      "response_lights": [],
+      "running_lights": null,
+      "response_lighting": "amber",
+      "slot": 82,
+      "service": "airfield",
+      "sha256": "b2d3c09b155e285c5b28bf6badb4d93f5e943afb5244f251a52fd4ddad4f2970"
+    },
+    {
+      "id": "pump-trailer",
+      "tow_vehicle": "sar-4x4",
+      "hitch_side": "left",
+      "hitch_gap_pixels": 2,
+      "tow_source": "assets/exports/standard/static/sar-4x4.png",
+      "trailer_source": "assets/exports/standard/static/pump-trailer.png",
+      "target": "assets/masters/v1.4.14/pump-trailer.png",
+      "tow_dimensions": {
+        "width": 68,
+        "height": 37
+      },
+      "trailer_dimensions": {
+        "width": 58,
+        "height": 26
+      },
+      "master_dimensions": {
+        "width": 128,
+        "height": 37
+      },
+      "tow_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "trailer_offset": {
+        "x": 70,
+        "y": 11
+      },
+      "tow_anchor": {
+        "x": 67,
+        "y": 22
+      },
+      "trailer_anchor": {
+        "x": 70,
+        "y": 27
+      },
+      "tow_visible_pixels": 1599,
+      "trailer_visible_pixels": 874,
+      "master_visible_pixels": 2485,
+      "hitch_connected": true,
+      "complete_towing_unit": true,
+      "effective_real_length_metres": 9.7,
+      "response_lights": [
+        {
+          "x": 0.205,
+          "y": 0.075,
+          "group": "a",
+          "kind": "roof_a",
+          "fixture": "point-emitter",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "kind": "front",
+          "fixture": "point-emitter",
+          "size": 0.55
+        },
+        {
+          "x": 0.5091,
+          "y": 0.43,
+          "group": "a",
+          "kind": "rear",
+          "fixture": "point-emitter",
+          "size": 0.48
+        }
+      ],
+      "running_lights": {
+        "front": [
+          0.015,
+          0.64
+        ],
+        "rear": [
+          0.988,
+          0.68
+        ]
+      },
+      "response_lighting": "blue",
+      "slot": 85,
+      "service": "search-and-rescue",
+      "sha256": "f33afae26be4e80a8401c2e277bbfde5942d4530bbc8f4d6772b44238d8838e0"
+    },
+    {
+      "id": "operational-support-trailer",
+      "tow_vehicle": "sar-4x4",
+      "hitch_side": "left",
+      "hitch_gap_pixels": 2,
+      "tow_source": "assets/exports/standard/static/sar-4x4.png",
+      "trailer_source": "assets/exports/standard/static/operational-support-trailer.png",
+      "target": "assets/masters/v1.4.14/operational-support-trailer.png",
+      "tow_dimensions": {
+        "width": 68,
+        "height": 37
+      },
+      "trailer_dimensions": {
+        "width": 84,
+        "height": 42
+      },
+      "master_dimensions": {
+        "width": 154,
+        "height": 42
+      },
+      "tow_offset": {
+        "x": 0,
+        "y": 5
+      },
+      "trailer_offset": {
+        "x": 70,
+        "y": 0
+      },
+      "tow_anchor": {
+        "x": 67,
+        "y": 27
+      },
+      "trailer_anchor": {
+        "x": 70,
+        "y": 32
+      },
+      "tow_visible_pixels": 1599,
+      "trailer_visible_pixels": 2395,
+      "master_visible_pixels": 4006,
+      "hitch_connected": true,
+      "complete_towing_unit": true,
+      "effective_real_length_metres": 11.7,
+      "response_lights": [
+        {
+          "x": 0.1576,
+          "y": 0.1878,
+          "group": "a",
+          "kind": "roof_a",
+          "fixture": "point-emitter",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6488,
+          "group": "b",
+          "kind": "front",
+          "fixture": "point-emitter",
+          "size": 0.55
+        },
+        {
+          "x": 0.4226,
+          "y": 0.4995,
+          "group": "a",
+          "kind": "rear",
+          "fixture": "point-emitter",
+          "size": 0.48
+        }
+      ],
+      "running_lights": {
+        "front": [
+          0.015,
+          0.64
+        ],
+        "rear": [
+          0.988,
+          0.68
+        ]
+      },
+      "response_lighting": "blue",
+      "slot": 88,
+      "service": "search-and-rescue",
+      "sha256": "730fbda53c52926247809af8c92cfee59bab13c777bc22d2866f19c57cf87d79"
+    },
+    {
+      "id": "sar-flood-rescue-trailer",
+      "tow_vehicle": "sar-4x4",
+      "hitch_side": "left",
+      "hitch_gap_pixels": 2,
+      "tow_source": "assets/exports/standard/static/sar-4x4.png",
+      "trailer_source": "assets/exports/standard/static/sar-flood-rescue-trailer.png",
+      "target": "assets/masters/v1.4.14/sar-flood-rescue-trailer.png",
+      "tow_dimensions": {
+        "width": 68,
+        "height": 37
+      },
+      "trailer_dimensions": {
+        "width": 88,
+        "height": 37
+      },
+      "master_dimensions": {
+        "width": 158,
+        "height": 37
+      },
+      "tow_offset": {
+        "x": 0,
+        "y": 0
+      },
+      "trailer_offset": {
+        "x": 70,
+        "y": 0
+      },
+      "tow_anchor": {
+        "x": 67,
+        "y": 22
+      },
+      "trailer_anchor": {
+        "x": 70,
+        "y": 27
+      },
+      "tow_visible_pixels": 1599,
+      "trailer_visible_pixels": 2322,
+      "master_visible_pixels": 3934,
+      "hitch_connected": true,
+      "complete_towing_unit": true,
+      "effective_real_length_metres": 12.0,
+      "response_lights": [
+        {
+          "x": 0.1536,
+          "y": 0.075,
+          "group": "a",
+          "kind": "roof_a",
+          "fixture": "point-emitter",
+          "size": 0.88
+        },
+        {
+          "x": 0.025,
+          "y": 0.6,
+          "group": "b",
+          "kind": "front",
+          "fixture": "point-emitter",
+          "size": 0.55
+        },
+        {
+          "x": 0.4118,
+          "y": 0.43,
+          "group": "a",
+          "kind": "rear",
+          "fixture": "point-emitter",
+          "size": 0.48
+        }
+      ],
+      "running_lights": {
+        "front": [
+          0.015,
+          0.64
+        ],
+        "rear": [
+          0.988,
+          0.68
+        ]
+      },
+      "response_lighting": "blue",
+      "slot": 89,
+      "service": "search-and-rescue",
+      "sha256": "b7476a2bf4c25ad597e80dad1154ab04054d695f2cff4268bd55925bcce5e71e"
+    }
+  ],
+  "all_passed": true
+}

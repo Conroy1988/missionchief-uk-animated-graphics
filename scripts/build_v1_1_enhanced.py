@@ -80,8 +80,11 @@ def command_width(vehicle: dict, profile: dict) -> tuple[int, float, float]:
     asset_id = str(vehicle["id"])
     calibration = profile["scale_calibration"]
     effective_length = float(vehicle["real_length_metres"])
+    towed_unit = profile.get("towed_units", {}).get(asset_id)
     carrier = profile.get("mounted_carriers", {}).get(asset_id)
-    if carrier is not None:
+    if towed_unit is not None:
+        effective_length = float(towed_unit["real_length_metres"])
+    elif carrier is not None:
         effective_length = float(carrier["real_length_metres"])
     override = calibration.get("asset_width_overrides", {}).get(asset_id)
     ideal = effective_length * float(calibration["pixels_per_metre"])
@@ -923,6 +926,9 @@ def frame_in_pattern(kind: str, frame_index: int, phase: int) -> bool:
 def vehicle_flash_phase(asset_id: str, profile: dict) -> int:
     settings = profile.get("animation_desynchronisation", {})
     modulus = int(settings.get("phase_modulus", 11))
+    override = profile.get("flash_phase_overrides", {}).get(asset_id)
+    if override is not None:
+        return int(override) % modulus
     seed = stable_seed(asset_id)
     return (seed ^ (seed >> 17)) % modulus
 
@@ -1259,14 +1265,21 @@ def add_helicopter_rotors(
     return Image.alpha_composite(base, positioned)
 
 
-def amber_overlay(size: tuple[int, int], frame_index: int, body_size: tuple[int, int], offset: tuple[int, int], seed: int) -> Image.Image:
+def amber_overlay(
+    size: tuple[int, int],
+    frame_index: int,
+    body_size: tuple[int, int],
+    offset: tuple[int, int],
+    seed: int,
+    geometry: list[float] | None = None,
+) -> Image.Image:
     overlay = Image.new("RGBA", size, (0, 0, 0, 0))
     if frame_index == 0 or ((frame_index + seed) % 4 not in {1, 2}):
         return overlay
     width, height = body_size
     ox, oy = offset
-    px = ox + round(width * 0.50)
-    py = oy + round(height * 0.13)
+    px = ox + round(width * (float(geometry[0]) if geometry else 0.50))
+    py = oy + round(height * (float(geometry[1]) if geometry else 0.13))
     radius = max(2, round(height * 0.07))
     glow = Image.new("RGBA", size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(glow)
@@ -1358,15 +1371,22 @@ def marine_overlay(
     return Image.alpha_composite(overlay, shimmer)
 
 
-def trailer_overlay(size: tuple[int, int], frame_index: int, body_size: tuple[int, int], offset: tuple[int, int], seed: int) -> Image.Image:
+def trailer_overlay(
+    size: tuple[int, int],
+    frame_index: int,
+    body_size: tuple[int, int],
+    offset: tuple[int, int],
+    seed: int,
+    geometry: list[float] | None = None,
+) -> Image.Image:
     overlay = Image.new("RGBA", size, (0, 0, 0, 0))
     if frame_index == 0:
         return overlay
     width, height = body_size
     ox, oy = offset
     draw = ImageDraw.Draw(overlay)
-    px = ox + max(1, round(width * 0.025))
-    py = oy + round(height * 0.66)
+    px = ox + max(1, min(width - 2, round(width * (float(geometry[0]) if geometry else 0.025))))
+    py = oy + max(1, min(height - 2, round(height * (float(geometry[1]) if geometry else 0.66))))
     color = (255, 62, 30, 235) if (frame_index + seed) % 4 < 2 else (255, 166, 28, 185)
     draw.rectangle((px, py, px + 1, py + 1), fill=color)
     return overlay
@@ -1457,7 +1477,17 @@ def build_animation(
             active_motion.append("rotor")
             active_motion.append("aviation-lights")
         if asset_id in motion["amber"]:
-            frame = Image.alpha_composite(frame, amber_overlay(frame.size, frame_index, body_size, body_offset, seed))
+            frame = Image.alpha_composite(
+                frame,
+                amber_overlay(
+                    frame.size,
+                    frame_index,
+                    body_size,
+                    body_offset,
+                    seed,
+                    profile.get("amber_beacon_geometry", {}).get(asset_id),
+                ),
+            )
             active_motion.append("amber-beacon")
         if asset_id in motion["wheel"]:
             frame = Image.alpha_composite(
@@ -1485,7 +1515,17 @@ def build_animation(
             )
             active_motion.append("navigation-and-wake")
         if asset_id in motion["trailer"]:
-            frame = Image.alpha_composite(frame, trailer_overlay(frame.size, frame_index, body_size, body_offset, seed))
+            frame = Image.alpha_composite(
+                frame,
+                trailer_overlay(
+                    frame.size,
+                    frame_index,
+                    body_size,
+                    body_offset,
+                    seed,
+                    profile.get("trailer_marker_geometry", {}).get(asset_id),
+                ),
+            )
             active_motion.append("marker-light")
         frames.append(frame)
 
@@ -1548,8 +1588,11 @@ def shadow_class_for(vehicle: dict, asset_id: str, profile: dict) -> tuple[str, 
     if asset_id in set(grounding.get("trailers", [])):
         return "ground", "trailer"
     effective_length = float(vehicle["real_length_metres"])
+    towed_unit = profile.get("towed_units", {}).get(asset_id)
     carrier = profile.get("mounted_carriers", {}).get(asset_id)
-    if carrier is not None:
+    if towed_unit is not None:
+        effective_length = float(towed_unit["real_length_metres"])
+    elif carrier is not None:
         effective_length = float(carrier["real_length_metres"])
     if effective_length >= float(profile["scale_calibration"]["heavy_vehicle_threshold_metres"]):
         return "ground", "heavy-ground"
@@ -1732,6 +1775,7 @@ def main() -> None:
                 "grounding_shadow": shadow_metrics,
                 "adaptive_outline": outline_metrics,
                 "source_override": str(override_path.relative_to(ROOT)) if override_path else None,
+                "towed_unit": profile.get("towed_units", {}).get(asset_id),
                 "baked_master_cue": profile.get("baked_master_cues", {}).get(asset_id),
                 "baked_master_half_zoom_added_alpha_pixels": (
                     master_detail.get("half_zoom_added_alpha_pixels") if master_detail else None
