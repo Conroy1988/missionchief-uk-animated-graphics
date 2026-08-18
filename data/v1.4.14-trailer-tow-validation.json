@@ -1,0 +1,192 @@
+{
+  "release": "v1.4.14",
+  "standalone_trailer_slots": 9,
+  "complete_towing_units": 9,
+  "bare_trailers_remaining": 0,
+  "tow_vehicle_families": [
+    "4x4-vehicle",
+    "airfield-operations-vehicle",
+    "hovercraft-transporter",
+    "light-4x4",
+    "sar-4x4"
+  ],
+  "preview_files": [
+    "assets/previews/v1.4.14/trailer-tow-composites-before-after.png",
+    "assets/previews/v1.4.14/inland-rescue-boat-tow-repair-before-after.png"
+  ],
+  "vehicles": [
+    {
+      "slot": 62,
+      "id": "flood-rescue-unit-trailer",
+      "tow_vehicle": "4x4-vehicle",
+      "hitch_side": "right",
+      "master_dimensions": [
+        155,
+        45
+      ],
+      "command_dimensions": [
+        163,
+        54
+      ],
+      "frames": 12,
+      "response_lights": 3,
+      "motion": "blue-response+marker-light",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 68,
+      "id": "inland-rescue-boat-trailer",
+      "tow_vehicle": "4x4-vehicle",
+      "hitch_side": "right",
+      "master_dimensions": [
+        165,
+        37
+      ],
+      "command_dimensions": [
+        172,
+        46
+      ],
+      "frames": 12,
+      "response_lights": 3,
+      "motion": "blue-response+marker-light",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 71,
+      "id": "rescue-watercraft-trailer",
+      "tow_vehicle": "hovercraft-transporter",
+      "hitch_side": "right",
+      "master_dimensions": [
+        174,
+        28
+      ],
+      "command_dimensions": [
+        182,
+        38
+      ],
+      "frames": 12,
+      "response_lights": 3,
+      "motion": "blue-response+marker-light",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 72,
+      "id": "hovercraft-trailer",
+      "tow_vehicle": "hovercraft-transporter",
+      "hitch_side": "right",
+      "master_dimensions": [
+        187,
+        36
+      ],
+      "command_dimensions": [
+        195,
+        46
+      ],
+      "frames": 12,
+      "response_lights": 3,
+      "motion": "blue-response+marker-light",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 75,
+      "id": "boat-trailer",
+      "tow_vehicle": "light-4x4",
+      "hitch_side": "right",
+      "master_dimensions": [
+        161,
+        38
+      ],
+      "command_dimensions": [
+        169,
+        48
+      ],
+      "frames": 12,
+      "response_lights": 3,
+      "motion": "blue-response+marker-light",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 82,
+      "id": "medical-equipment-trailer",
+      "tow_vehicle": "airfield-operations-vehicle",
+      "hitch_side": "left",
+      "master_dimensions": [
+        148,
+        36
+      ],
+      "command_dimensions": [
+        156,
+        46
+      ],
+      "frames": 12,
+      "response_lights": 0,
+      "motion": "amber-beacon+marker-light",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 85,
+      "id": "pump-trailer",
+      "tow_vehicle": "sar-4x4",
+      "hitch_side": "left",
+      "master_dimensions": [
+        128,
+        37
+      ],
+      "command_dimensions": [
+        134,
+        44
+      ],
+      "frames": 12,
+      "response_lights": 3,
+      "motion": "blue-response+marker-light",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 88,
+      "id": "operational-support-trailer",
+      "tow_vehicle": "sar-4x4",
+      "hitch_side": "left",
+      "master_dimensions": [
+        154,
+        42
+      ],
+      "command_dimensions": [
+        162,
+        51
+      ],
+      "frames": 12,
+      "response_lights": 3,
+      "motion": "blue-response+marker-light",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "slot": 89,
+      "id": "sar-flood-rescue-trailer",
+      "tow_vehicle": "sar-4x4",
+      "hitch_side": "left",
+      "master_dimensions": [
+        158,
+        37
+      ],
+      "command_dimensions": [
+        166,
+        47
+      ],
+      "frames": 12,
+      "response_lights": 3,
+      "motion": "blue-response+marker-light",
+      "passed": true,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "all_passed": true
+}

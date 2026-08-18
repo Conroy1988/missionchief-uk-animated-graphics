@@ -1,9 +1,9 @@
 {
-  "release": "v1.4.13",
+  "release": "v1.4.14",
   "master_art_release": "v1.4.0",
   "master_source_release": "v1.2.4",
   "profile": "command",
-  "display_name": "Modern Command Clarity — SAR Drone Vehicle Roof-Equipment Repair",
+  "display_name": "Modern Command Clarity — Complete Trailer Tow Units",
   "source_profile": "standard",
   "frames": 12,
   "animation_frame_overrides": {
@@ -61,6 +61,9 @@
       "drone-vehicle-fire-station"
     ]
   },
+  "flash_phase_overrides": {
+    "rescue-watercraft-trailer": 5
+  },
   "new_source_overrides": {
     "medical-cycle-responder": "assets/masters/v1.1/medical-cycle-responder.png",
     "hems": "assets/masters/v1.2.4/hems-full-tail.png",
@@ -110,8 +113,15 @@
     "firearms-personnel-carrier": "assets/masters/v1.4.0/firearms-personnel-carrier.png",
     "rescue-support-unit": "assets/masters/v1.4.0/rescue-support-unit.png",
     "critical-care-transfer-ambulance": "assets/masters/v1.4.0/critical-care-transfer-ambulance.png",
-    "inland-rescue-boat-trailer": "assets/masters/v1.4.0/inland-rescue-boat-trailer.png",
-    "hovercraft-trailer": "assets/masters/v1.4.0/hovercraft-trailer.png",
+    "flood-rescue-unit-trailer": "assets/masters/v1.4.14/flood-rescue-unit-trailer.png",
+    "inland-rescue-boat-trailer": "assets/masters/v1.4.14/inland-rescue-boat-trailer.png",
+    "rescue-watercraft-trailer": "assets/masters/v1.4.14/rescue-watercraft-trailer.png",
+    "hovercraft-trailer": "assets/masters/v1.4.14/hovercraft-trailer.png",
+    "boat-trailer": "assets/masters/v1.4.14/boat-trailer.png",
+    "medical-equipment-trailer": "assets/masters/v1.4.14/medical-equipment-trailer.png",
+    "pump-trailer": "assets/masters/v1.4.14/pump-trailer.png",
+    "operational-support-trailer": "assets/masters/v1.4.14/operational-support-trailer.png",
+    "sar-flood-rescue-trailer": "assets/masters/v1.4.14/sar-flood-rescue-trailer.png",
     "f-wrc": "assets/masters/v1.4.0/f-wrc.png",
     "ilb": "assets/masters/v1.4.0/ilb.png",
     "alb": "assets/masters/v1.4.0/alb.png"
@@ -186,7 +196,8 @@
   },
   "light_overrides_path": "data/v1.2.6-light-overrides.json",
   "light_overrides_release": "v1.2.6",
-  "current_light_fixtures_path": "data/v1.4.13-light-fixtures.json",
+  "current_light_fixtures_path": "data/v1.4.14-light-fixtures.json",
+  "towed_unit_fixture_baseline": "data/v1.4.13-light-fixtures.json",
   "emergency_light_renderer": {
     "model": "isolated-point-v3",
     "full_canvas_apng_frames": true,
@@ -246,7 +257,8 @@
   "motion": {
     "amber": [
       "airfield-operations-vehicle", "airfield-operations-supervisor",
-      "recovery-vehicle", "flatbed-recovery-vehicle", "hgv-recovery-vehicle", "rescue-stairs"
+      "recovery-vehicle", "flatbed-recovery-vehicle", "hgv-recovery-vehicle", "rescue-stairs",
+      "medical-equipment-trailer"
     ],
     "wheel": [
       "medical-cycle-responder", "atv-carrier", "recovery-vehicle",
@@ -259,6 +271,20 @@
       "medical-equipment-trailer", "pump-trailer", "operational-support-trailer",
       "sar-flood-rescue-trailer"
     ]
+  },
+  "amber_beacon_geometry": {
+    "medical-equipment-trailer": [0.295, 0.22]
+  },
+  "trailer_marker_geometry": {
+    "flood-rescue-unit-trailer": [0.010, 0.68],
+    "inland-rescue-boat-trailer": [0.010, 0.69],
+    "rescue-watercraft-trailer": [0.010, 0.72],
+    "hovercraft-trailer": [0.010, 0.70],
+    "boat-trailer": [0.010, 0.69],
+    "medical-equipment-trailer": [0.990, 0.69],
+    "pump-trailer": [0.990, 0.72],
+    "operational-support-trailer": [0.990, 0.70],
+    "sar-flood-rescue-trailer": [0.990, 0.70]
   },
   "marine_motion": {
     "ilb": {
@@ -369,6 +395,72 @@
     "osu-pod": {"base_vehicle": "pm", "module": "osu-pod", "real_length_metres": 9.1, "minimum_body_width": 118, "minimum_command_width": 128, "expected_motion": "blue-response", "expected_lights": 4},
     "hvp": {"base_vehicle": "pm", "module": "hvp", "real_length_metres": 9.1, "minimum_body_width": 118, "minimum_command_width": 128, "expected_motion": "blue-response", "expected_lights": 4}
   },
+  "towed_units": {
+    "flood-rescue-unit-trailer": {
+      "tow_vehicle": "4x4-vehicle",
+      "tow_source": "assets/exports/standard/static/4x4-vehicle.png",
+      "trailer_source": "assets/exports/standard/static/flood-rescue-unit-trailer.png",
+      "hitch_side": "right", "hitch_gap_pixels": 2, "real_length_metres": 11.8,
+      "response_lighting": "blue", "expected_motion": "blue-response+marker-light", "expected_lights": 3
+    },
+    "inland-rescue-boat-trailer": {
+      "tow_vehicle": "4x4-vehicle",
+      "tow_source": "assets/exports/standard/static/4x4-vehicle.png",
+      "trailer_source": "assets/masters/v1.4.0/inland-rescue-boat-trailer.png",
+      "hitch_side": "right", "hitch_gap_pixels": 2, "real_length_metres": 12.5,
+      "response_lighting": "blue", "expected_motion": "blue-response+marker-light", "expected_lights": 3
+    },
+    "rescue-watercraft-trailer": {
+      "tow_vehicle": "hovercraft-transporter",
+      "tow_source": "assets/exports/standard/static/hovercraft-transporter.png",
+      "trailer_source": "assets/exports/standard/static/rescue-watercraft-trailer.png",
+      "hitch_side": "right", "hitch_gap_pixels": 2, "real_length_metres": 13.2,
+      "response_lighting": "blue", "expected_motion": "blue-response+marker-light", "expected_lights": 3
+    },
+    "hovercraft-trailer": {
+      "tow_vehicle": "hovercraft-transporter",
+      "tow_source": "assets/exports/standard/static/hovercraft-transporter.png",
+      "trailer_source": "assets/masters/v1.4.0/hovercraft-trailer.png",
+      "hitch_side": "right", "hitch_gap_pixels": 2, "real_length_metres": 14.2,
+      "response_lighting": "blue", "expected_motion": "blue-response+marker-light", "expected_lights": 3
+    },
+    "boat-trailer": {
+      "tow_vehicle": "light-4x4",
+      "tow_source": "assets/exports/standard/static/light-4x4.png",
+      "trailer_source": "assets/exports/standard/static/boat-trailer.png",
+      "hitch_side": "right", "hitch_gap_pixels": 2, "real_length_metres": 12.2,
+      "response_lighting": "blue", "expected_motion": "blue-response+marker-light", "expected_lights": 3
+    },
+    "medical-equipment-trailer": {
+      "tow_vehicle": "airfield-operations-vehicle",
+      "tow_source": "assets/exports/standard/static/airfield-operations-vehicle.png",
+      "trailer_source": "assets/exports/standard/static/medical-equipment-trailer.png",
+      "hitch_side": "left", "hitch_gap_pixels": 2, "real_length_metres": 11.2,
+      "response_lighting": "amber", "expected_motion": "amber-beacon+marker-light", "expected_lights": 0
+    },
+    "pump-trailer": {
+      "tow_vehicle": "sar-4x4",
+      "tow_source": "assets/exports/standard/static/sar-4x4.png",
+      "trailer_source": "assets/exports/standard/static/pump-trailer.png",
+      "hitch_side": "left", "hitch_gap_pixels": 2, "real_length_metres": 9.7,
+      "response_lighting": "blue", "roof_light_x_override": 0.205,
+      "expected_motion": "blue-response+marker-light", "expected_lights": 3
+    },
+    "operational-support-trailer": {
+      "tow_vehicle": "sar-4x4",
+      "tow_source": "assets/exports/standard/static/sar-4x4.png",
+      "trailer_source": "assets/exports/standard/static/operational-support-trailer.png",
+      "hitch_side": "left", "hitch_gap_pixels": 2, "real_length_metres": 11.7,
+      "response_lighting": "blue", "expected_motion": "blue-response+marker-light", "expected_lights": 3
+    },
+    "sar-flood-rescue-trailer": {
+      "tow_vehicle": "sar-4x4",
+      "tow_source": "assets/exports/standard/static/sar-4x4.png",
+      "trailer_source": "assets/exports/standard/static/sar-flood-rescue-trailer.png",
+      "hitch_side": "left", "hitch_gap_pixels": 2, "real_length_metres": 12.0,
+      "response_lighting": "blue", "expected_motion": "blue-response+marker-light", "expected_lights": 3
+    }
+  },
   "rare_showcase": [
     "aerial-appliance", "armed-cell-van", "armed-response-vehicle",
     "airfield-firefighting-command-vehicle", "airfield-operations-supervisor",
@@ -385,7 +477,7 @@
   "compression": {
     "baseline_release": "v1.3.0",
     "baseline_animated_bytes": 9034343,
-    "maximum_total_ratio": 1.70,
+    "maximum_total_ratio": 1.75,
     "lossless_pixel_verification": true,
     "preferred_disposal": 0,
     "fallback_disposal": 1,

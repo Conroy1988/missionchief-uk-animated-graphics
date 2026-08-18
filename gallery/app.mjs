@@ -14,6 +14,7 @@ export const SERVICE_COLOURS = Object.freeze({
 });
 
 export const FOCUS_LABELS = Object.freeze({
+  'complete-towing-unit': 'Complete towing unit',
   'role-differentiation': 'Role differentiation',
   'specialist-equipment': 'Specialist equipment',
   lighting: 'Fixture-aligned lighting',
@@ -115,7 +116,7 @@ function initGallery() {
   if (!(root instanceof HTMLElement) || root.dataset.ready === 'true') return;
   root.dataset.ready = 'true';
 
-  const currentRelease = root.dataset.currentRelease || 'v1.4.13';
+  const currentRelease = root.dataset.currentRelease || 'v1.4.14';
   const config = {
     catalogueUrl: root.dataset.catalogueUrl || 'vehicles.json',
     currentAssetBase: root.dataset.currentAssetBase

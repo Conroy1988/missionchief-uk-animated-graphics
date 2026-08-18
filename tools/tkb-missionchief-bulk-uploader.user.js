@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         TKB MissionChief UK Graphics Bulk Uploader
 // @namespace    https://github.com/Conroy1988/missionchief-uk-animated-graphics
-// @version      1.4.13
-// @description  Uploads the fully audited TKB UK Emergency Fleet v1.4.13 assets to pack 5897 with the repaired low-profile SAR Drone Vehicle stowage rail.
+// @version      1.4.14
+// @description  Uploads the fully audited TKB UK Emergency Fleet v1.4.14 assets to pack 5897 with all nine complete trailer towing units.
 // @author       TKB Gaming
 // @match        https://www.missionchief.co.uk/vehicle_graphics/5897/edit*
 // @run-at       document-idle

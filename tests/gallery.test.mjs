@@ -27,10 +27,10 @@ const defaults = {
 };
 
 test('catalogue contains one ordered record for every live MissionChief slot', () => {
-  assert.equal(catalogue.release, 'v1.4.13');
-  assert.equal(catalogue.releases[0].id, 'v1.4.13');
-  assert.equal(catalogue.releases[1].id, 'v1.4.12');
-  assert.equal(catalogue.releases[2].id, 'v1.4.11');
+  assert.equal(catalogue.release, 'v1.4.14');
+  assert.equal(catalogue.releases[0].id, 'v1.4.14');
+  assert.equal(catalogue.releases[1].id, 'v1.4.13');
+  assert.equal(catalogue.releases[2].id, 'v1.4.12');
   assert.equal(catalogue.total, 117);
   assert.equal(catalogue.vehicles.length, 117);
   assert.deepEqual(catalogue.vehicles.map((vehicle) => vehicle.slot), Array.from({ length: 117 }, (_, index) => index + 1));
@@ -50,6 +50,25 @@ test('catalogue contains one ordered record for every live MissionChief slot', (
     { slot: sarDrone.slot, width: sarDrone.width, height: sarDrone.height, frames: sarDrone.frames, cue: sarDrone.cue },
     { slot: 90, width: 89, height: 53, frames: 12, cue: 'Low-profile SAR drone stowage rail' },
   );
+  const inlandBoat = catalogue.vehicles.find((vehicle) => vehicle.id === 'inland-rescue-boat-trailer');
+  assert.deepEqual(
+    {
+      slot: inlandBoat.slot,
+      width: inlandBoat.width,
+      height: inlandBoat.height,
+      frames: inlandBoat.frames,
+      length: inlandBoat.real_length_metres,
+      cue: inlandBoat.cue,
+    },
+    {
+      slot: 68,
+      width: 172,
+      height: 46,
+      frames: 12,
+      length: 12.5,
+      cue: 'Complete 4x4 Vehicle towing unit',
+    },
+  );
 });
 
 test('catalogue exposes every promised service and focus view', () => {
@@ -58,7 +77,7 @@ test('catalogue exposes every promised service and focus view', () => {
     assert.ok(services.has(service), `Missing service filter: ${service}`);
   }
   const focus = new Set(catalogue.focus_views.map((view) => view.id));
-  for (const view of ['role-differentiation', 'specialist-equipment', 'lighting', 'grounding-shadow']) {
+  for (const view of ['complete-towing-unit', 'role-differentiation', 'specialist-equipment', 'lighting', 'grounding-shadow']) {
     assert.ok(focus.has(view), `Missing focus view: ${view}`);
   }
 });

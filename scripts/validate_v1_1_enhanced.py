@@ -64,6 +64,18 @@ EXPECTED_MOUNTED_CARRIERS = {
     "hvp",
 }
 
+EXPECTED_TOWED_UNITS = {
+    "flood-rescue-unit-trailer",
+    "inland-rescue-boat-trailer",
+    "rescue-watercraft-trailer",
+    "hovercraft-trailer",
+    "boat-trailer",
+    "medical-equipment-trailer",
+    "pump-trailer",
+    "operational-support-trailer",
+    "sar-flood-rescue-trailer",
+}
+
 EXPECTED_FULL_TAIL_SOURCES = {
     "hems": "hems-full-tail.png",
     "police-helicopter": "police-helicopter-full-tail.png",
@@ -476,6 +488,7 @@ def main() -> None:
     aerial_shadow_assets = set(grounding.get("aerial", []))
     marine_shadow_assets = set(grounding.get("marine", []))
     mounted_carriers = profile.get("mounted_carriers", {})
+    towed_units = profile.get("towed_units", {})
     map_scale_reductions = profile.get("map_scale_reductions", {})
     helicopter_edge_padding = profile.get("helicopter_edge_padding", {})
     tail_integrity = profile.get("helicopter_tail_integrity", {})
@@ -509,6 +522,13 @@ def main() -> None:
         pack_errors.append(
             "mounted-carrier profile must exactly cover all ten fire-service specialist modules"
         )
+    unknown_towed_units = sorted(set(towed_units) - expected)
+    if unknown_towed_units:
+        pack_errors.append(f"towed-unit profile references unknown assets: {unknown_towed_units}")
+    if set(towed_units) != EXPECTED_TOWED_UNITS:
+        pack_errors.append("towed-unit profile must exactly cover all nine standalone trailer slots")
+    if set(profile.get("trailer_marker_geometry", {})) != EXPECTED_TOWED_UNITS:
+        pack_errors.append("trailer marker geometry must exactly cover all nine complete towing units")
     unknown_reduced_assets = sorted(set(map_scale_reductions) - expected)
     if unknown_reduced_assets:
         pack_errors.append(
@@ -532,6 +552,14 @@ def main() -> None:
             pack_errors.append(f"{carrier_id} mounted-carrier module identity is incorrect")
         if expected_source != f"assets/masters/{master_source_release}/{carrier_id}-carrier.png":
             pack_errors.append(f"{carrier_id} does not use its release-specific carrier master")
+    for trailer_id, towed in towed_units.items():
+        expected_source = f"assets/masters/{profile['release']}/{trailer_id}.png"
+        if profile.get("new_source_overrides", {}).get(trailer_id) != expected_source:
+            pack_errors.append(f"{trailer_id} does not use its release-specific complete tow master")
+        if towed.get("hitch_side") not in {"left", "right"}:
+            pack_errors.append(f"{trailer_id} has an invalid hitch orientation")
+        if int(towed.get("expected_lights", -1)) not in {0, 3}:
+            pack_errors.append(f"{trailer_id} has an invalid complete-tow response-light inventory")
 
     if {path.stem for path in STATIC_DIR.glob("*.png")} != expected:
         pack_errors.append("command static directory does not exactly match the 117-slot manifest")
@@ -638,6 +666,23 @@ def main() -> None:
                 errors.append("mounted carrier response animation does not match policy")
             if int(detail.get("response_light_count", 0)) != int(carrier["expected_lights"]):
                 errors.append("mounted carrier emergency-light inventory is incomplete")
+        if asset_id in towed_units:
+            towed = towed_units[asset_id]
+            expected_source = profile.get("new_source_overrides", {}).get(asset_id)
+            if detail.get("source_override") != expected_source:
+                errors.append("complete towing unit does not use its deterministic source override")
+            if detail.get("towed_unit") != towed:
+                errors.append("complete towing-unit build metadata does not match the profile")
+            expected_width = round(
+                float(towed["real_length_metres"])
+                * float(profile["scale_calibration"]["pixels_per_metre"])
+            )
+            if int(detail["body_dimensions"]["width"]) != expected_width:
+                errors.append("complete towing unit is not calibrated to its combined road length")
+            if detail["motion"] != towed["expected_motion"]:
+                errors.append("complete towing-unit response animation does not match policy")
+            if int(detail.get("response_light_count", 0)) != int(towed["expected_lights"]):
+                errors.append("complete towing-unit emergency-light inventory is incomplete")
         expected_shadow_mode = (
             "aerial"
             if asset_id in aerial_shadow_assets
@@ -790,6 +835,17 @@ def main() -> None:
             ).relative_to(ROOT)
         )
     )
+    previews.append(
+        str(
+            render_targeted_sheet(
+                f"{RELEASE} complete trailer-tow audit - 100% / 75% / 50%",
+                sorted(towed_units, key=lambda asset_id: int(vehicle_map[asset_id]["missionchief_slot"])),
+                "satellite",
+                "complete-trailer-tow-units-map-scale.png",
+                vehicle_map,
+            ).relative_to(ROOT)
+        )
+    )
     previews.append(str(render_rotor_sheet(vehicle_map).relative_to(ROOT)))
     previews.append(
         str(
@@ -897,6 +953,8 @@ def main() -> None:
         "satellite_contrast_boosted_assets": len(satellite_boost),
         "mounted_carrier_assets": len(mounted_carriers),
         "mounted_carrier_ids": sorted(mounted_carriers),
+        "complete_towed_unit_assets": len(towed_units),
+        "complete_towed_unit_ids": sorted(towed_units),
         "minimum_helicopter_tail_margin_pixels": min(
             item["helicopter_tail_margin_pixels"]
             for item in results
