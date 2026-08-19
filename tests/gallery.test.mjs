@@ -27,28 +27,28 @@ const defaults = {
 };
 
 test('catalogue contains one ordered record for every live MissionChief slot', () => {
-  assert.equal(catalogue.release, 'v1.4.14');
-  assert.equal(catalogue.releases[0].id, 'v1.4.14');
-  assert.equal(catalogue.releases[1].id, 'v1.4.13');
-  assert.equal(catalogue.releases[2].id, 'v1.4.12');
+  assert.equal(catalogue.release, 'v2.0.0');
+  assert.equal(catalogue.releases[0].id, 'v2.0.0');
+  assert.equal(catalogue.releases[1].id, 'v1.4.14');
+  assert.equal(catalogue.releases[2].id, 'v1.4.13');
   assert.equal(catalogue.total, 117);
   assert.equal(catalogue.vehicles.length, 117);
   assert.deepEqual(catalogue.vehicles.map((vehicle) => vehicle.slot), Array.from({ length: 117 }, (_, index) => index + 1));
   assert.equal(new Set(catalogue.vehicles.map((vehicle) => vehicle.asset_id)).size, 117);
-  const cbrn = catalogue.vehicles.find((vehicle) => vehicle.id === 'cbrn-vehicle');
+  const firePump = catalogue.vehicles.find((vehicle) => vehicle.asset_id === 'fire-rescue-pump');
   assert.deepEqual(
-    { slot: cbrn.slot, width: cbrn.width, height: cbrn.height, frames: cbrn.frames, cue: cbrn.cue },
-    { slot: 33, width: 96, height: 54, frames: 12, cue: 'Low-profile CBRN detector array' },
+    { slot: firePump.slot, width: firePump.width, height: firePump.height, frames: firePump.frames, cue: firePump.cue },
+    { slot: 1, width: 200, height: 200, frames: 12, cue: 'Direction-neutral heavy-calibrated · Blue response lighting' },
   );
-  const sarControl = catalogue.vehicles.find((vehicle) => vehicle.id === 'control-van-sar');
+  const coastguardHelicopter = catalogue.vehicles.find((vehicle) => vehicle.id === 'coastguard-rescue-helicopter');
   assert.deepEqual(
-    { slot: sarControl.slot, width: sarControl.width, height: sarControl.height, frames: sarControl.frames, cue: sarControl.cue },
-    { slot: 86, width: 102, height: 65, frames: 12, cue: 'Low-profile SAR command array' },
+    { slot: coastguardHelicopter.slot, width: coastguardHelicopter.width, height: coastguardHelicopter.height, frames: coastguardHelicopter.frames, cue: coastguardHelicopter.cue },
+    { slot: 65, width: 200, height: 200, frames: 18, cue: 'Direction-neutral aircraft · rotor and aviation-light motion' },
   );
-  const sarDrone = catalogue.vehicles.find((vehicle) => vehicle.id === 'drone-vehicle-sar-hq');
+  const lifeboat = catalogue.vehicles.find((vehicle) => vehicle.id === 'alb');
   assert.deepEqual(
-    { slot: sarDrone.slot, width: sarDrone.width, height: sarDrone.height, frames: sarDrone.frames, cue: sarDrone.cue },
-    { slot: 90, width: 89, height: 53, frames: 12, cue: 'Low-profile SAR drone stowage rail' },
+    { slot: lifeboat.slot, width: lifeboat.width, height: lifeboat.height, frames: lifeboat.frames, cue: lifeboat.cue },
+    { slot: 70, width: 200, height: 200, frames: 18, cue: 'Direction-neutral craft · navigation lights and wake motion' },
   );
   const inlandBoat = catalogue.vehicles.find((vehicle) => vehicle.id === 'inland-rescue-boat-trailer');
   assert.deepEqual(
@@ -62,11 +62,11 @@ test('catalogue contains one ordered record for every live MissionChief slot', (
     },
     {
       slot: 68,
-      width: 172,
-      height: 46,
+      width: 200,
+      height: 200,
       frames: 12,
       length: 12.5,
-      cue: 'Complete 4x4 Vehicle towing unit',
+      cue: 'Complete direction-neutral towing unit',
     },
   );
 });
@@ -77,7 +77,7 @@ test('catalogue exposes every promised service and focus view', () => {
     assert.ok(services.has(service), `Missing service filter: ${service}`);
   }
   const focus = new Set(catalogue.focus_views.map((view) => view.id));
-  for (const view of ['complete-towing-unit', 'role-differentiation', 'specialist-equipment', 'lighting', 'grounding-shadow']) {
+  for (const view of ['direction-neutral', 'emergency-lighting', 'air-marine-motion', 'complete-towing-unit']) {
     assert.ok(focus.has(view), `Missing focus view: ${view}`);
   }
 });
@@ -93,10 +93,10 @@ test('service and focused-change filters compose', () => {
   const policeLighting = filterVehicles(catalogue.vehicles, {
     ...defaults,
     service: 'police',
-    focus: 'lighting',
+    focus: 'emergency-lighting',
   });
   assert.ok(policeLighting.length > 0);
-  assert.ok(policeLighting.every((vehicle) => vehicle.service === 'police' && vehicle.focus.includes('lighting')));
+  assert.ok(policeLighting.every((vehicle) => vehicle.service === 'police' && vehicle.focus.includes('emergency-lighting')));
 });
 
 test('sorting remains stable and deterministic', () => {
@@ -108,7 +108,7 @@ test('sorting remains stable and deterministic', () => {
 
 test('asset URLs use the staged current root and immutable historical tags', () => {
   const vehicle = catalogue.vehicles[0];
-  assert.equal(currentAssetUrl(vehicle, 'animated', 'assets/exports/command'), 'assets/exports/command/animated/fire-rescue-pump.png');
+  assert.equal(currentAssetUrl(vehicle, 'animated', 'assets/exports/v2'), 'assets/exports/v2/animated/fire-rescue-pump.png');
   assert.equal(
     historicalAssetUrl('v1.0.0', vehicle, 'static', catalogue.releases),
     'https://raw.githubusercontent.com/Conroy1988/missionchief-uk-animated-graphics/v1.0.0/assets/exports/standard/static/fire-rescue-pump.png',
