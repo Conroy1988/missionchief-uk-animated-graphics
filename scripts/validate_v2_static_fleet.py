@@ -4,17 +4,24 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFont
+
+from v2_profile import (
+    EXPORT_CANVAS,
+    EXPORT_SCALE,
+    MASTER_CANVAS,
+    MASTER_DIR,
+    PREVIEW_DIR,
+    RELEASE_CANDIDATE,
+    ROOT,
+    STATIC_DIR,
+    compact_export,
+)
 
 
-ROOT = Path(__file__).resolve().parents[1]
 SLOTS = json.loads((ROOT / "data/vehicle-slots.json").read_text())["slots"]
-STATIC_DIR = ROOT / "assets/exports/v2/static"
-MASTER_DIR = ROOT / "assets/masters/v2.0.0"
-PREVIEW_DIR = ROOT / "assets/previews/v2.0.0"
-REPORT = ROOT / "data/v2.0.0-static-qa-report.json"
+REPORT = ROOT / "data/v2.0.1-static-qa-report.json"
 
 
 THEMES = {
@@ -27,8 +34,8 @@ THEMES = {
 
 def render_sheet(theme: str) -> Path:
     background, foreground, secondary = THEMES[theme]
-    columns = 6
-    tile_width, tile_height = 214, 232
+    columns = 8
+    tile_width, tile_height = 156, 168
     rows = (len(SLOTS) + columns - 1) // columns
     sheet = Image.new("RGB", (columns * tile_width, rows * tile_height), background)
     draw = ImageDraw.Draw(sheet)
@@ -39,10 +46,12 @@ def render_sheet(theme: str) -> Path:
         y = (index // columns) * tile_height
         asset_id = slot["asset_id"]
         sprite = Image.open(STATIC_DIR / f"{asset_id}.png").convert("RGBA")
-        sheet.paste(sprite, (x + 7, y + 22), sprite)
+        sprite_x = x + (tile_width - sprite.width) // 2
+        sprite_y = y + 24
+        sheet.paste(sprite, (sprite_x, sprite_y), sprite)
         draw.rectangle((x, y, x + tile_width - 1, y + tile_height - 1), outline=secondary)
         draw.text((x + 5, y + 4), f"{slot['slot']:03d}  {slot['label']}", fill=foreground, font=font)
-        draw.text((x + 5, y + 218), asset_id, fill=secondary, font=font)
+        draw.text((x + 5, y + 154), asset_id, fill=secondary, font=font)
 
     PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
     target = PREVIEW_DIR / f"full-fleet-static-{theme}.png"
@@ -75,24 +84,33 @@ def main() -> None:
         bbox = alpha.getbbox()
         errors: list[str] = []
         master_path = MASTER_DIR / f"{asset_id}.png"
+        matches_master = False
         if not master_path.exists():
             errors.append("missing-master")
-        elif path.read_bytes() != master_path.read_bytes():
-            errors.append("static-master-byte-drift")
-        if image.size != (200, 200):
+        else:
+            master = Image.open(master_path).convert("RGBA")
+            if master.size != MASTER_CANVAS:
+                errors.append(f"master-canvas={master.size}")
+            else:
+                expected_export = compact_export(master)
+                matches_master = ImageChops.difference(image, expected_export).getbbox() is None
+                if not matches_master:
+                    errors.append("compact-export-master-drift")
+        if image.size != EXPORT_CANVAS:
             errors.append(f"canvas={image.size}")
         if bbox is None:
             errors.append("empty-alpha")
         else:
-            if bbox[0] < 2 or bbox[1] < 2 or bbox[2] > 198 or bbox[3] > 198:
+            if bbox[0] < 1 or bbox[1] < 1 or bbox[2] > EXPORT_CANVAS[0] - 1 or bbox[3] > EXPORT_CANVAS[1] - 1:
                 errors.append(f"clipping-risk={bbox}")
-            if bbox[3] > 188:
+            if bbox[3] > 105:
                 errors.append(f"baseline={bbox[3]}")
         if alpha.getextrema() != (0, 255):
             errors.append(f"alpha-extrema={alpha.getextrema()}")
         entry.update(
             {
                 "bbox": list(bbox) if bbox else None,
+                "matches_200px_master": matches_master,
                 "alpha_extrema": list(alpha.getextrema()),
                 "errors": errors,
                 "passed": not errors,
@@ -102,7 +120,10 @@ def main() -> None:
 
     previews = [render_sheet(theme) for theme in THEMES]
     report = {
-        "release": "v2.0.0-candidate",
+        "release": RELEASE_CANDIDATE,
+        "master_canvas": list(MASTER_CANVAS),
+        "export_canvas": list(EXPORT_CANVAS),
+        "export_scale": EXPORT_SCALE,
         "expected_assets": len(expected),
         "actual_assets": len(actual),
         "missing": sorted(expected - actual),

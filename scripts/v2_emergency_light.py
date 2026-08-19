@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """MissionChief-native v2 emergency-light renderer.
 
-The v2 fleet is rendered on a 200 x 200 transparent canvas.  At that scale a
-single source pixel is too easy to lose, while an unconstrained blur becomes a
-blue tile after browser resampling.  This module therefore separates each
-fixture into a physical lens, a compact inner flare and a faint outer bloom.
+The v2 fleet lighting is rendered on the preserved 200 x 200 master canvas
+before the complete frame is downsampled once to the compact map export. At
+master scale a single source pixel is too easy to lose, while an unconstrained
+blur becomes a blue tile after browser resampling. This module therefore
+separates each fixture into a physical lens, a compact inner flare and a faint
+outer bloom.
 """
 
 from __future__ import annotations

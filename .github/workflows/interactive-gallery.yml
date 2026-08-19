@@ -10,12 +10,13 @@ on:
       - scripts/build_interactive_gallery.py
       - data/vehicle-slots.json
       - data/prototypes.json
-      - data/v2.0.0-animation-build-report.json
-      - data/v2.0.0-animation-qa-report.json
-      - data/v2.0.0-light-fixtures.json
-      - data/v2.0.0-static-qa-report.json
+      - data/v2.0.1-animation-build-report.json
+      - data/v2.0.1-animation-qa-report.json
+      - data/v2.0.1-light-fixtures.json
+      - data/v2.0.1-scale-report.json
+      - data/v2.0.1-static-qa-report.json
       - assets/exports/v2/**
-      - assets/previews/v2.0.0/**
+      - assets/previews/v2.0.1/**
       - .github/workflows/interactive-gallery.yml
   push:
     branches:
@@ -26,12 +27,13 @@ on:
       - scripts/build_interactive_gallery.py
       - data/vehicle-slots.json
       - data/prototypes.json
-      - data/v2.0.0-animation-build-report.json
-      - data/v2.0.0-animation-qa-report.json
-      - data/v2.0.0-light-fixtures.json
-      - data/v2.0.0-static-qa-report.json
+      - data/v2.0.1-animation-build-report.json
+      - data/v2.0.1-animation-qa-report.json
+      - data/v2.0.1-light-fixtures.json
+      - data/v2.0.1-scale-report.json
+      - data/v2.0.1-static-qa-report.json
       - assets/exports/v2/**
-      - assets/previews/v2.0.0/**
+      - assets/previews/v2.0.1/**
       - .github/workflows/interactive-gallery.yml
   workflow_dispatch:
 
@@ -67,4 +69,4 @@ jobs:
           test -f dist/gallery-site/vehicles.json
           test "$(find dist/gallery-site/assets/exports/v2/static -type f -name '*.png' | wc -l)" -eq 117
           test "$(find dist/gallery-site/assets/exports/v2/animated -type f -name '*.png' | wc -l)" -eq 117
-          test "$(find dist/gallery-site/assets/previews/v2.0.0 -type f -name '*.png' | wc -l)" -eq 13
+          test "$(find dist/gallery-site/assets/previews/v2.0.1 -type f -name '*.png' | wc -l)" -eq 13

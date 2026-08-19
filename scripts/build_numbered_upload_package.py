@@ -9,10 +9,13 @@ import hashlib
 import json
 import re
 import shutil
+import struct
 import sys
 import zipfile
 from pathlib import Path
 from typing import Any
+
+from v2_profile import EXPORT_CANVAS
 
 
 INVALID_WINDOWS_CHARS = re.compile(r'[<>:"/\\|?*\x00-\x1f]')
@@ -46,6 +49,17 @@ def require_png(path: Path, description: str) -> None:
             raise ValueError(f"Invalid PNG signature for {description}: {path}")
 
 
+def png_dimensions(path: Path) -> tuple[int, int]:
+    with path.open("rb") as handle:
+        if handle.read(len(PNG_SIGNATURE)) != PNG_SIGNATURE:
+            raise ValueError(f"Invalid PNG signature: {path}")
+        length = struct.unpack(">I", handle.read(4))[0]
+        chunk_type = handle.read(4)
+        if chunk_type != b"IHDR" or length < 8:
+            raise ValueError(f"Missing PNG IHDR: {path}")
+        return struct.unpack(">II", handle.read(8))
+
+
 def copy_exact(source: Path, destination: Path) -> str:
     destination.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(source, destination)
@@ -73,12 +87,18 @@ def write_readme(package_root: Path, version: str, profile: str) -> None:
         if profile == "command"
         else "six-frame"
     )
+    canvas_description = (
+        f"{EXPORT_CANVAS[0]}×{EXPORT_CANVAS[1]} compact map export"
+        if profile == "v2"
+        else "vehicle-specific production canvas"
+    )
     content = f"""# TKB UK Emergency Fleet — Numbered MissionChief Upload Package
 
 Release: {version}
 Profile: {profile}
 MissionChief pack: 5897 — TKB UK Fleet — Animated
 Vehicle slots: {EXPECTED_SLOTS}
+Canvas: {canvas_description}
 
 ## Folder layout
 
@@ -145,6 +165,7 @@ def build(root: Path, version: str, profile: str) -> tuple[Path, Path, int]:
     animated_output.mkdir(parents=True, exist_ok=True)
 
     manifest_rows: list[dict[str, Any]] = []
+    canvas_dimensions: set[tuple[int, int]] = set()
     generated_names: set[str] = set()
 
     for item in slots:
@@ -163,6 +184,18 @@ def build(root: Path, version: str, profile: str) -> tuple[Path, Path, int]:
         source_animated = animated_source / f"{asset_id}.png"
         require_png(source_static, f"static slot {slot}")
         require_png(source_animated, f"animated slot {slot}")
+        static_dimensions = png_dimensions(source_static)
+        animated_dimensions = png_dimensions(source_animated)
+        if static_dimensions != animated_dimensions:
+            raise ValueError(
+                f"Static/APNG canvas mismatch for slot {slot}: "
+                f"{static_dimensions} != {animated_dimensions}"
+            )
+        if profile == "v2" and static_dimensions != EXPORT_CANVAS:
+            raise ValueError(
+                f"Compact v2 slot {slot} must use {EXPORT_CANVAS}, found {static_dimensions}"
+            )
+        canvas_dimensions.add(static_dimensions)
 
         static_hash = copy_exact(source_static, static_output / filename)
         animated_hash = copy_exact(source_animated, animated_output / filename)
@@ -176,6 +209,7 @@ def build(root: Path, version: str, profile: str) -> tuple[Path, Path, int]:
                 "asset_id": asset_id,
                 "static_sha256": static_hash,
                 "animated_sha256": animated_hash,
+                "canvas": f"{static_dimensions[0]}x{static_dimensions[1]}",
                 "upload_path": upload_path,
             }
         )
@@ -196,6 +230,7 @@ def build(root: Path, version: str, profile: str) -> tuple[Path, Path, int]:
         "asset_id",
         "static_sha256",
         "animated_sha256",
+        "canvas",
         "upload_path",
     ]
     with csv_path.open("w", encoding="utf-8-sig", newline="") as handle:
@@ -213,6 +248,14 @@ def build(root: Path, version: str, profile: str) -> tuple[Path, Path, int]:
                 "slots": EXPECTED_SLOTS,
                 "static_files": EXPECTED_SLOTS,
                 "animated_files": EXPECTED_SLOTS,
+                "canvas": (
+                    {
+                        "width": next(iter(canvas_dimensions))[0],
+                        "height": next(iter(canvas_dimensions))[1],
+                    }
+                    if len(canvas_dimensions) == 1
+                    else "vehicle-specific"
+                ),
                 "images_copied_byte_for_byte": True,
                 "entries": manifest_rows,
             },

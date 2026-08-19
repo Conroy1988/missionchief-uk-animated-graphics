@@ -1,0 +1,2123 @@
+{
+  "release": "v2.0.1-candidate",
+  "master_canvas": [
+    200,
+    200
+  ],
+  "export_canvas": [
+    110,
+    110
+  ],
+  "export_scale": 0.55,
+  "assets": 117,
+  "road_12_frame": 111,
+  "aircraft_or_marine_18_frame": 6,
+  "entries": [
+    {
+      "slot": 1,
+      "asset_id": "fire-rescue-pump",
+      "profile": "road-blue",
+      "kind": "heavy-calibrated",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/fire-rescue-pump.png"
+    },
+    {
+      "slot": 2,
+      "asset_id": "light-4x4-pump",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/light-4x4-pump.png"
+    },
+    {
+      "slot": 3,
+      "asset_id": "aerial-appliance",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/aerial-appliance.png"
+    },
+    {
+      "slot": 4,
+      "asset_id": "fire-officer",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/fire-officer.png"
+    },
+    {
+      "slot": 5,
+      "asset_id": "rescue-support-unit",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/rescue-support-unit.png"
+    },
+    {
+      "slot": 6,
+      "asset_id": "frontline-ambulance",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/frontline-ambulance.png"
+    },
+    {
+      "slot": 7,
+      "asset_id": "water-carrier",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/water-carrier.png"
+    },
+    {
+      "slot": 8,
+      "asset_id": "hazmat-unit",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/hazmat-unit.png"
+    },
+    {
+      "slot": 9,
+      "asset_id": "police-incident-response-vehicle",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/police-incident-response-vehicle.png"
+    },
+    {
+      "slot": 10,
+      "asset_id": "hems",
+      "profile": "aircraft-response",
+      "kind": "aircraft",
+      "frames": 18,
+      "duration_ms": 1325,
+      "fixture_count": 6,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/hems.png"
+    },
+    {
+      "slot": 11,
+      "asset_id": "rapid-response-vehicle",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/rapid-response-vehicle.png"
+    },
+    {
+      "slot": 12,
+      "asset_id": "police-helicopter",
+      "profile": "aircraft-response",
+      "kind": "aircraft",
+      "frames": 18,
+      "duration_ms": 1325,
+      "fixture_count": 6,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/police-helicopter.png"
+    },
+    {
+      "slot": 13,
+      "asset_id": "dog-support-unit",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/dog-support-unit.png"
+    },
+    {
+      "slot": 14,
+      "asset_id": "armed-response-vehicle",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/armed-response-vehicle.png"
+    },
+    {
+      "slot": 15,
+      "asset_id": "breathing-apparatus-support-unit",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/breathing-apparatus-support-unit.png"
+    },
+    {
+      "slot": 16,
+      "asset_id": "incident-command-control-unit",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/incident-command-control-unit.png"
+    },
+    {
+      "slot": 17,
+      "asset_id": "rescue-pump",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/rescue-pump.png"
+    },
+    {
+      "slot": 18,
+      "asset_id": "carp",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/carp.png"
+    },
+    {
+      "slot": 19,
+      "asset_id": "co-responder-vehicle",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/co-responder-vehicle.png"
+    },
+    {
+      "slot": 20,
+      "asset_id": "joint-response-unit",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/joint-response-unit.png"
+    },
+    {
+      "slot": 21,
+      "asset_id": "otl",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/otl.png"
+    },
+    {
+      "slot": 22,
+      "asset_id": "general-practitioner",
+      "profile": "road-green",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/general-practitioner.png"
+    },
+    {
+      "slot": 23,
+      "asset_id": "community-first-responder",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/community-first-responder.png"
+    },
+    {
+      "slot": 24,
+      "asset_id": "crew-carrier",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/crew-carrier.png"
+    },
+    {
+      "slot": 25,
+      "asset_id": "traffic-car",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/traffic-car.png"
+    },
+    {
+      "slot": 26,
+      "asset_id": "armed-traffic-car",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/armed-traffic-car.png"
+    },
+    {
+      "slot": 27,
+      "asset_id": "heavy-4x4-tanker",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/heavy-4x4-tanker.png"
+    },
+    {
+      "slot": 28,
+      "asset_id": "prv",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/prv.png"
+    },
+    {
+      "slot": 29,
+      "asset_id": "srv",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/srv.png"
+    },
+    {
+      "slot": 30,
+      "asset_id": "welfare-vehicle",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/welfare-vehicle.png"
+    },
+    {
+      "slot": 31,
+      "asset_id": "atv-carrier",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/atv-carrier.png"
+    },
+    {
+      "slot": 32,
+      "asset_id": "ambulance-control-unit",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/ambulance-control-unit.png"
+    },
+    {
+      "slot": 33,
+      "asset_id": "cbrn-vehicle",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/cbrn-vehicle.png"
+    },
+    {
+      "slot": 34,
+      "asset_id": "mass-casualty-equipment",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/mass-casualty-equipment.png"
+    },
+    {
+      "slot": 35,
+      "asset_id": "ambulance-officer",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/ambulance-officer.png"
+    },
+    {
+      "slot": 36,
+      "asset_id": "bfu",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/bfu.png"
+    },
+    {
+      "slot": 37,
+      "asset_id": "f-wrc",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/f-wrc.png"
+    },
+    {
+      "slot": 38,
+      "asset_id": "wrl-cafs",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/wrl-cafs.png"
+    },
+    {
+      "slot": 39,
+      "asset_id": "rp-cafs",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/rp-cafs.png"
+    },
+    {
+      "slot": 40,
+      "asset_id": "osu",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/osu.png"
+    },
+    {
+      "slot": 41,
+      "asset_id": "pm",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/pm.png"
+    },
+    {
+      "slot": 42,
+      "asset_id": "water-pod",
+      "profile": "road-blue",
+      "kind": "pod",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/water-pod.png"
+    },
+    {
+      "slot": 43,
+      "asset_id": "bulk-foam-pod",
+      "profile": "road-blue",
+      "kind": "pod",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/bulk-foam-pod.png"
+    },
+    {
+      "slot": 44,
+      "asset_id": "rescue-pod",
+      "profile": "road-blue",
+      "kind": "pod",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/rescue-pod.png"
+    },
+    {
+      "slot": 45,
+      "asset_id": "command-pod",
+      "profile": "road-blue",
+      "kind": "pod",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/command-pod.png"
+    },
+    {
+      "slot": 46,
+      "asset_id": "welfare-pod",
+      "profile": "road-blue",
+      "kind": "pod",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/welfare-pod.png"
+    },
+    {
+      "slot": 47,
+      "asset_id": "basu-pod",
+      "profile": "road-blue",
+      "kind": "pod",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/basu-pod.png"
+    },
+    {
+      "slot": 48,
+      "asset_id": "misting-pod",
+      "profile": "road-blue",
+      "kind": "pod",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/misting-pod.png"
+    },
+    {
+      "slot": 49,
+      "asset_id": "hazardous-materials-pod",
+      "profile": "road-blue",
+      "kind": "pod",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/hazardous-materials-pod.png"
+    },
+    {
+      "slot": 50,
+      "asset_id": "osu-pod",
+      "profile": "road-blue",
+      "kind": "pod",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/osu-pod.png"
+    },
+    {
+      "slot": 51,
+      "asset_id": "hvp",
+      "profile": "road-blue",
+      "kind": "pod",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/hvp.png"
+    },
+    {
+      "slot": 52,
+      "asset_id": "psu-carrier",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/psu-carrier.png"
+    },
+    {
+      "slot": 53,
+      "asset_id": "firearms-personnel-carrier",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/firearms-personnel-carrier.png"
+    },
+    {
+      "slot": 54,
+      "asset_id": "multiple-dog-carrier",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/multiple-dog-carrier.png"
+    },
+    {
+      "slot": 55,
+      "asset_id": "detention-van",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/detention-van.png"
+    },
+    {
+      "slot": 56,
+      "asset_id": "mounted-unit",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/mounted-unit.png"
+    },
+    {
+      "slot": 57,
+      "asset_id": "m-rav",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/m-rav.png"
+    },
+    {
+      "slot": 58,
+      "asset_id": "crv",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/crv.png"
+    },
+    {
+      "slot": 59,
+      "asset_id": "coastguard-mud-rescue-unit",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/coastguard-mud-rescue-unit.png"
+    },
+    {
+      "slot": 60,
+      "asset_id": "coastguard-rope-rescue-unit",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/coastguard-rope-rescue-unit.png"
+    },
+    {
+      "slot": 61,
+      "asset_id": "coastguard-commander",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/coastguard-commander.png"
+    },
+    {
+      "slot": 62,
+      "asset_id": "flood-rescue-unit-trailer",
+      "profile": "road-blue",
+      "kind": "towed",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/flood-rescue-unit-trailer.png"
+    },
+    {
+      "slot": 63,
+      "asset_id": "mud-decontamination-unit",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/mud-decontamination-unit.png"
+    },
+    {
+      "slot": 64,
+      "asset_id": "support-unit",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/support-unit.png"
+    },
+    {
+      "slot": 65,
+      "asset_id": "coastguard-rescue-helicopter",
+      "profile": "aircraft-response",
+      "kind": "aircraft",
+      "frames": 18,
+      "duration_ms": 1325,
+      "fixture_count": 6,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/coastguard-rescue-helicopter.png"
+    },
+    {
+      "slot": 66,
+      "asset_id": "coastguard-rescue-helicopter-large",
+      "profile": "aircraft-response",
+      "kind": "aircraft",
+      "frames": 18,
+      "duration_ms": 1325,
+      "fixture_count": 6,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/coastguard-rescue-helicopter-large.png"
+    },
+    {
+      "slot": 67,
+      "asset_id": "4x4-vehicle",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/4x4-vehicle.png"
+    },
+    {
+      "slot": 68,
+      "asset_id": "inland-rescue-boat-trailer",
+      "profile": "road-blue",
+      "kind": "towed",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/inland-rescue-boat-trailer.png"
+    },
+    {
+      "slot": 69,
+      "asset_id": "ilb",
+      "profile": "marine-response",
+      "kind": "marine",
+      "frames": 18,
+      "duration_ms": 1425,
+      "fixture_count": 5,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/ilb.png"
+    },
+    {
+      "slot": 70,
+      "asset_id": "alb",
+      "profile": "marine-response",
+      "kind": "marine",
+      "frames": 18,
+      "duration_ms": 1425,
+      "fixture_count": 5,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/alb.png"
+    },
+    {
+      "slot": 71,
+      "asset_id": "rescue-watercraft-trailer",
+      "profile": "road-blue",
+      "kind": "towed",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/rescue-watercraft-trailer.png"
+    },
+    {
+      "slot": 72,
+      "asset_id": "hovercraft-trailer",
+      "profile": "road-blue",
+      "kind": "towed",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/hovercraft-trailer.png"
+    },
+    {
+      "slot": 73,
+      "asset_id": "hovercraft-transporter",
+      "profile": "road-blue",
+      "kind": "towed",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/hovercraft-transporter.png"
+    },
+    {
+      "slot": 74,
+      "asset_id": "light-4x4",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/light-4x4.png"
+    },
+    {
+      "slot": 75,
+      "asset_id": "boat-trailer",
+      "profile": "road-blue",
+      "kind": "towed",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/boat-trailer.png"
+    },
+    {
+      "slot": 76,
+      "asset_id": "major-foam-tender",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/major-foam-tender.png"
+    },
+    {
+      "slot": 77,
+      "asset_id": "riv",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/riv.png"
+    },
+    {
+      "slot": 78,
+      "asset_id": "airfield-firefighting-command-vehicle",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/airfield-firefighting-command-vehicle.png"
+    },
+    {
+      "slot": 79,
+      "asset_id": "rescue-stairs",
+      "profile": "road-amber",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/rescue-stairs.png"
+    },
+    {
+      "slot": 80,
+      "asset_id": "airfield-operations-vehicle",
+      "profile": "road-amber",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/airfield-operations-vehicle.png"
+    },
+    {
+      "slot": 81,
+      "asset_id": "airfield-operations-supervisor",
+      "profile": "road-amber",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/airfield-operations-supervisor.png"
+    },
+    {
+      "slot": 82,
+      "asset_id": "medical-equipment-trailer",
+      "profile": "road-amber",
+      "kind": "towed",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/medical-equipment-trailer.png"
+    },
+    {
+      "slot": 83,
+      "asset_id": "armed-cell-van",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/armed-cell-van.png"
+    },
+    {
+      "slot": 84,
+      "asset_id": "medical-cycle-responder",
+      "profile": "road-blue",
+      "kind": "cycle",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 7,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/medical-cycle-responder.png"
+    },
+    {
+      "slot": 85,
+      "asset_id": "pump-trailer",
+      "profile": "road-blue",
+      "kind": "towed",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/pump-trailer.png"
+    },
+    {
+      "slot": 86,
+      "asset_id": "control-van-sar",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/control-van-sar.png"
+    },
+    {
+      "slot": 87,
+      "asset_id": "operational-support-van",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/operational-support-van.png"
+    },
+    {
+      "slot": 88,
+      "asset_id": "operational-support-trailer",
+      "profile": "road-blue",
+      "kind": "towed",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/operational-support-trailer.png"
+    },
+    {
+      "slot": 89,
+      "asset_id": "sar-flood-rescue-trailer",
+      "profile": "road-blue",
+      "kind": "towed",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/sar-flood-rescue-trailer.png"
+    },
+    {
+      "slot": 90,
+      "asset_id": "drone-vehicle-sar-hq",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/drone-vehicle-sar-hq.png"
+    },
+    {
+      "slot": 91,
+      "asset_id": "drone-vehicle-fire-station",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/drone-vehicle-fire-station.png"
+    },
+    {
+      "slot": 92,
+      "asset_id": "drone-vehicle-police-station",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/drone-vehicle-police-station.png"
+    },
+    {
+      "slot": 93,
+      "asset_id": "personal-sar-vehicle",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/personal-sar-vehicle.png"
+    },
+    {
+      "slot": 94,
+      "asset_id": "sar-4x4",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/sar-4x4.png"
+    },
+    {
+      "slot": 95,
+      "asset_id": "rrv-2",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/rrv-2.png"
+    },
+    {
+      "slot": 96,
+      "asset_id": "community-midwife",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/community-midwife.png"
+    },
+    {
+      "slot": 97,
+      "asset_id": "specialist-paramedic-rrv",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/specialist-paramedic-rrv.png"
+    },
+    {
+      "slot": 98,
+      "asset_id": "patient-transport-service-ambulance",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/patient-transport-service-ambulance.png"
+    },
+    {
+      "slot": 99,
+      "asset_id": "critical-care-transfer-ambulance",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/critical-care-transfer-ambulance.png"
+    },
+    {
+      "slot": 100,
+      "asset_id": "mountain-rescue-4x4",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/mountain-rescue-4x4.png"
+    },
+    {
+      "slot": 101,
+      "asset_id": "control-van-mountain-rescue",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/control-van-mountain-rescue.png"
+    },
+    {
+      "slot": 102,
+      "asset_id": "search-dog-unit",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/search-dog-unit.png"
+    },
+    {
+      "slot": 103,
+      "asset_id": "search-dog-unit-sar",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/search-dog-unit-sar.png"
+    },
+    {
+      "slot": 104,
+      "asset_id": "crew-carrier-sar",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/crew-carrier-sar.png"
+    },
+    {
+      "slot": 105,
+      "asset_id": "recovery-vehicle",
+      "profile": "road-amber",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/recovery-vehicle.png"
+    },
+    {
+      "slot": 106,
+      "asset_id": "flatbed-recovery-vehicle",
+      "profile": "road-amber",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/flatbed-recovery-vehicle.png"
+    },
+    {
+      "slot": 107,
+      "asset_id": "hgv-recovery-vehicle",
+      "profile": "road-amber",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/hgv-recovery-vehicle.png"
+    },
+    {
+      "slot": 108,
+      "asset_id": "rru",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/rru.png"
+    },
+    {
+      "slot": 109,
+      "asset_id": "eiu",
+      "profile": "road-blue",
+      "kind": "car",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/eiu.png"
+    },
+    {
+      "slot": 110,
+      "asset_id": "eod-commander",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/eod-commander.png"
+    },
+    {
+      "slot": 111,
+      "asset_id": "eod-response-vehicle",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/eod-response-vehicle.png"
+    },
+    {
+      "slot": 112,
+      "asset_id": "eod-medium-equipment-van",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/eod-medium-equipment-van.png"
+    },
+    {
+      "slot": 113,
+      "asset_id": "eod-heavy-equipment-vehicle",
+      "profile": "road-blue",
+      "kind": "heavy",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/eod-heavy-equipment-vehicle.png"
+    },
+    {
+      "slot": 114,
+      "asset_id": "marine-eod-response-vehicle",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/marine-eod-response-vehicle.png"
+    },
+    {
+      "slot": 115,
+      "asset_id": "marine-eod-equipment-van",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/marine-eod-equipment-van.png"
+    },
+    {
+      "slot": 116,
+      "asset_id": "welfare-vehicle-2",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/welfare-vehicle-2.png"
+    },
+    {
+      "slot": 117,
+      "asset_id": "cell-van",
+      "profile": "road-blue",
+      "kind": "van",
+      "frames": 12,
+      "duration_ms": 970,
+      "fixture_count": 8,
+      "master_canvas": [
+        200,
+        200
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "target": "assets/exports/v2/animated/cell-van.png"
+    }
+  ]
+}

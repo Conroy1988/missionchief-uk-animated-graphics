@@ -5,23 +5,29 @@ from __future__ import annotations
 
 import json
 import math
-from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter
 
 from v2_emergency_light import Fixture, FlashFrame, ROAD_DOUBLE_FLASH, render_lit_frame, save_apng
+from v2_profile import (
+    ANIMATED_DIR,
+    EXPORT_CANVAS,
+    EXPORT_SCALE,
+    MASTER_CANVAS,
+    MASTER_DIR,
+    RELEASE_CANDIDATE,
+    ROOT,
+    compact_export,
+)
 
 
-ROOT = Path(__file__).resolve().parents[1]
 SLOTS = json.loads((ROOT / "data/vehicle-slots.json").read_text())["slots"]
 PROTOTYPES = {
     item["id"]: item
     for item in json.loads((ROOT / "data/prototypes.json").read_text())["vehicles"]
 }
-MASTER_DIR = ROOT / "assets/masters/v2.0.0"
-ANIMATED_DIR = ROOT / "assets/exports/v2/animated"
-FIXTURE_REPORT = ROOT / "data/v2.0.0-light-fixtures.json"
-BUILD_REPORT = ROOT / "data/v2.0.0-animation-build-report.json"
+FIXTURE_REPORT = ROOT / "data/v2.0.1-light-fixtures.json"
+BUILD_REPORT = ROOT / "data/v2.0.1-animation-build-report.json"
 
 
 AIRCRAFT_IDS = {
@@ -341,7 +347,7 @@ def main() -> None:
             kind, fixtures = road_fixtures(asset_id, base, bbox, length, colour)
             pattern = ROAD_DOUBLE_FLASH
 
-        frames: list[Image.Image] = []
+        master_frames: list[Image.Image] = []
         for index, state in enumerate(pattern):
             motion_base = (
                 rotor_motion(base, bbox, index)
@@ -350,7 +356,10 @@ def main() -> None:
                 if kind == "marine"
                 else base
             )
-            frames.append(render_lit_frame(motion_base, fixtures, state.groups, base.getchannel("A")))
+            master_frames.append(
+                render_lit_frame(motion_base, fixtures, state.groups, base.getchannel("A"))
+            )
+        frames = [compact_export(frame) for frame in master_frames]
         durations = [state.duration_ms for state in pattern]
         target = ANIMATED_DIR / f"{asset_id}.png"
         save_apng(str(target), frames, durations)
@@ -359,7 +368,8 @@ def main() -> None:
             "slot": slot["slot"],
             "profile": profile,
             "kind": kind,
-            "bbox": list(bbox),
+            "master_bbox": list(bbox),
+            "export_bbox": list(compact_export(base).getchannel("A").getbbox()),
             "fixtures": [fixture_dict(fixture) for fixture in fixtures],
         }
         build_entries.append(
@@ -371,6 +381,8 @@ def main() -> None:
                 "frames": len(frames),
                 "duration_ms": sum(durations),
                 "fixture_count": len(fixtures),
+                "master_canvas": list(MASTER_CANVAS),
+                "export_canvas": list(EXPORT_CANVAS),
                 "target": str(target.relative_to(ROOT)),
             }
         )
@@ -378,8 +390,10 @@ def main() -> None:
     FIXTURE_REPORT.write_text(
         json.dumps(
             {
-                "release": "v2.0.0-candidate",
-                "coordinate_space": "absolute 200x200 canvas pixels",
+                "release": RELEASE_CANDIDATE,
+                "master_coordinate_space": "absolute 200x200 master-canvas pixels",
+                "export_canvas": list(EXPORT_CANVAS),
+                "export_scale": EXPORT_SCALE,
                 "fixture_standard": "physical lens + compact inner flare + faint outer bloom",
                 "vehicles": fixture_manifest,
             },
@@ -390,7 +404,10 @@ def main() -> None:
     BUILD_REPORT.write_text(
         json.dumps(
             {
-                "release": "v2.0.0-candidate",
+                "release": RELEASE_CANDIDATE,
+                "master_canvas": list(MASTER_CANVAS),
+                "export_canvas": list(EXPORT_CANVAS),
+                "export_scale": EXPORT_SCALE,
                 "assets": len(build_entries),
                 "road_12_frame": sum(entry["frames"] == 12 for entry in build_entries),
                 "aircraft_or_marine_18_frame": sum(entry["frames"] == 18 for entry in build_entries),
