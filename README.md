@@ -1,197 +1,116 @@
-# TKB UK Emergency Fleet — Animated v1.4.14
+# TKB UK Emergency Fleet — Direction Neutral v2.0.0
 
-A complete, original UK emergency-services vehicle graphics pack for [MissionChief UK](https://www.missionchief.co.uk/), built by **TKB Gaming**.
+A complete original UK emergency-services vehicle graphics pack for [MissionChief UK](https://www.missionchief.co.uk/), built by **TKB Gaming**.
 
 > **[Use TKB UK Fleet — Animated on MissionChief →](https://www.missionchief.co.uk/vehicle_graphics/5897)**
 
-**[Open the interactive fleet gallery](https://tkb-gaming.scot/games/missionchief/guides/fleet-gallery/)** · **[Markdown gallery](GALLERY.md)** · **[See the automated map tests](#tested-for-real-map-conditions)** · **[MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/)** · **[Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/)**
+## The v2 fleet
 
-## Preview the full fleet
+Version 2 rebuilds all **117 current MissionChief UK vehicle slots** around one fixed raised three-quarter camera. Every subject points diagonally toward the lower-right, so MissionChief can move the same native sprite left or right without making the artwork look backwards.
 
 <table>
   <tr>
-    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/command/animated/fire-rescue-pump.png" alt="Water Ladder preview" width="160"></a><br><strong>Water Ladder</strong></td>
-    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/command/animated/frontline-ambulance.png" alt="Ambulance preview" width="160"></a><br><strong>Ambulance</strong></td>
-    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/command/animated/police-incident-response-vehicle.png" alt="IRV preview" width="160"></a><br><strong>IRV</strong></td>
-    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/command/animated/hems.png" alt="HEMS preview" width="160"></a><br><strong>HEMS</strong></td>
+    <td align="center" width="25%"><img src="assets/exports/v2/animated/fire-rescue-pump.png" alt="Direction-neutral Water Ladder" width="170"><br><strong>Water Ladder</strong></td>
+    <td align="center" width="25%"><img src="assets/exports/v2/animated/frontline-ambulance.png" alt="Direction-neutral Ambulance" width="170"><br><strong>Ambulance</strong></td>
+    <td align="center" width="25%"><img src="assets/exports/v2/animated/police-incident-response-vehicle.png" alt="Direction-neutral Police IRV" width="170"><br><strong>Police IRV</strong></td>
+    <td align="center" width="25%"><img src="assets/exports/v2/animated/hems.png" alt="Direction-neutral HEMS helicopter" width="170"><br><strong>HEMS</strong></td>
   </tr>
   <tr>
-    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/command/animated/police-helicopter.png" alt="Police helicopter preview" width="160"></a><br><strong>Police helicopter</strong></td>
-    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/command/animated/coastguard-rescue-helicopter.png" alt="Coastguard Rescue Helicopter preview" width="160"></a><br><strong>Coastguard Rescue Helicopter</strong></td>
-    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/command/animated/drone-vehicle-sar-hq.png" alt="Drone Vehicle (SAR HQ) preview" width="160"></a><br><strong>Drone Vehicle (SAR HQ)</strong></td>
-    <td align="center" width="25%"><a href="GALLERY.md"><img src="assets/exports/command/animated/eod-heavy-equipment-vehicle.png" alt="EOD Heavy Equipment Vehicle preview" width="160"></a><br><strong>EOD Heavy Equipment Vehicle</strong></td>
+    <td align="center" width="25%"><img src="assets/exports/v2/animated/aerial-appliance.png" alt="Direction-neutral Aerial Appliance" width="170"><br><strong>Aerial Appliance</strong></td>
+    <td align="center" width="25%"><img src="assets/exports/v2/animated/alb.png" alt="Direction-neutral all-weather lifeboat" width="170"><br><strong>ALB</strong></td>
+    <td align="center" width="25%"><img src="assets/exports/v2/animated/rescue-stairs.png" alt="Direction-neutral rescue stairs" width="170"><br><strong>Rescue Stairs</strong></td>
+    <td align="center" width="25%"><img src="assets/exports/v2/animated/eod-heavy-equipment-vehicle.png" alt="Direction-neutral heavy EOD vehicle" width="170"><br><strong>Heavy EOD</strong></td>
   </tr>
 </table>
 
-**[Explore all 117 graphics in the interactive map gallery →](https://tkb-gaming.scot/games/missionchief/guides/fleet-gallery/)**
+The complete set contains:
 
-Search by name, slot or role; filter by service and improvement type; switch static/APNG playback; test 100%, 75% and 50% scales on four map simulations; and compare stable releases side by side. The accessibility-first Markdown gallery remains available in [GALLERY.md](GALLERY.md).
-
-## The complete UK fleet
-
-Release **v1.4.14** covers every one of the **117 current vehicle slots** in MissionChief UK:
-
-- 117 transparent, map-scale static PNGs
-- All nine independently dispatched trailer slots rebuilt as complete road-going towing units, eliminating the self-propelled trailer effect caused by MissionChief moving each assigned graphic as one object
-- Coastguard response 4×4s now tow the Flood Rescue Unit and Inland Rescue Boat; lifeboat transporters tow the Rescue Watercraft and Hovercraft; the fire, airfield and SAR trailers use their own service-appropriate tow vehicles
-- Eight complete towing units use fixture-aligned blue response lighting, the airfield medical unit uses an amber beacon, and every trailer retains a rear marker on the correct end of the road unit
-- A repaired Drone Vehicle (SAR HQ) roof profile with the deep orange-edged launch box and fully spread detached drone removed, replaced by one three-pixel-high attached stowage rail, a compact longitudinally folded airframe and two isolated markers while the original emergency lightbar, rear communications mast and three response emitters remain aligned
-- A repaired Control Van (SAR) roof profile with the oversized orange-edged command cabinet and duplicate dish mast removed, replaced by one shallow command rail with three isolated amber status pixels while the original emergency lightbar, rear communications mast and four response emitters remain aligned
-- A rebuilt CBRN Vehicle roof profile with the oversized detector cabinet and separate mast removed, replaced by one single-row detector rail with three isolated amber sensor pixels while all six response-light emitters remain fixture-aligned
-- A rebuilt Armed Traffic Car roofline with the raised twin ANPR-style pods and beacon mast removed, replaced by one shallow integrated dark lightbar with exactly two isolated blue lenses and fixture-aligned independent flashes
-- A rebuilt Community First Responder roofline with the raised green medical cross-box removed, replaced by one integrated single-row dark lightbar with exactly two isolated blue lenses and fixture-aligned independent flashes
-- A rebuilt Operational Team Leader roofline with the raised green command box and beacon mast removed, replaced by one integrated single-row dark lightbar with exactly two isolated blue lenses and fixture-aligned independent flashes
-- A corrected Armed Response Vehicle roofline that erases the source artwork's leftover blue strip before drawing one integrated single-row dark lightbar with exactly two isolated blue lenses and fixture-aligned independent flashes
-- A rebuilt Joint Response Unit roofline with the oversized green-and-cyan command box and mast removed, replaced by one slim dark lightbar, two isolated blue lenses and two fixture-aligned independent flashes
-- A rebuilt Rapid Response Vehicle roofline with the oversized green medical box and white cross removed, replaced by one slim dark lightbar, two isolated blue lenses and two fixture-aligned independent flashes
-- A rebuilt Police Incident Response Vehicle roofline with one low-profile dark light housing, two separated one-pixel blue lenses and two fixture-aligned independent roof flashes instead of the former blue blobs
-- 105 twelve-frame APNGs plus 12 carefully selected eighteen-frame aircraft, marine and visible-wheel animations, with a unique timing signature per vehicle
-- Eighteen weaker ground assets redrawn with sharper compartment, panel, equipment, glazing and structural detail while preserving their exact map silhouettes
-- Both operational lifeboats re-inked with clearer hull, tube, cabin, rail and navigation-fixture detail
-- All four aircraft upgraded to 18-frame rotor, tail-rotor and aviation-light cycles with deeper multi-band rotor blur
-- ILB and ALB upgraded to 18-frame vessel-specific bow spray, stern turbulence, waterline shimmer, wake length and fixture-aligned navigation lights
-- Six suitable wheel-motion assets upgraded to smoother 18-frame rotation; ordinary road vehicles remain at 12 frames
-- UK service colour families audited across fire, police, ambulance, Coastguard, lifeboat and search-and-rescue assets without adding protected logos or registrations
-- Static/APNG bottom-centre anchoring verified across all 117 slots with zero canvas-anchor movement
-- A fleet-wide **13 px per metre** scale calibration based on each vehicle's real length, with only 0.285% mean rounding error and the approved 169×84 ALB exception preserved
-- 105 emergency assets distributed across 11 fleet phase offsets, 67 visible light-activity signatures and independent roof, grille, body and rear rhythms
-- 628 active emergency-light coordinates audited across the standard and command profiles, including left-facing, specialist, carrier, towing-unit, wheel-motion and helicopter assets
-- Twenty-five specialist response vehicles retain vehicle-specific fixture coordinates so command screens, detector boards, folded-drone rails, drone cradles, medical markings, EOD equipment and trailer cargo never flash as emergency lamps
-- Every active emergency-light emitter now uses one shared one-pixel point-lamp primitive; line, ellipse, rectangle, blur and synthetic glow operations are prohibited by CI
-- All 234 animated APNGs retain full-canvas frame controls, while the exact 192 lit animations replace v1.4.2's elongated geometry
-- Independent one-pixel roof, grille, body and rear lamps, plus subtle steady headlights and rear lamps on 99 response vehicles
-- Semi-transparent elliptical main-rotor blur, aviation-light rhythms and moving haze on both preserved Coastguard tail rotors
-- Improved red/green navigation lighting, bow spray, stern turbulence and class-weighted wakes for both operational lifeboats
-- Selective wheel motion on six suitable cycle, ATV, recovery and airport assets, aligned to declared wheel geometry
-- Twenty rebuilt role-specific masters with command, ANPR, medical, drone, CBRN and EOD equipment baked into the source artwork
-- A standardised UK high-visibility colour pass across 127,574 livery pixels without introducing copied service marks
-- Adaptive compact, standard and large-vehicle outlines that reduce the cut-out effect while retaining satellite-map contrast
-- ALB map footprint reduced by approximately 30%, with both its static and eighteen-frame navigation/wake variants corrected
-- Clean, original rooflines on the 40 vehicles affected by v1.2.0's artificial role and equipment overlays
-- A fail-closed 40-asset roofline regression gate that rejects any return of generated top-padding blocks
-- A coherent nine-vehicle mounted pod family across slots 42–50: Water, Bulk Foam, Rescue, Command, Welfare, BASU, Misting, Hazardous Materials and OSU
-- Every pod role now retains its distinct module on a complete three-axle prime mover with visible cab, chassis, wheels and four-point response lighting
-- The HVP at slot 51 now mounts its pump, hose banks and manifolds on the same complete prime-mover platform instead of appearing as a self-propelled module
-- Complete, unclipped tail geometry on HEMS, Police and both Coastguard helicopters, protected by both clearance and structural-pixel regression gates
-- Reinforced light/dark dual edges on the 15 weakest satellite-map assets; the minimum targeted satellite contrast remains above the v1.2 target
-- Fleet-wide contact grounding shadows with five weight-appropriate classes for light vehicles, heavy vehicles, trailers, watercraft and aircraft
-- Native half-scale sharpening and artefact cleanup across all 117 assets, with zero isolated alpha pixels remaining
-- A full-fleet regression gate that decodes all 2,178 frames and rejects any response-light component above 2×2 pixels, elongated bars, boxes, partial APNG updates, off-silhouette blue pixels and hidden RGB in transparent pixels
-- Fire, ambulance, police, coastguard, water rescue, HEMS, mountain rescue, airport, fire-investigation and EOD coverage
-- The original v1.0 True Scale profile remains available and unchanged
-
-Every release asset has passed the production validation suite for decoding, alpha transparency, slot order, unique IDs, relative scale, animation frame count, static/APNG alignment and expected flashing behaviour.
+- 117 transparent 200×200 static PNGs;
+- 117 lossless, infinitely looping response APNGs;
+- 111 twelve-frame road, pod, trailer, cycle and specialist animations;
+- six eighteen-frame aircraft and marine animations;
+- exact one-to-one parity with the authoritative MissionChief slot order;
+- a numbered upload package with byte-verified static and animated folders.
 
 ## Visual standard
 
-The pack uses realistic right-facing side elevations, recognisable UK emergency-service colour language and a clean, consistent map presence. The artwork is original: it does not reproduce official service logos, vehicle registrations or third-party branding.
+- Raised three-quarter top-down artwork exposes roof equipment, lightbars, carried loads, rotors and marine superstructure.
+- Every sprite keeps the same lower-right orientation; no browser script, Toolkit feature or direction detector is required.
+- Real-world length drives relative scale, with class-specific optical limits for cars, vans, heavy appliances, pods, trailers, aircraft, watercraft and the medical cycle.
+- Complete towing combinations remain a single connected graphic where MissionChief dispatches the slot as one moving object.
+- Role-defining UK livery and equipment are preserved without copying registrations, protected service logos or manufacturer branding.
 
-Emergency lighting is deliberately restrained so the fleet remains readable on a busy MissionChief map. Roof, grille, body and rear point lamps run independently, while 11 deterministic phase offsets and 67 activity patterns prevent an entire incident from blinking in lockstep.
+The full production contract is documented in [docs/V2_DIRECTION_NEUTRAL_STANDARD.md](docs/V2_DIRECTION_NEUTRAL_STANDARD.md).
+
+## Emergency lighting
+
+Response lighting is deliberately unmistakable at map scale. Each animated fixture combines a bright physical lens, compact inner flare and restrained outer bloom. Separate A/B fixture groups run an alternating double-flash cycle instead of making the whole fleet pulse in unison.
+
+- Blue response profiles cover emergency road vehicles, specialist units, pods and towing combinations.
+- Green response lighting is used for the General Practitioner vehicle.
+- Amber profiles cover recovery and selected airfield assets.
+- Aircraft use blue response lamps, red/green navigation lighting, white strobes and moving rotor traces.
+- ILB and ALB use blue response lamps, navigation lighting and restrained wake motion.
+
+Every response asset is checked at 100%, 75% and 50% display scale. The release gate rejects a flash that is too small or too dim at 50%, a lamp core that floats off the subject, oversized effects, partial APNG update tiles, unsupported frame blending, invalid timing or a non-looping file.
 
 ## Tested for real map conditions
 
-Every icon is tested automatically at **100%, 75% and 50% scale** against light, dark, grayscale and satellite-style backgrounds. The release gate checks half-zoom survival, edge contrast, corrected rooflines, frame stability and all 117 static/animated slot pairs.
+All 117 static and all 117 animated assets are rendered and inspected against light, dark, grayscale and satellite-style backgrounds in both alternating flash phases.
 
-[![All nine complete trailer-tow repairs before and after](assets/previews/v1.4.14/trailer-tow-composites-before-after.png)](assets/previews/v1.4.14/trailer-tow-composites-before-after.png)
+[![v2 full-fleet response audit on a dark map](assets/previews/v2.0.0/full-fleet-response-a-dark.png)](assets/previews/v2.0.0/full-fleet-response-a-dark.png)
 
-[![Inland Rescue Boat repaired with a Coastguard response 4x4](assets/previews/v1.4.14/inland-rescue-boat-tow-repair-before-after.png)](assets/previews/v1.4.14/inland-rescue-boat-tow-repair-before-after.png)
+**[Static light-map audit](assets/previews/v2.0.0/full-fleet-static-light.png)** · **[Static satellite audit](assets/previews/v2.0.0/full-fleet-static-satellite.png)** · **[Response phase B dark-map audit](assets/previews/v2.0.0/full-fleet-response-b-dark.png)** · **[Response grayscale audit](assets/previews/v2.0.0/full-fleet-response-a-grayscale.png)**
 
-[![SAR Drone Vehicle roof-equipment repair before and after](assets/previews/v1.4.14/drone-vehicle-sar-hq-roof-equipment-before-after.png)](assets/previews/v1.4.14/drone-vehicle-sar-hq-roof-equipment-before-after.png)
+The machine-readable gates report:
 
-[SAR Control Van roof-equipment repair retained from v1.4.12](assets/previews/v1.4.14/control-van-sar-roof-equipment-before-after.png)
-
-[![CBRN detector-array repair before and after](assets/previews/v1.4.14/cbrn-detector-array-before-after.png)](assets/previews/v1.4.14/cbrn-detector-array-before-after.png)
-
-[![Armed Traffic Car roof-pod repair before and after](assets/previews/v1.4.14/armed-traffic-car-roof-pods-before-after.png)](assets/previews/v1.4.14/armed-traffic-car-roof-pods-before-after.png)
-
-[Community First Responder roof-cross repair retained from v1.4.10](assets/previews/v1.4.14/community-first-responder-roof-cross-before-after.png)
-
-[OTL roof-mast repair retained from v1.4.9](assets/previews/v1.4.14/otl-roof-mast-before-after.png)
-
-[ARV duplicate roof-light repair retained from v1.4.8](assets/previews/v1.4.14/arv-roof-light-before-after.png)
-
-[Joint Response Unit roof-light repair retained from v1.4.7](assets/previews/v1.4.14/joint-response-unit-roof-light-before-after.png)
-
-[RRV roof-light repair retained from v1.4.5](assets/previews/v1.4.14/rrv-roof-light-before-after.png)
-
-[IRV roof-light repair retained from v1.4.4](assets/previews/v1.4.14/irv-roof-light-before-after.png)
-
-[![Full-fleet light-map audit](assets/previews/v1.4.14/full-fleet-lighting-light.png)](assets/previews/v1.4.14/full-fleet-lighting-light.png)
-
-**[v1.4.2 bars versus v1.4.14 point lamps](assets/previews/v1.4.14/point-lamps-before-after.png)** · **[Dark-map full-fleet audit](assets/previews/v1.4.14/full-fleet-lighting-dark.png)** · **[Satellite full-fleet audit](assets/previews/v1.4.14/full-fleet-lighting-satellite.png)** · **[Grayscale full-fleet audit](assets/previews/v1.4.14/full-fleet-lighting-grayscale.png)** · **[18-frame aircraft audit](assets/previews/v1.4.14/aircraft-motion-18-frame-audit.png)** · **[18-frame marine audit](assets/previews/v1.4.14/marine-motion-18-frame-audit.png)** · **[Complete helicopter-tail audit](assets/previews/v1.4.14/complete-helicopter-tails-map-scale.png)**
+- static QA: 117/117 passed;
+- animation QA: 117/117 passed;
+- APNG distribution: 111×12 frames and 6×18 frames;
+- numbered deployment package: 117 static + 117 animated files;
+- current v1.4.14 command exports unchanged during the isolated rebuild.
 
 ## Install in MissionChief
 
-1. Open the **[TKB UK Emergency Fleet — Animated](https://www.missionchief.co.uk/vehicle_graphics/5897)** pack.
-2. Select the pack for your MissionChief account.
-3. Enable animated vehicle graphics in MissionChief if you want the blue-light APNG versions.
+1. Open [TKB UK Fleet — Animated](https://www.missionchief.co.uk/vehicle_graphics/5897).
+2. Select the graphics pack for your MissionChief account.
+3. Enable animated vehicle graphics to use the response APNGs.
 
-For broader gameplay help, missions, vehicles, buildings and operational planning, visit the **[TKB MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/)**.
+The game renders every v2 asset natively. No secondary extension or userscript is required by players.
 
-For MissionChief enhancements and utilities, visit **[TKB MissionChief Scripts & Tools](https://tkb-gaming.scot/mission-chief-scripts/)**.
+## Release download
 
-## Release downloads
+The [v2.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.0.0) includes:
 
-The [v1.4.14 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.14) includes:
+- `TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.0.zip` — ordered static/animated deployment folders, exact slot guide, machine-readable manifest and SHA-256 verification;
+- `v2.0.0-static-qa-report.json`, `v2.0.0-animation-qa-report.json`, `v2.0.0-light-fixtures.json` and `v2.0.0-release-integrity-report.json` — production evidence for every vehicle and animation.
 
-- **`TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.14.zip`** — recommended ordered deployment package, with separate static and animated folders, an upload guide, manifest and reproducible SHA-256 verification
-- **`TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.14.user.js`** — resumable live deployment helper for pack maintainers
-- **`v1.4.14-build-report.json`**, **`v1.4.14-qa-report.json`**, **`v1.4.14-overhaul-report.json`**, **`v1.4.14-anchor-report.json`**, **`v1.4.14-full-fleet-lighting-report.json`**, **`v1.4.14-light-placement-report.json`**, **`v1.4.14-trailer-tow-master-report.json`** and **`v1.4.14-trailer-tow-validation.json`** — machine-readable production evidence for every image, animation frame and complete towing unit
-
-The [v1.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.0.0) remains available for players who prefer strict real-world relative scale.
+The [v1.4.14 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.14) remains available as the previous right-facing side-elevation generation. The immutable v1.0.0 True Scale profile also remains available.
 
 ## Repository structure
 
-- `assets/sources/` — representative full-resolution chroma-key source artwork
-- `assets/exports/standard/static/` — MissionChief-ready transparent PNGs
-- `assets/exports/standard/animated/` — MissionChief-ready six-frame APNGs
-- `assets/exports/command/static/` — v1.4.14 Modern Command Clarity PNGs
-- `assets/exports/command/animated/` — v1.4.14 twelve- and eighteen-frame APNGs
-- `assets/masters/` — deterministic command-profile replacement masters, including v1.2.4 carriers/full-tail aircraft, twenty baked v1.3.0 role masters, twenty v1.4.0 redraw/marine masters and nine v1.4.14 complete towing units
-- `assets/previews/` — map-scale, animation-frame and selected-artwork QA sheets
-- `gallery/` — interactive gallery source, deterministic 117-vehicle catalogue and responsive browser client
-- `data/vehicle-slots.json` — authoritative 117-slot MissionChief mapping
-- `data/prototypes.json` — production specification and light-placement manifest
-- `data/final-pack-validation.json` — release-level validation report
-- `scripts/` — repeatable preparation, packaging and QA tools
-- `docs/` — production standards, release checkpoints and the parked future roadmap
-
-Large production artwork is supplied through the release archive rather than duplicated throughout Git history.
+- `assets/masters/v2.0.0/` — the 117 approved direction-neutral masters;
+- `assets/exports/v2/static/` — MissionChief-ready 200×200 static PNGs;
+- `assets/exports/v2/animated/` — MissionChief-ready twelve- and eighteen-frame response APNGs;
+- `assets/previews/v2.0.0/` — full-fleet map-condition and flash-phase evidence;
+- `data/vehicle-slots.json` — authoritative 117-slot MissionChief mapping;
+- `data/v2.0.0-*.json` — fixtures, build results and fail-closed QA reports;
+- `scripts/` — deterministic processing, lighting, packaging and validation tools;
+- `docs/` — visual standards and release checkpoints;
+- `assets/exports/command/` — unchanged v1.4.14 production profile.
 
 ## Rebuild and validate
 
 ```bash
-python scripts/build_mounted_pod_carriers.py --check
-python scripts/build_helicopter_tail_masters.py --check
-python scripts/build_v1_3_masters.py --check
-python scripts/build_v1_4_masters.py --check
-python scripts/build_trailer_tow_masters.py --check
-python scripts/validate_point_emitters.py
-python scripts/build_v1_1_enhanced.py
-python scripts/validate_irv_lighting.py
-python scripts/validate_rrv_lighting.py
-python scripts/validate_arv_lighting.py
-python scripts/validate_joint_response_unit_lighting.py
-python scripts/validate_otl_lighting.py
-python scripts/validate_community_first_responder_lighting.py
-python scripts/validate_armed_traffic_car_lighting.py
-python scripts/validate_cbrn_vehicle_lighting.py
-python scripts/validate_control_van_sar_lighting.py
-python scripts/validate_drone_vehicle_sar_hq_lighting.py
-python scripts/validate_trailer_tow_composites.py
-python scripts/build_prototypes.py
-python scripts/validate_v1_1_enhanced.py
-python scripts/validate_v1_4_overhaul.py
-python scripts/validate_full_fleet_lighting.py
-python scripts/validate_release_png_integrity.py
-python scripts/validate_release_scope.py
-python scripts/validate_light_placement.py --report data/v1.4.14-light-placement-report.json
-python scripts/build_numbered_upload_package.py --version v1.4.14 --profile command
-python scripts/build_interactive_gallery.py --check --site-output dist/gallery-site
-node --test tests/gallery.test.mjs
+python scripts/build_v2_calibration.py
+python scripts/build_v2_animated_fleet.py
+python scripts/validate_v2_static_fleet.py
+python scripts/validate_v2_animated_fleet.py
+python scripts/build_numbered_upload_package.py --version v2.0.0 --profile v2
+python scripts/validate_v2_release_integrity.py
 ```
 
-The final validation gate must report `"all_passed": true` before a release is published. The immutable v1.0 source profile remains documented separately in its release and checkpoint.
+The final gate must report `"all_passed": true` before the repository release or MissionChief pack is updated.
 
 ## Rights and licence
 

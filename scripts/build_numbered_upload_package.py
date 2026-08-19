@@ -66,7 +66,13 @@ def add_deterministic_zip_member(archive: zipfile.ZipFile, path: Path, archive_n
 
 
 def write_readme(package_root: Path, version: str, profile: str) -> None:
-    frame_description = "twelve-frame, with selected eighteen-frame motion upgrades" if profile == "command" else "six-frame"
+    frame_description = (
+        "twelve-frame, with aircraft and marine eighteen-frame motion upgrades"
+        if profile == "v2"
+        else "twelve-frame, with selected eighteen-frame motion upgrades"
+        if profile == "command"
+        else "six-frame"
+    )
     content = f"""# TKB UK Emergency Fleet — Numbered MissionChief Upload Package
 
 Release: {version}
@@ -113,7 +119,13 @@ def build(root: Path, version: str, profile: str) -> tuple[Path, Path, int]:
         )
 
     dist = root / "dist"
-    profile_label = "Modern-Command-Clarity-" if profile == "command" else ""
+    profile_label = (
+        "Direction-Neutral-"
+        if profile == "v2"
+        else "Modern-Command-Clarity-"
+        if profile == "command"
+        else ""
+    )
     package_name = f"TKB-UK-Emergency-Fleet-{profile_label}MissionChief-Numbered-Upload-Ready-{version}"
     package_root = dist / package_name
     archive_path = dist / f"{package_name}.zip"
@@ -236,7 +248,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--version", default="v1.0.0", help="Release version used in archive names")
     parser.add_argument(
         "--profile",
-        choices=("standard", "command"),
+        choices=("standard", "command", "v2"),
         default="standard",
         help="Validated export profile to package",
     )

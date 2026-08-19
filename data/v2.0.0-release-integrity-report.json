@@ -1,0 +1,17 @@
+{
+  "release": "v2.0.0-candidate",
+  "static_pngs": 117,
+  "animated_apngs": 117,
+  "frame_distribution": {
+    "12": 111,
+    "18": 6
+  },
+  "preview_pngs": 13,
+  "decoded_images_and_frames": 1570,
+  "numbered_static_files": 117,
+  "numbered_animated_files": 117,
+  "archive_sha256": "4723eeefa42d57dd9fea577531247557984990aeeb19b366c5c5cfe1988773bf",
+  "current_v1_command_exports_unchanged": true,
+  "all_passed": true,
+  "errors": []
+}
