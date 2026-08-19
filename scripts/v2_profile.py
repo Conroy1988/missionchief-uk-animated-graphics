@@ -4,8 +4,11 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import TYPE_CHECKING
 
-from PIL import Image
+
+if TYPE_CHECKING:
+    from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,6 +29,8 @@ PREVIEW_DIR = ROOT / "assets" / "previews" / RELEASE
 
 def compact_export(image: Image.Image) -> Image.Image:
     """Downsample a full 200px master/frame to the 110px map export contract."""
+
+    from PIL import Image
 
     source = image.convert("RGBA")
     if source.size != MASTER_CANVAS:
