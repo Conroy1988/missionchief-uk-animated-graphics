@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v1.4.14",
+  "release": "v2.0.0",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -61,40 +61,36 @@
   ],
   "focus_views": [
     {
-      "id": "complete-towing-unit",
-      "label": "Complete towing units",
-      "count": 9
-    },
-    {
-      "id": "role-differentiation",
-      "label": "Role differentiation",
-      "count": 15
-    },
-    {
-      "id": "specialist-equipment",
-      "label": "Specialist equipment",
-      "count": 5
-    },
-    {
-      "id": "lighting",
-      "label": "Lighting changes",
-      "count": 105
-    },
-    {
-      "id": "grounding-shadow",
-      "label": "Grounding shadows",
+      "id": "direction-neutral",
+      "label": "Direction-neutral perspective",
       "count": 117
     },
     {
-      "id": "redraw",
-      "label": "v1.4 redraws",
-      "count": 18
+      "id": "emergency-lighting",
+      "label": "Emergency lighting",
+      "count": 117
+    },
+    {
+      "id": "air-marine-motion",
+      "label": "Aircraft and marine motion",
+      "count": 6
+    },
+    {
+      "id": "complete-towing-unit",
+      "label": "Complete towing units",
+      "count": 9
     }
   ],
   "releases": [
     {
+      "id": "v2.0.0",
+      "label": "v2.0.0 · Current",
+      "profile": "v2",
+      "summary": "Direction-neutral fleet and unmistakable emergency lighting"
+    },
+    {
       "id": "v1.4.14",
-      "label": "v1.4.14 · Current",
+      "label": "v1.4.14",
       "profile": "command",
       "summary": "Complete trailer towing-unit overhaul"
     },
@@ -213,19 +209,18 @@
       "service_label": "Fire",
       "production_batch": "01-core-services",
       "real_length_metres": 8.5,
-      "width": 118,
-      "height": 49,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Pump compartment detail pass",
-      "static_path": "assets/exports/command/static/fire-rescue-pump.png",
-      "animated_path": "assets/exports/command/animated/fire-rescue-pump.png",
+      "cue": "Direction-neutral heavy-calibrated · Blue response lighting",
+      "static_path": "assets/exports/v2/static/fire-rescue-pump.png",
+      "animated_path": "assets/exports/v2/animated/fire-rescue-pump.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "001 1 slot 1 water ladder water-ladder fire-rescue-pump fire rescue pump fire fire 01 core services pump compartment detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "001 1 slot 1 water ladder water-ladder fire-rescue-pump fire rescue pump fire fire 01 core services direction-neutral heavy-calibrated · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 2,
@@ -238,18 +233,18 @@
       "service_label": "Fire",
       "production_batch": "01-core-services",
       "real_length_metres": 6.5,
-      "width": 92,
-      "height": 37,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/light-4x4-pump.png",
-      "animated_path": "assets/exports/command/animated/light-4x4-pump.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/light-4x4-pump.png",
+      "animated_path": "assets/exports/v2/animated/light-4x4-pump.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "002 2 slot 2 light 4x4 pump (l4p) light-4x4-pump-l4p light-4x4-pump light 4x4 pump fire fire 01 core services  grounding shadows lighting changes"
+      "search_text": "002 2 slot 2 light 4x4 pump (l4p) light-4x4-pump-l4p light-4x4-pump light 4x4 pump fire fire 01 core services direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 3,
@@ -262,18 +257,18 @@
       "service_label": "Fire",
       "production_batch": "01-core-services",
       "real_length_metres": 12.0,
-      "width": 166,
-      "height": 61,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/aerial-appliance.png",
-      "animated_path": "assets/exports/command/animated/aerial-appliance.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/aerial-appliance.png",
+      "animated_path": "assets/exports/v2/animated/aerial-appliance.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "003 3 slot 3 aerial appliance aerial-appliance aerial-appliance aerial appliance fire fire 01 core services  grounding shadows lighting changes"
+      "search_text": "003 3 slot 3 aerial appliance aerial-appliance aerial-appliance aerial appliance fire fire 01 core services direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 4,
@@ -286,18 +281,18 @@
       "service_label": "Fire",
       "production_batch": "01-core-services",
       "real_length_metres": 4.8,
-      "width": 70,
-      "height": 31,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/fire-officer.png",
-      "animated_path": "assets/exports/command/animated/fire-officer.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/fire-officer.png",
+      "animated_path": "assets/exports/v2/animated/fire-officer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "004 4 slot 4 fire officer fire-officer fire-officer fire officer fire fire 01 core services  grounding shadows lighting changes"
+      "search_text": "004 4 slot 4 fire officer fire-officer fire-officer fire officer fire fire 01 core services direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 5,
@@ -310,19 +305,18 @@
       "service_label": "Fire",
       "production_batch": "01-core-services",
       "real_length_metres": 8.8,
-      "width": 122,
-      "height": 48,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Support compartment detail pass",
-      "static_path": "assets/exports/command/static/rescue-support-unit.png",
-      "animated_path": "assets/exports/command/animated/rescue-support-unit.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/rescue-support-unit.png",
+      "animated_path": "assets/exports/v2/animated/rescue-support-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "005 5 slot 5 rescue support unit (rsu) rescue-support-unit-rsu rescue-support-unit rescue support unit fire fire 01 core services support compartment detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "005 5 slot 5 rescue support unit (rsu) rescue-support-unit-rsu rescue-support-unit rescue support unit fire fire 01 core services direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 6,
@@ -335,18 +329,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 6.5,
-      "width": 92,
-      "height": 39,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/frontline-ambulance.png",
-      "animated_path": "assets/exports/command/animated/frontline-ambulance.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/frontline-ambulance.png",
+      "animated_path": "assets/exports/v2/animated/frontline-ambulance.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "006 6 slot 6 ambulance ambulance frontline-ambulance frontline ambulance ambulance ambulance 01 core services  grounding shadows lighting changes"
+      "search_text": "006 6 slot 6 ambulance ambulance frontline-ambulance frontline ambulance ambulance ambulance 01 core services direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 7,
@@ -359,19 +353,18 @@
       "service_label": "Fire",
       "production_batch": "01-core-services",
       "real_length_metres": 9.5,
-      "width": 132,
-      "height": 50,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Tanker panel detail pass",
-      "static_path": "assets/exports/command/static/water-carrier.png",
-      "animated_path": "assets/exports/command/animated/water-carrier.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/water-carrier.png",
+      "animated_path": "assets/exports/v2/animated/water-carrier.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "007 7 slot 7 water carrier water-carrier water-carrier water carrier fire fire 01 core services tanker panel detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "007 7 slot 7 water carrier water-carrier water-carrier water carrier fire fire 01 core services direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 8,
@@ -384,19 +377,18 @@
       "service_label": "Fire",
       "production_batch": "01-core-services",
       "real_length_metres": 8.8,
-      "width": 122,
-      "height": 49,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Hazmat compartment detail pass",
-      "static_path": "assets/exports/command/static/hazmat-unit.png",
-      "animated_path": "assets/exports/command/animated/hazmat-unit.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/hazmat-unit.png",
+      "animated_path": "assets/exports/v2/animated/hazmat-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "008 8 slot 8 hazmat unit hazmat-unit hazmat-unit hazmat unit fire fire 01 core services hazmat compartment detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "008 8 slot 8 hazmat unit hazmat-unit hazmat-unit hazmat unit fire fire 01 core services direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 9,
@@ -409,19 +401,18 @@
       "service_label": "Police",
       "production_batch": "01-core-services",
       "real_length_metres": 4.9,
-      "width": 72,
-      "height": 30,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Irv anpr array",
-      "static_path": "assets/exports/command/static/police-incident-response-vehicle.png",
-      "animated_path": "assets/exports/command/animated/police-incident-response-vehicle.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/police-incident-response-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/police-incident-response-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "009 9 slot 9 irv irv police-incident-response-vehicle police incident response vehicle police police 01 core services irv anpr array grounding shadows role differentiation lighting changes"
+      "search_text": "009 9 slot 9 irv irv police-incident-response-vehicle police incident response vehicle police police 01 core services direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 10,
@@ -434,18 +425,19 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 13.6,
-      "width": 197,
-      "height": 73,
+      "width": 200,
+      "height": 200,
       "frames": 18,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting",
+        "air-marine-motion"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/hems.png",
-      "animated_path": "assets/exports/command/animated/hems.png",
+      "cue": "Direction-neutral aircraft · rotor and aviation-light motion",
+      "static_path": "assets/exports/v2/static/hems.png",
+      "animated_path": "assets/exports/v2/animated/hems.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "010 10 slot 10 hems hems hems hems ambulance ambulance 01 core services  grounding shadows lighting changes"
+      "search_text": "010 10 slot 10 hems hems hems hems ambulance ambulance 01 core services direction-neutral aircraft · rotor and aviation-light motion direction-neutral perspective emergency lighting aircraft and marine motion"
     },
     {
       "slot": 11,
@@ -458,19 +450,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 4.9,
-      "width": 72,
-      "height": 31,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Compact medical pod",
-      "static_path": "assets/exports/command/static/rapid-response-vehicle.png",
-      "animated_path": "assets/exports/command/animated/rapid-response-vehicle.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/rapid-response-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/rapid-response-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "011 11 slot 11 rrv rrv rapid-response-vehicle rapid response vehicle ambulance ambulance 01 core services compact medical pod grounding shadows role differentiation lighting changes"
+      "search_text": "011 11 slot 11 rrv rrv rapid-response-vehicle rapid response vehicle ambulance ambulance 01 core services direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 12,
@@ -483,18 +474,19 @@
       "service_label": "Police",
       "production_batch": "01-core-services",
       "real_length_metres": 13.8,
-      "width": 199,
-      "height": 75,
+      "width": 200,
+      "height": 200,
       "frames": 18,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting",
+        "air-marine-motion"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/police-helicopter.png",
-      "animated_path": "assets/exports/command/animated/police-helicopter.png",
+      "cue": "Direction-neutral aircraft · rotor and aviation-light motion",
+      "static_path": "assets/exports/v2/static/police-helicopter.png",
+      "animated_path": "assets/exports/v2/animated/police-helicopter.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "012 12 slot 12 police helicopter police-helicopter police-helicopter police helicopter police police 01 core services  grounding shadows lighting changes"
+      "search_text": "012 12 slot 12 police helicopter police-helicopter police-helicopter police helicopter police police 01 core services direction-neutral aircraft · rotor and aviation-light motion direction-neutral perspective emergency lighting aircraft and marine motion"
     },
     {
       "slot": 13,
@@ -507,18 +499,18 @@
       "service_label": "Police",
       "production_batch": "01-core-services",
       "real_length_metres": 6.8,
-      "width": 96,
-      "height": 45,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/dog-support-unit.png",
-      "animated_path": "assets/exports/command/animated/dog-support-unit.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/dog-support-unit.png",
+      "animated_path": "assets/exports/v2/animated/dog-support-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "013 13 slot 13 dsu dsu dog-support-unit dog support unit police police 01 core services  grounding shadows lighting changes"
+      "search_text": "013 13 slot 13 dsu dsu dog-support-unit dog support unit police police 01 core services direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 14,
@@ -531,19 +523,18 @@
       "service_label": "Police",
       "production_batch": "01-core-services",
       "real_length_metres": 5.1,
-      "width": 74,
-      "height": 33,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Arv low profile lightbar",
-      "static_path": "assets/exports/command/static/armed-response-vehicle.png",
-      "animated_path": "assets/exports/command/animated/armed-response-vehicle.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/armed-response-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/armed-response-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "014 14 slot 14 arv arv armed-response-vehicle armed response vehicle police police 01 core services arv low profile lightbar grounding shadows role differentiation lighting changes"
+      "search_text": "014 14 slot 14 arv arv armed-response-vehicle armed response vehicle police police 01 core services direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 15,
@@ -556,19 +547,18 @@
       "service_label": "Fire",
       "production_batch": "01-core-services",
       "real_length_metres": 8.6,
-      "width": 120,
-      "height": 47,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Ba cylinder detail pass",
-      "static_path": "assets/exports/command/static/breathing-apparatus-support-unit.png",
-      "animated_path": "assets/exports/command/animated/breathing-apparatus-support-unit.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/breathing-apparatus-support-unit.png",
+      "animated_path": "assets/exports/v2/animated/breathing-apparatus-support-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "015 15 slot 15 basu basu breathing-apparatus-support-unit breathing apparatus support unit fire fire 01 core services ba cylinder detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "015 15 slot 15 basu basu breathing-apparatus-support-unit breathing apparatus support unit fire fire 01 core services direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 16,
@@ -581,19 +571,18 @@
       "service_label": "Fire",
       "production_batch": "01-core-services",
       "real_length_metres": 10.5,
-      "width": 144,
-      "height": 59,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Command body panel detail pass",
-      "static_path": "assets/exports/command/static/incident-command-control-unit.png",
-      "animated_path": "assets/exports/command/animated/incident-command-control-unit.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/incident-command-control-unit.png",
+      "animated_path": "assets/exports/v2/animated/incident-command-control-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "016 16 slot 16 iccu iccu incident-command-control-unit incident command and control unit fire fire 01 core services command body panel detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "016 16 slot 16 iccu iccu incident-command-control-unit incident command and control unit fire fire 01 core services direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 17,
@@ -606,19 +595,18 @@
       "service_label": "Fire",
       "production_batch": "01-core-services",
       "real_length_metres": 8.6,
-      "width": 120,
-      "height": 51,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Rescue tool detail pass",
-      "static_path": "assets/exports/command/static/rescue-pump.png",
-      "animated_path": "assets/exports/command/animated/rescue-pump.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/rescue-pump.png",
+      "animated_path": "assets/exports/v2/animated/rescue-pump.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "017 17 slot 17 rescue pump rescue-pump rescue-pump rescue pump fire fire 01 core services rescue tool detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "017 17 slot 17 rescue pump rescue-pump rescue-pump rescue pump fire fire 01 core services direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 18,
@@ -631,18 +619,18 @@
       "service_label": "Fire",
       "production_batch": "01-core-services",
       "real_length_metres": 10.2,
-      "width": 141,
-      "height": 59,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/carp.png",
-      "animated_path": "assets/exports/command/animated/carp.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/carp.png",
+      "animated_path": "assets/exports/v2/animated/carp.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "018 18 slot 18 carp carp carp carp fire fire 01 core services  grounding shadows lighting changes"
+      "search_text": "018 18 slot 18 carp carp carp carp fire fire 01 core services direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 19,
@@ -655,18 +643,18 @@
       "service_label": "Fire",
       "production_batch": "01-core-services",
       "real_length_metres": 4.8,
-      "width": 70,
-      "height": 34,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/co-responder-vehicle.png",
-      "animated_path": "assets/exports/command/animated/co-responder-vehicle.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/co-responder-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/co-responder-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "019 19 slot 19 co-responder vehicle co-responder-vehicle co-responder-vehicle co-responder vehicle fire fire 01 core services  grounding shadows lighting changes"
+      "search_text": "019 19 slot 19 co-responder vehicle co-responder-vehicle co-responder-vehicle co-responder vehicle fire fire 01 core services direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 20,
@@ -679,19 +667,18 @@
       "service_label": "Multi-service",
       "production_batch": "01-core-services",
       "real_length_metres": 4.9,
-      "width": 72,
-      "height": 30,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Joint response low profile lightbar",
-      "static_path": "assets/exports/command/static/joint-response-unit.png",
-      "animated_path": "assets/exports/command/animated/joint-response-unit.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/joint-response-unit.png",
+      "animated_path": "assets/exports/v2/animated/joint-response-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "020 20 slot 20 joint response unit joint-response-unit joint-response-unit joint response unit multi-service multi-service 01 core services joint response low profile lightbar grounding shadows role differentiation lighting changes"
+      "search_text": "020 20 slot 20 joint response unit joint-response-unit joint-response-unit joint response unit multi-service multi-service 01 core services direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 21,
@@ -704,19 +691,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 5.0,
-      "width": 73,
-      "height": 35,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Otl low profile lightbar",
-      "static_path": "assets/exports/command/static/otl.png",
-      "animated_path": "assets/exports/command/animated/otl.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/otl.png",
+      "animated_path": "assets/exports/v2/animated/otl.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "021 21 slot 21 otl otl otl otl ambulance ambulance 01 core services otl low profile lightbar grounding shadows role differentiation lighting changes"
+      "search_text": "021 21 slot 21 otl otl otl otl ambulance ambulance 01 core services direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 22,
@@ -729,18 +715,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 4.95,
-      "width": 72,
-      "height": 30,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/general-practitioner.png",
-      "animated_path": "assets/exports/command/animated/general-practitioner.png",
+      "cue": "Direction-neutral car · Green response lighting",
+      "static_path": "assets/exports/v2/static/general-practitioner.png",
+      "animated_path": "assets/exports/v2/animated/general-practitioner.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "022 22 slot 22 general practitioner general-practitioner general-practitioner general practitioner ambulance ambulance 01 core services  grounding shadows lighting changes"
+      "search_text": "022 22 slot 22 general practitioner general-practitioner general-practitioner general practitioner ambulance ambulance 01 core services direction-neutral car · green response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 23,
@@ -753,19 +739,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 4.4,
-      "width": 65,
-      "height": 31,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Cfr low profile lightbar",
-      "static_path": "assets/exports/command/static/community-first-responder.png",
-      "animated_path": "assets/exports/command/animated/community-first-responder.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/community-first-responder.png",
+      "animated_path": "assets/exports/v2/animated/community-first-responder.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "023 23 slot 23 community first responder community-first-responder community-first-responder community first responder ambulance ambulance 01 core services cfr low profile lightbar grounding shadows role differentiation lighting changes"
+      "search_text": "023 23 slot 23 community first responder community-first-responder community-first-responder community first responder ambulance ambulance 01 core services direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 24,
@@ -778,18 +763,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 7.2,
-      "width": 102,
-      "height": 46,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/crew-carrier.png",
-      "animated_path": "assets/exports/command/animated/crew-carrier.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/crew-carrier.png",
+      "animated_path": "assets/exports/v2/animated/crew-carrier.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "024 24 slot 24 crew carrier crew-carrier crew-carrier crew carrier ambulance ambulance 01 core services  grounding shadows lighting changes"
+      "search_text": "024 24 slot 24 crew carrier crew-carrier crew-carrier crew carrier ambulance ambulance 01 core services direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 25,
@@ -802,18 +787,18 @@
       "service_label": "Police",
       "production_batch": "01-core-services",
       "real_length_metres": 5.0,
-      "width": 73,
-      "height": 29,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/traffic-car.png",
-      "animated_path": "assets/exports/command/animated/traffic-car.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/traffic-car.png",
+      "animated_path": "assets/exports/v2/animated/traffic-car.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "025 25 slot 25 traffic car traffic-car traffic-car traffic car police police 01 core services  grounding shadows lighting changes"
+      "search_text": "025 25 slot 25 traffic car traffic-car traffic-car traffic car police police 01 core services direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 26,
@@ -826,19 +811,18 @@
       "service_label": "Police",
       "production_batch": "01-core-services",
       "real_length_metres": 5.1,
-      "width": 74,
-      "height": 34,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Armed traffic low profile lightbar",
-      "static_path": "assets/exports/command/static/armed-traffic-car.png",
-      "animated_path": "assets/exports/command/animated/armed-traffic-car.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/armed-traffic-car.png",
+      "animated_path": "assets/exports/v2/animated/armed-traffic-car.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "026 26 slot 26 armed traffic car armed-traffic-car armed-traffic-car armed traffic car police police 01 core services armed traffic low profile lightbar grounding shadows role differentiation lighting changes"
+      "search_text": "026 26 slot 26 armed traffic car armed-traffic-car armed-traffic-car armed traffic car police police 01 core services direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 27,
@@ -851,19 +835,18 @@
       "service_label": "Fire",
       "production_batch": "01-core-services",
       "real_length_metres": 9.7,
-      "width": 134,
-      "height": 63,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Heavy tanker detail pass",
-      "static_path": "assets/exports/command/static/heavy-4x4-tanker.png",
-      "animated_path": "assets/exports/command/animated/heavy-4x4-tanker.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/heavy-4x4-tanker.png",
+      "animated_path": "assets/exports/v2/animated/heavy-4x4-tanker.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "027 27 slot 27 heavy 4x4 tanker heavy-4x4-tanker heavy-4x4-tanker heavy 4x4 tanker fire fire 01 core services heavy tanker detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "027 27 slot 27 heavy 4x4 tanker heavy-4x4-tanker heavy-4x4-tanker heavy 4x4 tanker fire fire 01 core services direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 28,
@@ -876,18 +859,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 5.3,
-      "width": 77,
-      "height": 36,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/prv.png",
-      "animated_path": "assets/exports/command/animated/prv.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/prv.png",
+      "animated_path": "assets/exports/v2/animated/prv.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "028 28 slot 28 prv prv prv prv ambulance ambulance 01 core services  grounding shadows lighting changes"
+      "search_text": "028 28 slot 28 prv prv prv prv ambulance ambulance 01 core services direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 29,
@@ -900,18 +883,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 7.0,
-      "width": 99,
-      "height": 46,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/srv.png",
-      "animated_path": "assets/exports/command/animated/srv.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/srv.png",
+      "animated_path": "assets/exports/v2/animated/srv.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "029 29 slot 29 srv srv srv srv ambulance ambulance 01 core services  grounding shadows lighting changes"
+      "search_text": "029 29 slot 29 srv srv srv srv ambulance ambulance 01 core services direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 30,
@@ -924,18 +907,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 7.0,
-      "width": 99,
-      "height": 44,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/welfare-vehicle.png",
-      "animated_path": "assets/exports/command/animated/welfare-vehicle.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/welfare-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/welfare-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "030 30 slot 30 welfare vehicle welfare-vehicle welfare-vehicle welfare vehicle ambulance ambulance 01 core services  grounding shadows lighting changes"
+      "search_text": "030 30 slot 30 welfare vehicle welfare-vehicle welfare-vehicle welfare vehicle ambulance ambulance 01 core services direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 31,
@@ -948,18 +931,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 9.0,
-      "width": 125,
-      "height": 55,
-      "frames": 18,
+      "width": 200,
+      "height": 200,
+      "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/atv-carrier.png",
-      "animated_path": "assets/exports/command/animated/atv-carrier.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/atv-carrier.png",
+      "animated_path": "assets/exports/v2/animated/atv-carrier.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "031 31 slot 31 atv carrier atv-carrier atv-carrier atv carrier ambulance ambulance 01 core services  grounding shadows lighting changes"
+      "search_text": "031 31 slot 31 atv carrier atv-carrier atv-carrier atv carrier ambulance ambulance 01 core services direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 32,
@@ -972,18 +955,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 10.0,
-      "width": 138,
-      "height": 70,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/ambulance-control-unit.png",
-      "animated_path": "assets/exports/command/animated/ambulance-control-unit.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/ambulance-control-unit.png",
+      "animated_path": "assets/exports/v2/animated/ambulance-control-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "032 32 slot 32 ambulance control unit ambulance-control-unit ambulance-control-unit ambulance control unit ambulance ambulance 01 core services  grounding shadows lighting changes"
+      "search_text": "032 32 slot 32 ambulance control unit ambulance-control-unit ambulance-control-unit ambulance control unit ambulance ambulance 01 core services direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 33,
@@ -996,19 +979,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 6.8,
-      "width": 96,
-      "height": 54,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "specialist-equipment",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Low-profile CBRN detector array",
-      "static_path": "assets/exports/command/static/cbrn-vehicle.png",
-      "animated_path": "assets/exports/command/animated/cbrn-vehicle.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/cbrn-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/cbrn-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "033 33 slot 33 cbrn vehicle cbrn-vehicle cbrn-vehicle cbrn vehicle ambulance ambulance 01 core services low-profile cbrn detector array grounding shadows specialist equipment lighting changes"
+      "search_text": "033 33 slot 33 cbrn vehicle cbrn-vehicle cbrn-vehicle cbrn vehicle ambulance ambulance 01 core services direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 34,
@@ -1021,18 +1003,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 9.5,
-      "width": 132,
-      "height": 68,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/mass-casualty-equipment.png",
-      "animated_path": "assets/exports/command/animated/mass-casualty-equipment.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/mass-casualty-equipment.png",
+      "animated_path": "assets/exports/v2/animated/mass-casualty-equipment.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "034 34 slot 34 mass casualty equipment mass-casualty-equipment mass-casualty-equipment mass casualty equipment ambulance ambulance 01 core services  grounding shadows lighting changes"
+      "search_text": "034 34 slot 34 mass casualty equipment mass-casualty-equipment mass-casualty-equipment mass casualty equipment ambulance ambulance 01 core services direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 35,
@@ -1045,18 +1027,18 @@
       "service_label": "Ambulance",
       "production_batch": "01-core-services",
       "real_length_metres": 5.0,
-      "width": 73,
-      "height": 33,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/ambulance-officer.png",
-      "animated_path": "assets/exports/command/animated/ambulance-officer.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/ambulance-officer.png",
+      "animated_path": "assets/exports/v2/animated/ambulance-officer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "035 35 slot 35 ambulance officer ambulance-officer ambulance-officer ambulance officer ambulance ambulance 01 core services  grounding shadows lighting changes"
+      "search_text": "035 35 slot 35 ambulance officer ambulance-officer ambulance-officer ambulance officer ambulance ambulance 01 core services direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 36,
@@ -1069,19 +1051,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 8.8,
-      "width": 122,
-      "height": 65,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Foam and manifold detail pass",
-      "static_path": "assets/exports/command/static/bfu.png",
-      "animated_path": "assets/exports/command/animated/bfu.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/bfu.png",
+      "animated_path": "assets/exports/v2/animated/bfu.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "036 36 slot 36 bfu bfu bfu bfu fire fire 02 fire specialist and pods foam and manifold detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "036 36 slot 36 bfu bfu bfu bfu fire fire 02 fire specialist and pods direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 37,
@@ -1094,19 +1075,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 9.5,
-      "width": 132,
-      "height": 56,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Wildfire tanker detail pass",
-      "static_path": "assets/exports/command/static/f-wrc.png",
-      "animated_path": "assets/exports/command/animated/f-wrc.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/f-wrc.png",
+      "animated_path": "assets/exports/v2/animated/f-wrc.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "037 37 slot 37 f/wrc f-wrc f-wrc f/wrc fire fire 02 fire specialist and pods wildfire tanker detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "037 37 slot 37 f/wrc f-wrc f-wrc f/wrc fire fire 02 fire specialist and pods direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 38,
@@ -1119,18 +1099,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 8.5,
-      "width": 118,
-      "height": 53,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/wrl-cafs.png",
-      "animated_path": "assets/exports/command/animated/wrl-cafs.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/wrl-cafs.png",
+      "animated_path": "assets/exports/v2/animated/wrl-cafs.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "038 38 slot 38 wrl cafs wrl-cafs wrl-cafs wrl cafs fire fire 02 fire specialist and pods  grounding shadows lighting changes"
+      "search_text": "038 38 slot 38 wrl cafs wrl-cafs wrl-cafs wrl cafs fire fire 02 fire specialist and pods direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 39,
@@ -1143,18 +1123,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 8.7,
-      "width": 121,
-      "height": 51,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/rp-cafs.png",
-      "animated_path": "assets/exports/command/animated/rp-cafs.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/rp-cafs.png",
+      "animated_path": "assets/exports/v2/animated/rp-cafs.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "039 39 slot 39 rp cafs rp-cafs rp-cafs rp cafs fire fire 02 fire specialist and pods  grounding shadows lighting changes"
+      "search_text": "039 39 slot 39 rp cafs rp-cafs rp-cafs rp cafs fire fire 02 fire specialist and pods direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 40,
@@ -1167,19 +1147,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 9.3,
-      "width": 129,
-      "height": 51,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Operations locker detail pass",
-      "static_path": "assets/exports/command/static/osu.png",
-      "animated_path": "assets/exports/command/animated/osu.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/osu.png",
+      "animated_path": "assets/exports/v2/animated/osu.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "040 40 slot 40 osu osu osu osu fire fire 02 fire specialist and pods operations locker detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "040 40 slot 40 osu osu osu osu fire fire 02 fire specialist and pods direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 41,
@@ -1192,18 +1171,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 8.5,
-      "width": 118,
-      "height": 51,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/pm.png",
-      "animated_path": "assets/exports/command/animated/pm.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/pm.png",
+      "animated_path": "assets/exports/v2/animated/pm.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "041 41 slot 41 pm pm pm pm fire fire 02 fire specialist and pods  grounding shadows lighting changes"
+      "search_text": "041 41 slot 41 pm pm pm pm fire fire 02 fire specialist and pods direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 42,
@@ -1216,18 +1195,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 6.4,
-      "width": 130,
-      "height": 60,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/water-pod.png",
-      "animated_path": "assets/exports/command/animated/water-pod.png",
+      "cue": "Direction-neutral pod · Blue response lighting",
+      "static_path": "assets/exports/v2/static/water-pod.png",
+      "animated_path": "assets/exports/v2/animated/water-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "042 42 slot 42 water pod water-pod water-pod water pod fire fire 02 fire specialist and pods  grounding shadows lighting changes"
+      "search_text": "042 42 slot 42 water pod water-pod water-pod water pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 43,
@@ -1240,18 +1219,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 6.4,
-      "width": 130,
-      "height": 59,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/bulk-foam-pod.png",
-      "animated_path": "assets/exports/command/animated/bulk-foam-pod.png",
+      "cue": "Direction-neutral pod · Blue response lighting",
+      "static_path": "assets/exports/v2/static/bulk-foam-pod.png",
+      "animated_path": "assets/exports/v2/animated/bulk-foam-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "043 43 slot 43 bulk foam pod bulk-foam-pod bulk-foam-pod bulk foam pod fire fire 02 fire specialist and pods  grounding shadows lighting changes"
+      "search_text": "043 43 slot 43 bulk foam pod bulk-foam-pod bulk-foam-pod bulk foam pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 44,
@@ -1264,18 +1243,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 6.4,
-      "width": 130,
-      "height": 62,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/rescue-pod.png",
-      "animated_path": "assets/exports/command/animated/rescue-pod.png",
+      "cue": "Direction-neutral pod · Blue response lighting",
+      "static_path": "assets/exports/v2/static/rescue-pod.png",
+      "animated_path": "assets/exports/v2/animated/rescue-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "044 44 slot 44 rescue pod rescue-pod rescue-pod rescue pod fire fire 02 fire specialist and pods  grounding shadows lighting changes"
+      "search_text": "044 44 slot 44 rescue pod rescue-pod rescue-pod rescue pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 45,
@@ -1288,18 +1267,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 6.4,
-      "width": 130,
-      "height": 80,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/command-pod.png",
-      "animated_path": "assets/exports/command/animated/command-pod.png",
+      "cue": "Direction-neutral pod · Blue response lighting",
+      "static_path": "assets/exports/v2/static/command-pod.png",
+      "animated_path": "assets/exports/v2/animated/command-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "045 45 slot 45 command pod command-pod command-pod command pod fire fire 02 fire specialist and pods  grounding shadows lighting changes"
+      "search_text": "045 45 slot 45 command pod command-pod command-pod command pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 46,
@@ -1312,18 +1291,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 6.4,
-      "width": 130,
-      "height": 62,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/welfare-pod.png",
-      "animated_path": "assets/exports/command/animated/welfare-pod.png",
+      "cue": "Direction-neutral pod · Blue response lighting",
+      "static_path": "assets/exports/v2/static/welfare-pod.png",
+      "animated_path": "assets/exports/v2/animated/welfare-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "046 46 slot 46 welfare pod welfare-pod welfare-pod welfare pod fire fire 02 fire specialist and pods  grounding shadows lighting changes"
+      "search_text": "046 46 slot 46 welfare pod welfare-pod welfare-pod welfare pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 47,
@@ -1336,18 +1315,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 6.4,
-      "width": 130,
-      "height": 58,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/basu-pod.png",
-      "animated_path": "assets/exports/command/animated/basu-pod.png",
+      "cue": "Direction-neutral pod · Blue response lighting",
+      "static_path": "assets/exports/v2/static/basu-pod.png",
+      "animated_path": "assets/exports/v2/animated/basu-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "047 47 slot 47 basu pod basu-pod basu-pod basu pod fire fire 02 fire specialist and pods  grounding shadows lighting changes"
+      "search_text": "047 47 slot 47 basu pod basu-pod basu-pod basu pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 48,
@@ -1360,18 +1339,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 5.8,
-      "width": 130,
-      "height": 69,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/misting-pod.png",
-      "animated_path": "assets/exports/command/animated/misting-pod.png",
+      "cue": "Direction-neutral pod · Blue response lighting",
+      "static_path": "assets/exports/v2/static/misting-pod.png",
+      "animated_path": "assets/exports/v2/animated/misting-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "048 48 slot 48 misting pod misting-pod misting-pod misting pod fire fire 02 fire specialist and pods  grounding shadows lighting changes"
+      "search_text": "048 48 slot 48 misting pod misting-pod misting-pod misting pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 49,
@@ -1384,18 +1363,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 6.4,
-      "width": 130,
-      "height": 58,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/hazardous-materials-pod.png",
-      "animated_path": "assets/exports/command/animated/hazardous-materials-pod.png",
+      "cue": "Direction-neutral pod · Blue response lighting",
+      "static_path": "assets/exports/v2/static/hazardous-materials-pod.png",
+      "animated_path": "assets/exports/v2/animated/hazardous-materials-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "049 49 slot 49 hazardous materials pod hazardous-materials-pod hazardous-materials-pod hazardous materials pod fire fire 02 fire specialist and pods  grounding shadows lighting changes"
+      "search_text": "049 49 slot 49 hazardous materials pod hazardous-materials-pod hazardous-materials-pod hazardous materials pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 50,
@@ -1408,18 +1387,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 6.6,
-      "width": 130,
-      "height": 58,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/osu-pod.png",
-      "animated_path": "assets/exports/command/animated/osu-pod.png",
+      "cue": "Direction-neutral pod · Blue response lighting",
+      "static_path": "assets/exports/v2/static/osu-pod.png",
+      "animated_path": "assets/exports/v2/animated/osu-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "050 50 slot 50 osu pod osu-pod osu-pod osu pod fire fire 02 fire specialist and pods  grounding shadows lighting changes"
+      "search_text": "050 50 slot 50 osu pod osu-pod osu-pod osu pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 51,
@@ -1432,18 +1411,18 @@
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
       "real_length_metres": 6.8,
-      "width": 130,
-      "height": 58,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/hvp.png",
-      "animated_path": "assets/exports/command/animated/hvp.png",
+      "cue": "Direction-neutral pod · Blue response lighting",
+      "static_path": "assets/exports/v2/static/hvp.png",
+      "animated_path": "assets/exports/v2/animated/hvp.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "051 51 slot 51 hvp hvp hvp hvp fire fire 02 fire specialist and pods  grounding shadows lighting changes"
+      "search_text": "051 51 slot 51 hvp hvp hvp hvp fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 52,
@@ -1456,18 +1435,18 @@
       "service_label": "Police",
       "production_batch": "03-police-specialist",
       "real_length_metres": 6.9,
-      "width": 98,
-      "height": 42,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/psu-carrier.png",
-      "animated_path": "assets/exports/command/animated/psu-carrier.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/psu-carrier.png",
+      "animated_path": "assets/exports/v2/animated/psu-carrier.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "052 52 slot 52 psu carrier psu-carrier psu-carrier psu carrier police police 03 police specialist  grounding shadows lighting changes"
+      "search_text": "052 52 slot 52 psu carrier psu-carrier psu-carrier psu carrier police police 03 police specialist direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 53,
@@ -1480,19 +1459,18 @@
       "service_label": "Police",
       "production_batch": "03-police-specialist",
       "real_length_metres": 7.2,
-      "width": 106,
-      "height": 48,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Tactical carrier detail pass",
-      "static_path": "assets/exports/command/static/firearms-personnel-carrier.png",
-      "animated_path": "assets/exports/command/animated/firearms-personnel-carrier.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/firearms-personnel-carrier.png",
+      "animated_path": "assets/exports/v2/animated/firearms-personnel-carrier.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "053 53 slot 53 firearms personnel carrier firearms-personnel-carrier firearms-personnel-carrier firearms personnel carrier police police 03 police specialist tactical carrier detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "053 53 slot 53 firearms personnel carrier firearms-personnel-carrier firearms-personnel-carrier firearms personnel carrier police police 03 police specialist direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 54,
@@ -1505,18 +1483,18 @@
       "service_label": "Police",
       "production_batch": "03-police-specialist",
       "real_length_metres": 7.3,
-      "width": 103,
-      "height": 45,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/multiple-dog-carrier.png",
-      "animated_path": "assets/exports/command/animated/multiple-dog-carrier.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/multiple-dog-carrier.png",
+      "animated_path": "assets/exports/v2/animated/multiple-dog-carrier.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "054 54 slot 54 multiple dog carrier multiple-dog-carrier multiple-dog-carrier multiple dog carrier police police 03 police specialist  grounding shadows lighting changes"
+      "search_text": "054 54 slot 54 multiple dog carrier multiple-dog-carrier multiple-dog-carrier multiple dog carrier police police 03 police specialist direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 55,
@@ -1529,18 +1507,18 @@
       "service_label": "Police",
       "production_batch": "03-police-specialist",
       "real_length_metres": 7.0,
-      "width": 99,
-      "height": 41,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/detention-van.png",
-      "animated_path": "assets/exports/command/animated/detention-van.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/detention-van.png",
+      "animated_path": "assets/exports/v2/animated/detention-van.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "055 55 slot 55 detention van detention-van detention-van detention van police police 03 police specialist  grounding shadows lighting changes"
+      "search_text": "055 55 slot 55 detention van detention-van detention-van detention van police police 03 police specialist direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 56,
@@ -1553,18 +1531,18 @@
       "service_label": "Police",
       "production_batch": "03-police-specialist",
       "real_length_metres": 9.0,
-      "width": 125,
-      "height": 54,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/mounted-unit.png",
-      "animated_path": "assets/exports/command/animated/mounted-unit.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/mounted-unit.png",
+      "animated_path": "assets/exports/v2/animated/mounted-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "056 56 slot 56 mounted unit mounted-unit mounted-unit mounted unit police police 03 police specialist  grounding shadows lighting changes"
+      "search_text": "056 56 slot 56 mounted unit mounted-unit mounted-unit mounted unit police police 03 police specialist direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 57,
@@ -1577,18 +1555,18 @@
       "service_label": "Police",
       "production_batch": "03-police-specialist",
       "real_length_metres": 6.5,
-      "width": 96,
-      "height": 47,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/m-rav.png",
-      "animated_path": "assets/exports/command/animated/m-rav.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/m-rav.png",
+      "animated_path": "assets/exports/v2/animated/m-rav.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "057 57 slot 57 m-rav m-rav m-rav m-rav police police 03 police specialist  grounding shadows lighting changes"
+      "search_text": "057 57 slot 57 m-rav m-rav m-rav m-rav police police 03 police specialist direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 58,
@@ -1601,18 +1579,18 @@
       "service_label": "Coastguard",
       "production_batch": "03-police-specialist",
       "real_length_metres": 5.2,
-      "width": 76,
-      "height": 40,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/crv.png",
-      "animated_path": "assets/exports/command/animated/crv.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/crv.png",
+      "animated_path": "assets/exports/v2/animated/crv.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "058 58 slot 58 crv crv crv crv coastguard coastguard 03 police specialist  grounding shadows lighting changes"
+      "search_text": "058 58 slot 58 crv crv crv crv coastguard coastguard 03 police specialist direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 59,
@@ -1625,18 +1603,18 @@
       "service_label": "Coastguard",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 7.0,
-      "width": 99,
-      "height": 44,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/coastguard-mud-rescue-unit.png",
-      "animated_path": "assets/exports/command/animated/coastguard-mud-rescue-unit.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/coastguard-mud-rescue-unit.png",
+      "animated_path": "assets/exports/v2/animated/coastguard-mud-rescue-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "059 59 slot 59 coastguard mud rescue unit coastguard-mud-rescue-unit coastguard-mud-rescue-unit coastguard mud rescue unit coastguard coastguard 04 coastguard rnli water rescue  grounding shadows lighting changes"
+      "search_text": "059 59 slot 59 coastguard mud rescue unit coastguard-mud-rescue-unit coastguard-mud-rescue-unit coastguard mud rescue unit coastguard coastguard 04 coastguard rnli water rescue direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 60,
@@ -1649,18 +1627,18 @@
       "service_label": "Coastguard",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 7.0,
-      "width": 99,
-      "height": 46,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/coastguard-rope-rescue-unit.png",
-      "animated_path": "assets/exports/command/animated/coastguard-rope-rescue-unit.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/coastguard-rope-rescue-unit.png",
+      "animated_path": "assets/exports/v2/animated/coastguard-rope-rescue-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "060 60 slot 60 coastguard rope rescue unit coastguard-rope-rescue-unit coastguard-rope-rescue-unit coastguard rope rescue unit coastguard coastguard 04 coastguard rnli water rescue  grounding shadows lighting changes"
+      "search_text": "060 60 slot 60 coastguard rope rescue unit coastguard-rope-rescue-unit coastguard-rope-rescue-unit coastguard rope rescue unit coastguard coastguard 04 coastguard rnli water rescue direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 61,
@@ -1673,18 +1651,18 @@
       "service_label": "Coastguard",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 5.6,
-      "width": 81,
-      "height": 49,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/coastguard-commander.png",
-      "animated_path": "assets/exports/command/animated/coastguard-commander.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/coastguard-commander.png",
+      "animated_path": "assets/exports/v2/animated/coastguard-commander.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "061 61 slot 61 coastguard commander coastguard-commander coastguard-commander coastguard commander coastguard coastguard 04 coastguard rnli water rescue  grounding shadows lighting changes"
+      "search_text": "061 61 slot 61 coastguard commander coastguard-commander coastguard-commander coastguard commander coastguard coastguard 04 coastguard rnli water rescue direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 62,
@@ -1697,19 +1675,19 @@
       "service_label": "Coastguard",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 11.8,
-      "width": 163,
-      "height": 54,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting",
+        "direction-neutral",
+        "emergency-lighting",
         "complete-towing-unit"
       ],
-      "cue": "Complete 4x4 Vehicle towing unit",
-      "static_path": "assets/exports/command/static/flood-rescue-unit-trailer.png",
-      "animated_path": "assets/exports/command/animated/flood-rescue-unit-trailer.png",
+      "cue": "Complete direction-neutral towing unit",
+      "static_path": "assets/exports/v2/static/flood-rescue-unit-trailer.png",
+      "animated_path": "assets/exports/v2/animated/flood-rescue-unit-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "062 62 slot 62 flood rescue unit (trailer) flood-rescue-unit-trailer flood-rescue-unit-trailer flood rescue unit (trailer) coastguard coastguard 04 coastguard rnli water rescue complete 4x4 vehicle towing unit grounding shadows lighting changes complete towing units"
+      "search_text": "062 62 slot 62 flood rescue unit (trailer) flood-rescue-unit-trailer flood-rescue-unit-trailer flood rescue unit (trailer) coastguard coastguard 04 coastguard rnli water rescue complete direction-neutral towing unit direction-neutral perspective emergency lighting complete towing units"
     },
     {
       "slot": 63,
@@ -1722,17 +1700,18 @@
       "service_label": "Coastguard",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 6.8,
-      "width": 96,
-      "height": 45,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/mud-decontamination-unit.png",
-      "animated_path": "assets/exports/command/animated/mud-decontamination-unit.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/mud-decontamination-unit.png",
+      "animated_path": "assets/exports/v2/animated/mud-decontamination-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "063 63 slot 63 mud decontamination unit mud-decontamination-unit mud-decontamination-unit mud decontamination unit coastguard coastguard 04 coastguard rnli water rescue  grounding shadows"
+      "search_text": "063 63 slot 63 mud decontamination unit mud-decontamination-unit mud-decontamination-unit mud decontamination unit coastguard coastguard 04 coastguard rnli water rescue direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 64,
@@ -1745,18 +1724,18 @@
       "service_label": "Coastguard",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 7.2,
-      "width": 102,
-      "height": 50,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/support-unit.png",
-      "animated_path": "assets/exports/command/animated/support-unit.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/support-unit.png",
+      "animated_path": "assets/exports/v2/animated/support-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "064 64 slot 64 support unit support-unit support-unit support unit coastguard coastguard 04 coastguard rnli water rescue  grounding shadows lighting changes"
+      "search_text": "064 64 slot 64 support unit support-unit support-unit support unit coastguard coastguard 04 coastguard rnli water rescue direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 65,
@@ -1769,18 +1748,19 @@
       "service_label": "Coastguard",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 17.6,
-      "width": 249,
-      "height": 82,
+      "width": 200,
+      "height": 200,
       "frames": 18,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting",
+        "air-marine-motion"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/coastguard-rescue-helicopter.png",
-      "animated_path": "assets/exports/command/animated/coastguard-rescue-helicopter.png",
+      "cue": "Direction-neutral aircraft · rotor and aviation-light motion",
+      "static_path": "assets/exports/v2/static/coastguard-rescue-helicopter.png",
+      "animated_path": "assets/exports/v2/animated/coastguard-rescue-helicopter.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "065 65 slot 65 coastguard rescue helicopter coastguard-rescue-helicopter coastguard-rescue-helicopter coastguard rescue helicopter coastguard coastguard 04 coastguard rnli water rescue  grounding shadows lighting changes"
+      "search_text": "065 65 slot 65 coastguard rescue helicopter coastguard-rescue-helicopter coastguard-rescue-helicopter coastguard rescue helicopter coastguard coastguard 04 coastguard rnli water rescue direction-neutral aircraft · rotor and aviation-light motion direction-neutral perspective emergency lighting aircraft and marine motion"
     },
     {
       "slot": 66,
@@ -1793,18 +1773,19 @@
       "service_label": "Coastguard",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 20.9,
-      "width": 292,
-      "height": 98,
+      "width": 200,
+      "height": 200,
       "frames": 18,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting",
+        "air-marine-motion"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/coastguard-rescue-helicopter-large.png",
-      "animated_path": "assets/exports/command/animated/coastguard-rescue-helicopter-large.png",
+      "cue": "Direction-neutral aircraft · rotor and aviation-light motion",
+      "static_path": "assets/exports/v2/static/coastguard-rescue-helicopter-large.png",
+      "animated_path": "assets/exports/v2/animated/coastguard-rescue-helicopter-large.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "066 66 slot 66 coastguard rescue helicopter (large) coastguard-rescue-helicopter-large coastguard-rescue-helicopter-large coastguard rescue helicopter (large) coastguard coastguard 04 coastguard rnli water rescue  grounding shadows lighting changes"
+      "search_text": "066 66 slot 66 coastguard rescue helicopter (large) coastguard-rescue-helicopter-large coastguard-rescue-helicopter-large coastguard rescue helicopter (large) coastguard coastguard 04 coastguard rnli water rescue direction-neutral aircraft · rotor and aviation-light motion direction-neutral perspective emergency lighting aircraft and marine motion"
     },
     {
       "slot": 67,
@@ -1817,18 +1798,18 @@
       "service_label": "Coastguard",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 5.0,
-      "width": 73,
-      "height": 38,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/4x4-vehicle.png",
-      "animated_path": "assets/exports/command/animated/4x4-vehicle.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/4x4-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/4x4-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "067 67 slot 67 4x4 vehicle 4x4-vehicle 4x4-vehicle 4x4 vehicle coastguard coastguard 04 coastguard rnli water rescue  grounding shadows lighting changes"
+      "search_text": "067 67 slot 67 4x4 vehicle 4x4-vehicle 4x4-vehicle 4x4 vehicle coastguard coastguard 04 coastguard rnli water rescue direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 68,
@@ -1841,20 +1822,19 @@
       "service_label": "Coastguard",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 12.5,
-      "width": 172,
-      "height": 46,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting",
+        "direction-neutral",
+        "emergency-lighting",
         "complete-towing-unit"
       ],
-      "cue": "Complete 4x4 Vehicle towing unit",
-      "static_path": "assets/exports/command/static/inland-rescue-boat-trailer.png",
-      "animated_path": "assets/exports/command/animated/inland-rescue-boat-trailer.png",
+      "cue": "Complete direction-neutral towing unit",
+      "static_path": "assets/exports/v2/static/inland-rescue-boat-trailer.png",
+      "animated_path": "assets/exports/v2/animated/inland-rescue-boat-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "068 68 slot 68 inland rescue boat (trailer) inland-rescue-boat-trailer inland-rescue-boat-trailer inland rescue boat (trailer) coastguard coastguard 04 coastguard rnli water rescue complete 4x4 vehicle towing unit grounding shadows v1.4 redraws lighting changes complete towing units"
+      "search_text": "068 68 slot 68 inland rescue boat (trailer) inland-rescue-boat-trailer inland-rescue-boat-trailer inland rescue boat (trailer) coastguard coastguard 04 coastguard rnli water rescue complete direction-neutral towing unit direction-neutral perspective emergency lighting complete towing units"
     },
     {
       "slot": 69,
@@ -1867,17 +1847,19 @@
       "service_label": "Lifeboat",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 7.6,
-      "width": 111,
-      "height": 55,
+      "width": 200,
+      "height": 200,
       "frames": 18,
       "focus": [
-        "grounding-shadow"
+        "direction-neutral",
+        "emergency-lighting",
+        "air-marine-motion"
       ],
-      "cue": "Atlantic inshore detail detail pass",
-      "static_path": "assets/exports/command/static/ilb.png",
-      "animated_path": "assets/exports/command/animated/ilb.png",
+      "cue": "Direction-neutral craft · navigation lights and wake motion",
+      "static_path": "assets/exports/v2/static/ilb.png",
+      "animated_path": "assets/exports/v2/animated/ilb.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "069 69 slot 69 ilb ilb ilb ilb lifeboat lifeboat 04 coastguard rnli water rescue atlantic inshore detail detail pass grounding shadows"
+      "search_text": "069 69 slot 69 ilb ilb ilb ilb lifeboat lifeboat 04 coastguard rnli water rescue direction-neutral craft · navigation lights and wake motion direction-neutral perspective emergency lighting aircraft and marine motion"
     },
     {
       "slot": 70,
@@ -1890,17 +1872,19 @@
       "service_label": "Lifeboat",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 16.5,
-      "width": 169,
-      "height": 84,
+      "width": 200,
+      "height": 200,
       "frames": 18,
       "focus": [
-        "grounding-shadow"
+        "direction-neutral",
+        "emergency-lighting",
+        "air-marine-motion"
       ],
-      "cue": "All weather lifeboat detail detail pass",
-      "static_path": "assets/exports/command/static/alb.png",
-      "animated_path": "assets/exports/command/animated/alb.png",
+      "cue": "Direction-neutral craft · navigation lights and wake motion",
+      "static_path": "assets/exports/v2/static/alb.png",
+      "animated_path": "assets/exports/v2/animated/alb.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "070 70 slot 70 alb alb alb alb lifeboat lifeboat 04 coastguard rnli water rescue all weather lifeboat detail detail pass grounding shadows"
+      "search_text": "070 70 slot 70 alb alb alb alb lifeboat lifeboat 04 coastguard rnli water rescue direction-neutral craft · navigation lights and wake motion direction-neutral perspective emergency lighting aircraft and marine motion"
     },
     {
       "slot": 71,
@@ -1913,19 +1897,19 @@
       "service_label": "Lifeboat",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 13.2,
-      "width": 182,
-      "height": 38,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting",
+        "direction-neutral",
+        "emergency-lighting",
         "complete-towing-unit"
       ],
-      "cue": "Complete Hovercraft Transporter towing unit",
-      "static_path": "assets/exports/command/static/rescue-watercraft-trailer.png",
-      "animated_path": "assets/exports/command/animated/rescue-watercraft-trailer.png",
+      "cue": "Complete direction-neutral towing unit",
+      "static_path": "assets/exports/v2/static/rescue-watercraft-trailer.png",
+      "animated_path": "assets/exports/v2/animated/rescue-watercraft-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "071 71 slot 71 rescue watercraft (trailer) rescue-watercraft-trailer rescue-watercraft-trailer rescue watercraft (trailer) lifeboat lifeboat 04 coastguard rnli water rescue complete hovercraft transporter towing unit grounding shadows lighting changes complete towing units"
+      "search_text": "071 71 slot 71 rescue watercraft (trailer) rescue-watercraft-trailer rescue-watercraft-trailer rescue watercraft (trailer) lifeboat lifeboat 04 coastguard rnli water rescue complete direction-neutral towing unit direction-neutral perspective emergency lighting complete towing units"
     },
     {
       "slot": 72,
@@ -1938,20 +1922,19 @@
       "service_label": "Lifeboat",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 14.2,
-      "width": 195,
-      "height": 46,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting",
+        "direction-neutral",
+        "emergency-lighting",
         "complete-towing-unit"
       ],
-      "cue": "Complete Hovercraft Transporter towing unit",
-      "static_path": "assets/exports/command/static/hovercraft-trailer.png",
-      "animated_path": "assets/exports/command/animated/hovercraft-trailer.png",
+      "cue": "Complete direction-neutral towing unit",
+      "static_path": "assets/exports/v2/static/hovercraft-trailer.png",
+      "animated_path": "assets/exports/v2/animated/hovercraft-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "072 72 slot 72 hovercraft (trailer) hovercraft-trailer hovercraft-trailer hovercraft (trailer) lifeboat lifeboat 04 coastguard rnli water rescue complete hovercraft transporter towing unit grounding shadows v1.4 redraws lighting changes complete towing units"
+      "search_text": "072 72 slot 72 hovercraft (trailer) hovercraft-trailer hovercraft-trailer hovercraft (trailer) lifeboat lifeboat 04 coastguard rnli water rescue complete direction-neutral towing unit direction-neutral perspective emergency lighting complete towing units"
     },
     {
       "slot": 73,
@@ -1964,18 +1947,18 @@
       "service_label": "Lifeboat",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 6.2,
-      "width": 93,
-      "height": 40,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/hovercraft-transporter.png",
-      "animated_path": "assets/exports/command/animated/hovercraft-transporter.png",
+      "cue": "Direction-neutral towed · Blue response lighting",
+      "static_path": "assets/exports/v2/static/hovercraft-transporter.png",
+      "animated_path": "assets/exports/v2/animated/hovercraft-transporter.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "073 73 slot 73 hovercraft transporter hovercraft-transporter hovercraft-transporter hovercraft transporter lifeboat lifeboat 04 coastguard rnli water rescue  grounding shadows lighting changes"
+      "search_text": "073 73 slot 73 hovercraft transporter hovercraft-transporter hovercraft-transporter hovercraft transporter lifeboat lifeboat 04 coastguard rnli water rescue direction-neutral towed · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 74,
@@ -1988,18 +1971,18 @@
       "service_label": "Fire",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 5.0,
-      "width": 73,
-      "height": 36,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/light-4x4.png",
-      "animated_path": "assets/exports/command/animated/light-4x4.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/light-4x4.png",
+      "animated_path": "assets/exports/v2/animated/light-4x4.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "074 74 slot 74 light 4x4 light-4x4 light-4x4 light 4x4 fire fire 04 coastguard rnli water rescue  grounding shadows lighting changes"
+      "search_text": "074 74 slot 74 light 4x4 light-4x4 light-4x4 light 4x4 fire fire 04 coastguard rnli water rescue direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 75,
@@ -2012,19 +1995,19 @@
       "service_label": "Fire",
       "production_batch": "04-coastguard-rnli-water-rescue",
       "real_length_metres": 12.2,
-      "width": 169,
-      "height": 48,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting",
+        "direction-neutral",
+        "emergency-lighting",
         "complete-towing-unit"
       ],
-      "cue": "Complete Light 4x4 towing unit",
-      "static_path": "assets/exports/command/static/boat-trailer.png",
-      "animated_path": "assets/exports/command/animated/boat-trailer.png",
+      "cue": "Complete direction-neutral towing unit",
+      "static_path": "assets/exports/v2/static/boat-trailer.png",
+      "animated_path": "assets/exports/v2/animated/boat-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "075 75 slot 75 boat trailer boat-trailer boat-trailer boat trailer fire fire 04 coastguard rnli water rescue complete light 4x4 towing unit grounding shadows lighting changes complete towing units"
+      "search_text": "075 75 slot 75 boat trailer boat-trailer boat-trailer boat trailer fire fire 04 coastguard rnli water rescue complete direction-neutral towing unit direction-neutral perspective emergency lighting complete towing units"
     },
     {
       "slot": 76,
@@ -2037,19 +2020,18 @@
       "service_label": "Fire",
       "production_batch": "05-airfield-and-specialist",
       "real_length_metres": 12.0,
-      "width": 166,
-      "height": 57,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Airport foam tender detail pass",
-      "static_path": "assets/exports/command/static/major-foam-tender.png",
-      "animated_path": "assets/exports/command/animated/major-foam-tender.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/major-foam-tender.png",
+      "animated_path": "assets/exports/v2/animated/major-foam-tender.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "076 76 slot 76 major foam tender major-foam-tender major-foam-tender major foam tender fire fire 05 airfield and specialist airport foam tender detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "076 76 slot 76 major foam tender major-foam-tender major-foam-tender major foam tender fire fire 05 airfield and specialist direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 77,
@@ -2062,19 +2044,18 @@
       "service_label": "Fire",
       "production_batch": "05-airfield-and-specialist",
       "real_length_metres": 7.5,
-      "width": 106,
-      "height": 54,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Rapid intervention detail pass",
-      "static_path": "assets/exports/command/static/riv.png",
-      "animated_path": "assets/exports/command/animated/riv.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/riv.png",
+      "animated_path": "assets/exports/v2/animated/riv.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "077 77 slot 77 riv riv riv riv fire fire 05 airfield and specialist rapid intervention detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "077 77 slot 77 riv riv riv riv fire fire 05 airfield and specialist direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 78,
@@ -2087,18 +2068,18 @@
       "service_label": "Fire",
       "production_batch": "05-airfield-and-specialist",
       "real_length_metres": 5.8,
-      "width": 83,
-      "height": 44,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/airfield-firefighting-command-vehicle.png",
-      "animated_path": "assets/exports/command/animated/airfield-firefighting-command-vehicle.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/airfield-firefighting-command-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/airfield-firefighting-command-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "078 78 slot 78 airfield firefighting command vehicle airfield-firefighting-command-vehicle airfield-firefighting-command-vehicle airfield firefighting command vehicle fire fire 05 airfield and specialist  grounding shadows lighting changes"
+      "search_text": "078 78 slot 78 airfield firefighting command vehicle airfield-firefighting-command-vehicle airfield-firefighting-command-vehicle airfield firefighting command vehicle fire fire 05 airfield and specialist direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 79,
@@ -2111,17 +2092,18 @@
       "service_label": "Fire",
       "production_batch": "05-airfield-and-specialist",
       "real_length_metres": 12.0,
-      "width": 166,
-      "height": 83,
-      "frames": 18,
+      "width": 200,
+      "height": 200,
+      "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/rescue-stairs.png",
-      "animated_path": "assets/exports/command/animated/rescue-stairs.png",
+      "cue": "Direction-neutral heavy · Amber response lighting",
+      "static_path": "assets/exports/v2/static/rescue-stairs.png",
+      "animated_path": "assets/exports/v2/animated/rescue-stairs.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "079 79 slot 79 rescue stairs rescue-stairs rescue-stairs rescue stairs fire fire 05 airfield and specialist  grounding shadows"
+      "search_text": "079 79 slot 79 rescue stairs rescue-stairs rescue-stairs rescue stairs fire fire 05 airfield and specialist direction-neutral heavy · amber response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 80,
@@ -2134,17 +2116,18 @@
       "service_label": "Airfield",
       "production_batch": "05-airfield-and-specialist",
       "real_length_metres": 5.2,
-      "width": 76,
-      "height": 37,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/airfield-operations-vehicle.png",
-      "animated_path": "assets/exports/command/animated/airfield-operations-vehicle.png",
+      "cue": "Direction-neutral car · Amber response lighting",
+      "static_path": "assets/exports/v2/static/airfield-operations-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/airfield-operations-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "080 80 slot 80 airfield operations vehicle airfield-operations-vehicle airfield-operations-vehicle airfield operations vehicle airfield airfield 05 airfield and specialist  grounding shadows"
+      "search_text": "080 80 slot 80 airfield operations vehicle airfield-operations-vehicle airfield-operations-vehicle airfield operations vehicle airfield airfield 05 airfield and specialist direction-neutral car · amber response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 81,
@@ -2157,17 +2140,18 @@
       "service_label": "Airfield",
       "production_batch": "05-airfield-and-specialist",
       "real_length_metres": 5.6,
-      "width": 81,
-      "height": 46,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/airfield-operations-supervisor.png",
-      "animated_path": "assets/exports/command/animated/airfield-operations-supervisor.png",
+      "cue": "Direction-neutral van · Amber response lighting",
+      "static_path": "assets/exports/v2/static/airfield-operations-supervisor.png",
+      "animated_path": "assets/exports/v2/animated/airfield-operations-supervisor.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "081 81 slot 81 airfield operations supervisor airfield-operations-supervisor airfield-operations-supervisor airfield operations supervisor airfield airfield 05 airfield and specialist  grounding shadows"
+      "search_text": "081 81 slot 81 airfield operations supervisor airfield-operations-supervisor airfield-operations-supervisor airfield operations supervisor airfield airfield 05 airfield and specialist direction-neutral van · amber response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 82,
@@ -2180,18 +2164,19 @@
       "service_label": "Airfield",
       "production_batch": "05-airfield-and-specialist",
       "real_length_metres": 11.2,
-      "width": 156,
-      "height": 46,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
+        "direction-neutral",
+        "emergency-lighting",
         "complete-towing-unit"
       ],
-      "cue": "Complete Airfield Operations Vehicle towing unit",
-      "static_path": "assets/exports/command/static/medical-equipment-trailer.png",
-      "animated_path": "assets/exports/command/animated/medical-equipment-trailer.png",
+      "cue": "Complete direction-neutral towing unit",
+      "static_path": "assets/exports/v2/static/medical-equipment-trailer.png",
+      "animated_path": "assets/exports/v2/animated/medical-equipment-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "082 82 slot 82 medical equipment trailer medical-equipment-trailer medical-equipment-trailer medical equipment trailer airfield airfield 05 airfield and specialist complete airfield operations vehicle towing unit grounding shadows complete towing units"
+      "search_text": "082 82 slot 82 medical equipment trailer medical-equipment-trailer medical-equipment-trailer medical equipment trailer airfield airfield 05 airfield and specialist complete direction-neutral towing unit direction-neutral perspective emergency lighting complete towing units"
     },
     {
       "slot": 83,
@@ -2204,18 +2189,18 @@
       "service_label": "Police",
       "production_batch": "05-airfield-and-specialist",
       "real_length_metres": 7.0,
-      "width": 103,
-      "height": 47,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/armed-cell-van.png",
-      "animated_path": "assets/exports/command/animated/armed-cell-van.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/armed-cell-van.png",
+      "animated_path": "assets/exports/v2/animated/armed-cell-van.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "083 83 slot 83 armed cell van armed-cell-van armed-cell-van armed cell van police police 05 airfield and specialist  grounding shadows lighting changes"
+      "search_text": "083 83 slot 83 armed cell van armed-cell-van armed-cell-van armed cell van police police 05 airfield and specialist direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 84,
@@ -2228,18 +2213,18 @@
       "service_label": "Ambulance",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 2.0,
-      "width": 62,
-      "height": 40,
-      "frames": 18,
+      "width": 200,
+      "height": 200,
+      "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/medical-cycle-responder.png",
-      "animated_path": "assets/exports/command/animated/medical-cycle-responder.png",
+      "cue": "Direction-neutral cycle · Blue response lighting",
+      "static_path": "assets/exports/v2/static/medical-cycle-responder.png",
+      "animated_path": "assets/exports/v2/animated/medical-cycle-responder.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "084 84 slot 84 medical cycle responder medical-cycle-responder medical-cycle-responder medical cycle responder ambulance ambulance 06 sar and medical expansion  grounding shadows lighting changes"
+      "search_text": "084 84 slot 84 medical cycle responder medical-cycle-responder medical-cycle-responder medical cycle responder ambulance ambulance 06 sar and medical expansion direction-neutral cycle · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 85,
@@ -2252,19 +2237,19 @@
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 9.7,
-      "width": 134,
-      "height": 44,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting",
+        "direction-neutral",
+        "emergency-lighting",
         "complete-towing-unit"
       ],
-      "cue": "Complete SAR 4x4 towing unit",
-      "static_path": "assets/exports/command/static/pump-trailer.png",
-      "animated_path": "assets/exports/command/animated/pump-trailer.png",
+      "cue": "Complete direction-neutral towing unit",
+      "static_path": "assets/exports/v2/static/pump-trailer.png",
+      "animated_path": "assets/exports/v2/animated/pump-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "085 85 slot 85 pump trailer pump-trailer pump-trailer pump trailer search-and-rescue sar 06 sar and medical expansion complete sar 4x4 towing unit grounding shadows lighting changes complete towing units"
+      "search_text": "085 85 slot 85 pump trailer pump-trailer pump-trailer pump trailer search-and-rescue sar 06 sar and medical expansion complete direction-neutral towing unit direction-neutral perspective emergency lighting complete towing units"
     },
     {
       "slot": 86,
@@ -2277,19 +2262,18 @@
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 7.2,
-      "width": 102,
-      "height": 65,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "specialist-equipment",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Low-profile SAR command array",
-      "static_path": "assets/exports/command/static/control-van-sar.png",
-      "animated_path": "assets/exports/command/animated/control-van-sar.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/control-van-sar.png",
+      "animated_path": "assets/exports/v2/animated/control-van-sar.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "086 86 slot 86 control van (sar) control-van-sar control-van-sar control van (sar) search-and-rescue sar 06 sar and medical expansion low-profile sar command array grounding shadows specialist equipment lighting changes"
+      "search_text": "086 86 slot 86 control van (sar) control-van-sar control-van-sar control van (sar) search-and-rescue sar 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 87,
@@ -2302,18 +2286,18 @@
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 7.0,
-      "width": 99,
-      "height": 49,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/operational-support-van.png",
-      "animated_path": "assets/exports/command/animated/operational-support-van.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/operational-support-van.png",
+      "animated_path": "assets/exports/v2/animated/operational-support-van.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "087 87 slot 87 operational support van operational-support-van operational-support-van operational support van search-and-rescue sar 06 sar and medical expansion  grounding shadows lighting changes"
+      "search_text": "087 87 slot 87 operational support van operational-support-van operational-support-van operational support van search-and-rescue sar 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 88,
@@ -2326,19 +2310,19 @@
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 11.7,
-      "width": 162,
-      "height": 51,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting",
+        "direction-neutral",
+        "emergency-lighting",
         "complete-towing-unit"
       ],
-      "cue": "Complete SAR 4x4 towing unit",
-      "static_path": "assets/exports/command/static/operational-support-trailer.png",
-      "animated_path": "assets/exports/command/animated/operational-support-trailer.png",
+      "cue": "Complete direction-neutral towing unit",
+      "static_path": "assets/exports/v2/static/operational-support-trailer.png",
+      "animated_path": "assets/exports/v2/animated/operational-support-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "088 88 slot 88 operational support trailer operational-support-trailer operational-support-trailer operational support trailer search-and-rescue sar 06 sar and medical expansion complete sar 4x4 towing unit grounding shadows lighting changes complete towing units"
+      "search_text": "088 88 slot 88 operational support trailer operational-support-trailer operational-support-trailer operational support trailer search-and-rescue sar 06 sar and medical expansion complete direction-neutral towing unit direction-neutral perspective emergency lighting complete towing units"
     },
     {
       "slot": 89,
@@ -2351,19 +2335,19 @@
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 12.0,
-      "width": 166,
-      "height": 47,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting",
+        "direction-neutral",
+        "emergency-lighting",
         "complete-towing-unit"
       ],
-      "cue": "Complete SAR 4x4 towing unit",
-      "static_path": "assets/exports/command/static/sar-flood-rescue-trailer.png",
-      "animated_path": "assets/exports/command/animated/sar-flood-rescue-trailer.png",
+      "cue": "Complete direction-neutral towing unit",
+      "static_path": "assets/exports/v2/static/sar-flood-rescue-trailer.png",
+      "animated_path": "assets/exports/v2/animated/sar-flood-rescue-trailer.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "089 89 slot 89 sar flood rescue (trailer) sar-flood-rescue-trailer sar-flood-rescue-trailer sar flood rescue (trailer) search-and-rescue sar 06 sar and medical expansion complete sar 4x4 towing unit grounding shadows lighting changes complete towing units"
+      "search_text": "089 89 slot 89 sar flood rescue (trailer) sar-flood-rescue-trailer sar-flood-rescue-trailer sar flood rescue (trailer) search-and-rescue sar 06 sar and medical expansion complete direction-neutral towing unit direction-neutral perspective emergency lighting complete towing units"
     },
     {
       "slot": 90,
@@ -2376,19 +2360,18 @@
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 6.2,
-      "width": 89,
-      "height": 53,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "specialist-equipment",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Low-profile SAR drone stowage rail",
-      "static_path": "assets/exports/command/static/drone-vehicle-sar-hq.png",
-      "animated_path": "assets/exports/command/animated/drone-vehicle-sar-hq.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/drone-vehicle-sar-hq.png",
+      "animated_path": "assets/exports/v2/animated/drone-vehicle-sar-hq.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "090 90 slot 90 drone vehicle (sar hq) drone-vehicle-sar-hq drone-vehicle-sar-hq drone vehicle (sar hq) search-and-rescue sar 06 sar and medical expansion low-profile sar drone stowage rail grounding shadows specialist equipment lighting changes"
+      "search_text": "090 90 slot 90 drone vehicle (sar hq) drone-vehicle-sar-hq drone-vehicle-sar-hq drone vehicle (sar hq) search-and-rescue sar 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 91,
@@ -2401,19 +2384,18 @@
       "service_label": "Fire",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 6.2,
-      "width": 93,
-      "height": 56,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "specialist-equipment",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Drone launch cradle",
-      "static_path": "assets/exports/command/static/drone-vehicle-fire-station.png",
-      "animated_path": "assets/exports/command/animated/drone-vehicle-fire-station.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/drone-vehicle-fire-station.png",
+      "animated_path": "assets/exports/v2/animated/drone-vehicle-fire-station.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "091 91 slot 91 drone vehicle (fire station) drone-vehicle-fire-station drone-vehicle-fire-station drone vehicle (fire station) fire fire 06 sar and medical expansion drone launch cradle grounding shadows specialist equipment lighting changes"
+      "search_text": "091 91 slot 91 drone vehicle (fire station) drone-vehicle-fire-station drone-vehicle-fire-station drone vehicle (fire station) fire fire 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 92,
@@ -2426,19 +2408,18 @@
       "service_label": "Police",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 6.2,
-      "width": 89,
-      "height": 55,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "specialist-equipment",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Drone launch cradle",
-      "static_path": "assets/exports/command/static/drone-vehicle-police-station.png",
-      "animated_path": "assets/exports/command/animated/drone-vehicle-police-station.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/drone-vehicle-police-station.png",
+      "animated_path": "assets/exports/v2/animated/drone-vehicle-police-station.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "092 92 slot 92 drone vehicle (police station) drone-vehicle-police-station drone-vehicle-police-station drone vehicle (police station) police police 06 sar and medical expansion drone launch cradle grounding shadows specialist equipment lighting changes"
+      "search_text": "092 92 slot 92 drone vehicle (police station) drone-vehicle-police-station drone-vehicle-police-station drone vehicle (police station) police police 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 93,
@@ -2451,18 +2432,18 @@
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 4.8,
-      "width": 70,
-      "height": 33,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/personal-sar-vehicle.png",
-      "animated_path": "assets/exports/command/animated/personal-sar-vehicle.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/personal-sar-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/personal-sar-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "093 93 slot 93 personal sar vehicle personal-sar-vehicle personal-sar-vehicle personal sar vehicle search-and-rescue sar 06 sar and medical expansion  grounding shadows lighting changes"
+      "search_text": "093 93 slot 93 personal sar vehicle personal-sar-vehicle personal-sar-vehicle personal sar vehicle search-and-rescue sar 06 sar and medical expansion direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 94,
@@ -2475,18 +2456,18 @@
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 5.2,
-      "width": 76,
-      "height": 45,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/sar-4x4.png",
-      "animated_path": "assets/exports/command/animated/sar-4x4.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/sar-4x4.png",
+      "animated_path": "assets/exports/v2/animated/sar-4x4.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "094 94 slot 94 sar 4x4 sar-4x4 sar-4x4 sar 4x4 search-and-rescue sar 06 sar and medical expansion  grounding shadows lighting changes"
+      "search_text": "094 94 slot 94 sar 4x4 sar-4x4 sar-4x4 sar 4x4 search-and-rescue sar 06 sar and medical expansion direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 95,
@@ -2499,19 +2480,18 @@
       "service_label": "Ambulance",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 4.9,
-      "width": 72,
-      "height": 32,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Rrv aerial pair",
-      "static_path": "assets/exports/command/static/rrv-2.png",
-      "animated_path": "assets/exports/command/animated/rrv-2.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/rrv-2.png",
+      "animated_path": "assets/exports/v2/animated/rrv-2.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "095 95 slot 95 rrv rrv-2 rrv-2 rrv ambulance ambulance 06 sar and medical expansion rrv aerial pair grounding shadows role differentiation lighting changes"
+      "search_text": "095 95 slot 95 rrv rrv-2 rrv-2 rrv ambulance ambulance 06 sar and medical expansion direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 96,
@@ -2524,17 +2504,18 @@
       "service_label": "Ambulance",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 4.7,
-      "width": 69,
-      "height": 31,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/community-midwife.png",
-      "animated_path": "assets/exports/command/animated/community-midwife.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/community-midwife.png",
+      "animated_path": "assets/exports/v2/animated/community-midwife.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "096 96 slot 96 community midwife community-midwife community-midwife community midwife ambulance ambulance 06 sar and medical expansion  grounding shadows"
+      "search_text": "096 96 slot 96 community midwife community-midwife community-midwife community midwife ambulance ambulance 06 sar and medical expansion direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 97,
@@ -2547,19 +2528,18 @@
       "service_label": "Ambulance",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 5.0,
-      "width": 73,
-      "height": 33,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Specialist medical module",
-      "static_path": "assets/exports/command/static/specialist-paramedic-rrv.png",
-      "animated_path": "assets/exports/command/animated/specialist-paramedic-rrv.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/specialist-paramedic-rrv.png",
+      "animated_path": "assets/exports/v2/animated/specialist-paramedic-rrv.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "097 97 slot 97 specialist paramedic rrv specialist-paramedic-rrv specialist-paramedic-rrv specialist paramedic rrv ambulance ambulance 06 sar and medical expansion specialist medical module grounding shadows role differentiation lighting changes"
+      "search_text": "097 97 slot 97 specialist paramedic rrv specialist-paramedic-rrv specialist-paramedic-rrv specialist paramedic rrv ambulance ambulance 06 sar and medical expansion direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 98,
@@ -2572,17 +2552,18 @@
       "service_label": "Ambulance",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 6.8,
-      "width": 96,
-      "height": 44,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/patient-transport-service-ambulance.png",
-      "animated_path": "assets/exports/command/animated/patient-transport-service-ambulance.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/patient-transport-service-ambulance.png",
+      "animated_path": "assets/exports/v2/animated/patient-transport-service-ambulance.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "098 98 slot 98 patient transport service ambulance patient-transport-service-ambulance patient-transport-service-ambulance patient transport service ambulance ambulance ambulance 06 sar and medical expansion  grounding shadows"
+      "search_text": "098 98 slot 98 patient transport service ambulance patient-transport-service-ambulance patient-transport-service-ambulance patient transport service ambulance ambulance ambulance 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 99,
@@ -2595,19 +2576,18 @@
       "service_label": "Ambulance",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 7.2,
-      "width": 102,
-      "height": 44,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Critical care detail pass",
-      "static_path": "assets/exports/command/static/critical-care-transfer-ambulance.png",
-      "animated_path": "assets/exports/command/animated/critical-care-transfer-ambulance.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/critical-care-transfer-ambulance.png",
+      "animated_path": "assets/exports/v2/animated/critical-care-transfer-ambulance.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "099 99 slot 99 critical care transfer ambulance critical-care-transfer-ambulance critical-care-transfer-ambulance critical care transfer ambulance ambulance ambulance 06 sar and medical expansion critical care detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "099 99 slot 99 critical care transfer ambulance critical-care-transfer-ambulance critical-care-transfer-ambulance critical care transfer ambulance ambulance ambulance 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 100,
@@ -2620,18 +2600,18 @@
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 5.0,
-      "width": 77,
-      "height": 45,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/mountain-rescue-4x4.png",
-      "animated_path": "assets/exports/command/animated/mountain-rescue-4x4.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/mountain-rescue-4x4.png",
+      "animated_path": "assets/exports/v2/animated/mountain-rescue-4x4.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "100 100 slot 100 mountain rescue 4x4 mountain-rescue-4x4 mountain-rescue-4x4 mountain rescue 4x4 search-and-rescue sar 06 sar and medical expansion  grounding shadows lighting changes"
+      "search_text": "100 100 slot 100 mountain rescue 4x4 mountain-rescue-4x4 mountain-rescue-4x4 mountain rescue 4x4 search-and-rescue sar 06 sar and medical expansion direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 101,
@@ -2644,19 +2624,18 @@
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 7.0,
-      "width": 99,
-      "height": 61,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "redraw",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Mountain command detail pass",
-      "static_path": "assets/exports/command/static/control-van-mountain-rescue.png",
-      "animated_path": "assets/exports/command/animated/control-van-mountain-rescue.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/control-van-mountain-rescue.png",
+      "animated_path": "assets/exports/v2/animated/control-van-mountain-rescue.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "101 101 slot 101 control van (mountain rescue) control-van-mountain-rescue control-van-mountain-rescue control van (mountain rescue) search-and-rescue sar 06 sar and medical expansion mountain command detail pass grounding shadows v1.4 redraws lighting changes"
+      "search_text": "101 101 slot 101 control van (mountain rescue) control-van-mountain-rescue control-van-mountain-rescue control van (mountain rescue) search-and-rescue sar 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 102,
@@ -2669,18 +2648,18 @@
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 5.8,
-      "width": 83,
-      "height": 40,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/search-dog-unit.png",
-      "animated_path": "assets/exports/command/animated/search-dog-unit.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/search-dog-unit.png",
+      "animated_path": "assets/exports/v2/animated/search-dog-unit.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "102 102 slot 102 search dog unit search-dog-unit search-dog-unit search dog unit search-and-rescue sar 06 sar and medical expansion  grounding shadows lighting changes"
+      "search_text": "102 102 slot 102 search dog unit search-dog-unit search-dog-unit search dog unit search-and-rescue sar 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 103,
@@ -2693,18 +2672,18 @@
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 5.8,
-      "width": 83,
-      "height": 41,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/search-dog-unit-sar.png",
-      "animated_path": "assets/exports/command/animated/search-dog-unit-sar.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/search-dog-unit-sar.png",
+      "animated_path": "assets/exports/v2/animated/search-dog-unit-sar.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "103 103 slot 103 search dog unit (sar) search-dog-unit-sar search-dog-unit-sar search dog unit (sar) search-and-rescue sar 06 sar and medical expansion  grounding shadows lighting changes"
+      "search_text": "103 103 slot 103 search dog unit (sar) search-dog-unit-sar search-dog-unit-sar search dog unit (sar) search-and-rescue sar 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 104,
@@ -2717,18 +2696,18 @@
       "service_label": "SAR",
       "production_batch": "06-sar-and-medical-expansion",
       "real_length_metres": 7.0,
-      "width": 99,
-      "height": 41,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/crew-carrier-sar.png",
-      "animated_path": "assets/exports/command/animated/crew-carrier-sar.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/crew-carrier-sar.png",
+      "animated_path": "assets/exports/v2/animated/crew-carrier-sar.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "104 104 slot 104 crew carrier (sar) crew-carrier-sar crew-carrier-sar crew carrier (sar) search-and-rescue sar 06 sar and medical expansion  grounding shadows lighting changes"
+      "search_text": "104 104 slot 104 crew carrier (sar) crew-carrier-sar crew-carrier-sar crew carrier (sar) search-and-rescue sar 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 105,
@@ -2741,17 +2720,18 @@
       "service_label": "Recovery",
       "production_batch": "07-recovery",
       "real_length_metres": 7.0,
-      "width": 99,
-      "height": 45,
-      "frames": 18,
+      "width": 200,
+      "height": 200,
+      "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/recovery-vehicle.png",
-      "animated_path": "assets/exports/command/animated/recovery-vehicle.png",
+      "cue": "Direction-neutral van · Amber response lighting",
+      "static_path": "assets/exports/v2/static/recovery-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/recovery-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "105 105 slot 105 recovery vehicle recovery-vehicle recovery-vehicle recovery vehicle recovery recovery 07 recovery  grounding shadows"
+      "search_text": "105 105 slot 105 recovery vehicle recovery-vehicle recovery-vehicle recovery vehicle recovery recovery 07 recovery direction-neutral van · amber response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 106,
@@ -2764,17 +2744,18 @@
       "service_label": "Recovery",
       "production_batch": "07-recovery",
       "real_length_metres": 8.5,
-      "width": 118,
-      "height": 50,
-      "frames": 18,
+      "width": 200,
+      "height": 200,
+      "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/flatbed-recovery-vehicle.png",
-      "animated_path": "assets/exports/command/animated/flatbed-recovery-vehicle.png",
+      "cue": "Direction-neutral heavy · Amber response lighting",
+      "static_path": "assets/exports/v2/static/flatbed-recovery-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/flatbed-recovery-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "106 106 slot 106 flatbed recovery vehicle flatbed-recovery-vehicle flatbed-recovery-vehicle flatbed recovery vehicle recovery recovery 07 recovery  grounding shadows"
+      "search_text": "106 106 slot 106 flatbed recovery vehicle flatbed-recovery-vehicle flatbed-recovery-vehicle flatbed recovery vehicle recovery recovery 07 recovery direction-neutral heavy · amber response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 107,
@@ -2787,17 +2768,18 @@
       "service_label": "Recovery",
       "production_batch": "07-recovery",
       "real_length_metres": 10.0,
-      "width": 138,
-      "height": 57,
-      "frames": 18,
+      "width": 200,
+      "height": 200,
+      "frames": 12,
       "focus": [
-        "grounding-shadow"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/hgv-recovery-vehicle.png",
-      "animated_path": "assets/exports/command/animated/hgv-recovery-vehicle.png",
+      "cue": "Direction-neutral heavy · Amber response lighting",
+      "static_path": "assets/exports/v2/static/hgv-recovery-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/hgv-recovery-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "107 107 slot 107 hgv recovery vehicle hgv-recovery-vehicle hgv-recovery-vehicle hgv recovery vehicle recovery recovery 07 recovery  grounding shadows"
+      "search_text": "107 107 slot 107 hgv recovery vehicle hgv-recovery-vehicle hgv-recovery-vehicle hgv recovery vehicle recovery recovery 07 recovery direction-neutral heavy · amber response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 108,
@@ -2810,18 +2792,18 @@
       "service_label": "Fire",
       "production_batch": "08-rail-eod-custody-expansion",
       "real_length_metres": 8.5,
-      "width": 118,
-      "height": 50,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/rru.png",
-      "animated_path": "assets/exports/command/animated/rru.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/rru.png",
+      "animated_path": "assets/exports/v2/animated/rru.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "108 108 slot 108 rru rru rru rru fire fire 08 rail eod custody expansion  grounding shadows lighting changes"
+      "search_text": "108 108 slot 108 rru rru rru rru fire fire 08 rail eod custody expansion direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 109,
@@ -2834,18 +2816,18 @@
       "service_label": "Police",
       "production_batch": "08-rail-eod-custody-expansion",
       "real_length_metres": 5.5,
-      "width": 80,
-      "height": 34,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/eiu.png",
-      "animated_path": "assets/exports/command/animated/eiu.png",
+      "cue": "Direction-neutral car · Blue response lighting",
+      "static_path": "assets/exports/v2/static/eiu.png",
+      "animated_path": "assets/exports/v2/animated/eiu.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "109 109 slot 109 eiu eiu eiu eiu police police 08 rail eod custody expansion  grounding shadows lighting changes"
+      "search_text": "109 109 slot 109 eiu eiu eiu eiu police police 08 rail eod custody expansion direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 110,
@@ -2858,19 +2840,18 @@
       "service_label": "EOD",
       "production_batch": "08-rail-eod-custody-expansion",
       "real_length_metres": 5.5,
-      "width": 84,
-      "height": 50,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Eod command mast",
-      "static_path": "assets/exports/command/static/eod-commander.png",
-      "animated_path": "assets/exports/command/animated/eod-commander.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/eod-commander.png",
+      "animated_path": "assets/exports/v2/animated/eod-commander.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "110 110 slot 110 eod commander eod-commander eod-commander eod commander eod eod 08 rail eod custody expansion eod command mast grounding shadows role differentiation lighting changes"
+      "search_text": "110 110 slot 110 eod commander eod-commander eod-commander eod commander eod eod 08 rail eod custody expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 111,
@@ -2883,19 +2864,18 @@
       "service_label": "EOD",
       "production_batch": "08-rail-eod-custody-expansion",
       "real_length_metres": 6.5,
-      "width": 92,
-      "height": 50,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Eod response case",
-      "static_path": "assets/exports/command/static/eod-response-vehicle.png",
-      "animated_path": "assets/exports/command/animated/eod-response-vehicle.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/eod-response-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/eod-response-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "111 111 slot 111 eod response vehicle eod-response-vehicle eod-response-vehicle eod response vehicle eod eod 08 rail eod custody expansion eod response case grounding shadows role differentiation lighting changes"
+      "search_text": "111 111 slot 111 eod response vehicle eod-response-vehicle eod-response-vehicle eod response vehicle eod eod 08 rail eod custody expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 112,
@@ -2908,19 +2888,18 @@
       "service_label": "EOD",
       "production_batch": "08-rail-eod-custody-expansion",
       "real_length_metres": 7.0,
-      "width": 103,
-      "height": 55,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Eod twin canisters",
-      "static_path": "assets/exports/command/static/eod-medium-equipment-van.png",
-      "animated_path": "assets/exports/command/animated/eod-medium-equipment-van.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/eod-medium-equipment-van.png",
+      "animated_path": "assets/exports/v2/animated/eod-medium-equipment-van.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "112 112 slot 112 eod medium equipment van eod-medium-equipment-van eod-medium-equipment-van eod medium equipment van eod eod 08 rail eod custody expansion eod twin canisters grounding shadows role differentiation lighting changes"
+      "search_text": "112 112 slot 112 eod medium equipment van eod-medium-equipment-van eod-medium-equipment-van eod medium equipment van eod eod 08 rail eod custody expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 113,
@@ -2933,19 +2912,18 @@
       "service_label": "EOD",
       "production_batch": "08-rail-eod-custody-expansion",
       "real_length_metres": 10.0,
-      "width": 142,
-      "height": 58,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Eod robot cradle",
-      "static_path": "assets/exports/command/static/eod-heavy-equipment-vehicle.png",
-      "animated_path": "assets/exports/command/animated/eod-heavy-equipment-vehicle.png",
+      "cue": "Direction-neutral heavy · Blue response lighting",
+      "static_path": "assets/exports/v2/static/eod-heavy-equipment-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/eod-heavy-equipment-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "113 113 slot 113 eod heavy equipment vehicle eod-heavy-equipment-vehicle eod-heavy-equipment-vehicle eod heavy equipment vehicle eod eod 08 rail eod custody expansion eod robot cradle grounding shadows role differentiation lighting changes"
+      "search_text": "113 113 slot 113 eod heavy equipment vehicle eod-heavy-equipment-vehicle eod-heavy-equipment-vehicle eod heavy equipment vehicle eod eod 08 rail eod custody expansion direction-neutral heavy · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 114,
@@ -2958,19 +2936,18 @@
       "service_label": "EOD",
       "production_batch": "08-rail-eod-custody-expansion",
       "real_length_metres": 6.0,
-      "width": 86,
-      "height": 41,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Marine eod tube",
-      "static_path": "assets/exports/command/static/marine-eod-response-vehicle.png",
-      "animated_path": "assets/exports/command/animated/marine-eod-response-vehicle.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/marine-eod-response-vehicle.png",
+      "animated_path": "assets/exports/v2/animated/marine-eod-response-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "114 114 slot 114 marine eod response vehicle marine-eod-response-vehicle marine-eod-response-vehicle marine eod response vehicle eod eod 08 rail eod custody expansion marine eod tube grounding shadows role differentiation lighting changes"
+      "search_text": "114 114 slot 114 marine eod response vehicle marine-eod-response-vehicle marine-eod-response-vehicle marine eod response vehicle eod eod 08 rail eod custody expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 115,
@@ -2983,19 +2960,18 @@
       "service_label": "EOD",
       "production_batch": "08-rail-eod-custody-expansion",
       "real_length_metres": 7.0,
-      "width": 99,
-      "height": 47,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "role-differentiation",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": "Marine eod twin kit",
-      "static_path": "assets/exports/command/static/marine-eod-equipment-van.png",
-      "animated_path": "assets/exports/command/animated/marine-eod-equipment-van.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/marine-eod-equipment-van.png",
+      "animated_path": "assets/exports/v2/animated/marine-eod-equipment-van.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "115 115 slot 115 marine eod equipment van marine-eod-equipment-van marine-eod-equipment-van marine eod equipment van eod eod 08 rail eod custody expansion marine eod twin kit grounding shadows role differentiation lighting changes"
+      "search_text": "115 115 slot 115 marine eod equipment van marine-eod-equipment-van marine-eod-equipment-van marine eod equipment van eod eod 08 rail eod custody expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 116,
@@ -3008,18 +2984,18 @@
       "service_label": "Multi-service",
       "production_batch": "08-rail-eod-custody-expansion",
       "real_length_metres": 7.0,
-      "width": 99,
-      "height": 48,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/welfare-vehicle-2.png",
-      "animated_path": "assets/exports/command/animated/welfare-vehicle-2.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/welfare-vehicle-2.png",
+      "animated_path": "assets/exports/v2/animated/welfare-vehicle-2.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "116 116 slot 116 welfare vehicle welfare-vehicle-2 welfare-vehicle-2 welfare vehicle multi-service multi-service 08 rail eod custody expansion  grounding shadows lighting changes"
+      "search_text": "116 116 slot 116 welfare vehicle welfare-vehicle-2 welfare-vehicle-2 welfare vehicle multi-service multi-service 08 rail eod custody expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     },
     {
       "slot": 117,
@@ -3032,29 +3008,26 @@
       "service_label": "Police",
       "production_batch": "08-rail-eod-custody-expansion",
       "real_length_metres": 6.8,
-      "width": 96,
-      "height": 46,
+      "width": 200,
+      "height": 200,
       "frames": 12,
       "focus": [
-        "grounding-shadow",
-        "lighting"
+        "direction-neutral",
+        "emergency-lighting"
       ],
-      "cue": null,
-      "static_path": "assets/exports/command/static/cell-van.png",
-      "animated_path": "assets/exports/command/animated/cell-van.png",
+      "cue": "Direction-neutral van · Blue response lighting",
+      "static_path": "assets/exports/v2/static/cell-van.png",
+      "animated_path": "assets/exports/v2/animated/cell-van.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "117 117 slot 117 cell van cell-van cell-van cell van police police 08 rail eod custody expansion  grounding shadows lighting changes"
+      "search_text": "117 117 slot 117 cell van cell-van cell-van cell van police police 08 rail eod custody expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
     }
   ],
   "generated_from": [
     "data/vehicle-slots.json",
     "data/prototypes.json",
-    "data/v1.4-overhaul-profile.json",
-    "data/v1.2.6-scope.json",
-    "data/v1.4.14-build-report.json",
-    "data/v1.4.14-scope.json",
-    "data/v1.4.14-light-fixtures.json",
-    "data/v1.4.14-trailer-tow-master-report.json",
-    "data/v1.4.14-trailer-tow-validation.json"
+    "data/v2.0.0-animation-build-report.json",
+    "data/v2.0.0-animation-qa-report.json",
+    "data/v2.0.0-light-fixtures.json",
+    "data/v2.0.0-static-qa-report.json"
   ]
 }

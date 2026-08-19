@@ -14,12 +14,10 @@ export const SERVICE_COLOURS = Object.freeze({
 });
 
 export const FOCUS_LABELS = Object.freeze({
+  'direction-neutral': 'Direction-neutral perspective',
+  'emergency-lighting': 'Emergency lighting',
+  'air-marine-motion': 'Aircraft and marine motion',
   'complete-towing-unit': 'Complete towing unit',
-  'role-differentiation': 'Role differentiation',
-  'specialist-equipment': 'Specialist equipment',
-  lighting: 'Fixture-aligned lighting',
-  'grounding-shadow': 'Contact grounding shadow',
-  redraw: 'v1.4 detail redraw',
 });
 
 export function normaliseQuery(value) {
@@ -116,11 +114,11 @@ function initGallery() {
   if (!(root instanceof HTMLElement) || root.dataset.ready === 'true') return;
   root.dataset.ready = 'true';
 
-  const currentRelease = root.dataset.currentRelease || 'v1.4.14';
+  const currentRelease = root.dataset.currentRelease || 'v2.0.0';
   const config = {
     catalogueUrl: root.dataset.catalogueUrl || 'vehicles.json',
     currentAssetBase: root.dataset.currentAssetBase
-      || `${RAW_REPOSITORY}/${currentRelease}/assets/exports/command`,
+      || `${RAW_REPOSITORY}/${currentRelease}/assets/exports/v2`,
   };
 
   document.querySelectorAll('[data-hero-asset]').forEach((image) => {
@@ -231,7 +229,7 @@ function initGallery() {
 
   function imageMarkup(vehicle, release, label) {
     const mode = state.mode === 'animated' && state.playing ? 'animated' : 'static';
-    return `<img loading="lazy" decoding="async" src="${escapeHtml(assetUrl(vehicle, mode, release))}" alt="${escapeHtml(vehicle.label)} ${mode} vehicle graphic, ${escapeHtml(label)}" width="${vehicle.width}" height="${vehicle.height}">`;
+    return `<img loading="lazy" decoding="async" src="${escapeHtml(assetUrl(vehicle, mode, release))}" alt="${escapeHtml(vehicle.label)} ${mode} vehicle graphic, ${escapeHtml(label)}">`;
   }
 
   function cardMarkup(vehicle) {

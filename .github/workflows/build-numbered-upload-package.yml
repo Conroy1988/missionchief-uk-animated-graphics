@@ -1,5 +1,5 @@
-# Builds, validates and releases the v1.4.14 complete trailer towing-unit overhaul.
-name: Build v1.4.14 MissionChief complete trailer-tow pack
+# Builds, validates and releases the complete v2.0.0 direction-neutral fleet.
+name: Build v2.0.0 MissionChief direction-neutral fleet
 
 on:
   workflow_dispatch:
@@ -7,129 +7,43 @@ on:
     branches:
       - main
     paths:
-      - scripts/build_numbered_upload_package.py
-      - scripts/apng_full_frame.py
-      - scripts/emergency_light.py
-      - tools/tkb-missionchief-bulk-uploader.user.js
+      - assets/exports/v2/**
+      - assets/masters/v2.0.0/**
+      - assets/previews/v2.0.0/**
       - data/vehicle-slots.json
-      - assets/exports/standard/static/**
-      - assets/exports/standard/animated/**
-      - assets/exports/command/static/**
-      - assets/exports/command/animated/**
-      - assets/masters/v1.1/**
-      - assets/masters/v1.2.4/**
-      - assets/masters/v1.3.0/**
-      - assets/masters/v1.4.0/**
-      - assets/masters/v1.4.14/**
-      - assets/previews/hems-white.png
-      - assets/previews/police-helicopter-white.png
       - data/prototypes.json
-      - data/v1.3-overhaul-profile.json
-      - data/v1.4-overhaul-profile.json
-      - scripts/build_mounted_pod_carriers.py
-      - scripts/build_helicopter_tail_masters.py
-      - scripts/build_v1_3_masters.py
-      - scripts/build_v1_4_masters.py
-      - scripts/build_trailer_tow_masters.py
-      - scripts/validate_trailer_tow_composites.py
-      - scripts/validate_release_scope.py
-      - data/v1.2.6-light-overrides.json
-      - data/v1.3.0-scope.json
-      - data/v1.4.0-scope.json
-      - data/v1.4.14-scope.json
-      - data/v1.4.14-light-fixtures.json
-      - data/v1.4.14-trailer-tow-master-report.json
-      - data/v1.4.14-trailer-tow-validation.json
-      - scripts/build_v1_1_enhanced.py
-      - scripts/build_prototypes.py
-      - scripts/validate_v1_1_enhanced.py
-      - scripts/validate_v1_3_overhaul.py
-      - scripts/validate_v1_4_overhaul.py
-      - scripts/validate_light_placement.py
-      - scripts/validate_full_fleet_lighting.py
-      - scripts/validate_release_png_integrity.py
-      - scripts/validate_point_emitters.py
-      - scripts/validate_irv_lighting.py
-      - scripts/validate_rrv_lighting.py
-      - scripts/validate_arv_lighting.py
-      - scripts/validate_joint_response_unit_lighting.py
-      - scripts/validate_otl_lighting.py
-      - scripts/validate_community_first_responder_lighting.py
-      - scripts/validate_armed_traffic_car_lighting.py
-      - scripts/validate_cbrn_vehicle_lighting.py
-      - scripts/validate_control_van_sar_lighting.py
-      - scripts/validate_drone_vehicle_sar_hq_lighting.py
-      - scripts/audit_emergency_light_placement.py
-      - docs/RELEASE_v1.3.0.md
-      - docs/CHECKPOINT_v1.3.0.md
-      - docs/RELEASE_v1.4.0.md
-      - docs/CHECKPOINT_v1.4.0.md
-      - docs/RELEASE_v1.4.14.md
-      - docs/CHECKPOINT_v1.4.14.md
+      - data/v2.0.0-*.json
+      - docs/RELEASE_v2.0.0.md
+      - docs/CHECKPOINT_v2.0.0.md
+      - docs/V2_DIRECTION_NEUTRAL_STANDARD.md
+      - scripts/apng_full_frame.py
+      - scripts/build_numbered_upload_package.py
+      - scripts/build_v2_animated_fleet.py
+      - scripts/v2_emergency_light.py
+      - scripts/validate_v2_animated_fleet.py
+      - scripts/validate_v2_release_integrity.py
+      - scripts/validate_v2_static_fleet.py
       - .github/workflows/build-numbered-upload-package.yml
   push:
     branches:
       - main
     paths:
-      - scripts/build_numbered_upload_package.py
-      - scripts/apng_full_frame.py
-      - scripts/emergency_light.py
-      - tools/tkb-missionchief-bulk-uploader.user.js
+      - assets/exports/v2/**
+      - assets/masters/v2.0.0/**
+      - assets/previews/v2.0.0/**
       - data/vehicle-slots.json
-      - assets/exports/standard/static/**
-      - assets/exports/standard/animated/**
-      - assets/exports/command/static/**
-      - assets/exports/command/animated/**
-      - assets/masters/v1.1/**
-      - assets/masters/v1.2.4/**
-      - assets/masters/v1.3.0/**
-      - assets/masters/v1.4.0/**
-      - assets/masters/v1.4.14/**
-      - assets/previews/hems-white.png
-      - assets/previews/police-helicopter-white.png
       - data/prototypes.json
-      - data/v1.3-overhaul-profile.json
-      - data/v1.4-overhaul-profile.json
-      - scripts/build_mounted_pod_carriers.py
-      - scripts/build_helicopter_tail_masters.py
-      - scripts/build_v1_3_masters.py
-      - scripts/build_v1_4_masters.py
-      - scripts/build_trailer_tow_masters.py
-      - scripts/validate_trailer_tow_composites.py
-      - scripts/validate_release_scope.py
-      - data/v1.2.6-light-overrides.json
-      - data/v1.3.0-scope.json
-      - data/v1.4.0-scope.json
-      - data/v1.4.14-scope.json
-      - data/v1.4.14-light-fixtures.json
-      - data/v1.4.14-trailer-tow-master-report.json
-      - data/v1.4.14-trailer-tow-validation.json
-      - scripts/build_v1_1_enhanced.py
-      - scripts/build_prototypes.py
-      - scripts/validate_v1_1_enhanced.py
-      - scripts/validate_v1_3_overhaul.py
-      - scripts/validate_v1_4_overhaul.py
-      - scripts/validate_light_placement.py
-      - scripts/validate_full_fleet_lighting.py
-      - scripts/validate_release_png_integrity.py
-      - scripts/validate_point_emitters.py
-      - scripts/validate_irv_lighting.py
-      - scripts/validate_rrv_lighting.py
-      - scripts/validate_arv_lighting.py
-      - scripts/validate_joint_response_unit_lighting.py
-      - scripts/validate_otl_lighting.py
-      - scripts/validate_community_first_responder_lighting.py
-      - scripts/validate_armed_traffic_car_lighting.py
-      - scripts/validate_cbrn_vehicle_lighting.py
-      - scripts/validate_control_van_sar_lighting.py
-      - scripts/validate_drone_vehicle_sar_hq_lighting.py
-      - scripts/audit_emergency_light_placement.py
-      - docs/RELEASE_v1.3.0.md
-      - docs/CHECKPOINT_v1.3.0.md
-      - docs/RELEASE_v1.4.0.md
-      - docs/CHECKPOINT_v1.4.0.md
-      - docs/RELEASE_v1.4.14.md
-      - docs/CHECKPOINT_v1.4.14.md
+      - data/v2.0.0-*.json
+      - docs/RELEASE_v2.0.0.md
+      - docs/CHECKPOINT_v2.0.0.md
+      - docs/V2_DIRECTION_NEUTRAL_STANDARD.md
+      - scripts/apng_full_frame.py
+      - scripts/build_numbered_upload_package.py
+      - scripts/build_v2_animated_fleet.py
+      - scripts/v2_emergency_light.py
+      - scripts/validate_v2_animated_fleet.py
+      - scripts/validate_v2_release_integrity.py
+      - scripts/validate_v2_static_fleet.py
       - .github/workflows/build-numbered-upload-package.yml
 
 permissions:
@@ -139,7 +53,7 @@ jobs:
   package:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Check out complete history and release tags
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -149,131 +63,55 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate bulk uploader syntax
-        run: node --check tools/tkb-missionchief-bulk-uploader.user.js
-
-      - name: Install image build dependency
+      - name: Install image validation dependency
         run: python -m pip install --disable-pip-version-check Pillow
 
-      - name: Verify deterministic mounted specialist-carrier masters
-        run: python scripts/build_mounted_pod_carriers.py --check
+      - name: Compile release tooling
+        run: python -m compileall -q scripts
 
-      - name: Verify deterministic full-tail helicopter masters
-        run: python scripts/build_helicopter_tail_masters.py --check
+      - name: Verify all 117 static direction-neutral assets
+        run: python scripts/validate_v2_static_fleet.py
 
-      - name: Verify twenty deterministic baked role and specialist masters
-        run: python scripts/build_v1_3_masters.py --check
+      - name: Rebuild all 117 response APNGs and fixture metadata
+        run: python scripts/build_v2_animated_fleet.py
 
-      - name: Verify deterministic v1.4 redraw and marine masters
-        run: python scripts/build_v1_4_masters.py --check
+      - name: Verify emergency-light visibility, placement, timing and APNG controls
+        run: python scripts/validate_v2_animated_fleet.py
 
-      - name: Verify all nine deterministic complete trailer-tow masters
-        run: python scripts/build_trailer_tow_masters.py --check
+      - name: Build deterministic numbered MissionChief package
+        run: python scripts/build_numbered_upload_package.py --version v2.0.0 --profile v2
 
-      - name: Reject any emergency-light primitive that can draw a line, ellipse, box or blur
-        run: python scripts/validate_point_emitters.py
+      - name: Run complete release-integrity gate
+        run: python scripts/validate_v2_release_integrity.py
 
-      - name: Build Modern Command Clarity exports
-        run: python scripts/build_v1_1_enhanced.py
-
-      - name: Reject any return of the IRV roof-light blob
-        run: python scripts/validate_irv_lighting.py
-
-      - name: Reject any return of the RRV roof-box defect
-        run: python scripts/validate_rrv_lighting.py
-
-      - name: Reject stacked or duplicate ARV roof-light geometry
-        run: python scripts/validate_arv_lighting.py
-
-      - name: Reject any return of the Joint Response Unit roof-box defect
-        run: python scripts/validate_joint_response_unit_lighting.py
-
-      - name: Reject any return of the raised OTL command box or beacon mast
-        run: python scripts/validate_otl_lighting.py
-
-      - name: Reject any return of the raised Community First Responder medical cross-box
-        run: python scripts/validate_community_first_responder_lighting.py
-
-      - name: Reject any return of the Armed Traffic Car roof pods or beacon mast
-        run: python scripts/validate_armed_traffic_car_lighting.py
-
-      - name: Reject any return of the raised CBRN detector cabinet or mast
-        run: python scripts/validate_cbrn_vehicle_lighting.py
-
-      - name: Reject any return of the SAR Control Van cabinet or duplicate dish mast
-        run: python scripts/validate_control_van_sar_lighting.py
-
-      - name: Reject any return of the SAR Drone Vehicle launch box or spread drone
-        run: python scripts/validate_drone_vehicle_sar_hq_lighting.py
-
-      - name: Reject any standalone trailer without its complete towing unit
-        run: python scripts/validate_trailer_tow_composites.py
-
-      - name: Build True Scale exports with the full-frame APNG encoder
-        run: python scripts/build_prototypes.py
-
-      - name: Run dense-map and animation release gate
-        run: python scripts/validate_v1_1_enhanced.py
-
-      - name: Verify every approved v1.4 redraw, air, marine, livery, anchor and motion objective
-        run: python scripts/validate_v1_4_overhaul.py
-
-      - name: Verify every corrected flash remains anchored to its vehicle
-        run: python scripts/validate_light_placement.py --report data/v1.4.14-light-placement-report.json
-
-      - name: Audit every production image and APNG frame for bars, boxes and oversized lamps
-        run: python scripts/validate_full_fleet_lighting.py
-
-      - name: Reject empty, truncated or corrupt release PNG and APNG assets
-        run: python scripts/validate_release_png_integrity.py
-
-      - name: Verify exact static and animated release scope
-        run: python scripts/validate_release_scope.py
-
-      - name: Build and validate numbered package
-        run: python scripts/build_numbered_upload_package.py --version v1.4.14 --profile command
-
-      - name: Stage bulk uploader release asset
-        run: cp tools/tkb-missionchief-bulk-uploader.user.js dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.14.user.js
-
-      - name: Upload workflow artifact
+      - name: Upload verified v2.0.0 workflow evidence
         uses: actions/upload-artifact@v4
         with:
-          name: missionchief-modern-command-clarity-v1.4.14
+          name: missionchief-direction-neutral-fleet-v2.0.0
           path: |
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.14.zip
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.14.zip.sha256
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.14.user.js
-            data/v1.4.14-build-report.json
-            data/v1.4.14-qa-report.json
-            data/v1.4.14-light-placement-report.json
-            data/v1.4.14-full-fleet-lighting-report.json
-            data/v1.4.14-anchor-report.json
-            data/v1.4.0-master-report.json
-            data/v1.4.14-overhaul-report.json
-            data/v1.4.14-trailer-tow-master-report.json
-            data/v1.4.14-trailer-tow-validation.json
-            assets/previews/v1.4.14/*.png
+            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.0.zip
+            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.0.zip.sha256
+            data/v2.0.0-animation-build-report.json
+            data/v2.0.0-animation-qa-report.json
+            data/v2.0.0-light-fixtures.json
+            data/v2.0.0-release-integrity-report.json
+            data/v2.0.0-static-qa-report.json
+            assets/previews/v2.0.0/*.png
           if-no-files-found: error
           retention-days: 90
 
-      - name: Create or update v1.4.14 release
+      - name: Create or update v2.0.0 release
         if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v1.4.14 >/dev/null 2>&1 || gh release create v1.4.14 --target main --title "v1.4.14 — Complete Trailer Towing Units" --notes-file docs/RELEASE_v1.4.14.md
-          gh release upload v1.4.14 \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.14.zip \
-            dist/TKB-UK-Emergency-Fleet-Modern-Command-Clarity-MissionChief-Numbered-Upload-Ready-v1.4.14.zip.sha256 \
-            dist/TKB-MissionChief-UK-Graphics-Bulk-Uploader-v1.4.14.user.js \
-            data/v1.4.14-build-report.json \
-            data/v1.4.14-qa-report.json \
-            data/v1.4.14-light-placement-report.json \
-            data/v1.4.14-full-fleet-lighting-report.json \
-            data/v1.4.14-anchor-report.json \
-            data/v1.4.0-master-report.json \
-            data/v1.4.14-overhaul-report.json \
-            data/v1.4.14-trailer-tow-master-report.json \
-            data/v1.4.14-trailer-tow-validation.json \
+          gh release view v2.0.0 >/dev/null 2>&1 || gh release create v2.0.0 --target main --title "v2.0.0 — Direction-Neutral Emergency Fleet" --notes-file docs/RELEASE_v2.0.0.md
+          gh release upload v2.0.0 \
+            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.0.zip \
+            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.0.zip.sha256 \
+            data/v2.0.0-animation-build-report.json \
+            data/v2.0.0-animation-qa-report.json \
+            data/v2.0.0-light-fixtures.json \
+            data/v2.0.0-release-integrity-report.json \
+            data/v2.0.0-static-qa-report.json \
             --clobber

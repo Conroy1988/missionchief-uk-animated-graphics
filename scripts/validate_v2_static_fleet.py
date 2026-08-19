@@ -12,6 +12,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 SLOTS = json.loads((ROOT / "data/vehicle-slots.json").read_text())["slots"]
 STATIC_DIR = ROOT / "assets/exports/v2/static"
+MASTER_DIR = ROOT / "assets/masters/v2.0.0"
 PREVIEW_DIR = ROOT / "assets/previews/v2.0.0"
 REPORT = ROOT / "data/v2.0.0-static-qa-report.json"
 
@@ -73,6 +74,11 @@ def main() -> None:
         alpha = image.getchannel("A")
         bbox = alpha.getbbox()
         errors: list[str] = []
+        master_path = MASTER_DIR / f"{asset_id}.png"
+        if not master_path.exists():
+            errors.append("missing-master")
+        elif path.read_bytes() != master_path.read_bytes():
+            errors.append("static-master-byte-drift")
         if image.size != (200, 200):
             errors.append(f"canvas={image.size}")
         if bbox is None:

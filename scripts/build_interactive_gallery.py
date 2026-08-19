@@ -19,8 +19,14 @@ REPOSITORY_URL = "https://github.com/Conroy1988/missionchief-uk-animated-graphic
 
 RELEASES = [
     {
+        "id": "v2.0.0",
+        "label": "v2.0.0 · Current",
+        "profile": "v2",
+        "summary": "Direction-neutral fleet and unmistakable emergency lighting",
+    },
+    {
         "id": "v1.4.14",
-        "label": "v1.4.14 · Current",
+        "label": "v1.4.14",
         "profile": "command",
         "summary": "Complete trailer towing-unit overhaul",
     },
@@ -142,12 +148,22 @@ SERVICE_LABELS = {
 }
 
 FOCUS_LABELS = {
+    "direction-neutral": "Direction-neutral perspective",
+    "emergency-lighting": "Emergency lighting",
+    "air-marine-motion": "Aircraft and marine motion",
     "complete-towing-unit": "Complete towing units",
-    "role-differentiation": "Role differentiation",
-    "specialist-equipment": "Specialist equipment",
-    "lighting": "Lighting changes",
-    "grounding-shadow": "Grounding shadows",
-    "redraw": "v1.4 redraws",
+}
+
+TOWED_LENGTHS = {
+    "flood-rescue-unit-trailer": 11.8,
+    "inland-rescue-boat-trailer": 12.5,
+    "rescue-watercraft-trailer": 13.2,
+    "hovercraft-trailer": 14.2,
+    "boat-trailer": 12.2,
+    "medical-equipment-trailer": 11.2,
+    "pump-trailer": 9.7,
+    "operational-support-trailer": 11.7,
+    "sar-flood-rescue-trailer": 12.0,
 }
 
 
@@ -212,19 +228,10 @@ def git_tree(release: str) -> set[str]:
 def build_catalogue() -> dict:
     slots = load_json(ROOT / "data/vehicle-slots.json")["slots"]
     prototypes = load_json(ROOT / "data/prototypes.json")["vehicles"]
-    profile = load_json(ROOT / "data/v1.4-overhaul-profile.json")
-    lighting_scope = load_json(ROOT / "data/v1.2.6-scope.json")["changed_asset_ids"]
-    build_report = load_json(ROOT / "data/v1.4.14-build-report.json")
+    fixture_report = load_json(ROOT / "data/v2.0.0-light-fixtures.json")
 
     prototypes_by_slot = {item["missionchief_slot"]: item for item in prototypes}
-    prototypes_by_id = {item["id"]: item for item in prototypes}
-    cue_data = profile["baked_master_cues"]
-    frame_overrides = profile["animation_frame_overrides"]
-    lighting_assets = set(lighting_scope) | {
-        item["id"]
-        for item in build_report["vehicles_detail"]
-        if item["response_light_count"] > 0
-    }
+    fixtures_by_id = fixture_report["vehicles"]
     vehicles = []
 
     for slot in slots:
@@ -235,42 +242,37 @@ def build_catalogue() -> dict:
                 f"Slot {slot['slot']} asset mismatch: {asset_id} != {prototype['id']}"
             )
 
-        static_path = Path("assets/exports/command/static") / f"{asset_id}.png"
-        animated_path = Path("assets/exports/command/animated") / f"{asset_id}.png"
+        static_path = Path("assets/exports/v2/static") / f"{asset_id}.png"
+        animated_path = Path("assets/exports/v2/animated") / f"{asset_id}.png"
         width, height = png_dimensions(ROOT / static_path)
         animated_width, animated_height = png_dimensions(ROOT / animated_path)
         if (width, height) != (animated_width, animated_height):
             raise ValueError(f"Static/APNG dimensions differ for {asset_id}")
 
         actual_frames = png_frame_count(ROOT / animated_path)
-        expected_frames = frame_overrides.get(asset_id, profile["frames"])
+        fixture = fixtures_by_id[asset_id]
+        expected_frames = 18 if fixture["kind"] in {"aircraft", "marine"} else 12
         if actual_frames != expected_frames:
             raise ValueError(
                 f"Unexpected frame count for {asset_id}: {actual_frames} != {expected_frames}"
             )
 
-        cue = cue_data.get(asset_id)
-        focus = ["grounding-shadow"]
-        if cue:
-            family = cue["family"]
-            if family == "role":
-                focus.append("role-differentiation")
-            elif family == "equipment":
-                focus.append("specialist-equipment")
-            elif family == "redraw":
-                focus.append("redraw")
-        if asset_id in lighting_assets:
-            focus.append("lighting")
-        tow_config = profile.get("towed_units", {}).get(asset_id)
-        if tow_config:
+        focus = ["direction-neutral", "emergency-lighting"]
+        if fixture["kind"] in {"aircraft", "marine"}:
+            focus.append("air-marine-motion")
+        if asset_id in TOWED_LENGTHS:
             focus.append("complete-towing-unit")
 
         service = prototype["service"]
-        cue_label = (
-            f"Complete {prototypes_by_id[tow_config['tow_vehicle']]['display_name']} towing unit"
-            if tow_config
-            else humanise_cue(cue["cue"] if cue else None)
-        )
+        if fixture["kind"] == "aircraft":
+            cue_label = "Direction-neutral aircraft · rotor and aviation-light motion"
+        elif fixture["kind"] == "marine":
+            cue_label = "Direction-neutral craft · navigation lights and wake motion"
+        elif asset_id in TOWED_LENGTHS:
+            cue_label = "Complete direction-neutral towing unit"
+        else:
+            light_colour = fixture["profile"].removeprefix("road-").capitalize()
+            cue_label = f"Direction-neutral {fixture['kind']} · {light_colour} response lighting"
         search_parts = [
             f"{slot['slot']:03}",
             str(slot["slot"]),
@@ -297,9 +299,7 @@ def build_catalogue() -> dict:
                 "service": service,
                 "service_label": SERVICE_LABELS[service],
                 "production_batch": slot["production_batch"],
-                "real_length_metres": (
-                    tow_config["real_length_metres"] if tow_config else prototype["real_length_metres"]
-                ),
+                "real_length_metres": TOWED_LENGTHS.get(asset_id, prototype["real_length_metres"]),
                 "width": width,
                 "height": height,
                 "frames": actual_frames,
@@ -322,7 +322,7 @@ def build_catalogue() -> dict:
 
     return {
         "schema_version": 1,
-        "release": str(profile["release"]),
+        "release": "v2.0.0",
         "title": "TKB UK Emergency Fleet",
         "edition": "Interactive Gallery",
         "pack_id": 5897,
@@ -342,13 +342,10 @@ def build_catalogue() -> dict:
         "generated_from": [
             "data/vehicle-slots.json",
             "data/prototypes.json",
-            "data/v1.4-overhaul-profile.json",
-            "data/v1.2.6-scope.json",
-            "data/v1.4.14-build-report.json",
-            "data/v1.4.14-scope.json",
-            "data/v1.4.14-light-fixtures.json",
-            "data/v1.4.14-trailer-tow-master-report.json",
-            "data/v1.4.14-trailer-tow-validation.json",
+            "data/v2.0.0-animation-build-report.json",
+            "data/v2.0.0-animation-qa-report.json",
+            "data/v2.0.0-light-fixtures.json",
+            "data/v2.0.0-static-qa-report.json",
         ],
     }
 
@@ -378,13 +375,16 @@ def stage_site(output: Path) -> None:
     for filename in ("index.html", "styles.css", "app.mjs", "vehicles.json"):
         shutil.copy2(GALLERY_DIR / filename, output / filename)
 
-    asset_root = output / "assets/exports/command"
+    asset_root = output / "assets/exports/v2"
     asset_root.mkdir(parents=True)
     for variant in ("static", "animated"):
         shutil.copytree(
-            ROOT / "assets/exports/command" / variant,
+            ROOT / "assets/exports/v2" / variant,
             asset_root / variant,
         )
+    preview_root = output / "assets/previews/v2.0.0"
+    preview_root.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copytree(ROOT / "assets/previews/v2.0.0", preview_root)
     (output / ".nojekyll").write_text("", encoding="utf-8")
 
 

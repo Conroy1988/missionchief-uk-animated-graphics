@@ -86,7 +86,7 @@ def main() -> None:
             errors.append(f"qa-read/{report_name}: {exc}")
 
     command_diff = subprocess.run(
-        ["git", "diff", "--quiet", "--", "assets/exports/command"],
+        ["git", "diff", "--quiet", "v1.4.14", "--", "assets/exports/command"],
         cwd=ROOT,
         check=False,
     ).returncode

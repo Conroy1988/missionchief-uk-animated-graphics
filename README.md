@@ -4,6 +4,8 @@ A complete original UK emergency-services vehicle graphics pack for [MissionChie
 
 > **[Use TKB UK Fleet — Animated on MissionChief →](https://www.missionchief.co.uk/vehicle_graphics/5897)**
 
+> **[Explore all 117 v2 vehicles in the interactive gallery →](https://tkb-gaming.scot/games/missionchief/guides/fleet-gallery/)**
+
 ## The v2 fleet
 
 Version 2 rebuilds all **117 current MissionChief UK vehicle slots** around one fixed raised three-quarter camera. Every subject points diagonally toward the lower-right, so MissionChief can move the same native sprite left or right without making the artwork look backwards.

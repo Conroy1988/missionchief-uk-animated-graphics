@@ -130,13 +130,14 @@ def build(root: Path, version: str, profile: str) -> tuple[Path, Path, int]:
     package_root = dist / package_name
     archive_path = dist / f"{package_name}.zip"
     checksum_path = dist / f"{package_name}.zip.sha256"
+    temporary_archive_path = dist / f".{package_name}.zip.tmp"
+    temporary_checksum_path = dist / f".{package_name}.zip.sha256.tmp"
 
     if package_root.exists():
         shutil.rmtree(package_root)
-    if archive_path.exists():
-        archive_path.unlink()
-    if checksum_path.exists():
-        checksum_path.unlink()
+    for temporary_path in (temporary_archive_path, temporary_checksum_path):
+        if temporary_path.exists():
+            temporary_path.unlink()
 
     static_output = package_root / "01 - Static"
     animated_output = package_root / "02 - Animated"
@@ -222,15 +223,18 @@ def build(root: Path, version: str, profile: str) -> tuple[Path, Path, int]:
         encoding="utf-8",
     )
 
-    with zipfile.ZipFile(archive_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+    with zipfile.ZipFile(
+        temporary_archive_path,
+        "w",
+        compression=zipfile.ZIP_DEFLATED,
+        compresslevel=9,
+    ) as archive:
         for path in sorted(package_root.rglob("*")):
             if path.is_file():
                 add_deterministic_zip_member(archive, path, path.relative_to(dist))
 
-    archive_hash = sha256(archive_path)
-    checksum_path.write_text(f"{archive_hash}  {archive_path.name}\n", encoding="ascii")
-
-    with zipfile.ZipFile(archive_path, "r") as archive:
+    archive_hash = sha256(temporary_archive_path)
+    with zipfile.ZipFile(temporary_archive_path, "r") as archive:
         bad_file = archive.testzip()
         if bad_file is not None:
             raise RuntimeError(f"ZIP integrity check failed at {bad_file}")
@@ -239,6 +243,13 @@ def build(root: Path, version: str, profile: str) -> tuple[Path, Path, int]:
         animated_members = [name for name in names if "/02 - Animated/" in name and name.endswith(".png")]
         if len(static_members) != EXPECTED_SLOTS or len(animated_members) != EXPECTED_SLOTS:
             raise RuntimeError("ZIP does not contain 117 static and 117 animated files")
+
+    temporary_checksum_path.write_text(
+        f"{archive_hash}  {archive_path.name}\n",
+        encoding="ascii",
+    )
+    temporary_archive_path.replace(archive_path)
+    temporary_checksum_path.replace(checksum_path)
 
     return archive_path, checksum_path, len(manifest_rows)
 
