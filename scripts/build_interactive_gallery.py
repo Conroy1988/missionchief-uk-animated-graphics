@@ -10,8 +10,9 @@ import struct
 import subprocess
 from pathlib import Path
 
+from v2_profile import PREVIEW_DIR, RELEASE, ROOT
 
-ROOT = Path(__file__).resolve().parents[1]
+
 GALLERY_DIR = ROOT / "gallery"
 CATALOGUE_PATH = GALLERY_DIR / "vehicles.json"
 PACK_URL = "https://www.missionchief.co.uk/vehicle_graphics/5897"
@@ -19,10 +20,16 @@ REPOSITORY_URL = "https://github.com/Conroy1988/missionchief-uk-animated-graphic
 
 RELEASES = [
     {
-        "id": "v2.0.0",
-        "label": "v2.0.0 · Current",
+        "id": RELEASE,
+        "label": f"{RELEASE} · Current",
         "profile": "v2",
-        "summary": "Direction-neutral fleet and unmistakable emergency lighting",
+        "summary": "Compact direction-neutral fleet calibrated for live-map scale",
+    },
+    {
+        "id": "v2.0.0",
+        "label": "v2.0.0",
+        "profile": "v2",
+        "summary": "Original 200px direction-neutral fleet rebuild",
     },
     {
         "id": "v1.4.14",
@@ -228,7 +235,7 @@ def git_tree(release: str) -> set[str]:
 def build_catalogue() -> dict:
     slots = load_json(ROOT / "data/vehicle-slots.json")["slots"]
     prototypes = load_json(ROOT / "data/prototypes.json")["vehicles"]
-    fixture_report = load_json(ROOT / "data/v2.0.0-light-fixtures.json")
+    fixture_report = load_json(ROOT / f"data/{RELEASE}-light-fixtures.json")
 
     prototypes_by_slot = {item["missionchief_slot"]: item for item in prototypes}
     fixtures_by_id = fixture_report["vehicles"]
@@ -322,7 +329,7 @@ def build_catalogue() -> dict:
 
     return {
         "schema_version": 1,
-        "release": "v2.0.0",
+        "release": RELEASE,
         "title": "TKB UK Emergency Fleet",
         "edition": "Interactive Gallery",
         "pack_id": 5897,
@@ -342,10 +349,11 @@ def build_catalogue() -> dict:
         "generated_from": [
             "data/vehicle-slots.json",
             "data/prototypes.json",
-            "data/v2.0.0-animation-build-report.json",
-            "data/v2.0.0-animation-qa-report.json",
-            "data/v2.0.0-light-fixtures.json",
-            "data/v2.0.0-static-qa-report.json",
+            f"data/{RELEASE}-animation-build-report.json",
+            f"data/{RELEASE}-animation-qa-report.json",
+            f"data/{RELEASE}-light-fixtures.json",
+            f"data/{RELEASE}-scale-report.json",
+            f"data/{RELEASE}-static-qa-report.json",
         ],
     }
 
@@ -382,9 +390,9 @@ def stage_site(output: Path) -> None:
             ROOT / "assets/exports/v2" / variant,
             asset_root / variant,
         )
-    preview_root = output / "assets/previews/v2.0.0"
+    preview_root = output / f"assets/previews/{RELEASE}"
     preview_root.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copytree(ROOT / "assets/previews/v2.0.0", preview_root)
+    shutil.copytree(PREVIEW_DIR, preview_root)
     (output / ".nojekyll").write_text("", encoding="utf-8")
 
 

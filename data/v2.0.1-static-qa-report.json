@@ -1,0 +1,2016 @@
+{
+  "release": "v2.0.1-candidate",
+  "master_canvas": [
+    200,
+    200
+  ],
+  "export_canvas": [
+    110,
+    110
+  ],
+  "export_scale": 0.55,
+  "expected_assets": 117,
+  "actual_assets": 117,
+  "missing": [],
+  "extra": [],
+  "passed_assets": 117,
+  "failed_assets": 0,
+  "all_passed": true,
+  "previews": [
+    "assets/previews/v2.0.1/full-fleet-static-light.png",
+    "assets/previews/v2.0.1/full-fleet-static-dark.png",
+    "assets/previews/v2.0.1/full-fleet-static-satellite.png",
+    "assets/previews/v2.0.1/full-fleet-static-grayscale.png"
+  ],
+  "checks": [
+    {
+      "slot": 1,
+      "asset_id": "fire-rescue-pump",
+      "passed": true,
+      "bbox": [
+        8,
+        22,
+        102,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 2,
+      "asset_id": "light-4x4-pump",
+      "passed": true,
+      "bbox": [
+        19,
+        45,
+        91,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 3,
+      "asset_id": "aerial-appliance",
+      "passed": true,
+      "bbox": [
+        3,
+        35,
+        107,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 4,
+      "asset_id": "fire-officer",
+      "passed": true,
+      "bbox": [
+        26,
+        64,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 5,
+      "asset_id": "rescue-support-unit",
+      "passed": true,
+      "bbox": [
+        6,
+        31,
+        104,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 6,
+      "asset_id": "frontline-ambulance",
+      "passed": true,
+      "bbox": [
+        19,
+        42,
+        91,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 7,
+      "asset_id": "water-carrier",
+      "passed": true,
+      "bbox": [
+        3,
+        38,
+        107,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 8,
+      "asset_id": "hazmat-unit",
+      "passed": true,
+      "bbox": [
+        6,
+        43,
+        104,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 9,
+      "asset_id": "police-incident-response-vehicle",
+      "passed": true,
+      "bbox": [
+        26,
+        63,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 10,
+      "asset_id": "hems",
+      "passed": true,
+      "bbox": [
+        3,
+        30,
+        107,
+        102
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 11,
+      "asset_id": "rapid-response-vehicle",
+      "passed": true,
+      "bbox": [
+        26,
+        66,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 12,
+      "asset_id": "police-helicopter",
+      "passed": true,
+      "bbox": [
+        3,
+        28,
+        107,
+        102
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 13,
+      "asset_id": "dog-support-unit",
+      "passed": true,
+      "bbox": [
+        17,
+        42,
+        93,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 14,
+      "asset_id": "armed-response-vehicle",
+      "passed": true,
+      "bbox": [
+        26,
+        72,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 15,
+      "asset_id": "breathing-apparatus-support-unit",
+      "passed": true,
+      "bbox": [
+        7,
+        38,
+        103,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 16,
+      "asset_id": "incident-command-control-unit",
+      "passed": true,
+      "bbox": [
+        3,
+        35,
+        107,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 17,
+      "asset_id": "rescue-pump",
+      "passed": true,
+      "bbox": [
+        7,
+        34,
+        103,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 18,
+      "asset_id": "carp",
+      "passed": true,
+      "bbox": [
+        3,
+        39,
+        107,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 19,
+      "asset_id": "co-responder-vehicle",
+      "passed": true,
+      "bbox": [
+        26,
+        60,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 20,
+      "asset_id": "joint-response-unit",
+      "passed": true,
+      "bbox": [
+        26,
+        69,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 21,
+      "asset_id": "otl",
+      "passed": true,
+      "bbox": [
+        26,
+        66,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 22,
+      "asset_id": "general-practitioner",
+      "passed": true,
+      "bbox": [
+        26,
+        67,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 23,
+      "asset_id": "community-first-responder",
+      "passed": true,
+      "bbox": [
+        26,
+        66,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 24,
+      "asset_id": "crew-carrier",
+      "passed": true,
+      "bbox": [
+        15,
+        41,
+        95,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 25,
+      "asset_id": "traffic-car",
+      "passed": true,
+      "bbox": [
+        26,
+        65,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 26,
+      "asset_id": "armed-traffic-car",
+      "passed": true,
+      "bbox": [
+        26,
+        63,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 27,
+      "asset_id": "heavy-4x4-tanker",
+      "passed": true,
+      "bbox": [
+        3,
+        36,
+        107,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 28,
+      "asset_id": "prv",
+      "passed": true,
+      "bbox": [
+        25,
+        59,
+        85,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 29,
+      "asset_id": "srv",
+      "passed": true,
+      "bbox": [
+        16,
+        41,
+        94,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 30,
+      "asset_id": "welfare-vehicle",
+      "passed": true,
+      "bbox": [
+        16,
+        45,
+        94,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 31,
+      "asset_id": "atv-carrier",
+      "passed": true,
+      "bbox": [
+        5,
+        33,
+        105,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 32,
+      "asset_id": "ambulance-control-unit",
+      "passed": true,
+      "bbox": [
+        3,
+        28,
+        107,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 33,
+      "asset_id": "cbrn-vehicle",
+      "passed": true,
+      "bbox": [
+        17,
+        50,
+        93,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 34,
+      "asset_id": "mass-casualty-equipment",
+      "passed": true,
+      "bbox": [
+        3,
+        34,
+        107,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 35,
+      "asset_id": "ambulance-officer",
+      "passed": true,
+      "bbox": [
+        26,
+        68,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 36,
+      "asset_id": "bfu",
+      "passed": true,
+      "bbox": [
+        6,
+        32,
+        104,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 37,
+      "asset_id": "f-wrc",
+      "passed": true,
+      "bbox": [
+        3,
+        33,
+        107,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 38,
+      "asset_id": "wrl-cafs",
+      "passed": true,
+      "bbox": [
+        8,
+        30,
+        102,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 39,
+      "asset_id": "rp-cafs",
+      "passed": true,
+      "bbox": [
+        7,
+        38,
+        103,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 40,
+      "asset_id": "osu",
+      "passed": true,
+      "bbox": [
+        3,
+        46,
+        107,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 41,
+      "asset_id": "pm",
+      "passed": true,
+      "bbox": [
+        8,
+        28,
+        102,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 42,
+      "asset_id": "water-pod",
+      "passed": true,
+      "bbox": [
+        23,
+        57,
+        87,
+        100
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 43,
+      "asset_id": "bulk-foam-pod",
+      "passed": true,
+      "bbox": [
+        23,
+        60,
+        87,
+        100
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 44,
+      "asset_id": "rescue-pod",
+      "passed": true,
+      "bbox": [
+        23,
+        52,
+        87,
+        100
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 45,
+      "asset_id": "command-pod",
+      "passed": true,
+      "bbox": [
+        23,
+        56,
+        87,
+        100
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 46,
+      "asset_id": "welfare-pod",
+      "passed": true,
+      "bbox": [
+        23,
+        54,
+        87,
+        100
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 47,
+      "asset_id": "basu-pod",
+      "passed": true,
+      "bbox": [
+        23,
+        57,
+        87,
+        100
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 48,
+      "asset_id": "misting-pod",
+      "passed": true,
+      "bbox": [
+        24,
+        57,
+        86,
+        100
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 49,
+      "asset_id": "hazardous-materials-pod",
+      "passed": true,
+      "bbox": [
+        23,
+        52,
+        87,
+        100
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 50,
+      "asset_id": "osu-pod",
+      "passed": true,
+      "bbox": [
+        21,
+        50,
+        88,
+        100
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 51,
+      "asset_id": "hvp",
+      "passed": true,
+      "bbox": [
+        21,
+        58,
+        89,
+        100
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 52,
+      "asset_id": "psu-carrier",
+      "passed": true,
+      "bbox": [
+        17,
+        44,
+        93,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 53,
+      "asset_id": "firearms-personnel-carrier",
+      "passed": true,
+      "bbox": [
+        15,
+        50,
+        95,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 54,
+      "asset_id": "multiple-dog-carrier",
+      "passed": true,
+      "bbox": [
+        14,
+        53,
+        96,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 55,
+      "asset_id": "detention-van",
+      "passed": true,
+      "bbox": [
+        16,
+        53,
+        94,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 56,
+      "asset_id": "mounted-unit",
+      "passed": true,
+      "bbox": [
+        5,
+        38,
+        105,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 57,
+      "asset_id": "m-rav",
+      "passed": true,
+      "bbox": [
+        19,
+        51,
+        91,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 58,
+      "asset_id": "crv",
+      "passed": true,
+      "bbox": [
+        26,
+        61,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 59,
+      "asset_id": "coastguard-mud-rescue-unit",
+      "passed": true,
+      "bbox": [
+        16,
+        46,
+        94,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 60,
+      "asset_id": "coastguard-rope-rescue-unit",
+      "passed": true,
+      "bbox": [
+        16,
+        54,
+        94,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 61,
+      "asset_id": "coastguard-commander",
+      "passed": true,
+      "bbox": [
+        24,
+        56,
+        86,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 62,
+      "asset_id": "flood-rescue-unit-trailer",
+      "passed": true,
+      "bbox": [
+        21,
+        68,
+        89,
+        102
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 63,
+      "asset_id": "mud-decontamination-unit",
+      "passed": true,
+      "bbox": [
+        17,
+        62,
+        93,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 64,
+      "asset_id": "support-unit",
+      "passed": true,
+      "bbox": [
+        15,
+        50,
+        95,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 65,
+      "asset_id": "coastguard-rescue-helicopter",
+      "passed": true,
+      "bbox": [
+        3,
+        51,
+        107,
+        102
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 66,
+      "asset_id": "coastguard-rescue-helicopter-large",
+      "passed": true,
+      "bbox": [
+        3,
+        37,
+        107,
+        102
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 67,
+      "asset_id": "4x4-vehicle",
+      "passed": true,
+      "bbox": [
+        26,
+        60,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 68,
+      "asset_id": "inland-rescue-boat-trailer",
+      "passed": true,
+      "bbox": [
+        17,
+        62,
+        92,
+        102
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 69,
+      "asset_id": "ilb",
+      "passed": true,
+      "bbox": [
+        23,
+        61,
+        87,
+        100
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 70,
+      "asset_id": "alb",
+      "passed": true,
+      "bbox": [
+        4,
+        21,
+        106,
+        100
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 71,
+      "asset_id": "rescue-watercraft-trailer",
+      "passed": true,
+      "bbox": [
+        20,
+        67,
+        90,
+        102
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 72,
+      "asset_id": "hovercraft-trailer",
+      "passed": true,
+      "bbox": [
+        15,
+        58,
+        95,
+        102
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 73,
+      "asset_id": "hovercraft-transporter",
+      "passed": true,
+      "bbox": [
+        20,
+        56,
+        90,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 74,
+      "asset_id": "light-4x4",
+      "passed": true,
+      "bbox": [
+        26,
+        60,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 75,
+      "asset_id": "boat-trailer",
+      "passed": true,
+      "bbox": [
+        19,
+        53,
+        91,
+        102
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 76,
+      "asset_id": "major-foam-tender",
+      "passed": true,
+      "bbox": [
+        3,
+        54,
+        107,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 77,
+      "asset_id": "riv",
+      "passed": true,
+      "bbox": [
+        13,
+        47,
+        97,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 78,
+      "asset_id": "airfield-firefighting-command-vehicle",
+      "passed": true,
+      "bbox": [
+        23,
+        57,
+        87,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 79,
+      "asset_id": "rescue-stairs",
+      "passed": true,
+      "bbox": [
+        3,
+        33,
+        107,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 80,
+      "asset_id": "airfield-operations-vehicle",
+      "passed": true,
+      "bbox": [
+        26,
+        61,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 81,
+      "asset_id": "airfield-operations-supervisor",
+      "passed": true,
+      "bbox": [
+        24,
+        51,
+        86,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 82,
+      "asset_id": "medical-equipment-trailer",
+      "passed": true,
+      "bbox": [
+        25,
+        75,
+        85,
+        102
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 83,
+      "asset_id": "armed-cell-van",
+      "passed": true,
+      "bbox": [
+        16,
+        47,
+        94,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 84,
+      "asset_id": "medical-cycle-responder",
+      "passed": true,
+      "bbox": [
+        34,
+        61,
+        76,
+        100
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 85,
+      "asset_id": "pump-trailer",
+      "passed": true,
+      "bbox": [
+        26,
+        73,
+        84,
+        102
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 86,
+      "asset_id": "control-van-sar",
+      "passed": true,
+      "bbox": [
+        15,
+        46,
+        95,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 87,
+      "asset_id": "operational-support-van",
+      "passed": true,
+      "bbox": [
+        16,
+        43,
+        94,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 88,
+      "asset_id": "operational-support-trailer",
+      "passed": true,
+      "bbox": [
+        22,
+        64,
+        87,
+        102
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 89,
+      "asset_id": "sar-flood-rescue-trailer",
+      "passed": true,
+      "bbox": [
+        21,
+        65,
+        89,
+        102
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 90,
+      "asset_id": "drone-vehicle-sar-hq",
+      "passed": true,
+      "bbox": [
+        20,
+        47,
+        90,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 91,
+      "asset_id": "drone-vehicle-fire-station",
+      "passed": true,
+      "bbox": [
+        20,
+        63,
+        90,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 92,
+      "asset_id": "drone-vehicle-police-station",
+      "passed": true,
+      "bbox": [
+        20,
+        51,
+        90,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 93,
+      "asset_id": "personal-sar-vehicle",
+      "passed": true,
+      "bbox": [
+        26,
+        68,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 94,
+      "asset_id": "sar-4x4",
+      "passed": true,
+      "bbox": [
+        26,
+        59,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 95,
+      "asset_id": "rrv-2",
+      "passed": true,
+      "bbox": [
+        26,
+        67,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 96,
+      "asset_id": "community-midwife",
+      "passed": true,
+      "bbox": [
+        26,
+        66,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 97,
+      "asset_id": "specialist-paramedic-rrv",
+      "passed": true,
+      "bbox": [
+        26,
+        65,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 98,
+      "asset_id": "patient-transport-service-ambulance",
+      "passed": true,
+      "bbox": [
+        17,
+        43,
+        93,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 99,
+      "asset_id": "critical-care-transfer-ambulance",
+      "passed": true,
+      "bbox": [
+        15,
+        41,
+        95,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 100,
+      "asset_id": "mountain-rescue-4x4",
+      "passed": true,
+      "bbox": [
+        26,
+        59,
+        84,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 101,
+      "asset_id": "control-van-mountain-rescue",
+      "passed": true,
+      "bbox": [
+        16,
+        46,
+        94,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 102,
+      "asset_id": "search-dog-unit",
+      "passed": true,
+      "bbox": [
+        23,
+        60,
+        87,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 103,
+      "asset_id": "search-dog-unit-sar",
+      "passed": true,
+      "bbox": [
+        23,
+        59,
+        87,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 104,
+      "asset_id": "crew-carrier-sar",
+      "passed": true,
+      "bbox": [
+        16,
+        47,
+        94,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 105,
+      "asset_id": "recovery-vehicle",
+      "passed": true,
+      "bbox": [
+        16,
+        42,
+        94,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 106,
+      "asset_id": "flatbed-recovery-vehicle",
+      "passed": true,
+      "bbox": [
+        8,
+        52,
+        102,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 107,
+      "asset_id": "hgv-recovery-vehicle",
+      "passed": true,
+      "bbox": [
+        3,
+        22,
+        107,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 108,
+      "asset_id": "rru",
+      "passed": true,
+      "bbox": [
+        8,
+        42,
+        102,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 109,
+      "asset_id": "eiu",
+      "passed": true,
+      "bbox": [
+        24,
+        59,
+        86,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 110,
+      "asset_id": "eod-commander",
+      "passed": true,
+      "bbox": [
+        24,
+        56,
+        86,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 111,
+      "asset_id": "eod-response-vehicle",
+      "passed": true,
+      "bbox": [
+        19,
+        47,
+        91,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 112,
+      "asset_id": "eod-medium-equipment-van",
+      "passed": true,
+      "bbox": [
+        16,
+        52,
+        94,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 113,
+      "asset_id": "eod-heavy-equipment-vehicle",
+      "passed": true,
+      "bbox": [
+        3,
+        40,
+        107,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 114,
+      "asset_id": "marine-eod-response-vehicle",
+      "passed": true,
+      "bbox": [
+        21,
+        52,
+        89,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 115,
+      "asset_id": "marine-eod-equipment-van",
+      "passed": true,
+      "bbox": [
+        16,
+        43,
+        94,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 116,
+      "asset_id": "welfare-vehicle-2",
+      "passed": true,
+      "bbox": [
+        16,
+        48,
+        94,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    },
+    {
+      "slot": 117,
+      "asset_id": "cell-van",
+      "passed": true,
+      "bbox": [
+        17,
+        43,
+        93,
+        103
+      ],
+      "matches_200px_master": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "errors": []
+    }
+  ]
+}

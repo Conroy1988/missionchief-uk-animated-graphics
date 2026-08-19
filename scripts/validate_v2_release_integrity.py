@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail-closed integrity gate for the complete v2.0.0 candidate."""
+"""Fail-closed integrity gate for the complete compact v2 candidate."""
 
 from __future__ import annotations
 
@@ -11,14 +11,23 @@ from pathlib import Path
 
 from PIL import Image
 
+from v2_profile import (
+    ANIMATED_DIR,
+    EXPORT_CANVAS,
+    PREVIEW_DIR,
+    RELEASE,
+    RELEASE_CANDIDATE,
+    ROOT,
+    STATIC_DIR,
+)
 
-ROOT = Path(__file__).resolve().parents[1]
+
 EXPECTED = 117
-PACKAGE_NAME = "TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.0"
+PACKAGE_NAME = f"TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-{RELEASE}"
 PACKAGE_ROOT = ROOT / "dist" / PACKAGE_NAME
 ARCHIVE = ROOT / "dist" / f"{PACKAGE_NAME}.zip"
 CHECKSUM = ROOT / "dist" / f"{PACKAGE_NAME}.zip.sha256"
-REPORT = ROOT / "data/v2.0.0-release-integrity-report.json"
+REPORT = ROOT / f"data/{RELEASE}-release-integrity-report.json"
 
 
 def sha256(path: Path) -> str:
@@ -29,20 +38,22 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def decode(path: Path) -> int:
+def decode(path: Path, expected_canvas: tuple[int, int] | None = None) -> int:
     with Image.open(path) as image:
         frame_count = int(getattr(image, "n_frames", 1))
         for index in range(frame_count):
             image.seek(index)
+            if expected_canvas is not None and image.size != expected_canvas:
+                raise ValueError(f"canvas={image.size}, expected={expected_canvas}")
             image.load()
     return frame_count
 
 
 def main() -> None:
     errors: list[str] = []
-    static_paths = sorted((ROOT / "assets/exports/v2/static").glob("*.png"))
-    animated_paths = sorted((ROOT / "assets/exports/v2/animated").glob("*.png"))
-    preview_paths = sorted((ROOT / "assets/previews/v2.0.0").glob("*.png"))
+    static_paths = sorted(STATIC_DIR.glob("*.png"))
+    animated_paths = sorted(ANIMATED_DIR.glob("*.png"))
+    preview_paths = sorted(PREVIEW_DIR.glob("*.png"))
 
     if len(static_paths) != EXPECTED:
         errors.append(f"static-count={len(static_paths)}")
@@ -55,7 +66,7 @@ def main() -> None:
     frame_distribution: dict[str, int] = {}
     for path in static_paths:
         try:
-            count = decode(path)
+            count = decode(path, EXPORT_CANVAS)
             decoded_frames += count
             if count != 1:
                 errors.append(f"static-frames/{path.name}={count}")
@@ -63,7 +74,7 @@ def main() -> None:
             errors.append(f"static-decode/{path.name}: {exc}")
     for path in animated_paths:
         try:
-            count = decode(path)
+            count = decode(path, EXPORT_CANVAS)
             decoded_frames += count
             frame_distribution[str(count)] = frame_distribution.get(str(count), 0) + 1
             if count not in {12, 18}:
@@ -76,7 +87,11 @@ def main() -> None:
         except Exception as exc:
             errors.append(f"preview-decode/{path.name}: {exc}")
 
-    for report_name in ("v2.0.0-static-qa-report.json", "v2.0.0-animation-qa-report.json"):
+    for report_name in (
+        f"{RELEASE}-scale-report.json",
+        f"{RELEASE}-static-qa-report.json",
+        f"{RELEASE}-animation-qa-report.json",
+    ):
         report_path = ROOT / "data" / report_name
         try:
             qa = json.loads(report_path.read_text())
@@ -102,6 +117,14 @@ def main() -> None:
     try:
         package_manifest = json.loads(package_manifest_path.read_text())
         entries = package_manifest["entries"]
+        if package_manifest.get("release") != RELEASE:
+            errors.append(f"package-release={package_manifest.get('release')}")
+        expected_canvas = {
+            "width": EXPORT_CANVAS[0],
+            "height": EXPORT_CANVAS[1],
+        }
+        if package_manifest.get("canvas") != expected_canvas:
+            errors.append(f"package-canvas={package_manifest.get('canvas')}")
         if len(entries) != EXPECTED:
             errors.append(f"package-manifest-entries={len(entries)}")
         for entry in entries:
@@ -126,15 +149,24 @@ def main() -> None:
             if bad_member:
                 errors.append(f"archive-member/{bad_member}")
             names = archive.namelist()
-            if sum("/01 - Static/" in name and name.endswith(".png") for name in names) != EXPECTED:
+            static_members = sum(
+                "/01 - Static/" in name and name.endswith(".png")
+                for name in names
+            )
+            animated_members = sum(
+                "/02 - Animated/" in name and name.endswith(".png")
+                for name in names
+            )
+            if static_members != EXPECTED:
                 errors.append("archive-static-count")
-            if sum("/02 - Animated/" in name and name.endswith(".png") for name in names) != EXPECTED:
+            if animated_members != EXPECTED:
                 errors.append("archive-animated-count")
     except Exception as exc:
         errors.append(f"archive: {exc}")
 
     result = {
-        "release": "v2.0.0-candidate",
+        "release": RELEASE_CANDIDATE,
+        "export_canvas": list(EXPORT_CANVAS),
         "static_pngs": len(static_paths),
         "animated_apngs": len(animated_paths),
         "frame_distribution": frame_distribution,

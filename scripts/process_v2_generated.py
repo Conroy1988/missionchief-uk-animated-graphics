@@ -10,6 +10,8 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+from v2_profile import MASTER_CANVAS, MASTER_DIR, STATIC_DIR, compact_export
+
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOTYPES = ROOT / "data/prototypes.json"
@@ -119,8 +121,8 @@ def fit_to_canvas(image: Image.Image, asset_id: str, length_metres: float) -> tu
     size = (max(1, round(subject.width * scale)), max(1, round(subject.height * scale)))
     subject = subject.resize(size, Image.Resampling.LANCZOS)
 
-    canvas = Image.new("RGBA", (200, 200), (0, 0, 0, 0))
-    left = (200 - subject.width) // 2
+    canvas = Image.new("RGBA", MASTER_CANVAS, (0, 0, 0, 0))
+    left = (MASTER_CANVAS[0] - subject.width) // 2
     top = baseline - subject.height
     canvas.alpha_composite(subject, (left, top))
 
@@ -141,13 +143,17 @@ def main() -> None:
     validate_chroma_screen(extracted)
     canvas, bbox = fit_to_canvas(extracted, args.asset_id, float(record["real_length_metres"]))
 
-    master = ROOT / "assets/masters/v2.0.0" / f"{args.asset_id}.png"
-    static = ROOT / "assets/exports/v2/static" / f"{args.asset_id}.png"
+    master = MASTER_DIR / f"{args.asset_id}.png"
+    static = STATIC_DIR / f"{args.asset_id}.png"
     master.parent.mkdir(parents=True, exist_ok=True)
     static.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(master, optimize=True)
-    canvas.save(static, optimize=True)
-    print(f"asset_id={args.asset_id} bbox={bbox} master={master.relative_to(ROOT)}")
+    compact = compact_export(canvas)
+    compact.save(static, optimize=True)
+    print(
+        f"asset_id={args.asset_id} master_bbox={bbox} "
+        f"export_bbox={compact.getchannel('A').getbbox()} master={master.relative_to(ROOT)}"
+    )
 
 
 if __name__ == "__main__":

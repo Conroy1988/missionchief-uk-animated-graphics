@@ -1080,6 +1080,11 @@ kbd {
   transition: opacity 180ms ease, transform 300ms ease;
 }
 
+.evidence-wide img {
+  object-fit: contain;
+  background: #0d151b;
+}
+
 .evidence-card:hover img {
   opacity: 1;
   transform: scale(1.02);

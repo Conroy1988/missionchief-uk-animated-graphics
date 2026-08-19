@@ -27,10 +27,11 @@ const defaults = {
 };
 
 test('catalogue contains one ordered record for every live MissionChief slot', () => {
-  assert.equal(catalogue.release, 'v2.0.0');
-  assert.equal(catalogue.releases[0].id, 'v2.0.0');
-  assert.equal(catalogue.releases[1].id, 'v1.4.14');
-  assert.equal(catalogue.releases[2].id, 'v1.4.13');
+  assert.equal(catalogue.release, 'v2.0.1');
+  assert.equal(catalogue.releases[0].id, 'v2.0.1');
+  assert.equal(catalogue.releases[1].id, 'v2.0.0');
+  assert.equal(catalogue.releases[2].id, 'v1.4.14');
+  assert.equal(catalogue.releases[3].id, 'v1.4.13');
   assert.equal(catalogue.total, 117);
   assert.equal(catalogue.vehicles.length, 117);
   assert.deepEqual(catalogue.vehicles.map((vehicle) => vehicle.slot), Array.from({ length: 117 }, (_, index) => index + 1));
@@ -38,17 +39,17 @@ test('catalogue contains one ordered record for every live MissionChief slot', (
   const firePump = catalogue.vehicles.find((vehicle) => vehicle.asset_id === 'fire-rescue-pump');
   assert.deepEqual(
     { slot: firePump.slot, width: firePump.width, height: firePump.height, frames: firePump.frames, cue: firePump.cue },
-    { slot: 1, width: 200, height: 200, frames: 12, cue: 'Direction-neutral heavy-calibrated · Blue response lighting' },
+    { slot: 1, width: 110, height: 110, frames: 12, cue: 'Direction-neutral heavy-calibrated · Blue response lighting' },
   );
   const coastguardHelicopter = catalogue.vehicles.find((vehicle) => vehicle.id === 'coastguard-rescue-helicopter');
   assert.deepEqual(
     { slot: coastguardHelicopter.slot, width: coastguardHelicopter.width, height: coastguardHelicopter.height, frames: coastguardHelicopter.frames, cue: coastguardHelicopter.cue },
-    { slot: 65, width: 200, height: 200, frames: 18, cue: 'Direction-neutral aircraft · rotor and aviation-light motion' },
+    { slot: 65, width: 110, height: 110, frames: 18, cue: 'Direction-neutral aircraft · rotor and aviation-light motion' },
   );
   const lifeboat = catalogue.vehicles.find((vehicle) => vehicle.id === 'alb');
   assert.deepEqual(
     { slot: lifeboat.slot, width: lifeboat.width, height: lifeboat.height, frames: lifeboat.frames, cue: lifeboat.cue },
-    { slot: 70, width: 200, height: 200, frames: 18, cue: 'Direction-neutral craft · navigation lights and wake motion' },
+    { slot: 70, width: 110, height: 110, frames: 18, cue: 'Direction-neutral craft · navigation lights and wake motion' },
   );
   const inlandBoat = catalogue.vehicles.find((vehicle) => vehicle.id === 'inland-rescue-boat-trailer');
   assert.deepEqual(
@@ -62,8 +63,8 @@ test('catalogue contains one ordered record for every live MissionChief slot', (
     },
     {
       slot: 68,
-      width: 200,
-      height: 200,
+      width: 110,
+      height: 110,
       frames: 12,
       length: 12.5,
       cue: 'Complete direction-neutral towing unit',
