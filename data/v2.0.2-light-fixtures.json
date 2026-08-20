@@ -1757,6 +1757,12 @@
           7,
           10
         ],
+        "tail_aperture_box": [
+          13,
+          84,
+          27,
+          104
+        ],
         "tail_baked_blades_removed": 0
       }
     },
@@ -2071,11 +2077,17 @@
         "tail_kind": "fenestron",
         "tail_centre": [
           18,
-          85
+          87
         ],
         "tail_radii": [
-          7,
-          9
+          9,
+          10
+        ],
+        "tail_aperture_box": [
+          9,
+          77,
+          27,
+          97
         ],
         "tail_baked_blades_removed": 0
       }
@@ -11526,6 +11538,7 @@
           14,
           14
         ],
+        "tail_aperture_box": null,
         "tail_baked_blades_removed": 4
       }
     },
@@ -11667,6 +11680,7 @@
           15,
           15
         ],
+        "tail_aperture_box": null,
         "tail_baked_blades_removed": 4
       }
     },

@@ -51,12 +51,29 @@ class TailRotor:
     radii: Point
     removal: BladeRemoval | None = None
     accent: tuple[int, int, int] | None = None
+    aperture_box: Box | None = None
 
 
 @dataclass(frozen=True)
 class HelicopterGeometry:
     main: MainRotor
     tail: TailRotor
+
+
+def _fenestron(aperture_box: Box) -> TailRotor:
+    """Build tail motion directly from a measured physical duct opening."""
+
+    left, top, right, bottom = aperture_box
+    width = right - left
+    height = bottom - top
+    if width <= 0 or height <= 0 or width % 2 or height % 2:
+        raise ValueError(f"Fenestron aperture must have a positive integer centre: {aperture_box}")
+    return TailRotor(
+        kind="fenestron",
+        centre=(left + width // 2, top + height // 2),
+        radii=(width // 2, height // 2),
+        aperture_box=aperture_box,
+    )
 
 
 HELICOPTER_GEOMETRY: dict[str, HelicopterGeometry] = {
@@ -85,7 +102,7 @@ HELICOPTER_GEOMETRY: dict[str, HelicopterGeometry] = {
             disc_radii=(76, 36),
             tilt_degrees=1.0,
         ),
-        tail=TailRotor(kind="fenestron", centre=(20, 94), radii=(7, 10)),
+        tail=_fenestron((13, 84, 27, 104)),
     ),
     "police-helicopter": HelicopterGeometry(
         main=MainRotor(
@@ -112,7 +129,9 @@ HELICOPTER_GEOMETRY: dict[str, HelicopterGeometry] = {
             disc_radii=(92, 39),
             tilt_degrees=2.5,
         ),
-        tail=TailRotor(kind="fenestron", centre=(18, 85), radii=(7, 9)),
+        # Centre the motion on the measured physical duct—not the darker,
+        # slightly higher stopped-blade cluster inherited from the source.
+        tail=_fenestron((9, 77, 27, 97)),
     ),
     "coastguard-rescue-helicopter": HelicopterGeometry(
         main=MainRotor(
@@ -684,6 +703,9 @@ def geometry_manifest(asset_id: str) -> dict[str, object]:
         "tail_kind": geometry.tail.kind,
         "tail_centre": list(geometry.tail.centre),
         "tail_radii": list(geometry.tail.radii),
+        "tail_aperture_box": (
+            list(geometry.tail.aperture_box) if geometry.tail.aperture_box is not None else None
+        ),
         "tail_baked_blades_removed": (
             len(geometry.tail.removal.blades) if geometry.tail.removal is not None else 0
         ),
