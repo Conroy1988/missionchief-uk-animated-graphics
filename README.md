@@ -1,4 +1,4 @@
-# TKB UK Emergency Fleet — Compact Direction Neutral v2.0.1
+# TKB UK Emergency Fleet — Calibrated Helicopter Motion v2.0.2
 
 A complete original UK emergency-services vehicle graphics pack for [MissionChief UK](https://www.missionchief.co.uk/), built by **TKB Gaming**.
 
@@ -51,18 +51,29 @@ Response lighting is deliberately unmistakable at map scale. Each animated fixtu
 - Blue response profiles cover emergency road vehicles, specialist units, pods and towing combinations.
 - Green response lighting is used for the General Practitioner vehicle.
 - Amber profiles cover recovery and selected airfield assets.
-- Aircraft use blue response lamps, red/green navigation lighting, white strobes and moving rotor traces.
+- Aircraft use blue response lamps, red/green navigation lighting, white strobes and aircraft-specific rotor motion.
 - ILB and ALB use blue response lamps, navigation lighting and restrained wake motion.
 
 Every response asset is checked at native 110×110 map scale, 75% and 50% display scale. The release gate rejects a flash that is too small or too dim, a lamp core that floats off the subject, oversized effects, partial APNG update tiles, unsupported frame blending, invalid timing or a non-looping file.
+
+## Helicopter rotor motion
+
+Version 2.0.2 replaces the stopped, cross-shaped helicopter blades with calibrated high-RPM animation on HEMS, Police and both Coastguard aircraft. Each airframe has an explicit main hub, rotor-disc footprint and tail-rotor centre instead of estimating rotor placement from the whole-aircraft bounding box.
+
+- HEMS and Police tail motion is clipped inside the physical fenestron opening.
+- Both Coastguard tail rotors turn around their exposed mechanical hubs.
+- Main-rotor discs preserve the perspective, diameter and blade count implied by each source aircraft.
+- Blade-free production bases are repaired beneath every sweep so no frozen rotor or erased fuselage leaks into the animation.
+
+**[Four-aircraft rotor preview](assets/previews/v2.0.2/helicopter-rotor-fleet.gif)** · **[Tail-rotor alignment audit](assets/previews/v2.0.2/helicopter-tail-rotor-alignment.gif)**
 
 ## Tested for real map conditions
 
 All 117 static and all 117 animated assets are rendered and inspected against light, dark, grayscale and satellite-style backgrounds in both alternating flash phases.
 
-[![v2.0.1 actual-pixel scale calibration](assets/previews/v2.0.1/compact-map-scale-calibration.png)](assets/previews/v2.0.1/compact-map-scale-calibration.png)
+[![v2.0.2 actual-pixel scale calibration](assets/previews/v2.0.2/compact-map-scale-calibration.png)](assets/previews/v2.0.2/compact-map-scale-calibration.png)
 
-**[Static light-map audit](assets/previews/v2.0.1/full-fleet-static-light.png)** · **[Static satellite audit](assets/previews/v2.0.1/full-fleet-static-satellite.png)** · **[Response phase B dark-map audit](assets/previews/v2.0.1/full-fleet-response-b-dark.png)** · **[Response grayscale audit](assets/previews/v2.0.1/full-fleet-response-a-grayscale.png)**
+**[Static light-map audit](assets/previews/v2.0.2/full-fleet-static-light.png)** · **[Static satellite audit](assets/previews/v2.0.2/full-fleet-static-satellite.png)** · **[Response phase B dark-map audit](assets/previews/v2.0.2/full-fleet-response-b-dark.png)** · **[Response grayscale audit](assets/previews/v2.0.2/full-fleet-response-a-grayscale.png)**
 
 The machine-readable gates report:
 
@@ -82,21 +93,21 @@ The game renders every v2 asset natively. No secondary extension or userscript i
 
 ## Release download
 
-The [v2.0.1 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.0.1) includes:
+The [v2.0.2 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.0.2) includes:
 
-- `TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.1.zip` — ordered static/animated deployment folders, exact slot guide, machine-readable manifest and SHA-256 verification;
-- `v2.0.1-scale-report.json`, static/animation QA, fixture metadata and complete integrity report — production evidence for every vehicle and animation.
+- `TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.2.zip` — ordered static/animated deployment folders, exact slot guide, machine-readable manifest and SHA-256 verification;
+- `v2.0.2-scale-report.json`, static/animation QA, rotor geometry, fixture metadata and complete integrity report — production evidence for every vehicle and animation.
 
-The [v2.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.0.0) retains the original 200×200 direction-neutral exports. The [v1.4.14 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.14) remains available as the previous right-facing side-elevation generation.
+The [v2.0.1 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.0.1) retains the original compact-scale rotor animation. The [v2.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.0.0) retains the original 200×200 direction-neutral exports. The [v1.4.14 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.14) remains available as the previous right-facing side-elevation generation.
 
 ## Repository structure
 
 - `assets/masters/v2.0.0/` — the 117 preserved 200×200 direction-neutral masters;
 - `assets/exports/v2/static/` — MissionChief-ready 110×110 static PNGs;
 - `assets/exports/v2/animated/` — MissionChief-ready twelve- and eighteen-frame response APNGs;
-- `assets/previews/v2.0.1/` — actual-pixel scale, full-fleet map-condition and flash-phase evidence;
+- `assets/previews/v2.0.2/` — actual-pixel scale, full-fleet map-condition, flash-phase and helicopter-rotor evidence;
 - `data/vehicle-slots.json` — authoritative 117-slot MissionChief mapping;
-- `data/v2.0.1-*.json` — scale provenance, fixtures, build results and fail-closed QA reports;
+- `data/v2.0.2-*.json` — scale provenance, fixtures, rotor geometry, build results and fail-closed QA reports;
 - `scripts/` — deterministic processing, lighting, packaging and validation tools;
 - `docs/` — visual standards and release checkpoints;
 - `assets/exports/command/` — unchanged v1.4.14 production profile.
@@ -109,8 +120,9 @@ python scripts/validate_v2_static_fleet.py
 python scripts/build_v2_animated_fleet.py
 python scripts/validate_v2_animated_fleet.py
 python scripts/build_v2_calibration.py
+python scripts/build_v2_helicopter_previews.py
 python scripts/build_interactive_gallery.py
-python scripts/build_numbered_upload_package.py --version v2.0.1 --profile v2
+python scripts/build_numbered_upload_package.py --version v2.0.2 --profile v2
 python scripts/validate_v2_release_integrity.py
 ```
 

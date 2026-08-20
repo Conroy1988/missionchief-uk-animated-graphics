@@ -7,7 +7,7 @@ import json
 
 from PIL import Image, ImageDraw, ImageFont
 
-from v2_profile import EXPORT_CANVAS, MASTER_DIR, PREVIEW_DIR, ROOT, STATIC_DIR
+from v2_profile import EXPORT_CANVAS, MASTER_DIR, PREVIEW_DIR, RELEASE, ROOT, STATIC_DIR
 
 
 SLOTS = json.loads((ROOT / "data/vehicle-slots.json").read_text())["slots"]
@@ -65,7 +65,7 @@ def render_preview() -> None:
     columns = (
         ("v1.4.14 command baseline", COMMAND_DIR),
         ("v2.0.0 oversized master", MASTER_DIR),
-        (f"v2.0.1 compact {EXPORT_CANVAS[0]}×{EXPORT_CANVAS[1]}", STATIC_DIR),
+        (f"{RELEASE} compact {EXPORT_CANVAS[0]}×{EXPORT_CANVAS[1]}", STATIC_DIR),
     )
     groups_per_row = 2
     tile_width, tile_height = 220, 184
@@ -83,7 +83,7 @@ def render_preview() -> None:
     font = ImageFont.load_default()
     draw.text(
         (18, 16),
-        "v2.0.1 compact fleet — map-scale calibration",
+        f"{RELEASE} compact fleet — map-scale calibration",
         fill=(255, 255, 255),
         font=font,
     )

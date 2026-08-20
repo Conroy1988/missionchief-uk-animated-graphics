@@ -9,6 +9,7 @@ from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageFont
 
+from v2_helicopter_rotors import HELICOPTER_GEOMETRY
 from v2_profile import (
     ANIMATED_DIR,
     EXPORT_CANVAS,
@@ -16,6 +17,7 @@ from v2_profile import (
     MASTER_CANVAS,
     MASTER_DIR,
     PREVIEW_DIR,
+    RELEASE,
     RELEASE_CANDIDATE,
     ROOT,
     STATIC_DIR,
@@ -23,8 +25,8 @@ from v2_profile import (
 
 
 SLOTS = json.loads((ROOT / "data/vehicle-slots.json").read_text())["slots"]
-FIXTURES = json.loads((ROOT / "data/v2.0.1-light-fixtures.json").read_text())["vehicles"]
-REPORT = ROOT / "data/v2.0.1-animation-qa-report.json"
+FIXTURES = json.loads((ROOT / f"data/{RELEASE}-light-fixtures.json").read_text())["vehicles"]
+REPORT = ROOT / f"data/{RELEASE}-animation-qa-report.json"
 
 
 THEMES = {
@@ -127,6 +129,29 @@ def fixture_overlap(static: Image.Image, fixture: dict) -> float:
     return sum(value > 32 for value in overlap.get_flattened_data()) / fixture_pixels
 
 
+def local_motion_minimum(
+    animation_frames: list[Image.Image],
+    centre: tuple[int, int],
+    radii: tuple[int, int],
+) -> int:
+    centre_x = round(centre[0] * EXPORT_SCALE)
+    centre_y = round(centre[1] * EXPORT_SCALE)
+    radius_x = max(2, round(radii[0] * EXPORT_SCALE) + 2)
+    radius_y = max(2, round(radii[1] * EXPORT_SCALE) + 2)
+    box = (
+        max(0, centre_x - radius_x),
+        max(0, centre_y - radius_y),
+        min(EXPORT_CANVAS[0], centre_x + radius_x + 1),
+        min(EXPORT_CANVAS[1], centre_y + radius_y + 1),
+    )
+    changes: list[int] = []
+    for index, frame in enumerate(animation_frames):
+        following = animation_frames[(index + 1) % len(animation_frames)]
+        difference = ImageChops.difference(frame.crop(box), following.crop(box)).convert("RGB")
+        changes.append(sum(max(pixel) >= 5 for pixel in difference.get_flattened_data()))
+    return min(changes, default=0)
+
+
 def render_sheet(theme: str, frame_index: int, phase: str) -> Path:
     background, foreground, secondary = THEMES[theme]
     columns = 8
@@ -208,8 +233,25 @@ def main() -> None:
             errors.append("flash-too-small-at-50pct")
         if metrics["peak_change_50pct"] < 55:
             errors.append("flash-too-dim-at-50pct")
-        if metrics["changed_pixels_full_max"] > 2500:
+        effect_pixel_limit = 5500 if asset_id in HELICOPTER_GEOMETRY else 2500
+        if metrics["changed_pixels_full_max"] > effect_pixel_limit:
             errors.append("effect-too-large")
+
+        tail_motion_min = None
+        tail_centre_alpha = None
+        if asset_id in HELICOPTER_GEOMETRY:
+            rotor_geometry = HELICOPTER_GEOMETRY[asset_id]
+            tail_centre_alpha = master.getpixel(rotor_geometry.tail.centre)[3]
+            tail_motion_min = local_motion_minimum(
+                decoded,
+                rotor_geometry.tail.centre,
+                rotor_geometry.tail.radii,
+            )
+            if tail_centre_alpha < 64:
+                errors.append("tail-rotor-centre-off-airframe")
+            minimum_tail_motion = 18 if rotor_geometry.tail.kind == "exposed" else 8
+            if tail_motion_min < minimum_tail_motion:
+                errors.append("tail-rotor-motion-too-small")
 
         overlaps = [fixture_overlap(master, fixture) for fixture in FIXTURES[asset_id]["fixtures"]]
         if any(overlap < 0.12 for overlap in overlaps):
@@ -223,6 +265,9 @@ def main() -> None:
                 "decoded_frames": len(decoded),
                 "duration_ms": sum(durations),
                 "fixture_overlap_min": round(min(overlaps), 3) if overlaps else None,
+                "effect_pixel_limit": effect_pixel_limit,
+                "tail_centre_alpha": tail_centre_alpha,
+                "tail_motion_changed_pixels_min": tail_motion_min,
                 **metrics,
                 "errors": sorted(set(errors)),
                 "passed": not errors,

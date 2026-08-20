@@ -23,6 +23,12 @@ RELEASES = [
         "id": RELEASE,
         "label": f"{RELEASE} · Current",
         "profile": "v2",
+        "summary": "Calibrated helicopter rotors across the compact direction-neutral fleet",
+    },
+    {
+        "id": "v2.0.1",
+        "label": "v2.0.1",
+        "profile": "v2",
         "summary": "Compact direction-neutral fleet calibrated for live-map scale",
     },
     {
