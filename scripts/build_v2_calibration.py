@@ -4,6 +4,9 @@
 from __future__ import annotations
 
 import json
+import shutil
+import tempfile
+from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -140,11 +143,17 @@ def render_preview() -> None:
             )
 
     PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
-    temporary = PREVIEW.with_suffix(".tmp.png")
-    sheet.save(temporary, compress_level=6)
-    with Image.open(temporary) as verification:
-        verification.load()
-    temporary.replace(PREVIEW)
+    with tempfile.NamedTemporaryFile(prefix=f"{PREVIEW.stem}-", suffix=".png", delete=False) as handle:
+        temporary = Path(handle.name)
+    try:
+        sheet.save(temporary, compress_level=6)
+        with Image.open(temporary) as verification:
+            verification.load()
+        shutil.copyfile(temporary, PREVIEW)
+        with Image.open(PREVIEW) as verification:
+            verification.load()
+    finally:
+        temporary.unlink(missing_ok=True)
 
 
 def main() -> None:

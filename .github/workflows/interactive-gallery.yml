@@ -10,13 +10,15 @@ on:
       - scripts/build_interactive_gallery.py
       - data/vehicle-slots.json
       - data/prototypes.json
-      - data/v2.0.2-animation-build-report.json
-      - data/v2.0.2-animation-qa-report.json
-      - data/v2.0.2-light-fixtures.json
-      - data/v2.0.2-scale-report.json
-      - data/v2.0.2-static-qa-report.json
+      - data/v2.0.3-animation-build-report.json
+      - data/v2.0.3-animation-qa-report.json
+      - data/v2.0.3-cab-legibility-report.json
+      - data/v2.0.3-light-fixtures.json
+      - data/v2.0.3-scale-report.json
+      - data/v2.0.3-static-qa-report.json
       - assets/exports/v2/**
-      - assets/previews/v2.0.2/**
+      - assets/masters/v2.0.3/**
+      - assets/previews/v2.0.3/**
       - .github/workflows/interactive-gallery.yml
   push:
     branches:
@@ -27,13 +29,15 @@ on:
       - scripts/build_interactive_gallery.py
       - data/vehicle-slots.json
       - data/prototypes.json
-      - data/v2.0.2-animation-build-report.json
-      - data/v2.0.2-animation-qa-report.json
-      - data/v2.0.2-light-fixtures.json
-      - data/v2.0.2-scale-report.json
-      - data/v2.0.2-static-qa-report.json
+      - data/v2.0.3-animation-build-report.json
+      - data/v2.0.3-animation-qa-report.json
+      - data/v2.0.3-cab-legibility-report.json
+      - data/v2.0.3-light-fixtures.json
+      - data/v2.0.3-scale-report.json
+      - data/v2.0.3-static-qa-report.json
       - assets/exports/v2/**
-      - assets/previews/v2.0.2/**
+      - assets/masters/v2.0.3/**
+      - assets/previews/v2.0.3/**
       - .github/workflows/interactive-gallery.yml
   workflow_dispatch:
 
@@ -69,4 +73,4 @@ jobs:
           test -f dist/gallery-site/vehicles.json
           test "$(find dist/gallery-site/assets/exports/v2/static -type f -name '*.png' | wc -l)" -eq 117
           test "$(find dist/gallery-site/assets/exports/v2/animated -type f -name '*.png' | wc -l)" -eq 117
-          test "$(find dist/gallery-site/assets/previews/v2.0.2 -type f -name '*.png' | wc -l)" -eq 14
+          test "$(find dist/gallery-site/assets/previews/v2.0.3 -type f -name '*.png' | wc -l)" -eq 16

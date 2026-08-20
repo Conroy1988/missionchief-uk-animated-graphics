@@ -13,18 +13,36 @@ if TYPE_CHECKING:
 
 ROOT = Path(__file__).resolve().parents[1]
 
-RELEASE = "v2.0.2"
+RELEASE = "v2.0.3"
 RELEASE_CANDIDATE = f"{RELEASE}-candidate"
 MASTER_RELEASE = "v2.0.0"
+MASTER_OVERRIDE_RELEASE = RELEASE
 
 MASTER_CANVAS = (200, 200)
 EXPORT_CANVAS = (110, 110)
 EXPORT_SCALE = EXPORT_CANVAS[0] / MASTER_CANVAS[0]
 
 MASTER_DIR = ROOT / "assets" / "masters" / MASTER_RELEASE
+MASTER_OVERRIDE_DIR = ROOT / "assets" / "masters" / MASTER_OVERRIDE_RELEASE
 STATIC_DIR = ROOT / "assets" / "exports" / "v2" / "static"
 ANIMATED_DIR = ROOT / "assets" / "exports" / "v2" / "animated"
 PREVIEW_DIR = ROOT / "assets" / "previews" / RELEASE
+
+
+def master_path(asset_id: str) -> Path:
+    """Return a release override when present, otherwise the immutable v2 base."""
+
+    override = MASTER_OVERRIDE_DIR / f"{asset_id}.png"
+    return override if override.exists() else MASTER_DIR / f"{asset_id}.png"
+
+
+def resolved_master_ids() -> set[str]:
+    """Return the complete logical master set across base and release overrides."""
+
+    return {
+        *(path.stem for path in MASTER_DIR.glob("*.png")),
+        *(path.stem for path in MASTER_OVERRIDE_DIR.glob("*.png")),
+    }
 
 
 def compact_export(image: Image.Image) -> Image.Image:

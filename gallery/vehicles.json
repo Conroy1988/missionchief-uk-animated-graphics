@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v2.0.2",
+  "release": "v2.0.3",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -83,8 +83,14 @@
   ],
   "releases": [
     {
+      "id": "v2.0.3",
+      "label": "v2.0.3 · Current",
+      "profile": "v2",
+      "summary": "Recognisable front cabs for every driven fire appliance"
+    },
+    {
       "id": "v2.0.2",
-      "label": "v2.0.2 · Current",
+      "label": "v2.0.2",
       "profile": "v2",
       "summary": "Calibrated helicopter rotors across the compact direction-neutral fleet"
     },
@@ -3037,10 +3043,11 @@
   "generated_from": [
     "data/vehicle-slots.json",
     "data/prototypes.json",
-    "data/v2.0.2-animation-build-report.json",
-    "data/v2.0.2-animation-qa-report.json",
-    "data/v2.0.2-light-fixtures.json",
-    "data/v2.0.2-scale-report.json",
-    "data/v2.0.2-static-qa-report.json"
+    "data/v2.0.3-animation-build-report.json",
+    "data/v2.0.3-animation-qa-report.json",
+    "data/v2.0.3-cab-legibility-report.json",
+    "data/v2.0.3-light-fixtures.json",
+    "data/v2.0.3-scale-report.json",
+    "data/v2.0.3-static-qa-report.json"
   ]
 }

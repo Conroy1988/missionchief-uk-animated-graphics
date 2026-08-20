@@ -1,0 +1,3061 @@
+{
+  "release": "v2.0.3-candidate",
+  "master_canvas": [
+    200,
+    200
+  ],
+  "export_canvas": [
+    110,
+    110
+  ],
+  "scale": 0.55,
+  "expected_assets": 117,
+  "master_assets": 117,
+  "export_assets": 117,
+  "all_passed": true,
+  "errors": [],
+  "entries": [
+    {
+      "slot": 1,
+      "asset_id": "fire-rescue-pump",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        15,
+        41,
+        185,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        8,
+        22,
+        102,
+        103
+      ],
+      "master_sha256": "c1749bfa532fd25e27e25adaf4dd008d11060483a2ab562f94966405103e3a76",
+      "export_sha256": "0b65613d20a6e9cd324a69cff572de52e99ffd322287930e38eaeb2df0678791"
+    },
+    {
+      "slot": 2,
+      "asset_id": "light-4x4-pump",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        35,
+        82,
+        165,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        19,
+        45,
+        91,
+        103
+      ],
+      "master_sha256": "2c981dd3ec6ad5f10c79ce5c3c907a0c941b6fa56e82fc4ec6b1792252358f40",
+      "export_sha256": "59ce153e8334ba3d37e48b26fd3b4a2594cb95f3509c570f86f7218785404bea"
+    },
+    {
+      "slot": 3,
+      "asset_id": "aerial-appliance",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        64,
+        194,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        35,
+        107,
+        103
+      ],
+      "master_sha256": "fd786309e1183c0e8ae667c6cdfbf7cade7dfdb2b6b71043958e99c09cc5c339",
+      "export_sha256": "26e07c20adbee287c133b43ae52773b5099cad6a866be1494403172a01ecb3b7"
+    },
+    {
+      "slot": 4,
+      "asset_id": "fire-officer",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        118,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        64,
+        84,
+        103
+      ],
+      "master_sha256": "ad846abb64ec5f85c8123d02bc49d28827fa1c4f7c3fb8f5696c9a759cf7314a",
+      "export_sha256": "6f9a302b279604b4b4db08720a50d9b984c43dc4da52304383042e7e905afc83"
+    },
+    {
+      "slot": 5,
+      "asset_id": "rescue-support-unit",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        12,
+        58,
+        188,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        6,
+        31,
+        104,
+        103
+      ],
+      "master_sha256": "4162c07600876e648b31f25bb76c904c8eaf4226f06ee66762ba78c40c7dc9c0",
+      "export_sha256": "67a9ef365a065c26dadcc40e10ec7aef83e88d9d8e24bc3bea40942e669c1da8"
+    },
+    {
+      "slot": 6,
+      "asset_id": "frontline-ambulance",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        35,
+        77,
+        165,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        19,
+        42,
+        91,
+        103
+      ],
+      "master_sha256": "fd50396c12340434c0001d5037d024414c592fbba310bc93d9ffbe56449947c7",
+      "export_sha256": "fbf7485e70460d23a5545480c3105f7d1767e772db6972b37478078a669a2821"
+    },
+    {
+      "slot": 7,
+      "asset_id": "water-carrier",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        70,
+        194,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        38,
+        107,
+        103
+      ],
+      "master_sha256": "100a77bd92d53e207decfdacbf6a30c4b465164d1540ffe0611991ce8a57647b",
+      "export_sha256": "913c339b614c45958262e121590095a6954557e8d420b2be40b805861017d9ca"
+    },
+    {
+      "slot": 8,
+      "asset_id": "hazmat-unit",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        12,
+        80,
+        188,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        6,
+        43,
+        104,
+        103
+      ],
+      "master_sha256": "7da228352ff331d1946519f54d2726fd89a00fdca989ab55919d596e8f8a60c5",
+      "export_sha256": "d171843a1b44ec5ff91439e5bec5b7fcae7c270c801126722b8c9ac09e27cfd9"
+    },
+    {
+      "slot": 9,
+      "asset_id": "police-incident-response-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        116,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        63,
+        84,
+        103
+      ],
+      "master_sha256": "2fff986dec774562ce00e76743f47c2c619244368e71324235045f963e7cf7dc",
+      "export_sha256": "48a6d9a4b2daf388fb0f8d1803181e088011d9084791927debcca4f2a1fc6614"
+    },
+    {
+      "slot": 10,
+      "asset_id": "hems",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        56,
+        194,
+        184
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        30,
+        107,
+        102
+      ],
+      "master_sha256": "9a9c84ed9e766c8ded0247249296076d49227e4fd7999e1d688d39bdf6e35595",
+      "export_sha256": "7d24d616bd49e57db2f8dfb8d3dee4d7477927aa7e1eb7bd5ee89f25b64af89b"
+    },
+    {
+      "slot": 11,
+      "asset_id": "rapid-response-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        121,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        66,
+        84,
+        103
+      ],
+      "master_sha256": "21614d2f732ea9733815ce7aa5bd77febd7a0f0eeddb01abeba6b77b3a0fede5",
+      "export_sha256": "af68cda6908a4159548ed64c9d54ef47eea3b2857b00a67dd06d5d3f68ac00f8"
+    },
+    {
+      "slot": 12,
+      "asset_id": "police-helicopter",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        51,
+        194,
+        184
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        28,
+        107,
+        102
+      ],
+      "master_sha256": "87d4afe4661ce39df3b7e336c895552dd5cc782d1dcd8d7bf215092b62d4907c",
+      "export_sha256": "2033899807b89e25b03a3c265cc32f9f491c81c1598edf8c82f266c6c754b1a2"
+    },
+    {
+      "slot": 13,
+      "asset_id": "dog-support-unit",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        32,
+        77,
+        168,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        17,
+        42,
+        93,
+        103
+      ],
+      "master_sha256": "cfc5626eab7f3c2e314d892e05b90ea6c4d209c515fba5dde5123e4fbef5fba3",
+      "export_sha256": "c1181881fa487c7be00995c19aaa30a9633202cccd2ff7c3fb2814414f2240e0"
+    },
+    {
+      "slot": 14,
+      "asset_id": "armed-response-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        132,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        72,
+        84,
+        103
+      ],
+      "master_sha256": "2013b996ccda41e972c1d02c66590ee7cf0fd80af19cea75b7ea9d0da642ea20",
+      "export_sha256": "a506fce614a262f4bf0d7d510872c863ca4fd5efb118b2c177c260f90c61fba6"
+    },
+    {
+      "slot": 15,
+      "asset_id": "breathing-apparatus-support-unit",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        14,
+        70,
+        186,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        7,
+        38,
+        103,
+        103
+      ],
+      "master_sha256": "646b1692a1da69c34061de52405c8dd81a7577e88fae752818c7f3772dc2e820",
+      "export_sha256": "fecce370a3d018422b315b263f7be0cb537bbc30639c76a32ec5bb3562efedfc"
+    },
+    {
+      "slot": 16,
+      "asset_id": "incident-command-control-unit",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        64,
+        194,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        35,
+        107,
+        103
+      ],
+      "master_sha256": "303eedce2d0f91c3be06c6617667ece6d65c5627be651d5d4c4f397833b2b9ea",
+      "export_sha256": "6f6e61e0fab2dbbdd8f75aa0301032d3aa1b28bb6cd695ea11c9202745e46cfe"
+    },
+    {
+      "slot": 17,
+      "asset_id": "rescue-pump",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        14,
+        63,
+        186,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        7,
+        34,
+        103,
+        103
+      ],
+      "master_sha256": "41236238b286719886158d6166acb3f2cbd97d02fce1bb9ce4a882535ad6333b",
+      "export_sha256": "9cc48801b4c9e8d13b1cfcae153c3c7637066fcc7ba955bbc073562d26f2c5bf"
+    },
+    {
+      "slot": 18,
+      "asset_id": "carp",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        71,
+        194,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        39,
+        107,
+        103
+      ],
+      "master_sha256": "ad1d3ad4f5aaecbedb1a9901b326610d09d26a7f88cd330c82300133efec8463",
+      "export_sha256": "b7c82a1646fb2dbbe6f5c045676863a6808df7eb9bb165768e8f4bf17b659cc0"
+    },
+    {
+      "slot": 19,
+      "asset_id": "co-responder-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        110,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        60,
+        84,
+        103
+      ],
+      "master_sha256": "b7192d25a57c01f71eddc792f904cbff04abdbee4eb499c6cd2ba7fb20402ca9",
+      "export_sha256": "8cbb04a9bc7c1fb10459f6c701584606b91745bb65a048a6907eaad56fb4c25a"
+    },
+    {
+      "slot": 20,
+      "asset_id": "joint-response-unit",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        127,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        69,
+        84,
+        103
+      ],
+      "master_sha256": "cf0a4ae1ec7e420f2aa190700ccbf727d377c4b3ddf4fe025bc08b0dc1155395",
+      "export_sha256": "e99a95d2003e22fc21f74103657d162c09e330b18560e90c2955aa69c91c4a77"
+    },
+    {
+      "slot": 21,
+      "asset_id": "otl",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        121,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        66,
+        84,
+        103
+      ],
+      "master_sha256": "af59533d524c0e0df099cc7e4f0199ca5a62dab40bea984bbbc24977526328c3",
+      "export_sha256": "8d0829072876fd417955f01cac8409052cf04945babc7a607075e4f18178d656"
+    },
+    {
+      "slot": 22,
+      "asset_id": "general-practitioner",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        123,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        67,
+        84,
+        103
+      ],
+      "master_sha256": "beccc67c8bed6e044a4b6c2f409eac6050a9160bd2c1db06a9f20196441d99f5",
+      "export_sha256": "89c496f62978320d1c4a4e7e0f57d2ad5d4a0b57478d6efc458f5b04423feae1"
+    },
+    {
+      "slot": 23,
+      "asset_id": "community-first-responder",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        121,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        66,
+        84,
+        103
+      ],
+      "master_sha256": "68d2b9ec4b046d35ded88d21c09021bf8ffedd765c29e5d6820075a92c82ddfb",
+      "export_sha256": "741c75aebcf27c77a2a1bbd1d1ef2ae66a0dbb41e8a7ecfa4cf15f4ecb03cf51"
+    },
+    {
+      "slot": 24,
+      "asset_id": "crew-carrier",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        28,
+        76,
+        172,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        15,
+        41,
+        95,
+        103
+      ],
+      "master_sha256": "6a67e24f5222795e88aa756a1d2f2bc4b51db34995c8176baf9df819013fd608",
+      "export_sha256": "f1c231b277f49cd9738502eb93d2751ff9976db4804209d46dcc5be1d987c1e3"
+    },
+    {
+      "slot": 25,
+      "asset_id": "traffic-car",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        119,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        65,
+        84,
+        103
+      ],
+      "master_sha256": "98308d41060dcf2c65a1a192fe0fb3185d77fc0f146db952011b04f487006ec5",
+      "export_sha256": "c5e4e549dd381fea7346da691f956a974efc5d33f7dd433deac7586618122cc4"
+    },
+    {
+      "slot": 26,
+      "asset_id": "armed-traffic-car",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        115,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        63,
+        84,
+        103
+      ],
+      "master_sha256": "caebca5877c88faeb00f925071651f75bf356b8809492e6a4b960967040be797",
+      "export_sha256": "391b0517bf05276cd56fdb66473b3d264db940cf335bf253682311d4a7ae6b7a"
+    },
+    {
+      "slot": 27,
+      "asset_id": "heavy-4x4-tanker",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        67,
+        194,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        36,
+        107,
+        103
+      ],
+      "master_sha256": "41b44e0b4568905d3d7436669a9b07baa1858176c65f9784e38e16f5fd444181",
+      "export_sha256": "1087adc317a45491f8f67f08712515639f46fbbe21748576541b1c28a1305453"
+    },
+    {
+      "slot": 28,
+      "asset_id": "prv",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        47,
+        108,
+        153,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        25,
+        59,
+        85,
+        103
+      ],
+      "master_sha256": "a144fe1ca83f20127fd98104d9ab6d6c0907cc64e8747a29bd1a4355135d62d8",
+      "export_sha256": "7d92dd3b4076341d8649bd0d175e92f53f76f5cdff9fe71c9b6a4dfce86abe04"
+    },
+    {
+      "slot": 29,
+      "asset_id": "srv",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        30,
+        75,
+        170,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        16,
+        41,
+        94,
+        103
+      ],
+      "master_sha256": "cf43f86d6479f379dca0c81107a6b011bdc0f5c096a8f8f1beb9e7f233421127",
+      "export_sha256": "8ffed0c76551640c9e8a816ce274d03fc20343bbc026309dc2fefbd388cae089"
+    },
+    {
+      "slot": 30,
+      "asset_id": "welfare-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        30,
+        83,
+        170,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        16,
+        45,
+        94,
+        103
+      ],
+      "master_sha256": "9b9a78e5b301c63f8a01aa664c2a2cbf32f01091cb21ff69431aa7d0237f9fb7",
+      "export_sha256": "343a5535f1a550afd92a0dbdf3f3d9a3bf4fcd4a2ecbda8d736b12b66fe2cbf9"
+    },
+    {
+      "slot": 31,
+      "asset_id": "atv-carrier",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        10,
+        61,
+        190,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        5,
+        33,
+        105,
+        103
+      ],
+      "master_sha256": "7656e88de74914d406f011a05614464f85e646c9aa6a8cea5e92b685bda44150",
+      "export_sha256": "902893a2c0ba389310a265ebd56cd12487a36f79cb1d6519ec26aa5434978244"
+    },
+    {
+      "slot": 32,
+      "asset_id": "ambulance-control-unit",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        52,
+        194,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        28,
+        107,
+        103
+      ],
+      "master_sha256": "e01da121f88d95e0e758dbec6d21d5a77ae168d58a9c37f5db80db022e001764",
+      "export_sha256": "a47479009128a00087bdf2d1b6c5bb405757dee984446661747080891fc9a34f"
+    },
+    {
+      "slot": 33,
+      "asset_id": "cbrn-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        32,
+        91,
+        168,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        17,
+        50,
+        93,
+        103
+      ],
+      "master_sha256": "e9f81a28b4e878f211131bcca12c019ef55f9835578406fbef52562c618b6565",
+      "export_sha256": "a71569d8b81430f21aa51a7cc58d9d83a892567dc93feb4bdb297b515c2acf59"
+    },
+    {
+      "slot": 34,
+      "asset_id": "mass-casualty-equipment",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        63,
+        194,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        34,
+        107,
+        103
+      ],
+      "master_sha256": "e33efc98745d57ab46eb6bf67c987357571751c19f9b487925ecfe0c0d8ed33b",
+      "export_sha256": "700e93205abb7bef36ade54bd243d78c55078f9d818a037f5542fa67cadf0f86"
+    },
+    {
+      "slot": 35,
+      "asset_id": "ambulance-officer",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        124,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        68,
+        84,
+        103
+      ],
+      "master_sha256": "097c3fd5a72ad297badf5da6208aa676ee57bae86cb7b0104042a20103a32abf",
+      "export_sha256": "a21ba0fbca27181b65e516bd586acd205d50c19517408b20a73889727ef33c25"
+    },
+    {
+      "slot": 36,
+      "asset_id": "bfu",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        12,
+        59,
+        188,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        6,
+        32,
+        104,
+        103
+      ],
+      "master_sha256": "07878348d3467e22734c82690dd78bdda98d70ab0269409f7406445f9818168b",
+      "export_sha256": "1f07b011bafbd58c6045ef47acbe7854f7d58638445e01edaf7b43b0ad7dee8f"
+    },
+    {
+      "slot": 37,
+      "asset_id": "f-wrc",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        70,
+        194,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        38,
+        107,
+        103
+      ],
+      "master_sha256": "f4b125acd71acfd6082808bee6af31a0f820ed9a336945632adf162bac4ed469",
+      "export_sha256": "b7f7b941051ad2cb36560eec587d67f411eb54354230d679bde8e6a256ef71eb"
+    },
+    {
+      "slot": 38,
+      "asset_id": "wrl-cafs",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        15,
+        41,
+        185,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        8,
+        22,
+        102,
+        103
+      ],
+      "master_sha256": "e6938fef7f360c69c357956386c02e0bc15878fb55429d602cf8c3872efb90c6",
+      "export_sha256": "3f5d96315b6519fa17fd2a1473e2ac666e221cc551702733fa5b17efe966395f"
+    },
+    {
+      "slot": 39,
+      "asset_id": "rp-cafs",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        14,
+        63,
+        186,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        7,
+        34,
+        103,
+        103
+      ],
+      "master_sha256": "9b8abe140da693b8107a2e40418b2a0e5884cca2f75b7f0fec16a367c13a0c81",
+      "export_sha256": "0919dc96f71ad0b3a20673142466452affa6b629055d33c301814b7b5b9b7ec1"
+    },
+    {
+      "slot": 40,
+      "asset_id": "osu",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        7,
+        84,
+        193,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        46,
+        107,
+        103
+      ],
+      "master_sha256": "48866c143e68178ed66ba1025b8747f0a0cc1462d1f7542594c8261793818de2",
+      "export_sha256": "536abc367886b19f61c7f509ab1d2ffef082855290b6c9ed1cbd52b2f22787bb"
+    },
+    {
+      "slot": 41,
+      "asset_id": "pm",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        15,
+        51,
+        185,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        8,
+        28,
+        102,
+        103
+      ],
+      "master_sha256": "8e1863307a40dc4644a30be011a085c8271701ca8b01463a8f40c91ebeb4314e",
+      "export_sha256": "b2fc4e205dba15a213a211ac3ffbcfcef02d1ef287ff13bc09a107b7e7cba111"
+    },
+    {
+      "slot": 42,
+      "asset_id": "water-pod",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        42,
+        104,
+        157,
+        181
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        23,
+        57,
+        87,
+        100
+      ],
+      "master_sha256": "7fa1ed722c9cf4ee97e6064117f0458a5cf79fb8a9cee2f89358bac7887a2b2a",
+      "export_sha256": "878257eb7d4417b73a4c31d74e56e430627a994f878e20051a79ca60a86dd6c2"
+    },
+    {
+      "slot": 43,
+      "asset_id": "bulk-foam-pod",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        42,
+        110,
+        157,
+        181
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        23,
+        60,
+        87,
+        100
+      ],
+      "master_sha256": "a50932a369123a92fc068c5c775c2c8531587b02e0978ce46dc880afb4036f52",
+      "export_sha256": "df3ccf82d288120e56939e6c17182e3e94fdef1b01fbf56b0f618aea8e7a4b37"
+    },
+    {
+      "slot": 44,
+      "asset_id": "rescue-pod",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        42,
+        95,
+        157,
+        181
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        23,
+        52,
+        87,
+        100
+      ],
+      "master_sha256": "74fc90e0713a1e52e87db05acf0f7d2bb9f8be225913d3e39d9035e9afa9eb53",
+      "export_sha256": "c2eabb5fad97e41da5375b82231260ff72fbd4f60c29973df6fb0e7fed1e6978"
+    },
+    {
+      "slot": 45,
+      "asset_id": "command-pod",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        42,
+        102,
+        157,
+        181
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        23,
+        56,
+        87,
+        100
+      ],
+      "master_sha256": "1ccc80d0871a40e1500b714316fc91367655bf239845804f66073ca5abf8e93f",
+      "export_sha256": "fb074b3b211dc0c2d1b15aef1c6277f945cdbc07b86890aba7caaf24b5acbf04"
+    },
+    {
+      "slot": 46,
+      "asset_id": "welfare-pod",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        42,
+        100,
+        157,
+        181
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        23,
+        54,
+        87,
+        100
+      ],
+      "master_sha256": "70db351ef893fe6a2d0b1ba73392a55546b39e0610a385ef18a71b12e47ac7c7",
+      "export_sha256": "b5b131a55e9368213ab9ab880356afb0632d2a81a4b29caac1e970201c03beb6"
+    },
+    {
+      "slot": 47,
+      "asset_id": "basu-pod",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        42,
+        104,
+        157,
+        181
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        23,
+        57,
+        87,
+        100
+      ],
+      "master_sha256": "11eabd6133142b1137ca16887b741deeb71d754973ca5002dac47228040a537b",
+      "export_sha256": "d1174435735df2db1deb9ac370fb04999498dfecb15454940614ad79f0e51cc3"
+    },
+    {
+      "slot": 48,
+      "asset_id": "misting-pod",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        45,
+        105,
+        155,
+        181
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        24,
+        57,
+        86,
+        100
+      ],
+      "master_sha256": "5dd2afa0bad2c23277ef7a1a5be00d51027e1f8288149a1ac5dc34617d9d0e40",
+      "export_sha256": "d012a3d5bd652f3ac67ec067b3a9a8ac9b43c120301d5c8125133fc64b9902b8"
+    },
+    {
+      "slot": 49,
+      "asset_id": "hazardous-materials-pod",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        42,
+        95,
+        157,
+        181
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        23,
+        52,
+        87,
+        100
+      ],
+      "master_sha256": "55d0aeb25337625f011d0873271784b94f8a4e25c5d3b9ef551ffa8ef76fe13e",
+      "export_sha256": "a6aa2236e56d2205737be41743b9f652ca4c60680b0594dae10367c91d70a741"
+    },
+    {
+      "slot": 50,
+      "asset_id": "osu-pod",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        40,
+        91,
+        159,
+        181
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        21,
+        50,
+        88,
+        100
+      ],
+      "master_sha256": "a181eaed07f9cdc275a4134c50b353238df5da1a75f0327229bfd3058600956a",
+      "export_sha256": "83509db4a49f29be0a883daa1e50ca1e2f00706b6ee5cfc1126a7292df3193ba"
+    },
+    {
+      "slot": 51,
+      "asset_id": "hvp",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        39,
+        107,
+        161,
+        181
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        21,
+        58,
+        89,
+        100
+      ],
+      "master_sha256": "a5f786a8361f17aee184b5cf7d18e1b21c5d1e0c14340bc107065fbf0cce0567",
+      "export_sha256": "01cf8b162b78f715704806dca204183c331eadb9eb7554b5eafdb4ec26ee6154"
+    },
+    {
+      "slot": 52,
+      "asset_id": "psu-carrier",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        31,
+        80,
+        169,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        17,
+        44,
+        93,
+        103
+      ],
+      "master_sha256": "a154e6c58c8c0411fe7efdd5006b09b8d0a09a7f85f137d59fc1ca73844d87fe",
+      "export_sha256": "1468b5cbeb40f38a8e426cffb9bd318b18f788a272eb42960a575527d8969642"
+    },
+    {
+      "slot": 53,
+      "asset_id": "firearms-personnel-carrier",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        28,
+        91,
+        172,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        15,
+        50,
+        95,
+        103
+      ],
+      "master_sha256": "4d04f50c8dff806f3c8a8b2c4828213d4ca3637a2804c79d5b035d4e5c2d1686",
+      "export_sha256": "73a4541492c550d9986bec53fa644ffe87eb9d86d9acfe5094b1bca75378ca45"
+    },
+    {
+      "slot": 54,
+      "asset_id": "multiple-dog-carrier",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        27,
+        97,
+        173,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        14,
+        53,
+        96,
+        103
+      ],
+      "master_sha256": "e6c14fb5f4383e2866ec761f1e8325f5dc0297ee10e8b158e576b977eb39bf8b",
+      "export_sha256": "48e8accb75349d525def14aa253799bc055bc0f527b4cd3cf1d83a0ff4181dd4"
+    },
+    {
+      "slot": 55,
+      "asset_id": "detention-van",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        30,
+        97,
+        170,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        16,
+        53,
+        94,
+        103
+      ],
+      "master_sha256": "1d9895ec12dbf647d97eb5126230502221c25616de3b4c6d9d68ff5f5ee43b78",
+      "export_sha256": "5b321e5ef684721e3e48fb41aa0c35666341975df73dfbf4ccf916dc07c0ce4e"
+    },
+    {
+      "slot": 56,
+      "asset_id": "mounted-unit",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        10,
+        70,
+        190,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        5,
+        38,
+        105,
+        103
+      ],
+      "master_sha256": "c432a2abbc2b1c941073b744834c41ab88ffe6fd90fb7fc50d4652d91d309cf6",
+      "export_sha256": "c6a8ca81484ef25b8e7b2142b575f028282cf8e4f8e955d189c42c6130901c24"
+    },
+    {
+      "slot": 57,
+      "asset_id": "m-rav",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        35,
+        93,
+        165,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        19,
+        51,
+        91,
+        103
+      ],
+      "master_sha256": "8326857581dbb51c88d3db312248b4b7d3c3c5717022752786a94065c28a7bb1",
+      "export_sha256": "674bd6ba4f440326dd2fec8323b89ae385e8c69194df3f21cdebf2d6580ecc8a"
+    },
+    {
+      "slot": 58,
+      "asset_id": "crv",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        112,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        61,
+        84,
+        103
+      ],
+      "master_sha256": "4d7a7c06c973811379c5c04c2c046e8e0e877291088ba2bda93fcd2d26fbc27e",
+      "export_sha256": "5b87946a1b349fa5399b56cdfa490b3901fdeb96cc30bef05ef79f45948d9501"
+    },
+    {
+      "slot": 59,
+      "asset_id": "coastguard-mud-rescue-unit",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        30,
+        84,
+        170,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        16,
+        46,
+        94,
+        103
+      ],
+      "master_sha256": "af5a25d4f28efa252335058ad5170883f8c95796f7cf01145402f7406d7eea3c",
+      "export_sha256": "0822e3d051708d3a4528fddeaf6305b076b47ea99c6077803ca8f50582f83aed"
+    },
+    {
+      "slot": 60,
+      "asset_id": "coastguard-rope-rescue-unit",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        30,
+        99,
+        170,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        16,
+        54,
+        94,
+        103
+      ],
+      "master_sha256": "59e46afba7beb1eb681ff82464be8d6247ed6d76c41cc3e246ae07a2fac8be05",
+      "export_sha256": "7ebd394c0d05e8ec3f17e3856f07a8ea003dee1dd015353c367506cb777c039c"
+    },
+    {
+      "slot": 61,
+      "asset_id": "coastguard-commander",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        44,
+        102,
+        156,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        24,
+        56,
+        86,
+        103
+      ],
+      "master_sha256": "eafe1240ef2446ab6b6d17ba0d2f1c98955ec39a1b688412f66f9ab657ddb904",
+      "export_sha256": "0cc28b46081e81e15d1f61f6997b2cf6a478b5a78afb658b94e3e10ea35ccbf0"
+    },
+    {
+      "slot": 62,
+      "asset_id": "flood-rescue-unit-trailer",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        39,
+        124,
+        161,
+        184
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        21,
+        68,
+        89,
+        102
+      ],
+      "master_sha256": "0ee83b3224003bc13c376959d3ca6cbb695cb61447041ab6234fd8a96af7f922",
+      "export_sha256": "11c306d325d296555a34b5bd4dca1cab45f08369678e7507fc9f4d13fe65f944"
+    },
+    {
+      "slot": 63,
+      "asset_id": "mud-decontamination-unit",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        32,
+        114,
+        168,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        17,
+        62,
+        93,
+        103
+      ],
+      "master_sha256": "960a624dead41d1f94bc812c40ee499aa1836e54a1980dfb69f71309e055572a",
+      "export_sha256": "56755aa836755698fcd839685346d9de18c4908101237b16f243c4dd2f6282c3"
+    },
+    {
+      "slot": 64,
+      "asset_id": "support-unit",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        28,
+        92,
+        172,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        15,
+        50,
+        95,
+        103
+      ],
+      "master_sha256": "dc5416f1bfeeac52da13ceece97fd64f167555998f13e56680a3ac04cd39f871",
+      "export_sha256": "93b5f2e83ffc8c75c09050b4964bbc71505a286bc41225af6d56d8853659a1ff"
+    },
+    {
+      "slot": 65,
+      "asset_id": "coastguard-rescue-helicopter",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        94,
+        194,
+        184
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        51,
+        107,
+        102
+      ],
+      "master_sha256": "7539ff365e6fe2ee4618d8d62913475fbed79df6612270f8ac2d4a64aa1b9ce5",
+      "export_sha256": "705ea1caabf0da753be12c23026e1a88c3fcc84aef512757314d9139fc6710da"
+    },
+    {
+      "slot": 66,
+      "asset_id": "coastguard-rescue-helicopter-large",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        69,
+        194,
+        184
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        37,
+        107,
+        102
+      ],
+      "master_sha256": "93b69cbb4c8bce13b29bb3e05a469e55a4bff19983e571b3fe01df1b97b9c4da",
+      "export_sha256": "04e654c20aad1efa087772eef3c8b566ab6821fe43910d9cf029ae6b048d7a85"
+    },
+    {
+      "slot": 67,
+      "asset_id": "4x4-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        110,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        60,
+        84,
+        103
+      ],
+      "master_sha256": "f3dbc5f01ad24be1470482380f534858622b7b0d669f656b250fe7eb690eed2f",
+      "export_sha256": "5edece0a49af9dd405cef3e934d399a2f95021c815bb11289c5ff8c6689285c4"
+    },
+    {
+      "slot": 68,
+      "asset_id": "inland-rescue-boat-trailer",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        32,
+        113,
+        167,
+        184
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        17,
+        62,
+        92,
+        102
+      ],
+      "master_sha256": "81666d7cfc14e9adbbc7f9ea9be64bd3802b1b4377939e973c106210510982ab",
+      "export_sha256": "821f202e03518b8a964036bad8ebc5ec6f55179d123623be20b09ec28b2552bd"
+    },
+    {
+      "slot": 69,
+      "asset_id": "ilb",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        43,
+        112,
+        157,
+        181
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        23,
+        61,
+        87,
+        100
+      ],
+      "master_sha256": "9a8894ff36e9bd786aa1c203a9c547ae8e958d03aa55acd8f02cc76ce2a7320e",
+      "export_sha256": "c0be994d00952640b8301f32857ab14bbe06d0c02faad6a65aed8b1b715cbb59"
+    },
+    {
+      "slot": 70,
+      "asset_id": "alb",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        8,
+        39,
+        192,
+        181
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        4,
+        21,
+        106,
+        100
+      ],
+      "master_sha256": "dcdd776847d236cb1d7364bc2bacfda10a64213ab0cebfaaaa1a994d2b63e03a",
+      "export_sha256": "302a29616e043ac6eca403bd1f23173206fb15aa0d6fed69d365f58b9de91fba"
+    },
+    {
+      "slot": 71,
+      "asset_id": "rescue-watercraft-trailer",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        37,
+        122,
+        163,
+        184
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        20,
+        67,
+        90,
+        102
+      ],
+      "master_sha256": "92f3493ddea50d32bcf78e018703cd391629b1860901082661d3962614a6e8ea",
+      "export_sha256": "c7b40cbeb6f06cf29f0f4543be752d0c5f683fad0ded4bbbc7cce335105bf53a"
+    },
+    {
+      "slot": 72,
+      "asset_id": "hovercraft-trailer",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        28,
+        107,
+        172,
+        184
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        15,
+        58,
+        95,
+        102
+      ],
+      "master_sha256": "ac813d7acbf9838d3d1bcfb7c163b4141398ffef4e24e1f930c30ac17e5ba02e",
+      "export_sha256": "789054728a2768c58ffcba000f6222ca77e5278cb11d4fcd7c29b70cd29edb46"
+    },
+    {
+      "slot": 73,
+      "asset_id": "hovercraft-transporter",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        38,
+        102,
+        162,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        20,
+        56,
+        90,
+        103
+      ],
+      "master_sha256": "9f45ac3e9d3d8b17a5a53b422e1921837e25d24f9ba1c999b8719c4da259ca53",
+      "export_sha256": "6425de986b05eb603bfcdfbf7791469a6635e4723f484e850b0fd6ce5f30cb86"
+    },
+    {
+      "slot": 74,
+      "asset_id": "light-4x4",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        110,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        60,
+        84,
+        103
+      ],
+      "master_sha256": "766cc49c8639139dedd79b12b8a54372acf6e47b58dfc3a386eb63c1b5f27bd5",
+      "export_sha256": "9eb37268496178c0e177de625d6215de5d2ef5e4d52982608946dd43730f905b"
+    },
+    {
+      "slot": 75,
+      "asset_id": "boat-trailer",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        35,
+        97,
+        165,
+        184
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        19,
+        53,
+        91,
+        102
+      ],
+      "master_sha256": "328ca69c25a86a4e915097892c35944f5d66bdef335b91637d5d36c7c03568a0",
+      "export_sha256": "bd5c0a7963a68e659e1dd789fa6654d1132f45779139625d76e9f419cdb84332"
+    },
+    {
+      "slot": 76,
+      "asset_id": "major-foam-tender",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        99,
+        194,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        54,
+        107,
+        103
+      ],
+      "master_sha256": "8c8598bfcd83a70a6791a70d0161d1cbb0c0c16629860d0f75adb513f9b63ed0",
+      "export_sha256": "c38b81c3447059135502b678dade1b57f5b0849c429a061824db4cb2fff633ed"
+    },
+    {
+      "slot": 77,
+      "asset_id": "riv",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        25,
+        86,
+        175,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        13,
+        47,
+        97,
+        103
+      ],
+      "master_sha256": "904aeac904ba3c4d7e02cad8c98df2d8256dff84fcdb27ebcd33ef776301b20b",
+      "export_sha256": "626528ed5b0245e5a2e0c50b2985dac1d4e43b42a803d4f1bc1f596fcf57945e"
+    },
+    {
+      "slot": 78,
+      "asset_id": "airfield-firefighting-command-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        42,
+        105,
+        158,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        23,
+        57,
+        87,
+        103
+      ],
+      "master_sha256": "136a99055e14073f447e4e133f6b51ebdbe3418bce7c46a10b84f37d8fbd1335",
+      "export_sha256": "a18a06b2a94640656f7325acf496259c990815a616d14ced4b71fb7619a7d7ef"
+    },
+    {
+      "slot": 79,
+      "asset_id": "rescue-stairs",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        62,
+        194,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        33,
+        107,
+        103
+      ],
+      "master_sha256": "f4c42f48eaf096040d33489290f135ea53cdfc62e390956c591d58a469cf560b",
+      "export_sha256": "ded7f1286451eba4a3bcc98e91856d3d6f5f985d8826fd272082a31b8c298948"
+    },
+    {
+      "slot": 80,
+      "asset_id": "airfield-operations-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        112,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        61,
+        84,
+        103
+      ],
+      "master_sha256": "2ff2cde0098fcf0666fa2ccd90f736d5a0b683e0123ec5ec542a16a62fb5d0ad",
+      "export_sha256": "21e619f66f03e7b5846be5d4c8516e87ab6f4f26e83e0aaf0f0ecf276bb6cb64"
+    },
+    {
+      "slot": 81,
+      "asset_id": "airfield-operations-supervisor",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        44,
+        94,
+        156,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        24,
+        51,
+        86,
+        103
+      ],
+      "master_sha256": "88e70ebf49e76e271343f2b8454cf14e71603b7864d948e81fc195a6419392c4",
+      "export_sha256": "a974ee33f5bd6f8e1462b3b5ebd809db510ecda1b300bfaa2ebc9defe87adaaf"
+    },
+    {
+      "slot": 82,
+      "asset_id": "medical-equipment-trailer",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        46,
+        137,
+        154,
+        184
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        25,
+        75,
+        85,
+        102
+      ],
+      "master_sha256": "1c1b7e43b05fb70217455fe05a73c66ca149b21b3cc190bef2f8fa910c489cb7",
+      "export_sha256": "767cd28532221a1b660fc595b9b6d6791bf6d89f7f413b7e47ab86fd053562f2"
+    },
+    {
+      "slot": 83,
+      "asset_id": "armed-cell-van",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        30,
+        87,
+        170,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        16,
+        47,
+        94,
+        103
+      ],
+      "master_sha256": "193819fbecda168021ec116f3784ea777f2c4b2f9bb3e29b8ceef5cd69b554ce",
+      "export_sha256": "8e43d45eba4f608c93820ff10624ad98b206f0d611232f283853adab1b983ed4"
+    },
+    {
+      "slot": 84,
+      "asset_id": "medical-cycle-responder",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        62,
+        111,
+        138,
+        181
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        34,
+        61,
+        76,
+        100
+      ],
+      "master_sha256": "0f543a9d02f4fc84d23576177bd7d99ea70fc72383426d3a3ae341374389a6fe",
+      "export_sha256": "ce43efde8087c5adbbf325052c633e2342b93525cd4b592d3cb971cbc0d918bd"
+    },
+    {
+      "slot": 85,
+      "asset_id": "pump-trailer",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        133,
+        152,
+        184
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        73,
+        84,
+        102
+      ],
+      "master_sha256": "538b1a46fd7a3f2484fcbc34f2075254df083ada00a5ff8bb88daa3821adb787",
+      "export_sha256": "5b4cbe96b38bbd2656c0e31864913937083bc81d40d403beb8bbe288ace6fe85"
+    },
+    {
+      "slot": 86,
+      "asset_id": "control-van-sar",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        28,
+        85,
+        172,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        15,
+        46,
+        95,
+        103
+      ],
+      "master_sha256": "38cd2f373416c311972d4cd1c80de8277e7dc39bf4a6544f087d3cd0e3892411",
+      "export_sha256": "14331d7ed5eb6575b51229f655c4a6c9a10792bb4cb6153f91188a71ac02db77"
+    },
+    {
+      "slot": 87,
+      "asset_id": "operational-support-van",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        30,
+        80,
+        170,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        16,
+        43,
+        94,
+        103
+      ],
+      "master_sha256": "84a18e0b3133a1a8cf4bcc3f96caab461e588c21ec3941af5597bcf9a1a41a29",
+      "export_sha256": "72e91d3a582b250778ae786d2b72d792be57b5cb5ff0e1b712d00b27a64a81ae"
+    },
+    {
+      "slot": 88,
+      "asset_id": "operational-support-trailer",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        41,
+        117,
+        158,
+        184
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        22,
+        64,
+        87,
+        102
+      ],
+      "master_sha256": "1b3fee98e38d03025976cb1160515e35fe76dfba9db7e1976e800e93b5e23155",
+      "export_sha256": "1205f6ff7d36449d295557c74a88d047199cb7b5da1729eae8ded6f0bdb7682b"
+    },
+    {
+      "slot": 89,
+      "asset_id": "sar-flood-rescue-trailer",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        39,
+        119,
+        161,
+        184
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        21,
+        65,
+        89,
+        102
+      ],
+      "master_sha256": "2fd06f0c090fba41dafbb9acc552bde050a84cd44a11003cbe32960674723629",
+      "export_sha256": "92891d97f91514ef6838bb17026fb211bd21b5c58b9c1df2fe132ee92837dc8d"
+    },
+    {
+      "slot": 90,
+      "asset_id": "drone-vehicle-sar-hq",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        38,
+        86,
+        162,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        20,
+        47,
+        90,
+        103
+      ],
+      "master_sha256": "3357432985a1d2c5528e050b7eca776b0c8a9374a1c3ea450a5e785dbe9aaa0d",
+      "export_sha256": "022d91a8389c3ba3765924f55953c105f9e40a6ac8ba335d24f926f1a8731449"
+    },
+    {
+      "slot": 91,
+      "asset_id": "drone-vehicle-fire-station",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        38,
+        115,
+        162,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        20,
+        63,
+        90,
+        103
+      ],
+      "master_sha256": "d1556c51971f6249b6ea3a537755816b62cdeeba26a0ecf0f6737542ba2b2749",
+      "export_sha256": "e3a47b9980c21e67070f9cbf265469ac6fbb7ef8bb0b0e0df8c8df45a5851106"
+    },
+    {
+      "slot": 92,
+      "asset_id": "drone-vehicle-police-station",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        38,
+        93,
+        162,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        20,
+        51,
+        90,
+        103
+      ],
+      "master_sha256": "79aca00d06b0a05ac41a1c71df671d778a53f6e8c76780ce34f824d473d6e205",
+      "export_sha256": "f69cbfff81ca17101d32e5258bd537608916b825b92adfcb40d3479e6f5772a3"
+    },
+    {
+      "slot": 93,
+      "asset_id": "personal-sar-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        123,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        68,
+        84,
+        103
+      ],
+      "master_sha256": "08bfb560d9bfef97840346f8beb9d0150b3c3678ce21279432870e71d8c2a472",
+      "export_sha256": "43a29808bd68b53939916bab333fc39c2809db0236af89b7635a6a8341a9b3da"
+    },
+    {
+      "slot": 94,
+      "asset_id": "sar-4x4",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        108,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        59,
+        84,
+        103
+      ],
+      "master_sha256": "e1d7788866710f64586288461130eb709faf930ef8de61efabdaedd30e697f06",
+      "export_sha256": "f79c11911fe5ca333e436093b780bed70b2d04e0d0163a45fe9cdf5b7a319723"
+    },
+    {
+      "slot": 95,
+      "asset_id": "rrv-2",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        122,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        67,
+        84,
+        103
+      ],
+      "master_sha256": "fbb449b3be49ac3157d877235829552a0d4d41146e262b02f7982356a3e14321",
+      "export_sha256": "7bae60bf34a67608734a4b2d7a1944b441ce126d02a10f185d400dfc746731ae"
+    },
+    {
+      "slot": 96,
+      "asset_id": "community-midwife",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        119,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        66,
+        84,
+        103
+      ],
+      "master_sha256": "37f36fd42fce8463fd32c170f2a444d2569f4c5cd0d2f82160a28012df558c33",
+      "export_sha256": "bd38ab8994930a6002861f7ada1538bb0eaa22d72f7066a21817c14b1b5e42e3"
+    },
+    {
+      "slot": 97,
+      "asset_id": "specialist-paramedic-rrv",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        119,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        65,
+        84,
+        103
+      ],
+      "master_sha256": "b0b2b38a38dd32055238f421149e836217dec9ced7d87a06e3b7da22ae6b8528",
+      "export_sha256": "149fa95994ca5ef775ad7d52481a1e704e89f5391fbca0c8e83bd5dfda712348"
+    },
+    {
+      "slot": 98,
+      "asset_id": "patient-transport-service-ambulance",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        32,
+        79,
+        168,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        17,
+        43,
+        93,
+        103
+      ],
+      "master_sha256": "912017057e44647958d25a7153550a1d66bdb0687ad9cd46df370d3ac4bcfd47",
+      "export_sha256": "0dca57a138ca7117bb603cecc33fc67e2363406bb17e32c9318f63c0d80f9ce5"
+    },
+    {
+      "slot": 99,
+      "asset_id": "critical-care-transfer-ambulance",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        28,
+        76,
+        172,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        15,
+        41,
+        95,
+        103
+      ],
+      "master_sha256": "361872c9afd8dc05f2cfcdde40a548bcc03e40457e566a76bef27d0520ec585f",
+      "export_sha256": "5b63dc6b46acd32823b0e573c4b3dae53e9833a436982bfe6736512940749213"
+    },
+    {
+      "slot": 100,
+      "asset_id": "mountain-rescue-4x4",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        48,
+        109,
+        152,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        26,
+        59,
+        84,
+        103
+      ],
+      "master_sha256": "a0a3860e8aacc35164bf4e88fcfa378a27ce7b3a274533e1901d281adc846940",
+      "export_sha256": "f86c0d229f5edd04d921903c503b39e61d62403704c350516a109feb9849c0a3"
+    },
+    {
+      "slot": 101,
+      "asset_id": "control-van-mountain-rescue",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        30,
+        85,
+        170,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        16,
+        46,
+        94,
+        103
+      ],
+      "master_sha256": "12255e8a5599af1583da5e0f9e7f5bebceb69c7f25d4beef0cd380715e70d6e0",
+      "export_sha256": "87c15475cfab490a28fcb2c906f57314362f985499b54716684e63c81b7f0266"
+    },
+    {
+      "slot": 102,
+      "asset_id": "search-dog-unit",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        42,
+        110,
+        158,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        23,
+        60,
+        87,
+        103
+      ],
+      "master_sha256": "91535bbdbb71f12fc8e24f6ed08c7b502f2d5825241c0163a7d7d798e591b4de",
+      "export_sha256": "ffe26376bd2290e9cec94f2d51808c77ad75b181b430d134a0dd956d7d0f6c0d"
+    },
+    {
+      "slot": 103,
+      "asset_id": "search-dog-unit-sar",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        42,
+        109,
+        158,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        23,
+        59,
+        87,
+        103
+      ],
+      "master_sha256": "f32e492c98cb0806690ece9f335dda2801a829b19c409577604d10bf28d6d26c",
+      "export_sha256": "6898ef20d5721ba31e70c701d47e3c9d028ca604f9ca54427464c1805881d248"
+    },
+    {
+      "slot": 104,
+      "asset_id": "crew-carrier-sar",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        30,
+        87,
+        170,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        16,
+        47,
+        94,
+        103
+      ],
+      "master_sha256": "8935196909c9e7c48f792da0b56e4b6b731b20eee243aa80541228ba68dcbf5e",
+      "export_sha256": "af6619a3593e38ad72fc75634ad1eccb7dc677e5d5ab3a7d39186b683fe71e28"
+    },
+    {
+      "slot": 105,
+      "asset_id": "recovery-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        30,
+        78,
+        170,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        16,
+        42,
+        94,
+        103
+      ],
+      "master_sha256": "8a2505815ef07976272cbae7c97d31e4b621ae5dfdcb9c024d473e0eae803934",
+      "export_sha256": "40214a24f2c3a3e5abdd2a306d63d5acecaec79efeb50a4e357af3913af42662"
+    },
+    {
+      "slot": 106,
+      "asset_id": "flatbed-recovery-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        15,
+        95,
+        185,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        8,
+        52,
+        102,
+        103
+      ],
+      "master_sha256": "d9f808019ec6886edd2c6ea99058144c76606601ad698ee145c17ae0ee6261fd",
+      "export_sha256": "ae1bf6bbf34701aeee1c3452e9b7f5790bddc7a323fdfab0f2fc452bc20e1e78"
+    },
+    {
+      "slot": 107,
+      "asset_id": "hgv-recovery-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        41,
+        194,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        22,
+        107,
+        103
+      ],
+      "master_sha256": "c9ad83ada5b016829134b1af7b39c4abf0dc7af720b93c42d4000dc7653cae46",
+      "export_sha256": "af5901880a7626e0accd53ff1389766dca1a9b187e8f099a811c29130a889b15"
+    },
+    {
+      "slot": 108,
+      "asset_id": "rru",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        15,
+        78,
+        185,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        8,
+        42,
+        102,
+        103
+      ],
+      "master_sha256": "b31293e06634410d17f84f3bab2c353ac69e65c1f415008a04f0ba088d144df5",
+      "export_sha256": "feb722a768b00b18962acef20d37b38eb5374c227bfd3e67662d62621f5cef94"
+    },
+    {
+      "slot": 109,
+      "asset_id": "eiu",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        45,
+        109,
+        155,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        24,
+        59,
+        86,
+        103
+      ],
+      "master_sha256": "55f659d94befd199fcb16b6e784ee6942495932c19f621c5a80c169e077b82dd",
+      "export_sha256": "09b8d284f8475fb7ddf8db001562d41fd173746ff59b336f06cc681ace9f017a"
+    },
+    {
+      "slot": 110,
+      "asset_id": "eod-commander",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        45,
+        103,
+        155,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        24,
+        56,
+        86,
+        103
+      ],
+      "master_sha256": "5226aacbbb98857bb047a679e67bca45c6835aac8fb3cff39f375905c29213bf",
+      "export_sha256": "f22021f8cb994a141a8c5f4bd5a281a453e903acd28b880506973c216e2118ab"
+    },
+    {
+      "slot": 111,
+      "asset_id": "eod-response-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        35,
+        86,
+        165,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        19,
+        47,
+        91,
+        103
+      ],
+      "master_sha256": "0bcd8c1542c576b85c7fc2e2e95f17333bc9f713df454c9dcccbd4c1f503d0df",
+      "export_sha256": "c5576b3d1aae111ba63b514ac4c68c5a3674f57517bca69911b652074d17f2c1"
+    },
+    {
+      "slot": 112,
+      "asset_id": "eod-medium-equipment-van",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        30,
+        95,
+        170,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        16,
+        52,
+        94,
+        103
+      ],
+      "master_sha256": "b545dffe1845d6e28ccde4973033afea2508a4c5689057c4d30cf8360df1c348",
+      "export_sha256": "39fa0ffa25cdf471f7f3c7d62b06ae1a5ad6a7652830a0fa0a969cf213de4cb2"
+    },
+    {
+      "slot": 113,
+      "asset_id": "eod-heavy-equipment-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        6,
+        73,
+        194,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        3,
+        40,
+        107,
+        103
+      ],
+      "master_sha256": "d017b76dba9a5fbe130dd30528ac592044285463675b02c7cae97d3da2ae891e",
+      "export_sha256": "fe41ed199aa6dfb5d9f2fa6ee38f7ccd22cfd310d1c57a3b1adebfabcd86299e"
+    },
+    {
+      "slot": 114,
+      "asset_id": "marine-eod-response-vehicle",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        40,
+        96,
+        160,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        21,
+        52,
+        89,
+        103
+      ],
+      "master_sha256": "edcfbdd6ebbf547254e4be592d07014b300d1360dc23c4b45d8fbf412c841d2f",
+      "export_sha256": "da4146cef29f2d53fca8a1a0b9017f0a1c2da0600fcf8131cc3a1ade3811b001"
+    },
+    {
+      "slot": 115,
+      "asset_id": "marine-eod-equipment-van",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        30,
+        80,
+        170,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        16,
+        43,
+        94,
+        103
+      ],
+      "master_sha256": "88bb5fc6583b6dbb691dc2a5daa2cb97fe61c08e87312d74762ecbf8f8bf4797",
+      "export_sha256": "9d8867d57ce36421f9f37c9980afb1b9bb9d63271d5bd4091fa1fa2533a7604d"
+    },
+    {
+      "slot": 116,
+      "asset_id": "welfare-vehicle-2",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        30,
+        88,
+        170,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        16,
+        48,
+        94,
+        103
+      ],
+      "master_sha256": "c21d5e2ec34755d9404a5d9c28960fbae4a492797deb32bf0bf002514af4cf4e",
+      "export_sha256": "5bbf990c12add60094f58467019059fb0493d19a54b7ca1903f24275fcaf8838"
+    },
+    {
+      "slot": 117,
+      "asset_id": "cell-van",
+      "master_canvas": [
+        200,
+        200
+      ],
+      "master_bbox": [
+        32,
+        79,
+        168,
+        187
+      ],
+      "export_canvas": [
+        110,
+        110
+      ],
+      "export_bbox": [
+        17,
+        43,
+        93,
+        103
+      ],
+      "master_sha256": "29ed349e8ecb014609658e25d659aa18d92018d34f360405d40d7b0b7b076659",
+      "export_sha256": "e0324922d5cc92194bc7b6b62540882e275f58e81d77835ee5c961e96ce7838f"
+    }
+  ]
+}

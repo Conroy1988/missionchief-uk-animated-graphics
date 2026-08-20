@@ -4,6 +4,9 @@
 from __future__ import annotations
 
 import json
+import shutil
+import tempfile
+from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageFont
 
@@ -11,13 +14,13 @@ from v2_profile import (
     EXPORT_CANVAS,
     EXPORT_SCALE,
     MASTER_CANVAS,
-    MASTER_DIR,
     PREVIEW_DIR,
     RELEASE,
     RELEASE_CANDIDATE,
     ROOT,
     STATIC_DIR,
     compact_export,
+    master_path,
 )
 
 
@@ -59,11 +62,17 @@ def render_sheet(theme: str) -> Path:
     # Pillow's exhaustive PNG optimiser can truncate very tall contact sheets
     # under constrained runners.  Normal DEFLATE is deterministic and is
     # verified immediately before the path is admitted to the QA report.
-    temporary = target.with_suffix(".tmp.png")
-    sheet.save(temporary, compress_level=6)
-    with Image.open(temporary) as verification:
-        verification.load()
-    temporary.replace(target)
+    with tempfile.NamedTemporaryFile(prefix=f"{target.stem}-", suffix=".png", delete=False) as handle:
+        temporary = Path(handle.name)
+    try:
+        sheet.save(temporary, compress_level=6)
+        with Image.open(temporary) as verification:
+            verification.load()
+        shutil.copyfile(temporary, target)
+        with Image.open(target) as verification:
+            verification.load()
+    finally:
+        temporary.unlink(missing_ok=True)
     return target
 
 
@@ -84,12 +93,12 @@ def main() -> None:
         alpha = image.getchannel("A")
         bbox = alpha.getbbox()
         errors: list[str] = []
-        master_path = MASTER_DIR / f"{asset_id}.png"
+        source_path = master_path(asset_id)
         matches_master = False
-        if not master_path.exists():
+        if not source_path.exists():
             errors.append("missing-master")
         else:
-            master = Image.open(master_path).convert("RGBA")
+            master = Image.open(source_path).convert("RGBA")
             if master.size != MASTER_CANVAS:
                 errors.append(f"master-canvas={master.size}")
             else:
