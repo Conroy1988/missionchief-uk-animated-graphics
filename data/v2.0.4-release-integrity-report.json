@@ -1,0 +1,43 @@
+{
+  "release": "v2.0.4-candidate",
+  "export_canvas": [
+    110,
+    110
+  ],
+  "static_pngs": 117,
+  "animated_apngs": 117,
+  "frame_distribution": {
+    "12": 111,
+    "18": 6
+  },
+  "preview_pngs": 18,
+  "decoded_images_and_frames": 1575,
+  "numbered_static_files": 117,
+  "numbered_animated_files": 117,
+  "archive_sha256": "e3ba71bd5e966e7ffa4b9b736eda2b29e94b65314af4bdd787638153c17b24e6",
+  "current_v1_command_exports_unchanged": true,
+  "v2_asset_changes_against_v2.0.3": [
+    "assets/exports/v2/animated/basu-pod.png",
+    "assets/exports/v2/animated/bulk-foam-pod.png",
+    "assets/exports/v2/animated/command-pod.png",
+    "assets/exports/v2/animated/hazardous-materials-pod.png",
+    "assets/exports/v2/animated/hvp.png",
+    "assets/exports/v2/animated/misting-pod.png",
+    "assets/exports/v2/animated/osu-pod.png",
+    "assets/exports/v2/animated/rescue-pod.png",
+    "assets/exports/v2/animated/water-pod.png",
+    "assets/exports/v2/animated/welfare-pod.png",
+    "assets/exports/v2/static/basu-pod.png",
+    "assets/exports/v2/static/bulk-foam-pod.png",
+    "assets/exports/v2/static/command-pod.png",
+    "assets/exports/v2/static/hazardous-materials-pod.png",
+    "assets/exports/v2/static/hvp.png",
+    "assets/exports/v2/static/misting-pod.png",
+    "assets/exports/v2/static/osu-pod.png",
+    "assets/exports/v2/static/rescue-pod.png",
+    "assets/exports/v2/static/water-pod.png",
+    "assets/exports/v2/static/welfare-pod.png"
+  ],
+  "all_passed": true,
+  "errors": []
+}

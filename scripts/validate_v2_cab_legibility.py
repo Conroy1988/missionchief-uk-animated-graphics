@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate and render the v2.0.3 driven-appliance cab correction."""
+"""Validate and render the inherited driven-appliance cab correction."""
 
 from __future__ import annotations
 

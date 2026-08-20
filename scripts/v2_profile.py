@@ -13,10 +13,25 @@ if TYPE_CHECKING:
 
 ROOT = Path(__file__).resolve().parents[1]
 
-RELEASE = "v2.0.3"
+RELEASE = "v2.0.4"
 RELEASE_CANDIDATE = f"{RELEASE}-candidate"
 MASTER_RELEASE = "v2.0.0"
 MASTER_OVERRIDE_RELEASE = RELEASE
+
+CAB_OVERRIDE_IDS = frozenset({"f-wrc", "wrl-cafs", "rp-cafs"})
+MOUNTED_CARRIER_IDS = (
+    "water-pod",
+    "bulk-foam-pod",
+    "rescue-pod",
+    "command-pod",
+    "welfare-pod",
+    "basu-pod",
+    "misting-pod",
+    "hazardous-materials-pod",
+    "osu-pod",
+    "hvp",
+)
+EXPECTED_OVERRIDE_IDS = CAB_OVERRIDE_IDS | frozenset(MOUNTED_CARRIER_IDS)
 
 MASTER_CANVAS = (200, 200)
 EXPORT_CANVAS = (110, 110)

@@ -10,7 +10,7 @@ import struct
 import subprocess
 from pathlib import Path
 
-from v2_profile import PREVIEW_DIR, RELEASE, ROOT
+from v2_profile import MOUNTED_CARRIER_IDS, PREVIEW_DIR, RELEASE, ROOT
 
 
 GALLERY_DIR = ROOT / "gallery"
@@ -22,6 +22,12 @@ RELEASES = [
     {
         "id": RELEASE,
         "label": f"{RELEASE} · Current",
+        "profile": "v2",
+        "summary": "Complete prime-mover carriers for every transported fire-service module",
+    },
+    {
+        "id": "v2.0.3",
+        "label": "v2.0.3",
         "profile": "v2",
         "summary": "Recognisable front cabs for every driven fire appliance",
     },
@@ -171,6 +177,7 @@ FOCUS_LABELS = {
     "emergency-lighting": "Emergency lighting",
     "air-marine-motion": "Aircraft and marine motion",
     "complete-towing-unit": "Complete towing units",
+    "mounted-specialist-carrier": "Complete mounted specialist carriers",
 }
 
 TOWED_LENGTHS = {
@@ -281,6 +288,8 @@ def build_catalogue() -> dict:
             focus.append("air-marine-motion")
         if asset_id in TOWED_LENGTHS:
             focus.append("complete-towing-unit")
+        if asset_id in MOUNTED_CARRIER_IDS:
+            focus.append("mounted-specialist-carrier")
 
         service = prototype["service"]
         if fixture["kind"] == "aircraft":
@@ -289,6 +298,8 @@ def build_catalogue() -> dict:
             cue_label = "Direction-neutral craft · navigation lights and wake motion"
         elif asset_id in TOWED_LENGTHS:
             cue_label = "Complete direction-neutral towing unit"
+        elif asset_id in MOUNTED_CARRIER_IDS:
+            cue_label = "Complete direction-neutral mounted carrier"
         else:
             light_colour = fixture["profile"].removeprefix("road-").capitalize()
             cue_label = f"Direction-neutral {fixture['kind']} · {light_colour} response lighting"
@@ -364,6 +375,7 @@ def build_catalogue() -> dict:
             f"data/{RELEASE}-animation-build-report.json",
             f"data/{RELEASE}-animation-qa-report.json",
             f"data/{RELEASE}-cab-legibility-report.json",
+            f"data/{RELEASE}-mounted-carrier-report.json",
             f"data/{RELEASE}-light-fixtures.json",
             f"data/{RELEASE}-scale-report.json",
             f"data/{RELEASE}-static-qa-report.json",

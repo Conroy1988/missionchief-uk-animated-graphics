@@ -13,7 +13,10 @@ from PIL import Image
 
 from v2_profile import (
     ANIMATED_DIR,
+    EXPECTED_OVERRIDE_IDS,
     EXPORT_CANVAS,
+    MASTER_OVERRIDE_DIR,
+    MOUNTED_CARRIER_IDS,
     PREVIEW_DIR,
     RELEASE,
     RELEASE_CANDIDATE,
@@ -65,8 +68,43 @@ def main() -> None:
         errors.append(f"static-count={len(static_paths)}")
     if len(animated_paths) != EXPECTED:
         errors.append(f"animated-count={len(animated_paths)}")
-    if len(preview_paths) < 16:
+    if len(preview_paths) < 18:
         errors.append(f"preview-count={len(preview_paths)}")
+
+    override_ids = {path.stem for path in MASTER_OVERRIDE_DIR.glob("*.png")}
+    if override_ids != EXPECTED_OVERRIDE_IDS:
+        errors.append(
+            "release-overrides="
+            f"missing:{sorted(EXPECTED_OVERRIDE_IDS - override_ids)},"
+            f"extra:{sorted(override_ids - EXPECTED_OVERRIDE_IDS)}"
+        )
+
+    expected_v2_asset_changes = {
+        f"assets/exports/v2/{variant}/{asset_id}.png"
+        for variant in ("static", "animated")
+        for asset_id in MOUNTED_CARRIER_IDS
+    }
+    actual_v2_asset_changes = set(
+        subprocess.check_output(
+            [
+                "git",
+                "diff",
+                "--name-only",
+                "v2.0.3",
+                "--",
+                "assets/exports/v2/static",
+                "assets/exports/v2/animated",
+            ],
+            cwd=ROOT,
+            text=True,
+        ).splitlines()
+    )
+    if actual_v2_asset_changes != expected_v2_asset_changes:
+        errors.append(
+            "v2-asset-scope="
+            f"missing:{sorted(expected_v2_asset_changes - actual_v2_asset_changes)},"
+            f"extra:{sorted(actual_v2_asset_changes - expected_v2_asset_changes)}"
+        )
 
     decoded_frames = 0
     frame_distribution: dict[str, int] = {}
@@ -98,6 +136,7 @@ def main() -> None:
         f"{RELEASE}-static-qa-report.json",
         f"{RELEASE}-animation-qa-report.json",
         f"{RELEASE}-cab-legibility-report.json",
+        f"{RELEASE}-mounted-carrier-report.json",
     ):
         report_path = ROOT / "data" / report_name
         try:
@@ -183,6 +222,7 @@ def main() -> None:
         "numbered_animated_files": len(list((PACKAGE_ROOT / "02 - Animated").glob("*.png"))),
         "archive_sha256": archive_hash,
         "current_v1_command_exports_unchanged": command_diff == 0 and not command_status,
+        "v2_asset_changes_against_v2.0.3": sorted(actual_v2_asset_changes),
         "all_passed": not errors,
         "errors": errors,
     }

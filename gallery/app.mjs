@@ -18,6 +18,7 @@ export const FOCUS_LABELS = Object.freeze({
   'emergency-lighting': 'Emergency lighting',
   'air-marine-motion': 'Aircraft and marine motion',
   'complete-towing-unit': 'Complete towing unit',
+  'mounted-specialist-carrier': 'Complete mounted specialist carrier',
 });
 
 export function normaliseQuery(value) {
@@ -114,7 +115,7 @@ function initGallery() {
   if (!(root instanceof HTMLElement) || root.dataset.ready === 'true') return;
   root.dataset.ready = 'true';
 
-  const currentRelease = root.dataset.currentRelease || 'v2.0.3';
+  const currentRelease = root.dataset.currentRelease || 'v2.0.4';
   const config = {
     catalogueUrl: root.dataset.catalogueUrl || 'vehicles.json',
     currentAssetBase: root.dataset.currentAssetBase
