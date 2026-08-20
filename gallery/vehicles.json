@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v2.0.1",
+  "release": "v2.0.2",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -83,8 +83,14 @@
   ],
   "releases": [
     {
+      "id": "v2.0.2",
+      "label": "v2.0.2 · Current",
+      "profile": "v2",
+      "summary": "Calibrated helicopter rotors across the compact direction-neutral fleet"
+    },
+    {
       "id": "v2.0.1",
-      "label": "v2.0.1 · Current",
+      "label": "v2.0.1",
       "profile": "v2",
       "summary": "Compact direction-neutral fleet calibrated for live-map scale"
     },
@@ -3031,10 +3037,10 @@
   "generated_from": [
     "data/vehicle-slots.json",
     "data/prototypes.json",
-    "data/v2.0.1-animation-build-report.json",
-    "data/v2.0.1-animation-qa-report.json",
-    "data/v2.0.1-light-fixtures.json",
-    "data/v2.0.1-scale-report.json",
-    "data/v2.0.1-static-qa-report.json"
+    "data/v2.0.2-animation-build-report.json",
+    "data/v2.0.2-animation-qa-report.json",
+    "data/v2.0.2-light-fixtures.json",
+    "data/v2.0.2-scale-report.json",
+    "data/v2.0.2-static-qa-report.json"
   ]
 }

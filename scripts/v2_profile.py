@@ -13,7 +13,7 @@ if TYPE_CHECKING:
 
 ROOT = Path(__file__).resolve().parents[1]
 
-RELEASE = "v2.0.1"
+RELEASE = "v2.0.2"
 RELEASE_CANDIDATE = f"{RELEASE}-candidate"
 MASTER_RELEASE = "v2.0.0"
 

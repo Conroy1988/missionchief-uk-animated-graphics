@@ -9,12 +9,18 @@ import math
 from PIL import Image, ImageDraw, ImageFilter
 
 from v2_emergency_light import Fixture, FlashFrame, ROAD_DOUBLE_FLASH, render_lit_frame, save_apng
+from v2_helicopter_rotors import (
+    geometry_manifest,
+    prepare_helicopter_base,
+    render_helicopter_motion,
+)
 from v2_profile import (
     ANIMATED_DIR,
     EXPORT_CANVAS,
     EXPORT_SCALE,
     MASTER_CANVAS,
     MASTER_DIR,
+    RELEASE,
     RELEASE_CANDIDATE,
     ROOT,
     compact_export,
@@ -26,8 +32,8 @@ PROTOTYPES = {
     item["id"]: item
     for item in json.loads((ROOT / "data/prototypes.json").read_text())["vehicles"]
 }
-FIXTURE_REPORT = ROOT / "data/v2.0.1-light-fixtures.json"
-BUILD_REPORT = ROOT / "data/v2.0.1-animation-build-report.json"
+FIXTURE_REPORT = ROOT / f"data/{RELEASE}-light-fixtures.json"
+BUILD_REPORT = ROOT / f"data/{RELEASE}-animation-build-report.json"
 
 
 AIRCRAFT_IDS = {
@@ -275,24 +281,6 @@ def marine_fixtures(base: Image.Image, bbox: tuple[int, int, int, int]) -> list[
     ]
 
 
-def rotor_motion(base: Image.Image, bbox: tuple[int, int, int, int], frame_index: int) -> Image.Image:
-    layer = Image.new("RGBA", base.size, (0, 0, 0, 0))
-    draw = ImageDraw.Draw(layer)
-    x1, y1, x2, y2 = bbox
-    width, height = x2 - x1, y2 - y1
-    cx, cy = point_at(bbox, 0.55, 0.45)
-    rx, ry = max(18, round(width * 0.31)), max(7, round(height * 0.16))
-    phase = (frame_index * 34) % 360
-    for offset, alpha in ((0, 92), (132, 62), (252, 42)):
-        draw.arc((cx - rx, cy - ry, cx + rx, cy + ry), phase + offset, phase + offset + 72, fill=(220, 232, 239, alpha), width=1)
-    tail = point_at(bbox, 0.11, 0.37)
-    tr = max(4, round(min(width, height) * 0.055))
-    draw.arc((tail[0] - tr, tail[1] - tr, tail[0] + tr, tail[1] + tr), phase, phase + 210, fill=(224, 234, 240, 110), width=1)
-    result = base.copy()
-    result.alpha_composite(layer)
-    return result
-
-
 def marine_motion(base: Image.Image, bbox: tuple[int, int, int, int], frame_index: int) -> Image.Image:
     layer = Image.new("RGBA", base.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(layer)
@@ -347,10 +335,11 @@ def main() -> None:
             kind, fixtures = road_fixtures(asset_id, base, bbox, length, colour)
             pattern = ROAD_DOUBLE_FLASH
 
+        helicopter_base = prepare_helicopter_base(asset_id, base) if kind == "aircraft" else None
         master_frames: list[Image.Image] = []
         for index, state in enumerate(pattern):
             motion_base = (
-                rotor_motion(base, bbox, index)
+                render_helicopter_motion(asset_id, helicopter_base, base, index, len(pattern))
                 if kind == "aircraft"
                 else marine_motion(base, bbox, index)
                 if kind == "marine"
@@ -372,6 +361,8 @@ def main() -> None:
             "export_bbox": list(compact_export(base).getchannel("A").getbbox()),
             "fixtures": [fixture_dict(fixture) for fixture in fixtures],
         }
+        if kind == "aircraft":
+            fixture_manifest[asset_id]["rotor_geometry"] = geometry_manifest(asset_id)
         build_entries.append(
             {
                 "slot": slot["slot"],

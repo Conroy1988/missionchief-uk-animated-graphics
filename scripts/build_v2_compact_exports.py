@@ -15,6 +15,7 @@ from v2_profile import (
     EXPORT_SCALE,
     MASTER_CANVAS,
     MASTER_DIR,
+    RELEASE,
     RELEASE_CANDIDATE,
     ROOT,
     STATIC_DIR,
@@ -23,7 +24,7 @@ from v2_profile import (
 
 
 SLOTS = json.loads((ROOT / "data/vehicle-slots.json").read_text())["slots"]
-REPORT = ROOT / "data/v2.0.1-scale-report.json"
+REPORT = ROOT / f"data/{RELEASE}-scale-report.json"
 
 
 def sha256(path: Path) -> str:
