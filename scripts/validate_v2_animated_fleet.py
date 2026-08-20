@@ -4,7 +4,9 @@
 from __future__ import annotations
 
 import json
+import shutil
 import struct
+import tempfile
 from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageFont
@@ -15,12 +17,12 @@ from v2_profile import (
     EXPORT_CANVAS,
     EXPORT_SCALE,
     MASTER_CANVAS,
-    MASTER_DIR,
     PREVIEW_DIR,
     RELEASE,
     RELEASE_CANDIDATE,
     ROOT,
     STATIC_DIR,
+    master_path,
 )
 
 
@@ -174,11 +176,17 @@ def render_sheet(theme: str, frame_index: int, phase: str) -> Path:
         draw.text((x + 5, y + 154), f"{asset_id} / phase {phase}", fill=secondary, font=font)
     PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
     target = PREVIEW_DIR / f"full-fleet-response-{phase}-{theme}.png"
-    temporary = target.with_suffix(".tmp.png")
-    sheet.save(temporary, compress_level=6)
-    with Image.open(temporary) as verification:
-        verification.load()
-    temporary.replace(target)
+    with tempfile.NamedTemporaryFile(prefix=f"{target.stem}-", suffix=".png", delete=False) as handle:
+        temporary = Path(handle.name)
+    try:
+        sheet.save(temporary, compress_level=6)
+        with Image.open(temporary) as verification:
+            verification.load()
+        shutil.copyfile(temporary, target)
+        with Image.open(target) as verification:
+            verification.load()
+    finally:
+        temporary.unlink(missing_ok=True)
     return target
 
 
@@ -190,7 +198,7 @@ def main() -> None:
     for slot in SLOTS:
         asset_id = slot["asset_id"]
         static = Image.open(STATIC_DIR / f"{asset_id}.png").convert("RGBA")
-        master = Image.open(MASTER_DIR / f"{asset_id}.png").convert("RGBA")
+        master = Image.open(master_path(asset_id)).convert("RGBA")
         path = ANIMATED_DIR / f"{asset_id}.png"
         errors: list[str] = []
         if not path.exists():

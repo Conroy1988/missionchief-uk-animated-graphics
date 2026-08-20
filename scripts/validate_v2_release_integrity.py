@@ -53,13 +53,19 @@ def main() -> None:
     errors: list[str] = []
     static_paths = sorted(STATIC_DIR.glob("*.png"))
     animated_paths = sorted(ANIMATED_DIR.glob("*.png"))
-    preview_paths = sorted(PREVIEW_DIR.glob("*.png"))
+    temporary_preview_paths = sorted(PREVIEW_DIR.glob("*.tmp.png"))
+    preview_paths = sorted(
+        path for path in PREVIEW_DIR.glob("*.png") if not path.name.endswith(".tmp.png")
+    )
+
+    if temporary_preview_paths:
+        errors.extend(f"temporary-preview/{path.name}" for path in temporary_preview_paths)
 
     if len(static_paths) != EXPECTED:
         errors.append(f"static-count={len(static_paths)}")
     if len(animated_paths) != EXPECTED:
         errors.append(f"animated-count={len(animated_paths)}")
-    if len(preview_paths) < 13:
+    if len(preview_paths) < 16:
         errors.append(f"preview-count={len(preview_paths)}")
 
     decoded_frames = 0
@@ -91,6 +97,7 @@ def main() -> None:
         f"{RELEASE}-scale-report.json",
         f"{RELEASE}-static-qa-report.json",
         f"{RELEASE}-animation-qa-report.json",
+        f"{RELEASE}-cab-legibility-report.json",
     ):
         report_path = ROOT / "data" / report_name
         try:

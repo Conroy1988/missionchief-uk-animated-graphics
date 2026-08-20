@@ -10,7 +10,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
-from v2_profile import MASTER_CANVAS, MASTER_DIR, STATIC_DIR, compact_export
+from v2_profile import MASTER_CANVAS, MASTER_OVERRIDE_DIR, STATIC_DIR, compact_export
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -143,7 +143,7 @@ def main() -> None:
     validate_chroma_screen(extracted)
     canvas, bbox = fit_to_canvas(extracted, args.asset_id, float(record["real_length_metres"]))
 
-    master = MASTER_DIR / f"{args.asset_id}.png"
+    master = MASTER_OVERRIDE_DIR / f"{args.asset_id}.png"
     static = STATIC_DIR / f"{args.asset_id}.png"
     master.parent.mkdir(parents=True, exist_ok=True)
     static.parent.mkdir(parents=True, exist_ok=True)

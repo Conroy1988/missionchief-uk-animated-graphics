@@ -1,5 +1,5 @@
-# Builds, validates and releases the compact v2.0.2 direction-neutral fleet.
-name: Build v2.0.2 MissionChief compact direction-neutral fleet
+# Builds, validates and releases the compact v2.0.3 direction-neutral fleet.
+name: Build v2.0.3 MissionChief compact direction-neutral fleet
 
 on:
   workflow_dispatch:
@@ -9,15 +9,17 @@ on:
     paths:
       - assets/exports/v2/**
       - assets/masters/v2.0.0/**
-      - assets/previews/v2.0.2/**
+      - assets/masters/v2.0.3/**
+      - assets/previews/v2.0.3/**
       - data/vehicle-slots.json
       - data/prototypes.json
-      - data/v2.0.2-*.json
-      - docs/RELEASE_v2.0.2.md
-      - docs/CHECKPOINT_v2.0.2.md
+      - data/v2.0.3-*.json
+      - docs/RELEASE_v2.0.3.md
+      - docs/CHECKPOINT_v2.0.3.md
       - docs/V2_DIRECTION_NEUTRAL_STANDARD.md
       - scripts/apng_full_frame.py
       - scripts/build_numbered_upload_package.py
+      - scripts/build_v2_cab_legibility_masters.py
       - scripts/build_v2_calibration.py
       - scripts/build_v2_compact_exports.py
       - scripts/build_v2_animated_fleet.py
@@ -27,6 +29,7 @@ on:
       - scripts/v2_emergency_light.py
       - scripts/v2_helicopter_rotors.py
       - scripts/validate_v2_animated_fleet.py
+      - scripts/validate_v2_cab_legibility.py
       - scripts/validate_v2_release_integrity.py
       - scripts/validate_v2_static_fleet.py
       - .github/workflows/build-numbered-upload-package.yml
@@ -36,15 +39,17 @@ on:
     paths:
       - assets/exports/v2/**
       - assets/masters/v2.0.0/**
-      - assets/previews/v2.0.2/**
+      - assets/masters/v2.0.3/**
+      - assets/previews/v2.0.3/**
       - data/vehicle-slots.json
       - data/prototypes.json
-      - data/v2.0.2-*.json
-      - docs/RELEASE_v2.0.2.md
-      - docs/CHECKPOINT_v2.0.2.md
+      - data/v2.0.3-*.json
+      - docs/RELEASE_v2.0.3.md
+      - docs/CHECKPOINT_v2.0.3.md
       - docs/V2_DIRECTION_NEUTRAL_STANDARD.md
       - scripts/apng_full_frame.py
       - scripts/build_numbered_upload_package.py
+      - scripts/build_v2_cab_legibility_masters.py
       - scripts/build_v2_calibration.py
       - scripts/build_v2_compact_exports.py
       - scripts/build_v2_animated_fleet.py
@@ -54,6 +59,7 @@ on:
       - scripts/v2_emergency_light.py
       - scripts/v2_helicopter_rotors.py
       - scripts/validate_v2_animated_fleet.py
+      - scripts/validate_v2_cab_legibility.py
       - scripts/validate_v2_release_integrity.py
       - scripts/validate_v2_static_fleet.py
       - .github/workflows/build-numbered-upload-package.yml
@@ -81,11 +87,17 @@ jobs:
       - name: Compile release tooling
         run: python -m compileall -q scripts
 
+      - name: Verify driven-appliance cab master overrides
+        run: python scripts/build_v2_cab_legibility_masters.py --check
+
       - name: Rebuild all 117 compact static exports from preserved masters
         run: python scripts/build_v2_compact_exports.py
 
       - name: Verify all 117 compact static direction-neutral assets
         run: python scripts/validate_v2_static_fleet.py
+
+      - name: Verify F-WrC and CAFS front-cab legibility
+        run: python scripts/validate_v2_cab_legibility.py
 
       - name: Rebuild all 117 response APNGs and fixture metadata
         run: python scripts/build_v2_animated_fleet.py
@@ -96,53 +108,57 @@ jobs:
       - name: Render actual-pixel compact map calibration
         run: python scripts/build_v2_calibration.py
 
-      - name: Render calibrated helicopter rotor evidence
+      - name: Render preserved calibrated helicopter rotor evidence
         run: python scripts/build_v2_helicopter_previews.py
 
       - name: Verify all generated production evidence is committed
-        run: git diff --exit-code -- assets/exports/v2 assets/previews/v2.0.2 data/v2.0.2-*.json
+        run: git diff --exit-code -- assets/exports/v2 assets/masters/v2.0.3 assets/previews/v2.0.3 data/v2.0.3-*.json
 
       - name: Build deterministic numbered MissionChief package
-        run: python scripts/build_numbered_upload_package.py --version v2.0.2 --profile v2
+        run: python scripts/build_numbered_upload_package.py --version v2.0.3 --profile v2
 
       - name: Run complete release-integrity gate
         run: python scripts/validate_v2_release_integrity.py
 
-      - name: Upload verified v2.0.2 workflow evidence
+      - name: Upload verified v2.0.3 workflow evidence
         uses: actions/upload-artifact@v4
         with:
-          name: missionchief-compact-direction-neutral-fleet-v2.0.2
+          name: missionchief-compact-direction-neutral-fleet-v2.0.3
           path: |
-            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.2.zip
-            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.2.zip.sha256
-            data/v2.0.2-animation-build-report.json
-            data/v2.0.2-animation-qa-report.json
-            data/v2.0.2-light-fixtures.json
-            data/v2.0.2-release-integrity-report.json
-            data/v2.0.2-scale-report.json
-            data/v2.0.2-static-qa-report.json
-            assets/previews/v2.0.2/*.png
-            assets/previews/v2.0.2/*.gif
+            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.3.zip
+            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.3.zip.sha256
+            data/v2.0.3-animation-build-report.json
+            data/v2.0.3-animation-qa-report.json
+            data/v2.0.3-cab-legibility-report.json
+            data/v2.0.3-light-fixtures.json
+            data/v2.0.3-release-integrity-report.json
+            data/v2.0.3-scale-report.json
+            data/v2.0.3-static-qa-report.json
+            assets/previews/v2.0.3/*.png
+            assets/previews/v2.0.3/*.gif
           if-no-files-found: error
           retention-days: 90
 
-      - name: Create or update v2.0.2 release
+      - name: Create or update v2.0.3 release
         if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v2.0.2 >/dev/null 2>&1 || gh release create v2.0.2 --target main --title "v2.0.2 — Calibrated Helicopter Rotor Motion" --notes-file docs/RELEASE_v2.0.2.md
-          gh release upload v2.0.2 \
-            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.2.zip \
-            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.2.zip.sha256 \
-            data/v2.0.2-animation-build-report.json \
-            data/v2.0.2-animation-qa-report.json \
-            data/v2.0.2-light-fixtures.json \
-            data/v2.0.2-release-integrity-report.json \
-            data/v2.0.2-scale-report.json \
-            data/v2.0.2-static-qa-report.json \
-            assets/previews/v2.0.2/helicopter-rotor-frame-audit.png \
-            assets/previews/v2.0.2/helicopter-rotor-fleet.gif \
-            assets/previews/v2.0.2/helicopter-tail-rotor-alignment.gif \
-            assets/previews/v2.0.2/police-helicopter-rotor-comparison.gif \
+          gh release view v2.0.3 >/dev/null 2>&1 || gh release create v2.0.3 --target main --title "v2.0.3 — Recognisable Driven-Appliance Cabs" --notes-file docs/RELEASE_v2.0.3.md
+          gh release upload v2.0.3 \
+            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.3.zip \
+            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.3.zip.sha256 \
+            data/v2.0.3-animation-build-report.json \
+            data/v2.0.3-animation-qa-report.json \
+            data/v2.0.3-cab-legibility-report.json \
+            data/v2.0.3-light-fixtures.json \
+            data/v2.0.3-release-integrity-report.json \
+            data/v2.0.3-scale-report.json \
+            data/v2.0.3-static-qa-report.json \
+            assets/previews/v2.0.3/cab-legibility-before-after.png \
+            assets/previews/v2.0.3/cab-legibility-live-map.png \
+            assets/previews/v2.0.3/helicopter-rotor-frame-audit.png \
+            assets/previews/v2.0.3/helicopter-rotor-fleet.gif \
+            assets/previews/v2.0.3/helicopter-tail-rotor-alignment.gif \
+            assets/previews/v2.0.3/police-helicopter-rotor-comparison.gif \
             --clobber

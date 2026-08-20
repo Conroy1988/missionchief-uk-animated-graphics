@@ -19,11 +19,11 @@ from v2_profile import (
     EXPORT_CANVAS,
     EXPORT_SCALE,
     MASTER_CANVAS,
-    MASTER_DIR,
     RELEASE,
     RELEASE_CANDIDATE,
     ROOT,
     compact_export,
+    master_path,
 )
 
 
@@ -313,7 +313,7 @@ def main() -> None:
 
     for slot in SLOTS:
         asset_id = slot["asset_id"]
-        base = Image.open(MASTER_DIR / f"{asset_id}.png").convert("RGBA")
+        base = Image.open(master_path(asset_id)).convert("RGBA")
         bbox = base.getchannel("A").getbbox()
         if bbox is None:
             raise RuntimeError(f"Empty v2 master: {asset_id}")

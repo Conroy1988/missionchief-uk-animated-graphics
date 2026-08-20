@@ -1,6 +1,6 @@
 # v2 Direction-Neutral Fleet Standard
 
-Status: compact production standard. The approved 200×200 v2 masters remain immutable source artwork; MissionChief-facing exports use the map-calibrated canvas below.
+Status: compact production standard. The approved 200×200 v2.0.0 masters remain immutable base artwork; later releases may add narrowly scoped, deterministic master overrides without rewriting that historical baseline. MissionChief-facing exports use the map-calibrated canvas below.
 
 ## Visual contract
 
@@ -10,6 +10,8 @@ Status: compact production standard. The approved 200×200 v2 masters remain imm
 - The 55% whole-canvas transform preserves bottom-centre placement, the raised camera, real-world class relationships and every animation frame. Production exports are never recursively resized.
 - Vehicle scale is based on real-world length, then optically corrected within its class so cycles, cars, appliances, heavy units, trailers, watercraft and aircraft remain legible together.
 - Distinguishing role equipment, body type and UK livery must remain readable at the 110×110 native map size and at 75% and 50% display scale.
+- Every self-propelled road appliance must expose an immediately recognisable front cab. Windscreen or driver glazing, a cab roof, front wheel/arch and front-end structure must remain visually distinct from the equipment body at native map scale.
+- Purpose-built pods, trailers and independently transported equipment are exempt from the front-cab rule, but must retain the correct towing or transport identity for their MissionChief slot.
 
 ## Emergency-light contract
 
@@ -31,3 +33,4 @@ The live pack cannot be replaced until all 117 static assets and all 117 respons
 5. no clipped apparatus, rotor, wake, trailer or light bloom;
 6. visual inspection on light, dark, grayscale and satellite-like fleet sheets;
 7. lossless, infinitely looping APNG structure with the category-approved frame count.
+8. explicit cab-legibility validation for every release that changes a self-propelled road appliance.

@@ -23,6 +23,12 @@ RELEASES = [
         "id": RELEASE,
         "label": f"{RELEASE} · Current",
         "profile": "v2",
+        "summary": "Recognisable front cabs for every driven fire appliance",
+    },
+    {
+        "id": "v2.0.2",
+        "label": "v2.0.2",
+        "profile": "v2",
         "summary": "Calibrated helicopter rotors across the compact direction-neutral fleet",
     },
     {
@@ -357,6 +363,7 @@ def build_catalogue() -> dict:
             "data/prototypes.json",
             f"data/{RELEASE}-animation-build-report.json",
             f"data/{RELEASE}-animation-qa-report.json",
+            f"data/{RELEASE}-cab-legibility-report.json",
             f"data/{RELEASE}-light-fixtures.json",
             f"data/{RELEASE}-scale-report.json",
             f"data/{RELEASE}-static-qa-report.json",

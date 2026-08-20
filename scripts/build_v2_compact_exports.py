@@ -14,12 +14,13 @@ from v2_profile import (
     EXPORT_CANVAS,
     EXPORT_SCALE,
     MASTER_CANVAS,
-    MASTER_DIR,
     RELEASE,
     RELEASE_CANDIDATE,
     ROOT,
     STATIC_DIR,
     compact_export,
+    master_path,
+    resolved_master_ids,
 )
 
 
@@ -45,20 +46,20 @@ def images_equal(left: Image.Image, right: Image.Image) -> bool:
 
 def build(check: bool) -> dict:
     expected_ids = {slot["asset_id"] for slot in SLOTS}
-    actual_master_ids = {path.stem for path in MASTER_DIR.glob("*.png")}
+    actual_master_ids = resolved_master_ids()
     entries: list[dict] = []
     errors: list[str] = []
 
     STATIC_DIR.mkdir(parents=True, exist_ok=True)
     for slot in SLOTS:
         asset_id = slot["asset_id"]
-        master_path = MASTER_DIR / f"{asset_id}.png"
+        source_path = master_path(asset_id)
         export_path = STATIC_DIR / f"{asset_id}.png"
-        if not master_path.exists():
+        if not source_path.exists():
             errors.append(f"missing-master/{asset_id}")
             continue
 
-        with Image.open(master_path) as source_image:
+        with Image.open(source_path) as source_image:
             source = source_image.convert("RGBA")
             source_bbox = source.getchannel("A").getbbox()
             if source.size != MASTER_CANVAS:
@@ -87,7 +88,7 @@ def build(check: bool) -> dict:
                 "master_bbox": list(source_bbox) if source_bbox else None,
                 "export_canvas": list(EXPORT_CANVAS),
                 "export_bbox": list(output_bbox) if output_bbox else None,
-                "master_sha256": sha256(master_path),
+                "master_sha256": sha256(source_path),
                 "export_sha256": sha256(export_path) if export_path.exists() else None,
             }
         )

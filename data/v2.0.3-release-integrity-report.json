@@ -1,0 +1,21 @@
+{
+  "release": "v2.0.3-candidate",
+  "export_canvas": [
+    110,
+    110
+  ],
+  "static_pngs": 117,
+  "animated_apngs": 117,
+  "frame_distribution": {
+    "12": 111,
+    "18": 6
+  },
+  "preview_pngs": 16,
+  "decoded_images_and_frames": 1573,
+  "numbered_static_files": 117,
+  "numbered_animated_files": 117,
+  "archive_sha256": "9edd057144dfcbcfb59cfb2340a3f8ebf5bf9b4b38bbf4d35345f493fa39e1e1",
+  "current_v1_command_exports_unchanged": true,
+  "all_passed": true,
+  "errors": []
+}
