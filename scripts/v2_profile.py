@@ -13,11 +13,11 @@ if TYPE_CHECKING:
 
 ROOT = Path(__file__).resolve().parents[1]
 
-RELEASE = "v2.1.0"
+RELEASE = "v2.1.1"
 RELEASE_CANDIDATE = f"{RELEASE}-candidate"
 MASTER_RELEASE = "v2.0.0"
 MASTER_OVERRIDE_RELEASE = RELEASE
-PREVIOUS_OVERRIDE_RELEASE = "v2.0.4"
+PREVIOUS_OVERRIDE_RELEASE = "v2.1.0"
 
 CAB_OVERRIDE_IDS = frozenset({"f-wrc", "wrl-cafs", "rp-cafs"})
 MOUNTED_CARRIER_IDS = (

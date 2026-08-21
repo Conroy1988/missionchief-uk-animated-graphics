@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Build the v2.1.0 UK-family conversion master layer.
+"""Build the inherited UK-family conversion layer for the active v2 release.
 
-The release inherits every approved v2.0.4 cab and mounted-carrier repair
-byte-for-byte, then replaces only the eleven assets identified by the family
-hero audit. Generated source art is deliberately retained on a magenta key so
-the alpha extraction, scaling and native export remain reproducible.
+v2.1.1 retains the three approved cab repairs and the eleven v2.1.0 UK-family
+conversions while the mounted-carrier builder replaces the ten pod vehicles.
+Generated family source art remains on its original magenta key so the alpha
+extraction, scaling and native export stay reproducible.
 """
 
 from __future__ import annotations
@@ -29,19 +29,20 @@ from v2_profile import (
     FAMILY_CONVERSION_IDS,
     MASTER_DIR,
     MASTER_OVERRIDE_DIR,
-    MOUNTED_CARRIER_IDS,
     PREVIOUS_OVERRIDE_DIR,
     PREVIEW_DIR,
+    RELEASE,
     RELEASE_CANDIDATE,
     ROOT,
     compact_export,
 )
 
 
-SOURCE_DIR = ROOT / "assets" / "sources" / "v2.1.0"
-REPORT = ROOT / "data" / "v2.1.0-family-conversion-report.json"
+SOURCE_RELEASE = "v2.1.0"
+SOURCE_DIR = ROOT / "assets" / "sources" / SOURCE_RELEASE
+REPORT = ROOT / "data" / f"{RELEASE}-family-conversion-report.json"
 PREVIEW = PREVIEW_DIR / "family-conversions-before-after.png"
-INHERITED_IDS = CAB_OVERRIDE_IDS | frozenset(MOUNTED_CARRIER_IDS)
+INHERITED_IDS = CAB_OVERRIDE_IDS
 
 
 def sha256(path: Path) -> str:
@@ -134,8 +135,8 @@ def render_preview(records: list[dict]) -> None:
         left = (index % columns) * tile_width
         top = (index // columns) * tile_height
         draw.text((left + 10, top + 8), asset_id, fill=(235, 240, 244))
-        draw.text((left + 12, top + 28), "v2.0.4", fill=(146, 154, 164))
-        draw.text((left + 142, top + 28), "v2.1.0", fill=(91, 205, 142))
+        draw.text((left + 12, top + 28), "v2.0.0", fill=(146, 154, 164))
+        draw.text((left + 142, top + 28), RELEASE, fill=(91, 205, 142))
         before = compact_export(Image.open(MASTER_DIR / f"{asset_id}.png").convert("RGBA"))
         after = compact_export(Image.open(MASTER_OVERRIDE_DIR / f"{asset_id}.png").convert("RGBA"))
         board.paste(before, (left + 5, top + 42), before)
@@ -144,13 +145,15 @@ def render_preview(records: list[dict]) -> None:
     board.save(PREVIEW, optimize=True)
 
 
-def validate_override_scope() -> None:
+def validate_override_scope(*, require_complete: bool) -> None:
     actual = {path.stem for path in MASTER_OVERRIDE_DIR.glob("*.png")}
-    if actual != EXPECTED_OVERRIDE_IDS:
+    required = INHERITED_IDS | frozenset(FAMILY_CONVERSION_IDS)
+    missing = (EXPECTED_OVERRIDE_IDS if require_complete else required) - actual
+    extra = actual - EXPECTED_OVERRIDE_IDS
+    if missing or extra:
         raise RuntimeError(
             "Override scope mismatch: "
-            f"missing={sorted(EXPECTED_OVERRIDE_IDS - actual)},"
-            f"extra={sorted(actual - EXPECTED_OVERRIDE_IDS)}"
+            f"missing={sorted(missing)},extra={sorted(extra)}"
         )
 
 
@@ -161,7 +164,7 @@ def main() -> None:
 
     inherited = inherit_previous_overrides(check=args.check)
     conversions = build_conversions(check=args.check)
-    validate_override_scope()
+    validate_override_scope(require_complete=args.check)
 
     if not args.check:
         render_preview(conversions)

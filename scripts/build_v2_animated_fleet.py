@@ -206,19 +206,21 @@ def road_fixtures(
 
     if asset_id in MOUNTED_CARRIER_IDS:
         alpha = base.getchannel("A")
-        # Every loaded module uses the same byte-preserved PM cab and chassis,
-        # so the response fixtures remain physically attached to the approved
-        # cab lightbar, front repeaters and rear carrier corners.
-        return "mounted-carrier", [
-            module("a", snap_to_vehicle(alpha, (140, 107), 8), colour),
-            module("a", snap_to_vehicle(alpha, (146, 105), 8), colour),
-            module("b", snap_to_vehicle(alpha, (152, 103), 8), colour),
-            module("b", snap_to_vehicle(alpha, (155, 105), 8), colour),
-            repeater("a", snap_to_vehicle(alpha, (170, 145), 8), colour),
-            repeater("b", snap_to_vehicle(alpha, (154, 163), 8), colour),
-            repeater("a", snap_to_vehicle(alpha, (32, 105), 8), colour),
-            repeater("b", snap_to_vehicle(alpha, (44, 123), 8), colour),
-        ]
+        # v2.1.1 uses purpose-built unified carriers. Anchor the flash pattern
+        # to proportional cab/rear points so every role body retains the same
+        # readable roof bar and chassis-mounted repeaters without relying on
+        # the obsolete composited-module geometry.
+        fixtures = bar_fixtures(alpha, point_at(bbox, 0.87, 0.34), colour)
+        for group, location in (
+            ("a", (0.95, 0.69)),
+            ("b", (0.82, 0.86)),
+            ("a", (0.06, 0.45)),
+            ("b", (0.10, 0.58)),
+        ):
+            fixtures.append(
+                repeater(group, snap_to_vehicle(alpha, point_at(bbox, *location), 16), colour)
+            )
+        return "mounted-carrier-unified", fixtures
 
     alpha = base.getchannel("A")
     kind = road_kind(asset_id, bbox, length)
