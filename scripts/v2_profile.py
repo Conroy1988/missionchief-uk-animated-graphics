@@ -13,10 +13,11 @@ if TYPE_CHECKING:
 
 ROOT = Path(__file__).resolve().parents[1]
 
-RELEASE = "v2.0.4"
+RELEASE = "v2.1.0"
 RELEASE_CANDIDATE = f"{RELEASE}-candidate"
 MASTER_RELEASE = "v2.0.0"
 MASTER_OVERRIDE_RELEASE = RELEASE
+PREVIOUS_OVERRIDE_RELEASE = "v2.0.4"
 
 CAB_OVERRIDE_IDS = frozenset({"f-wrc", "wrl-cafs", "rp-cafs"})
 MOUNTED_CARRIER_IDS = (
@@ -31,7 +32,24 @@ MOUNTED_CARRIER_IDS = (
     "osu-pod",
     "hvp",
 )
-EXPECTED_OVERRIDE_IDS = CAB_OVERRIDE_IDS | frozenset(MOUNTED_CARRIER_IDS)
+FAMILY_CONVERSION_IDS = (
+    "crew-carrier",
+    "srv",
+    "psu-carrier",
+    "armed-cell-van",
+    "sar-4x4",
+    "patient-transport-service-ambulance",
+    "critical-care-transfer-ambulance",
+    "control-van-mountain-rescue",
+    "eod-response-vehicle",
+    "marine-eod-equipment-van",
+    "cell-van",
+)
+EXPECTED_OVERRIDE_IDS = (
+    CAB_OVERRIDE_IDS
+    | frozenset(MOUNTED_CARRIER_IDS)
+    | frozenset(FAMILY_CONVERSION_IDS)
+)
 
 MASTER_CANVAS = (200, 200)
 EXPORT_CANVAS = (110, 110)
@@ -39,6 +57,7 @@ EXPORT_SCALE = EXPORT_CANVAS[0] / MASTER_CANVAS[0]
 
 MASTER_DIR = ROOT / "assets" / "masters" / MASTER_RELEASE
 MASTER_OVERRIDE_DIR = ROOT / "assets" / "masters" / MASTER_OVERRIDE_RELEASE
+PREVIOUS_OVERRIDE_DIR = ROOT / "assets" / "masters" / PREVIOUS_OVERRIDE_RELEASE
 STATIC_DIR = ROOT / "assets" / "exports" / "v2" / "static"
 ANIMATED_DIR = ROOT / "assets" / "exports" / "v2" / "animated"
 PREVIEW_DIR = ROOT / "assets" / "previews" / RELEASE

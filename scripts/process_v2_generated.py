@@ -136,6 +136,18 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("asset_id")
     parser.add_argument("source", type=Path)
+    parser.add_argument(
+        "--master-dir",
+        type=Path,
+        default=MASTER_OVERRIDE_DIR,
+        help="destination directory for the 200 px master override",
+    )
+    parser.add_argument(
+        "--static-dir",
+        type=Path,
+        default=STATIC_DIR,
+        help="destination directory for the derived 110 px static export",
+    )
     args = parser.parse_args()
 
     record = vehicle_record(args.asset_id)
@@ -143,8 +155,8 @@ def main() -> None:
     validate_chroma_screen(extracted)
     canvas, bbox = fit_to_canvas(extracted, args.asset_id, float(record["real_length_metres"]))
 
-    master = MASTER_OVERRIDE_DIR / f"{args.asset_id}.png"
-    static = STATIC_DIR / f"{args.asset_id}.png"
+    master = args.master_dir / f"{args.asset_id}.png"
+    static = args.static_dir / f"{args.asset_id}.png"
     master.parent.mkdir(parents=True, exist_ok=True)
     static.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(master, optimize=True)
@@ -152,7 +164,8 @@ def main() -> None:
     compact.save(static, optimize=True)
     print(
         f"asset_id={args.asset_id} master_bbox={bbox} "
-        f"export_bbox={compact.getchannel('A').getbbox()} master={master.relative_to(ROOT)}"
+        f"export_bbox={compact.getchannel('A').getbbox()} "
+        f"master={master.relative_to(ROOT) if master.is_relative_to(ROOT) else master}"
     )
 
 

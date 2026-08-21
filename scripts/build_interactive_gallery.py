@@ -10,18 +10,29 @@ import struct
 import subprocess
 from pathlib import Path
 
-from v2_profile import MOUNTED_CARRIER_IDS, PREVIEW_DIR, RELEASE, ROOT
+from v2_profile import FAMILY_CONVERSION_IDS, MOUNTED_CARRIER_IDS, PREVIEW_DIR, RELEASE, ROOT
 
 
 GALLERY_DIR = ROOT / "gallery"
 CATALOGUE_PATH = GALLERY_DIR / "vehicles.json"
 PACK_URL = "https://www.missionchief.co.uk/vehicle_graphics/5897"
 REPOSITORY_URL = "https://github.com/Conroy1988/missionchief-uk-animated-graphics"
+PRE_RELEASE_REFS = {
+    # PR #32's exact head is the immutable v2.0.4 tree while its release tag is
+    # pending. Once the tag exists it remains the preferred validation ref.
+    "v2.0.4": "8fd4ff6584bce15adf014277100d685556a0b90f",
+}
 
 RELEASES = [
     {
         "id": RELEASE,
         "label": f"{RELEASE} · Current",
+        "profile": "v2",
+        "summary": "117/117 hero-ready UK platform families with eleven role-specific conversions",
+    },
+    {
+        "id": "v2.0.4",
+        "label": "v2.0.4",
         "profile": "v2",
         "summary": "Complete prime-mover carriers for every transported fire-service module",
     },
@@ -173,6 +184,7 @@ SERVICE_LABELS = {
 }
 
 FOCUS_LABELS = {
+    "uk-family-conversion": "UK family-authentic conversions",
     "direction-neutral": "Direction-neutral perspective",
     "emergency-lighting": "Emergency lighting",
     "air-marine-motion": "Aircraft and marine motion",
@@ -244,10 +256,19 @@ def git_tree(release: str) -> set[str]:
     result = subprocess.run(
         ["git", "ls-tree", "-r", "--name-only", release],
         cwd=ROOT,
-        check=True,
+        check=False,
         capture_output=True,
         text=True,
     )
+    if result.returncode and release in PRE_RELEASE_REFS:
+        result = subprocess.run(
+            ["git", "ls-tree", "-r", "--name-only", PRE_RELEASE_REFS[release]],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+    result.check_returncode()
     return set(result.stdout.splitlines())
 
 
@@ -284,6 +305,8 @@ def build_catalogue() -> dict:
             )
 
         focus = ["direction-neutral", "emergency-lighting"]
+        if asset_id in FAMILY_CONVERSION_IDS:
+            focus.append("uk-family-conversion")
         if fixture["kind"] in {"aircraft", "marine"}:
             focus.append("air-marine-motion")
         if asset_id in TOWED_LENGTHS:
@@ -375,10 +398,12 @@ def build_catalogue() -> dict:
             f"data/{RELEASE}-animation-build-report.json",
             f"data/{RELEASE}-animation-qa-report.json",
             f"data/{RELEASE}-cab-legibility-report.json",
+            f"data/{RELEASE}-family-conversion-report.json",
             f"data/{RELEASE}-mounted-carrier-report.json",
             f"data/{RELEASE}-light-fixtures.json",
             f"data/{RELEASE}-scale-report.json",
             f"data/{RELEASE}-static-qa-report.json",
+            f"data/{RELEASE}-uk-family-hero-report.json",
         ],
     }
 

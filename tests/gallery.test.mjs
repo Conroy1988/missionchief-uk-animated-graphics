@@ -27,13 +27,14 @@ const defaults = {
 };
 
 test('catalogue contains one ordered record for every live MissionChief slot', () => {
-  assert.equal(catalogue.release, 'v2.0.4');
-  assert.equal(catalogue.releases[0].id, 'v2.0.4');
-  assert.equal(catalogue.releases[1].id, 'v2.0.3');
-  assert.equal(catalogue.releases[2].id, 'v2.0.2');
-  assert.equal(catalogue.releases[3].id, 'v2.0.1');
-  assert.equal(catalogue.releases[4].id, 'v2.0.0');
-  assert.equal(catalogue.releases[5].id, 'v1.4.14');
+  assert.equal(catalogue.release, 'v2.1.0');
+  assert.equal(catalogue.releases[0].id, 'v2.1.0');
+  assert.equal(catalogue.releases[1].id, 'v2.0.4');
+  assert.equal(catalogue.releases[2].id, 'v2.0.3');
+  assert.equal(catalogue.releases[3].id, 'v2.0.2');
+  assert.equal(catalogue.releases[4].id, 'v2.0.1');
+  assert.equal(catalogue.releases[5].id, 'v2.0.0');
+  assert.equal(catalogue.releases[6].id, 'v1.4.14');
   assert.equal(catalogue.total, 117);
   assert.equal(catalogue.vehicles.length, 117);
   assert.deepEqual(catalogue.vehicles.map((vehicle) => vehicle.slot), Array.from({ length: 117 }, (_, index) => index + 1));
@@ -101,9 +102,10 @@ test('catalogue exposes every promised service and focus view', () => {
     assert.ok(services.has(service), `Missing service filter: ${service}`);
   }
   const focus = new Set(catalogue.focus_views.map((view) => view.id));
-  for (const view of ['direction-neutral', 'emergency-lighting', 'air-marine-motion', 'complete-towing-unit', 'mounted-specialist-carrier']) {
+  for (const view of ['uk-family-conversion', 'direction-neutral', 'emergency-lighting', 'air-marine-motion', 'complete-towing-unit', 'mounted-specialist-carrier']) {
     assert.ok(focus.has(view), `Missing focus view: ${view}`);
   }
+  assert.equal(catalogue.focus_views.find((view) => view.id === 'uk-family-conversion').count, 11);
 });
 
 test('search accepts slot, role name and punctuation-insensitive multi-term queries', () => {

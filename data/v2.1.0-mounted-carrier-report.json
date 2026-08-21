@@ -1,0 +1,354 @@
+{
+  "release": "v2.1.0-candidate",
+  "scope": [
+    "water-pod",
+    "bulk-foam-pod",
+    "rescue-pod",
+    "command-pod",
+    "welfare-pod",
+    "basu-pod",
+    "misting-pod",
+    "hazardous-materials-pod",
+    "osu-pod",
+    "hvp"
+  ],
+  "front_preservation_region": [
+    135,
+    90,
+    200,
+    195
+  ],
+  "minimum_master_width": 170,
+  "minimum_export_width": 94,
+  "minimum_dark_cab_pixels": 2000,
+  "minimum_glazing_pixels": 700,
+  "minimum_role_change_pixels": 1800,
+  "previews": [
+    "assets/previews/v2.1.0/mounted-carrier-before-after.png",
+    "assets/previews/v2.1.0/mounted-carrier-live-map.png"
+  ],
+  "all_passed": true,
+  "errors": [],
+  "entries": [
+    {
+      "asset_id": "water-pod",
+      "label": "Water Pod",
+      "master": "assets/masters/v2.1.0/water-pod.png",
+      "export": "assets/exports/v2/static/water-pod.png",
+      "master_bbox": [
+        10,
+        72,
+        185,
+        187
+      ],
+      "export_bbox": [
+        5,
+        39,
+        102,
+        103
+      ],
+      "cab_metrics": {
+        "region": [
+          98,
+          90,
+          195,
+          190
+        ],
+        "opaque_pixels": 6079,
+        "dark_cab_pixels": 2203,
+        "glazing_pixels": 836
+      },
+      "role_change_pixels": 4548,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "bulk-foam-pod",
+      "label": "Bulk Foam Pod",
+      "master": "assets/masters/v2.1.0/bulk-foam-pod.png",
+      "export": "assets/exports/v2/static/bulk-foam-pod.png",
+      "master_bbox": [
+        10,
+        74,
+        185,
+        187
+      ],
+      "export_bbox": [
+        5,
+        41,
+        102,
+        103
+      ],
+      "cab_metrics": {
+        "region": [
+          98,
+          90,
+          195,
+          190
+        ],
+        "opaque_pixels": 6079,
+        "dark_cab_pixels": 2203,
+        "glazing_pixels": 836
+      },
+      "role_change_pixels": 4654,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "rescue-pod",
+      "label": "Rescue Pod",
+      "master": "assets/masters/v2.1.0/rescue-pod.png",
+      "export": "assets/exports/v2/static/rescue-pod.png",
+      "master_bbox": [
+        10,
+        63,
+        185,
+        187
+      ],
+      "export_bbox": [
+        5,
+        34,
+        102,
+        103
+      ],
+      "cab_metrics": {
+        "region": [
+          98,
+          90,
+          195,
+          190
+        ],
+        "opaque_pixels": 6079,
+        "dark_cab_pixels": 2203,
+        "glazing_pixels": 836
+      },
+      "role_change_pixels": 6346,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "command-pod",
+      "label": "Command Pod",
+      "master": "assets/masters/v2.1.0/command-pod.png",
+      "export": "assets/exports/v2/static/command-pod.png",
+      "master_bbox": [
+        10,
+        70,
+        185,
+        187
+      ],
+      "export_bbox": [
+        5,
+        38,
+        102,
+        103
+      ],
+      "cab_metrics": {
+        "region": [
+          98,
+          90,
+          195,
+          190
+        ],
+        "opaque_pixels": 6079,
+        "dark_cab_pixels": 2203,
+        "glazing_pixels": 836
+      },
+      "role_change_pixels": 4098,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "welfare-pod",
+      "label": "Welfare Pod",
+      "master": "assets/masters/v2.1.0/welfare-pod.png",
+      "export": "assets/exports/v2/static/welfare-pod.png",
+      "master_bbox": [
+        10,
+        68,
+        185,
+        187
+      ],
+      "export_bbox": [
+        5,
+        37,
+        102,
+        103
+      ],
+      "cab_metrics": {
+        "region": [
+          98,
+          90,
+          195,
+          190
+        ],
+        "opaque_pixels": 6079,
+        "dark_cab_pixels": 2203,
+        "glazing_pixels": 836
+      },
+      "role_change_pixels": 5875,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "basu-pod",
+      "label": "BASU Pod",
+      "master": "assets/masters/v2.1.0/basu-pod.png",
+      "export": "assets/exports/v2/static/basu-pod.png",
+      "master_bbox": [
+        10,
+        72,
+        185,
+        187
+      ],
+      "export_bbox": [
+        5,
+        39,
+        102,
+        103
+      ],
+      "cab_metrics": {
+        "region": [
+          98,
+          90,
+          195,
+          190
+        ],
+        "opaque_pixels": 6079,
+        "dark_cab_pixels": 2203,
+        "glazing_pixels": 836
+      },
+      "role_change_pixels": 4898,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "misting-pod",
+      "label": "Misting Pod",
+      "master": "assets/masters/v2.1.0/misting-pod.png",
+      "export": "assets/exports/v2/static/misting-pod.png",
+      "master_bbox": [
+        10,
+        73,
+        185,
+        187
+      ],
+      "export_bbox": [
+        5,
+        40,
+        102,
+        103
+      ],
+      "cab_metrics": {
+        "region": [
+          98,
+          90,
+          195,
+          190
+        ],
+        "opaque_pixels": 6079,
+        "dark_cab_pixels": 2203,
+        "glazing_pixels": 836
+      },
+      "role_change_pixels": 4457,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "hazardous-materials-pod",
+      "label": "Hazardous Materials Pod",
+      "master": "assets/masters/v2.1.0/hazardous-materials-pod.png",
+      "export": "assets/exports/v2/static/hazardous-materials-pod.png",
+      "master_bbox": [
+        10,
+        63,
+        185,
+        187
+      ],
+      "export_bbox": [
+        5,
+        34,
+        102,
+        103
+      ],
+      "cab_metrics": {
+        "region": [
+          98,
+          90,
+          195,
+          190
+        ],
+        "opaque_pixels": 6079,
+        "dark_cab_pixels": 2203,
+        "glazing_pixels": 836
+      },
+      "role_change_pixels": 4596,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "osu-pod",
+      "label": "OSU Pod",
+      "master": "assets/masters/v2.1.0/osu-pod.png",
+      "export": "assets/exports/v2/static/osu-pod.png",
+      "master_bbox": [
+        10,
+        59,
+        185,
+        187
+      ],
+      "export_bbox": [
+        5,
+        32,
+        102,
+        103
+      ],
+      "cab_metrics": {
+        "region": [
+          98,
+          90,
+          195,
+          190
+        ],
+        "opaque_pixels": 6079,
+        "dark_cab_pixels": 2203,
+        "glazing_pixels": 836
+      },
+      "role_change_pixels": 5025,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "hvp",
+      "label": "HVP",
+      "master": "assets/masters/v2.1.0/hvp.png",
+      "export": "assets/exports/v2/static/hvp.png",
+      "master_bbox": [
+        10,
+        74,
+        185,
+        187
+      ],
+      "export_bbox": [
+        5,
+        41,
+        102,
+        103
+      ],
+      "cab_metrics": {
+        "region": [
+          98,
+          90,
+          195,
+          190
+        ],
+        "opaque_pixels": 6079,
+        "dark_cab_pixels": 2203,
+        "glazing_pixels": 836
+      },
+      "role_change_pixels": 4069,
+      "passed": true,
+      "errors": []
+    }
+  ]
+}
