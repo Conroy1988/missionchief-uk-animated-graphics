@@ -36,3 +36,7 @@ The live pack cannot be replaced until all 117 static assets and all 117 respons
 7. lossless, infinitely looping APNG structure with the category-approved frame count.
 8. explicit cab-legibility validation for every release that changes a self-propelled road appliance;
 9. explicit mounted-carrier validation for every container slot, including preservation of the role module, PM front, glazing, three-axle chassis and native-scale vehicle width.
+10. exact 117-slot assignment to the curated UK platform-family standard, including a role-specific body/equipment brief for every slot;
+11. a full 100/100 hero-grade image score, family-reference affinity and no cross-family silhouette conflict before any future family-authentic release is deployed.
+
+The migration contract and its 18 family references are defined in [V2_UK_FAMILY_HERO_STANDARD.md](V2_UK_FAMILY_HERO_STANDARD.md). Audit mode may document a preserved release while conversions are in progress; enforcement mode remains fail-closed until the complete fleet is hero-ready.

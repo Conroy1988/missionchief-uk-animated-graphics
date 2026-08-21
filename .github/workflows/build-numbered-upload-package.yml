@@ -17,6 +17,7 @@ on:
       - docs/RELEASE_v2.0.4.md
       - docs/CHECKPOINT_v2.0.4.md
       - docs/V2_DIRECTION_NEUTRAL_STANDARD.md
+      - docs/V2_UK_FAMILY_HERO_STANDARD.md
       - scripts/apng_full_frame.py
       - scripts/build_numbered_upload_package.py
       - scripts/build_v2_cab_legibility_masters.py
@@ -29,11 +30,13 @@ on:
       - scripts/v2_profile.py
       - scripts/v2_emergency_light.py
       - scripts/v2_helicopter_rotors.py
+      - scripts/v2_uk_family_standard.py
       - scripts/validate_v2_animated_fleet.py
       - scripts/validate_v2_cab_legibility.py
       - scripts/validate_v2_mounted_pod_carriers.py
       - scripts/validate_v2_release_integrity.py
       - scripts/validate_v2_static_fleet.py
+      - scripts/validate_v2_uk_family_hero_gate.py
       - .github/workflows/build-numbered-upload-package.yml
   push:
     branches:
@@ -49,6 +52,7 @@ on:
       - docs/RELEASE_v2.0.4.md
       - docs/CHECKPOINT_v2.0.4.md
       - docs/V2_DIRECTION_NEUTRAL_STANDARD.md
+      - docs/V2_UK_FAMILY_HERO_STANDARD.md
       - scripts/apng_full_frame.py
       - scripts/build_numbered_upload_package.py
       - scripts/build_v2_cab_legibility_masters.py
@@ -61,11 +65,13 @@ on:
       - scripts/v2_profile.py
       - scripts/v2_emergency_light.py
       - scripts/v2_helicopter_rotors.py
+      - scripts/v2_uk_family_standard.py
       - scripts/validate_v2_animated_fleet.py
       - scripts/validate_v2_cab_legibility.py
       - scripts/validate_v2_mounted_pod_carriers.py
       - scripts/validate_v2_release_integrity.py
       - scripts/validate_v2_static_fleet.py
+      - scripts/validate_v2_uk_family_hero_gate.py
       - .github/workflows/build-numbered-upload-package.yml
 
 permissions:
@@ -109,6 +115,9 @@ jobs:
       - name: Verify all ten mounted specialist carriers
         run: python scripts/validate_v2_mounted_pod_carriers.py
 
+      - name: Audit all 117 UK platform families against the hero-grade standard
+        run: python scripts/validate_v2_uk_family_hero_gate.py --audit
+
       - name: Rebuild all 117 response APNGs and fixture metadata
         run: python scripts/build_v2_animated_fleet.py
 
@@ -145,6 +154,7 @@ jobs:
             data/v2.0.4-release-integrity-report.json
             data/v2.0.4-scale-report.json
             data/v2.0.4-static-qa-report.json
+            data/v2.0.4-uk-family-hero-report.json
             assets/previews/v2.0.4/*.png
             assets/previews/v2.0.4/*.gif
           if-no-files-found: error
@@ -167,6 +177,7 @@ jobs:
             data/v2.0.4-release-integrity-report.json \
             data/v2.0.4-scale-report.json \
             data/v2.0.4-static-qa-report.json \
+            data/v2.0.4-uk-family-hero-report.json \
             assets/previews/v2.0.4/mounted-carrier-before-after.png \
             assets/previews/v2.0.4/mounted-carrier-live-map.png \
             assets/previews/v2.0.4/cab-legibility-before-after.png \
@@ -175,4 +186,6 @@ jobs:
             assets/previews/v2.0.4/helicopter-rotor-fleet.gif \
             assets/previews/v2.0.4/helicopter-tail-rotor-alignment.gif \
             assets/previews/v2.0.4/police-helicopter-rotor-comparison.gif \
+            assets/previews/v2.0.4/uk-family-hero-audit.png \
+            assets/previews/v2.0.4/uk-family-reference-board.png \
             --clobber
