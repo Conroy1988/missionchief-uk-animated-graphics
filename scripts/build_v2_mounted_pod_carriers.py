@@ -1,110 +1,83 @@
 #!/usr/bin/env python3
-"""Build the ten v2.0.4 mounted specialist-carrier master overrides."""
+"""Build the ten v2.1.1 unified mounted specialist-carrier masters.
+
+The previous correction composited a complete legacy module behind a Prime
+Mover cab. Several of those sources retained their own underframe and wheels,
+so the result read as an articulated trailer at live map scale. v2.1.1 uses
+purpose-built full-vehicle chroma sources: one continuous rigid chassis,
+exactly three road axles and a role body seated directly behind the cab.
+"""
 
 from __future__ import annotations
 
 import argparse
-from dataclasses import dataclass
 from pathlib import Path
 
-from PIL import Image, ImageChops, ImageDraw
+import numpy as np
+from PIL import Image, ImageChops
 
+from process_v2_generated import (
+    extract_chroma,
+    fit_to_canvas,
+    validate_chroma_screen,
+    vehicle_record,
+)
 from v2_profile import (
     EXPECTED_OVERRIDE_IDS,
     MASTER_CANVAS,
-    MASTER_DIR,
     MASTER_OVERRIDE_DIR,
     MOUNTED_CARRIER_IDS,
+    RELEASE,
     ROOT,
 )
 
 
-PRIME_MOVER_PATH = MASTER_DIR / "pm.png"
+SOURCE_DIR = ROOT / "assets" / "sources" / RELEASE
 OUTPUT_DIR = MASTER_OVERRIDE_DIR
-TARGET_MODULE_LEFT = 10
-TARGET_MODULE_BOTTOM = 149
 
-# The v2 PM source shows its empty hook-lift boom raised.  A loaded carrier
-# keeps the approved chassis and cab but removes only that raised boom before
-# the role-specific module is mounted.
-HOOK_BOOM_POLYGON = (
-    (58, 47),
-    (73, 47),
-    (96, 86),
-    (96, 103),
-    (85, 110),
-    (75, 94),
-    (57, 61),
-)
+EXPECTED_LEFT = 8
+EXPECTED_RIGHT = 192
+EXPECTED_BASELINE = 186
+MIN_MASTER_HEIGHT = 105
+MAX_MASTER_HEIGHT = 120
+MIN_OPAQUE_PIXELS = 12_000
+MIN_COMPONENT_COVERAGE = 0.998
 
-# The cab is in the foreground of the fixed lower-right three-quarter view.
-# Restoring it after the module composite gives the correct physical occlusion
-# without redrawing a single cab, windscreen, wheel or bumper pixel.
-CAB_FOREGROUND_POLYGON = (
-    (98, 89),
-    (151, 89),
-    (199, 118),
-    (199, 199),
-    (88, 199),
-    (88, 147),
-    (97, 131),
-)
-
-
-@dataclass(frozen=True)
-class CarrierBuild:
-    image: Image.Image
-    module_offset: tuple[int, int]
-    module_bbox: tuple[int, int, int, int]
+COUPLING_REGION = (96, 115, 132, 176)
+CHASSIS_REGION = (20, 145, 145, 186)
+CAB_REGION = (118, 90, 192, 186)
+ROLE_BODY_REGION = (8, 68, 118, 160)
+MIN_REGION_OPAQUE = {
+    "coupling": 1_850,
+    "chassis": 2_000,
+    "cab": 5_500,
+    "role_body": 6_200,
+}
+WHEEL_REGIONS = {
+    "rear_axle_1": (16, 142, 45, 184),
+    "rear_axle_2": (43, 149, 74, 188),
+    "front_axle": (138, 150, 173, 192),
+}
+MIN_DARK_WHEEL_PIXELS = {
+    "rear_axle_1": 100,
+    "rear_axle_2": 100,
+    "front_axle": 580,
+}
 
 
-def rgba(path: Path) -> Image.Image:
-    with Image.open(path) as image:
-        image.load()
-        return image.convert("RGBA")
+def source_path(asset_id: str) -> Path:
+    return SOURCE_DIR / f"{asset_id}-chroma.png"
 
 
-def polygon_mask(points: tuple[tuple[int, int], ...]) -> Image.Image:
-    mask = Image.new("L", MASTER_CANVAS, 0)
-    ImageDraw.Draw(mask).polygon(points, fill=255)
-    return mask
-
-
-def masked_difference(
-    left: Image.Image,
-    right: Image.Image,
-    mask: Image.Image,
-) -> Image.Image:
-    difference = ImageChops.difference(left, right)
-    transparent = Image.new("RGBA", MASTER_CANVAS, (0, 0, 0, 0))
-    return Image.composite(difference, transparent, mask)
-
-
-def build_one(asset_id: str, prime_mover: Image.Image) -> CarrierBuild:
-    module_path = MASTER_DIR / f"{asset_id}.png"
-    module = rgba(module_path)
-    if prime_mover.size != MASTER_CANVAS or module.size != MASTER_CANVAS:
-        raise ValueError(f"{asset_id}: every source must use the {MASTER_CANVAS} master canvas")
-
-    module_bbox = module.getchannel("A").getbbox()
-    if module_bbox is None:
-        raise ValueError(f"{asset_id}: source module is empty")
-    offset = (
-        TARGET_MODULE_LEFT - module_bbox[0],
-        TARGET_MODULE_BOTTOM - module_bbox[3],
-    )
-
-    hook_mask = polygon_mask(HOOK_BOOM_POLYGON)
-    carrier = prime_mover.copy()
-    carrier.paste((0, 0, 0, 0), mask=hook_mask)
-    carrier.alpha_composite(module, offset)
-
-    cab_mask = polygon_mask(CAB_FOREGROUND_POLYGON)
-    carrier.paste(prime_mover, (0, 0), cab_mask)
-
-    if masked_difference(carrier, prime_mover, cab_mask).getbbox() is not None:
-        raise ValueError(f"{asset_id}: approved prime-mover cab changed during mounting")
-    return CarrierBuild(carrier, offset, module_bbox)
+def expected_master(asset_id: str) -> Image.Image:
+    source = source_path(asset_id)
+    if not source.exists():
+        raise FileNotFoundError(f"Missing unified carrier source: {source.relative_to(ROOT)}")
+    extracted = extract_chroma(Image.open(source))
+    validate_chroma_screen(extracted)
+    record = vehicle_record(asset_id)
+    canvas, _ = fit_to_canvas(extracted, asset_id, float(record["real_length_metres"]))
+    return canvas
 
 
 def images_equal(left: Image.Image, right: Image.Image) -> bool:
@@ -115,35 +88,116 @@ def images_equal(left: Image.Image, right: Image.Image) -> bool:
     )
 
 
-def validate_build(asset_id: str, build: CarrierBuild, prime_mover: Image.Image) -> None:
-    carrier = build.image
-    bbox = carrier.getchannel("A").getbbox()
-    if carrier.size != MASTER_CANVAS:
-        raise ValueError(f"{asset_id}: carrier canvas changed")
-    if bbox is None or bbox[2] - bbox[0] < 170:
-        raise ValueError(f"{asset_id}: carrier is too short to contain its cab and module")
-    if bbox[0] > TARGET_MODULE_LEFT or bbox[2] < 185 or bbox[3] < 187:
-        raise ValueError(f"{asset_id}: complete road chassis is not retained: {bbox}")
+def opaque_in_region(alpha: Image.Image, region: tuple[int, int, int, int]) -> int:
+    return sum(value >= 96 for value in alpha.crop(region).get_flattened_data())
 
-    front_box = (135, 90, 200, 195)
-    if ImageChops.difference(
-        carrier.crop(front_box), prime_mover.crop(front_box)
-    ).getbbox() is not None:
-        raise ValueError(f"{asset_id}: windscreen, front wheel or bumper changed")
 
-    module = rgba(MASTER_DIR / f"{asset_id}.png")
-    shifted = Image.new("RGBA", MASTER_CANVAS, (0, 0, 0, 0))
-    shifted.alpha_composite(module, build.module_offset)
-    expected_module_alpha = shifted.getchannel("A")
-    cab_mask = polygon_mask(CAB_FOREGROUND_POLYGON)
-    visible_module_alpha = ImageChops.multiply(expected_module_alpha, ImageChops.invert(cab_mask))
-    required = sum(value >= 96 for value in visible_module_alpha.get_flattened_data())
-    retained = sum(
-        value >= 96
-        for value in ImageChops.multiply(carrier.getchannel("A"), visible_module_alpha).get_flattened_data()
+def dark_in_region(image: Image.Image, region: tuple[int, int, int, int]) -> int:
+    return sum(
+        alpha >= 96 and max(red, green, blue) < 95
+        for red, green, blue, alpha in image.crop(region).get_flattened_data()
     )
-    if required < 900 or retained < round(required * 0.97):
-        raise ValueError(f"{asset_id}: mounted role module is incomplete")
+
+
+def largest_component_coverage(alpha: Image.Image) -> float:
+    opaque = np.asarray(alpha) >= 96
+    total = int(np.count_nonzero(opaque))
+    if not total:
+        return 0.0
+
+    visited = np.zeros_like(opaque, dtype=bool)
+    largest = 0
+    height, width = opaque.shape
+    for start_y, start_x in zip(*np.where(opaque & ~visited)):
+        if visited[start_y, start_x]:
+            continue
+        stack = [(int(start_y), int(start_x))]
+        visited[start_y, start_x] = True
+        size = 0
+        while stack:
+            y, x = stack.pop()
+            size += 1
+            for dy, dx in (
+                (-1, -1), (-1, 0), (-1, 1),
+                (0, -1),             (0, 1),
+                (1, -1),  (1, 0),  (1, 1),
+            ):
+                next_y, next_x = y + dy, x + dx
+                if (
+                    0 <= next_y < height
+                    and 0 <= next_x < width
+                    and opaque[next_y, next_x]
+                    and not visited[next_y, next_x]
+                ):
+                    visited[next_y, next_x] = True
+                    stack.append((next_y, next_x))
+        largest = max(largest, size)
+    return largest / total
+
+
+def integration_metrics(image: Image.Image) -> dict:
+    alpha = image.getchannel("A")
+    bbox = alpha.getbbox()
+    return {
+        "bbox": list(bbox) if bbox else None,
+        "opaque_pixels": sum(value >= 96 for value in alpha.get_flattened_data()),
+        "largest_component_coverage": largest_component_coverage(alpha),
+        "region_opaque_pixels": {
+            "coupling": opaque_in_region(alpha, COUPLING_REGION),
+            "chassis": opaque_in_region(alpha, CHASSIS_REGION),
+            "cab": opaque_in_region(alpha, CAB_REGION),
+            "role_body": opaque_in_region(alpha, ROLE_BODY_REGION),
+        },
+        "wheel_dark_pixels": {
+            name: dark_in_region(image, region)
+            for name, region in WHEEL_REGIONS.items()
+        },
+    }
+
+
+def validation_errors(asset_id: str, image: Image.Image) -> list[str]:
+    metrics = integration_metrics(image)
+    errors: list[str] = []
+    bbox = metrics["bbox"]
+    if image.size != MASTER_CANVAS:
+        errors.append(f"canvas={image.size}")
+    if bbox is None:
+        return [*errors, "empty-subject"]
+    width = bbox[2] - bbox[0]
+    height = bbox[3] - bbox[1]
+    if (bbox[0], bbox[2], bbox[3]) != (EXPECTED_LEFT, EXPECTED_RIGHT, EXPECTED_BASELINE):
+        errors.append(f"geometry={bbox}")
+    if not MIN_MASTER_HEIGHT <= height <= MAX_MASTER_HEIGHT:
+        errors.append(f"height={height}")
+    if width != EXPECTED_RIGHT - EXPECTED_LEFT:
+        errors.append(f"width={width}")
+    if metrics["opaque_pixels"] < MIN_OPAQUE_PIXELS:
+        errors.append(f"opaque={metrics['opaque_pixels']}")
+    if metrics["largest_component_coverage"] < MIN_COMPONENT_COVERAGE:
+        errors.append(
+            "disconnected-subject="
+            f"{metrics['largest_component_coverage']:.4f}"
+        )
+    for name, minimum in MIN_REGION_OPAQUE.items():
+        actual = metrics["region_opaque_pixels"][name]
+        if actual < minimum:
+            errors.append(f"{name}-integration={actual}")
+    for name, minimum in MIN_DARK_WHEEL_PIXELS.items():
+        actual = metrics["wheel_dark_pixels"][name]
+        if actual < minimum:
+            errors.append(f"{name}-missing={actual}")
+    return [f"{asset_id}/{error}" for error in errors]
+
+
+def validate_override_scope(*, require_complete: bool) -> list[str]:
+    if not OUTPUT_DIR.exists():
+        return ["missing-override-directory"]
+    actual = {path.stem for path in OUTPUT_DIR.glob("*.png")}
+    required = EXPECTED_OVERRIDE_IDS if require_complete else frozenset(MOUNTED_CARRIER_IDS)
+    return [
+        *(f"missing/{asset_id}" for asset_id in sorted(required - actual)),
+        *(f"unexpected/{asset_id}" for asset_id in sorted(actual - EXPECTED_OVERRIDE_IDS)),
+    ]
 
 
 def main() -> None:
@@ -151,49 +205,40 @@ def main() -> None:
     parser.add_argument(
         "--check",
         action="store_true",
-        help="Fail if committed mounted-carrier overrides are missing or stale",
+        help="Fail if committed unified-carrier masters are missing or stale",
     )
     args = parser.parse_args()
 
-    prime_mover = rgba(PRIME_MOVER_PATH)
     errors: list[str] = []
     if not args.check:
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     for asset_id in MOUNTED_CARRIER_IDS:
         try:
-            expected_build = build_one(asset_id, prime_mover)
-            validate_build(asset_id, expected_build, prime_mover)
-            output_path = OUTPUT_DIR / f"{asset_id}.png"
+            expected = expected_master(asset_id)
+            errors.extend(validation_errors(asset_id, expected))
+            output = OUTPUT_DIR / f"{asset_id}.png"
             if args.check:
-                if not output_path.exists():
+                if not output.exists():
                     errors.append(f"missing/{asset_id}")
                     continue
-                actual = rgba(output_path)
-                if not images_equal(actual, expected_build.image):
+                actual = Image.open(output).convert("RGBA")
+                if not images_equal(actual, expected):
                     errors.append(f"stale/{asset_id}")
+                errors.extend(validation_errors(asset_id, actual))
             else:
-                expected_build.image.save(output_path, optimize=True)
+                expected.save(output, optimize=True)
         except Exception as exc:
             errors.append(f"{asset_id}/{exc}")
 
-    if OUTPUT_DIR.exists():
-        actual_ids = {path.stem for path in OUTPUT_DIR.glob("*.png")}
-        errors.extend(
-            f"unexpected/{asset_id}"
-            for asset_id in sorted(actual_ids - EXPECTED_OVERRIDE_IDS)
-        )
-
+    errors.extend(validate_override_scope(require_complete=args.check))
     result = {
-        "source_prime_mover": PRIME_MOVER_PATH.relative_to(ROOT).as_posix(),
-        "source_modules": [
-            (MASTER_DIR / f"{asset_id}.png").relative_to(ROOT).as_posix()
-            for asset_id in MOUNTED_CARRIER_IDS
-        ],
+        "release": RELEASE,
+        "sources": SOURCE_DIR.relative_to(ROOT).as_posix(),
         "output": OUTPUT_DIR.relative_to(ROOT).as_posix(),
         "mounted_carriers": list(MOUNTED_CARRIER_IDS),
         "all_passed": not errors,
-        "errors": errors,
+        "errors": sorted(set(errors)),
     }
     print(result)
     if errors:

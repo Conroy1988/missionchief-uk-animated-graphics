@@ -1,5 +1,11 @@
 # TKB UK Emergency Fleet — Roadmap
 
+## Delivered: unified mounted pod carriers
+
+Version 2.1.1 rebuilds slots 42–51 as ten coherent three-axle appliances. Their role bodies now sit directly behind the cab on one continuous powered chassis, removing the detached trailer-like gap and duplicate underframe cues from the earlier composite method.
+
+The new fail-closed gate measures cab-to-body coupling, continuous chassis structure, connected-subject coverage and three axle witness regions before a mounted carrier can pass. See the [v2.1.1 release checkpoint](CHECKPOINT_v2.1.1.md).
+
 ## Delivered: UK vehicle-family authenticity
 
 Version 2.1.0 completes the 18-family hero standard across all 117 slots. The release retains 117/117 technical compliance, converts the 11 targeted vehicles and clears the enforcement gate with zero remaining cross-family silhouette conflicts.

@@ -28,6 +28,12 @@ RELEASES = [
         "id": RELEASE,
         "label": f"{RELEASE} · Current",
         "profile": "v2",
+        "summary": "Ten unified three-axle pod carriers with no detached trailer-like modules",
+    },
+    {
+        "id": "v2.1.0",
+        "label": "v2.1.0",
+        "profile": "v2",
         "summary": "117/117 hero-ready UK platform families with eleven role-specific conversions",
     },
     {
@@ -189,7 +195,7 @@ FOCUS_LABELS = {
     "emergency-lighting": "Emergency lighting",
     "air-marine-motion": "Aircraft and marine motion",
     "complete-towing-unit": "Complete towing units",
-    "mounted-specialist-carrier": "Complete mounted specialist carriers",
+    "mounted-specialist-carrier": "Unified mounted specialist carriers",
 }
 
 TOWED_LENGTHS = {
@@ -322,7 +328,7 @@ def build_catalogue() -> dict:
         elif asset_id in TOWED_LENGTHS:
             cue_label = "Complete direction-neutral towing unit"
         elif asset_id in MOUNTED_CARRIER_IDS:
-            cue_label = "Complete direction-neutral mounted carrier"
+            cue_label = "Unified direction-neutral three-axle mounted carrier"
         else:
             light_colour = fixture["profile"].removeprefix("road-").capitalize()
             cue_label = f"Direction-neutral {fixture['kind']} · {light_colour} response lighting"

@@ -1,0 +1,466 @@
+{
+  "release": "v2.1.1-candidate",
+  "scope": [
+    "water-pod",
+    "bulk-foam-pod",
+    "rescue-pod",
+    "command-pod",
+    "welfare-pod",
+    "basu-pod",
+    "misting-pod",
+    "hazardous-materials-pod",
+    "osu-pod",
+    "hvp"
+  ],
+  "integration_contract": {
+    "minimum_opaque_pixels": 12000,
+    "minimum_largest_component_coverage": 0.998,
+    "regions": {
+      "coupling": [
+        96,
+        115,
+        132,
+        176
+      ],
+      "chassis": [
+        20,
+        145,
+        145,
+        186
+      ],
+      "cab": [
+        118,
+        90,
+        192,
+        186
+      ],
+      "role_body": [
+        8,
+        68,
+        118,
+        160
+      ]
+    },
+    "minimum_region_opaque_pixels": {
+      "coupling": 1850,
+      "chassis": 2000,
+      "cab": 5500,
+      "role_body": 6200
+    },
+    "wheel_regions": {
+      "rear_axle_1": [
+        16,
+        142,
+        45,
+        184
+      ],
+      "rear_axle_2": [
+        43,
+        149,
+        74,
+        188
+      ],
+      "front_axle": [
+        138,
+        150,
+        173,
+        192
+      ]
+    },
+    "minimum_dark_wheel_pixels": {
+      "rear_axle_1": 100,
+      "rear_axle_2": 100,
+      "front_axle": 580
+    }
+  },
+  "minimum_changed_pixels": 4000,
+  "minimum_export_width": 100,
+  "previews": [
+    "assets/previews/v2.1.1/mounted-carrier-before-after.png",
+    "assets/previews/v2.1.1/mounted-carrier-live-map.png"
+  ],
+  "all_passed": true,
+  "errors": [],
+  "entries": [
+    {
+      "asset_id": "water-pod",
+      "label": "Water Pod",
+      "source": "assets/sources/v2.1.1/water-pod-chroma.png",
+      "master": "assets/masters/v2.1.1/water-pod.png",
+      "export": "assets/exports/v2/static/water-pod.png",
+      "previous_master": "assets/masters/v2.1.0/water-pod.png",
+      "export_bbox": [
+        4,
+        39,
+        106,
+        103
+      ],
+      "changed_pixels": 12218,
+      "integration_metrics": {
+        "bbox": [
+          8,
+          72,
+          192,
+          186
+        ],
+        "opaque_pixels": 13354,
+        "largest_component_coverage": 0.9999251160700914,
+        "region_opaque_pixels": {
+          "coupling": 1992,
+          "chassis": 2184,
+          "cab": 5827,
+          "role_body": 7318
+        },
+        "wheel_dark_pixels": {
+          "rear_axle_1": 127,
+          "rear_axle_2": 121,
+          "front_axle": 611
+        }
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "bulk-foam-pod",
+      "label": "Bulk Foam Pod",
+      "source": "assets/sources/v2.1.1/bulk-foam-pod-chroma.png",
+      "master": "assets/masters/v2.1.1/bulk-foam-pod.png",
+      "export": "assets/exports/v2/static/bulk-foam-pod.png",
+      "previous_master": "assets/masters/v2.1.0/bulk-foam-pod.png",
+      "export_bbox": [
+        4,
+        37,
+        106,
+        103
+      ],
+      "changed_pixels": 12435,
+      "integration_metrics": {
+        "bbox": [
+          8,
+          69,
+          192,
+          186
+        ],
+        "opaque_pixels": 13559,
+        "largest_component_coverage": 1.0,
+        "region_opaque_pixels": {
+          "coupling": 1982,
+          "chassis": 2141,
+          "cab": 5726,
+          "role_body": 7646
+        },
+        "wheel_dark_pixels": {
+          "rear_axle_1": 112,
+          "rear_axle_2": 125,
+          "front_axle": 625
+        }
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "rescue-pod",
+      "label": "Rescue Pod",
+      "source": "assets/sources/v2.1.1/rescue-pod-chroma.png",
+      "master": "assets/masters/v2.1.1/rescue-pod.png",
+      "export": "assets/exports/v2/static/rescue-pod.png",
+      "previous_master": "assets/masters/v2.1.0/rescue-pod.png",
+      "export_bbox": [
+        4,
+        40,
+        106,
+        103
+      ],
+      "changed_pixels": 13998,
+      "integration_metrics": {
+        "bbox": [
+          8,
+          74,
+          192,
+          186
+        ],
+        "opaque_pixels": 13423,
+        "largest_component_coverage": 1.0,
+        "region_opaque_pixels": {
+          "coupling": 1988,
+          "chassis": 2157,
+          "cab": 5853,
+          "role_body": 7358
+        },
+        "wheel_dark_pixels": {
+          "rear_axle_1": 116,
+          "rear_axle_2": 115,
+          "front_axle": 610
+        }
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "command-pod",
+      "label": "Command Pod",
+      "source": "assets/sources/v2.1.1/command-pod-chroma.png",
+      "master": "assets/masters/v2.1.1/command-pod.png",
+      "export": "assets/exports/v2/static/command-pod.png",
+      "previous_master": "assets/masters/v2.1.0/command-pod.png",
+      "export_bbox": [
+        4,
+        43,
+        106,
+        103
+      ],
+      "changed_pixels": 12533,
+      "integration_metrics": {
+        "bbox": [
+          8,
+          79,
+          192,
+          186
+        ],
+        "opaque_pixels": 12488,
+        "largest_component_coverage": 0.9998398462524023,
+        "region_opaque_pixels": {
+          "coupling": 1984,
+          "chassis": 2152,
+          "cab": 5751,
+          "role_body": 6549
+        },
+        "wheel_dark_pixels": {
+          "rear_axle_1": 114,
+          "rear_axle_2": 124,
+          "front_axle": 626
+        }
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "welfare-pod",
+      "label": "Welfare Pod",
+      "source": "assets/sources/v2.1.1/welfare-pod-chroma.png",
+      "master": "assets/masters/v2.1.1/welfare-pod.png",
+      "export": "assets/exports/v2/static/welfare-pod.png",
+      "previous_master": "assets/masters/v2.1.0/welfare-pod.png",
+      "export_bbox": [
+        4,
+        41,
+        106,
+        103
+      ],
+      "changed_pixels": 13471,
+      "integration_metrics": {
+        "bbox": [
+          8,
+          75,
+          192,
+          186
+        ],
+        "opaque_pixels": 13396,
+        "largest_component_coverage": 1.0,
+        "region_opaque_pixels": {
+          "coupling": 1992,
+          "chassis": 2176,
+          "cab": 5817,
+          "role_body": 7371
+        },
+        "wheel_dark_pixels": {
+          "rear_axle_1": 125,
+          "rear_axle_2": 122,
+          "front_axle": 613
+        }
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "basu-pod",
+      "label": "BASU Pod",
+      "source": "assets/sources/v2.1.1/basu-pod-chroma.png",
+      "master": "assets/masters/v2.1.1/basu-pod.png",
+      "export": "assets/exports/v2/static/basu-pod.png",
+      "previous_master": "assets/masters/v2.1.0/basu-pod.png",
+      "export_bbox": [
+        4,
+        38,
+        106,
+        103
+      ],
+      "changed_pixels": 13093,
+      "integration_metrics": {
+        "bbox": [
+          8,
+          70,
+          192,
+          186
+        ],
+        "opaque_pixels": 13779,
+        "largest_component_coverage": 1.0,
+        "region_opaque_pixels": {
+          "coupling": 1990,
+          "chassis": 2161,
+          "cab": 5842,
+          "role_body": 7725
+        },
+        "wheel_dark_pixels": {
+          "rear_axle_1": 117,
+          "rear_axle_2": 115,
+          "front_axle": 606
+        }
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "misting-pod",
+      "label": "Misting Pod",
+      "source": "assets/sources/v2.1.1/misting-pod-chroma.png",
+      "master": "assets/masters/v2.1.1/misting-pod.png",
+      "export": "assets/exports/v2/static/misting-pod.png",
+      "previous_master": "assets/masters/v2.1.0/misting-pod.png",
+      "export_bbox": [
+        4,
+        41,
+        106,
+        103
+      ],
+      "changed_pixels": 12673,
+      "integration_metrics": {
+        "bbox": [
+          8,
+          75,
+          192,
+          186
+        ],
+        "opaque_pixels": 13122,
+        "largest_component_coverage": 1.0,
+        "region_opaque_pixels": {
+          "coupling": 1992,
+          "chassis": 2175,
+          "cab": 5828,
+          "role_body": 7086
+        },
+        "wheel_dark_pixels": {
+          "rear_axle_1": 127,
+          "rear_axle_2": 117,
+          "front_axle": 614
+        }
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "hazardous-materials-pod",
+      "label": "Hazardous Materials Pod",
+      "source": "assets/sources/v2.1.1/hazardous-materials-pod-chroma.png",
+      "master": "assets/masters/v2.1.1/hazardous-materials-pod.png",
+      "export": "assets/exports/v2/static/hazardous-materials-pod.png",
+      "previous_master": "assets/masters/v2.1.0/hazardous-materials-pod.png",
+      "export_bbox": [
+        4,
+        40,
+        106,
+        103
+      ],
+      "changed_pixels": 13238,
+      "integration_metrics": {
+        "bbox": [
+          8,
+          74,
+          192,
+          186
+        ],
+        "opaque_pixels": 13326,
+        "largest_component_coverage": 1.0,
+        "region_opaque_pixels": {
+          "coupling": 2023,
+          "chassis": 2372,
+          "cab": 5754,
+          "role_body": 7306
+        },
+        "wheel_dark_pixels": {
+          "rear_axle_1": 176,
+          "rear_axle_2": 161,
+          "front_axle": 622
+        }
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "osu-pod",
+      "label": "OSU Pod",
+      "source": "assets/sources/v2.1.1/osu-pod-chroma.png",
+      "master": "assets/masters/v2.1.1/osu-pod.png",
+      "export": "assets/exports/v2/static/osu-pod.png",
+      "previous_master": "assets/masters/v2.1.0/osu-pod.png",
+      "export_bbox": [
+        4,
+        37,
+        106,
+        103
+      ],
+      "changed_pixels": 13843,
+      "integration_metrics": {
+        "bbox": [
+          8,
+          69,
+          192,
+          186
+        ],
+        "opaque_pixels": 13970,
+        "largest_component_coverage": 1.0,
+        "region_opaque_pixels": {
+          "coupling": 1989,
+          "chassis": 2164,
+          "cab": 5804,
+          "role_body": 7963
+        },
+        "wheel_dark_pixels": {
+          "rear_axle_1": 121,
+          "rear_axle_2": 118,
+          "front_axle": 621
+        }
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "hvp",
+      "label": "HVP",
+      "source": "assets/sources/v2.1.1/hvp-chroma.png",
+      "master": "assets/masters/v2.1.1/hvp.png",
+      "export": "assets/exports/v2/static/hvp.png",
+      "previous_master": "assets/masters/v2.1.0/hvp.png",
+      "export_bbox": [
+        4,
+        40,
+        106,
+        103
+      ],
+      "changed_pixels": 12573,
+      "integration_metrics": {
+        "bbox": [
+          8,
+          74,
+          192,
+          186
+        ],
+        "opaque_pixels": 13189,
+        "largest_component_coverage": 1.0,
+        "region_opaque_pixels": {
+          "coupling": 1993,
+          "chassis": 2176,
+          "cab": 5781,
+          "role_body": 7204
+        },
+        "wheel_dark_pixels": {
+          "rear_axle_1": 122,
+          "rear_axle_2": 124,
+          "front_axle": 616
+        }
+      },
+      "passed": true,
+      "errors": []
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# TKB UK Emergency Fleet — UK Family Authenticity v2.1.0
+# TKB UK Emergency Fleet — Unified Mounted Pod Carriers v2.1.1
 
 A complete original UK emergency-services vehicle graphics pack for [MissionChief UK](https://www.missionchief.co.uk/), built by **TKB Gaming**.
 
@@ -58,7 +58,7 @@ Version 2.1.0 completes the migration at **117/117 hero-ready** with zero conver
 - Patient Transport and Critical Care Transfer Ambulances now have visibly different minibus and clinical-box conversions;
 - Mountain Rescue Control Van and Marine EOD Equipment Van now expose their command and specialist-deployment hardware.
 
-**[11 conversions before/after](assets/previews/v2.1.0/family-conversions-before-after.png)** · **[18 family hero references](assets/previews/v2.1.0/uk-family-reference-board.png)** · **[117-slot passing audit](assets/previews/v2.1.0/uk-family-hero-audit.png)** · **[Full family standard](docs/V2_UK_FAMILY_HERO_STANDARD.md)**
+**[11 conversions before/after](assets/previews/v2.1.1/family-conversions-before-after.png)** · **[18 family hero references](assets/previews/v2.1.1/uk-family-reference-board.png)** · **[117-slot passing audit](assets/previews/v2.1.1/uk-family-hero-audit.png)** · **[Full family standard](docs/V2_UK_FAMILY_HERO_STANDARD.md)**
 
 ## Emergency lighting
 
@@ -81,19 +81,19 @@ Version 2.0.2 replaces the stopped, cross-shaped helicopter blades with calibrat
 - Main-rotor discs preserve the perspective, diameter and blade count implied by each source aircraft.
 - Blade-free production bases are repaired beneath every sweep so no frozen rotor or erased fuselage leaks into the animation.
 
-**[Four-aircraft rotor preview](assets/previews/v2.1.0/helicopter-rotor-fleet.gif)** · **[Tail-rotor alignment audit](assets/previews/v2.1.0/helicopter-tail-rotor-alignment.gif)**
+**[Four-aircraft rotor preview](assets/previews/v2.1.1/helicopter-rotor-fleet.gif)** · **[Tail-rotor alignment audit](assets/previews/v2.1.1/helicopter-tail-rotor-alignment.gif)**
 
-## Complete mounted pod carriers
+## Unified mounted pod carriers
 
-Version 2.0.4 replaces all ten module-only container sprites with complete loaded prime movers. Every corrected slot now combines its original role-specific module with the approved direction-neutral PM cab, powered three-axle chassis, windscreen, front wheel, grille and bumper.
+Version 2.1.1 rebuilds all ten loaded pod roles as complete three-axle appliances. The earlier composite preserved a visual gap and spare underframe cues from the original module, so several vehicles still read as a cab pulling a trailer. Each new role body now sits immediately behind the cab on one continuous powered chassis.
 
-- Water, Bulk Foam, Rescue, Command, Welfare, BASU, Misting, Hazardous Materials and OSU Pods are mounted on complete carriers.
-- HVP retains its pump, hose-bank and manifold equipment on the same complete carrier family.
+- Water, Bulk Foam, Rescue, Command, Welfare, BASU, Misting, Hazardous Materials and OSU bodies use one coherent carrier architecture.
+- HVP retains an unmistakable pump, hose-bank and manifold fit on the same unified carrier family.
 - Slot 41 remains the unloaded PM with its hook-lift equipment visible.
 - The loaded carriers share one physically calibrated cab lightbar and front/rear response-light pattern.
-- A deterministic builder preserves every source module and the PM front instead of redrawing or approximating them.
+- The release gate requires one connected subject, a filled cab-to-body coupling region, continuous chassis structure and exactly three axle witness regions.
 
-**[Mounted-carrier before/after](assets/previews/v2.1.0/mounted-carrier-before-after.png)** · **[Native live-map carrier audit](assets/previews/v2.1.0/mounted-carrier-live-map.png)**
+**[Mounted-carrier before/after](assets/previews/v2.1.1/mounted-carrier-before-after.png)** · **[Native live-map carrier audit](assets/previews/v2.1.1/mounted-carrier-live-map.png)**
 
 ## Driven-appliance cab clarity
 
@@ -103,17 +103,17 @@ Version 2.0.3 replaces the inherited rear-only F/WrC, WrL CAFS and RP CAFS artwo
 - WrL CAFS now uses the complete Water Ladder cab and chassis.
 - RP CAFS now uses the complete Rescue Pump cab and chassis.
 - Restrained role plaques distinguish the CAFS and foam/water variants without overpowering the vehicle at 110×110.
-- The three v2.0.3 cab repairs remain byte-preserved alongside the v2.0.4 mounted-carrier correction.
+- The three v2.0.3 cab repairs remain byte-preserved alongside the v2.1.1 unified-carrier rebuild.
 
-**[Cab correction before/after](assets/previews/v2.1.0/cab-legibility-before-after.png)** · **[Native live-map cab audit](assets/previews/v2.1.0/cab-legibility-live-map.png)**
+**[Cab correction before/after](assets/previews/v2.1.1/cab-legibility-before-after.png)** · **[Native live-map cab audit](assets/previews/v2.1.1/cab-legibility-live-map.png)**
 
 ## Tested for real map conditions
 
 All 117 static and all 117 animated assets are rendered and inspected against light, dark, grayscale and satellite-style backgrounds in both alternating flash phases.
 
-[![v2.1.0 actual-pixel scale calibration](assets/previews/v2.1.0/compact-map-scale-calibration.png)](assets/previews/v2.1.0/compact-map-scale-calibration.png)
+[![v2.1.1 actual-pixel scale calibration](assets/previews/v2.1.1/compact-map-scale-calibration.png)](assets/previews/v2.1.1/compact-map-scale-calibration.png)
 
-**[Static light-map audit](assets/previews/v2.1.0/full-fleet-static-light.png)** · **[Static satellite audit](assets/previews/v2.1.0/full-fleet-static-satellite.png)** · **[Response phase B dark-map audit](assets/previews/v2.1.0/full-fleet-response-b-dark.png)** · **[Response grayscale audit](assets/previews/v2.1.0/full-fleet-response-a-grayscale.png)**
+**[Static light-map audit](assets/previews/v2.1.1/full-fleet-static-light.png)** · **[Static satellite audit](assets/previews/v2.1.1/full-fleet-static-satellite.png)** · **[Response phase B dark-map audit](assets/previews/v2.1.1/full-fleet-response-b-dark.png)** · **[Response grayscale audit](assets/previews/v2.1.1/full-fleet-response-a-grayscale.png)**
 
 The machine-readable gates report:
 
@@ -133,11 +133,12 @@ The game renders every v2 asset natively. No secondary extension or userscript i
 
 ## Release download
 
-The [v2.1.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.1.0) includes:
+The [v2.1.1 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.1.1) includes:
 
-- `TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.1.0.zip` — ordered static/animated deployment folders, exact slot guide, machine-readable manifest and SHA-256 verification;
-- `v2.1.0-family-conversion-report.json`, the 117-slot hero report, static/animation QA, fixture metadata and complete release-integrity evidence.
+- `TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.1.1.zip` — ordered static/animated deployment folders, exact slot guide, machine-readable manifest and SHA-256 verification;
+- `v2.1.1-mounted-carrier-report.json`, the 117-slot hero report, static/animation QA, fixture metadata and complete release-integrity evidence.
 
+The [v2.1.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.1.0) retains the UK family-authenticity baseline.
 The [v2.0.4 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.0.4) retains the complete mounted pod-carrier baseline.
 The [v2.0.3 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.0.3) retains the driven-appliance cab correction baseline.
 The [v2.0.2 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.0.2) retains the first calibrated helicopter-rotor release. The [v2.0.1 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.0.1) retains the original compact-scale rotor animation. The [v2.0.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.0.0) retains the original 200×200 direction-neutral exports. The [v1.4.14 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v1.4.14) remains available as the previous right-facing side-elevation generation.
@@ -148,11 +149,13 @@ The [v2.0.2 release](https://github.com/Conroy1988/missionchief-uk-animated-grap
 - `assets/masters/v2.0.4/` — preserved three cab corrections and ten mounted-carrier overrides;
 - `assets/masters/v2.1.0/` — the 13 byte-preserved inherited overrides plus 11 family-authentic conversions;
 - `assets/sources/v2.1.0/` — retained magenta-key production sources for the 11 conversions;
+- `assets/masters/v2.1.1/` — three inherited cab repairs, 11 inherited family conversions and ten unified mounted-carrier masters;
+- `assets/sources/v2.1.1/` — retained magenta-key production sources for the ten unified carriers;
 - `assets/exports/v2/static/` — MissionChief-ready 110×110 static PNGs;
 - `assets/exports/v2/animated/` — MissionChief-ready twelve- and eighteen-frame response APNGs;
-- `assets/previews/v2.1.0/` — family-conversion, hero-gate, mounted-carrier, cab-legibility, map-condition, flash-phase and rotor evidence;
+- `assets/previews/v2.1.1/` — family-conversion, hero-gate, unified-carrier, cab-legibility, map-condition, flash-phase and rotor evidence;
 - `data/vehicle-slots.json` — authoritative 117-slot MissionChief mapping;
-- `data/v2.1.0-*.json` — family conversion, hero, scale provenance, fixtures, build results and fail-closed QA reports;
+- `data/v2.1.1-*.json` — family conversion, unified-carrier, hero, scale provenance, fixtures, build results and fail-closed QA reports;
 - `scripts/` — deterministic processing, lighting, packaging and validation tools;
 - `docs/` — visual standards and release checkpoints;
 - `assets/exports/command/` — unchanged v1.4.14 production profile.
@@ -173,7 +176,7 @@ python scripts/validate_v2_animated_fleet.py
 python scripts/build_v2_calibration.py
 python scripts/build_v2_helicopter_previews.py
 python scripts/build_interactive_gallery.py
-python scripts/build_numbered_upload_package.py --version v2.1.0 --profile v2
+python scripts/build_numbered_upload_package.py --version v2.1.1 --profile v2
 python scripts/validate_v2_release_integrity.py
 ```
 

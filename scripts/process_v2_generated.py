@@ -107,7 +107,11 @@ def target_geometry(asset_id: str, length_metres: float) -> tuple[int, int, int]
     if asset_id in TRAILER_IDS:
         return min(184, max(104, round(length_metres * 18.0))), 134, 184
     if asset_id in POD_IDS:
-        return min(158, max(110, round(length_metres * 18.0))), 126, 181
+        # These assets are complete loaded hook-loader vehicles, not loose
+        # modules.  Give the unified cab/chassis the same live-map authority as
+        # the fleet's other heavy appliances so the mechanical connection and
+        # three road axles remain legible at 110 px.
+        return 184, 142, 186
     return min(188, max(104, round(length_metres * 20.0))), 150, 187
 
 
