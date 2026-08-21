@@ -11,7 +11,8 @@ Status: compact production standard. The approved 200×200 v2.0.0 masters remain
 - Vehicle scale is based on real-world length, then optically corrected within its class so cycles, cars, appliances, heavy units, trailers, watercraft and aircraft remain legible together.
 - Distinguishing role equipment, body type and UK livery must remain readable at the 110×110 native map size and at 75% and 50% display scale.
 - Every self-propelled road appliance must expose an immediately recognisable front cab. Windscreen or driver glazing, a cab roof, front wheel/arch and front-end structure must remain visually distinct from the equipment body at native map scale.
-- Purpose-built pods, trailers and independently transported equipment are exempt from the front-cab rule, but must retain the correct towing or transport identity for their MissionChief slot.
+- Every MissionChief container slot that moves as a dispatched road unit must show the complete loaded carrier: role-specific module, powered PM cab, three-axle chassis, glazing, wheels and front-end structure. Slot 41 remains the recognisable unloaded PM.
+- Purpose-built trailers and independently transported equipment may omit their own cab only when the same moving graphic includes an unmistakable towing vehicle or the MissionChief slot is genuinely non-road/self-contained.
 
 ## Emergency-light contract
 
@@ -33,4 +34,5 @@ The live pack cannot be replaced until all 117 static assets and all 117 respons
 5. no clipped apparatus, rotor, wake, trailer or light bloom;
 6. visual inspection on light, dark, grayscale and satellite-like fleet sheets;
 7. lossless, infinitely looping APNG structure with the category-approved frame count.
-8. explicit cab-legibility validation for every release that changes a self-propelled road appliance.
+8. explicit cab-legibility validation for every release that changes a self-propelled road appliance;
+9. explicit mounted-carrier validation for every container slot, including preservation of the role module, PM front, glazing, three-axle chassis and native-scale vehicle width.

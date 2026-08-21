@@ -1233,7 +1233,7 @@
       "missionchief_slot": 42,
       "service": "fire",
       "source": "assets/masters/static/water-pod-selected.png",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "lights": []
     },
     {
@@ -1242,7 +1242,7 @@
       "missionchief_slot": 43,
       "service": "fire",
       "source": "assets/masters/static/bulk-foam-pod-selected.png",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "lights": []
     },
     {
@@ -1251,7 +1251,7 @@
       "missionchief_slot": 44,
       "service": "fire",
       "source": "assets/masters/static/rescue-pod-selected.png",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "lights": []
     },
     {
@@ -1260,7 +1260,7 @@
       "missionchief_slot": 45,
       "service": "fire",
       "source": "assets/masters/static/command-pod-selected.png",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "lights": []
     },
     {
@@ -1269,7 +1269,7 @@
       "missionchief_slot": 46,
       "service": "fire",
       "source": "assets/masters/static/welfare-pod-selected.png",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "lights": []
     },
     {
@@ -1278,7 +1278,7 @@
       "missionchief_slot": 47,
       "service": "fire",
       "source": "assets/masters/static/basu-pod-selected.png",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "lights": []
     },
     {
@@ -1287,7 +1287,7 @@
       "missionchief_slot": 48,
       "service": "fire",
       "source": "assets/masters/static/misting-pod-selected.png",
-      "real_length_metres": 5.8,
+      "real_length_metres": 8.5,
       "lights": []
     },
     {
@@ -1296,7 +1296,7 @@
       "missionchief_slot": 49,
       "service": "fire",
       "source": "assets/masters/static/hazardous-materials-pod-selected.png",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "lights": []
     },
     {
@@ -1305,7 +1305,7 @@
       "missionchief_slot": 50,
       "service": "fire",
       "source": "assets/masters/static/osu-pod-selected.png",
-      "real_length_metres": 6.6,
+      "real_length_metres": 8.5,
       "lights": []
     },
     {
@@ -1314,7 +1314,7 @@
       "missionchief_slot": 51,
       "service": "fire",
       "source": "assets/masters/static/hvp-selected.png",
-      "real_length_metres": 6.8,
+      "real_length_metres": 8.5,
       "lights": []
     },
     {

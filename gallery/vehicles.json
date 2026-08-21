@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v2.0.3",
+  "release": "v2.0.4",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -79,12 +79,23 @@
       "id": "complete-towing-unit",
       "label": "Complete towing units",
       "count": 9
+    },
+    {
+      "id": "mounted-specialist-carrier",
+      "label": "Complete mounted specialist carriers",
+      "count": 10
     }
   ],
   "releases": [
     {
+      "id": "v2.0.4",
+      "label": "v2.0.4 · Current",
+      "profile": "v2",
+      "summary": "Complete prime-mover carriers for every transported fire-service module"
+    },
+    {
       "id": "v2.0.3",
-      "label": "v2.0.3 · Current",
+      "label": "v2.0.3",
       "profile": "v2",
       "summary": "Recognisable front cabs for every driven fire appliance"
     },
@@ -1212,19 +1223,20 @@
       "service": "fire",
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "width": 110,
       "height": 110,
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "mounted-specialist-carrier"
       ],
-      "cue": "Direction-neutral pod · Blue response lighting",
+      "cue": "Complete direction-neutral mounted carrier",
       "static_path": "assets/exports/v2/static/water-pod.png",
       "animated_path": "assets/exports/v2/animated/water-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "042 42 slot 42 water pod water-pod water-pod water pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "042 42 slot 42 water pod water-pod water-pod water pod fire fire 02 fire specialist and pods complete direction-neutral mounted carrier direction-neutral perspective emergency lighting complete mounted specialist carriers"
     },
     {
       "slot": 43,
@@ -1236,19 +1248,20 @@
       "service": "fire",
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "width": 110,
       "height": 110,
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "mounted-specialist-carrier"
       ],
-      "cue": "Direction-neutral pod · Blue response lighting",
+      "cue": "Complete direction-neutral mounted carrier",
       "static_path": "assets/exports/v2/static/bulk-foam-pod.png",
       "animated_path": "assets/exports/v2/animated/bulk-foam-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "043 43 slot 43 bulk foam pod bulk-foam-pod bulk-foam-pod bulk foam pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "043 43 slot 43 bulk foam pod bulk-foam-pod bulk-foam-pod bulk foam pod fire fire 02 fire specialist and pods complete direction-neutral mounted carrier direction-neutral perspective emergency lighting complete mounted specialist carriers"
     },
     {
       "slot": 44,
@@ -1260,19 +1273,20 @@
       "service": "fire",
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "width": 110,
       "height": 110,
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "mounted-specialist-carrier"
       ],
-      "cue": "Direction-neutral pod · Blue response lighting",
+      "cue": "Complete direction-neutral mounted carrier",
       "static_path": "assets/exports/v2/static/rescue-pod.png",
       "animated_path": "assets/exports/v2/animated/rescue-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "044 44 slot 44 rescue pod rescue-pod rescue-pod rescue pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "044 44 slot 44 rescue pod rescue-pod rescue-pod rescue pod fire fire 02 fire specialist and pods complete direction-neutral mounted carrier direction-neutral perspective emergency lighting complete mounted specialist carriers"
     },
     {
       "slot": 45,
@@ -1284,19 +1298,20 @@
       "service": "fire",
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "width": 110,
       "height": 110,
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "mounted-specialist-carrier"
       ],
-      "cue": "Direction-neutral pod · Blue response lighting",
+      "cue": "Complete direction-neutral mounted carrier",
       "static_path": "assets/exports/v2/static/command-pod.png",
       "animated_path": "assets/exports/v2/animated/command-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "045 45 slot 45 command pod command-pod command-pod command pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "045 45 slot 45 command pod command-pod command-pod command pod fire fire 02 fire specialist and pods complete direction-neutral mounted carrier direction-neutral perspective emergency lighting complete mounted specialist carriers"
     },
     {
       "slot": 46,
@@ -1308,19 +1323,20 @@
       "service": "fire",
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "width": 110,
       "height": 110,
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "mounted-specialist-carrier"
       ],
-      "cue": "Direction-neutral pod · Blue response lighting",
+      "cue": "Complete direction-neutral mounted carrier",
       "static_path": "assets/exports/v2/static/welfare-pod.png",
       "animated_path": "assets/exports/v2/animated/welfare-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "046 46 slot 46 welfare pod welfare-pod welfare-pod welfare pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "046 46 slot 46 welfare pod welfare-pod welfare-pod welfare pod fire fire 02 fire specialist and pods complete direction-neutral mounted carrier direction-neutral perspective emergency lighting complete mounted specialist carriers"
     },
     {
       "slot": 47,
@@ -1332,19 +1348,20 @@
       "service": "fire",
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "width": 110,
       "height": 110,
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "mounted-specialist-carrier"
       ],
-      "cue": "Direction-neutral pod · Blue response lighting",
+      "cue": "Complete direction-neutral mounted carrier",
       "static_path": "assets/exports/v2/static/basu-pod.png",
       "animated_path": "assets/exports/v2/animated/basu-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "047 47 slot 47 basu pod basu-pod basu-pod basu pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "047 47 slot 47 basu pod basu-pod basu-pod basu pod fire fire 02 fire specialist and pods complete direction-neutral mounted carrier direction-neutral perspective emergency lighting complete mounted specialist carriers"
     },
     {
       "slot": 48,
@@ -1356,19 +1373,20 @@
       "service": "fire",
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
-      "real_length_metres": 5.8,
+      "real_length_metres": 8.5,
       "width": 110,
       "height": 110,
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "mounted-specialist-carrier"
       ],
-      "cue": "Direction-neutral pod · Blue response lighting",
+      "cue": "Complete direction-neutral mounted carrier",
       "static_path": "assets/exports/v2/static/misting-pod.png",
       "animated_path": "assets/exports/v2/animated/misting-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "048 48 slot 48 misting pod misting-pod misting-pod misting pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "048 48 slot 48 misting pod misting-pod misting-pod misting pod fire fire 02 fire specialist and pods complete direction-neutral mounted carrier direction-neutral perspective emergency lighting complete mounted specialist carriers"
     },
     {
       "slot": 49,
@@ -1380,19 +1398,20 @@
       "service": "fire",
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
-      "real_length_metres": 6.4,
+      "real_length_metres": 8.5,
       "width": 110,
       "height": 110,
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "mounted-specialist-carrier"
       ],
-      "cue": "Direction-neutral pod · Blue response lighting",
+      "cue": "Complete direction-neutral mounted carrier",
       "static_path": "assets/exports/v2/static/hazardous-materials-pod.png",
       "animated_path": "assets/exports/v2/animated/hazardous-materials-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "049 49 slot 49 hazardous materials pod hazardous-materials-pod hazardous-materials-pod hazardous materials pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "049 49 slot 49 hazardous materials pod hazardous-materials-pod hazardous-materials-pod hazardous materials pod fire fire 02 fire specialist and pods complete direction-neutral mounted carrier direction-neutral perspective emergency lighting complete mounted specialist carriers"
     },
     {
       "slot": 50,
@@ -1404,19 +1423,20 @@
       "service": "fire",
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
-      "real_length_metres": 6.6,
+      "real_length_metres": 8.5,
       "width": 110,
       "height": 110,
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "mounted-specialist-carrier"
       ],
-      "cue": "Direction-neutral pod · Blue response lighting",
+      "cue": "Complete direction-neutral mounted carrier",
       "static_path": "assets/exports/v2/static/osu-pod.png",
       "animated_path": "assets/exports/v2/animated/osu-pod.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "050 50 slot 50 osu pod osu-pod osu-pod osu pod fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "050 50 slot 50 osu pod osu-pod osu-pod osu pod fire fire 02 fire specialist and pods complete direction-neutral mounted carrier direction-neutral perspective emergency lighting complete mounted specialist carriers"
     },
     {
       "slot": 51,
@@ -1428,19 +1448,20 @@
       "service": "fire",
       "service_label": "Fire",
       "production_batch": "02-fire-specialist-and-pods",
-      "real_length_metres": 6.8,
+      "real_length_metres": 8.5,
       "width": 110,
       "height": 110,
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "mounted-specialist-carrier"
       ],
-      "cue": "Direction-neutral pod · Blue response lighting",
+      "cue": "Complete direction-neutral mounted carrier",
       "static_path": "assets/exports/v2/static/hvp.png",
       "animated_path": "assets/exports/v2/animated/hvp.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "051 51 slot 51 hvp hvp hvp hvp fire fire 02 fire specialist and pods direction-neutral pod · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "051 51 slot 51 hvp hvp hvp hvp fire fire 02 fire specialist and pods complete direction-neutral mounted carrier direction-neutral perspective emergency lighting complete mounted specialist carriers"
     },
     {
       "slot": 52,
@@ -3043,11 +3064,12 @@
   "generated_from": [
     "data/vehicle-slots.json",
     "data/prototypes.json",
-    "data/v2.0.3-animation-build-report.json",
-    "data/v2.0.3-animation-qa-report.json",
-    "data/v2.0.3-cab-legibility-report.json",
-    "data/v2.0.3-light-fixtures.json",
-    "data/v2.0.3-scale-report.json",
-    "data/v2.0.3-static-qa-report.json"
+    "data/v2.0.4-animation-build-report.json",
+    "data/v2.0.4-animation-qa-report.json",
+    "data/v2.0.4-cab-legibility-report.json",
+    "data/v2.0.4-mounted-carrier-report.json",
+    "data/v2.0.4-light-fixtures.json",
+    "data/v2.0.4-scale-report.json",
+    "data/v2.0.4-static-qa-report.json"
   ]
 }

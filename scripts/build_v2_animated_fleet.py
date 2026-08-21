@@ -19,6 +19,7 @@ from v2_profile import (
     EXPORT_CANVAS,
     EXPORT_SCALE,
     MASTER_CANVAS,
+    MOUNTED_CARRIER_IDS,
     RELEASE,
     RELEASE_CANDIDATE,
     ROOT,
@@ -66,20 +67,6 @@ TOWED_IDS = {
     "operational-support-trailer",
     "sar-flood-rescue-trailer",
 }
-POD_IDS = {
-    "water-pod",
-    "bulk-foam-pod",
-    "rescue-pod",
-    "command-pod",
-    "welfare-pod",
-    "basu-pod",
-    "misting-pod",
-    "hazardous-materials-pod",
-    "osu-pod",
-    "hvp",
-}
-
-
 AIRCRAFT_PATTERN = tuple(
     FlashFrame(groups, duration)
     for groups, duration in (
@@ -186,8 +173,8 @@ def road_kind(asset_id: str, bbox: tuple[int, int, int, int], length: float) -> 
     width, height = bbox[2] - bbox[0], bbox[3] - bbox[1]
     if asset_id in CYCLE_IDS:
         return "cycle"
-    if asset_id in POD_IDS:
-        return "pod"
+    if asset_id in MOUNTED_CARRIER_IDS:
+        return "mounted-carrier"
     if asset_id in TOWED_IDS:
         return "towed"
     if length >= 7.4 or width >= 158:
@@ -217,6 +204,22 @@ def road_fixtures(
             repeater("b", snap_to_vehicle(alpha, (45, 114), 8), colour),
         ]
 
+    if asset_id in MOUNTED_CARRIER_IDS:
+        alpha = base.getchannel("A")
+        # Every loaded module uses the same byte-preserved PM cab and chassis,
+        # so the response fixtures remain physically attached to the approved
+        # cab lightbar, front repeaters and rear carrier corners.
+        return "mounted-carrier", [
+            module("a", snap_to_vehicle(alpha, (140, 107), 8), colour),
+            module("a", snap_to_vehicle(alpha, (146, 105), 8), colour),
+            module("b", snap_to_vehicle(alpha, (152, 103), 8), colour),
+            module("b", snap_to_vehicle(alpha, (155, 105), 8), colour),
+            repeater("a", snap_to_vehicle(alpha, (170, 145), 8), colour),
+            repeater("b", snap_to_vehicle(alpha, (154, 163), 8), colour),
+            repeater("a", snap_to_vehicle(alpha, (32, 105), 8), colour),
+            repeater("b", snap_to_vehicle(alpha, (44, 123), 8), colour),
+        ]
+
     alpha = base.getchannel("A")
     kind = road_kind(asset_id, bbox, length)
     if kind == "heavy":
@@ -239,7 +242,7 @@ def road_fixtures(
         bar_at, front_a, front_b, rear_a, rear_b = (
             (0.58, 0.41), (0.90, 0.62), (0.80, 0.77), (0.14, 0.42), (0.22, 0.57)
         )
-    else:  # pod
+    else:  # defensive fallback for an unknown road class
         bar_at, front_a, front_b, rear_a, rear_b = (
             (0.58, 0.27), (0.90, 0.54), (0.82, 0.72), (0.10, 0.40), (0.18, 0.62)
         )

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the v2.0.3 cab-legibility master overrides.
+"""Build the inherited driven-appliance cab master overrides.
 
 The original v2.0.0 F/WrC, WrL CAFS and RP CAFS artwork showed only the
 equipment body or rear of the appliance.  At MissionChief map scale those
@@ -16,7 +16,13 @@ from dataclasses import dataclass
 
 from PIL import Image, ImageChops, ImageDraw, ImageFont
 
-from v2_profile import MASTER_CANVAS, MASTER_DIR, MASTER_OVERRIDE_DIR, ROOT
+from v2_profile import (
+    EXPECTED_OVERRIDE_IDS,
+    MASTER_CANVAS,
+    MASTER_DIR,
+    MASTER_OVERRIDE_DIR,
+    ROOT,
+)
 
 
 SOURCE_DIR = MASTER_DIR
@@ -127,8 +133,10 @@ def main() -> None:
 
     if OUTPUT_DIR.exists():
         actual_ids = {path.stem for path in OUTPUT_DIR.glob("*.png")}
-        expected_ids = set(OVERRIDES)
-        errors.extend(f"unexpected/{asset_id}" for asset_id in sorted(actual_ids - expected_ids))
+        errors.extend(
+            f"unexpected/{asset_id}"
+            for asset_id in sorted(actual_ids - EXPECTED_OVERRIDE_IDS)
+        )
 
     print(
         {
