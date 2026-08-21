@@ -97,8 +97,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install image validation dependency
-        run: python -m pip install --disable-pip-version-check Pillow==12.3.0
+      - name: Install image validation dependencies
+        run: python -m pip install --disable-pip-version-check Pillow==12.3.0 numpy==2.5.2
 
       - name: Compile release tooling
         run: python -m compileall -q scripts
