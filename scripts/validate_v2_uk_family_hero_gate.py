@@ -311,7 +311,15 @@ def render_audit_board(entries: list[dict]) -> None:
         board.paste(tile, (x, y))
 
     PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
-    board.save(AUDIT_BOARD, compress_level=6)
+    # The full 117-tile board is distribution evidence, not a source master.
+    # A deterministic indexed palette keeps the review artefact compact enough
+    # for connector/API transport while preserving native sprite pixels.
+    indexed = board.quantize(
+        colors=256,
+        method=Image.Quantize.MEDIANCUT,
+        dither=Image.Dither.NONE,
+    )
+    indexed.save(AUDIT_BOARD, compress_level=9)
 
 
 def render_reference_board(entries_by_id: dict[str, dict]) -> None:
