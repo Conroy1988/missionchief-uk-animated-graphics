@@ -15,6 +15,7 @@ from v2_profile import (
     ANIMATED_DIR,
     EXPECTED_OVERRIDE_IDS,
     EXPORT_CANVAS,
+    FAMILY_CONVERSION_IDS,
     MASTER_OVERRIDE_DIR,
     MOUNTED_CARRIER_IDS,
     PREVIEW_DIR,
@@ -82,7 +83,7 @@ def main() -> None:
     expected_v2_asset_changes = {
         f"assets/exports/v2/{variant}/{asset_id}.png"
         for variant in ("static", "animated")
-        for asset_id in MOUNTED_CARRIER_IDS
+        for asset_id in (*MOUNTED_CARRIER_IDS, *FAMILY_CONVERSION_IDS)
     }
     actual_v2_asset_changes = set(
         subprocess.check_output(
@@ -137,6 +138,7 @@ def main() -> None:
         f"{RELEASE}-animation-qa-report.json",
         f"{RELEASE}-cab-legibility-report.json",
         f"{RELEASE}-mounted-carrier-report.json",
+        f"{RELEASE}-family-conversion-report.json",
     ):
         report_path = ROOT / "data" / report_name
         try:
@@ -161,8 +163,14 @@ def main() -> None:
             errors.append(f"family-audit-mapped={family_audit.get('mapped_assets')}")
         if not family_audit.get("technical_all_passed"):
             errors.append("family-audit-technical-failure")
-        if family_audit.get("hero_ready", 0) + family_audit.get("conversion_required", 0) != EXPECTED:
-            errors.append("family-audit-readiness-parity")
+        if family_audit.get("hero_ready") != EXPECTED:
+            errors.append(f"family-audit-hero-ready={family_audit.get('hero_ready')}")
+        if family_audit.get("conversion_required") != 0:
+            errors.append(
+                f"family-audit-conversion-required={family_audit.get('conversion_required')}"
+            )
+        if not family_audit.get("fleet_hero_ready"):
+            errors.append("family-audit-enforcement-failure")
     except Exception as exc:
         errors.append(f"family-audit: {exc}")
 

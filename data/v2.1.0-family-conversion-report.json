@@ -1,0 +1,314 @@
+{
+  "release": "v2.1.0-candidate",
+  "all_passed": true,
+  "inherited_override_count": 13,
+  "conversion_count": 11,
+  "override_count": 24,
+  "inherited_overrides": [
+    {
+      "asset_id": "basu-pod",
+      "source": "assets/masters/v2.0.4/basu-pod.png",
+      "master": "assets/masters/v2.1.0/basu-pod.png",
+      "sha256": "ccfb5e80baab1af3c2a0d6975f664a39e15b182c543ef66fedb64e9ccf2480d3",
+      "byte_preserved": true
+    },
+    {
+      "asset_id": "bulk-foam-pod",
+      "source": "assets/masters/v2.0.4/bulk-foam-pod.png",
+      "master": "assets/masters/v2.1.0/bulk-foam-pod.png",
+      "sha256": "a413cc709ec081d6a6d13a7acbc718d5395ad468bff92fad1b29faa936e8e774",
+      "byte_preserved": true
+    },
+    {
+      "asset_id": "command-pod",
+      "source": "assets/masters/v2.0.4/command-pod.png",
+      "master": "assets/masters/v2.1.0/command-pod.png",
+      "sha256": "b2e26e1b5ef0ab2382a496a3ad1c7610b23f9197a6671204a8dafefc7a66c847",
+      "byte_preserved": true
+    },
+    {
+      "asset_id": "f-wrc",
+      "source": "assets/masters/v2.0.4/f-wrc.png",
+      "master": "assets/masters/v2.1.0/f-wrc.png",
+      "sha256": "f4b125acd71acfd6082808bee6af31a0f820ed9a336945632adf162bac4ed469",
+      "byte_preserved": true
+    },
+    {
+      "asset_id": "hazardous-materials-pod",
+      "source": "assets/masters/v2.0.4/hazardous-materials-pod.png",
+      "master": "assets/masters/v2.1.0/hazardous-materials-pod.png",
+      "sha256": "d7b508edc0a1cdb839a14f8ecb8247cc9528a0eb2dbd33d48c15fb698a2236ce",
+      "byte_preserved": true
+    },
+    {
+      "asset_id": "hvp",
+      "source": "assets/masters/v2.0.4/hvp.png",
+      "master": "assets/masters/v2.1.0/hvp.png",
+      "sha256": "f1541dd7edcf947f815e994814836c47aa7126559b4ae7ddca8d47f2c2001faa",
+      "byte_preserved": true
+    },
+    {
+      "asset_id": "misting-pod",
+      "source": "assets/masters/v2.0.4/misting-pod.png",
+      "master": "assets/masters/v2.1.0/misting-pod.png",
+      "sha256": "6fcca89d550638973e8ece471c1895af1c5759aaa780659bf26bb1273a1c2e27",
+      "byte_preserved": true
+    },
+    {
+      "asset_id": "osu-pod",
+      "source": "assets/masters/v2.0.4/osu-pod.png",
+      "master": "assets/masters/v2.1.0/osu-pod.png",
+      "sha256": "9b3c6389c23f2177db99197a3f8578c9669ef3d065631220c07db41386b25df1",
+      "byte_preserved": true
+    },
+    {
+      "asset_id": "rescue-pod",
+      "source": "assets/masters/v2.0.4/rescue-pod.png",
+      "master": "assets/masters/v2.1.0/rescue-pod.png",
+      "sha256": "8257cc3b871e253edbe5ae017051cd39761b3f123c9b2f47e2b6972d8af5c496",
+      "byte_preserved": true
+    },
+    {
+      "asset_id": "rp-cafs",
+      "source": "assets/masters/v2.0.4/rp-cafs.png",
+      "master": "assets/masters/v2.1.0/rp-cafs.png",
+      "sha256": "9b8abe140da693b8107a2e40418b2a0e5884cca2f75b7f0fec16a367c13a0c81",
+      "byte_preserved": true
+    },
+    {
+      "asset_id": "water-pod",
+      "source": "assets/masters/v2.0.4/water-pod.png",
+      "master": "assets/masters/v2.1.0/water-pod.png",
+      "sha256": "abeb43a95e9a070e365712cb717cd59eaa723d9d5de57188c3f384ff657fe275",
+      "byte_preserved": true
+    },
+    {
+      "asset_id": "welfare-pod",
+      "source": "assets/masters/v2.0.4/welfare-pod.png",
+      "master": "assets/masters/v2.1.0/welfare-pod.png",
+      "sha256": "1751f22d37698a86be98947af603a18124a697f2ab036bf9567542e717b6ef33",
+      "byte_preserved": true
+    },
+    {
+      "asset_id": "wrl-cafs",
+      "source": "assets/masters/v2.0.4/wrl-cafs.png",
+      "master": "assets/masters/v2.1.0/wrl-cafs.png",
+      "sha256": "e6938fef7f360c69c357956386c02e0bc15878fb55429d602cf8c3872efb90c6",
+      "byte_preserved": true
+    }
+  ],
+  "conversions": [
+    {
+      "asset_id": "crew-carrier",
+      "source": "assets/sources/v2.1.0/crew-carrier-chroma.png",
+      "source_sha256": "68300498ca2033e2a331b81ba8833a05be4b599b5189e363715d14d51ee8aa7f",
+      "master": "assets/masters/v2.1.0/crew-carrier.png",
+      "master_sha256": "49b4782e049cfbd28bd7d7050addd24eadd8c7b4b388604e5bc2704b2f4703f4",
+      "master_bbox": [
+        28,
+        86,
+        172,
+        187
+      ],
+      "native_export_bbox": [
+        15,
+        47,
+        95,
+        103
+      ]
+    },
+    {
+      "asset_id": "srv",
+      "source": "assets/sources/v2.1.0/srv-chroma.png",
+      "source_sha256": "bae1100a9140fa1ea2ec09a950056b67863ff622569d5824ed683762400c82db",
+      "master": "assets/masters/v2.1.0/srv.png",
+      "master_sha256": "21ebf47b48815652ebbea20eceb6f1df482a9ae08fb12c14878a7869ddc8cc07",
+      "master_bbox": [
+        30,
+        79,
+        170,
+        187
+      ],
+      "native_export_bbox": [
+        16,
+        43,
+        94,
+        103
+      ]
+    },
+    {
+      "asset_id": "psu-carrier",
+      "source": "assets/sources/v2.1.0/psu-carrier-chroma.png",
+      "source_sha256": "9854253fe375ec49e9b07d431ee50f076c0345c7423a49ff3efb80bdee21e71a",
+      "master": "assets/masters/v2.1.0/psu-carrier.png",
+      "master_sha256": "6d8d6b188c0339e0121224e88d3efcdcc8df41d44cff3a2e332ced1720faf5fb",
+      "master_bbox": [
+        31,
+        91,
+        169,
+        187
+      ],
+      "native_export_bbox": [
+        17,
+        49,
+        93,
+        103
+      ]
+    },
+    {
+      "asset_id": "armed-cell-van",
+      "source": "assets/sources/v2.1.0/armed-cell-van-chroma.png",
+      "source_sha256": "602d723c6ca9b88fbd7a0d2e2ff062a5a110ed1860874ec2cddc49045b4a52eb",
+      "master": "assets/masters/v2.1.0/armed-cell-van.png",
+      "master_sha256": "b70822a899634aef2cdabb204a39edb350ae45bbe26c510f1b0f62d38721372e",
+      "master_bbox": [
+        30,
+        81,
+        170,
+        187
+      ],
+      "native_export_bbox": [
+        16,
+        44,
+        94,
+        103
+      ]
+    },
+    {
+      "asset_id": "sar-4x4",
+      "source": "assets/sources/v2.1.0/sar-4x4-chroma.png",
+      "source_sha256": "bc76daf7c17e4b734bcca799ab9c08e5e0de960a4181ed95cadce3bc155c65be",
+      "master": "assets/masters/v2.1.0/sar-4x4.png",
+      "master_sha256": "fd0549eababfd90900e1adda2c08eeb96ccbce7d557c9273df6a24e95cd43f61",
+      "master_bbox": [
+        48,
+        102,
+        152,
+        187
+      ],
+      "native_export_bbox": [
+        26,
+        56,
+        84,
+        103
+      ]
+    },
+    {
+      "asset_id": "patient-transport-service-ambulance",
+      "source": "assets/sources/v2.1.0/patient-transport-service-ambulance-chroma.png",
+      "source_sha256": "c053bd3ac3188f83dd9226cba32b2c2be83b22c998cc71ab7c799769109a8404",
+      "master": "assets/masters/v2.1.0/patient-transport-service-ambulance.png",
+      "master_sha256": "ca832c50d6cdaf7fe377aa62a41e28deef9963413fc56eeabeadab38e262f90b",
+      "master_bbox": [
+        32,
+        82,
+        168,
+        187
+      ],
+      "native_export_bbox": [
+        17,
+        45,
+        93,
+        103
+      ]
+    },
+    {
+      "asset_id": "critical-care-transfer-ambulance",
+      "source": "assets/sources/v2.1.0/critical-care-transfer-ambulance-chroma.png",
+      "source_sha256": "8f21c19fd9566067c1bca3596cdf26333782cfe993220327e3c1899a6369d396",
+      "master": "assets/masters/v2.1.0/critical-care-transfer-ambulance.png",
+      "master_sha256": "960e944340a4e9556343042d1279c63e2efa3e7a8c8a73b61b0008df0a41f140",
+      "master_bbox": [
+        28,
+        77,
+        172,
+        187
+      ],
+      "native_export_bbox": [
+        15,
+        42,
+        95,
+        103
+      ]
+    },
+    {
+      "asset_id": "control-van-mountain-rescue",
+      "source": "assets/sources/v2.1.0/control-van-mountain-rescue-chroma.png",
+      "source_sha256": "7a78c92686c356845300d6977b1382e0de48d3c3217b54aec522300930d264bb",
+      "master": "assets/masters/v2.1.0/control-van-mountain-rescue.png",
+      "master_sha256": "1a9191f92737c53aec4f9ae53c09bd7f92b055e063e73ee895a585ba627e4a8f",
+      "master_bbox": [
+        30,
+        76,
+        170,
+        187
+      ],
+      "native_export_bbox": [
+        16,
+        41,
+        94,
+        103
+      ]
+    },
+    {
+      "asset_id": "eod-response-vehicle",
+      "source": "assets/sources/v2.1.0/eod-response-vehicle-chroma.png",
+      "source_sha256": "a7a699a66656e4e11d4b7b42b837cf549585d87ba778df4fc65c453a0be5be4e",
+      "master": "assets/masters/v2.1.0/eod-response-vehicle.png",
+      "master_sha256": "e8d9aa27aaeeb3b8fce36444fe093fbe93f408cdb123708a9b409850acbe8c28",
+      "master_bbox": [
+        35,
+        91,
+        165,
+        187
+      ],
+      "native_export_bbox": [
+        19,
+        50,
+        91,
+        103
+      ]
+    },
+    {
+      "asset_id": "marine-eod-equipment-van",
+      "source": "assets/sources/v2.1.0/marine-eod-equipment-van-chroma.png",
+      "source_sha256": "86104daa960b785207ce9b072e96fc81ba13924cceb00fcbe1170dfe85e61a65",
+      "master": "assets/masters/v2.1.0/marine-eod-equipment-van.png",
+      "master_sha256": "aacb5de05ffa9000572f3b9f783ecc413d16c64e7076570e9b03dbac4f04c3b4",
+      "master_bbox": [
+        30,
+        84,
+        170,
+        187
+      ],
+      "native_export_bbox": [
+        16,
+        46,
+        94,
+        103
+      ]
+    },
+    {
+      "asset_id": "cell-van",
+      "source": "assets/sources/v2.1.0/cell-van-chroma.png",
+      "source_sha256": "9e6fc3d33512060b2bd1c5fd6d35e89d6646d66775ed6eb61ae990876a1b8181",
+      "master": "assets/masters/v2.1.0/cell-van.png",
+      "master_sha256": "c6e5dcecc760f1fcfed3d6c0809253c8d3dc20c6ac2f3274d881e843ce7ce8fd",
+      "master_bbox": [
+        32,
+        93,
+        168,
+        187
+      ],
+      "native_export_bbox": [
+        17,
+        51,
+        93,
+        103
+      ]
+    }
+  ],
+  "previews": [
+    "assets/previews/v2.1.0/family-conversions-before-after.png"
+  ]
+}

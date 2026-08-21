@@ -1,16 +1,16 @@
 # TKB UK Emergency Fleet — Roadmap
 
-## In progress: UK vehicle-family authenticity
+## Delivered: UK vehicle-family authenticity
 
-The post-v2.0.4 art pass is governed by the new 18-family hero standard. The first complete audit maps all 117 slots, retains 117/117 technical compliance and identifies 11 focused conversions rather than reopening the entire fleet.
+Version 2.1.0 completes the 18-family hero standard across all 117 slots. The release retains 117/117 technical compliance, converts the 11 targeted vehicles and clears the enforcement gate with zero remaining cross-family silhouette conflicts.
 
-Current conversion groups:
+Delivered conversion groups:
 
 - van and secure-carrier distinction: Crew Carrier, SRV, PSU Carrier, Armed Cell Van, Mountain Rescue Control Van, Marine EOD Equipment Van and Cell Van;
 - ambulance body distinction: Patient Transport Service and Critical Care Transfer Ambulances;
 - utility 4x4 distinction: SAR 4x4 and EOD Response Vehicle.
 
-The next family-authentic release is blocked until the enforcement command reports 117/117 hero-ready. See [V2_UK_FAMILY_HERO_STANDARD.md](V2_UK_FAMILY_HERO_STANDARD.md).
+The enforcement command now reports 117/117 hero-ready. See [V2_UK_FAMILY_HERO_STANDARD.md](V2_UK_FAMILY_HERO_STANDARD.md) and the [v2.1.0 release checkpoint](CHECKPOINT_v2.1.0.md).
 
 ## Delivered: interactive vehicle gallery
 

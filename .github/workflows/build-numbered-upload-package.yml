@@ -1,5 +1,5 @@
-# Builds, validates and releases the compact v2.0.4 direction-neutral fleet.
-name: Build v2.0.4 MissionChief complete mounted-carrier fleet
+# Builds, validates and releases the v2.1.0 UK family-authentic fleet.
+name: Build v2.1.0 MissionChief UK family-authentic fleet
 
 on:
   workflow_dispatch:
@@ -10,18 +10,21 @@ on:
       - assets/exports/v2/**
       - assets/masters/v2.0.0/**
       - assets/masters/v2.0.4/**
-      - assets/previews/v2.0.4/**
+      - assets/masters/v2.1.0/**
+      - assets/sources/v2.1.0/**
+      - assets/previews/v2.1.0/**
       - data/vehicle-slots.json
       - data/prototypes.json
-      - data/v2.0.4-*.json
-      - docs/RELEASE_v2.0.4.md
-      - docs/CHECKPOINT_v2.0.4.md
+      - data/v2.1.0-*.json
+      - docs/RELEASE_v2.1.0.md
+      - docs/CHECKPOINT_v2.1.0.md
       - docs/V2_DIRECTION_NEUTRAL_STANDARD.md
       - docs/V2_UK_FAMILY_HERO_STANDARD.md
       - scripts/apng_full_frame.py
       - scripts/build_numbered_upload_package.py
       - scripts/build_v2_cab_legibility_masters.py
       - scripts/build_v2_mounted_pod_carriers.py
+      - scripts/build_v2_uk_family_conversions.py
       - scripts/build_v2_calibration.py
       - scripts/build_v2_compact_exports.py
       - scripts/build_v2_animated_fleet.py
@@ -45,18 +48,21 @@ on:
       - assets/exports/v2/**
       - assets/masters/v2.0.0/**
       - assets/masters/v2.0.4/**
-      - assets/previews/v2.0.4/**
+      - assets/masters/v2.1.0/**
+      - assets/sources/v2.1.0/**
+      - assets/previews/v2.1.0/**
       - data/vehicle-slots.json
       - data/prototypes.json
-      - data/v2.0.4-*.json
-      - docs/RELEASE_v2.0.4.md
-      - docs/CHECKPOINT_v2.0.4.md
+      - data/v2.1.0-*.json
+      - docs/RELEASE_v2.1.0.md
+      - docs/CHECKPOINT_v2.1.0.md
       - docs/V2_DIRECTION_NEUTRAL_STANDARD.md
       - docs/V2_UK_FAMILY_HERO_STANDARD.md
       - scripts/apng_full_frame.py
       - scripts/build_numbered_upload_package.py
       - scripts/build_v2_cab_legibility_masters.py
       - scripts/build_v2_mounted_pod_carriers.py
+      - scripts/build_v2_uk_family_conversions.py
       - scripts/build_v2_calibration.py
       - scripts/build_v2_compact_exports.py
       - scripts/build_v2_animated_fleet.py
@@ -91,11 +97,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install image validation dependency
-        run: python -m pip install --disable-pip-version-check Pillow==12.3.0
+      - name: Install image validation dependencies
+        run: python -m pip install --disable-pip-version-check Pillow==12.3.0 numpy==2.5.2
 
       - name: Compile release tooling
         run: python -m compileall -q scripts
+
+      - name: Verify inherited and UK family-conversion master overrides
+        run: python scripts/build_v2_uk_family_conversions.py --check
 
       - name: Verify driven-appliance cab master overrides
         run: python scripts/build_v2_cab_legibility_masters.py --check
@@ -115,8 +124,8 @@ jobs:
       - name: Verify all ten mounted specialist carriers
         run: python scripts/validate_v2_mounted_pod_carriers.py
 
-      - name: Audit all 117 UK platform families against the hero-grade standard
-        run: python scripts/validate_v2_uk_family_hero_gate.py --audit
+      - name: Enforce all 117 UK platform families against the hero-grade standard
+        run: python scripts/validate_v2_uk_family_hero_gate.py
 
       - name: Rebuild all 117 response APNGs and fixture metadata
         run: python scripts/build_v2_animated_fleet.py
@@ -131,61 +140,64 @@ jobs:
         run: python scripts/build_v2_helicopter_previews.py
 
       - name: Verify all generated production evidence is committed
-        run: git diff --exit-code -- assets/exports/v2 assets/masters/v2.0.4 assets/previews/v2.0.4 data/v2.0.4-*.json
+        run: git diff --exit-code -- assets/exports/v2 assets/masters/v2.1.0 assets/previews/v2.1.0 data/v2.1.0-*.json
 
       - name: Build deterministic numbered MissionChief package
-        run: python scripts/build_numbered_upload_package.py --version v2.0.4 --profile v2
+        run: python scripts/build_numbered_upload_package.py --version v2.1.0 --profile v2
 
       - name: Run complete release-integrity gate
         run: python scripts/validate_v2_release_integrity.py
 
-      - name: Upload verified v2.0.4 workflow evidence
+      - name: Upload verified v2.1.0 workflow evidence
         uses: actions/upload-artifact@v4
         with:
-          name: missionchief-complete-mounted-carrier-fleet-v2.0.4
+          name: missionchief-uk-family-authentic-fleet-v2.1.0
           path: |
-            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.4.zip
-            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.4.zip.sha256
-            data/v2.0.4-animation-build-report.json
-            data/v2.0.4-animation-qa-report.json
-            data/v2.0.4-cab-legibility-report.json
-            data/v2.0.4-mounted-carrier-report.json
-            data/v2.0.4-light-fixtures.json
-            data/v2.0.4-release-integrity-report.json
-            data/v2.0.4-scale-report.json
-            data/v2.0.4-static-qa-report.json
-            data/v2.0.4-uk-family-hero-report.json
-            assets/previews/v2.0.4/*.png
-            assets/previews/v2.0.4/*.gif
+            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.1.0.zip
+            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.1.0.zip.sha256
+            data/v2.1.0-animation-build-report.json
+            data/v2.1.0-animation-qa-report.json
+            data/v2.1.0-cab-legibility-report.json
+            data/v2.1.0-family-conversion-report.json
+            data/v2.1.0-mounted-carrier-report.json
+            data/v2.1.0-light-fixtures.json
+            data/v2.1.0-release-integrity-report.json
+            data/v2.1.0-scale-report.json
+            data/v2.1.0-static-qa-report.json
+            data/v2.1.0-uk-family-hero-report.json
+            assets/previews/v2.1.0/*.png
+            assets/previews/v2.1.0/*.gif
           if-no-files-found: error
           retention-days: 90
 
-      - name: Create or update v2.0.4 release
+      - name: Create or update v2.1.0 release
         if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v2.0.4 >/dev/null 2>&1 || gh release create v2.0.4 --target main --title "v2.0.4 — Complete Mounted Pod Carriers" --notes-file docs/RELEASE_v2.0.4.md
-          gh release upload v2.0.4 \
-            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.4.zip \
-            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.0.4.zip.sha256 \
-            data/v2.0.4-animation-build-report.json \
-            data/v2.0.4-animation-qa-report.json \
-            data/v2.0.4-cab-legibility-report.json \
-            data/v2.0.4-mounted-carrier-report.json \
-            data/v2.0.4-light-fixtures.json \
-            data/v2.0.4-release-integrity-report.json \
-            data/v2.0.4-scale-report.json \
-            data/v2.0.4-static-qa-report.json \
-            data/v2.0.4-uk-family-hero-report.json \
-            assets/previews/v2.0.4/mounted-carrier-before-after.png \
-            assets/previews/v2.0.4/mounted-carrier-live-map.png \
-            assets/previews/v2.0.4/cab-legibility-before-after.png \
-            assets/previews/v2.0.4/cab-legibility-live-map.png \
-            assets/previews/v2.0.4/helicopter-rotor-frame-audit.png \
-            assets/previews/v2.0.4/helicopter-rotor-fleet.gif \
-            assets/previews/v2.0.4/helicopter-tail-rotor-alignment.gif \
-            assets/previews/v2.0.4/police-helicopter-rotor-comparison.gif \
-            assets/previews/v2.0.4/uk-family-hero-audit.png \
-            assets/previews/v2.0.4/uk-family-reference-board.png \
+          gh release view v2.1.0 >/dev/null 2>&1 || gh release create v2.1.0 --target main --title "v2.1.0 — UK Family Authenticity" --notes-file docs/RELEASE_v2.1.0.md
+          gh release upload v2.1.0 \
+            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.1.0.zip \
+            dist/TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.1.0.zip.sha256 \
+            data/v2.1.0-animation-build-report.json \
+            data/v2.1.0-animation-qa-report.json \
+            data/v2.1.0-cab-legibility-report.json \
+            data/v2.1.0-family-conversion-report.json \
+            data/v2.1.0-mounted-carrier-report.json \
+            data/v2.1.0-light-fixtures.json \
+            data/v2.1.0-release-integrity-report.json \
+            data/v2.1.0-scale-report.json \
+            data/v2.1.0-static-qa-report.json \
+            data/v2.1.0-uk-family-hero-report.json \
+            assets/previews/v2.1.0/family-conversions-before-after.png \
+            assets/previews/v2.1.0/mounted-carrier-before-after.png \
+            assets/previews/v2.1.0/mounted-carrier-live-map.png \
+            assets/previews/v2.1.0/cab-legibility-before-after.png \
+            assets/previews/v2.1.0/cab-legibility-live-map.png \
+            assets/previews/v2.1.0/helicopter-rotor-frame-audit.png \
+            assets/previews/v2.1.0/helicopter-rotor-fleet.gif \
+            assets/previews/v2.1.0/helicopter-tail-rotor-alignment.gif \
+            assets/previews/v2.1.0/police-helicopter-rotor-comparison.gif \
+            assets/previews/v2.1.0/uk-family-hero-audit.png \
+            assets/previews/v2.1.0/uk-family-reference-board.png \
             --clobber

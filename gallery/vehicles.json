@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release": "v2.0.4",
+  "release": "v2.1.0",
   "title": "TKB UK Emergency Fleet",
   "edition": "Interactive Gallery",
   "pack_id": 5897,
@@ -61,6 +61,11 @@
   ],
   "focus_views": [
     {
+      "id": "uk-family-conversion",
+      "label": "UK family-authentic conversions",
+      "count": 11
+    },
+    {
       "id": "direction-neutral",
       "label": "Direction-neutral perspective",
       "count": 117
@@ -88,8 +93,14 @@
   ],
   "releases": [
     {
+      "id": "v2.1.0",
+      "label": "v2.1.0 · Current",
+      "profile": "v2",
+      "summary": "117/117 hero-ready UK platform families with eleven role-specific conversions"
+    },
+    {
       "id": "v2.0.4",
-      "label": "v2.0.4 · Current",
+      "label": "v2.0.4",
       "profile": "v2",
       "summary": "Complete prime-mover carriers for every transported fire-service module"
     },
@@ -797,13 +808,14 @@
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "uk-family-conversion"
       ],
       "cue": "Direction-neutral van · Blue response lighting",
       "static_path": "assets/exports/v2/static/crew-carrier.png",
       "animated_path": "assets/exports/v2/animated/crew-carrier.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "024 24 slot 24 crew carrier crew-carrier crew-carrier crew carrier ambulance ambulance 01 core services direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "024 24 slot 24 crew carrier crew-carrier crew-carrier crew carrier ambulance ambulance 01 core services direction-neutral van · blue response lighting direction-neutral perspective emergency lighting uk family-authentic conversions"
     },
     {
       "slot": 25,
@@ -917,13 +929,14 @@
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "uk-family-conversion"
       ],
       "cue": "Direction-neutral van · Blue response lighting",
       "static_path": "assets/exports/v2/static/srv.png",
       "animated_path": "assets/exports/v2/animated/srv.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "029 29 slot 29 srv srv srv srv ambulance ambulance 01 core services direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "029 29 slot 29 srv srv srv srv ambulance ambulance 01 core services direction-neutral van · blue response lighting direction-neutral perspective emergency lighting uk family-authentic conversions"
     },
     {
       "slot": 30,
@@ -1479,13 +1492,14 @@
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "uk-family-conversion"
       ],
       "cue": "Direction-neutral van · Blue response lighting",
       "static_path": "assets/exports/v2/static/psu-carrier.png",
       "animated_path": "assets/exports/v2/animated/psu-carrier.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "052 52 slot 52 psu carrier psu-carrier psu-carrier psu carrier police police 03 police specialist direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "052 52 slot 52 psu carrier psu-carrier psu-carrier psu carrier police police 03 police specialist direction-neutral van · blue response lighting direction-neutral perspective emergency lighting uk family-authentic conversions"
     },
     {
       "slot": 53,
@@ -2233,13 +2247,14 @@
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "uk-family-conversion"
       ],
       "cue": "Direction-neutral van · Blue response lighting",
       "static_path": "assets/exports/v2/static/armed-cell-van.png",
       "animated_path": "assets/exports/v2/animated/armed-cell-van.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "083 83 slot 83 armed cell van armed-cell-van armed-cell-van armed cell van police police 05 airfield and specialist direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "083 83 slot 83 armed cell van armed-cell-van armed-cell-van armed cell van police police 05 airfield and specialist direction-neutral van · blue response lighting direction-neutral perspective emergency lighting uk family-authentic conversions"
     },
     {
       "slot": 84,
@@ -2500,13 +2515,14 @@
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "uk-family-conversion"
       ],
-      "cue": "Direction-neutral car · Blue response lighting",
+      "cue": "Direction-neutral van · Blue response lighting",
       "static_path": "assets/exports/v2/static/sar-4x4.png",
       "animated_path": "assets/exports/v2/animated/sar-4x4.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "094 94 slot 94 sar 4x4 sar-4x4 sar-4x4 sar 4x4 search-and-rescue sar 06 sar and medical expansion direction-neutral car · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "094 94 slot 94 sar 4x4 sar-4x4 sar-4x4 sar 4x4 search-and-rescue sar 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting uk family-authentic conversions"
     },
     {
       "slot": 95,
@@ -2596,13 +2612,14 @@
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "uk-family-conversion"
       ],
       "cue": "Direction-neutral van · Blue response lighting",
       "static_path": "assets/exports/v2/static/patient-transport-service-ambulance.png",
       "animated_path": "assets/exports/v2/animated/patient-transport-service-ambulance.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "098 98 slot 98 patient transport service ambulance patient-transport-service-ambulance patient-transport-service-ambulance patient transport service ambulance ambulance ambulance 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "098 98 slot 98 patient transport service ambulance patient-transport-service-ambulance patient-transport-service-ambulance patient transport service ambulance ambulance ambulance 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting uk family-authentic conversions"
     },
     {
       "slot": 99,
@@ -2620,13 +2637,14 @@
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "uk-family-conversion"
       ],
       "cue": "Direction-neutral van · Blue response lighting",
       "static_path": "assets/exports/v2/static/critical-care-transfer-ambulance.png",
       "animated_path": "assets/exports/v2/animated/critical-care-transfer-ambulance.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "099 99 slot 99 critical care transfer ambulance critical-care-transfer-ambulance critical-care-transfer-ambulance critical care transfer ambulance ambulance ambulance 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "099 99 slot 99 critical care transfer ambulance critical-care-transfer-ambulance critical-care-transfer-ambulance critical care transfer ambulance ambulance ambulance 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting uk family-authentic conversions"
     },
     {
       "slot": 100,
@@ -2668,13 +2686,14 @@
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "uk-family-conversion"
       ],
       "cue": "Direction-neutral van · Blue response lighting",
       "static_path": "assets/exports/v2/static/control-van-mountain-rescue.png",
       "animated_path": "assets/exports/v2/animated/control-van-mountain-rescue.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "101 101 slot 101 control van (mountain rescue) control-van-mountain-rescue control-van-mountain-rescue control van (mountain rescue) search-and-rescue sar 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "101 101 slot 101 control van (mountain rescue) control-van-mountain-rescue control-van-mountain-rescue control van (mountain rescue) search-and-rescue sar 06 sar and medical expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting uk family-authentic conversions"
     },
     {
       "slot": 102,
@@ -2908,13 +2927,14 @@
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "uk-family-conversion"
       ],
       "cue": "Direction-neutral van · Blue response lighting",
       "static_path": "assets/exports/v2/static/eod-response-vehicle.png",
       "animated_path": "assets/exports/v2/animated/eod-response-vehicle.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "111 111 slot 111 eod response vehicle eod-response-vehicle eod-response-vehicle eod response vehicle eod eod 08 rail eod custody expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "111 111 slot 111 eod response vehicle eod-response-vehicle eod-response-vehicle eod response vehicle eod eod 08 rail eod custody expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting uk family-authentic conversions"
     },
     {
       "slot": 112,
@@ -3004,13 +3024,14 @@
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "uk-family-conversion"
       ],
       "cue": "Direction-neutral van · Blue response lighting",
       "static_path": "assets/exports/v2/static/marine-eod-equipment-van.png",
       "animated_path": "assets/exports/v2/animated/marine-eod-equipment-van.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "115 115 slot 115 marine eod equipment van marine-eod-equipment-van marine-eod-equipment-van marine eod equipment van eod eod 08 rail eod custody expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "115 115 slot 115 marine eod equipment van marine-eod-equipment-van marine-eod-equipment-van marine eod equipment van eod eod 08 rail eod custody expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting uk family-authentic conversions"
     },
     {
       "slot": 116,
@@ -3052,24 +3073,27 @@
       "frames": 12,
       "focus": [
         "direction-neutral",
-        "emergency-lighting"
+        "emergency-lighting",
+        "uk-family-conversion"
       ],
       "cue": "Direction-neutral van · Blue response lighting",
       "static_path": "assets/exports/v2/static/cell-van.png",
       "animated_path": "assets/exports/v2/animated/cell-van.png",
       "missionchief_url": "https://www.missionchief.co.uk/vehicle_graphics/5897",
-      "search_text": "117 117 slot 117 cell van cell-van cell-van cell van police police 08 rail eod custody expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting"
+      "search_text": "117 117 slot 117 cell van cell-van cell-van cell van police police 08 rail eod custody expansion direction-neutral van · blue response lighting direction-neutral perspective emergency lighting uk family-authentic conversions"
     }
   ],
   "generated_from": [
     "data/vehicle-slots.json",
     "data/prototypes.json",
-    "data/v2.0.4-animation-build-report.json",
-    "data/v2.0.4-animation-qa-report.json",
-    "data/v2.0.4-cab-legibility-report.json",
-    "data/v2.0.4-mounted-carrier-report.json",
-    "data/v2.0.4-light-fixtures.json",
-    "data/v2.0.4-scale-report.json",
-    "data/v2.0.4-static-qa-report.json"
+    "data/v2.1.0-animation-build-report.json",
+    "data/v2.1.0-animation-qa-report.json",
+    "data/v2.1.0-cab-legibility-report.json",
+    "data/v2.1.0-family-conversion-report.json",
+    "data/v2.1.0-mounted-carrier-report.json",
+    "data/v2.1.0-light-fixtures.json",
+    "data/v2.1.0-scale-report.json",
+    "data/v2.1.0-static-qa-report.json",
+    "data/v2.1.0-uk-family-hero-report.json"
   ]
 }
