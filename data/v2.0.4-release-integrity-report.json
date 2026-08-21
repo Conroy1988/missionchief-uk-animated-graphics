@@ -10,8 +10,8 @@
     "12": 111,
     "18": 6
   },
-  "preview_pngs": 18,
-  "decoded_images_and_frames": 1575,
+  "preview_pngs": 20,
+  "decoded_images_and_frames": 1577,
   "numbered_static_files": 117,
   "numbered_animated_files": 117,
   "archive_sha256": "e3ba71bd5e966e7ffa4b9b736eda2b29e94b65314af4bdd787638153c17b24e6",
@@ -38,6 +38,13 @@
     "assets/exports/v2/static/water-pod.png",
     "assets/exports/v2/static/welfare-pod.png"
   ],
+  "uk_family_hero_audit": {
+    "mapped_assets": 117,
+    "families": 18,
+    "technical_passed": 117,
+    "hero_ready": 106,
+    "conversion_required": 11
+  },
   "all_passed": true,
   "errors": []
 }

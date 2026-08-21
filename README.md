@@ -44,6 +44,14 @@ The complete set contains:
 
 The full production contract is documented in [docs/V2_DIRECTION_NEUTRAL_STANDARD.md](docs/V2_DIRECTION_NEUTRAL_STANDARD.md).
 
+## UK family authenticity and hero gate
+
+The next fleet standard maps every one of the 117 slots to a recognisable British platform family instead of treating livery as the vehicle identity. Eighteen original, logo-free families now cover forward-control fire appliances, ambulance conversions, response estates and 4x4s, operational and secure vans, airport crash tenders, recovery platforms, trailers, aircraft, watercraft, specialist transporters and EOD equipment.
+
+Every family has a named hero reference and five required physical cues. Every individual vehicle has a role-body brief, and the new gate rejects cross-family silhouettes that are too similar to be more than a reskin. The current v2.0.4 baseline is technically clean at 117/117; 106 assets already meet the complete hero standard and 11 are isolated for targeted family conversion.
+
+**[18 family hero references](assets/previews/v2.0.4/uk-family-reference-board.png)** · **[117-slot hero audit](assets/previews/v2.0.4/uk-family-hero-audit.png)** · **[Full family standard](docs/V2_UK_FAMILY_HERO_STANDARD.md)**
+
 ## Emergency lighting
 
 Response lighting is deliberately unmistakable at map scale. Each animated fixture combines a bright physical lens, compact inner flare and restrained outer bloom. Separate A/B fixture groups run an alternating double-flash cycle instead of making the whole fleet pulse in unison.
@@ -147,6 +155,7 @@ python scripts/build_v2_compact_exports.py
 python scripts/validate_v2_static_fleet.py
 python scripts/validate_v2_cab_legibility.py
 python scripts/validate_v2_mounted_pod_carriers.py
+python scripts/validate_v2_uk_family_hero_gate.py --audit
 python scripts/build_v2_animated_fleet.py
 python scripts/validate_v2_animated_fleet.py
 python scripts/build_v2_calibration.py
@@ -157,6 +166,8 @@ python scripts/validate_v2_release_integrity.py
 ```
 
 The final gate must report `"all_passed": true` before the repository release or MissionChief pack is updated.
+
+For the family-authentic successor to v2.0.4, the same validator is run without `--audit`; it fails closed until all 117 assets report `"hero_ready": true`.
 
 ## Rights and licence
 

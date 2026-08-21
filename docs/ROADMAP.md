@@ -1,5 +1,17 @@
 # TKB UK Emergency Fleet — Roadmap
 
+## In progress: UK vehicle-family authenticity
+
+The post-v2.0.4 art pass is governed by the new 18-family hero standard. The first complete audit maps all 117 slots, retains 117/117 technical compliance and identifies 11 focused conversions rather than reopening the entire fleet.
+
+Current conversion groups:
+
+- van and secure-carrier distinction: Crew Carrier, SRV, PSU Carrier, Armed Cell Van, Mountain Rescue Control Van, Marine EOD Equipment Van and Cell Van;
+- ambulance body distinction: Patient Transport Service and Critical Care Transfer Ambulances;
+- utility 4x4 distinction: SAR 4x4 and EOD Response Vehicle.
+
+The next family-authentic release is blocked until the enforcement command reports 117/117 hero-ready. See [V2_UK_FAMILY_HERO_STANDARD.md](V2_UK_FAMILY_HERO_STANDARD.md).
+
 ## Delivered: interactive vehicle gallery
 
 The Markdown gallery has been expanded into a polished interactive gallery for all 117 MissionChief UK vehicle slots. Its public home is the [TKB MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/fleet-gallery/), with the deterministic source and validation contract retained in this repository.

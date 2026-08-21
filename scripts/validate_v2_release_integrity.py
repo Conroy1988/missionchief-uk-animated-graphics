@@ -146,6 +146,26 @@ def main() -> None:
         except Exception as exc:
             errors.append(f"qa-read/{report_name}: {exc}")
 
+    family_audit_summary = None
+    family_audit_path = ROOT / "data" / f"{RELEASE}-uk-family-hero-report.json"
+    try:
+        family_audit = json.loads(family_audit_path.read_text())
+        family_audit_summary = {
+            "mapped_assets": family_audit.get("mapped_assets"),
+            "families": family_audit.get("families"),
+            "technical_passed": family_audit.get("technical_passed"),
+            "hero_ready": family_audit.get("hero_ready"),
+            "conversion_required": family_audit.get("conversion_required"),
+        }
+        if family_audit.get("mapped_assets") != EXPECTED:
+            errors.append(f"family-audit-mapped={family_audit.get('mapped_assets')}")
+        if not family_audit.get("technical_all_passed"):
+            errors.append("family-audit-technical-failure")
+        if family_audit.get("hero_ready", 0) + family_audit.get("conversion_required", 0) != EXPECTED:
+            errors.append("family-audit-readiness-parity")
+    except Exception as exc:
+        errors.append(f"family-audit: {exc}")
+
     command_diff = subprocess.run(
         ["git", "diff", "--quiet", "v1.4.14", "--", "assets/exports/command"],
         cwd=ROOT,
@@ -223,6 +243,7 @@ def main() -> None:
         "archive_sha256": archive_hash,
         "current_v1_command_exports_unchanged": command_diff == 0 and not command_status,
         "v2_asset_changes_against_v2.0.3": sorted(actual_v2_asset_changes),
+        "uk_family_hero_audit": family_audit_summary,
         "all_passed": not errors,
         "errors": errors,
     }
