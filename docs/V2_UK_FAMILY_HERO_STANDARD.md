@@ -1,6 +1,6 @@
 # v2 UK vehicle-family authenticity and hero-grade gate
 
-Status: enforced production standard, completed in v2.1.0 and revalidated in v2.1.1.
+Status: enforced production standard, completed in v2.1.0 and revalidated in v2.2.0.
 
 The fleet already has one of the strongest visual systems available for MissionChief: a shared raised camera, reliable direction-neutral motion, exact slot parity, compact map-scale exports and purpose-built response animation. The next quality step is not more bloom or more pixels. It is making each vehicle read as the correct British *kind* of vehicle before the livery is considered.
 
@@ -90,6 +90,8 @@ The conversion queue was intentionally narrow. It caught platform-family conflic
 Version 2.1.0 completes all 11 targeted conversions. The enforced report in `data/v2.1.0-uk-family-hero-report.json` records 117/117 hero-ready, 117/117 technical compliance, zero remaining conversions and zero cross-family silhouette conflicts. The retained production-source provenance and before/after evidence are recorded in `data/v2.1.0-family-conversion-report.json` and `assets/previews/v2.1.0/family-conversions-before-after.png`.
 
 Version 2.1.1 keeps that complete family migration and rebuilds the ten loaded hooklift roles as unified three-axle carriers. The current enforced evidence is recorded in `data/v2.1.1-uk-family-hero-report.json`, `data/v2.1.1-mounted-carrier-report.json` and `assets/previews/v2.1.1/mounted-carrier-live-map.png`.
+
+Version 2.2.0 preserves every v2.1.1 master and source byte while rebuilding all 117 APNGs under the low-redraw performance contract. The current enforced evidence is recorded in `data/v2.2.0-uk-family-hero-report.json`, `data/v2.2.0-performance-report.json` and `assets/previews/v2.2.0/uk-family-hero-audit.png`.
 
 ## Non-negotiable shortcuts
 

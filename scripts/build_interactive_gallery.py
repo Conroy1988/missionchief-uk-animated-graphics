@@ -10,7 +10,15 @@ import struct
 import subprocess
 from pathlib import Path
 
-from v2_profile import FAMILY_CONVERSION_IDS, MOUNTED_CARRIER_IDS, PREVIEW_DIR, RELEASE, ROOT
+from v2_profile import (
+    AIR_MARINE_FRAME_COUNT,
+    FAMILY_CONVERSION_IDS,
+    MOUNTED_CARRIER_IDS,
+    PREVIEW_DIR,
+    RELEASE,
+    ROAD_FRAME_COUNT,
+    ROOT,
+)
 
 
 GALLERY_DIR = ROOT / "gallery"
@@ -27,6 +35,12 @@ RELEASES = [
     {
         "id": RELEASE,
         "label": f"{RELEASE} · Current",
+        "profile": "v2",
+        "summary": "Low-redraw animations across all 117 vehicles for dramatically lighter map rendering",
+    },
+    {
+        "id": "v2.1.1",
+        "label": "v2.1.1",
         "profile": "v2",
         "summary": "Ten unified three-axle pod carriers with no detached trailer-like modules",
     },
@@ -196,6 +210,7 @@ FOCUS_LABELS = {
     "air-marine-motion": "Aircraft and marine motion",
     "complete-towing-unit": "Complete towing units",
     "mounted-specialist-carrier": "Unified mounted specialist carriers",
+    "map-performance": "Low-redraw map performance",
 }
 
 TOWED_LENGTHS = {
@@ -304,13 +319,17 @@ def build_catalogue() -> dict:
 
         actual_frames = png_frame_count(ROOT / animated_path)
         fixture = fixtures_by_id[asset_id]
-        expected_frames = 18 if fixture["kind"] in {"aircraft", "marine"} else 12
+        expected_frames = (
+            AIR_MARINE_FRAME_COUNT
+            if fixture["kind"] in {"aircraft", "marine"}
+            else ROAD_FRAME_COUNT
+        )
         if actual_frames != expected_frames:
             raise ValueError(
                 f"Unexpected frame count for {asset_id}: {actual_frames} != {expected_frames}"
             )
 
-        focus = ["direction-neutral", "emergency-lighting"]
+        focus = ["direction-neutral", "emergency-lighting", "map-performance"]
         if asset_id in FAMILY_CONVERSION_IDS:
             focus.append("uk-family-conversion")
         if fixture["kind"] in {"aircraft", "marine"}:
@@ -403,6 +422,7 @@ def build_catalogue() -> dict:
             "data/prototypes.json",
             f"data/{RELEASE}-animation-build-report.json",
             f"data/{RELEASE}-animation-qa-report.json",
+            f"data/{RELEASE}-performance-report.json",
             f"data/{RELEASE}-cab-legibility-report.json",
             f"data/{RELEASE}-family-conversion-report.json",
             f"data/{RELEASE}-mounted-carrier-report.json",

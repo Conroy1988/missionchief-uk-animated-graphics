@@ -23,6 +23,7 @@ from process_v2_generated import (
     vehicle_record,
 )
 from v2_profile import (
+    ARTWORK_RELEASE,
     EXPECTED_OVERRIDE_IDS,
     MASTER_CANVAS,
     MASTER_OVERRIDE_DIR,
@@ -32,7 +33,7 @@ from v2_profile import (
 )
 
 
-SOURCE_DIR = ROOT / "assets" / "sources" / RELEASE
+SOURCE_DIR = ROOT / "assets" / "sources" / ARTWORK_RELEASE
 OUTPUT_DIR = MASTER_OVERRIDE_DIR
 
 EXPECTED_LEFT = 8

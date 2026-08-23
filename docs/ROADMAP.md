@@ -1,5 +1,11 @@
 # TKB UK Emergency Fleet — Roadmap
 
+## Delivered: full-fleet map performance overhaul
+
+Version 2.2.0 rebuilds all 117 animated graphics under a low-redraw budget: two constantly illuminated A/B frames for 111 road assets and four motion frames for six aircraft/marine assets. The full-frame APNG compatibility contract, 110×110 anchoring, all static exports and every v2.1.1 master remain intact.
+
+The enforced performance report records 82.9% fewer animation frames, 82.6% less encoded APNG data and 68.9% fewer road animation updates. See the [v2.2.0 release checkpoint](CHECKPOINT_v2.2.0.md).
+
 ## Delivered: unified mounted pod carriers
 
 Version 2.1.1 rebuilds slots 42–51 as ten coherent three-axle appliances. Their role bodies now sit directly behind the cab on one continuous powered chassis, removing the detached trailer-like gap and duplicate underframe cues from the earlier composite method.

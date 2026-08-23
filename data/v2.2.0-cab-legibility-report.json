@@ -1,0 +1,120 @@
+{
+  "release": "v2.2.0-candidate",
+  "scope": [
+    "f-wrc",
+    "wrl-cafs",
+    "rp-cafs"
+  ],
+  "front_region": [
+    120,
+    80,
+    195,
+    180
+  ],
+  "minimum_dark_cab_pixels": 1400,
+  "minimum_glazing_pixels": 250,
+  "previews": [
+    "assets/previews/v2.2.0/cab-legibility-before-after.png",
+    "assets/previews/v2.2.0/cab-legibility-live-map.png"
+  ],
+  "all_passed": true,
+  "errors": [],
+  "entries": [
+    {
+      "asset_id": "f-wrc",
+      "label": "F/WrC",
+      "master": "assets/masters/v2.1.1/f-wrc.png",
+      "export": "assets/exports/v2/static/f-wrc.png",
+      "before": {
+        "region": [
+          120,
+          80,
+          195,
+          180
+        ],
+        "opaque_pixels": 6122,
+        "dark_cab_pixels": 1023,
+        "glazing_pixels": 81,
+        "dark_share": 0.1671
+      },
+      "after": {
+        "region": [
+          120,
+          80,
+          195,
+          180
+        ],
+        "opaque_pixels": 4734,
+        "dark_cab_pixels": 1770,
+        "glazing_pixels": 295,
+        "dark_share": 0.3739
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "wrl-cafs",
+      "label": "WrL CAFS",
+      "master": "assets/masters/v2.1.1/wrl-cafs.png",
+      "export": "assets/exports/v2/static/wrl-cafs.png",
+      "before": {
+        "region": [
+          120,
+          80,
+          195,
+          180
+        ],
+        "opaque_pixels": 5127,
+        "dark_cab_pixels": 663,
+        "glazing_pixels": 31,
+        "dark_share": 0.1293
+      },
+      "after": {
+        "region": [
+          120,
+          80,
+          195,
+          180
+        ],
+        "opaque_pixels": 4905,
+        "dark_cab_pixels": 1845,
+        "glazing_pixels": 581,
+        "dark_share": 0.3761
+      },
+      "passed": true,
+      "errors": []
+    },
+    {
+      "asset_id": "rp-cafs",
+      "label": "RP CAFS",
+      "master": "assets/masters/v2.1.1/rp-cafs.png",
+      "export": "assets/exports/v2/static/rp-cafs.png",
+      "before": {
+        "region": [
+          120,
+          80,
+          195,
+          180
+        ],
+        "opaque_pixels": 4888,
+        "dark_cab_pixels": 746,
+        "glazing_pixels": 114,
+        "dark_share": 0.1526
+      },
+      "after": {
+        "region": [
+          120,
+          80,
+          195,
+          180
+        ],
+        "opaque_pixels": 4641,
+        "dark_cab_pixels": 1865,
+        "glazing_pixels": 767,
+        "dark_share": 0.4019
+      },
+      "passed": true,
+      "errors": []
+    }
+  ]
+}

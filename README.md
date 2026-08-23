@@ -1,4 +1,4 @@
-# TKB UK Emergency Fleet — Unified Mounted Pod Carriers v2.1.1
+# TKB UK Emergency Fleet — Low-Lag Performance Fleet v2.2.0
 
 A complete original UK emergency-services vehicle graphics pack for [MissionChief UK](https://www.missionchief.co.uk/), built by **TKB Gaming**.
 
@@ -29,10 +29,23 @@ The complete set contains:
 
 - 117 transparent 110×110 map-calibrated static PNGs, derived from preserved 200×200 masters;
 - 117 lossless, infinitely looping response APNGs;
-- 111 twelve-frame road, pod, trailer, cycle and specialist animations;
-- six eighteen-frame aircraft and marine animations;
+- 111 two-frame low-redraw road, pod, trailer, cycle and specialist animations;
+- six four-frame low-redraw aircraft and marine animations;
 - exact one-to-one parity with the authoritative MissionChief slot order;
 - a numbered upload package with byte-verified static and animated folders.
+
+## Map performance overhaul
+
+Version 2.2.0 rebuilds every animated asset around a strict low-redraw budget while retaining the proven full-frame APNG compatibility contract.
+
+- Road vehicles use two complementary illuminated states at 3.85 updates per second. Both phases remain visibly lit, eliminating the six blank frames previously decoded in every cycle.
+- Aircraft and marine vehicles use four evenly spaced motion states at 5.56 updates per second, preserving rotor, navigation-light and wake movement.
+- Fleet-wide animation frames fall from 1,440 to 246 per cycle, an **82.9% reduction**.
+- Encoded APNG data falls from 13.05 MB to 2.27 MB, an **82.6% reduction**.
+- Full-cycle RGBA frame data falls from 69.7 MB to 11.9 MB.
+- All 117 static exports, every 200×200 master and every retained production source are SHA-256 preserved from v2.1.1.
+
+The performance gate fails closed if road animations exceed 4 updates per second, aircraft or marine animations exceed 6, frame reduction falls below 80%, encoded reduction falls below 75%, or any static/master artwork drifts.
 
 ## Visual standard
 
@@ -58,11 +71,11 @@ Version 2.1.0 completes the migration at **117/117 hero-ready** with zero conver
 - Patient Transport and Critical Care Transfer Ambulances now have visibly different minibus and clinical-box conversions;
 - Mountain Rescue Control Van and Marine EOD Equipment Van now expose their command and specialist-deployment hardware.
 
-**[11 conversions before/after](assets/previews/v2.1.1/family-conversions-before-after.png)** · **[18 family hero references](assets/previews/v2.1.1/uk-family-reference-board.png)** · **[117-slot passing audit](assets/previews/v2.1.1/uk-family-hero-audit.png)** · **[Full family standard](docs/V2_UK_FAMILY_HERO_STANDARD.md)**
+**[11 conversions before/after](assets/previews/v2.2.0/family-conversions-before-after.png)** · **[18 family hero references](assets/previews/v2.2.0/uk-family-reference-board.png)** · **[117-slot passing audit](assets/previews/v2.2.0/uk-family-hero-audit.png)** · **[Full family standard](docs/V2_UK_FAMILY_HERO_STANDARD.md)**
 
 ## Emergency lighting
 
-Response lighting is deliberately unmistakable at map scale. Each animated fixture combines a bright physical lens, compact inner flare and restrained outer bloom. Separate A/B fixture groups run an alternating double-flash cycle instead of making the whole fleet pulse in unison.
+Response lighting is deliberately unmistakable at map scale. Each animated fixture combines a bright physical lens, compact inner flare and restrained outer bloom. Separate A/B fixture groups alternate between two constantly illuminated phases instead of inserting blank reset frames.
 
 - Blue response profiles cover emergency road vehicles, specialist units, pods and towing combinations.
 - Green response lighting is used for the General Practitioner vehicle.
@@ -81,7 +94,7 @@ Version 2.0.2 replaces the stopped, cross-shaped helicopter blades with calibrat
 - Main-rotor discs preserve the perspective, diameter and blade count implied by each source aircraft.
 - Blade-free production bases are repaired beneath every sweep so no frozen rotor or erased fuselage leaks into the animation.
 
-**[Four-aircraft rotor preview](assets/previews/v2.1.1/helicopter-rotor-fleet.gif)** · **[Tail-rotor alignment audit](assets/previews/v2.1.1/helicopter-tail-rotor-alignment.gif)**
+**[Four-aircraft rotor preview](assets/previews/v2.2.0/helicopter-rotor-fleet.gif)** · **[Tail-rotor alignment audit](assets/previews/v2.2.0/helicopter-tail-rotor-alignment.gif)**
 
 ## Unified mounted pod carriers
 
@@ -93,7 +106,7 @@ Version 2.1.1 rebuilds all ten loaded pod roles as complete three-axle appliance
 - The loaded carriers share one physically calibrated cab lightbar and front/rear response-light pattern.
 - The release gate requires one connected subject, a filled cab-to-body coupling region, continuous chassis structure and exactly three axle witness regions.
 
-**[Mounted-carrier before/after](assets/previews/v2.1.1/mounted-carrier-before-after.png)** · **[Native live-map carrier audit](assets/previews/v2.1.1/mounted-carrier-live-map.png)**
+**[Mounted-carrier before/after](assets/previews/v2.2.0/mounted-carrier-before-after.png)** · **[Native live-map carrier audit](assets/previews/v2.2.0/mounted-carrier-live-map.png)**
 
 ## Driven-appliance cab clarity
 
@@ -105,21 +118,22 @@ Version 2.0.3 replaces the inherited rear-only F/WrC, WrL CAFS and RP CAFS artwo
 - Restrained role plaques distinguish the CAFS and foam/water variants without overpowering the vehicle at 110×110.
 - The three v2.0.3 cab repairs remain byte-preserved alongside the v2.1.1 unified-carrier rebuild.
 
-**[Cab correction before/after](assets/previews/v2.1.1/cab-legibility-before-after.png)** · **[Native live-map cab audit](assets/previews/v2.1.1/cab-legibility-live-map.png)**
+**[Cab correction before/after](assets/previews/v2.2.0/cab-legibility-before-after.png)** · **[Native live-map cab audit](assets/previews/v2.2.0/cab-legibility-live-map.png)**
 
 ## Tested for real map conditions
 
 All 117 static and all 117 animated assets are rendered and inspected against light, dark, grayscale and satellite-style backgrounds in both alternating flash phases.
 
-[![v2.1.1 actual-pixel scale calibration](assets/previews/v2.1.1/compact-map-scale-calibration.png)](assets/previews/v2.1.1/compact-map-scale-calibration.png)
+[![v2.2.0 actual-pixel scale calibration](assets/previews/v2.2.0/compact-map-scale-calibration.png)](assets/previews/v2.2.0/compact-map-scale-calibration.png)
 
-**[Static light-map audit](assets/previews/v2.1.1/full-fleet-static-light.png)** · **[Static satellite audit](assets/previews/v2.1.1/full-fleet-static-satellite.png)** · **[Response phase B dark-map audit](assets/previews/v2.1.1/full-fleet-response-b-dark.png)** · **[Response grayscale audit](assets/previews/v2.1.1/full-fleet-response-a-grayscale.png)**
+**[Static light-map audit](assets/previews/v2.2.0/full-fleet-static-light.png)** · **[Static satellite audit](assets/previews/v2.2.0/full-fleet-static-satellite.png)** · **[Response phase B dark-map audit](assets/previews/v2.2.0/full-fleet-response-b-dark.png)** · **[Response grayscale audit](assets/previews/v2.2.0/full-fleet-response-a-grayscale.png)**
 
 The machine-readable gates report:
 
 - static QA: 117/117 passed;
 - animation QA: 117/117 passed;
-- APNG distribution: 111×12 frames and 6×18 frames;
+- APNG distribution: 111×2 frames and 6×4 frames;
+- performance gate: 82.9% fewer frames, 82.6% less encoded animation data and 68.9% fewer road-animation updates;
 - numbered deployment package: 117 static + 117 animated files;
 - current v1.4.14 command exports unchanged during the isolated rebuild.
 
@@ -133,11 +147,12 @@ The game renders every v2 asset natively. No secondary extension or userscript i
 
 ## Release download
 
-The [v2.1.1 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.1.1) includes:
+The [v2.2.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.2.0) includes:
 
-- `TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.1.1.zip` — ordered static/animated deployment folders, exact slot guide, machine-readable manifest and SHA-256 verification;
-- `v2.1.1-mounted-carrier-report.json`, the 117-slot hero report, static/animation QA, fixture metadata and complete release-integrity evidence.
+- `TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-v2.2.0.zip` — ordered static/animated deployment folders, exact slot guide, machine-readable manifest and SHA-256 verification;
+- `v2.2.0-performance-report.json`, the 117-slot hero report, static/animation QA, fixture metadata and complete release-integrity evidence.
 
+The [v2.1.1 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.1.1) retains the full-detail 12/18-frame animation baseline and unified mounted carriers.
 The [v2.1.0 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.1.0) retains the UK family-authenticity baseline.
 The [v2.0.4 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.0.4) retains the complete mounted pod-carrier baseline.
 The [v2.0.3 release](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases/tag/v2.0.3) retains the driven-appliance cab correction baseline.
@@ -152,10 +167,10 @@ The [v2.0.2 release](https://github.com/Conroy1988/missionchief-uk-animated-grap
 - `assets/masters/v2.1.1/` — three inherited cab repairs, 11 inherited family conversions and ten unified mounted-carrier masters;
 - `assets/sources/v2.1.1/` — retained magenta-key production sources for the ten unified carriers;
 - `assets/exports/v2/static/` — MissionChief-ready 110×110 static PNGs;
-- `assets/exports/v2/animated/` — MissionChief-ready twelve- and eighteen-frame response APNGs;
-- `assets/previews/v2.1.1/` — family-conversion, hero-gate, unified-carrier, cab-legibility, map-condition, flash-phase and rotor evidence;
+- `assets/exports/v2/animated/` — MissionChief-ready two- and four-frame low-redraw response APNGs;
+- `assets/previews/v2.2.0/` — performance, family-conversion, hero-gate, unified-carrier, cab-legibility, map-condition, flash-phase and rotor evidence;
 - `data/vehicle-slots.json` — authoritative 117-slot MissionChief mapping;
-- `data/v2.1.1-*.json` — family conversion, unified-carrier, hero, scale provenance, fixtures, build results and fail-closed QA reports;
+- `data/v2.2.0-*.json` — performance, family conversion, unified-carrier, hero, scale provenance, fixtures, build results and fail-closed QA reports;
 - `scripts/` — deterministic processing, lighting, packaging and validation tools;
 - `docs/` — visual standards and release checkpoints;
 - `assets/exports/command/` — unchanged v1.4.14 production profile.
@@ -173,10 +188,11 @@ python scripts/validate_v2_mounted_pod_carriers.py
 python scripts/validate_v2_uk_family_hero_gate.py
 python scripts/build_v2_animated_fleet.py
 python scripts/validate_v2_animated_fleet.py
+python scripts/validate_v2_performance.py
 python scripts/build_v2_calibration.py
 python scripts/build_v2_helicopter_previews.py
 python scripts/build_interactive_gallery.py
-python scripts/build_numbered_upload_package.py --version v2.1.1 --profile v2
+python scripts/build_numbered_upload_package.py --version v2.2.0 --profile v2
 python scripts/validate_v2_release_integrity.py
 ```
 

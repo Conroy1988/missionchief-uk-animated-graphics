@@ -81,7 +81,7 @@ def add_deterministic_zip_member(archive: zipfile.ZipFile, path: Path, archive_n
 
 def write_readme(package_root: Path, version: str, profile: str) -> None:
     frame_description = (
-        "twelve-frame, with aircraft and marine eighteen-frame motion upgrades"
+        "two-frame low-redraw road response, with four-frame aircraft and marine motion"
         if profile == "v2"
         else "twelve-frame, with selected eighteen-frame motion upgrades"
         if profile == "command"

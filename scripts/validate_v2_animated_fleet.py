@@ -13,6 +13,8 @@ from PIL import Image, ImageChops, ImageDraw, ImageFont
 
 from v2_helicopter_rotors import HELICOPTER_GEOMETRY
 from v2_profile import (
+    AIR_MARINE_FRAME_COUNT,
+    AIR_MARINE_FRAME_DURATION_MS,
     ANIMATED_DIR,
     EXPORT_CANVAS,
     EXPORT_SCALE,
@@ -20,6 +22,8 @@ from v2_profile import (
     PREVIEW_DIR,
     RELEASE,
     RELEASE_CANDIDATE,
+    ROAD_FRAME_COUNT,
+    ROAD_FRAME_DURATION_MS,
     ROOT,
     STATIC_DIR,
     master_path,
@@ -116,6 +120,11 @@ def change_metrics(static: Image.Image, animation_frames: list[Image.Image]) -> 
     }
 
 
+def changed_pixel_count(first: Image.Image, second: Image.Image, threshold: int = 18) -> int:
+    difference = ImageChops.difference(first, second).convert("RGB")
+    return sum(max(pixel) >= threshold for pixel in difference.get_flattened_data())
+
+
 def fixture_overlap(static: Image.Image, fixture: dict) -> float:
     mask = Image.new("L", static.size, 0)
     draw = ImageDraw.Draw(mask)
@@ -206,7 +215,13 @@ def main() -> None:
             continue
 
         decoded, durations, loop = frames(path)
-        expected_frames = 18 if FIXTURES[asset_id]["kind"] in {"aircraft", "marine"} else 12
+        moving_kind = FIXTURES[asset_id]["kind"] in {"aircraft", "marine"}
+        expected_frames = AIR_MARINE_FRAME_COUNT if moving_kind else ROAD_FRAME_COUNT
+        expected_durations = (
+            [AIR_MARINE_FRAME_DURATION_MS] * AIR_MARINE_FRAME_COUNT
+            if moving_kind
+            else [ROAD_FRAME_DURATION_MS] * ROAD_FRAME_COUNT
+        )
         canvas, controls = apng_controls(path)
         if len(decoded) != expected_frames:
             errors.append(f"decoded-frames={len(decoded)}")
@@ -227,6 +242,23 @@ def main() -> None:
             errors.append("decoded-frame-size")
         if any(duration <= 0 for duration in durations):
             errors.append("non-positive-duration")
+        if durations != expected_durations:
+            errors.append(f"durations={durations}")
+
+        update_rate_hz = len(decoded) * 1000 / sum(durations) if sum(durations) else 0.0
+        maximum_update_rate = 6.0 if moving_kind else 4.0
+        if update_rate_hz > maximum_update_rate:
+            errors.append(f"update-rate={update_rate_hz:.3f}")
+
+        frame_changed_pixels = [changed_pixel_count(static, frame) for frame in decoded]
+        transition_changed_pixels = [
+            changed_pixel_count(frame, decoded[(index + 1) % len(decoded)])
+            for index, frame in enumerate(decoded)
+        ]
+        if min(frame_changed_pixels, default=0) < 8:
+            errors.append("unlit-or-static-animation-frame")
+        if min(transition_changed_pixels, default=0) < 4:
+            errors.append("animation-transition-too-small")
 
         metrics = change_metrics(static, decoded)
         if metrics["changed_pixels_full_max"] < 12:
@@ -272,6 +304,10 @@ def main() -> None:
                 "expected_frames": expected_frames,
                 "decoded_frames": len(decoded),
                 "duration_ms": sum(durations),
+                "durations_ms": durations,
+                "update_rate_hz": round(update_rate_hz, 3),
+                "frame_changed_pixels_min": min(frame_changed_pixels, default=0),
+                "transition_changed_pixels_min": min(transition_changed_pixels, default=0),
                 "fixture_overlap_min": round(min(overlaps), 3) if overlaps else None,
                 "effect_pixel_limit": effect_pixel_limit,
                 "tail_centre_alpha": tail_centre_alpha,
@@ -284,7 +320,7 @@ def main() -> None:
 
     previews = [
         render_sheet(theme, frame_index, phase)
-        for phase, frame_index in (("a", 0), ("b", 4))
+        for phase, frame_index in (("a", 0), ("b", 1))
         for theme in THEMES
     ]
     report = {
