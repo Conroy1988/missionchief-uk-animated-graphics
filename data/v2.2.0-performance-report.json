@@ -1,0 +1,5467 @@
+{
+  "release": "v2.2.0-candidate",
+  "baseline": "v2.1.1",
+  "profile": "full-frame low-redraw APNG",
+  "assets": 117,
+  "road_assets": 111,
+  "aircraft_marine_assets": 6,
+  "baseline_total_frames": 1440,
+  "optimized_total_frames": 246,
+  "frame_reduction_percent": 82.9,
+  "baseline_animated_bytes": 13054362,
+  "optimized_animated_bytes": 2267212,
+  "encoded_reduction_percent": 82.6,
+  "baseline_decoded_rgba_cycle_bytes": 69696000,
+  "optimized_decoded_rgba_cycle_bytes": 11906400,
+  "decoded_cycle_reduction_percent": 82.9,
+  "baseline_road_update_rate_hz": 12.371,
+  "optimized_road_update_rate_hz": 3.846,
+  "road_update_rate_reduction_percent": 68.9,
+  "estimated_road_updates_per_second_at_500_visible": {
+    "baseline": 6186,
+    "optimized": 1923
+  },
+  "static_exports_sha256_preserved": 117,
+  "master_and_source_artwork_unchanged": true,
+  "thresholds": {
+    "minimum_frame_reduction_percent": 80.0,
+    "minimum_encoded_reduction_percent": 75.0,
+    "minimum_road_update_rate_reduction_percent": 65.0,
+    "maximum_road_update_rate_hz": 4.0,
+    "maximum_aircraft_marine_update_rate_hz": 6.0
+  },
+  "all_passed": true,
+  "errors": [],
+  "entries": [
+    {
+      "slot": 1,
+      "asset_id": "fire-rescue-pump",
+      "group": "road",
+      "baseline": {
+        "bytes": 182599,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 30649,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 2,
+      "asset_id": "light-4x4-pump",
+      "group": "road",
+      "baseline": {
+        "bytes": 103443,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 17403,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 3,
+      "asset_id": "aerial-appliance",
+      "group": "road",
+      "baseline": {
+        "bytes": 170699,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 28626,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 4,
+      "asset_id": "fire-officer",
+      "group": "road",
+      "baseline": {
+        "bytes": 61900,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10455,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 5,
+      "asset_id": "rescue-support-unit",
+      "group": "road",
+      "baseline": {
+        "bytes": 172757,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 28984,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 6,
+      "asset_id": "frontline-ambulance",
+      "group": "road",
+      "baseline": {
+        "bytes": 106209,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 17924,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 7,
+      "asset_id": "water-carrier",
+      "group": "road",
+      "baseline": {
+        "bytes": 160922,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 27023,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 8,
+      "asset_id": "hazmat-unit",
+      "group": "road",
+      "baseline": {
+        "bytes": 141431,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 23785,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 9,
+      "asset_id": "police-incident-response-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 65489,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 11038,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 10,
+      "asset_id": "hems",
+      "group": "aircraft-marine",
+      "baseline": {
+        "bytes": 224517,
+        "frames": 18,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          70,
+          55,
+          70,
+          75,
+          70,
+          55,
+          70,
+          75,
+          70,
+          55,
+          70,
+          75,
+          65,
+          70,
+          65,
+          90,
+          80,
+          145
+        ],
+        "cycle_ms": 1325,
+        "update_rate_hz": 13.585
+      },
+      "optimized": {
+        "bytes": 50755,
+        "frames": 4,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          180,
+          180,
+          180,
+          180
+        ],
+        "cycle_ms": 720,
+        "update_rate_hz": 5.556
+      },
+      "frame_reduction_percent": 77.8,
+      "encoded_reduction_percent": 77.4,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 11,
+      "asset_id": "rapid-response-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 61575,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10392,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 12,
+      "asset_id": "police-helicopter",
+      "group": "aircraft-marine",
+      "baseline": {
+        "bytes": 259847,
+        "frames": 18,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          70,
+          55,
+          70,
+          75,
+          70,
+          55,
+          70,
+          75,
+          70,
+          55,
+          70,
+          75,
+          65,
+          70,
+          65,
+          90,
+          80,
+          145
+        ],
+        "cycle_ms": 1325,
+        "update_rate_hz": 13.585
+      },
+      "optimized": {
+        "bytes": 58121,
+        "frames": 4,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          180,
+          180,
+          180,
+          180
+        ],
+        "cycle_ms": 720,
+        "update_rate_hz": 5.556
+      },
+      "frame_reduction_percent": 77.8,
+      "encoded_reduction_percent": 77.6,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 13,
+      "asset_id": "dog-support-unit",
+      "group": "road",
+      "baseline": {
+        "bytes": 112859,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 18959,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 14,
+      "asset_id": "armed-response-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 55901,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 9395,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 15,
+      "asset_id": "breathing-apparatus-support-unit",
+      "group": "road",
+      "baseline": {
+        "bytes": 157781,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 26480,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 16,
+      "asset_id": "incident-command-control-unit",
+      "group": "road",
+      "baseline": {
+        "bytes": 164061,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 27528,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 17,
+      "asset_id": "rescue-pump",
+      "group": "road",
+      "baseline": {
+        "bytes": 166744,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 27998,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 18,
+      "asset_id": "carp",
+      "group": "road",
+      "baseline": {
+        "bytes": 170840,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 28680,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 19,
+      "asset_id": "co-responder-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 64766,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10921,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 20,
+      "asset_id": "joint-response-unit",
+      "group": "road",
+      "baseline": {
+        "bytes": 58985,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 9908,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 21,
+      "asset_id": "otl",
+      "group": "road",
+      "baseline": {
+        "bytes": 62590,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10581,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 22,
+      "asset_id": "general-practitioner",
+      "group": "road",
+      "baseline": {
+        "bytes": 59644,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10044,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 23,
+      "asset_id": "community-first-responder",
+      "group": "road",
+      "baseline": {
+        "bytes": 61752,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10438,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 24,
+      "asset_id": "crew-carrier",
+      "group": "road",
+      "baseline": {
+        "bytes": 108453,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 18292,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 25,
+      "asset_id": "traffic-car",
+      "group": "road",
+      "baseline": {
+        "bytes": 62205,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10482,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 26,
+      "asset_id": "armed-traffic-car",
+      "group": "road",
+      "baseline": {
+        "bytes": 64167,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10827,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 27,
+      "asset_id": "heavy-4x4-tanker",
+      "group": "road",
+      "baseline": {
+        "bytes": 174542,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 29206,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 28,
+      "asset_id": "prv",
+      "group": "road",
+      "baseline": {
+        "bytes": 66684,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 11261,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 29,
+      "asset_id": "srv",
+      "group": "road",
+      "baseline": {
+        "bytes": 115900,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 19390,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 30,
+      "asset_id": "welfare-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 104139,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 17494,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 31,
+      "asset_id": "atv-carrier",
+      "group": "road",
+      "baseline": {
+        "bytes": 164500,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 27507,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 32,
+      "asset_id": "ambulance-control-unit",
+      "group": "road",
+      "baseline": {
+        "bytes": 178622,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 29943,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 33,
+      "asset_id": "cbrn-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 99691,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 16799,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 34,
+      "asset_id": "mass-casualty-equipment",
+      "group": "road",
+      "baseline": {
+        "bytes": 170633,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 28616,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 35,
+      "asset_id": "ambulance-officer",
+      "group": "road",
+      "baseline": {
+        "bytes": 55376,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 9343,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 36,
+      "asset_id": "bfu",
+      "group": "road",
+      "baseline": {
+        "bytes": 175718,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 29470,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 37,
+      "asset_id": "f-wrc",
+      "group": "road",
+      "baseline": {
+        "bytes": 161331,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 27080,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 38,
+      "asset_id": "wrl-cafs",
+      "group": "road",
+      "baseline": {
+        "bytes": 182526,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 30638,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 39,
+      "asset_id": "rp-cafs",
+      "group": "road",
+      "baseline": {
+        "bytes": 166548,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 27952,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 40,
+      "asset_id": "osu",
+      "group": "road",
+      "baseline": {
+        "bytes": 141402,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 23743,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 41,
+      "asset_id": "pm",
+      "group": "road",
+      "baseline": {
+        "bytes": 148066,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 24886,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 42,
+      "asset_id": "water-pod",
+      "group": "road",
+      "baseline": {
+        "bytes": 166393,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 27858,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 43,
+      "asset_id": "bulk-foam-pod",
+      "group": "road",
+      "baseline": {
+        "bytes": 164157,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 27513,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 44,
+      "asset_id": "rescue-pod",
+      "group": "road",
+      "baseline": {
+        "bytes": 160194,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 26786,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 45,
+      "asset_id": "command-pod",
+      "group": "road",
+      "baseline": {
+        "bytes": 154797,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 25888,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 46,
+      "asset_id": "welfare-pod",
+      "group": "road",
+      "baseline": {
+        "bytes": 158807,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 26554,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 47,
+      "asset_id": "basu-pod",
+      "group": "road",
+      "baseline": {
+        "bytes": 168791,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 28252,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 48,
+      "asset_id": "misting-pod",
+      "group": "road",
+      "baseline": {
+        "bytes": 169632,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 28353,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 49,
+      "asset_id": "hazardous-materials-pod",
+      "group": "road",
+      "baseline": {
+        "bytes": 162407,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 27182,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 50,
+      "asset_id": "osu-pod",
+      "group": "road",
+      "baseline": {
+        "bytes": 171738,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 28737,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 51,
+      "asset_id": "hvp",
+      "group": "road",
+      "baseline": {
+        "bytes": 167424,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 27998,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 52,
+      "asset_id": "psu-carrier",
+      "group": "road",
+      "baseline": {
+        "bytes": 102535,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 17203,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 53,
+      "asset_id": "firearms-personnel-carrier",
+      "group": "road",
+      "baseline": {
+        "bytes": 98929,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 16649,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 54,
+      "asset_id": "multiple-dog-carrier",
+      "group": "road",
+      "baseline": {
+        "bytes": 104134,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 17484,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 55,
+      "asset_id": "detention-van",
+      "group": "road",
+      "baseline": {
+        "bytes": 92267,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 15510,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 56,
+      "asset_id": "mounted-unit",
+      "group": "road",
+      "baseline": {
+        "bytes": 146676,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 24605,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 57,
+      "asset_id": "m-rav",
+      "group": "road",
+      "baseline": {
+        "bytes": 90289,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 15158,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 58,
+      "asset_id": "crv",
+      "group": "road",
+      "baseline": {
+        "bytes": 64973,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10943,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 59,
+      "asset_id": "coastguard-mud-rescue-unit",
+      "group": "road",
+      "baseline": {
+        "bytes": 110811,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 18598,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 60,
+      "asset_id": "coastguard-rope-rescue-unit",
+      "group": "road",
+      "baseline": {
+        "bytes": 100643,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 16862,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 61,
+      "asset_id": "coastguard-commander",
+      "group": "road",
+      "baseline": {
+        "bytes": 65820,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 11091,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 62,
+      "asset_id": "flood-rescue-unit-trailer",
+      "group": "road",
+      "baseline": {
+        "bytes": 52153,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 8867,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.0,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 63,
+      "asset_id": "mud-decontamination-unit",
+      "group": "road",
+      "baseline": {
+        "bytes": 78377,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 13241,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 64,
+      "asset_id": "support-unit",
+      "group": "road",
+      "baseline": {
+        "bytes": 106879,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 17954,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 65,
+      "asset_id": "coastguard-rescue-helicopter",
+      "group": "aircraft-marine",
+      "baseline": {
+        "bytes": 244850,
+        "frames": 18,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          70,
+          55,
+          70,
+          75,
+          70,
+          55,
+          70,
+          75,
+          70,
+          55,
+          70,
+          75,
+          65,
+          70,
+          65,
+          90,
+          80,
+          145
+        ],
+        "cycle_ms": 1325,
+        "update_rate_hz": 13.585
+      },
+      "optimized": {
+        "bytes": 55247,
+        "frames": 4,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          180,
+          180,
+          180,
+          180
+        ],
+        "cycle_ms": 720,
+        "update_rate_hz": 5.556
+      },
+      "frame_reduction_percent": 77.8,
+      "encoded_reduction_percent": 77.4,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 66,
+      "asset_id": "coastguard-rescue-helicopter-large",
+      "group": "aircraft-marine",
+      "baseline": {
+        "bytes": 223248,
+        "frames": 18,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          70,
+          55,
+          70,
+          75,
+          70,
+          55,
+          70,
+          75,
+          70,
+          55,
+          70,
+          75,
+          65,
+          70,
+          65,
+          90,
+          80,
+          145
+        ],
+        "cycle_ms": 1325,
+        "update_rate_hz": 13.585
+      },
+      "optimized": {
+        "bytes": 49975,
+        "frames": 4,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          180,
+          180,
+          180,
+          180
+        ],
+        "cycle_ms": 720,
+        "update_rate_hz": 5.556
+      },
+      "frame_reduction_percent": 77.8,
+      "encoded_reduction_percent": 77.6,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 67,
+      "asset_id": "4x4-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 61159,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10323,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 68,
+      "asset_id": "inland-rescue-boat-trailer",
+      "group": "road",
+      "baseline": {
+        "bytes": 54658,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 9329,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 82.9,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 69,
+      "asset_id": "ilb",
+      "group": "aircraft-marine",
+      "baseline": {
+        "bytes": 77375,
+        "frames": 18,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          85,
+          60,
+          85,
+          70,
+          85,
+          60,
+          85,
+          70,
+          85,
+          60,
+          85,
+          70,
+          80,
+          60,
+          80,
+          70,
+          90,
+          145
+        ],
+        "cycle_ms": 1425,
+        "update_rate_hz": 12.632
+      },
+      "optimized": {
+        "bytes": 17551,
+        "frames": 4,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          180,
+          180,
+          180,
+          180
+        ],
+        "cycle_ms": 720,
+        "update_rate_hz": 5.556
+      },
+      "frame_reduction_percent": 77.8,
+      "encoded_reduction_percent": 77.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 70,
+      "asset_id": "alb",
+      "group": "aircraft-marine",
+      "baseline": {
+        "bytes": 257165,
+        "frames": 18,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          85,
+          60,
+          85,
+          70,
+          85,
+          60,
+          85,
+          70,
+          85,
+          60,
+          85,
+          70,
+          80,
+          60,
+          80,
+          70,
+          90,
+          145
+        ],
+        "cycle_ms": 1425,
+        "update_rate_hz": 12.632
+      },
+      "optimized": {
+        "bytes": 57311,
+        "frames": 4,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          180,
+          180,
+          180,
+          180
+        ],
+        "cycle_ms": 720,
+        "update_rate_hz": 5.556
+      },
+      "frame_reduction_percent": 77.8,
+      "encoded_reduction_percent": 77.7,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 71,
+      "asset_id": "rescue-watercraft-trailer",
+      "group": "road",
+      "baseline": {
+        "bytes": 51262,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 8824,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 82.8,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 72,
+      "asset_id": "hovercraft-trailer",
+      "group": "road",
+      "baseline": {
+        "bytes": 65212,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 11050,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 73,
+      "asset_id": "hovercraft-transporter",
+      "group": "road",
+      "baseline": {
+        "bytes": 61870,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10539,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.0,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 74,
+      "asset_id": "light-4x4",
+      "group": "road",
+      "baseline": {
+        "bytes": 62889,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10591,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 75,
+      "asset_id": "boat-trailer",
+      "group": "road",
+      "baseline": {
+        "bytes": 66118,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 11190,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 76,
+      "asset_id": "major-foam-tender",
+      "group": "road",
+      "baseline": {
+        "bytes": 128030,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 21474,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 77,
+      "asset_id": "riv",
+      "group": "road",
+      "baseline": {
+        "bytes": 123094,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 20609,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 78,
+      "asset_id": "airfield-firefighting-command-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 69084,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 11714,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.0,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 79,
+      "asset_id": "rescue-stairs",
+      "group": "road",
+      "baseline": {
+        "bytes": 172334,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 28967,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 80,
+      "asset_id": "airfield-operations-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 62306,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10474,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 81,
+      "asset_id": "airfield-operations-supervisor",
+      "group": "road",
+      "baseline": {
+        "bytes": 71533,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 12091,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 82,
+      "asset_id": "medical-equipment-trailer",
+      "group": "road",
+      "baseline": {
+        "bytes": 40137,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 6870,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 82.9,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 83,
+      "asset_id": "armed-cell-van",
+      "group": "road",
+      "baseline": {
+        "bytes": 103218,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 17447,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 84,
+      "asset_id": "medical-cycle-responder",
+      "group": "road",
+      "baseline": {
+        "bytes": 48503,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 8185,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 85,
+      "asset_id": "pump-trailer",
+      "group": "road",
+      "baseline": {
+        "bytes": 45804,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 7879,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 82.8,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 86,
+      "asset_id": "control-van-sar",
+      "group": "road",
+      "baseline": {
+        "bytes": 96825,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 16338,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 87,
+      "asset_id": "operational-support-van",
+      "group": "road",
+      "baseline": {
+        "bytes": 113290,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 19074,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 88,
+      "asset_id": "operational-support-trailer",
+      "group": "road",
+      "baseline": {
+        "bytes": 56561,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 9640,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.0,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 89,
+      "asset_id": "sar-flood-rescue-trailer",
+      "group": "road",
+      "baseline": {
+        "bytes": 56821,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 9648,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.0,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 90,
+      "asset_id": "drone-vehicle-sar-hq",
+      "group": "road",
+      "baseline": {
+        "bytes": 87303,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 14708,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 91,
+      "asset_id": "drone-vehicle-fire-station",
+      "group": "road",
+      "baseline": {
+        "bytes": 73890,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 12483,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 92,
+      "asset_id": "drone-vehicle-police-station",
+      "group": "road",
+      "baseline": {
+        "bytes": 82027,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 13843,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 93,
+      "asset_id": "personal-sar-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 58589,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 9871,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 94,
+      "asset_id": "sar-4x4",
+      "group": "road",
+      "baseline": {
+        "bytes": 71430,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 12067,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 95,
+      "asset_id": "rrv-2",
+      "group": "road",
+      "baseline": {
+        "bytes": 60533,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10221,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 96,
+      "asset_id": "community-midwife",
+      "group": "road",
+      "baseline": {
+        "bytes": 60818,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10246,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 97,
+      "asset_id": "specialist-paramedic-rrv",
+      "group": "road",
+      "baseline": {
+        "bytes": 63865,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 10744,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 98,
+      "asset_id": "patient-transport-service-ambulance",
+      "group": "road",
+      "baseline": {
+        "bytes": 105600,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 17757,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 99,
+      "asset_id": "critical-care-transfer-ambulance",
+      "group": "road",
+      "baseline": {
+        "bytes": 117481,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 19689,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 100,
+      "asset_id": "mountain-rescue-4x4",
+      "group": "road",
+      "baseline": {
+        "bytes": 65919,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 11097,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 101,
+      "asset_id": "control-van-mountain-rescue",
+      "group": "road",
+      "baseline": {
+        "bytes": 103046,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 17361,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 102,
+      "asset_id": "search-dog-unit",
+      "group": "road",
+      "baseline": {
+        "bytes": 68346,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 11548,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 103,
+      "asset_id": "search-dog-unit-sar",
+      "group": "road",
+      "baseline": {
+        "bytes": 71891,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 12177,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 104,
+      "asset_id": "crew-carrier-sar",
+      "group": "road",
+      "baseline": {
+        "bytes": 104110,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 17461,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 105,
+      "asset_id": "recovery-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 119913,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 20083,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 106,
+      "asset_id": "flatbed-recovery-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 114128,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 19190,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 107,
+      "asset_id": "hgv-recovery-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 177583,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 29741,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.3,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 108,
+      "asset_id": "rru",
+      "group": "road",
+      "baseline": {
+        "bytes": 121365,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 20425,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 109,
+      "asset_id": "eiu",
+      "group": "road",
+      "baseline": {
+        "bytes": 67657,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 11389,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 110,
+      "asset_id": "eod-commander",
+      "group": "road",
+      "baseline": {
+        "bytes": 69645,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 11816,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.0,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 111,
+      "asset_id": "eod-response-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 91676,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 15501,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 112,
+      "asset_id": "eod-medium-equipment-van",
+      "group": "road",
+      "baseline": {
+        "bytes": 100662,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 16930,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 113,
+      "asset_id": "eod-heavy-equipment-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 149807,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 25154,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 114,
+      "asset_id": "marine-eod-response-vehicle",
+      "group": "road",
+      "baseline": {
+        "bytes": 79675,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 13439,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.1,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 115,
+      "asset_id": "marine-eod-equipment-van",
+      "group": "road",
+      "baseline": {
+        "bytes": 109356,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 18397,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 116,
+      "asset_id": "welfare-vehicle-2",
+      "group": "road",
+      "baseline": {
+        "bytes": 100366,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 16823,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    },
+    {
+      "slot": 117,
+      "asset_id": "cell-van",
+      "group": "road",
+      "baseline": {
+        "bytes": 97695,
+        "frames": 12,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          70,
+          90,
+          50,
+          90,
+          140
+        ],
+        "cycle_ms": 970,
+        "update_rate_hz": 12.371
+      },
+      "optimized": {
+        "bytes": 16409,
+        "frames": 2,
+        "canvas": [
+          110,
+          110
+        ],
+        "durations_ms": [
+          260,
+          260
+        ],
+        "cycle_ms": 520,
+        "update_rate_hz": 3.846
+      },
+      "frame_reduction_percent": 83.3,
+      "encoded_reduction_percent": 83.2,
+      "static_sha256_preserved": true
+    }
+  ]
+}

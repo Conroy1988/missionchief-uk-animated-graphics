@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate and render the v2.1.1 unified mounted-carrier correction."""
+"""Validate and render the retained v2.1.1 unified mounted-carrier correction."""
 
 from __future__ import annotations
 

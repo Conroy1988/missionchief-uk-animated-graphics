@@ -8,7 +8,13 @@ import math
 
 from PIL import Image, ImageDraw, ImageFilter
 
-from v2_emergency_light import Fixture, FlashFrame, ROAD_DOUBLE_FLASH, render_lit_frame, save_apng
+from v2_emergency_light import (
+    Fixture,
+    FlashFrame,
+    ROAD_PERFORMANCE_FLASH,
+    render_lit_frame,
+    save_apng,
+)
 from v2_helicopter_rotors import (
     geometry_manifest,
     prepare_helicopter_base,
@@ -16,12 +22,16 @@ from v2_helicopter_rotors import (
 )
 from v2_profile import (
     ANIMATED_DIR,
+    AIR_MARINE_FRAME_COUNT,
+    AIR_MARINE_FRAME_DURATION_MS,
     EXPORT_CANVAS,
     EXPORT_SCALE,
     MASTER_CANVAS,
     MOUNTED_CARRIER_IDS,
     RELEASE,
     RELEASE_CANDIDATE,
+    ROAD_FRAME_COUNT,
+    ROAD_FRAME_DURATION_MS,
     ROOT,
     compact_export,
     master_path,
@@ -67,52 +77,27 @@ TOWED_IDS = {
     "operational-support-trailer",
     "sar-flood-rescue-trailer",
 }
-AIRCRAFT_PATTERN = tuple(
+AIRCRAFT_PERFORMANCE_PATTERN = tuple(
     FlashFrame(groups, duration)
     for groups, duration in (
-        ({"a": 1.00, "nav": 0.45}, 70),
-        ({"nav": 0.28}, 55),
-        ({"a": 0.82, "nav": 0.45}, 70),
-        ({"nav": 0.28}, 75),
-        ({"b": 1.00, "nav": 0.45}, 70),
-        ({"nav": 0.28}, 55),
-        ({"b": 0.82, "nav": 0.45}, 70),
-        ({"nav": 0.28}, 75),
-        ({"a": 0.95, "b": 0.18, "nav": 0.45}, 70),
-        ({"nav": 0.28}, 55),
-        ({"a": 0.18, "b": 0.95, "nav": 0.45}, 70),
-        ({"nav": 0.28}, 75),
-        ({"strobe": 1.00, "nav": 0.55}, 65),
-        ({"nav": 0.25}, 70),
-        ({"strobe": 0.88, "nav": 0.55}, 65),
-        ({"nav": 0.25}, 90),
-        ({"a": 0.75, "b": 0.75, "nav": 0.45}, 80),
-        ({"nav": 0.25}, 145),
+        ({"a": 1.00, "b": 0.16, "nav": 0.48}, AIR_MARINE_FRAME_DURATION_MS),
+        ({"a": 0.16, "b": 1.00, "nav": 0.42}, AIR_MARINE_FRAME_DURATION_MS),
+        (
+            {"a": 0.86, "b": 0.24, "strobe": 1.00, "nav": 0.55},
+            AIR_MARINE_FRAME_DURATION_MS,
+        ),
+        ({"a": 0.24, "b": 0.86, "nav": 0.34}, AIR_MARINE_FRAME_DURATION_MS),
     )
 )
 
 
-MARINE_PATTERN = tuple(
+MARINE_PERFORMANCE_PATTERN = tuple(
     FlashFrame(groups, duration)
     for groups, duration in (
-        ({"a": 1.00, "nav": 0.55}, 85),
-        ({"nav": 0.35}, 60),
-        ({"a": 0.82, "nav": 0.55}, 85),
-        ({"nav": 0.35}, 70),
-        ({"b": 1.00, "nav": 0.55}, 85),
-        ({"nav": 0.35}, 60),
-        ({"b": 0.82, "nav": 0.55}, 85),
-        ({"nav": 0.35}, 70),
-        ({"a": 0.92, "b": 0.20, "nav": 0.60}, 85),
-        ({"nav": 0.35}, 60),
-        ({"a": 0.20, "b": 0.92, "nav": 0.60}, 85),
-        ({"nav": 0.35}, 70),
-        ({"a": 0.78, "nav": 0.55}, 80),
-        ({"nav": 0.35}, 60),
-        ({"b": 0.78, "nav": 0.55}, 80),
-        ({"nav": 0.35}, 70),
-        ({"a": 0.72, "b": 0.72, "nav": 0.65}, 90),
-        ({"nav": 0.35}, 145),
+        ({"a": 1.00, "b": 0.16, "nav": 0.55}, AIR_MARINE_FRAME_DURATION_MS),
+        ({"a": 0.16, "b": 1.00, "nav": 0.55}, AIR_MARINE_FRAME_DURATION_MS),
+        ({"a": 0.82, "b": 0.22, "nav": 0.62}, AIR_MARINE_FRAME_DURATION_MS),
+        ({"a": 0.22, "b": 0.82, "nav": 0.45}, AIR_MARINE_FRAME_DURATION_MS),
     )
 )
 
@@ -328,17 +313,17 @@ def main() -> None:
             profile = "aircraft-response"
             kind = "aircraft"
             fixtures = aircraft_fixtures(base, bbox)
-            pattern = AIRCRAFT_PATTERN
+            pattern = AIRCRAFT_PERFORMANCE_PATTERN
         elif asset_id in MARINE_IDS:
             profile = "marine-response"
             kind = "marine"
             fixtures = marine_fixtures(base, bbox)
-            pattern = MARINE_PATTERN
+            pattern = MARINE_PERFORMANCE_PATTERN
         else:
             colour = "amber" if asset_id in AMBER_IDS else "green" if asset_id in GREEN_IDS else "blue"
             profile = f"road-{colour}"
             kind, fixtures = road_fixtures(asset_id, base, bbox, length, colour)
-            pattern = ROAD_DOUBLE_FLASH
+            pattern = ROAD_PERFORMANCE_FLASH
 
         helicopter_base = prepare_helicopter_base(asset_id, base) if kind == "aircraft" else None
         master_frames: list[Image.Image] = []
@@ -391,6 +376,9 @@ def main() -> None:
                 "export_canvas": list(EXPORT_CANVAS),
                 "export_scale": EXPORT_SCALE,
                 "fixture_standard": "physical lens + compact inner flare + faint outer bloom",
+                "animation_profile": "v2.2.0 low-redraw full-frame APNG",
+                "road_frames": ROAD_FRAME_COUNT,
+                "aircraft_marine_frames": AIR_MARINE_FRAME_COUNT,
                 "vehicles": fixture_manifest,
             },
             indent=2,
@@ -405,8 +393,21 @@ def main() -> None:
                 "export_canvas": list(EXPORT_CANVAS),
                 "export_scale": EXPORT_SCALE,
                 "assets": len(build_entries),
-                "road_12_frame": sum(entry["frames"] == 12 for entry in build_entries),
-                "aircraft_or_marine_18_frame": sum(entry["frames"] == 18 for entry in build_entries),
+                "animation_profile": "performance",
+                "road_frame_count": ROAD_FRAME_COUNT,
+                "road_frame_duration_ms": ROAD_FRAME_DURATION_MS,
+                "aircraft_marine_frame_count": AIR_MARINE_FRAME_COUNT,
+                "aircraft_marine_frame_duration_ms": AIR_MARINE_FRAME_DURATION_MS,
+                "road_2_frame": sum(entry["frames"] == ROAD_FRAME_COUNT for entry in build_entries),
+                "aircraft_or_marine_4_frame": sum(
+                    entry["kind"] in {"aircraft", "marine"}
+                    and entry["frames"] == AIR_MARINE_FRAME_COUNT
+                    for entry in build_entries
+                ),
+                "total_frames": sum(entry["frames"] for entry in build_entries),
+                "encoded_bytes": sum(
+                    (ROOT / entry["target"]).stat().st_size for entry in build_entries
+                ),
                 "entries": build_entries,
             },
             indent=2,

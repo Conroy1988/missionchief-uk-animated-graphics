@@ -19,6 +19,7 @@ export const FOCUS_LABELS = Object.freeze({
   'air-marine-motion': 'Aircraft and marine motion',
   'complete-towing-unit': 'Complete towing unit',
   'mounted-specialist-carrier': 'Complete mounted specialist carrier',
+  'map-performance': 'Low-redraw map performance',
 });
 
 export function normaliseQuery(value) {
@@ -115,7 +116,7 @@ function initGallery() {
   if (!(root instanceof HTMLElement) || root.dataset.ready === 'true') return;
   root.dataset.ready = 'true';
 
-  const currentRelease = root.dataset.currentRelease || 'v2.1.1';
+  const currentRelease = root.dataset.currentRelease || 'v2.2.0';
   const config = {
     catalogueUrl: root.dataset.catalogueUrl || 'vehicles.json',
     currentAssetBase: root.dataset.currentAssetBase

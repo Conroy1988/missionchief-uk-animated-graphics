@@ -78,19 +78,11 @@ class FlashFrame:
     duration_ms: int
 
 
-ROAD_DOUBLE_FLASH: tuple[FlashFrame, ...] = (
-    FlashFrame({"a": 1.00, "b": 0.08}, 90),
-    FlashFrame({}, 50),
-    FlashFrame({"a": 0.84}, 90),
-    FlashFrame({}, 70),
-    FlashFrame({"a": 0.08, "b": 1.00}, 90),
-    FlashFrame({}, 50),
-    FlashFrame({"b": 0.84}, 90),
-    FlashFrame({}, 70),
-    FlashFrame({"a": 0.92, "b": 0.20}, 90),
-    FlashFrame({}, 50),
-    FlashFrame({"a": 0.20, "b": 0.92}, 90),
-    FlashFrame({}, 140),
+ROAD_PERFORMANCE_FLASH: tuple[FlashFrame, ...] = (
+    # Keep both states illuminated so the response cue remains unmistakable
+    # while reducing browser animation work from 12.37 to 3.85 updates/sec.
+    FlashFrame({"a": 1.00, "b": 0.18}, 260),
+    FlashFrame({"a": 0.18, "b": 1.00}, 260),
 )
 
 
@@ -181,7 +173,7 @@ def render_lit_frame(
 def build_animation_frames(
     base: Image.Image,
     fixtures: Sequence[Fixture],
-    pattern: Sequence[FlashFrame] = ROAD_DOUBLE_FLASH,
+    pattern: Sequence[FlashFrame] = ROAD_PERFORMANCE_FLASH,
 ) -> tuple[list[Image.Image], list[int]]:
     """Return full-canvas RGBA frames and their per-frame durations."""
 

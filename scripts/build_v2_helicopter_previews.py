@@ -10,7 +10,14 @@ import subprocess
 from PIL import Image, ImageDraw, ImageFont, ImageSequence
 
 from v2_helicopter_rotors import HELICOPTER_GEOMETRY
-from v2_profile import ANIMATED_DIR, EXPORT_SCALE, PREVIEW_DIR, RELEASE, ROOT
+from v2_profile import (
+    AIR_MARINE_FRAME_COUNT,
+    ANIMATED_DIR,
+    EXPORT_SCALE,
+    PREVIEW_DIR,
+    RELEASE,
+    ROOT,
+)
 
 
 FLEET_GIF = PREVIEW_DIR / "helicopter-rotor-fleet.gif"
@@ -58,8 +65,10 @@ def _decode(asset_id: str) -> tuple[list[Image.Image], list[int]]:
             image.seek(index)
             frames.append(frame.convert("RGBA"))
             durations.append(round(float(image.info.get("duration", 0))))
-    if len(frames) != 18:
-        raise RuntimeError(f"Expected 18 frames for {asset_id}, found {len(frames)}")
+    if len(frames) != AIR_MARINE_FRAME_COUNT:
+        raise RuntimeError(
+            f"Expected {AIR_MARINE_FRAME_COUNT} frames for {asset_id}, found {len(frames)}"
+        )
     return frames, durations
 
 
@@ -95,7 +104,7 @@ def fleet_preview(decoded: dict[str, list[Image.Image]], durations: list[int]) -
     label_font = _font(18)
     note_font = _font(14)
     rendered: list[Image.Image] = []
-    for frame_index in range(18):
+    for frame_index in range(AIR_MARINE_FRAME_COUNT):
         canvas = Image.new("RGB", (960, 760), (13, 20, 28))
         draw = ImageDraw.Draw(canvas)
         draw.text((24, 18), f"{RELEASE} helicopter rotor standard", font=title_font, fill=(244, 248, 251))
@@ -124,7 +133,7 @@ def fleet_preview(decoded: dict[str, list[Image.Image]], durations: list[int]) -
             canvas.paste(sprite, (left + 79, top + 28), sprite)
         draw.text(
             (708, 732),
-            f"Frame {frame_index + 1:02d}/18 · production assets 110×110",
+            f"Frame {frame_index + 1:02d}/{AIR_MARINE_FRAME_COUNT:02d} · production assets 110×110",
             font=note_font,
             fill=(180, 193, 205),
         )
@@ -147,7 +156,7 @@ def tail_preview(decoded: dict[str, list[Image.Image]], durations: list[int]) ->
     rendered: list[Image.Image] = []
     crop_size = 28
     scale = 8
-    for frame_index in range(18):
+    for frame_index in range(AIR_MARINE_FRAME_COUNT):
         canvas = Image.new("RGB", (1000, 330), (13, 20, 28))
         draw = ImageDraw.Draw(canvas)
         draw.text((24, 16), "Tail-rotor alignment audit", font=title_font, fill=(244, 248, 251))
@@ -186,7 +195,7 @@ def tail_preview(decoded: dict[str, list[Image.Image]], durations: list[int]) ->
 
 
 def frame_sheet(decoded: dict[str, list[Image.Image]]) -> None:
-    selected = (0, 3, 6, 9, 12, 15)
+    selected = tuple(range(AIR_MARINE_FRAME_COUNT))
     font = _font(16)
     cell_width, cell_height = 330, 360
     sheet = Image.new("RGB", (cell_width * len(selected), cell_height * len(ORDER)), (17, 25, 34))
@@ -212,7 +221,7 @@ def police_comparison(current: list[Image.Image], durations: list[int]) -> None:
     label_font = _font(17)
     note_font = _font(13)
     rendered: list[Image.Image] = []
-    for frame_index in range(18):
+    for frame_index in range(AIR_MARINE_FRAME_COUNT):
         canvas = Image.new("RGB", (760, 430), (13, 20, 28))
         draw = ImageDraw.Draw(canvas)
         draw.text(
@@ -234,12 +243,13 @@ def police_comparison(current: list[Image.Image], durations: list[int]) -> None:
                 outline=(54, 71, 84),
             )
             _grid(draw, (left + 1, 83, left + 335, 393), spacing=56)
-        for left, frame in ((24, baseline[frame_index]), (400, current[frame_index])):
+        baseline_index = round(frame_index * (len(baseline) - 1) / (AIR_MARINE_FRAME_COUNT - 1))
+        for left, frame in ((24, baseline[baseline_index]), (400, current[frame_index])):
             sprite = frame.resize((308, 308), Image.Resampling.LANCZOS)
             canvas.paste(sprite, (left + 14, 84), sprite)
         draw.text(
             (736, 408),
-            f"Frame {frame_index + 1:02d}/18 · production assets 110×110",
+            f"Frame {frame_index + 1:02d}/{AIR_MARINE_FRAME_COUNT:02d} · production assets 110×110",
             font=note_font,
             fill=(180, 193, 205),
             anchor="ra",

@@ -27,15 +27,16 @@ const defaults = {
 };
 
 test('catalogue contains one ordered record for every live MissionChief slot', () => {
-  assert.equal(catalogue.release, 'v2.1.1');
-  assert.equal(catalogue.releases[0].id, 'v2.1.1');
-  assert.equal(catalogue.releases[1].id, 'v2.1.0');
-  assert.equal(catalogue.releases[2].id, 'v2.0.4');
-  assert.equal(catalogue.releases[3].id, 'v2.0.3');
-  assert.equal(catalogue.releases[4].id, 'v2.0.2');
-  assert.equal(catalogue.releases[5].id, 'v2.0.1');
-  assert.equal(catalogue.releases[6].id, 'v2.0.0');
-  assert.equal(catalogue.releases[7].id, 'v1.4.14');
+  assert.equal(catalogue.release, 'v2.2.0');
+  assert.equal(catalogue.releases[0].id, 'v2.2.0');
+  assert.equal(catalogue.releases[1].id, 'v2.1.1');
+  assert.equal(catalogue.releases[2].id, 'v2.1.0');
+  assert.equal(catalogue.releases[3].id, 'v2.0.4');
+  assert.equal(catalogue.releases[4].id, 'v2.0.3');
+  assert.equal(catalogue.releases[5].id, 'v2.0.2');
+  assert.equal(catalogue.releases[6].id, 'v2.0.1');
+  assert.equal(catalogue.releases[7].id, 'v2.0.0');
+  assert.equal(catalogue.releases[8].id, 'v1.4.14');
   assert.equal(catalogue.total, 117);
   assert.equal(catalogue.vehicles.length, 117);
   assert.deepEqual(catalogue.vehicles.map((vehicle) => vehicle.slot), Array.from({ length: 117 }, (_, index) => index + 1));
@@ -43,17 +44,17 @@ test('catalogue contains one ordered record for every live MissionChief slot', (
   const firePump = catalogue.vehicles.find((vehicle) => vehicle.asset_id === 'fire-rescue-pump');
   assert.deepEqual(
     { slot: firePump.slot, width: firePump.width, height: firePump.height, frames: firePump.frames, cue: firePump.cue },
-    { slot: 1, width: 110, height: 110, frames: 12, cue: 'Direction-neutral heavy-calibrated · Blue response lighting' },
+    { slot: 1, width: 110, height: 110, frames: 2, cue: 'Direction-neutral heavy-calibrated · Blue response lighting' },
   );
   const coastguardHelicopter = catalogue.vehicles.find((vehicle) => vehicle.id === 'coastguard-rescue-helicopter');
   assert.deepEqual(
     { slot: coastguardHelicopter.slot, width: coastguardHelicopter.width, height: coastguardHelicopter.height, frames: coastguardHelicopter.frames, cue: coastguardHelicopter.cue },
-    { slot: 65, width: 110, height: 110, frames: 18, cue: 'Direction-neutral aircraft · rotor and aviation-light motion' },
+    { slot: 65, width: 110, height: 110, frames: 4, cue: 'Direction-neutral aircraft · rotor and aviation-light motion' },
   );
   const lifeboat = catalogue.vehicles.find((vehicle) => vehicle.id === 'alb');
   assert.deepEqual(
     { slot: lifeboat.slot, width: lifeboat.width, height: lifeboat.height, frames: lifeboat.frames, cue: lifeboat.cue },
-    { slot: 70, width: 110, height: 110, frames: 18, cue: 'Direction-neutral craft · navigation lights and wake motion' },
+    { slot: 70, width: 110, height: 110, frames: 4, cue: 'Direction-neutral craft · navigation lights and wake motion' },
   );
   const inlandBoat = catalogue.vehicles.find((vehicle) => vehicle.id === 'inland-rescue-boat-trailer');
   assert.deepEqual(
@@ -69,7 +70,7 @@ test('catalogue contains one ordered record for every live MissionChief slot', (
       slot: 68,
       width: 110,
       height: 110,
-      frames: 12,
+      frames: 2,
       length: 12.5,
       cue: 'Complete direction-neutral towing unit',
     },
@@ -89,7 +90,7 @@ test('catalogue contains one ordered record for every live MissionChief slot', (
       slot: 42,
       width: 110,
       height: 110,
-      frames: 12,
+      frames: 2,
       length: 8.5,
       cue: 'Unified direction-neutral three-axle mounted carrier',
       focus: true,
@@ -103,10 +104,11 @@ test('catalogue exposes every promised service and focus view', () => {
     assert.ok(services.has(service), `Missing service filter: ${service}`);
   }
   const focus = new Set(catalogue.focus_views.map((view) => view.id));
-  for (const view of ['uk-family-conversion', 'direction-neutral', 'emergency-lighting', 'air-marine-motion', 'complete-towing-unit', 'mounted-specialist-carrier']) {
+  for (const view of ['uk-family-conversion', 'direction-neutral', 'emergency-lighting', 'air-marine-motion', 'complete-towing-unit', 'mounted-specialist-carrier', 'map-performance']) {
     assert.ok(focus.has(view), `Missing focus view: ${view}`);
   }
   assert.equal(catalogue.focus_views.find((view) => view.id === 'uk-family-conversion').count, 11);
+  assert.equal(catalogue.focus_views.find((view) => view.id === 'map-performance').count, 117);
 });
 
 test('search accepts slot, role name and punctuation-insensitive multi-term queries', () => {

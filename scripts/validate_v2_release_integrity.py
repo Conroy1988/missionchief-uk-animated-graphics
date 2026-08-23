@@ -12,21 +12,23 @@ from pathlib import Path
 from PIL import Image
 
 from v2_profile import (
+    AIR_MARINE_FRAME_COUNT,
     ANIMATED_DIR,
     EXPECTED_OVERRIDE_IDS,
     EXPORT_CANVAS,
-    FAMILY_CONVERSION_IDS,
     MASTER_OVERRIDE_DIR,
-    MOUNTED_CARRIER_IDS,
+    PERFORMANCE_BASELINE_RELEASE,
     PREVIEW_DIR,
     RELEASE,
     RELEASE_CANDIDATE,
+    ROAD_FRAME_COUNT,
     ROOT,
     STATIC_DIR,
 )
 
 
 EXPECTED = 117
+SLOTS = json.loads((ROOT / "data/vehicle-slots.json").read_text())["slots"]
 PACKAGE_NAME = f"TKB-UK-Emergency-Fleet-Direction-Neutral-MissionChief-Numbered-Upload-Ready-{RELEASE}"
 PACKAGE_ROOT = ROOT / "dist" / PACKAGE_NAME
 ARCHIVE = ROOT / "dist" / f"{PACKAGE_NAME}.zip"
@@ -81,9 +83,7 @@ def main() -> None:
         )
 
     expected_v2_asset_changes = {
-        f"assets/exports/v2/{variant}/{asset_id}.png"
-        for variant in ("static", "animated")
-        for asset_id in (*MOUNTED_CARRIER_IDS, *FAMILY_CONVERSION_IDS)
+        f"assets/exports/v2/animated/{slot['asset_id']}.png" for slot in SLOTS
     }
     actual_v2_asset_changes = set(
         subprocess.check_output(
@@ -91,7 +91,7 @@ def main() -> None:
                 "git",
                 "diff",
                 "--name-only",
-                "v2.0.3",
+                PERFORMANCE_BASELINE_RELEASE,
                 "--",
                 "assets/exports/v2/static",
                 "assets/exports/v2/animated",
@@ -122,7 +122,7 @@ def main() -> None:
             count = decode(path, EXPORT_CANVAS)
             decoded_frames += count
             frame_distribution[str(count)] = frame_distribution.get(str(count), 0) + 1
-            if count not in {12, 18}:
+            if count not in {ROAD_FRAME_COUNT, AIR_MARINE_FRAME_COUNT}:
                 errors.append(f"animated-frames/{path.name}={count}")
         except Exception as exc:
             errors.append(f"animated-decode/{path.name}: {exc}")
@@ -132,10 +132,18 @@ def main() -> None:
         except Exception as exc:
             errors.append(f"preview-decode/{path.name}: {exc}")
 
+    expected_frame_distribution = {
+        str(ROAD_FRAME_COUNT): 111,
+        str(AIR_MARINE_FRAME_COUNT): 6,
+    }
+    if frame_distribution != expected_frame_distribution:
+        errors.append(f"frame-distribution={frame_distribution}")
+
     for report_name in (
         f"{RELEASE}-scale-report.json",
         f"{RELEASE}-static-qa-report.json",
         f"{RELEASE}-animation-qa-report.json",
+        f"{RELEASE}-performance-report.json",
         f"{RELEASE}-cab-legibility-report.json",
         f"{RELEASE}-mounted-carrier-report.json",
         f"{RELEASE}-family-conversion-report.json",
@@ -244,13 +252,16 @@ def main() -> None:
         "static_pngs": len(static_paths),
         "animated_apngs": len(animated_paths),
         "frame_distribution": frame_distribution,
+        "expected_frame_distribution": expected_frame_distribution,
         "preview_pngs": len(preview_paths),
         "decoded_images_and_frames": decoded_frames,
         "numbered_static_files": len(list((PACKAGE_ROOT / "01 - Static").glob("*.png"))),
         "numbered_animated_files": len(list((PACKAGE_ROOT / "02 - Animated").glob("*.png"))),
         "archive_sha256": archive_hash,
         "current_v1_command_exports_unchanged": command_diff == 0 and not command_status,
-        "v2_asset_changes_against_v2.0.3": sorted(actual_v2_asset_changes),
+        f"v2_asset_changes_against_{PERFORMANCE_BASELINE_RELEASE}": sorted(
+            actual_v2_asset_changes
+        ),
         "uk_family_hero_audit": family_audit_summary,
         "all_passed": not errors,
         "errors": errors,

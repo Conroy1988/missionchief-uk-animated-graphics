@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Build the inherited UK-family conversion layer for the active v2 release.
 
-v2.1.1 retains the three approved cab repairs and the eleven v2.1.0 UK-family
-conversions while the mounted-carrier builder replaces the ten pod vehicles.
+The current release retains the three approved cab repairs and the eleven
+v2.1.0 UK-family conversions while preserving the v2.1.1 mounted carriers.
 Generated family source art remains on its original magenta key so the alpha
 extraction, scaling and native export stay reproducible.
 """
@@ -166,20 +166,23 @@ def main() -> None:
     conversions = build_conversions(check=args.check)
     validate_override_scope(require_complete=args.check)
 
-    if not args.check:
-        render_preview(conversions)
-        payload = {
-            "release": RELEASE_CANDIDATE,
-            "all_passed": True,
-            "inherited_override_count": len(inherited),
-            "conversion_count": len(conversions),
-            "override_count": len(EXPECTED_OVERRIDE_IDS),
-            "inherited_overrides": inherited,
-            "conversions": conversions,
-            "previews": [relative(PREVIEW)],
-        }
-        REPORT.parent.mkdir(parents=True, exist_ok=True)
-        REPORT.write_text(json.dumps(payload, indent=2) + "\n")
+    # A release-only performance rebuild still needs fresh, versioned evidence
+    # that the inherited artwork layer is byte- and geometry-preserved. Check
+    # mode therefore writes only the report and preview, never the masters.
+    render_preview(conversions)
+    payload = {
+        "release": RELEASE_CANDIDATE,
+        "all_passed": True,
+        "mode": "check" if args.check else "build",
+        "inherited_override_count": len(inherited),
+        "conversion_count": len(conversions),
+        "override_count": len(EXPECTED_OVERRIDE_IDS),
+        "inherited_overrides": inherited,
+        "conversions": conversions,
+        "previews": [relative(PREVIEW)],
+    }
+    REPORT.parent.mkdir(parents=True, exist_ok=True)
+    REPORT.write_text(json.dumps(payload, indent=2) + "\n")
 
     print(
         f"release={RELEASE_CANDIDATE} inherited={len(inherited)} "
