@@ -1,0 +1,1461 @@
+{
+  "pack": 5897,
+  "source": "https://www.missionchief.co.uk/vehicle_graphics/5897",
+  "observedAt": "2026-09-24T18:58:06.639Z",
+  "description": "Complete 120-slot TKB UK vehicle fleet, rebuilt with transparent 110\u00d7110 graphics. Every slot includes a normal PNG and an animated response APNG. Flashing lights are aligned to each vehicle\u2019s lamp sections. All pods are mounted on complete carrier vehicles, and trailer graphics include connected towing vehicles. Four helicopters feature eight-frame main- and tail-rotor animations with fixed hubs and flashing beacons (65 ms per frame). The other 116 response animations use two frames at 260 ms per frame. Includes Coastguard Drone Unit, Lifeguard Quadbike and Lifeguard 4x4. Artwork by TKB Gaming; no official service affiliation.",
+  "rows": [
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/361/original/001-fire-rescue-pump.png?1790211369"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/361/original/001-fire-rescue-pump.png?1790211369"
+        }
+      ],
+      "name": "Water Ladder",
+      "slot": 1
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/362/original/002-light-4x4-pump.png?1790211414"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/362/original/002-light-4x4-pump.png?1790211414"
+        }
+      ],
+      "name": "Light 4X4 Pump (L4P)",
+      "slot": 2
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/363/original/003-aerial-appliance.png?1790211460"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/363/original/003-aerial-appliance.png?1790211460"
+        }
+      ],
+      "name": "Aerial Appliance",
+      "slot": 3
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/364/original/004-fire-officer.png?1790211479"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/364/original/004-fire-officer.png?1790211479"
+        }
+      ],
+      "name": "Fire Officer",
+      "slot": 4
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/365/original/005-rescue-support-unit.png?1790211499"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/365/original/005-rescue-support-unit.png?1790211499"
+        }
+      ],
+      "name": "Rescue Support Unit (RSU)",
+      "slot": 5
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/366/original/006-frontline-ambulance.png?1790211507"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/366/original/006-frontline-ambulance.png?1790211506"
+        }
+      ],
+      "name": "Ambulance",
+      "slot": 6
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/367/original/007-water-carrier.png?1790211539"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/367/original/007-water-carrier.png?1790211538"
+        }
+      ],
+      "name": "Water Carrier",
+      "slot": 7
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/368/original/008-hazmat-unit.png?1790211558"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/368/original/008-hazmat-unit.png?1790211558"
+        }
+      ],
+      "name": "HazMat Unit",
+      "slot": 8
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/369/original/009-police-incident-response-vehicle.png?1790211567"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/369/original/009-police-incident-response-vehicle.png?1790211566"
+        }
+      ],
+      "name": "IRV",
+      "slot": 9
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/370/original/010-hems.png?1790211574"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/370/original/010-hems.png?1790211574"
+        }
+      ],
+      "name": "HEMS",
+      "slot": 10
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/371/original/011-rapid-response-vehicle.png?1790211581"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/371/original/011-rapid-response-vehicle.png?1790211581"
+        }
+      ],
+      "name": "RRV",
+      "slot": 11
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/372/original/012-police-helicopter.png?1790211588"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/372/original/012-police-helicopter.png?1790211588"
+        }
+      ],
+      "name": "Police helicopter",
+      "slot": 12
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/373/original/013-dog-support-unit.png?1790211610"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/373/original/013-dog-support-unit.png?1790211609"
+        }
+      ],
+      "name": "DSU",
+      "slot": 13
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/374/original/014-armed-response-vehicle.png?1790211617"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/374/original/014-armed-response-vehicle.png?1790211617"
+        }
+      ],
+      "name": "ARV",
+      "slot": 14
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/375/original/015-breathing-apparatus-support-unit.png?1790211625"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/375/original/015-breathing-apparatus-support-unit.png?1790211624"
+        }
+      ],
+      "name": "BASU",
+      "slot": 15
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/376/original/016-incident-command-control-unit.png?1790211632"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/376/original/016-incident-command-control-unit.png?1790211632"
+        }
+      ],
+      "name": "ICCU",
+      "slot": 16
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/377/original/017-rescue-pump.png?1790211641"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/377/original/017-rescue-pump.png?1790211640"
+        }
+      ],
+      "name": "Rescue Pump",
+      "slot": 17
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/378/original/018-carp.png?1790211649"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/378/original/018-carp.png?1790211649"
+        }
+      ],
+      "name": "CARP",
+      "slot": 18
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/379/original/019-co-responder-vehicle.png?1790211671"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/379/original/019-co-responder-vehicle.png?1790211670"
+        }
+      ],
+      "name": "Co-Responder Vehicle",
+      "slot": 19
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/380/original/020-joint-response-unit.png?1790211678"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/380/original/020-joint-response-unit.png?1790211677"
+        }
+      ],
+      "name": "Joint Response Unit",
+      "slot": 20
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/381/original/021-otl.png?1790211685"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/381/original/021-otl.png?1790211684"
+        }
+      ],
+      "name": "OTL",
+      "slot": 21
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/382/original/022-general-practitioner.png?1790211694"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/382/original/022-general-practitioner.png?1790211693"
+        }
+      ],
+      "name": "General Practitioner",
+      "slot": 22
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/383/original/023-community-first-responder.png?1790211703"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/383/original/023-community-first-responder.png?1790211703"
+        }
+      ],
+      "name": "Community First Responder",
+      "slot": 23
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/384/original/024-crew-carrier.png?1790211713"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/384/original/024-crew-carrier.png?1790211712"
+        }
+      ],
+      "name": "Crew Carrier",
+      "slot": 24
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/385/original/025-traffic-car.png?1790211744"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/385/original/025-traffic-car.png?1790211743"
+        }
+      ],
+      "name": "Traffic Car",
+      "slot": 25
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/386/original/026-armed-traffic-car.png?1790211752"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/386/original/026-armed-traffic-car.png?1790211752"
+        }
+      ],
+      "name": "Armed Traffic Car",
+      "slot": 26
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/387/original/027-heavy-4x4-tanker.png?1790211762"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/387/original/027-heavy-4x4-tanker.png?1790211762"
+        }
+      ],
+      "name": "Heavy 4x4 Tanker",
+      "slot": 27
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/388/original/028-prv.png?1790211771"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/388/original/028-prv.png?1790211771"
+        }
+      ],
+      "name": "PRV",
+      "slot": 28
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/389/original/029-srv.png?1790211779"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/389/original/029-srv.png?1790211779"
+        }
+      ],
+      "name": "SRV",
+      "slot": 29
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/390/original/030-welfare-vehicle.png?1790211789"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/390/original/030-welfare-vehicle.png?1790211788"
+        }
+      ],
+      "name": "Welfare Vehicle",
+      "slot": 30
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/391/original/031-atv-carrier.png?1790211810"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/391/original/031-atv-carrier.png?1790211809"
+        }
+      ],
+      "name": "ATV Carrier",
+      "slot": 31
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/392/original/032-ambulance-control-unit.png?1790211819"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/392/original/032-ambulance-control-unit.png?1790211818"
+        }
+      ],
+      "name": "Ambulance Control Unit",
+      "slot": 32
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/393/original/033-cbrn-vehicle.png?1790233376"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/393/original/033-cbrn-vehicle.png?1790233376"
+        }
+      ],
+      "name": "CBRN Vehicle",
+      "slot": 33
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/394/original/034-mass-casualty-equipment.png?1790233384"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/394/original/034-mass-casualty-equipment.png?1790233384"
+        }
+      ],
+      "name": "Mass Casualty Equipment",
+      "slot": 34
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/395/original/035-ambulance-officer.png?1790233392"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/395/original/035-ambulance-officer.png?1790233391"
+        }
+      ],
+      "name": "Ambulance Officer",
+      "slot": 35
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/396/original/036-bfu.png?1790233399"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/396/original/036-bfu.png?1790233399"
+        }
+      ],
+      "name": "BFU",
+      "slot": 36
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/397/original/037-f-wrc.png?1790233407"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/397/original/037-f-wrc.png?1790233407"
+        }
+      ],
+      "name": "F/WrC",
+      "slot": 37
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/398/original/038-wrl-cafs.png?1790233429"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/398/original/038-wrl-cafs.png?1790233428"
+        }
+      ],
+      "name": "WrL CAFS",
+      "slot": 38
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/399/original/039-rp-cafs.png?1790233437"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/399/original/039-rp-cafs.png?1790233437"
+        }
+      ],
+      "name": "RP CAFS",
+      "slot": 39
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/400/original/040-osu.png?1790233445"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/400/original/040-osu.png?1790233445"
+        }
+      ],
+      "name": "OSU",
+      "slot": 40
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/401/original/041-pm.png?1790233453"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/401/original/041-pm.png?1790233452"
+        }
+      ],
+      "name": "PM",
+      "slot": 41
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/402/original/042-water-pod.png?1790233461"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/402/original/042-water-pod.png?1790233460"
+        }
+      ],
+      "name": "Water Pod",
+      "slot": 42
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/403/original/043-bulk-foam-pod.png?1790233469"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/403/original/043-bulk-foam-pod.png?1790233469"
+        }
+      ],
+      "name": "Bulk Foam Pod",
+      "slot": 43
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/404/original/044-rescue-pod.png?1790233496"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/404/original/044-rescue-pod.png?1790233496"
+        }
+      ],
+      "name": "Rescue Pod",
+      "slot": 44
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/405/original/045-command-pod.png?1790233504"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/405/original/045-command-pod.png?1790233504"
+        }
+      ],
+      "name": "Command Pod",
+      "slot": 45
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/406/original/046-welfare-pod.png?1790233514"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/406/original/046-welfare-pod.png?1790233513"
+        }
+      ],
+      "name": "Welfare Pod",
+      "slot": 46
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/407/original/047-basu-pod.png?1790233522"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/407/original/047-basu-pod.png?1790233521"
+        }
+      ],
+      "name": "BASU Pod",
+      "slot": 47
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/408/original/048-misting-pod.png?1790233530"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/408/original/048-misting-pod.png?1790233529"
+        }
+      ],
+      "name": "Misting Pod",
+      "slot": 48
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/409/original/049-hazardous-materials-pod.png?1790233538"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/409/original/049-hazardous-materials-pod.png?1790233538"
+        }
+      ],
+      "name": "Hazardous Materials Pod",
+      "slot": 49
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/410/original/050-osu-pod.png?1790233562"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/410/original/050-osu-pod.png?1790233562"
+        }
+      ],
+      "name": "OSU Pod",
+      "slot": 50
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/411/original/051-hvp.png?1790233571"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/411/original/051-hvp.png?1790233571"
+        }
+      ],
+      "name": "HVP",
+      "slot": 51
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/412/original/052-psu-carrier.png?1790233579"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/412/original/052-psu-carrier.png?1790233579"
+        }
+      ],
+      "name": "PSU Carrier",
+      "slot": 52
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/413/original/053-firearms-personnel-carrier.png?1790233588"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/413/original/053-firearms-personnel-carrier.png?1790233587"
+        }
+      ],
+      "name": "Firearms Personnel Carrier",
+      "slot": 53
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/414/original/054-multiple-dog-carrier.png?1790233597"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/414/original/054-multiple-dog-carrier.png?1790233597"
+        }
+      ],
+      "name": "Multiple Dog Carrier",
+      "slot": 54
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/415/original/055-detention-van.png?1790233607"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/415/original/055-detention-van.png?1790233606"
+        }
+      ],
+      "name": "Detention Van",
+      "slot": 55
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/416/original/056-mounted-unit.png?1790233630"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/416/original/056-mounted-unit.png?1790233629"
+        }
+      ],
+      "name": "Mounted Unit",
+      "slot": 56
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/417/original/057-m-rav.png?1790233638"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/417/original/057-m-rav.png?1790233638"
+        }
+      ],
+      "name": "M-RAV",
+      "slot": 57
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/418/original/058-crv.png?1790233647"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/418/original/058-crv.png?1790233646"
+        }
+      ],
+      "name": "CRV",
+      "slot": 58
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/419/original/059-coastguard-mud-rescue-unit.png?1790233656"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/419/original/059-coastguard-mud-rescue-unit.png?1790233656"
+        }
+      ],
+      "name": "Coastguard Mud Rescue Unit",
+      "slot": 59
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/420/original/060-coastguard-rope-rescue-unit.png?1790233665"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/420/original/060-coastguard-rope-rescue-unit.png?1790233665"
+        }
+      ],
+      "name": "Coastguard Rope Rescue Unit",
+      "slot": 60
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/421/original/061-coastguard-commander.png?1790233674"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/421/original/061-coastguard-commander.png?1790233674"
+        }
+      ],
+      "name": "Coastguard Commander",
+      "slot": 61
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/422/original/062-flood-rescue-unit-trailer.png?1790233698"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/422/original/062-flood-rescue-unit-trailer.png?1790233698"
+        }
+      ],
+      "name": "Flood Rescue Unit (Trailer)",
+      "slot": 62
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/423/original/063-mud-decontamination-unit.png?1790233706"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/423/original/063-mud-decontamination-unit.png?1790233706"
+        }
+      ],
+      "name": "Mud Decontamination Unit",
+      "slot": 63
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/424/original/064-support-unit.png?1790233714"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/424/original/064-support-unit.png?1790233713"
+        }
+      ],
+      "name": "Coastguard Support Unit",
+      "slot": 64
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/425/original/065-coastguard-rescue-helicopter.png?1790233723"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/425/original/065-coastguard-rescue-helicopter.png?1790233722"
+        }
+      ],
+      "name": "Coastguard Rescue Helicopter",
+      "slot": 65
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/426/original/066-coastguard-rescue-helicopter-large.png?1790233731"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/426/original/066-coastguard-rescue-helicopter-large.png?1790233731"
+        }
+      ],
+      "name": "Coastguard Rescue Helicopter (Large)",
+      "slot": 66
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/427/original/067-4x4-vehicle.png?1790233740"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/427/original/067-4x4-vehicle.png?1790233740"
+        }
+      ],
+      "name": "4x4 Vehicle",
+      "slot": 67
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/428/original/068-inland-rescue-boat-trailer.png?1790233760"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/428/original/068-inland-rescue-boat-trailer.png?1790233760"
+        }
+      ],
+      "name": "Inland Rescue Boat (Trailer)",
+      "slot": 68
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/429/original/069-ilb.png?1790233768"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/429/original/069-ilb.png?1790233768"
+        }
+      ],
+      "name": "ILB",
+      "slot": 69
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/430/original/070-alb.png?1790233777"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/430/original/070-alb.png?1790233776"
+        }
+      ],
+      "name": "ALB",
+      "slot": 70
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/431/original/071-rescue-watercraft-trailer.png?1790233784"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/431/original/071-rescue-watercraft-trailer.png?1790233784"
+        }
+      ],
+      "name": "Rescue Watercraft (Trailer)",
+      "slot": 71
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/432/original/072-hovercraft-trailer.png?1790233793"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/432/original/072-hovercraft-trailer.png?1790233792"
+        }
+      ],
+      "name": "Hovercraft (Trailer)",
+      "slot": 72
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/433/original/073-hovercraft-transporter.png?1790233800"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/433/original/073-hovercraft-transporter.png?1790233800"
+        }
+      ],
+      "name": "Hovercraft Transporter",
+      "slot": 73
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/434/original/074-light-4x4.png?1790233821"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/434/original/074-light-4x4.png?1790233821"
+        }
+      ],
+      "name": "Light 4x4",
+      "slot": 74
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/435/original/075-boat-trailer.png?1790233830"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/435/original/075-boat-trailer.png?1790233829"
+        }
+      ],
+      "name": "Boat Trailer",
+      "slot": 75
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/436/original/076-major-foam-tender.png?1790233838"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/436/original/076-major-foam-tender.png?1790233837"
+        }
+      ],
+      "name": "Major Foam Tender",
+      "slot": 76
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/437/original/077-riv.png?1790233846"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/437/original/077-riv.png?1790233846"
+        }
+      ],
+      "name": "RIV",
+      "slot": 77
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/438/original/078-airfield-firefighting-command-vehicle.png?1790233854"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/438/original/078-airfield-firefighting-command-vehicle.png?1790233854"
+        }
+      ],
+      "name": "Airfield Firefighting Command Vehicle",
+      "slot": 78
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/439/original/079-rescue-stairs.png?1790233862"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/439/original/079-rescue-stairs.png?1790233862"
+        }
+      ],
+      "name": "Rescue Stairs",
+      "slot": 79
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/440/original/080-airfield-operations-vehicle.png?1790233886"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/440/original/080-airfield-operations-vehicle.png?1790233886"
+        }
+      ],
+      "name": "Airfield Operations Vehicle",
+      "slot": 80
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/441/original/081-airfield-operations-supervisor.png?1790233895"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/441/original/081-airfield-operations-supervisor.png?1790233894"
+        }
+      ],
+      "name": "Airfield Operations Supervisor",
+      "slot": 81
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/442/original/082-medical-equipment-trailer.png?1790233903"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/442/original/082-medical-equipment-trailer.png?1790233903"
+        }
+      ],
+      "name": "Medical equipment trailer",
+      "slot": 82
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/443/original/083-armed-cell-van.png?1790233912"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/443/original/083-armed-cell-van.png?1790233911"
+        }
+      ],
+      "name": "Armed Cell Van",
+      "slot": 83
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/444/original/084-medical-cycle-responder.png?1790233920"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/444/original/084-medical-cycle-responder.png?1790233919"
+        }
+      ],
+      "name": "Medical cycle responder",
+      "slot": 84
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/445/original/085-pump-trailer.png?1790233928"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/445/original/085-pump-trailer.png?1790233928"
+        }
+      ],
+      "name": "Pump Trailer",
+      "slot": 85
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/446/original/086-control-van-sar.png?1790233951"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/446/original/086-control-van-sar.png?1790233951"
+        }
+      ],
+      "name": "Control Van (SAR)",
+      "slot": 86
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/447/original/087-operational-support-van.png?1790233960"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/447/original/087-operational-support-van.png?1790233959"
+        }
+      ],
+      "name": "Operational Support Van",
+      "slot": 87
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/448/original/088-operational-support-trailer.png?1790233969"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/448/original/088-operational-support-trailer.png?1790233969"
+        }
+      ],
+      "name": "Operational Support Trailer",
+      "slot": 88
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/449/original/089-sar-flood-rescue-trailer.png?1790233980"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/449/original/089-sar-flood-rescue-trailer.png?1790233979"
+        }
+      ],
+      "name": "SAR Flood Rescue (Trailer)",
+      "slot": 89
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/450/original/090-drone-vehicle-sar-hq.png?1790233990"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/450/original/090-drone-vehicle-sar-hq.png?1790233989"
+        }
+      ],
+      "name": "Drone Vehicle (SAR HQ)",
+      "slot": 90
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/451/original/091-drone-vehicle-fire-station.png?1790234000"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/451/original/091-drone-vehicle-fire-station.png?1790234000"
+        }
+      ],
+      "name": "Drone Vehicle (Fire Station)",
+      "slot": 91
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/452/original/092-drone-vehicle-police-station.png?1790234025"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/452/original/092-drone-vehicle-police-station.png?1790234025"
+        }
+      ],
+      "name": "Drone Vehicle (Police Station)",
+      "slot": 92
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/453/original/093-personal-sar-vehicle.png?1790234034"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/453/original/093-personal-sar-vehicle.png?1790234034"
+        }
+      ],
+      "name": "Personal SAR Vehicle",
+      "slot": 93
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/454/original/094-sar-4x4.png?1790234044"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/454/original/094-sar-4x4.png?1790234043"
+        }
+      ],
+      "name": "SAR 4x4",
+      "slot": 94
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/455/original/095-rrv-2.png?1790234052"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/455/original/095-rrv-2.png?1790234051"
+        }
+      ],
+      "name": "RRV",
+      "slot": 95
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/456/original/096-community-midwife.png?1790234060"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/456/original/096-community-midwife.png?1790234060"
+        }
+      ],
+      "name": "Community Midwife",
+      "slot": 96
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/457/original/097-specialist-paramedic-rrv.png?1790234068"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/457/original/097-specialist-paramedic-rrv.png?1790234068"
+        }
+      ],
+      "name": "Specialist Paramedic RRV",
+      "slot": 97
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/458/original/098-patient-transport-service-ambulance.png?1790234122"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/458/original/098-patient-transport-service-ambulance.png?1790234121"
+        }
+      ],
+      "name": "Patient Transport Service Ambulance",
+      "slot": 98
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/459/original/099-critical-care-transfer-ambulance.png?1790234131"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/459/original/099-critical-care-transfer-ambulance.png?1790234131"
+        }
+      ],
+      "name": "Critical Care Transfer Ambulance",
+      "slot": 99
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/460/original/100-mountain-rescue-4x4.png?1790234141"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/460/original/100-mountain-rescue-4x4.png?1790234141"
+        }
+      ],
+      "name": "Mountain Rescue 4x4",
+      "slot": 100
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/461/original/101-control-van-mountain-rescue.png?1790234151"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/461/original/101-control-van-mountain-rescue.png?1790234151"
+        }
+      ],
+      "name": "Control Van (Mountain Rescue)",
+      "slot": 101
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/462/original/102-search-dog-unit.png?1790234162"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/462/original/102-search-dog-unit.png?1790234161"
+        }
+      ],
+      "name": "Search Dog Unit",
+      "slot": 102
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/463/original/103-search-dog-unit-sar.png?1790234172"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/463/original/103-search-dog-unit-sar.png?1790234171"
+        }
+      ],
+      "name": "Search Dog Unit (SAR)",
+      "slot": 103
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/464/original/104-crew-carrier-sar.png?1790234200"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/464/original/104-crew-carrier-sar.png?1790234200"
+        }
+      ],
+      "name": "Crew Carrier (SAR)",
+      "slot": 104
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/465/original/105-recovery-vehicle.png?1790234210"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/465/original/105-recovery-vehicle.png?1790234210"
+        }
+      ],
+      "name": "Recovery Vehicle",
+      "slot": 105
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/466/original/106-flatbed-recovery-vehicle.png?1790234221"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/466/original/106-flatbed-recovery-vehicle.png?1790234220"
+        }
+      ],
+      "name": "Flatbed Recovery Vehicle",
+      "slot": 106
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/467/original/107-hgv-recovery-vehicle.png?1790234230"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/467/original/107-hgv-recovery-vehicle.png?1790234229"
+        }
+      ],
+      "name": "HGV Recovery Vehicle",
+      "slot": 107
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/468/original/108-rru.png?1790234241"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/468/original/108-rru.png?1790234240"
+        }
+      ],
+      "name": "RRU",
+      "slot": 108
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/469/original/109-eiu.png?1790234250"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/469/original/109-eiu.png?1790234249"
+        }
+      ],
+      "name": "EIU",
+      "slot": 109
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/470/original/110-eod-commander.png?1790234361"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/470/original/110-eod-commander.png?1790234360"
+        }
+      ],
+      "name": "EOD Commander",
+      "slot": 110
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/471/original/111-eod-response-vehicle.png?1790234370"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/471/original/111-eod-response-vehicle.png?1790234369"
+        }
+      ],
+      "name": "EOD Response Vehicle",
+      "slot": 111
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/472/original/112-eod-medium-equipment-van.png?1790234379"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/472/original/112-eod-medium-equipment-van.png?1790234379"
+        }
+      ],
+      "name": "EOD Medium Equipment Van",
+      "slot": 112
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/473/original/113-eod-heavy-equipment-vehicle.png?1790234391"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/473/original/113-eod-heavy-equipment-vehicle.png?1790234391"
+        }
+      ],
+      "name": "EOD Heavy Equipment Vehicle",
+      "slot": 113
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/474/original/114-marine-eod-response-vehicle.png?1790234422"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/474/original/114-marine-eod-response-vehicle.png?1790234421"
+        }
+      ],
+      "name": "Marine EOD Response Vehicle",
+      "slot": 114
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/475/original/115-marine-eod-equipment-van.png?1790234432"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/475/original/115-marine-eod-equipment-van.png?1790234431"
+        }
+      ],
+      "name": "Marine EOD Equipment Van",
+      "slot": 115
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/476/original/116-welfare-vehicle-2.png?1790234443"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/476/original/116-welfare-vehicle-2.png?1790234442"
+        }
+      ],
+      "name": "Welfare Vehicle",
+      "slot": 116
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/047/477/original/117-cell-van.png?1790234453"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/047/477/original/117-cell-van.png?1790234452"
+        }
+      ],
+      "name": "Cell Van",
+      "slot": 117
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/048/901/original/118-coastguard-drone-unit.png?1790234481"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/048/901/original/118-coastguard-drone-unit.png?1790234481"
+        }
+      ],
+      "name": "Coastguard Drone Unit",
+      "slot": 118
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/048/902/original/119-lifeguard-quadbike.png?1790234493"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/048/902/original/119-lifeguard-quadbike.png?1790234493"
+        }
+      ],
+      "name": "Lifeguard Quadbike",
+      "slot": 119
+    },
+    {
+      "images": [
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/048/903/original/120-lifeguard-4x4.png?1790234504"
+        },
+        {
+          "src": "https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/048/903/original/120-lifeguard-4x4.png?1790234504"
+        }
+      ],
+      "name": "Lifeguard 4x4",
+      "slot": 120
+    }
+  ],
+  "animation_spec_source": "Public pack description; not a fresh binary audit",
+  "animation_spec": {
+    "helicopters": {
+      "vehicles": 4,
+      "frames": 8,
+      "duration_ms": 65
+    },
+    "other_vehicles": {
+      "vehicles": 116,
+      "frames": 2,
+      "duration_ms": 260
+    }
+  }
+}

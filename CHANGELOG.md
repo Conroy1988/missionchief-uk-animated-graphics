@@ -2,6 +2,10 @@
 
 [Project home](README.md) · [Downloads](https://github.com/Conroy1988/missionchief-uk-animated-graphics/releases)
 
+## Live pack update — 24 September 2026
+
+120 vehicles / 240 images now live in pack 5897. Added Coastguard Drone Unit, Lifeguard Quadbike and Lifeguard 4x4. Four helicopters use eight frames at 65 ms; the other 116 use two frames at 260 ms. GitHub downloads and source remain the older v2.2.0 release.
+
 ## Repository presentation refresh — September 2026
 
 TKB black, red and white identity across the README and gallery; current v2.2.0 Markdown gallery replaces the stale v1.4.14 gallery. Installation, development, contribution and presentation guides added. Production graphics remain v2.2.0.

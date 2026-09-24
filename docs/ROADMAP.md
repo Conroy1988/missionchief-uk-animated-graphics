@@ -1,5 +1,8 @@
 # TKB UK Emergency Fleet — Roadmap
 
+> **Live update, 24 September 2026:** pack 5897 now contains 120 vehicles. The v2.2.0 build, catalogue and reports below describe the older 117-vehicle repository release. See [current status](../README.md#current-live-specification).
+
+
 ## Delivered: TKB repository presentation
 
 The project home, complete Markdown gallery and interactive-gallery source now use the TKB black/red/white identity. Installation and maintenance guides separate player setup from production tooling.
