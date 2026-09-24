@@ -1,5 +1,13 @@
 # TKB UK Emergency Fleet — Roadmap
 
+## Delivered: TKB repository presentation
+
+The project home, complete Markdown gallery and interactive-gallery source now use the TKB black/red/white identity. Installation and maintenance guides separate player setup from production tooling.
+
+## Ongoing maintenance
+
+Track new MissionChief UK vehicle slots against the published 117-slot catalogue, address reproducible visual reports and carry the updated gallery source into the TKB website deployment. These are maintenance goals, not claims of completed game uploads.
+
 ## Delivered: full-fleet map performance overhaul
 
 Version 2.2.0 rebuilds all 117 animated graphics under a low-redraw budget: two constantly illuminated A/B frames for 111 road assets and four motion frames for six aircraft/marine assets. The full-frame APNG compatibility contract, 110×110 anchoring, all static exports and every v2.1.1 master remain intact.
@@ -28,7 +36,7 @@ The enforcement command now reports 117/117 hero-ready. See [V2_UK_FAMILY_HERO_S
 
 The Markdown gallery has been expanded into a polished interactive gallery for all 117 MissionChief UK vehicle slots. Its public home is the [TKB MissionChief UK Guide](https://tkb-gaming.scot/games/missionchief/guides/fleet-gallery/), with the deterministic source and validation contract retained in this repository.
 
-Planned capabilities:
+Delivered capabilities:
 
 - instant search by MissionChief name, slot number and vehicle role
 - service filters for fire, ambulance, police, coastguard, lifeboat, SAR, recovery, airfield and EOD
@@ -43,7 +51,7 @@ Status: delivered on 8 August 2026. The gallery is presentation-only, tracks the
 
 Release contract:
 
-- `gallery/vehicles.json` is generated from the canonical slot, prototype, lighting and v1.4 profile data
+- `gallery/vehicles.json` is generated from the canonical slot, prototype, lighting and current v2 profile data
 - every current static/APNG pair and every v1.0.0, v1.2.7 and v1.3.0 comparison path is fail-closed in CI
 - pure browser-state tests cover search, filters, sorting, release routing and shareable URLs
 - the TKB website owns the public route and Games-directory banner while this repository remains authoritative for fleet assets
